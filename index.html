@@ -81,25 +81,22 @@
     <p class="note" id="visits-split-note"></p>
 
     <div class="panel">
+      <h3>Why engaged visits is the main number</h3>
+      <p>Email software opens our emails and clicks every link to check them for safety. Each of those clicks shows up as a visit, but these robot visits almost never stay or click around.</p>
+      <p>A visit counts as engaged if it lasted at least 10 seconds, looked at 2 or more pages, or filled in a form. This is Google's own rule. It leaves out most robot visits, and also some real people who left quickly. All visits and visits from email are shown beside it so you can see the difference.</p>
+    </div>
+
+    <div class="panel">
       <h3>Day by day</h3>
       <p class="source" id="visits-daily-source"></p>
-      <div class="chart-box"><canvas id="visits-daily" aria-label="Day by day visits chart"></canvas></div>
+      <div class="chart-box"><canvas id="visits-daily" aria-label="Engaged visits, all visits and visits from email by day"></canvas></div>
     </div>
 
     <div class="panel">
       <h3>Where visits came from</h3>
       <p class="source" id="visits-channels-source"></p>
-      <div class="chart-box tall"><canvas id="visits-channels" aria-label="Visits by where they came from"></canvas></div>
+      <div class="chart-box tall"><canvas id="visits-channels" aria-label="Engaged visits and all visits by where they came from"></canvas></div>
       <div id="visits-channels-table"></div>
-    </div>
-
-    <div class="panel">
-      <h3>Robots: visits from people compared with all visits</h3>
-      <p class="source" id="visits-robots-source"></p>
-      <p>Email software opens our emails and clicks every link to check them for safety. Each of those clicks shows up as a visit. Those robot visits almost never stay or click around, so they show up as visits that didn't engage.</p>
-      <p><strong>Suggestion, not decided yet:</strong> count "people only" as <em>engaged visits</em>, Google's own rule. A visit counts as engaged if it lasted at least 10 seconds, looked at 2 or more pages, or filled in a form. This also leaves out some real people who left quickly. Compare the lines below and tell us which one to use.</p>
-      <div class="cards compact" id="visits-robots-cards"></div>
-      <div class="chart-box"><canvas id="visits-robots" aria-label="All visits, engaged visits and email visits by day"></canvas></div>
     </div>
 
     <div class="panel">

@@ -207,63 +207,58 @@ function renderVisits(d) {
   const src = `Source: ${d.source}`;
   const when = `${range(d.start_date, d.end_date)}. Days follow US Pacific time, the property's setting`;
   const t = d.totals;
+  const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
   $("visits-source").textContent = `${src}. ${when}.`;
   $("visits-cards").innerHTML =
-    card("Visits", num(t.sessions), "Every visit, including robots") +
-    card("People visiting", num(t.totalUsers), "Different browsers that visited") +
-    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1), `${num(t.engagedSessions)} visits stayed 10+ seconds, saw 2+ pages, or filled a form`);
+    card("Engaged visits", num(t.engagedSessions), "Visits that stayed 10+ seconds, saw 2+ pages, or filled a form. Leaves out most robots") +
+    card("All visits", num(t.sessions), "Every visit, including robots") +
+    card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged. Most of the rest are likely email robots` : "") +
+    card("People visiting", num(t.totalUsers), "Different browsers that visited, including robots") +
+    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1), "Engaged visits divided by all visits, x 100");
   $("visits-split-note").textContent =
     `Google estimates visits separately for each way of splitting them, so the parts come out a little lower than the total. ` +
     `Days add up to ${num(d.split_sums.daily)} and sources to ${num(d.split_sums.channels)}, against the total of ${num(t.sessions)}. ` +
     `Both are shown as Google reports them.`;
 
   $("visits-daily-source").textContent = `${src}. ${when}.`;
+  const emailByDay = Object.fromEntries(d.channel_daily.filter((r) => r.sessionDefaultChannelGroup === "Email").map((r) => [r.date, r.sessions]));
   chart("visits-daily", (th) => ({
     type: "line",
     data: { labels: d.daily.map((r) => day(r.date)), datasets: [
-      line("Visits", d.daily.map((r) => r.sessions), th.s[0]),
-      line("People visiting", d.daily.map((r) => r.totalUsers), th.s[1]),
-    ] },
-  }));
-
-  $("visits-channels-source").textContent = `${src}. ${when}.`;
-  const ch = d.channels.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 }));
-  chart("visits-channels", (th) => ({
-    type: "bar", horizontal: true,
-    data: { labels: ch.map((r) => r.name), datasets: [bar("Visits", ch.map((r) => r.sessions), th.s[0])] },
-  }));
-  table($("visits-channels-table"), { rows: ch, sortKey: "sessions", pageSize: 20, columns: [
-    { key: "name", label: "Came from" },
-    { key: "sessions", label: "Visits", num: true, fmt: num },
-    { key: "totalUsers", label: "People", num: true, fmt: num },
-    { key: "engaged", label: "Share who engaged", num: true, fmt: (v) => pct(v, 0) },
-    { key: "averageSessionDuration", label: "Average time", num: true, fmt: (v) => `${Math.round(v)}s` },
-  ] });
-
-  $("visits-robots-source").textContent = `${src}. ${when}.`;
-  const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
-  $("visits-robots-cards").innerHTML =
-    card("All visits", num(t.sessions), "Includes robots") +
-    card("Engaged visits", num(t.engagedSessions), "Suggested \"people only\" number") +
-    card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged. Most of the rest are likely email robots` : "");
-  const emailByDay = Object.fromEntries(d.channel_daily.filter((r) => r.sessionDefaultChannelGroup === "Email").map((r) => [r.date, r.sessions]));
-  chart("visits-robots", (th) => ({
-    type: "line",
-    data: { labels: d.daily.map((r) => day(r.date)), datasets: [
-      line("All visits", d.daily.map((r) => r.sessions), th.s[0]),
-      line("Engaged visits (suggested people only)", d.daily.map((r) => r.engagedSessions), th.s[1]),
+      line("Engaged visits", d.daily.map((r) => r.engagedSessions), th.s[0]),
+      line("All visits", d.daily.map((r) => r.sessions), th.s[1]),
       line("Visits from email", d.daily.map((r) => emailByDay[r.date] || 0), th.s[2]),
     ] },
   }));
 
+  $("visits-channels-source").textContent = `${src}. ${when}.`;
+  const ch = d.channels.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 }))
+    .sort((a, b) => b.engagedSessions - a.engagedSessions);
+  chart("visits-channels", (th) => ({
+    type: "bar", horizontal: true,
+    data: { labels: ch.map((r) => r.name), datasets: [
+      bar("Engaged visits", ch.map((r) => r.engagedSessions), th.s[0]),
+      bar("All visits", ch.map((r) => r.sessions), th.s[1]),
+    ] },
+  }));
+  table($("visits-channels-table"), { rows: ch, sortKey: "engagedSessions", pageSize: 20, columns: [
+    { key: "name", label: "Came from" },
+    { key: "engagedSessions", label: "Engaged visits", num: true, fmt: num },
+    { key: "sessions", label: "All visits", num: true, fmt: num },
+    { key: "engaged", label: "Share who engaged", num: true, fmt: (v) => pct(v, 0) },
+    { key: "totalUsers", label: "People", num: true, fmt: num },
+    { key: "averageSessionDuration", label: "Average time", num: true, fmt: (v) => `${Math.round(v)}s` },
+  ] });
+
   $("visits-sources-source").textContent = `${src}. ${when}.`;
   table($("visits-sources"), {
     rows: d.sources.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 })),
-    search: "sources", sortKey: "sessions", columns: [
+    search: "sources", sortKey: "engagedSessions", columns: [
       { key: "sessionSource", label: "Source", search: true },
       { key: "sessionMedium", label: "Type", search: true },
       { key: "name", label: "Group", search: true },
-      { key: "sessions", label: "Visits", num: true, fmt: num },
+      { key: "engagedSessions", label: "Engaged visits", num: true, fmt: num },
+      { key: "sessions", label: "All visits", num: true, fmt: num },
       { key: "engaged", label: "Share who engaged", num: true, fmt: (v) => pct(v, 0) },
     ] });
 
