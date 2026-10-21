@@ -24,6 +24,7 @@
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
     <button role="tab" data-tab="linkedin">LinkedIn</button>
+    <button role="tab" data-tab="youtube">YouTube</button>
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
     <button role="tab" data-tab="todo">To do</button>
@@ -219,6 +220,38 @@
     </div>
   </section>
 
+  <!-- YouTube -->
+  <section id="tab-youtube" class="tab" role="tabpanel" hidden>
+    <h2>YouTube</h2>
+    <p class="note">YouTube reports about 2 days late.</p>
+
+    <h3 class="section-title">Whole channel</h3>
+    <div class="cards" id="yt-ch-cards"></div>
+    <p class="source" id="yt-ch-source"></p>
+    <p class="note">End screen clicks aren't available from YouTube's standard reports.</p>
+
+    <div class="panel">
+      <h3>Subscribers gained and lost, week by week</h3>
+      <div class="chart-box short"><canvas id="yt-subs" aria-label="Subscribers gained and lost by week"></canvas></div>
+      <p class="source" id="yt-subs-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>YouTube searches that found our videos</h3>
+      <div id="yt-searches"></div>
+      <p class="source" id="yt-searches-source"></p>
+      <p class="note" id="yt-searches-note"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Visits to opsera.ai from YouTube</h3>
+      <div class="cards compact" id="yt-ga-cards"></div>
+      <p class="source" id="yt-ga-source"></p>
+    </div>
+
+    <div id="yt-types"></div>
+  </section>
+
   <!-- Tab 4 -->
   <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
     <h2>Before: Kahoots (Q3 2026)</h2>
@@ -278,6 +311,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=4"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>

@@ -31,6 +31,12 @@ The LinkedIn tab doesn't update on Mondays. Its numbers come from exports you do
 
 To refresh it, download new exports from LinkedIn and ask Claude to update the LinkedIn tab. Claude moves the files into Desktop/Data and runs `scripts/convert_linkedin.py`, which checks that the numbers add up and stops if they don't. Then Claude shows you the result before publishing.
 
+## The YouTube tab
+
+The Monday update also pulls the Opsera YouTube channel's numbers from YouTube's own APIs. It uses a read-only login that marketing@opsera.io gave once. That login is stored as a GitHub secret called `YOUTUBE_TOKEN`, and a copy is kept on Purav's Mac in `~/.config/opsera-dashboard/`.
+
+The login stops working if someone removes the app's access for marketing@opsera.io, or if that account's password changes. When that happens, the Monday run fails with a "STOPPED" or "invalid_grant" message, and the page keeps last week's numbers. To fix it, ask Claude to run the YouTube sign-in again (`scripts/youtube_login.py`), sign in as marketing@opsera.io, pick the Opsera channel, and store the new login in the `YOUTUBE_TOKEN` secret.
+
 ## The Google key
 
 The robot account's key is stored as a GitHub secret called `GOOGLE_SA_KEY`, under Settings > Secrets and variables > Actions. Nobody can read it there, not even you, and it isn't in the code. If it ever needs replacing, make a new key in Google Cloud for `dashboard-reader`, then paste it into that secret with **Update**. On Purav's Mac there's also a copy in `~/.config/opsera-dashboard/`, outside this folder.

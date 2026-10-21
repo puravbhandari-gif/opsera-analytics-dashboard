@@ -35,6 +35,12 @@ jobs:
           python -m pip install -q -r requirements.txt
           python scripts/fetch_data.py
 
+      - name: Pull numbers from YouTube
+        if: github.event_name != 'push'
+        env:
+          YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
+        run: python scripts/fetch_youtube.py
+
       - name: Save new numbers to main
         if: github.event_name != 'push'
         run: |

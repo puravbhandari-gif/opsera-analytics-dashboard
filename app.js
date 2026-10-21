@@ -92,7 +92,7 @@ function draw(c) {
     scales: {
       x: { stacked: cfg.stacked, grid: { display: false }, border: { color: t.axis }, ticks: { color: t.muted, maxRotation: 0, autoSkipPadding: 12 } },
       y: { stacked: cfg.stacked, beginAtZero: cfg.reverse ? false : true, reverse: !!cfg.reverse, grid: { color: t.grid }, border: { display: false },
-        ticks: { color: t.muted, callback: cfg.yfmt || ((v) => nf.format(v)) },
+        ticks: { color: t.muted, precision: cfg.whole ? 0 : undefined, callback: cfg.yfmt || ((v) => nf.format(v)) },
         title: cfg.ytitle ? { display: true, text: cfg.ytitle, color: t.muted } : undefined },
     },
   };
@@ -448,6 +448,130 @@ function renderLinkedIn(d) {
   $("li-k-top-eng-source").textContent = kSrc;
 }
 
+// ---------- YouTube: Shorts and long videos never added together ----------
+
+const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+
+// Every Monday-to-Sunday week from start to end, even weeks with no views.
+function weeksFilled(rows, keys, start, end) {
+  const weekOf = (date) => addDays(date, -((toDate(date).getUTCDay() + 6) % 7));
+  const out = {};
+  for (let s = weekOf(start); s <= end; s = addDays(s, 7)) out[s] = Object.fromEntries(keys.map((k) => [k, 0]));
+  for (const r of rows) if (out[weekOf(r.date)]) keys.forEach((k) => { out[weekOf(r.date)][k] += r[k]; });
+  return Object.keys(out).sort().map((s) => ({
+    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, ...out[s],
+  }));
+}
+
+function renderYouTube(d, ga) {
+  const last = d.last_day_with_data || d.end_date;
+  const src = `Source: YouTube Analytics API, Opsera channel, ${range(d.start_date, last)}.`;
+  const c = d.channel;
+
+  $("yt-ch-cards").innerHTML =
+    card("Subscribers gained", num(c.subs_gained)) +
+    card("Subscribers lost", num(c.subs_lost)) +
+    card("Card clicks", num(c.card_clicks), `Card teaser clicks ${num(c.card_teaser_clicks)}`);
+  $("yt-ch-source").textContent = src;
+
+  const subWeeks = weeksFilled(c.subs_daily, ["gained", "lost"], d.start_date, last);
+  chart("yt-subs", (th) => ({
+    type: "bar", whole: true, data: { labels: subWeeks.map((w) => w.label), datasets: [
+      bar("Subscribers gained", subWeeks.map((w) => w.gained), th.s[0]),
+      bar("Subscribers lost", subWeeks.map((w) => w.lost), th.s[1]),
+    ] },
+  }));
+  $("yt-subs-source").textContent = src;
+
+  table($("yt-searches"), { rows: c.search_terms, search: "searches", sortKey: "views", columns: [
+    { key: "term", label: "Search", search: true },
+    { key: "views", label: "Views", num: true, fmt: num },
+  ] });
+  $("yt-searches-source").textContent = src;
+  const named = c.search_terms.reduce((a, r) => a + r.views, 0);
+  $("yt-searches-note").textContent = `YouTube names the search for ${num(named)} of the ${num(c.search_views)} views that came from YouTube search.`;
+
+  const fromYt = ga.sources.filter((r) => /youtube\.com|youtu\.be/i.test(r.sessionSource));
+  const gaSum = (k) => fromYt.reduce((a, r) => a + r[k], 0);
+  $("yt-ga-cards").innerHTML =
+    card("Visits from YouTube", num(gaSum("sessions"))) +
+    card("Engaged visits from YouTube", num(gaSum("engagedSessions")));
+  $("yt-ga-source").textContent = `Source: Google Analytics, opsera.ai 2026, ${range(ga.start_date, ga.end_date)}, US Pacific time.`;
+
+  const sections = [["long", "Long videos"], ["shorts", "Shorts"]];
+  $("yt-types").innerHTML = sections.map(([t, title]) => `
+    <h3 class="section-title">${title}</h3>
+    <div class="cards" id="yt-${t}-cards"></div>
+    <p class="source">${src}</p>
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Week by week</h3>
+        <div class="seg" id="yt-${t}-metric" role="group" aria-label="Choose what the chart shows">
+          <button data-m="views" class="on">Views</button>
+          <button data-m="minutes">Watch time</button>
+        </div>
+      </div>
+      <div class="chart-box short"><canvas id="yt-${t}-weekly" aria-label="${title} views and watch time by week"></canvas></div>
+      <p class="source">${src}</p>
+      <p class="note" id="yt-${t}-round"></p>
+    </div>
+    <div class="panel">
+      <h3>Where views came from</h3>
+      <div class="chart-box short"><canvas id="yt-${t}-sources" aria-label="${title} views by where they came from"></canvas></div>
+      <p class="source">${src}</p>
+    </div>
+    <div class="panel">
+      <h3>Top videos by views</h3>
+      <div id="yt-${t}-top-views"></div>
+      <p class="source">${src}</p>
+      <h3 style="margin-top:20px">Top videos by watch time</h3>
+      <div id="yt-${t}-top-time"></div>
+      <p class="source">${src}</p>
+      <p class="note" id="yt-${t}-listed"></p>
+    </div>`).join("");
+
+  for (const [t] of sections) {
+    const v = d.types[t];
+    $(`yt-${t}-cards`).innerHTML =
+      card("Views", num(v.views)) +
+      card("Watch time", `${num(v.minutes)} min`) +
+      card("Average time watched", mmss(v.avg_seconds), "Per view");
+
+    const weeks = weeksFilled(v.daily, ["views", "minutes"], d.start_date, last);
+    const labels = { views: "Views", minutes: "Watch time (minutes)" };
+    let m = "views";
+    chart(`yt-${t}-weekly`, (th) => ({
+      type: "bar", whole: true, data: { labels: weeks.map((w) => w.label), datasets: [bar(labels[m], weeks.map((w) => w[m]), th.s[0])] },
+    }));
+    $(`yt-${t}-round`).textContent = weeks.reduce((a, w) => a + w.minutes, 0) === v.minutes ? "" :
+      "YouTube rounds each day's watch time, so the weeks add up to a little less than the total.";
+    $(`yt-${t}-metric`).addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      m = b.dataset.m;
+      $(`yt-${t}-metric`).querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      draw(charts.find((ch) => ch.id === `yt-${t}-weekly`));
+    });
+
+    chart(`yt-${t}-sources`, (th) => ({
+      type: "bar", horizontal: true, whole: true,
+      data: { labels: v.sources.map((r) => r.source), datasets: [bar("Views", v.sources.map((r) => r.views), th.s[0])] },
+    }));
+
+    const videoLink = (val, r) => `<a href="https://www.youtube.com/watch?v=${encodeURIComponent(r.id)}" target="_blank" rel="noopener">${esc(val)}</a>`;
+    const cols = [
+      { key: "title", label: "Video", search: true, fmt: videoLink },
+      { key: "views", label: "Views", num: true, fmt: num },
+      { key: "minutes", label: "Watch time (min)", num: true, fmt: num },
+      { key: "avg_seconds", label: "Average time watched", num: true, fmt: mmss },
+    ];
+    table($(`yt-${t}-top-views`), { rows: v.videos, search: "videos", sortKey: "views", pageSize: 10, columns: cols });
+    table($(`yt-${t}-top-time`), { rows: v.videos, search: "videos", sortKey: "minutes", pageSize: 10, columns: cols });
+    const l = v.videos_listed;
+    $(`yt-${t}-listed`).textContent = l.views === v.views && l.minutes === v.minutes ? "" :
+      `YouTube lists ${num(l.views)} of ${num(v.views)} views and ${num(l.minutes)} of ${num(v.minutes)} minutes by video.`;
+  }
+}
+
 // ---------- Tab 4: Kahoots ----------
 
 function renderKahoots(monthly, quarter) {
@@ -544,14 +668,15 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 (async () => {
   renderTodo();
   try {
-    const [gsc, ga, leads, li, km, kq, inf] = await Promise.all(
-      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
+    const [gsc, ga, leads, li, yt, km, kq, inf] = await Promise.all(
+      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
     showTab(location.hash.slice(1));
     $("pulled").textContent = `Google numbers last pulled ${dayYear(gsc.pulled_at.slice(0, 10))}, ${gsc.pulled_at.slice(11, 16)} India time.`;
     renderSearch(gsc);
     renderVisits(ga);
     renderLeads(leads);
     renderLinkedIn(li);
+    renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);
   } catch (err) {
