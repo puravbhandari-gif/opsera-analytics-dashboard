@@ -1,0 +1,6 @@
+.venv/
+*.json.key
+service-account*.json
+.DS_Store
+__pycache__/
+.claude/

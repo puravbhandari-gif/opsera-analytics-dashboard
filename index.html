@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>opsera.ai Analytics</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="styles.css">
+<script>
+  try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>opsera.ai analytics</h1>
+      <p class="muted" id="pulled">Loading numbers...</p>
+    </div>
+    <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
+  </div>
+  <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+    <button role="tab" data-tab="search">Google Search</button>
+    <button role="tab" data-tab="visits">Website visits</button>
+    <button role="tab" data-tab="leads">Leads</button>
+    <button role="tab" data-tab="kahoots">Before: Kahoots</button>
+    <button role="tab" data-tab="infrasity">Before: Infrasity</button>
+    <button role="tab" data-tab="todo">To do</button>
+  </nav>
+</header>
+
+<main>
+  <!-- Tab 1 -->
+  <section id="tab-search" class="tab" role="tabpanel">
+    <h2>Google Search</h2>
+    <p class="source" id="search-source"></p>
+    <p class="note">Google reports 2 to 3 days late, so the last couple of days are not here yet.</p>
+    <div class="cards" id="search-cards"></div>
+
+    <div class="panel">
+      <h3>This week against last week</h3>
+      <p class="source" id="search-week-source"></p>
+      <div class="cards compact" id="search-week"></div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Day by day</h3>
+        <div class="seg" id="search-metric" role="group" aria-label="Choose what the chart shows">
+          <button data-m="clicks" class="on">Clicks</button>
+          <button data-m="times_shown">Times Google showed us</button>
+          <button data-m="click_rate_pct">Click rate</button>
+          <button data-m="avg_spot">Average spot on Google</button>
+        </div>
+      </div>
+      <p class="source" id="search-daily-source"></p>
+      <div class="chart-box"><canvas id="search-daily" aria-label="Day by day Google search chart"></canvas></div>
+      <p class="note" id="search-daily-note"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Pages Google sent people to</h3>
+      <p class="source" id="search-pages-source"></p>
+      <p class="note">Addresses with and without "/" at the end are counted as one page. Google counts page rows differently from the totals above, so these rows add up to more than the total clicks. Don't add them up.</p>
+      <div id="search-pages"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Searches people used to find us</h3>
+      <p class="source" id="search-queries-source"></p>
+      <p class="note">Google hides rare searches to protect privacy, so these rows cover only part of the total clicks.</p>
+      <div id="search-queries"></div>
+    </div>
+  </section>
+
+  <!-- Tab 2 -->
+  <section id="tab-visits" class="tab" role="tabpanel" hidden>
+    <h2>Website visits</h2>
+    <p class="source" id="visits-source"></p>
+    <div class="cards" id="visits-cards"></div>
+    <p class="note" id="visits-split-note"></p>
+
+    <div class="panel">
+      <h3>Day by day</h3>
+      <p class="source" id="visits-daily-source"></p>
+      <div class="chart-box"><canvas id="visits-daily" aria-label="Day by day visits chart"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h3>Where visits came from</h3>
+      <p class="source" id="visits-channels-source"></p>
+      <div class="chart-box tall"><canvas id="visits-channels" aria-label="Visits by where they came from"></canvas></div>
+      <div id="visits-channels-table"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Robots: visits from people compared with all visits</h3>
+      <p class="source" id="visits-robots-source"></p>
+      <p>Email software opens our emails and clicks every link to check them for safety. Each of those clicks shows up as a visit. Those robot visits almost never stay or click around, so they show up as visits that didn't engage.</p>
+      <p><strong>Suggestion, not decided yet:</strong> count "people only" as <em>engaged visits</em>, Google's own rule. A visit counts as engaged if it lasted at least 10 seconds, looked at 2 or more pages, or filled in a form. This also leaves out some real people who left quickly. Compare the lines below and tell us which one to use.</p>
+      <div class="cards compact" id="visits-robots-cards"></div>
+      <div class="chart-box"><canvas id="visits-robots" aria-label="All visits, engaged visits and email visits by day"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h3>Every source</h3>
+      <p class="source" id="visits-sources-source"></p>
+      <div id="visits-sources"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Top pages people visited</h3>
+      <p class="source" id="visits-pages-source"></p>
+      <p class="note">Addresses with and without "/" at the end are counted as one page. Pages starting with /hs/preferences-center are email subscription pages. Most of their views probably come from email robots.</p>
+      <div id="visits-pages"></div>
+    </div>
+  </section>
+
+  <!-- Tab 3 -->
+  <section id="tab-leads" class="tab" role="tabpanel" hidden>
+    <h2>Leads</h2>
+    <p class="source" id="leads-source"></p>
+    <p class="note">Each kind of form is shown on its own line. They are never added into one total.</p>
+    <p class="note">Event sign-ups on Luma don't reach the website yet, so they are missing here until Luma is connected to HubSpot.</p>
+    <div class="cards" id="leads-cards"></div>
+
+    <div class="panel">
+      <h3>Core site forms</h3>
+      <p class="source" id="leads-core-source"></p>
+      <div id="leads-core"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Week by week</h3>
+      <p class="source" id="leads-weekly-source"></p>
+      <div class="chart-box"><canvas id="leads-weekly" aria-label="Form fills by week, one bar per kind of form"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h3>Which page each form fill came from</h3>
+      <p class="source" id="leads-pages-source"></p>
+      <div id="leads-pages"></div>
+    </div>
+  </section>
+
+  <!-- Tab 4 -->
+  <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
+    <h2>Before: Kahoots (Q3 2026)</h2>
+    <p class="source">Source: Kahoots Q3 2026 report, from the "opsera.ai 2025" Google Analytics account (paused 9 Oct 2026). July to September 2026. Kept as reported, never updated.</p>
+
+    <div class="panel">
+      <h3>Visits from people and robots, by month</h3>
+      <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026. Robots = visits minus visits from people.</p>
+      <div class="chart-box"><canvas id="kahoots-visits" aria-label="Visits from people and robots by month"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h3>Form fills by month</h3>
+      <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
+      <div class="chart-box short"><canvas id="kahoots-forms" aria-label="Form fills by month"></canvas></div>
+    </div>
+
+    <div class="panel">
+      <h3>Q2 against Q3</h3>
+      <p class="source">Source: Kahoots Q3 2026 report. Q2 = Apr to Jun 2026, Q3 = Jul to Sep 2026.</p>
+      <div id="kahoots-quarter"></div>
+      <p class="note">The rest of All form fills is other forms, such as the Cursor plugin and Salesforce pages.</p>
+      <p class="note">Event sign-ups moved to Luma, which the website count can't see.</p>
+    </div>
+  </section>
+
+  <!-- Tab 5 -->
+  <section id="tab-infrasity" class="tab" role="tabpanel" hidden>
+    <h2>Before: Infrasity (Jul to Sep 2026)</h2>
+    <p class="source">Source: Infrasity monthly growth reports, July to September 2026. Kept as reported, never updated.</p>
+
+    <div class="panel">
+      <h3>Google Search by month</h3>
+      <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
+      <div id="infrasity-table"></div>
+    </div>
+
+    <div class="panel">
+      <h3>Google clicks on Forge pages at opsera.ai</h3>
+      <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
+      <div class="chart-box short"><canvas id="infrasity-forge" aria-label="Google clicks on Forge pages by month"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Tab 6 -->
+  <section id="tab-todo" class="tab" role="tabpanel" hidden>
+    <h2>To do</h2>
+    <p class="note">Ticks are saved in this browser only. Other people won't see them.</p>
+    <ul class="todo" id="todo"></ul>
+  </section>
+
+  <p class="error" id="error" hidden></p>
+</main>
+
+<footer>
+  <p class="muted">Numbers from Google update by themselves every Monday morning, India time. Each tab keeps its own source's numbers, and numbers from different sources are never added together.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+"""Pull opsera.ai numbers from our own Google Search Console and Google Analytics 4
+into JSON files under /data. Read-only. Run: python3 scripts/fetch_data.py
+
+The service account key is read from the GOOGLE_APPLICATION_CREDENTIALS path
+(locally) or the GOOGLE_SA_KEY env var holding the JSON (in GitHub Actions).
+"""
+import datetime as dt
+import json
+import os
+import sys
+from pathlib import Path
+from urllib.parse import quote
+
+from google.auth.transport.requests import AuthorizedSession
+from google.oauth2 import service_account
+
+START_DATE = "2026-10-01"
+GA_PROPERTY_ID = "256856286"
+GA_PROPERTY_NAME = "opsera.ai 2026"
+GA_MEASUREMENT_ID = "G-63FKQPLYRW"
+GSC_DOMAIN = "opsera.ai"
+SCOPES = [
+    "https://www.googleapis.com/auth/webmasters.readonly",
+    "https://www.googleapis.com/auth/analytics.readonly",
+]
+DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
+
+# Google estimates each split of visits on its own, so days or sources can add up to
+# slightly less than the overall total. Within this gap we show both with a note;
+# outside it something is wrong and we stop.
+GA_SPLIT_MIN_SHARE = 0.95
+GA_SPLIT_MAX_SHARE = 1.01
+
+# Leads: one HubSpot form submission per real fill, sorted by the page it happened on.
+# Agreed with Purav on 21 Oct 2026.
+FORM_EVENT = "hs_form_submission"
+LEAD_LINES = [
+    ("demo", "Demo requests", lambda p: p in ("/demo", "/demo/")),
+    ("contact", "Contact forms", lambda p: p in ("/contact", "/contact/")),
+    ("gartner_offer", "Gartner free modernization offer", lambda p: p.startswith("/gartner-symposium/free-modernization")),
+    ("events", "Event sign-ups", lambda p: p.startswith("/events/")
+        or p.rstrip("/") in ("/gartner-symposium", "/github-universe-happy-hour")),
+]
+REMOVED_FORM_PAGES = ["/", "/about", "/platform"]
+NEW_SITE_LIVE = "2026-09-30"
+
+
+def stop(msg):
+    print(f"\nSTOPPED: {msg}", file=sys.stderr)
+    sys.exit(1)
+
+
+def session():
+    raw = os.environ.get("GOOGLE_SA_KEY")
+    if raw:
+        creds = service_account.Credentials.from_service_account_info(json.loads(raw), scopes=SCOPES)
+    else:
+        path = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+        if not path or not Path(path).exists():
+            stop("No key found. Set GOOGLE_APPLICATION_CREDENTIALS to the key file path.")
+        creds = service_account.Credentials.from_service_account_file(path, scopes=SCOPES)
+    print(f"Signed in as {creds.service_account_email}")
+    return AuthorizedSession(creds)
+
+
+def call(s, method, url, body=None):
+    r = s.request(method, url, json=body, timeout=60)
+    if r.status_code != 200:
+        stop(f"{method} {url} returned {r.status_code}: {r.text[:500]}")
+    return r.json()
+
+
+def page_key(path):
+    """https://opsera.ai/x and https://opsera.ai/x/ (or /x and /x/) are one page."""
+    stripped = path.rstrip("/")
+    return stripped if stripped and not stripped.endswith(".ai") else stripped + "/"
+
+
+# ---------- Search Console ----------
+
+def find_gsc_site(s):
+    sites = call(s, "GET", "https://searchconsole.googleapis.com/webmasters/v3/sites").get("siteEntry", [])
+    urls = [x["siteUrl"] for x in sites]
+    for pref in (f"sc-domain:{GSC_DOMAIN}", f"https://{GSC_DOMAIN}/", f"https://www.{GSC_DOMAIN}/"):
+        if pref in urls:
+            return pref
+    stop(f"The service account can't see an opsera.ai Search Console property. It can see: {urls or 'nothing'}")
+
+
+def gsc_query(s, site, start, end, dims):
+    url = f"https://searchconsole.googleapis.com/webmasters/v3/sites/{quote(site, safe='')}/searchAnalytics/query"
+    rows, start_row = [], 0
+    while True:
+        body = {"startDate": start, "endDate": end, "dimensions": dims, "rowLimit": 25000, "startRow": start_row}
+        batch = call(s, "POST", url, body).get("rows", [])
+        rows += batch
+        if len(batch) < 25000:
+            return rows
+        start_row += 25000
+
+
+def gsc_row(r, name):
+    return {name: r["keys"][0], "clicks": r["clicks"], "times_shown": r["impressions"],
+            "click_rate_pct": round(r["ctr"] * 100, 2), "avg_spot": round(r["position"], 1)}
+
+
+def merge_slash_variants(rows):
+    merged = {}
+    for r in rows:
+        page = r["keys"][0]
+        m = merged.setdefault(page_key(page), {"page": page_key(page), "clicks": 0, "times_shown": 0, "_pos": 0.0, "variants": []})
+        m["clicks"] += r["clicks"]
+        m["times_shown"] += r["impressions"]
+        m["_pos"] += r["position"] * r["impressions"]
+        m["variants"].append(page)
+    out = []
+    for m in merged.values():
+        m["avg_spot"] = round(m.pop("_pos") / m["times_shown"], 1) if m["times_shown"] else None
+        m["click_rate_pct"] = round(m["clicks"] / m["times_shown"] * 100, 2) if m["times_shown"] else 0
+        out.append(m)
+    return sorted(out, key=lambda x: -x["clicks"])
+
+
+def fetch_gsc(s, end):
+    site = find_gsc_site(s)
+    print(f"Search Console property: {site}")
+    daily = [gsc_row(r, "date") for r in gsc_query(s, site, START_DATE, end, ["date"])]
+    if not daily:
+        stop("Search Console returned no days of data.")
+    pages = merge_slash_variants(gsc_query(s, site, START_DATE, end, ["page"]))
+    searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"])]
+    return {
+        "source": f"Google Search Console, {site}",
+        "last_day_with_data": daily[-1]["date"],
+        "daily": daily, "pages": pages, "searches": searches,
+    }
+
+
+# ---------- Google Analytics 4 ----------
+
+def check_ga_property(s):
+    prop = call(s, "GET", f"https://analyticsadmin.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}")
+    if prop.get("displayName") != GA_PROPERTY_NAME:
+        stop(f"Property {GA_PROPERTY_ID} is called '{prop.get('displayName')}', expected '{GA_PROPERTY_NAME}'.")
+    streams = call(s, "GET", f"https://analyticsadmin.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}/dataStreams")
+    ids = [x.get("webStreamData", {}).get("measurementId") for x in streams.get("dataStreams", [])]
+    if GA_MEASUREMENT_ID not in ids:
+        stop(f"Property {GA_PROPERTY_ID} doesn't have measurement ID {GA_MEASUREMENT_ID}. It has: {ids}")
+    print(f"Google Analytics property: {GA_PROPERTY_NAME} ({GA_PROPERTY_ID}, {GA_MEASUREMENT_ID})")
+    return prop.get("timeZone")
+
+
+def ga_report(s, end, dims, metrics, event_names=None):
+    rows, offset = [], 0
+    while True:
+        body = {
+            "dateRanges": [{"startDate": START_DATE, "endDate": end}],
+            "dimensions": [{"name": d} for d in dims],
+            "metrics": [{"name": m} for m in metrics],
+            "limit": 100000, "offset": offset,
+        }
+        if event_names:
+            body["dimensionFilter"] = {"filter": {"fieldName": "eventName", "inListFilter": {"values": event_names}}}
+        res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}:runReport", body)
+        for row in res.get("rows", []):
+            rec = {d: v["value"] for d, v in zip(dims, row.get("dimensionValues", []))}
+            for m, v in zip(metrics, row["metricValues"]):
+                rec[m] = float(v["value"]) if "." in v["value"] else int(v["value"])
+            if "date" in rec:
+                d = rec["date"]
+                rec["date"] = f"{d[:4]}-{d[4:6]}-{d[6:]}"
+            rows.append(rec)
+        offset += 100000
+        if offset >= res.get("rowCount", 0):
+            return rows
+
+
+def split_check(label, rows, total):
+    parts = sum(r["sessions"] for r in rows)
+    share = parts / total if total else 1
+    if not GA_SPLIT_MIN_SHARE <= share <= GA_SPLIT_MAX_SHARE:
+        stop(f"GA visits by {label} add up to {parts}, but the total is {total}. That's outside Google's usual gap.")
+    return parts
+
+
+def leads(form_rows):
+    lines = {key: {"label": label, "count": 0, "pages": {}} for key, label, _ in LEAD_LINES}
+    lines["other"] = {"label": "Other forms", "count": 0, "pages": {}}
+    daily = {}
+    for r in form_rows:
+        page = page_key(r["pagePath"])
+        key = next((k for k, _, match in LEAD_LINES if match(page)), "other")
+        lines[key]["count"] += r["eventCount"]
+        lines[key]["pages"][page] = lines[key]["pages"].get(page, 0) + r["eventCount"]
+        day = daily.setdefault(r["date"], {k: 0 for k in lines})
+        day[key] += r["eventCount"]
+    for line in lines.values():
+        line["pages"] = [{"page": p, "count": c} for p, c in sorted(line["pages"].items(), key=lambda x: -x[1])]
+    removed = [p for p in REMOVED_FORM_PAGES if any(x["page"] == page_key(p) for l in lines.values() for x in l["pages"])]
+    if removed:
+        stop(f"Pages we thought had no form recorded form fills: {removed}. Check before showing them as removed.")
+    return {
+        "event": FORM_EVENT,
+        "lines": lines,
+        "daily": [{"date": d, **v} for d, v in sorted(daily.items())],
+        "removed_form_pages": REMOVED_FORM_PAGES,
+        "new_site_live": NEW_SITE_LIVE,
+    }
+
+
+def fetch_ga(s, end):
+    tz = check_ga_property(s)
+    base = ["sessions", "totalUsers", "engagedSessions"]
+    totals = ga_report(s, end, [], base)[0]
+    daily = sorted(ga_report(s, end, ["date"], base), key=lambda r: r["date"])
+    channels = sorted(ga_report(s, end, ["sessionDefaultChannelGroup"], base + ["averageSessionDuration"]),
+                      key=lambda r: -r["sessions"])
+    channel_daily = ga_report(s, end, ["date", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"])
+    sources = sorted(ga_report(s, end, ["sessionDefaultChannelGroup", "sessionSource", "sessionMedium"],
+                               base + ["averageSessionDuration"]), key=lambda r: -r["sessions"])
+    views = {}
+    for r in ga_report(s, end, ["pagePath"], ["screenPageViews"]):
+        key = page_key(r["pagePath"])
+        views[key] = views.get(key, 0) + r["screenPageViews"]
+    pages = [{"page": p, "views": v} for p, v in sorted(views.items(), key=lambda x: -x[1])]
+    form_rows = ga_report(s, end, ["date", "pagePath"], ["eventCount"], event_names=[FORM_EVENT])
+
+    return {
+        "source": f"Google Analytics 4, {GA_PROPERTY_NAME} (property {GA_PROPERTY_ID})",
+        "time_zone": tz,
+        "totals": totals,
+        "split_sums": {"daily": split_check("day", daily, totals["sessions"]),
+                       "channels": split_check("source", channels, totals["sessions"])},
+        "daily": daily, "channels": channels, "channel_daily": channel_daily,
+        "sources": sources, "pages": pages,
+    }, leads(form_rows)
+
+
+def write(name, payload, meta):
+    DATA_DIR.mkdir(exist_ok=True)
+    (DATA_DIR / name).write_text(json.dumps({**meta, **payload}, indent=1))
+
+
+def main():
+    end = (dt.datetime.now(IST).date() - dt.timedelta(days=1)).isoformat()
+    s = session()
+    meta = {"start_date": START_DATE, "end_date": end,
+            "pulled_at": dt.datetime.now(IST).isoformat(timespec="minutes")}
+    gsc = fetch_gsc(s, end)
+    ga, lead_data = fetch_ga(s, end)
+    write("search_console.json", gsc, meta)
+    write("analytics.json", ga, meta)
+    write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data}, meta)
+
+    print(f"\nRange asked for: {START_DATE} to {end}")
+    print(f"Search Console: last day with data {gsc['last_day_with_data']}, "
+          f"clicks {sum(r['clicks'] for r in gsc['daily'])}, {len(gsc['pages'])} pages, {len(gsc['searches'])} searches")
+    t = ga["totals"]
+    print(f"Google Analytics: visits {t['sessions']} (days add up to {ga['split_sums']['daily']}), people {t['totalUsers']}")
+    print("Leads: " + ", ".join(f"{l['label']} {l['count']}" for l in lead_data["lines"].values()))
+
+
+if __name__ == "__main__":
+    main()
