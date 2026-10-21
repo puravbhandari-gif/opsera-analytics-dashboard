@@ -327,6 +327,132 @@ function renderLeads(d) {
   ] });
 }
 
+// ---------- LinkedIn: company page and Kumar, never mixed ----------
+
+// Monday-to-Sunday weeks, clipped to the date range, for one LinkedIn source.
+function weekly(rows, key, start, end) {
+  const out = {};
+  for (const r of rows) {
+    const s = addDays(r.date, -((toDate(r.date).getUTCDay() + 6) % 7));
+    out[s] = (out[s] || 0) + r[key];
+  }
+  return Object.keys(out).sort().map((s) => ({
+    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, value: out[s],
+  }));
+}
+
+function metricChart(id, segId, rows, metrics, colors) {
+  let m = Object.keys(metrics)[0];
+  chart(id, (th) => ({
+    type: "line",
+    data: { labels: rows.map((r) => day(r.date)), datasets: metrics[m].map(([label, key], i) => line(label, rows.map((r) => r[key]), th.s[colors[i]])) },
+  }));
+  $(segId).addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    m = b.dataset.m;
+    $(segId).querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    draw(charts.find((c) => c.id === id));
+  });
+}
+
+const postLink = (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(v)}</a>`;
+
+function renderLinkedIn(d) {
+  const when = range(d.start_date, d.end_date);
+  const co = d.company, k = d.kumar;
+  const coSrc = `Source: ${co.source}, ${when}. ${co.dates_note}.`;
+  const kSrc = `Source: ${k.source}, ${when}.`;
+  const sum = (rows, key) => rows.reduce((a, r) => a + r[key], 0);
+
+  // Company page
+  $("li-co-source").textContent = coSrc;
+  const split = (key) => `Unpaid ${num(sum(co.daily, `${key}_unpaid`))}, paid ${num(sum(co.daily, `${key}_paid`))}`;
+  $("li-co-cards").innerHTML =
+    card("Times seen", num(sum(co.daily, "seen_total")), `${split("seen")}. LinkedIn's total`) +
+    card("Clicks", num(sum(co.daily, "clicks_total")), `${split("clicks")}. LinkedIn's total`) +
+    card("Reactions", num(sum(co.daily, "reactions_total")), `${split("reactions")}. LinkedIn's total`) +
+    card("Comments", num(sum(co.daily, "comments_total")), `${split("comments")}. From the daily sheet`) +
+    card("Followers gained", num(sum(co.followers_daily, "gained")), "New followers over the 3 months") +
+    card("Company page views", num(sum(co.visitors_daily, "views_total")), `Overview ${num(sum(co.visitors_daily, "views_overview"))}, Jobs ${num(sum(co.visitors_daily, "views_jobs"))}. LinkedIn's total`);
+
+  metricChart("li-co-daily", "li-co-metric", co.daily, {
+    seen: [["Times seen, unpaid", "seen_unpaid"], ["Times seen, paid", "seen_paid"]],
+    clicks: [["Clicks, unpaid", "clicks_unpaid"], ["Clicks, paid", "clicks_paid"]],
+    reactions: [["Reactions, unpaid", "reactions_unpaid"], ["Reactions, paid", "reactions_paid"]],
+    comments: [["Comments, unpaid", "comments_unpaid"], ["Comments, paid", "comments_paid"]],
+  }, [0, 1]);
+  $("li-co-daily-source").textContent = coSrc;
+
+  const coWeeks = weekly(co.followers_daily, "gained", d.start_date, d.end_date);
+  chart("li-co-followers", (th) => ({
+    type: "bar", data: { labels: coWeeks.map((w) => w.label), datasets: [bar("Followers gained", coWeeks.map((w) => w.value), th.s[0])] },
+  }));
+  $("li-co-followers-source").textContent = `${coSrc} Weeks run Monday to Sunday.`;
+
+  chart("li-co-visits", (th) => ({
+    type: "line",
+    data: { labels: co.visitors_daily.map((r) => day(r.date)), datasets: [
+      line("All company page views (LinkedIn's total)", co.visitors_daily.map((r) => r.views_total), th.s[0]),
+      line("Overview page views", co.visitors_daily.map((r) => r.views_overview), th.s[1]),
+      line("Jobs page views", co.visitors_daily.map((r) => r.views_jobs), th.s[2]),
+    ] },
+  }));
+  $("li-co-visits-source").textContent = coSrc;
+
+  table($("li-co-posts"), { rows: co.posts, search: "posts", sortKey: "seen", columns: [
+    { key: "title", label: "Post", search: true, fmt: postLink },
+    { key: "posted_by", label: "Posted by", search: true },
+    { key: "created", label: "Posted on", fmt: (v) => dayYear(v) },
+    { key: "seen", label: "Times seen", num: true, fmt: num },
+    { key: "clicks", label: "Clicks", num: true, fmt: num },
+    { key: "likes", label: "Likes", num: true, fmt: num },
+    { key: "comments", label: "Comments", num: true, fmt: num },
+  ] });
+  $("li-co-posts-source").textContent = `${coSrc} All ${co.posts.length} posts are unpaid.`;
+
+  const b = co.breakdowns;
+  const order = ["job_function", "seniority", "company_size", "location", "industry"];
+  $("li-co-breakdown-note").textContent =
+    `Each table comes from its own LinkedIn sheet, and the sheets don't add up to the same follower total: ` +
+    order.map((key) => `${b[key].label.toLowerCase()} ${num(b[key].adds_up_to)}`).join(", ") +
+    `. They're shown as LinkedIn gave them. Use them to see which groups are biggest, not as exact counts.`;
+  $("li-co-breakdowns").innerHTML = order.map((key) => `<div><h4>${b[key].label}</h4><div id="li-bd-${key}"></div></div>`).join("");
+  order.forEach((key) => table($(`li-bd-${key}`), { rows: b[key].top, pageSize: 10, columns: [
+    { key: "name", label: b[key].label, sort: false },
+    { key: "followers", label: "Followers", num: true, fmt: num, sort: false },
+  ] }));
+  $("li-co-breakdowns-source").textContent = `Source: ${co.source}, followers file, as of the export date. Top 10 of each.`;
+
+  // Kumar Chivukula
+  $("li-k-source").textContent = kSrc;
+  $("li-k-cards").innerHTML =
+    card("Times seen", num(k.seen), "Times Kumar's posts were seen") +
+    card("People reached", num(k.reached), "Different LinkedIn members who saw a post") +
+    card("Engagements", num(sum(k.daily, "engagements")), "Reactions, comments, shares and clicks combined") +
+    card("Followers gained", num(sum(k.followers_daily, "gained")), "New followers over the 3 months") +
+    card("Total followers", num(k.total_followers), `On ${dayYear(k.total_followers_date)}`);
+
+  metricChart("li-k-daily", "li-k-metric", k.daily, {
+    seen: [["Times seen", "seen"]], engagements: [["Engagements", "engagements"]],
+  }, [0]);
+  $("li-k-daily-source").textContent = kSrc;
+
+  const kWeeks = weekly(k.followers_daily, "gained", d.start_date, d.end_date);
+  chart("li-k-followers", (th) => ({
+    type: "bar", data: { labels: kWeeks.map((w) => w.label), datasets: [bar("Followers gained", kWeeks.map((w) => w.value), th.s[0])] },
+  }));
+  $("li-k-followers-source").textContent = `${kSrc} Weeks run Monday to Sunday.`;
+
+  const topCols = (key, label) => [
+    { key: "name", label: "Post", search: true, fmt: postLink },
+    { key: "published", label: "Published", fmt: (v) => dayYear(v) },
+    { key, label, num: true, fmt: num },
+  ];
+  table($("li-k-top-seen"), { rows: k.top_by_seen, search: "posts", sortKey: "seen", pageSize: 10, columns: topCols("seen", "Times seen") });
+  table($("li-k-top-eng"), { rows: k.top_by_engagements, search: "posts", sortKey: "engagements", pageSize: 10, columns: topCols("engagements", "Engagements") });
+  $("li-k-top-source").textContent = kSrc;
+}
+
 // ---------- Tab 4: Kahoots ----------
 
 function renderKahoots(monthly, quarter) {
@@ -423,13 +549,14 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 (async () => {
   renderTodo();
   try {
-    const [gsc, ga, leads, km, kq, inf] = await Promise.all(
-      ["search_console.json", "analytics.json", "leads.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
+    const [gsc, ga, leads, li, km, kq, inf] = await Promise.all(
+      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
     showTab(location.hash.slice(1));
     $("pulled").textContent = `Google numbers last pulled ${dayYear(gsc.pulled_at.slice(0, 10))}, ${gsc.pulled_at.slice(11, 16)} India time.`;
     renderSearch(gsc);
     renderVisits(ga);
     renderLeads(leads);
+    renderLinkedIn(li);
     renderKahoots(km, kq);
     renderInfrasity(inf);
   } catch (err) {

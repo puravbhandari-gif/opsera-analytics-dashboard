@@ -25,6 +25,12 @@ If a number doesn't add up, the script stops instead of guessing. When that happ
 
 The Kahoots and Infrasity tabs are kept exactly as reported. Their numbers live in `data/kahoots_monthly.json`, `data/kahoots_quarter.json` and `data/infrasity_monthly.json`, and the script never touches them.
 
+## The LinkedIn tab
+
+The LinkedIn tab doesn't update on Mondays. Its numbers come from exports you download from LinkedIn yourself. The original files stay private in the Data folder on your Desktop and are never put in this public repo. Only `data/linkedin.json`, which holds the numbers the tab shows, is published.
+
+To refresh it, download new exports from LinkedIn and ask Claude to update the LinkedIn tab. Claude moves the files into Desktop/Data and runs `scripts/convert_linkedin.py`, which checks that the numbers add up and stops if they don't. Then Claude shows you the result before publishing.
+
 ## The Google key
 
 The robot account's key is stored as a GitHub secret called `GOOGLE_SA_KEY`, under Settings > Secrets and variables > Actions. Nobody can read it there, not even you, and it isn't in the code. If it ever needs replacing, make a new key in Google Cloud for `dashboard-reader`, then paste it into that secret with **Update**. On Purav's Mac there's also a copy in `~/.config/opsera-dashboard/`, outside this folder.

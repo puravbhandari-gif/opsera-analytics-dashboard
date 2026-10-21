@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>opsera.ai Analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=6">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -23,6 +23,7 @@
     <button role="tab" data-tab="search">Google Search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
+    <button role="tab" data-tab="linkedin">LinkedIn</button>
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
     <button role="tab" data-tab="todo">To do</button>
@@ -140,6 +141,92 @@
     </div>
   </section>
 
+  <!-- LinkedIn -->
+  <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
+    <h2>LinkedIn (Jul to Sep 2026)</h2>
+    <p class="note">The company page and Kumar's profile come from separate LinkedIn exports. Their numbers are never mixed or added together.</p>
+
+    <h3 class="section-title">Opsera company page</h3>
+    <p class="source" id="li-co-source"></p>
+    <div class="cards" id="li-co-cards"></div>
+    <p class="note">Unpaid means our own posts. Paid means sponsored ads. Comments come from LinkedIn's daily sheet. Reposts are left out because LinkedIn's two sheets disagree: the post list says 251 and the daily sheet says 29.</p>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Day by day, unpaid and paid</h3>
+        <div class="seg" id="li-co-metric" role="group" aria-label="Choose what the chart shows">
+          <button data-m="seen" class="on">Times seen</button>
+          <button data-m="clicks">Clicks</button>
+          <button data-m="reactions">Reactions</button>
+          <button data-m="comments">Comments</button>
+        </div>
+      </div>
+      <div class="chart-box"><canvas id="li-co-daily" aria-label="Company page day by day, unpaid and paid"></canvas></div>
+      <p class="source" id="li-co-daily-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Followers gained, week by week</h3>
+      <div class="chart-box short"><canvas id="li-co-followers" aria-label="Company page followers gained by week"></canvas></div>
+      <p class="source" id="li-co-followers-source"></p>
+      <p class="note">This export doesn't include the company page's total follower count.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Company page visits, day by day</h3>
+      <div class="chart-box"><canvas id="li-co-visits" aria-label="Company page views by day"></canvas></div>
+      <p class="source" id="li-co-visits-source"></p>
+      <p class="note">LinkedIn's total includes pages it doesn't list separately, so Overview and Jobs add up to less than the total. The Life page had 0 views every day, so it isn't shown.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Posts</h3>
+      <p class="note">Every post created on the company page in this period. Comments here come from LinkedIn's post list.</p>
+      <div id="li-co-posts"></div>
+      <p class="source" id="li-co-posts-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Who follows the company page</h3>
+      <p class="note" id="li-co-breakdown-note"></p>
+      <div class="breakdowns" id="li-co-breakdowns"></div>
+      <p class="source" id="li-co-breakdowns-source"></p>
+    </div>
+
+    <h3 class="section-title">Kumar Chivukula</h3>
+    <p class="source" id="li-k-source"></p>
+    <div class="cards" id="li-k-cards"></div>
+    <p class="note">Kumar's export doesn't split engagements into clicks, reactions, comments and shares. It only gives LinkedIn's combined engagements number.</p>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Day by day</h3>
+        <div class="seg" id="li-k-metric" role="group" aria-label="Choose what the chart shows">
+          <button data-m="seen" class="on">Times seen</button>
+          <button data-m="engagements">Engagements</button>
+        </div>
+      </div>
+      <div class="chart-box"><canvas id="li-k-daily" aria-label="Kumar's profile day by day"></canvas></div>
+      <p class="source" id="li-k-daily-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Followers gained, week by week</h3>
+      <div class="chart-box short"><canvas id="li-k-followers" aria-label="Kumar's followers gained by week"></canvas></div>
+      <p class="source" id="li-k-followers-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Top posts</h3>
+      <p class="note">LinkedIn lists the posts that did best during this period. Some were published earlier, even back in 2024, and were still being seen. LinkedIn only gives each post's link, so the names come from the link.</p>
+      <div class="two-col">
+        <div><h4>By times seen</h4><div id="li-k-top-seen"></div></div>
+        <div><h4>By engagements</h4><div id="li-k-top-eng"></div></div>
+      </div>
+      <p class="source" id="li-k-top-source"></p>
+    </div>
+  </section>
+
   <!-- Tab 4 -->
   <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
     <h2>Before: Kahoots (Q3 2026)</h2>
@@ -199,6 +286,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js"></script>
+<script src="app.js?v=2"></script>
 </body>
 </html>
