@@ -10,8 +10,9 @@ const spot = (v) => (v == null ? "-" : v.toFixed(1));
 const toDate = (s) => new Date(`${s}T00:00:00Z`);
 const iso = (d) => d.toISOString().slice(0, 10);
 const addDays = (s, n) => { const d = toDate(s); d.setUTCDate(d.getUTCDate() + n); return iso(d); };
-const day = (s) => toDate(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
-const dayYear = (s) => toDate(s).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const day = (s) => { const d = toDate(s); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`; };
+const dayYear = (s) => `${day(s)} ${toDate(s).getUTCFullYear()}`;
 const range = (a, b) => `${day(a)} to ${dayYear(b)}`;
 const month = (m) => toDate(`${m}-01`).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
 const shortPage = (p) => p.replace(/^https?:\/\/(www\.)?opsera\.ai/, "") || "/";
@@ -124,27 +125,27 @@ function delta(cur, prev, lowerIsBetter = false) {
 
 function renderSearch(d) {
   const last = d.last_day_with_data;
-  const src = `Source: ${d.source}`;
-  $("search-source").textContent = `${src}. ${range(d.start_date, last)} (last day Google has reported so far).`;
+  const src = "Source: Google Search Console";
+  $("search-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   const t = sumSearch(d.daily);
   $("search-cards").innerHTML =
-    card("Clicks", num(t.clicks), "People who clicked through to opsera.ai from Google") +
-    card("Times Google showed us", num(t.shown), "Times opsera.ai appeared in Google results") +
-    card("Click rate", pct(t.rate), "Clicks divided by times shown, x 100") +
-    card("Average spot on Google", spot(t.spot), "Lower is better. 1 is the top result");
+    card("Clicks", num(t.clicks)) +
+    card("Times Google showed us", num(t.shown)) +
+    card("Click rate", pct(t.rate), "Clicks divided by times shown") +
+    card("Average spot on Google", spot(t.spot), "Lower is better");
 
   const thisStart = addDays(last, -6), prevStart = addDays(last, -13), prevEnd = addDays(last, -7);
   const cur = sumSearch(d.daily.filter((r) => r.date >= thisStart && r.date <= last));
   const prevRows = d.daily.filter((r) => r.date >= prevStart && r.date <= prevEnd);
   const prev = prevRows.length === 7 ? sumSearch(prevRows) : {};
-  $("search-week-source").textContent = `${src}. This week: ${range(thisStart, last)}. Last week: ${range(prevStart, prevEnd)}.`;
+  $("search-week-source").textContent = `${src}, this week ${range(thisStart, last)}, last week ${range(prevStart, prevEnd)}.`;
   $("search-week").innerHTML =
     card("Clicks", num(cur.clicks), `Last week: ${num(prev.clicks)}`, delta(cur.clicks, prev.clicks)) +
     card("Times Google showed us", num(cur.shown), `Last week: ${num(prev.shown)}`, delta(cur.shown, prev.shown)) +
     card("Click rate", pct(cur.rate), `Last week: ${pct(prev.rate)}`, delta(cur.rate, prev.rate)) +
-    card("Average spot on Google", spot(cur.spot), `Last week: ${spot(prev.spot)}. Lower is better`, delta(cur.spot, prev.spot, true));
+    card("Average spot on Google", spot(cur.spot), `Last week: ${spot(prev.spot)}`, delta(cur.spot, prev.spot, true));
 
-  $("search-daily-source").textContent = `${src}. ${range(d.start_date, last)}.`;
+  $("search-daily-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   const metrics = {
     clicks: { label: "Clicks", fmt: num },
     times_shown: { label: "Times Google showed us", fmt: num },
@@ -158,7 +159,7 @@ function renderSearch(d) {
     reverse: metrics[m].reverse, yfmt: metrics[m].yfmt,
     tooltip: { label: (c) => ` ${metrics[m].label}: ${metrics[m].fmt(c.parsed.y)}` },
   }));
-  const setNote = () => { $("search-daily-note").textContent = m === "avg_spot" ? "Lower spot numbers are better, so this chart is flipped: a line going up means a better spot on Google." : ""; };
+  const setNote = () => { $("search-daily-note").textContent = m === "avg_spot" ? "This chart is flipped, so up means a better spot." : ""; };
   setNote();
   $("search-metric").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
@@ -174,12 +175,12 @@ function renderSearch(d) {
     { key: "click_rate_pct", label: "Click rate", num: true, fmt: (v) => pct(v) },
     { key: "avg_spot", label: "Average spot", num: true, fmt: spot },
   ];
-  $("search-pages-source").textContent = `${src}. ${range(d.start_date, last)}.`;
+  $("search-pages-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   table($("search-pages"), {
     rows: d.pages.map((p) => ({ ...p, path: shortPage(p.page) })), search: "pages", sortKey: "clicks",
     columns: cols({ key: "path", label: "Page", search: true, fmt: (v) => esc(v) }),
   });
-  $("search-queries-source").textContent = `${src}. ${range(d.start_date, last)}.`;
+  $("search-queries-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   table($("search-queries"), { rows: d.searches, search: "searches", sortKey: "clicks",
     columns: cols({ key: "search", label: "Search", search: true }) });
 }
@@ -204,23 +205,19 @@ const CHANNELS = {
 const channelName = (c) => CHANNELS[c] || c;
 
 function renderVisits(d) {
-  const src = `Source: ${d.source}`;
-  const when = `${range(d.start_date, d.end_date)}. Days follow US Pacific time, the property's setting`;
+  const src = "Source: Google Analytics, opsera.ai 2026";
+  const when = `${range(d.start_date, d.end_date)}, US Pacific time`;
   const t = d.totals;
   const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
-  $("visits-source").textContent = `${src}. ${when}.`;
+  $("visits-source").textContent = `${src}, ${when}.`;
   $("visits-cards").innerHTML =
-    card("Engaged visits", num(t.engagedSessions), "Visits that stayed 10+ seconds, saw 2+ pages, or filled a form. Leaves out most robots") +
-    card("All visits", num(t.sessions), "Every visit, including robots") +
-    card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged. Most of the rest are likely email robots` : "") +
-    card("People visiting", num(t.totalUsers), "Different browsers that visited, including robots") +
-    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1), "Engaged visits divided by all visits, x 100");
-  $("visits-split-note").textContent =
-    `Google estimates visits separately for each way of splitting them, so the parts come out a little lower than the total. ` +
-    `Days add up to ${num(d.split_sums.daily)} and sources to ${num(d.split_sums.channels)}, against the total of ${num(t.sessions)}. ` +
-    `Both are shown as Google reports them.`;
+    card("Engaged visits", num(t.engagedSessions), "Stayed 10+ seconds, saw 2+ pages, or filled a form") +
+    card("All visits", num(t.sessions), "Includes robots") +
+    card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged` : "") +
+    card("People visiting", num(t.totalUsers), "Includes robots") +
+    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1));
 
-  $("visits-daily-source").textContent = `${src}. ${when}.`;
+  $("visits-daily-source").textContent = `${src}, ${when}.`;
   const emailByDay = Object.fromEntries(d.channel_daily.filter((r) => r.sessionDefaultChannelGroup === "Email").map((r) => [r.date, r.sessions]));
   chart("visits-daily", (th) => ({
     type: "line",
@@ -231,7 +228,8 @@ function renderVisits(d) {
     ] },
   }));
 
-  $("visits-channels-source").textContent = `${src}. ${when}.`;
+  $("visits-channels-source").textContent = `${src}, ${when}.`;
+  $("visits-channels-table-source").textContent = `${src}, ${when}.`;
   const ch = d.channels.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 }))
     .sort((a, b) => b.engagedSessions - a.engagedSessions);
   chart("visits-channels", (th) => ({
@@ -250,7 +248,7 @@ function renderVisits(d) {
     { key: "averageSessionDuration", label: "Average time", num: true, fmt: (v) => `${Math.round(v)}s` },
   ] });
 
-  $("visits-sources-source").textContent = `${src}. ${when}.`;
+  $("visits-sources-source").textContent = `${src}, ${when}.`;
   table($("visits-sources"), {
     rows: d.sources.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 })),
     search: "sources", sortKey: "engagedSessions", columns: [
@@ -262,7 +260,7 @@ function renderVisits(d) {
       { key: "engaged", label: "Share who engaged", num: true, fmt: (v) => pct(v, 0) },
     ] });
 
-  $("visits-pages-source").textContent = `${src}. ${when}.`;
+  $("visits-pages-source").textContent = `${src}, ${when}.`;
   table($("visits-pages"), { rows: d.pages, search: "pages", sortKey: "views", columns: [
     { key: "page", label: "Page", search: true },
     { key: "views", label: "Times viewed", num: true, fmt: num },
@@ -274,25 +272,25 @@ function renderVisits(d) {
 const LEAD_ORDER = ["demo", "contact", "events", "gartner_offer", "other"];
 const LEAD_NOTES = {
   demo: "Form on /demo",
-  contact: "Form on /contact. /contact now goes to the Book a demo page",
-  events: "Event pages on the website. Luma sign-ups are missing",
+  contact: "Form on /contact",
+  events: "Event pages on the website",
   gartner_offer: "Form on /gartner-symposium/free-modernization",
-  other: "Report downloads, webinars and other forms",
+  other: "Reports, webinars and other forms",
 };
 
 function renderLeads(d) {
-  const src = `Source: ${d.source}`;
-  const when = `${range(d.start_date, d.end_date)}. Days follow US Pacific time`;
-  $("leads-source").textContent = `${src}. ${when}. One HubSpot form submission is counted per form fill.`;
+  const src = "Source: Google Analytics, opsera.ai 2026, HubSpot form fills";
+  const when = `${range(d.start_date, d.end_date)}, US Pacific time`;
+  $("leads-source").textContent = `${src}, ${when}.`;
   $("leads-cards").innerHTML = LEAD_ORDER.map((k) => card(d.lines[k].label, num(d.lines[k].count), LEAD_NOTES[k])).join("");
 
-  $("leads-core-source").textContent = `${src}. ${when}.`;
+  $("leads-core-source").textContent = `${src}, ${when}.`;
   const removed = "Form removed when the new site went live on 30 Sep. Visitors now go to Book a demo.";
   const names = { "/": "Homepage", "/about": "About", "/platform": "Platform" };
   const core = [
     ...d.removed_form_pages.map((p) => ({ name: names[p] || p, page: p, status: removed })),
-    { name: "Contact", page: "/contact", status: `${num(d.lines.contact.count)} form fill${d.lines.contact.count === 1 ? "" : "s"}. /contact now goes to the Book a demo page.` },
-    { name: "Book a demo", page: "/demo", status: `${num(d.lines.demo.count)} demo requests.` },
+    { name: "Contact", page: "/contact", status: `${num(d.lines.contact.count)} form fill${d.lines.contact.count === 1 ? "" : "s"}, now sent to Book a demo` },
+    { name: "Book a demo", page: "/demo", status: `${num(d.lines.demo.count)} demo requests` },
   ];
   table($("leads-core"), { rows: core, columns: [
     { key: "name", label: "Page", sort: false },
@@ -312,13 +310,13 @@ function renderLeads(d) {
   }
   const starts = Object.keys(weeks).sort();
   const label = (s) => { const a = s < d.start_date ? d.start_date : s, b = addDays(s, 6) > d.end_date ? d.end_date : addDays(s, 6); return `${day(a)} to ${day(b)}`; };
-  $("leads-weekly-source").textContent = `${src}. ${when}. Weeks run Monday to Sunday.`;
+  $("leads-weekly-source").textContent = `${src}, ${when}.`;
   chart("leads-weekly", (th) => ({
     type: "bar",
     data: { labels: starts.map(label), datasets: LEAD_ORDER.map((k, i) => bar(d.lines[k].label, starts.map((s) => weeks[s][k]), th.s[i])) },
   }));
 
-  $("leads-pages-source").textContent = `${src}. ${when}.`;
+  $("leads-pages-source").textContent = `${src}, ${when}.`;
   const rows = LEAD_ORDER.flatMap((k) => d.lines[k].pages.map((p) => ({ line: d.lines[k].label, page: p.page, count: p.count })));
   table($("leads-pages"), { rows, search: "pages", sortKey: "count", columns: [
     { key: "line", label: "Kind of form", search: true },
@@ -360,7 +358,7 @@ const postLink = (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopen
 function renderLinkedIn(d) {
   const when = range(d.start_date, d.end_date);
   const co = d.company, k = d.kumar;
-  const coSrc = `Source: ${co.source}, ${when}. ${co.dates_note}.`;
+  const coSrc = `Source: ${co.source}, ${when}.`;
   const kSrc = `Source: ${k.source}, ${when}.`;
   const sum = (rows, key) => rows.reduce((a, r) => a + r[key], 0);
 
@@ -368,12 +366,12 @@ function renderLinkedIn(d) {
   $("li-co-source").textContent = coSrc;
   const split = (key) => `Unpaid ${num(sum(co.daily, `${key}_unpaid`))}, paid ${num(sum(co.daily, `${key}_paid`))}`;
   $("li-co-cards").innerHTML =
-    card("Times seen", num(sum(co.daily, "seen_total")), `${split("seen")}. LinkedIn's total`) +
-    card("Clicks", num(sum(co.daily, "clicks_total")), `${split("clicks")}. LinkedIn's total`) +
-    card("Reactions", num(sum(co.daily, "reactions_total")), `${split("reactions")}. LinkedIn's total`) +
-    card("Comments", num(sum(co.daily, "comments_total")), `${split("comments")}. From the daily sheet`) +
-    card("Followers gained", num(sum(co.followers_daily, "gained")), "New followers over the 3 months") +
-    card("Company page views", num(sum(co.visitors_daily, "views_total")), `Overview ${num(sum(co.visitors_daily, "views_overview"))}, Jobs ${num(sum(co.visitors_daily, "views_jobs"))}. LinkedIn's total`);
+    card("Times seen", num(sum(co.daily, "seen_total")), split("seen")) +
+    card("Clicks", num(sum(co.daily, "clicks_total")), split("clicks")) +
+    card("Reactions", num(sum(co.daily, "reactions_total")), split("reactions")) +
+    card("Comments", num(sum(co.daily, "comments_total")), split("comments")) +
+    card("Followers gained", num(sum(co.followers_daily, "gained"))) +
+    card("Company page views", num(sum(co.visitors_daily, "views_total")), `Overview ${num(sum(co.visitors_daily, "views_overview"))}, Jobs ${num(sum(co.visitors_daily, "views_jobs"))}`);
 
   metricChart("li-co-daily", "li-co-metric", co.daily, {
     seen: [["Times seen, unpaid", "seen_unpaid"], ["Times seen, paid", "seen_paid"]],
@@ -387,12 +385,12 @@ function renderLinkedIn(d) {
   chart("li-co-followers", (th) => ({
     type: "bar", data: { labels: coWeeks.map((w) => w.label), datasets: [bar("Followers gained", coWeeks.map((w) => w.value), th.s[0])] },
   }));
-  $("li-co-followers-source").textContent = `${coSrc} Weeks run Monday to Sunday.`;
+  $("li-co-followers-source").textContent = coSrc;
 
   chart("li-co-visits", (th) => ({
     type: "line",
     data: { labels: co.visitors_daily.map((r) => day(r.date)), datasets: [
-      line("All company page views (LinkedIn's total)", co.visitors_daily.map((r) => r.views_total), th.s[0]),
+      line("All company page views", co.visitors_daily.map((r) => r.views_total), th.s[0]),
       line("Overview page views", co.visitors_daily.map((r) => r.views_overview), th.s[1]),
       line("Jobs page views", co.visitors_daily.map((r) => r.views_jobs), th.s[2]),
     ] },
@@ -408,28 +406,24 @@ function renderLinkedIn(d) {
     { key: "likes", label: "Likes", num: true, fmt: num },
     { key: "comments", label: "Comments", num: true, fmt: num },
   ] });
-  $("li-co-posts-source").textContent = `${coSrc} All ${co.posts.length} posts are unpaid.`;
+  $("li-co-posts-source").textContent = coSrc;
 
   const b = co.breakdowns;
   const order = ["job_function", "seniority", "company_size", "location", "industry"];
-  $("li-co-breakdown-note").textContent =
-    `Each table comes from its own LinkedIn sheet, and the sheets don't add up to the same follower total: ` +
-    order.map((key) => `${b[key].label.toLowerCase()} ${num(b[key].adds_up_to)}`).join(", ") +
-    `. They're shown as LinkedIn gave them. Use them to see which groups are biggest, not as exact counts.`;
   $("li-co-breakdowns").innerHTML = order.map((key) => `<div><h4>${b[key].label}</h4><div id="li-bd-${key}"></div></div>`).join("");
   order.forEach((key) => table($(`li-bd-${key}`), { rows: b[key].top, pageSize: 10, columns: [
     { key: "name", label: b[key].label, sort: false },
     { key: "followers", label: "Followers", num: true, fmt: num, sort: false },
   ] }));
-  $("li-co-breakdowns-source").textContent = `Source: ${co.source}, followers file, as of the export date. Top 10 of each.`;
+  $("li-co-breakdowns-source").textContent = `Source: ${co.source}, as exported on 21 Oct 2026.`;
 
   // Kumar Chivukula
   $("li-k-source").textContent = kSrc;
   $("li-k-cards").innerHTML =
-    card("Times seen", num(k.seen), "Times Kumar's posts were seen") +
-    card("People reached", num(k.reached), "Different LinkedIn members who saw a post") +
+    card("Times seen", num(k.seen)) +
+    card("People reached", num(k.reached), "Different members who saw a post") +
     card("Engagements", num(sum(k.daily, "engagements")), "Reactions, comments, shares and clicks combined") +
-    card("Followers gained", num(sum(k.followers_daily, "gained")), "New followers over the 3 months") +
+    card("Followers gained", num(sum(k.followers_daily, "gained"))) +
     card("Total followers", num(k.total_followers), `On ${dayYear(k.total_followers_date)}`);
 
   metricChart("li-k-daily", "li-k-metric", k.daily, {
@@ -441,7 +435,7 @@ function renderLinkedIn(d) {
   chart("li-k-followers", (th) => ({
     type: "bar", data: { labels: kWeeks.map((w) => w.label), datasets: [bar("Followers gained", kWeeks.map((w) => w.value), th.s[0])] },
   }));
-  $("li-k-followers-source").textContent = `${kSrc} Weeks run Monday to Sunday.`;
+  $("li-k-followers-source").textContent = kSrc;
 
   const topCols = (key, label) => [
     { key: "name", label: "Post", search: true, fmt: postLink },
@@ -450,7 +444,8 @@ function renderLinkedIn(d) {
   ];
   table($("li-k-top-seen"), { rows: k.top_by_seen, search: "posts", sortKey: "seen", pageSize: 10, columns: topCols("seen", "Times seen") });
   table($("li-k-top-eng"), { rows: k.top_by_engagements, search: "posts", sortKey: "engagements", pageSize: 10, columns: topCols("engagements", "Engagements") });
-  $("li-k-top-source").textContent = kSrc;
+  $("li-k-top-seen-source").textContent = kSrc;
+  $("li-k-top-eng-source").textContent = kSrc;
 }
 
 // ---------- Tab 4: Kahoots ----------
