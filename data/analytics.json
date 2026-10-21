@@ -1,7 +1,7 @@
 {
  "start_date": "2026-10-01",
  "end_date": "2026-10-20",
- "pulled_at": "2026-10-21T19:59+05:30",
+ "pulled_at": "2026-10-21T20:09+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -148,7 +148,7 @@
    "sessions": 2700,
    "totalUsers": 1708,
    "engagedSessions": 1286,
-   "averageSessionDuration": 174.21432573148147
+   "averageSessionDuration": 174.2143257314815
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -1078,7 +1078,7 @@
    "sessions": 2514,
    "totalUsers": 1597,
    "engagedSessions": 1213,
-   "averageSessionDuration": 177.89055918019096
+   "averageSessionDuration": 177.89055918019093
   },
   {
    "sessionDefaultChannelGroup": "Email",
