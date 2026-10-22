@@ -217,6 +217,21 @@
       <p class="source" id="li-web-cmp-chart-source"></p>
     </div>
 
+    <h3 class="section-title">Estimated: who sent the Untagged visits</h3>
+    <p class="note-inline">These are best guesses from matching posts to visits, kept apart from the tagged numbers above.</p>
+    <p class="note-inline" id="li-est-stale"></p>
+    <div class="cards" id="li-est-cmp-cards"></div>
+    <p class="source" id="li-est-cmp-source"></p>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="li-est-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="li-est-cmp-chart" aria-label="Estimated company page, estimated Kumar and can't tell"></canvas></div>
+      <p class="source" id="li-est-cmp-chart-source"></p>
+    </div>
+
     <details class="more">
       <summary>More detail</summary>
       <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
@@ -236,6 +251,18 @@
         <h3>LinkedIn sources and tags counted</h3>
         <div id="li-web-tags"></div>
         <p class="source" id="li-web-tags-source"></p>
+      </div>
+
+      <div class="panel">
+        <h3>How the estimate matched posts to visits</h3>
+        <div id="li-est-matches"></div>
+        <p class="source" id="li-est-matches-source"></p>
+        <p class="note" id="li-est-rule"></p>
+      </div>
+      <div class="panel">
+        <h3>Posts that link to opsera.ai</h3>
+        <div id="li-est-posts"></div>
+        <p class="source" id="li-est-posts-source"></p>
       </div>
 
       <h3 class="section-title">The company page on LinkedIn</h3>
@@ -496,6 +523,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=16"></script>
+<script src="app.js?v=18"></script>
 </body>
 </html>

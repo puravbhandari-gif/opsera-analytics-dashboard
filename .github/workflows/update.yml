@@ -41,6 +41,21 @@ jobs:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
         run: python scripts/fetch_youtube.py
 
+      # Optional: if APIFY_TOKEN is missing or Apify fails, only the estimate is skipped.
+      # Everything else still updates, and the page shows the last estimate with its date.
+      - name: Find LinkedIn posts that link to opsera.ai (optional)
+        id: posts
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python scripts/fetch_linkedin_posts.py
+
+      - name: Estimate who sent the untagged LinkedIn visits (optional)
+        if: github.event_name != 'push' && steps.posts.outcome == 'success'
+        continue-on-error: true
+        run: python scripts/estimate_linkedin.py
+
       - name: Save new numbers to main
         if: github.event_name != 'push'
         run: |

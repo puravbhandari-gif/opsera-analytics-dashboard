@@ -44,6 +44,8 @@ The LinkedIn brand tab also shows website visits that started on LinkedIn, from 
 
 To move visits out of Untagged, add those tags to the links you post from now on.
 
+Below those three lines, the tab shows a best guess for the Untagged visits: "Estimated: company page", "Estimated: Kumar" and "Can't tell". Every Monday, the update uses Apify to find posts since 1 Sep from the company page and from Kumar that link to opsera.ai, then matches them to Untagged visits by landing page and by date (the day of the post and the 3 days after). A visit only goes to one of them when just that account linked to the page in that window. Otherwise it stays "Can't tell". Links the accounts put in their own comments count too. This step uses the `APIFY_TOKEN` GitHub secret and costs about $0.10 to $0.40 a week in Apify. It's optional: if the secret is missing or Apify fails, only the estimate is skipped, everything else still updates, and the page says the estimate wasn't updated that week.
+
 ## The YouTube tab
 
 The Monday update also pulls the Opsera YouTube channel's numbers from YouTube's own APIs. It uses a read-only login that marketing@opsera.io gave once. That login is stored as a GitHub secret called `YOUTUBE_TOKEN`, and a copy is kept on Purav's Mac in `~/.config/opsera-dashboard/`.

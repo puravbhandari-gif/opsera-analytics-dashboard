@@ -251,6 +251,13 @@ def linkedin_visits(s, end):
         row = landing.setdefault((page, g), {"page": page, "group": g, "visits": 0, "engaged": 0})
         row["visits"] += r["sessions"]
         row["engaged"] += r["engagedSessions"]
+    landing_daily = {}
+    for r in ga_report(s, end, ["date", "landingPage"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
+        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        row = landing_daily.setdefault((r["date"], page, g), {"date": r["date"], "page": page, "group": g, "visits": 0, "engaged": 0})
+        row["visits"] += r["sessions"]
+        row["engaged"] += r["engagedSessions"]
     tags = [{**{k: r[k] for k in tag_dims}, "content": r["sessionManualAdContent"], "group": linkedin_group(r["sessionSource"], r["sessionCampaignName"]),
              "visits": r["sessions"], "engaged": r["engagedSessions"]}
             for r in ga_report(s, end, tag_dims + ["sessionManualAdContent"], ["sessions", "engagedSessions"], flt=li)]
@@ -269,6 +276,7 @@ def linkedin_visits(s, end):
         "sources_counted": sorted(counted), "look_alikes_not_counted": look_alikes,
         "daily": sorted(daily.values(), key=lambda r: (r["date"], r["group"])),
         "landing": sorted(landing.values(), key=lambda r: -r["visits"]),
+        "landing_daily": sorted(landing_daily.values(), key=lambda r: (r["date"], r["page"], r["group"])),
         "tags": sorted(tags, key=lambda r: -r["visits"]),
         "forms": sorted(forms.values(), key=lambda r: (r["date"], r["group"])),
     }

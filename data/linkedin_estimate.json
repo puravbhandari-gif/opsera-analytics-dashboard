@@ -1,0 +1,505 @@
+{
+ "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
+ "window_days": 3,
+ "posts_pulled_at": "2026-10-22T11:27+00:00",
+ "daily": [
+  {
+   "date": "2026-09-01",
+   "group": "cant_tell",
+   "visits": 9,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-02",
+   "group": "cant_tell",
+   "visits": 10,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-03",
+   "group": "cant_tell",
+   "visits": 20,
+   "engaged": 9
+  },
+  {
+   "date": "2026-09-04",
+   "group": "cant_tell",
+   "visits": 6,
+   "engaged": 4
+  },
+  {
+   "date": "2026-09-05",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-06",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-07",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 0
+  },
+  {
+   "date": "2026-09-08",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 0
+  },
+  {
+   "date": "2026-09-09",
+   "group": "cant_tell",
+   "visits": 2,
+   "engaged": 0
+  },
+  {
+   "date": "2026-09-10",
+   "group": "cant_tell",
+   "visits": 6,
+   "engaged": 2
+  },
+  {
+   "date": "2026-09-11",
+   "group": "cant_tell",
+   "visits": 38,
+   "engaged": 14
+  },
+  {
+   "date": "2026-09-12",
+   "group": "cant_tell",
+   "visits": 17,
+   "engaged": 4
+  },
+  {
+   "date": "2026-09-13",
+   "group": "cant_tell",
+   "visits": 6,
+   "engaged": 2
+  },
+  {
+   "date": "2026-09-14",
+   "group": "cant_tell",
+   "visits": 12,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-15",
+   "group": "cant_tell",
+   "visits": 11,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-15",
+   "group": "estimated_company",
+   "visits": 4,
+   "engaged": 3
+  },
+  {
+   "date": "2026-09-16",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 4
+  },
+  {
+   "date": "2026-09-17",
+   "group": "cant_tell",
+   "visits": 21,
+   "engaged": 10
+  },
+  {
+   "date": "2026-09-18",
+   "group": "cant_tell",
+   "visits": 13,
+   "engaged": 4
+  },
+  {
+   "date": "2026-09-19",
+   "group": "cant_tell",
+   "visits": 5,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-19",
+   "group": "estimated_kumar",
+   "visits": 2,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-20",
+   "group": "cant_tell",
+   "visits": 2,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-20",
+   "group": "estimated_kumar",
+   "visits": 4,
+   "engaged": 3
+  },
+  {
+   "date": "2026-09-21",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 0
+  },
+  {
+   "date": "2026-09-22",
+   "group": "cant_tell",
+   "visits": 11,
+   "engaged": 6
+  },
+  {
+   "date": "2026-09-23",
+   "group": "cant_tell",
+   "visits": 9,
+   "engaged": 3
+  },
+  {
+   "date": "2026-09-24",
+   "group": "cant_tell",
+   "visits": 9,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-25",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 3
+  },
+  {
+   "date": "2026-09-26",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 2
+  },
+  {
+   "date": "2026-09-27",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-28",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-29",
+   "group": "cant_tell",
+   "visits": 7,
+   "engaged": 1
+  },
+  {
+   "date": "2026-09-30",
+   "group": "cant_tell",
+   "visits": 7,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-01",
+   "group": "cant_tell",
+   "visits": 22,
+   "engaged": 13
+  },
+  {
+   "date": "2026-10-02",
+   "group": "cant_tell",
+   "visits": 6,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-03",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 2
+  },
+  {
+   "date": "2026-10-04",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 3
+  },
+  {
+   "date": "2026-10-05",
+   "group": "cant_tell",
+   "visits": 5,
+   "engaged": 3
+  },
+  {
+   "date": "2026-10-06",
+   "group": "cant_tell",
+   "visits": 5,
+   "engaged": 2
+  },
+  {
+   "date": "2026-10-07",
+   "group": "cant_tell",
+   "visits": 11,
+   "engaged": 8
+  },
+  {
+   "date": "2026-10-08",
+   "group": "cant_tell",
+   "visits": 13,
+   "engaged": 8
+  },
+  {
+   "date": "2026-10-09",
+   "group": "cant_tell",
+   "visits": 6,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-10",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-11",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 0
+  },
+  {
+   "date": "2026-10-12",
+   "group": "cant_tell",
+   "visits": 5,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-12",
+   "group": "estimated_kumar",
+   "visits": 5,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-13",
+   "group": "estimated_kumar",
+   "visits": 4,
+   "engaged": 3
+  },
+  {
+   "date": "2026-10-14",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-15",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-15",
+   "group": "estimated_company",
+   "visits": 1,
+   "engaged": 0
+  },
+  {
+   "date": "2026-10-15",
+   "group": "estimated_kumar",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-16",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-17",
+   "group": "cant_tell",
+   "visits": 10,
+   "engaged": 3
+  },
+  {
+   "date": "2026-10-18",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-19",
+   "group": "cant_tell",
+   "visits": 12,
+   "engaged": 10
+  },
+  {
+   "date": "2026-10-20",
+   "group": "cant_tell",
+   "visits": 16,
+   "engaged": 9
+  },
+  {
+   "date": "2026-10-21",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 2
+  }
+ ],
+ "matches": [
+  {
+   "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+   "group": "cant_tell",
+   "visits": 16,
+   "engaged": 10,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-09-03",
+    "2026-09-04"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "cant_tell",
+   "visits": 15,
+   "engaged": 8,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-09-17",
+    "2026-09-18"
+   ]
+  },
+  {
+   "page": "/",
+   "group": "estimated_kumar",
+   "visits": 10,
+   "engaged": 8,
+   "accounts": [
+    "kumar"
+   ],
+   "dates": [
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-15"
+   ]
+  },
+  {
+   "page": "/gartner-symposium",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 4,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "estimated_kumar",
+   "visits": 6,
+   "engaged": 4,
+   "accounts": [
+    "kumar"
+   ],
+   "dates": [
+    "2026-09-19",
+    "2026-09-20"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "estimated_company",
+   "visits": 4,
+   "engaged": 3,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-09-15"
+   ]
+  },
+  {
+   "page": "/gartner-symposium",
+   "group": "estimated_company",
+   "visits": 1,
+   "engaged": 0,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-10-15"
+   ]
+  }
+ ],
+ "linked_posts": [
+  {
+   "account": "company",
+   "date": "2026-09-03",
+   "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-forge-was-named-in-honorable-mentions-activity-7501263300077469696-4FXM"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-09-03",
+   "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_forge-activity-7501292651950854144-GjP-"
+  },
+  {
+   "account": "company",
+   "date": "2026-09-15",
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool",
+   "post": "https://www.linkedin.com/posts/opsera_every-salesforce-org-has-one-deployment-queue-activity-7505701998353186818-Uk-8"
+  },
+  {
+   "account": "company",
+   "date": "2026-09-17",
+   "page": "/forge",
+   "post": "https://www.linkedin.com/posts/opsera_say-hello-to-forge-for-builders-the-spec-activity-7506381473168379905-tq8_"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-09-17",
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_today-opsera-launched-a-headless-devops-activity-7506381905379012609-xrML"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-10-12",
+   "page": "/",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_models-as-insider-risks-in-the-super-intelligence-activity-7515488328117559297-U8oC"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-15",
+   "page": "/gartner-symposium",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-will-be-at-gartner-it-symposiumxpo-activity-7516521669839065088-Wxrw"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-10-16",
+   "page": "/gartner-symposium",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_gartneritsymposium-forge-opsera-activity-7517085119438921728-N-1N"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-19",
+   "page": "/gartner-symposium",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-gartner-it-symposiumxpo-activity-7517970775287504896-2O26"
+  }
+ ],
+ "untagged_total": 420,
+ "end_date": "2026-10-21",
+ "pulled_at": "2026-10-22T16:48+05:30"
+}

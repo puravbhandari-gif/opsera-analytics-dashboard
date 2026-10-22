@@ -718,6 +718,38 @@ function renderLinkedInVisits(ga) {
   $("li-web-tags-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}. Sources counted: ${li.sources_counted.join(", ")}.`;
 }
 
+// Estimated: Untagged LinkedIn visits matched to posts. Best guesses, never added to the tagged lines.
+function renderLinkedInEstimate(est, ga) {
+  const GROUPS = [["estimated_company", "Estimated: company page"], ["estimated_kumar", "Estimated: Kumar"], ["cant_tell", "Can't tell"]];
+  const src = "Source: Google Analytics, opsera.ai 2026, matched to LinkedIn posts";
+  const when = (a, b) => `${range(a, b)}, US Pacific time`;
+  const estLast = lastFullDayPacific(est.end_date || ga.end_date, est.pulled_at || ga.pulled_at);
+  $("li-est-stale").textContent = est.end_date && est.end_date < ga.end_date
+    ? `The estimate wasn't updated this week, so it stops at ${dayYear(estLast)}.` : "";
+  compare({ id: "li-est", together: true, start: ga.start_date, last: estLast,
+    source: (a, b) => `${src}, ${when(a, b)}.`,
+    metrics: GROUPS.map(([g, label]) => ({ label, value: rangeSum(est.daily.filter((r) => r.group === g), "visits"), fmt: num })) });
+
+  const name = Object.fromEntries(GROUPS);
+  const who = { company: "Company page", kumar: "Kumar" };
+  table($("li-est-matches"), { rows: est.matches.map((m) => ({ ...m, counted: name[m.group], linked: m.accounts.map((a) => who[a]).join(" and "),
+    days: m.dates.length > 1 ? range(m.dates[0], m.dates[m.dates.length - 1]) : dayYear(m.dates[0]) })), sortKey: "visits", columns: [
+    { key: "page", label: "Landing page" },
+    { key: "days", label: "Visit days" },
+    { key: "linked", label: "Linked by" },
+    { key: "counted", label: "Counted as" },
+    { key: "visits", label: "Visits", num: true, fmt: num },
+  ] });
+  $("li-est-matches-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}.`;
+  $("li-est-rule").textContent = `A visit is only given to one account when just that account linked to the page on the day of the visit or the ${est.window_days} days before.`;
+  table($("li-est-posts"), { rows: est.linked_posts.map((p) => ({ ...p, from: who[p.account], name: dayYear(p.date) })), sortKey: "date", sortDir: 1, columns: [
+    { key: "name", label: "Posted", sort: false, fmt: (v, r) => `<a href="${esc(r.post)}" target="_blank" rel="noopener">${esc(v)}</a>` },
+    { key: "from", label: "From", sort: false },
+    { key: "page", label: "Links to", sort: false },
+  ] });
+  $("li-est-posts-source").textContent = `Source: LinkedIn posts found through Apify, since ${dayYear("2026-09-01")}, last checked ${dayYear(est.posts_pulled_at.slice(0, 10))}.`;
+}
+
 // ---------- YouTube: Shorts and long videos never added together ----------
 
 const mmss = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
@@ -918,6 +950,7 @@ const TODO = [
   ["slash", "Fix blogs showing up twice on Google, with and without \"/\" at the end."],
   ["waiting", "Waiting on David and Yusra: bot filtering in HubSpot, connecting Luma to HubSpot."],
   ["happy-hour", "Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot."],
+  ["salesforce-link", "Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform) that both Opsera and Kumar posted. Needs a redirect on the website."],
 ];
 
 function renderTodo() {
@@ -966,8 +999,8 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 (async () => {
   renderTodo();
   try {
-    const [gsc, ga, leads, li, yt, kp, km, kq, inf] = await Promise.all(
-      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
+    const [gsc, ga, leads, li, yt, kp, est, km, kq, inf] = await Promise.all(
+      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "linkedin_estimate.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
     showTab(location.hash.slice(1));
     $("pulled").textContent = `Google numbers last pulled ${dayYear(gsc.pulled_at.slice(0, 10))}, ${gsc.pulled_at.slice(11, 16)} India time.`;
     renderSearch(gsc);
@@ -976,6 +1009,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderLinkedIn(li);
     renderKumarPosts(kp);
     renderLinkedInVisits(ga);
+    renderLinkedInEstimate(est, ga);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

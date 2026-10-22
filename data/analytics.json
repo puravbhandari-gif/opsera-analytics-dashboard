@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T16:39+05:30",
+ "pulled_at": "2026-10-22T16:48+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -2594,7 +2594,7 @@
    "sessions": 345,
    "totalUsers": 328,
    "engagedSessions": 21,
-   "averageSessionDuration": 11.7757179942029
+   "averageSessionDuration": 11.775717994202898
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -2603,7 +2603,7 @@
    "sessions": 319,
    "totalUsers": 188,
    "engagedSessions": 131,
-   "averageSessionDuration": 132.9543465987461
+   "averageSessionDuration": 132.95434659874607
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -2639,7 +2639,7 @@
    "sessions": 63,
    "totalUsers": 30,
    "engagedSessions": 26,
-   "averageSessionDuration": 155.79930957142855
+   "averageSessionDuration": 155.79930957142858
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -9515,6 +9515,1387 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 1
+   }
+  ],
+  "landing_daily": [
+   {
+    "date": "2026-09-01",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-01",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-01",
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-01",
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-01",
+    "page": "/blog/frontier-benchmark-aug-2026",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-01",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-02",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-02",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-02",
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-02",
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-02",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-03",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-03",
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-03",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 12,
+    "engaged": 8
+   },
+   {
+    "date": "2026-09-03",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-04",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-04",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-04",
+    "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-05",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-05",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-06",
+    "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-07",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-07",
+    "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-08",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-08",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-08",
+    "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-08",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-09",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-09",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-10",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-10",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-10",
+    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-10",
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-11",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-11",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-11",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-11",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 33,
+    "engaged": 12
+   },
+   {
+    "date": "2026-09-12",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-12",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-12",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 15,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-13",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-13",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-14",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-14",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-14",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-14",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-14",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-14",
+    "page": "/platform/toolchain-automation",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-15",
+    "page": "/",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-15",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-15",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-15",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-15",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-16",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-16",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-16",
+    "page": "/for/sentinelone",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-17",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/blog/the-high-speed-lane-cursor-opsera-agentic-devops",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 12,
+    "engaged": 8
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/brickforge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-17",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-18",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-18",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-19",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-19",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-19",
+    "page": "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-19",
+    "page": "/headless-devops-for-salesforce-orgs",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-20",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-20",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-20",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-21",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-21",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-21",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-22",
+    "page": "/",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-22",
+    "page": "/about",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-22",
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-22",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-22",
+    "page": "/flutter-2026-ai-sdlc-summit/utm_campaign=51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8nEEbBEw2-s8xt4R2oYdMoDNHPOlvt8cscbqHfmAYNdVDTYMI41zmAp5kBXxrNHZrPjr6P",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-23",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-23",
+    "page": "/",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-23",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-23",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-24",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-24",
+    "page": "/",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-24",
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-25",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-25",
+    "page": "/resources",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-26",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-26",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-26",
+    "page": "/pricing",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-27",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-28",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-28",
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-29",
+    "page": "/",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-29",
+    "page": "/blog/forge-cursor-ai-speed-meets-enterprise-control",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-29",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-30",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-30",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-30",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-30",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-01",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-01",
+    "page": "/",
+    "group": "untagged",
+    "visits": 13,
+    "engaged": 9
+   },
+   {
+    "date": "2026-10-01",
+    "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-01",
+    "page": "/events/flutter-the-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-01",
+    "page": "/github-universe-happy-hour",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-02",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-02",
+    "page": "/events/flutter-the-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-02",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-02",
+    "page": "/platform/toolchain-automation",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-03",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-03",
+    "page": "/events/flutter-the-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-04",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-04",
+    "page": "/github-universe-happy-hour",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-05",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-05",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-05",
+    "page": "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-05",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-06",
+    "page": "(not set)",
+    "group": "company",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-06",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-06",
+    "page": "/",
+    "group": "company",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-06",
+    "page": "/",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-06",
+    "page": "/governance",
+    "group": "company",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-07",
+    "page": "(not set)",
+    "group": "company",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-07",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-07",
+    "page": "/",
+    "group": "company",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-07",
+    "page": "/",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-07",
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-07",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-07",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/",
+    "group": "company",
+    "visits": 7,
+    "engaged": 6
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/cursor-plugin",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/partners",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-08",
+    "page": "/unified-insights",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-09",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-09",
+    "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-09",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-09",
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-09",
+    "page": "/blog",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-09",
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-10",
+    "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-10",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-11",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-12",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-12",
+    "page": "/",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-12",
+    "page": "/appfire-flow-sunset",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-12",
+    "page": "/blog/frontier-benchmark-aug-2026",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-12",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-13",
+    "page": "/",
+    "group": "company",
+    "visits": 4,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-13",
+    "page": "/",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-13",
+    "page": "/resources/comparison-guides/opsera-vs-harness",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-14",
+    "page": "/",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-14",
+    "page": "/forge/modernization",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/gartner-symposium/free-modernization",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/gartner-symposium/poc \u2192",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/resources/report/ai-coding-impact-2025-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-15",
+    "page": "/wp-login.php",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-16",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-16",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-16",
+    "page": "/blog/frontier-benchmark-aug-2026",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-16",
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-16",
+    "page": "/gartner-symposium/free-modernization",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-17",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-17",
+    "page": "/",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-17",
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-17",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-18",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-18",
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-18",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-19",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-19",
+    "page": "/",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 5
+   },
+   {
+    "date": "2026-10-19",
+    "page": "/blog/forge-cursor-ai-speed-meets-enterprise-control",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-19",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-19",
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-20",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-20",
+    "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-20",
+    "page": "/",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 7
+   },
+   {
+    "date": "2026-10-20",
+    "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-20",
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-20",
+    "page": "/software-factory",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-21",
+    "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-21",
+    "page": "/",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-21",
+    "page": "/gartner-symposium/free-modernization",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
    }
   ],
   "tags": [
