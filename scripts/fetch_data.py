@@ -14,7 +14,8 @@ from urllib.parse import quote
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
 
-START_DATE = "2026-10-01"
+START_DATE = "2026-09-01"   # Sep pulled from our own accounts for month-by-month comparison (agreed 22 Oct 2026)
+LEADS_START = "2026-10-01"  # Leads start in Oct: the old site sent some September forms only to Google, not HubSpot
 GA_PROPERTY_ID = "256856286"
 GA_PROPERTY_NAME = "opsera.ai 2026"
 GA_MEASUREMENT_ID = "G-63FKQPLYRW"
@@ -43,6 +44,7 @@ LEAD_LINES = [
         or p.rstrip("/") in ("/gartner-symposium", "/github-universe-happy-hour")),
 ]
 REMOVED_FORM_PAGES = ["/", "/about", "/platform"]
+LEFT_OUT_PAGES = ("/job-application",)   # job applications aren't sales leads
 NEW_SITE_LIVE = "2026-09-30"
 
 
@@ -151,11 +153,11 @@ def check_ga_property(s):
     return prop.get("timeZone")
 
 
-def ga_report(s, end, dims, metrics, event_names=None):
+def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE):
     rows, offset = [], 0
     while True:
         body = {
-            "dateRanges": [{"startDate": START_DATE, "endDate": end}],
+            "dateRanges": [{"startDate": start, "endDate": end}],
             "dimensions": [{"name": d} for d in dims],
             "metrics": [{"name": m} for m in metrics],
             "limit": 100000, "offset": offset,
@@ -187,9 +189,12 @@ def split_check(label, rows, total):
 def leads(form_rows):
     lines = {key: {"label": label, "count": 0, "pages": {}} for key, label, _ in LEAD_LINES}
     lines["other"] = {"label": "Other forms", "count": 0, "pages": {}}
-    daily = {}
+    daily, left_out = {}, {}
     for r in form_rows:
         page = page_key(r["pagePath"])
+        if page.startswith(LEFT_OUT_PAGES):
+            left_out[page] = left_out.get(page, 0) + r["eventCount"]
+            continue
         key = next((k for k, _, match in LEAD_LINES if match(page)), "other")
         lines[key]["count"] += r["eventCount"]
         lines[key]["pages"][page] = lines[key]["pages"].get(page, 0) + r["eventCount"]
@@ -205,6 +210,7 @@ def leads(form_rows):
         "lines": lines,
         "daily": [{"date": d, **v} for d, v in sorted(daily.items())],
         "removed_form_pages": REMOVED_FORM_PAGES,
+        "left_out": [{"page": p, "count": c} for p, c in sorted(left_out.items())],
         "new_site_live": NEW_SITE_LIVE,
     }
 
@@ -224,7 +230,7 @@ def fetch_ga(s, end):
         key = page_key(r["pagePath"])
         views[key] = views.get(key, 0) + r["screenPageViews"]
     pages = [{"page": p, "views": v} for p, v in sorted(views.items(), key=lambda x: -x[1])]
-    form_rows = ga_report(s, end, ["date", "pagePath"], ["eventCount"], event_names=[FORM_EVENT])
+    form_rows = ga_report(s, end, ["date", "pagePath"], ["eventCount"], event_names=[FORM_EVENT], start=LEADS_START)
 
     return {
         "source": f"Google Analytics 4, {GA_PROPERTY_NAME} (property {GA_PROPERTY_ID})",
@@ -251,7 +257,8 @@ def main():
     ga, lead_data = fetch_ga(s, end)
     write("search_console.json", gsc, meta)
     write("analytics.json", ga, meta)
-    write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data}, meta)
+    write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data},
+          {**meta, "start_date": LEADS_START})
 
     print(f"\nRange asked for: {START_DATE} to {end}")
     print(f"Search Console: last day with data {gsc['last_day_with_data']}, "

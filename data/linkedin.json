@@ -4,6 +4,8 @@
  "company": {
   "source": "LinkedIn export, Opsera company page",
   "dates_note": "LinkedIn gives these dates in UTC",
+  "start_date": "2026-07-01",
+  "end_date": "2026-10-20",
   "daily": [
    {
     "date": "2026-07-01",
@@ -1384,6 +1386,306 @@
     "comments_unpaid": 0,
     "comments_paid": 0,
     "comments_total": 0
+   },
+   {
+    "date": "2026-10-01",
+    "seen_unpaid": 1150,
+    "seen_paid": 0,
+    "seen_total": 1150,
+    "clicks_unpaid": 118,
+    "clicks_paid": 0,
+    "clicks_total": 118,
+    "reactions_unpaid": 34,
+    "reactions_paid": 0,
+    "reactions_total": 34,
+    "comments_unpaid": 3,
+    "comments_paid": 0,
+    "comments_total": 3
+   },
+   {
+    "date": "2026-10-02",
+    "seen_unpaid": 7721,
+    "seen_paid": 0,
+    "seen_total": 7721,
+    "clicks_unpaid": 731,
+    "clicks_paid": 0,
+    "clicks_total": 731,
+    "reactions_unpaid": 223,
+    "reactions_paid": 0,
+    "reactions_total": 223,
+    "comments_unpaid": 7,
+    "comments_paid": 0,
+    "comments_total": 7
+   },
+   {
+    "date": "2026-10-03",
+    "seen_unpaid": 1510,
+    "seen_paid": 0,
+    "seen_total": 1510,
+    "clicks_unpaid": 91,
+    "clicks_paid": 0,
+    "clicks_total": 91,
+    "reactions_unpaid": 39,
+    "reactions_paid": 0,
+    "reactions_total": 39,
+    "comments_unpaid": 1,
+    "comments_paid": 0,
+    "comments_total": 1
+   },
+   {
+    "date": "2026-10-04",
+    "seen_unpaid": 998,
+    "seen_paid": 0,
+    "seen_total": 998,
+    "clicks_unpaid": 86,
+    "clicks_paid": 0,
+    "clicks_total": 86,
+    "reactions_unpaid": 26,
+    "reactions_paid": 0,
+    "reactions_total": 26,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-05",
+    "seen_unpaid": 1877,
+    "seen_paid": 0,
+    "seen_total": 1877,
+    "clicks_unpaid": 227,
+    "clicks_paid": 0,
+    "clicks_total": 227,
+    "reactions_unpaid": 56,
+    "reactions_paid": 0,
+    "reactions_total": 56,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-06",
+    "seen_unpaid": 1767,
+    "seen_paid": 0,
+    "seen_total": 1767,
+    "clicks_unpaid": 424,
+    "clicks_paid": 0,
+    "clicks_total": 424,
+    "reactions_unpaid": 35,
+    "reactions_paid": 0,
+    "reactions_total": 35,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-07",
+    "seen_unpaid": 1187,
+    "seen_paid": 0,
+    "seen_total": 1187,
+    "clicks_unpaid": 155,
+    "clicks_paid": 0,
+    "clicks_total": 155,
+    "reactions_unpaid": 25,
+    "reactions_paid": 0,
+    "reactions_total": 25,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-08",
+    "seen_unpaid": 581,
+    "seen_paid": 0,
+    "seen_total": 581,
+    "clicks_unpaid": 37,
+    "clicks_paid": 0,
+    "clicks_total": 37,
+    "reactions_unpaid": 10,
+    "reactions_paid": 0,
+    "reactions_total": 10,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-09",
+    "seen_unpaid": 1210,
+    "seen_paid": 0,
+    "seen_total": 1210,
+    "clicks_unpaid": 142,
+    "clicks_paid": 0,
+    "clicks_total": 142,
+    "reactions_unpaid": 31,
+    "reactions_paid": 0,
+    "reactions_total": 31,
+    "comments_unpaid": 1,
+    "comments_paid": 0,
+    "comments_total": 1
+   },
+   {
+    "date": "2026-10-10",
+    "seen_unpaid": 731,
+    "seen_paid": 0,
+    "seen_total": 731,
+    "clicks_unpaid": 80,
+    "clicks_paid": 0,
+    "clicks_total": 80,
+    "reactions_unpaid": 18,
+    "reactions_paid": 0,
+    "reactions_total": 18,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-11",
+    "seen_unpaid": 660,
+    "seen_paid": 0,
+    "seen_total": 660,
+    "clicks_unpaid": 191,
+    "clicks_paid": 0,
+    "clicks_total": 191,
+    "reactions_unpaid": 11,
+    "reactions_paid": 0,
+    "reactions_total": 11,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-12",
+    "seen_unpaid": 490,
+    "seen_paid": 0,
+    "seen_total": 490,
+    "clicks_unpaid": 40,
+    "clicks_paid": 0,
+    "clicks_total": 40,
+    "reactions_unpaid": 14,
+    "reactions_paid": 0,
+    "reactions_total": 14,
+    "comments_unpaid": 1,
+    "comments_paid": 0,
+    "comments_total": 1
+   },
+   {
+    "date": "2026-10-13",
+    "seen_unpaid": 478,
+    "seen_paid": 0,
+    "seen_total": 478,
+    "clicks_unpaid": 27,
+    "clicks_paid": 0,
+    "clicks_total": 27,
+    "reactions_unpaid": 4,
+    "reactions_paid": 0,
+    "reactions_total": 4,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-14",
+    "seen_unpaid": 1988,
+    "seen_paid": 0,
+    "seen_total": 1988,
+    "clicks_unpaid": 92,
+    "clicks_paid": 0,
+    "clicks_total": 92,
+    "reactions_unpaid": 68,
+    "reactions_paid": 0,
+    "reactions_total": 68,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-15",
+    "seen_unpaid": 801,
+    "seen_paid": 0,
+    "seen_total": 801,
+    "clicks_unpaid": 26,
+    "clicks_paid": 0,
+    "clicks_total": 26,
+    "reactions_unpaid": 30,
+    "reactions_paid": 0,
+    "reactions_total": 30,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-16",
+    "seen_unpaid": 548,
+    "seen_paid": 0,
+    "seen_total": 548,
+    "clicks_unpaid": 43,
+    "clicks_paid": 0,
+    "clicks_total": 43,
+    "reactions_unpaid": 10,
+    "reactions_paid": 0,
+    "reactions_total": 10,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-17",
+    "seen_unpaid": 201,
+    "seen_paid": 0,
+    "seen_total": 201,
+    "clicks_unpaid": 18,
+    "clicks_paid": 0,
+    "clicks_total": 18,
+    "reactions_unpaid": 2,
+    "reactions_paid": 0,
+    "reactions_total": 2,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-18",
+    "seen_unpaid": 197,
+    "seen_paid": 0,
+    "seen_total": 197,
+    "clicks_unpaid": 31,
+    "clicks_paid": 0,
+    "clicks_total": 31,
+    "reactions_unpaid": 4,
+    "reactions_paid": 0,
+    "reactions_total": 4,
+    "comments_unpaid": 1,
+    "comments_paid": 0,
+    "comments_total": 1
+   },
+   {
+    "date": "2026-10-19",
+    "seen_unpaid": 632,
+    "seen_paid": 0,
+    "seen_total": 632,
+    "clicks_unpaid": 212,
+    "clicks_paid": 0,
+    "clicks_total": 212,
+    "reactions_unpaid": 15,
+    "reactions_paid": 0,
+    "reactions_total": 15,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-10-20",
+    "seen_unpaid": 1932,
+    "seen_paid": 0,
+    "seen_total": 1932,
+    "clicks_unpaid": 712,
+    "clicks_paid": 0,
+    "clicks_total": 712,
+    "reactions_unpaid": 36,
+    "reactions_paid": 0,
+    "reactions_total": 36,
+    "comments_unpaid": 3,
+    "comments_paid": 0,
+    "comments_total": 3
    }
   ],
   "posts": [
@@ -1866,6 +2168,198 @@
     "clicks": 1175,
     "likes": 77,
     "comments": 1
+   },
+   {
+    "title": "Day 1 at #GartnerSYM is done and Day 2 is underway. Thanks to everyone stopping by booth 130! Come a...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7518389925608833024",
+    "posted_by": "Yusra Syed",
+    "created": "2026-10-20",
+    "paid": false,
+    "video": false,
+    "seen": 1606,
+    "clicks": 1149,
+    "likes": 53,
+    "comments": 3
+   },
+   {
+    "title": "Gartner IT Symposium/Xpo starts today, and here\u2019s the team! We're at booth 130 in Orlando all week w...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7517970775287504896",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-19",
+    "paid": false,
+    "video": false,
+    "seen": 822,
+    "clicks": 493,
+    "likes": 30,
+    "comments": 0
+   },
+   {
+    "title": "Opsera will be at Gartner IT Symposium/Xpo in Orlando from October 19 to 22! Come and see Opsera For...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7516521669839065088",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-15",
+    "paid": false,
+    "video": false,
+    "seen": 467,
+    "clicks": 20,
+    "likes": 21,
+    "comments": 0
+   },
+   {
+    "title": "Opsera is heading to FLOCK '26! We're proud to sponsor NeuBird's Agentic Production Ops Summit, brin...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7516166003781758976",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-14",
+    "paid": false,
+    "video": false,
+    "seen": 466,
+    "clicks": 4,
+    "likes": 11,
+    "comments": 0
+   },
+   {
+    "title": "Opsera has a new look. Our hummingbird has been our mark since 2020. We\u2019ve redrawn it for the work e...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7515982066740711424",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-14",
+    "paid": false,
+    "video": false,
+    "seen": 1938,
+    "clicks": 103,
+    "likes": 74,
+    "comments": 0
+   },
+   {
+    "title": "We're excited to sponsor FLOCK '26, NeuBird's Agentic Production Ops Summit, on October 14 in San Fr...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7514708830564294656",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-10",
+    "paid": false,
+    "video": false,
+    "seen": 990,
+    "clicks": 29,
+    "likes": 33,
+    "comments": 0
+   },
+   {
+    "title": "100 technology and engineering leaders came to Flutter 2026 to work out why the code got fast and th...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7514354179625340928",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-09",
+    "paid": false,
+    "video": false,
+    "seen": 603,
+    "clicks": 110,
+    "likes": 17,
+    "comments": 1
+   },
+   {
+    "title": "Running technology at PayPal, Cisco, MeridianLink, Bill.com, NeuBird, Linksys, Zoom and Qualcomm, 10...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7514127537124384769",
+    "posted_by": "Purav Bhandari",
+    "created": "2026-10-09",
+    "paid": false,
+    "video": false,
+    "seen": 750,
+    "clicks": 112,
+    "likes": 20,
+    "comments": 0
+   },
+   {
+    "title": "At Flutter 2026 last week, Sheila Jordan, former Chief Digital Technology Officer at Honeywell, and ...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7513320818509086721",
+    "posted_by": "Yusra Syed",
+    "created": "2026-10-06",
+    "paid": false,
+    "video": false,
+    "seen": 959,
+    "clicks": 300,
+    "likes": 33,
+    "comments": 0
+   },
+   {
+    "title": "Last week at Flutter 2026, 100+ engineering and technology leaders joined us in San Carlos as we tur...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7512947546097569792",
+    "posted_by": "Yusra Syed",
+    "created": "2026-10-05",
+    "paid": false,
+    "video": false,
+    "seen": 1321,
+    "clicks": 523,
+    "likes": 38,
+    "comments": 0
+   },
+   {
+    "title": "Monolith to Modern - Unlocking Legacy Treasure with the AI Factory, live. Roman Vorel, VP of Enterpr...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511586499293888513",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-02",
+    "paid": false,
+    "video": false,
+    "seen": 1907,
+    "clicks": 125,
+    "likes": 38,
+    "comments": 1
+   },
+   {
+    "title": "Jim Mercer, VP at IDC, on \"How AI-Native Software Factories Are Rewriting Enterprise Delivery\".",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511578153182560257",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-02",
+    "paid": false,
+    "video": false,
+    "seen": 528,
+    "clicks": 27,
+    "likes": 25,
+    "comments": 0
+   },
+   {
+    "title": "Sheila Jordan, former Chief Digital Technology Officer at Honeywell Technologies, in conversation wi...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511568193216274433",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-01",
+    "paid": false,
+    "video": false,
+    "seen": 1976,
+    "clicks": 101,
+    "likes": 70,
+    "comments": 1
+   },
+   {
+    "title": "The Autonomous Enterprise Playbook, live. Raj Patel, CTO at MeridianLink. Steve Januario, CIO at BIL...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511559197143166976",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-01",
+    "paid": false,
+    "video": false,
+    "seen": 2653,
+    "clicks": 165,
+    "likes": 74,
+    "comments": 2
+   },
+   {
+    "title": "Pauline Brunet, Global Head of Forward Deployed Engineering at SpaceXAI, opening Flutter 2026 on AI ...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511556527002947584",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-01",
+    "paid": false,
+    "video": false,
+    "seen": 5745,
+    "clicks": 603,
+    "likes": 145,
+    "comments": 8
+   },
+   {
+    "title": "Flutter 2026 is open. 100 technology and engineering leaders at Domenico Winery in San Carlos, here ...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511555584178073600",
+    "posted_by": "Aviral Bhardwaj",
+    "created": "2026-10-01",
+    "paid": false,
+    "video": false,
+    "seen": 458,
+    "clicks": 27,
+    "likes": 20,
+    "comments": 0
    }
   ],
   "followers_daily": [
@@ -2236,12 +2730,92 @@
    {
     "date": "2026-09-30",
     "gained": 2
+   },
+   {
+    "date": "2026-10-01",
+    "gained": 4
+   },
+   {
+    "date": "2026-10-02",
+    "gained": 12
+   },
+   {
+    "date": "2026-10-03",
+    "gained": 2
+   },
+   {
+    "date": "2026-10-04",
+    "gained": 2
+   },
+   {
+    "date": "2026-10-05",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-06",
+    "gained": 5
+   },
+   {
+    "date": "2026-10-07",
+    "gained": 4
+   },
+   {
+    "date": "2026-10-08",
+    "gained": 0
+   },
+   {
+    "date": "2026-10-09",
+    "gained": 2
+   },
+   {
+    "date": "2026-10-10",
+    "gained": 0
+   },
+   {
+    "date": "2026-10-11",
+    "gained": 2
+   },
+   {
+    "date": "2026-10-12",
+    "gained": 3
+   },
+   {
+    "date": "2026-10-13",
+    "gained": 1
+   },
+   {
+    "date": "2026-10-14",
+    "gained": 3
+   },
+   {
+    "date": "2026-10-15",
+    "gained": 4
+   },
+   {
+    "date": "2026-10-16",
+    "gained": 0
+   },
+   {
+    "date": "2026-10-17",
+    "gained": 3
+   },
+   {
+    "date": "2026-10-18",
+    "gained": 0
+   },
+   {
+    "date": "2026-10-19",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-20",
+    "gained": 4
    }
   ],
   "breakdowns": {
    "job_function": {
     "label": "Job function",
-    "adds_up_to": 10794,
+    "adds_up_to": 10796,
     "top": [
      {
       "name": "Engineering",
@@ -2249,11 +2823,11 @@
      },
      {
       "name": "Information Technology",
-      "followers": 1370
+      "followers": 1371
      },
      {
       "name": "Business Development",
-      "followers": 1109
+      "followers": 1107
      },
      {
       "name": "Sales",
@@ -2261,23 +2835,23 @@
      },
      {
       "name": "Operations",
-      "followers": 659
+      "followers": 657
      },
      {
       "name": "Human Resources",
-      "followers": 483
+      "followers": 480
      },
      {
       "name": "Product Management",
-      "followers": 358
+      "followers": 359
      },
      {
       "name": "Consulting",
-      "followers": 320
+      "followers": 321
      },
      {
       "name": "Program and Project Management",
-      "followers": 284
+      "followers": 285
      },
      {
       "name": "Marketing",
@@ -2287,43 +2861,43 @@
    },
    "seniority": {
     "label": "Seniority",
-    "adds_up_to": 11438,
+    "adds_up_to": 11439,
     "top": [
      {
       "name": "Senior",
-      "followers": 4653
+      "followers": 4656
      },
      {
       "name": "Entry",
-      "followers": 3717
+      "followers": 3716
      },
      {
       "name": "Manager",
-      "followers": 871
+      "followers": 870
      },
      {
       "name": "Director",
-      "followers": 848
+      "followers": 846
      },
      {
       "name": "VP",
-      "followers": 465
+      "followers": 463
      },
      {
       "name": "Owner",
-      "followers": 342
+      "followers": 343
      },
      {
       "name": "CXO",
-      "followers": 258
+      "followers": 259
      },
      {
       "name": "Training",
-      "followers": 170
+      "followers": 171
      },
      {
       "name": "Partner",
-      "followers": 99
+      "followers": 100
      },
      {
       "name": "Unpaid",
@@ -2333,7 +2907,7 @@
    },
    "location": {
     "label": "Location",
-    "adds_up_to": 10821,
+    "adds_up_to": 10817,
     "top": [
      {
       "name": "Greater Bengaluru Area, India",
@@ -2345,7 +2919,7 @@
      },
      {
       "name": "San Francisco Bay Area",
-      "followers": 1123
+      "followers": 1122
      },
      {
       "name": "Greater Delhi Area, India",
@@ -2361,11 +2935,11 @@
      },
      {
       "name": "Pune/Pimpri-Chinchwad Area, India",
-      "followers": 381
+      "followers": 382
      },
      {
       "name": "New York City Metropolitan Area",
-      "followers": 283
+      "followers": 282
      },
      {
       "name": "Noida, India",
@@ -2379,7 +2953,7 @@
    },
    "industry": {
     "label": "Industry",
-    "adds_up_to": 12546,
+    "adds_up_to": 12543,
     "top": [
      {
       "name": "IT Services and IT Consulting",
@@ -2387,19 +2961,19 @@
      },
      {
       "name": "Software Development",
-      "followers": 2150
+      "followers": 2149
      },
      {
       "name": "Technology, Information and Internet",
-      "followers": 599
+      "followers": 601
      },
      {
       "name": "Business Consulting and Services",
-      "followers": 458
+      "followers": 457
      },
      {
       "name": "Computer and Network Security",
-      "followers": 339
+      "followers": 338
      },
      {
       "name": "Financial Services",
@@ -2407,33 +2981,33 @@
      },
      {
       "name": "Higher Education",
-      "followers": 274
+      "followers": 275
      },
      {
       "name": "Staffing and Recruiting",
-      "followers": 219
+      "followers": 218
      },
      {
       "name": "Advertising Services",
-      "followers": 192
+      "followers": 191
      },
      {
       "name": "Banking",
-      "followers": 190
+      "followers": 189
      }
     ]
    },
    "company_size": {
     "label": "Company size",
-    "adds_up_to": 10676,
+    "adds_up_to": 10677,
     "top": [
      {
       "name": "10001+",
-      "followers": 3286
+      "followers": 3284
      },
      {
       "name": "51-200",
-      "followers": 1590
+      "followers": 1591
      },
      {
       "name": "1001-5000",
@@ -2441,15 +3015,15 @@
      },
      {
       "name": "11-50",
-      "followers": 1138
+      "followers": 1141
      },
      {
       "name": "201-500",
-      "followers": 929
+      "followers": 930
      },
      {
       "name": "501-1000",
-      "followers": 806
+      "followers": 803
      },
      {
       "name": "2-10",
@@ -2461,7 +3035,7 @@
      },
      {
       "name": "1",
-      "followers": 112
+      "followers": 113
      }
     ]
    }
@@ -3018,8 +3592,129 @@
     "views_total": 111,
     "views_overview": 67,
     "views_jobs": 6
+   },
+   {
+    "date": "2026-10-01",
+    "views_total": 210,
+    "views_overview": 161,
+    "views_jobs": 4
+   },
+   {
+    "date": "2026-10-02",
+    "views_total": 382,
+    "views_overview": 238,
+    "views_jobs": 38
+   },
+   {
+    "date": "2026-10-03",
+    "views_total": 102,
+    "views_overview": 78,
+    "views_jobs": 6
+   },
+   {
+    "date": "2026-10-04",
+    "views_total": 74,
+    "views_overview": 42,
+    "views_jobs": 8
+   },
+   {
+    "date": "2026-10-05",
+    "views_total": 201,
+    "views_overview": 120,
+    "views_jobs": 19
+   },
+   {
+    "date": "2026-10-06",
+    "views_total": 168,
+    "views_overview": 105,
+    "views_jobs": 10
+   },
+   {
+    "date": "2026-10-07",
+    "views_total": 136,
+    "views_overview": 80,
+    "views_jobs": 15
+   },
+   {
+    "date": "2026-10-08",
+    "views_total": 118,
+    "views_overview": 73,
+    "views_jobs": 10
+   },
+   {
+    "date": "2026-10-09",
+    "views_total": 115,
+    "views_overview": 64,
+    "views_jobs": 7
+   },
+   {
+    "date": "2026-10-10",
+    "views_total": 58,
+    "views_overview": 30,
+    "views_jobs": 7
+   },
+   {
+    "date": "2026-10-11",
+    "views_total": 92,
+    "views_overview": 58,
+    "views_jobs": 8
+   },
+   {
+    "date": "2026-10-12",
+    "views_total": 79,
+    "views_overview": 52,
+    "views_jobs": 5
+   },
+   {
+    "date": "2026-10-13",
+    "views_total": 126,
+    "views_overview": 70,
+    "views_jobs": 11
+   },
+   {
+    "date": "2026-10-14",
+    "views_total": 221,
+    "views_overview": 118,
+    "views_jobs": 31
+   },
+   {
+    "date": "2026-10-15",
+    "views_total": 93,
+    "views_overview": 57,
+    "views_jobs": 6
+   },
+   {
+    "date": "2026-10-16",
+    "views_total": 64,
+    "views_overview": 36,
+    "views_jobs": 5
+   },
+   {
+    "date": "2026-10-17",
+    "views_total": 89,
+    "views_overview": 52,
+    "views_jobs": 12
+   },
+   {
+    "date": "2026-10-18",
+    "views_total": 36,
+    "views_overview": 24,
+    "views_jobs": 4
+   },
+   {
+    "date": "2026-10-19",
+    "views_total": 97,
+    "views_overview": 51,
+    "views_jobs": 8
+   },
+   {
+    "date": "2026-10-20",
+    "views_total": 132,
+    "views_overview": 75,
+    "views_jobs": 9
    }
-  ]
+  ],
+  "breakdowns_as_of": "2026-10-22"
  },
  "kumar": {
   "source": "LinkedIn export, Kumar Chivukula's profile",
@@ -5805,6 +6500,1043 @@
       "seen": 1
      }
     ]
+   }
+  ],
+  "still_counting": [
+   "2026-10-22"
+  ]
+ },
+ "kumar_all": {
+  "start_date": "2026-07-01",
+  "end_date": "2026-10-22",
+  "daily": [
+   {
+    "date": "2026-07-01",
+    "seen": 2297,
+    "engagements": 12
+   },
+   {
+    "date": "2026-07-02",
+    "seen": 2744,
+    "engagements": 35
+   },
+   {
+    "date": "2026-07-03",
+    "seen": 1903,
+    "engagements": 27
+   },
+   {
+    "date": "2026-07-04",
+    "seen": 1451,
+    "engagements": 16
+   },
+   {
+    "date": "2026-07-05",
+    "seen": 1178,
+    "engagements": 8
+   },
+   {
+    "date": "2026-07-06",
+    "seen": 1540,
+    "engagements": 11
+   },
+   {
+    "date": "2026-07-07",
+    "seen": 1587,
+    "engagements": 2
+   },
+   {
+    "date": "2026-07-08",
+    "seen": 2092,
+    "engagements": 31
+   },
+   {
+    "date": "2026-07-09",
+    "seen": 3025,
+    "engagements": 46
+   },
+   {
+    "date": "2026-07-10",
+    "seen": 1976,
+    "engagements": 17
+   },
+   {
+    "date": "2026-07-11",
+    "seen": 1417,
+    "engagements": 14
+   },
+   {
+    "date": "2026-07-12",
+    "seen": 1758,
+    "engagements": 8
+   },
+   {
+    "date": "2026-07-13",
+    "seen": 1642,
+    "engagements": 9
+   },
+   {
+    "date": "2026-07-14",
+    "seen": 1577,
+    "engagements": 10
+   },
+   {
+    "date": "2026-07-15",
+    "seen": 1228,
+    "engagements": 23
+   },
+   {
+    "date": "2026-07-16",
+    "seen": 856,
+    "engagements": 16
+   },
+   {
+    "date": "2026-07-17",
+    "seen": 1067,
+    "engagements": 41
+   },
+   {
+    "date": "2026-07-18",
+    "seen": 909,
+    "engagements": 6
+   },
+   {
+    "date": "2026-07-19",
+    "seen": 423,
+    "engagements": 4
+   },
+   {
+    "date": "2026-07-20",
+    "seen": 665,
+    "engagements": 9
+   },
+   {
+    "date": "2026-07-21",
+    "seen": 444,
+    "engagements": 5
+   },
+   {
+    "date": "2026-07-22",
+    "seen": 472,
+    "engagements": 2
+   },
+   {
+    "date": "2026-07-23",
+    "seen": 390,
+    "engagements": 1
+   },
+   {
+    "date": "2026-07-24",
+    "seen": 398,
+    "engagements": 4
+   },
+   {
+    "date": "2026-07-25",
+    "seen": 183,
+    "engagements": 2
+   },
+   {
+    "date": "2026-07-26",
+    "seen": 376,
+    "engagements": 5
+   },
+   {
+    "date": "2026-07-27",
+    "seen": 374,
+    "engagements": 5
+   },
+   {
+    "date": "2026-07-28",
+    "seen": 760,
+    "engagements": 40
+   },
+   {
+    "date": "2026-07-29",
+    "seen": 723,
+    "engagements": 38
+   },
+   {
+    "date": "2026-07-30",
+    "seen": 569,
+    "engagements": 13
+   },
+   {
+    "date": "2026-07-31",
+    "seen": 550,
+    "engagements": 20
+   },
+   {
+    "date": "2026-08-01",
+    "seen": 349,
+    "engagements": 10
+   },
+   {
+    "date": "2026-08-02",
+    "seen": 279,
+    "engagements": 3
+   },
+   {
+    "date": "2026-08-03",
+    "seen": 445,
+    "engagements": 3
+   },
+   {
+    "date": "2026-08-04",
+    "seen": 450,
+    "engagements": 4
+   },
+   {
+    "date": "2026-08-05",
+    "seen": 533,
+    "engagements": 12
+   },
+   {
+    "date": "2026-08-06",
+    "seen": 460,
+    "engagements": 6
+   },
+   {
+    "date": "2026-08-07",
+    "seen": 362,
+    "engagements": 0
+   },
+   {
+    "date": "2026-08-08",
+    "seen": 265,
+    "engagements": 3
+   },
+   {
+    "date": "2026-08-09",
+    "seen": 320,
+    "engagements": 0
+   },
+   {
+    "date": "2026-08-10",
+    "seen": 265,
+    "engagements": 0
+   },
+   {
+    "date": "2026-08-11",
+    "seen": 499,
+    "engagements": 2
+   },
+   {
+    "date": "2026-08-12",
+    "seen": 810,
+    "engagements": 18
+   },
+   {
+    "date": "2026-08-13",
+    "seen": 1323,
+    "engagements": 26
+   },
+   {
+    "date": "2026-08-14",
+    "seen": 572,
+    "engagements": 10
+   },
+   {
+    "date": "2026-08-15",
+    "seen": 151,
+    "engagements": 11
+   },
+   {
+    "date": "2026-08-16",
+    "seen": 114,
+    "engagements": 6
+   },
+   {
+    "date": "2026-08-17",
+    "seen": 716,
+    "engagements": 26
+   },
+   {
+    "date": "2026-08-18",
+    "seen": 282,
+    "engagements": 13
+   },
+   {
+    "date": "2026-08-19",
+    "seen": 217,
+    "engagements": 7
+   },
+   {
+    "date": "2026-08-20",
+    "seen": 180,
+    "engagements": 3
+   },
+   {
+    "date": "2026-08-21",
+    "seen": 115,
+    "engagements": 3
+   },
+   {
+    "date": "2026-08-22",
+    "seen": 59,
+    "engagements": 0
+   },
+   {
+    "date": "2026-08-23",
+    "seen": 51,
+    "engagements": 1
+   },
+   {
+    "date": "2026-08-24",
+    "seen": 154,
+    "engagements": 1
+   },
+   {
+    "date": "2026-08-25",
+    "seen": 157,
+    "engagements": 0
+   },
+   {
+    "date": "2026-08-26",
+    "seen": 2083,
+    "engagements": 51
+   },
+   {
+    "date": "2026-08-27",
+    "seen": 589,
+    "engagements": 10
+   },
+   {
+    "date": "2026-08-28",
+    "seen": 277,
+    "engagements": 4
+   },
+   {
+    "date": "2026-08-29",
+    "seen": 117,
+    "engagements": 2
+   },
+   {
+    "date": "2026-08-30",
+    "seen": 139,
+    "engagements": 4
+   },
+   {
+    "date": "2026-08-31",
+    "seen": 159,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-01",
+    "seen": 133,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-02",
+    "seen": 100,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-03",
+    "seen": 1190,
+    "engagements": 54
+   },
+   {
+    "date": "2026-09-04",
+    "seen": 797,
+    "engagements": 16
+   },
+   {
+    "date": "2026-09-05",
+    "seen": 253,
+    "engagements": 15
+   },
+   {
+    "date": "2026-09-06",
+    "seen": 156,
+    "engagements": 5
+   },
+   {
+    "date": "2026-09-07",
+    "seen": 205,
+    "engagements": 4
+   },
+   {
+    "date": "2026-09-08",
+    "seen": 140,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-09",
+    "seen": 132,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-10",
+    "seen": 121,
+    "engagements": 3
+   },
+   {
+    "date": "2026-09-11",
+    "seen": 70,
+    "engagements": 3
+   },
+   {
+    "date": "2026-09-12",
+    "seen": 32,
+    "engagements": 2
+   },
+   {
+    "date": "2026-09-13",
+    "seen": 42,
+    "engagements": 0
+   },
+   {
+    "date": "2026-09-14",
+    "seen": 455,
+    "engagements": 10
+   },
+   {
+    "date": "2026-09-15",
+    "seen": 562,
+    "engagements": 20
+   },
+   {
+    "date": "2026-09-16",
+    "seen": 263,
+    "engagements": 8
+   },
+   {
+    "date": "2026-09-17",
+    "seen": 2194,
+    "engagements": 83
+   },
+   {
+    "date": "2026-09-18",
+    "seen": 2223,
+    "engagements": 39
+   },
+   {
+    "date": "2026-09-19",
+    "seen": 864,
+    "engagements": 9
+   },
+   {
+    "date": "2026-09-20",
+    "seen": 1524,
+    "engagements": 19
+   },
+   {
+    "date": "2026-09-21",
+    "seen": 475,
+    "engagements": 11
+   },
+   {
+    "date": "2026-09-22",
+    "seen": 827,
+    "engagements": 21
+   },
+   {
+    "date": "2026-09-23",
+    "seen": 1043,
+    "engagements": 19
+   },
+   {
+    "date": "2026-09-24",
+    "seen": 289,
+    "engagements": 11
+   },
+   {
+    "date": "2026-09-25",
+    "seen": 1197,
+    "engagements": 20
+   },
+   {
+    "date": "2026-09-26",
+    "seen": 948,
+    "engagements": 48
+   },
+   {
+    "date": "2026-09-27",
+    "seen": 631,
+    "engagements": 14
+   },
+   {
+    "date": "2026-09-28",
+    "seen": 715,
+    "engagements": 37
+   },
+   {
+    "date": "2026-09-29",
+    "seen": 169,
+    "engagements": 20
+   },
+   {
+    "date": "2026-09-30",
+    "seen": 1085,
+    "engagements": 60
+   },
+   {
+    "date": "2026-10-01",
+    "seen": 265,
+    "engagements": 5
+   },
+   {
+    "date": "2026-10-02",
+    "seen": 457,
+    "engagements": 7
+   },
+   {
+    "date": "2026-10-03",
+    "seen": 286,
+    "engagements": 5
+   },
+   {
+    "date": "2026-10-04",
+    "seen": 208,
+    "engagements": 0
+   },
+   {
+    "date": "2026-10-05",
+    "seen": 305,
+    "engagements": 3
+   },
+   {
+    "date": "2026-10-06",
+    "seen": 168,
+    "engagements": 3
+   },
+   {
+    "date": "2026-10-07",
+    "seen": 1657,
+    "engagements": 61
+   },
+   {
+    "date": "2026-10-08",
+    "seen": 665,
+    "engagements": 21
+   },
+   {
+    "date": "2026-10-09",
+    "seen": 485,
+    "engagements": 7
+   },
+   {
+    "date": "2026-10-10",
+    "seen": 281,
+    "engagements": 3
+   },
+   {
+    "date": "2026-10-11",
+    "seen": 247,
+    "engagements": 2
+   },
+   {
+    "date": "2026-10-12",
+    "seen": 678,
+    "engagements": 20
+   },
+   {
+    "date": "2026-10-13",
+    "seen": 803,
+    "engagements": 12
+   },
+   {
+    "date": "2026-10-14",
+    "seen": 240,
+    "engagements": 3
+   },
+   {
+    "date": "2026-10-15",
+    "seen": 153,
+    "engagements": 2
+   },
+   {
+    "date": "2026-10-16",
+    "seen": 131,
+    "engagements": 2
+   },
+   {
+    "date": "2026-10-17",
+    "seen": 1604,
+    "engagements": 82
+   },
+   {
+    "date": "2026-10-18",
+    "seen": 772,
+    "engagements": 30
+   },
+   {
+    "date": "2026-10-19",
+    "seen": 582,
+    "engagements": 17
+   },
+   {
+    "date": "2026-10-20",
+    "seen": 363,
+    "engagements": 7
+   },
+   {
+    "date": "2026-10-21",
+    "seen": 871,
+    "engagements": 32
+   },
+   {
+    "date": "2026-10-22",
+    "seen": 197,
+    "engagements": 9
+   }
+  ],
+  "followers_daily": [
+   {
+    "date": "2026-07-01",
+    "gained": 6
+   },
+   {
+    "date": "2026-07-02",
+    "gained": 8
+   },
+   {
+    "date": "2026-07-03",
+    "gained": 6
+   },
+   {
+    "date": "2026-07-04",
+    "gained": 2
+   },
+   {
+    "date": "2026-07-05",
+    "gained": 0
+   },
+   {
+    "date": "2026-07-06",
+    "gained": 7
+   },
+   {
+    "date": "2026-07-07",
+    "gained": 8
+   },
+   {
+    "date": "2026-07-08",
+    "gained": 5
+   },
+   {
+    "date": "2026-07-09",
+    "gained": 18
+   },
+   {
+    "date": "2026-07-10",
+    "gained": 5
+   },
+   {
+    "date": "2026-07-11",
+    "gained": 0
+   },
+   {
+    "date": "2026-07-12",
+    "gained": 1
+   },
+   {
+    "date": "2026-07-13",
+    "gained": 10
+   },
+   {
+    "date": "2026-07-14",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-15",
+    "gained": 8
+   },
+   {
+    "date": "2026-07-16",
+    "gained": 2
+   },
+   {
+    "date": "2026-07-17",
+    "gained": 10
+   },
+   {
+    "date": "2026-07-18",
+    "gained": 7
+   },
+   {
+    "date": "2026-07-19",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-20",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-21",
+    "gained": 8
+   },
+   {
+    "date": "2026-07-22",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-23",
+    "gained": 9
+   },
+   {
+    "date": "2026-07-24",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-25",
+    "gained": 5
+   },
+   {
+    "date": "2026-07-26",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-27",
+    "gained": 13
+   },
+   {
+    "date": "2026-07-28",
+    "gained": 9
+   },
+   {
+    "date": "2026-07-29",
+    "gained": 5
+   },
+   {
+    "date": "2026-07-30",
+    "gained": 4
+   },
+   {
+    "date": "2026-07-31",
+    "gained": 5
+   },
+   {
+    "date": "2026-08-01",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-02",
+    "gained": 2
+   },
+   {
+    "date": "2026-08-03",
+    "gained": 7
+   },
+   {
+    "date": "2026-08-04",
+    "gained": 6
+   },
+   {
+    "date": "2026-08-05",
+    "gained": 5
+   },
+   {
+    "date": "2026-08-06",
+    "gained": 6
+   },
+   {
+    "date": "2026-08-07",
+    "gained": 2
+   },
+   {
+    "date": "2026-08-08",
+    "gained": 3
+   },
+   {
+    "date": "2026-08-09",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-10",
+    "gained": 5
+   },
+   {
+    "date": "2026-08-11",
+    "gained": 10
+   },
+   {
+    "date": "2026-08-12",
+    "gained": 6
+   },
+   {
+    "date": "2026-08-13",
+    "gained": 8
+   },
+   {
+    "date": "2026-08-14",
+    "gained": 6
+   },
+   {
+    "date": "2026-08-15",
+    "gained": 2
+   },
+   {
+    "date": "2026-08-16",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-17",
+    "gained": 3
+   },
+   {
+    "date": "2026-08-18",
+    "gained": 8
+   },
+   {
+    "date": "2026-08-19",
+    "gained": 8
+   },
+   {
+    "date": "2026-08-20",
+    "gained": 7
+   },
+   {
+    "date": "2026-08-21",
+    "gained": 7
+   },
+   {
+    "date": "2026-08-22",
+    "gained": 3
+   },
+   {
+    "date": "2026-08-23",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-24",
+    "gained": 7
+   },
+   {
+    "date": "2026-08-25",
+    "gained": 3
+   },
+   {
+    "date": "2026-08-26",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-27",
+    "gained": 5
+   },
+   {
+    "date": "2026-08-28",
+    "gained": 4
+   },
+   {
+    "date": "2026-08-29",
+    "gained": 4
+   },
+   {
+    "date": "2026-08-30",
+    "gained": 1
+   },
+   {
+    "date": "2026-08-31",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-01",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-02",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-03",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-04",
+    "gained": 11
+   },
+   {
+    "date": "2026-09-05",
+    "gained": 5
+   },
+   {
+    "date": "2026-09-06",
+    "gained": 3
+   },
+   {
+    "date": "2026-09-07",
+    "gained": 7
+   },
+   {
+    "date": "2026-09-08",
+    "gained": 9
+   },
+   {
+    "date": "2026-09-09",
+    "gained": 7
+   },
+   {
+    "date": "2026-09-10",
+    "gained": 4
+   },
+   {
+    "date": "2026-09-11",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-12",
+    "gained": 6
+   },
+   {
+    "date": "2026-09-13",
+    "gained": 0
+   },
+   {
+    "date": "2026-09-14",
+    "gained": 5
+   },
+   {
+    "date": "2026-09-15",
+    "gained": 9
+   },
+   {
+    "date": "2026-09-16",
+    "gained": 5
+   },
+   {
+    "date": "2026-09-17",
+    "gained": 20
+   },
+   {
+    "date": "2026-09-18",
+    "gained": 19
+   },
+   {
+    "date": "2026-09-19",
+    "gained": 9
+   },
+   {
+    "date": "2026-09-20",
+    "gained": 15
+   },
+   {
+    "date": "2026-09-21",
+    "gained": 9
+   },
+   {
+    "date": "2026-09-22",
+    "gained": 3
+   },
+   {
+    "date": "2026-09-23",
+    "gained": 16
+   },
+   {
+    "date": "2026-09-24",
+    "gained": 4
+   },
+   {
+    "date": "2026-09-25",
+    "gained": 1
+   },
+   {
+    "date": "2026-09-26",
+    "gained": 2
+   },
+   {
+    "date": "2026-09-27",
+    "gained": 11
+   },
+   {
+    "date": "2026-09-28",
+    "gained": 21
+   },
+   {
+    "date": "2026-09-29",
+    "gained": 10
+   },
+   {
+    "date": "2026-09-30",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-01",
+    "gained": 4
+   },
+   {
+    "date": "2026-10-02",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-03",
+    "gained": 9
+   },
+   {
+    "date": "2026-10-04",
+    "gained": 2
+   },
+   {
+    "date": "2026-10-05",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-06",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-07",
+    "gained": 17
+   },
+   {
+    "date": "2026-10-08",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-09",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-10",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-11",
+    "gained": 3
+   },
+   {
+    "date": "2026-10-12",
+    "gained": 11
+   },
+   {
+    "date": "2026-10-13",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-14",
+    "gained": 11
+   },
+   {
+    "date": "2026-10-15",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-16",
+    "gained": 4
+   },
+   {
+    "date": "2026-10-17",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-18",
+    "gained": 7
+   },
+   {
+    "date": "2026-10-19",
+    "gained": 8
+   },
+   {
+    "date": "2026-10-20",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-21",
+    "gained": 6
+   },
+   {
+    "date": "2026-10-22",
+    "gained": 2
    }
   ],
   "still_counting": [

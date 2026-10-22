@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>opsera.ai Analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css?v=9">
+<link rel="stylesheet" href="styles.css?v=11">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -17,7 +17,13 @@
       <h1>opsera.ai analytics</h1>
       <p class="muted" id="pulled">Loading numbers...</p>
     </div>
-    <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
+    <div class="top-controls">
+      <div class="seg" id="period-mode" role="group" aria-label="Compare week by week or month by month">
+        <button data-mode="week" class="on">Week by week</button>
+        <button data-mode="month">Month by month</button>
+      </div>
+      <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
+    </div>
   </div>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
     <button role="tab" data-tab="search">Google Search</button>
@@ -37,31 +43,38 @@
   <section id="tab-search" class="tab" role="tabpanel">
     <h2>Google Search</h2>
     <p class="lead">How often Google showed opsera.ai in search results, and how often people clicked through.</p>
-    <div class="cards" id="search-cards"></div>
-    <p class="source" id="search-source"></p>
+
+    <div class="cards" id="search-cmp-cards"></div>
+    <p class="source" id="search-cmp-source"></p>
 
     <div class="panel">
       <div class="panel-head">
-        <h3>Day by day</h3>
-        <div class="seg" id="search-metric" role="group" aria-label="Choose what the chart shows">
-          <button data-m="clicks" class="on">Clicks</button>
-          <button data-m="times_shown">Times Google showed us</button>
-          <button data-m="click_rate_pct">Click rate</button>
-          <button data-m="avg_spot">Average spot on Google</button>
-        </div>
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="search-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
       </div>
-      <div class="chart-box"><canvas id="search-daily" aria-label="Day by day Google search chart"></canvas></div>
-      <p class="source" id="search-daily-source"></p>
+      <div class="chart-box short"><canvas id="search-cmp-chart" aria-label="Google search by week or month"></canvas></div>
+      <p class="source" id="search-cmp-chart-source"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Google reports 2 to 3 days late.</p>
+      <div class="cards" id="search-cards"></div>
+      <p class="source" id="search-source"></p>
+
       <div class="panel">
-        <h3>This week against last week</h3>
-        <div class="cards compact" id="search-week"></div>
-        <p class="source" id="search-week-source"></p>
+        <div class="panel-head">
+          <h3>Day by day</h3>
+          <div class="seg" id="search-metric" role="group" aria-label="Choose what the chart shows">
+            <button data-m="clicks" class="on">Clicks</button>
+            <button data-m="times_shown">Times Google showed us</button>
+            <button data-m="click_rate_pct">Click rate</button>
+            <button data-m="avg_spot">Average spot on Google</button>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="search-daily" aria-label="Day by day Google search chart"></canvas></div>
+        <p class="source" id="search-daily-source"></p>
       </div>
+      <p class="note">Google reports 2 to 3 days late.</p>
       <div class="panel">
         <h3>Pages Google sent people to</h3>
         <div id="search-pages"></div>
@@ -81,17 +94,29 @@
   <section id="tab-visits" class="tab" role="tabpanel" hidden>
     <h2>Website visits</h2>
     <p class="lead">Visits to opsera.ai, where engaged visits are people who stayed, which leaves out most email robots.</p>
-    <div class="cards" id="visits-cards"></div>
-    <p class="source" id="visits-source"></p>
+
+    <div class="cards" id="visits-cmp-cards"></div>
+    <p class="source" id="visits-cmp-source"></p>
 
     <div class="panel">
-      <h3>Day by day</h3>
-      <div class="chart-box"><canvas id="visits-daily" aria-label="Engaged visits, all visits and visits from email by day"></canvas></div>
-      <p class="source" id="visits-daily-source"></p>
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="visits-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="visits-cmp-chart" aria-label="Website visits by week or month"></canvas></div>
+      <p class="source" id="visits-cmp-chart-source"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
+      <div class="cards" id="visits-cards"></div>
+      <p class="source" id="visits-source"></p>
+
+      <div class="panel">
+        <h3>Day by day</h3>
+        <div class="chart-box"><canvas id="visits-daily" aria-label="Engaged visits, all visits and visits from email by day"></canvas></div>
+        <p class="source" id="visits-daily-source"></p>
+      </div>
       <div class="cards compact" id="visits-more-cards"></div>
       <p class="source" id="visits-more-source"></p>
       <p class="note">Google estimates each split on its own, so days and sources add up to slightly less than the total.</p>
@@ -120,17 +145,29 @@
   <section id="tab-leads" class="tab" role="tabpanel" hidden>
     <h2>Leads</h2>
     <p class="lead">Forms people filled in on opsera.ai, with each kind of form counted on its own.</p>
-    <div class="cards" id="leads-cards"></div>
-    <p class="source" id="leads-source"></p>
+
+    <div class="cards" id="leads-cmp-cards"></div>
+    <p class="source" id="leads-cmp-source"></p>
 
     <div class="panel">
-      <h3>Week by week</h3>
-      <div class="chart-box"><canvas id="leads-weekly" aria-label="Form fills by week, one bar per kind of form"></canvas></div>
-      <p class="source" id="leads-weekly-source"></p>
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="leads-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="leads-cmp-chart" aria-label="Form fills by week or month"></canvas></div>
+      <p class="source" id="leads-cmp-chart-source"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
+      <div class="cards" id="leads-cards"></div>
+      <p class="source" id="leads-source"></p>
+
+      <div class="panel">
+        <h3>Week by week</h3>
+        <div class="chart-box"><canvas id="leads-weekly" aria-label="Form fills by week, one bar per kind of form"></canvas></div>
+        <p class="source" id="leads-weekly-source"></p>
+      </div>
       <div class="cards compact" id="leads-more-cards"></div>
       <p class="source" id="leads-more-source"></p>
       <p class="note">Event sign-ups on Luma aren't included until Luma is connected to HubSpot.</p>
@@ -149,15 +186,19 @@
 
   <!-- LinkedIn: Opsera company page -->
   <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
-    <h2>LinkedIn brand: Opsera company page (Jul to Sep 2026)</h2>
+    <h2>LinkedIn brand: Opsera company page</h2>
     <p class="lead">How often LinkedIn showed posts from the Opsera company page, and what people did with them.</p>
-    <div class="cards" id="li-co-key-cards"></div>
-    <p class="source" id="li-co-key-source"></p>
+
+    <div class="cards" id="li-co-cmp-cards"></div>
+    <p class="source" id="li-co-cmp-source"></p>
 
     <div class="panel">
-      <h3>Times seen, week by week</h3>
-      <div class="chart-box short"><canvas id="li-co-key-chart" aria-label="Company page times seen by week"></canvas></div>
-      <p class="source" id="li-co-key-chart-source"></p>
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="li-co-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="li-co-cmp-chart" aria-label="Company page by week or month"></canvas></div>
+      <p class="source" id="li-co-cmp-chart-source"></p>
     </div>
 
     <details class="more">
@@ -209,23 +250,48 @@
   <!-- LinkedIn: Kumar Chivukula -->
   <section id="tab-linkedin-exec" class="tab" role="tabpanel" hidden>
     <h2>LinkedIn exec: Kumar Chivukula</h2>
-    <p class="lead">How often LinkedIn showed Kumar's posts in October, and how many people they reached.</p>
-    <div class="seg period" id="li-ko-period" role="group" aria-label="Choose the period">
-      <button data-p="7d" class="on">Last 7 days</button>
-      <button data-p="14d">Last 14 days</button>
-      <button data-p="oct">Since 1 Oct</button>
-    </div>
-    <div class="cards" id="li-ko-cards"></div>
-    <p class="source" id="li-ko-source"></p>
+    <p class="lead">How often LinkedIn showed Kumar's posts, and how people responded to them.</p>
+
+    <div class="cards" id="li-k2-cmp-cards"></div>
+    <p class="source" id="li-k2-cmp-source"></p>
 
     <div class="panel">
-      <h3>Times seen, day by day</h3>
-      <div class="chart-box short"><canvas id="li-ko-chart" aria-label="Kumar's times seen by day in October"></canvas></div>
-      <p class="source" id="li-ko-chart-source"></p>
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="li-k2-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="li-k2-cmp-chart" aria-label="Kumar by week or month"></canvas></div>
+      <p class="source" id="li-k2-cmp-chart-source"></p>
+    </div>
+
+    <div class="panel">
+      <h3>Posts</h3>
+      <div class="cards compact" id="li-k2-posts"></div>
+      <p class="source" id="li-k2-posts-source"></p>
+      <p class="note-inline" id="li-k2-posts-note"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
+      <div class="panel">
+        <h3>Own posts and reposts by month</h3>
+        <div id="li-k2-posts-table"></div>
+        <p class="source" id="li-k2-posts-table-source"></p>
+      </div>
+      <h3 class="section-title">October exports</h3>
+      <div class="seg period" id="li-ko-period" role="group" aria-label="Choose the period">
+        <button data-p="7d" class="on">Last 7 days</button>
+        <button data-p="14d">Last 14 days</button>
+        <button data-p="oct">Since 1 Oct</button>
+      </div>
+      <div class="cards" id="li-ko-cards"></div>
+      <p class="source" id="li-ko-source"></p>
+
+      <div class="panel">
+        <h3>Times seen, day by day</h3>
+        <div class="chart-box short"><canvas id="li-ko-chart" aria-label="Kumar's times seen by day in October"></canvas></div>
+        <p class="source" id="li-ko-chart-source"></p>
+      </div>
       <p class="note" id="li-ko-counting"></p>
 
       <h3 class="section-title">October</h3>
@@ -283,19 +349,17 @@
   <section id="tab-youtube" class="tab" role="tabpanel" hidden>
     <h2>YouTube</h2>
     <p class="lead">Views and watch time on the Opsera YouTube channel, with Shorts and long videos counted separately.</p>
-    <div class="cards" id="yt-key-cards"></div>
-    <p class="source" id="yt-key-source"></p>
+
+    <div class="cards" id="yt-cmp-cards"></div>
+    <p class="source" id="yt-cmp-source"></p>
 
     <div class="panel">
       <div class="panel-head">
-        <h3>Views, week by week</h3>
-        <div class="seg" id="yt-key-type" role="group" aria-label="Choose Shorts or long videos">
-          <button data-m="long" class="on">Long videos</button>
-          <button data-m="shorts">Shorts</button>
-        </div>
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="yt-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
       </div>
-      <div class="chart-box short"><canvas id="yt-key-chart" aria-label="YouTube views by week"></canvas></div>
-      <p class="source" id="yt-key-chart-source"></p>
+      <div class="chart-box short"><canvas id="yt-cmp-chart" aria-label="YouTube by week or month"></canvas></div>
+      <p class="source" id="yt-cmp-chart-source"></p>
     </div>
 
     <details class="more">
@@ -332,7 +396,8 @@
     <h2>Before: Kahoots (Q3 2026)</h2>
     <p class="lead">What Kahoots reported for July to September 2026 from the old "opsera.ai 2025" account, kept as reported.</p>
     <div class="cards" id="kahoots-cards"></div>
-    <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
+    <p class="note-inline" id="kahoots-monthly-note"></p>
+    <p class="source">Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.</p>
 
     <div class="panel">
       <h3>Visits from people and robots, by month</h3>
@@ -362,7 +427,8 @@
     <h2>Before: Infrasity (Jul to Sep 2026)</h2>
     <p class="lead">Google search results Infrasity reported for July to September 2026, kept as reported.</p>
     <div class="cards" id="infrasity-cards"></div>
-    <p class="source">Source: Infrasity monthly growth reports, Sep 2026.</p>
+    <p class="note-inline" id="infrasity-monthly-note"></p>
+    <p class="source">Source: Infrasity monthly growth reports, Sep 2026 compared with Aug 2026.</p>
 
     <div class="panel">
       <h3>Google clicks on Forge pages at opsera.ai</h3>
@@ -399,6 +465,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=12"></script>
 </body>
 </html>

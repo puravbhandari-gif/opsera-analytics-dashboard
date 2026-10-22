@@ -1,7 +1,7 @@
 {
  "start_date": "2026-10-01",
- "end_date": "2026-10-20",
- "pulled_at": "2026-10-21T20:09+05:30",
+ "end_date": "2026-10-21",
+ "pulled_at": "2026-10-22T15:45+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
@@ -28,11 +28,11 @@
   },
   "gartner_offer": {
    "label": "Gartner free modernization offer",
-   "count": 48,
+   "count": 58,
    "pages": [
     {
      "page": "/gartner-symposium/free-modernization",
-     "count": 48
+     "count": 58
     }
    ]
   },
@@ -56,11 +56,11 @@
   },
   "other": {
    "label": "Other forms",
-   "count": 4,
+   "count": 6,
    "pages": [
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "count": 2
+     "count": 4
     },
     {
      "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
@@ -169,6 +169,14 @@
    "gartner_offer": 16,
    "events": 0,
    "other": 1
+  },
+  {
+   "date": "2026-10-21",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 10,
+   "events": 0,
+   "other": 2
   }
  ],
  "removed_form_pages": [
@@ -176,5 +184,6 @@
   "/about",
   "/platform"
  ],
+ "left_out": [],
  "new_site_live": "2026-09-30"
 }

@@ -12,12 +12,13 @@ import datetime as dt
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2.credentials import Credentials
 
-START_DATE = "2026-10-01"
+START_DATE = "2026-09-01"   # Sep added for month-by-month comparison (agreed 22 Oct 2026)
 CHANNEL_ID = "UCpnT0NdkrOWp8v3bodeCGhQ"
 TOKEN_FILE = Path.home() / ".config" / "opsera-dashboard" / "youtube-token.json"
 OUT = Path(__file__).resolve().parent.parent / "data" / "youtube.json"
@@ -63,7 +64,11 @@ def session():
 
 
 def get(s, url, **params):
-    r = s.get(url, params=params, timeout=60)
+    for wait in (0, 5, 20, 60):   # YouTube sometimes answers with a brief internal error; try again before giving up
+        time.sleep(wait)
+        r = s.get(url, params=params, timeout=60)
+        if r.status_code < 500:
+            break
     if r.status_code != 200:
         stop(f"{url} returned {r.status_code}: {r.text[:400]}")
     return r.json()
@@ -182,6 +187,24 @@ def main():
                       metrics="views", sort="-views", maxResults=25)
     cards = report(s, end, metrics="cardImpressions,cardClicks,cardTeaserImpressions,cardTeaserClicks")[0]
 
+    # Videos published: public uploads only (agreed 22 Oct 2026). Type comes from YouTube's own split of each video's views.
+    uploads, page = [], None
+    while True:
+        r = get(s, f"{DATA}/playlistItems", part="contentDetails", playlistId="UU" + CHANNEL_ID[2:], maxResults=50,
+                **({"pageToken": page} if page else {}))
+        uploads += [i["contentDetails"]["videoId"] for i in r["items"]]
+        page = r.get("nextPageToken")
+        if not page:
+            break
+    kind = {v["id"]: t for t, rows in top.items() for v in rows}
+    published = []
+    for i in range(0, len(uploads), 50):
+        for v in get(s, f"{DATA}/videos", part="snippet,status", id=",".join(uploads[i:i + 50])).get("items", []):
+            day = v["snippet"]["publishedAt"][:10]
+            if v["status"]["privacyStatus"] == "public" and START_DATE <= day <= end:
+                published.append({"date": day, "id": v["id"], "title": v["snippet"]["title"], "type": kind.get(v["id"], "unknown")})
+    published.sort(key=lambda x: x["date"])
+
     out = {
         "source": "YouTube Analytics API, Opsera channel",
         "start_date": START_DATE, "end_date": end,
@@ -196,6 +219,7 @@ def main():
             "search_terms": [{"term": r["insightTrafficSourceDetail"], "views": r["views"]} for r in searches],
             "search_views": sum(sources[t].get("YT_SEARCH", 0) for t in sources),
             "other_sites": listed_other,
+            "published": published,
         },
         "types": {t: {**by_type[t], "daily": [r for r in daily if r["type"] == t],
                       "videos": top[t], "videos_listed": listed[t], "sources": plain(t)} for t in TYPES.values()},

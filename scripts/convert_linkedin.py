@@ -28,6 +28,13 @@ COMPANY = {
     "followers": "opsera_followers_1792593581955.xls",
     "visitors": "opsera_visitors_1792593572597.xls",
 }
+COMPANY_OCTOBER = {   # 1 to 20 Oct 2026 (LinkedIn's company data runs about 2 days behind)
+    "content": "opsera_content_1792662558792.xls",
+    "followers": "opsera_followers_1792662636565.xls",
+    "visitors": "opsera_visitors_1792662616762.xls",
+}
+COMPANY_OCTOBER_RANGE = ("2026-10-01", "2026-10-20")
+EXPORTED_ON = {"company": "2026-10-22"}
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
 KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
@@ -64,9 +71,9 @@ def check_days(label, dates, start=START, end=END):
         stop(f"{label} doesn't cover every day from {start} to {end}.")
 
 
-def company():
-    metrics = by_header(xls_sheet(COMPANY["content"], "Metrics"), 1)
-    check_days("Company content sheet", [iso(r["Date"]) for r in metrics])
+def company(files=COMPANY, start=START, end=END):
+    metrics = by_header(xls_sheet(files["content"], "Metrics"), 1)
+    check_days("Company content sheet", [iso(r["Date"]) for r in metrics], start, end)
     daily = []
     for r in metrics:
         row = {"date": iso(r["Date"])}
@@ -78,7 +85,7 @@ def company():
         daily.append(row)
 
     posts = []
-    for r in by_header(xls_sheet(COMPANY["content"], "All posts"), 1):
+    for r in by_header(xls_sheet(files["content"], "All posts"), 1):
         title = " ".join(r["Post title"].split())
         posts.append({
             "title": title[:100] + ("..." if len(title) > 100 else ""),
@@ -88,8 +95,8 @@ def company():
             "likes": int(r["Likes"]), "comments": int(r["Comments"]),
         })
 
-    followers = by_header(xls_sheet(COMPANY["followers"], "New followers"), 0)
-    check_days("Company followers sheet", [iso(r["Date"]) for r in followers])
+    followers = by_header(xls_sheet(files["followers"], "New followers"), 0)
+    check_days("Company followers sheet", [iso(r["Date"]) for r in followers], start, end)
     followers_daily = []
     for r in followers:
         parts = int(r["Sponsored followers"]) + int(r["Organic followers"]) + int(r["Auto-invited followers"])
@@ -100,12 +107,12 @@ def company():
     breakdowns = {}
     for sheet, key in (("Job function", "job_function"), ("Seniority", "seniority"), ("Location", "location"),
                        ("Industry", "industry"), ("Company size", "company_size")):
-        rows = by_header(xls_sheet(COMPANY["followers"], sheet), 0)
+        rows = by_header(xls_sheet(files["followers"], sheet), 0)
         rows = sorted(({"name": r[sheet], "followers": int(r["Total followers"])} for r in rows), key=lambda x: -x["followers"])
         breakdowns[key] = {"label": sheet, "adds_up_to": sum(r["followers"] for r in rows), "top": rows[:10]}
 
-    visitors = by_header(xls_sheet(COMPANY["visitors"], "Visitor metrics"), 0)
-    check_days("Company visitors sheet", [iso(r["Date"]) for r in visitors])
+    visitors = by_header(xls_sheet(files["visitors"], "Visitor metrics"), 0)
+    check_days("Company visitors sheet", [iso(r["Date"]) for r in visitors], start, end)
     visitors_daily = [{
         "date": iso(r["Date"]), "views_total": int(r["Total page views (total)"]),
         "views_overview": int(r["Overview page views (total)"]), "views_jobs": int(r["Jobs page views (total)"]),
@@ -113,9 +120,12 @@ def company():
     if any(int(r["Life page views (total)"]) for r in visitors):
         stop("Life page views are no longer 0. Check with Purav before showing or hiding them.")
 
+    if any(not start <= p["created"] <= end for p in posts):
+        stop(f"The company post list has posts created outside {start} to {end}.")
     return {
         "source": "LinkedIn export, Opsera company page",
         "dates_note": "LinkedIn gives these dates in UTC",
+        "start_date": start, "end_date": end,
         "daily": daily, "posts": posts, "followers_daily": followers_daily,
         "breakdowns": breakdowns, "visitors_daily": visitors_daily,
     }
@@ -169,7 +179,7 @@ def kumar(name=KUMAR, start=START, end=END):
 
 def main():
     oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
-    missing = [n for n in [*COMPANY.values(), KUMAR, *oct_files.values()] if not (SRC / n).exists()]
+    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), KUMAR, *oct_files.values()] if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
     october = [{"key": key, "label": label, **kumar(oct_files[key], a, b)} for key, label, a, b in KUMAR_OCTOBER]
@@ -180,8 +190,20 @@ def main():
     clash = sorted(d for d, v in days.items() if len(v) > 1)
     if clash != [max(days)] and clash:
         stop(f"Kumar's October exports disagree on these days: {clash}")
-    out = {"start_date": START, "end_date": END, "company": company(), "kumar": kumar(),
-           "kumar_october": {"periods": october, "still_counting": clash}}
+    # The company page: July to September and October exports joined into one run of days (same source, no overlap)
+    q3, octo = company(), company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE)
+    co = {**q3, "end_date": octo["end_date"], "breakdowns": octo["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
+    for key in ("daily", "posts", "followers_daily", "visitors_daily"):
+        co[key] = q3[key] + octo[key]
+    # Kumar: July to September and the since-1-Oct export joined into one run of days
+    since = next(p for p in october if p["key"] == "oct")
+    k = kumar()
+    k_daily, k_followers = k["daily"] + since["daily"], k["followers_daily"] + since["followers_daily"]
+    check_days("Kumar's joined days", [r["date"] for r in k_daily], START, since["end_date"])
+    out = {"start_date": START, "end_date": END, "company": co, "kumar": k,
+           "kumar_october": {"periods": october, "still_counting": clash},
+           "kumar_all": {"start_date": START, "end_date": since["end_date"], "daily": k_daily, "followers_daily": k_followers,
+                         "still_counting": clash}}
     OUT.write_text(json.dumps(out, indent=1))
     c, k = out["company"], out["kumar"]
     print(f"Company: seen {sum(r['seen_total'] for r in c['daily'])}, posts {len(c['posts'])}, "

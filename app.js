@@ -106,6 +106,120 @@ function draw(c) {
 const line = (label, data, color) => ({ label, data, borderColor: color, backgroundColor: color, borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0.25 });
 const bar = (label, data, color) => ({ label, data, backgroundColor: color, borderColor: css("--surface"), borderWidth: { top: 0, left: 0, right: 0, bottom: 0 }, borderRadius: 4, borderSkipped: "start", maxBarThickness: 44 });
 
+// ---------- Week by week / month by month, one switch for every tab ----------
+
+let periodMode = "week";
+try { if (localStorage.getItem("period") === "month") periodMode = "month"; } catch (e) {}
+const comparisons = [];
+const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const weekStart = (d) => addDays(d, -((toDate(d).getUTCDay() + 6) % 7));
+const monthStart = (d) => `${d.slice(0, 7)}-01`;
+const monthEnd = (d) => { const x = toDate(monthStart(d)); x.setUTCMonth(x.getUTCMonth() + 1); x.setUTCDate(0); return iso(x); };
+const monthName = (d) => MONTH_NAMES[toDate(d).getUTCMonth()];
+const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follow US Pacific time
+  const pt = new Date(pulledAt).toLocaleDateString("en-CA", { timeZone: "America/Los_Angeles" });
+  return pt > end ? end : addDays(end, -1);
+};
+
+// The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
+// or this month so far against the same days last month.
+function periodsFor(mode, start, last) {
+  if (mode === "week") {
+    const curEnd = toDate(last).getUTCDay() === 0 ? last : addDays(weekStart(last), -1);
+    const cur = { start: addDays(curEnd, -6), end: curEnd };
+    const prev = { start: addDays(cur.start, -7), end: addDays(cur.start, -1) };
+    return { cur: cur.start >= start ? cur : null, prev: prev.start >= start ? prev : null,
+      prevName: "Week before", none: "No full week before this one yet" };
+  }
+  const cur = { start: monthStart(last), end: last };
+  const pStart = monthStart(addDays(cur.start, -1));
+  const pEnd = addDays(pStart, Math.min(toDate(last).getUTCDate(), toDate(monthEnd(pStart)).getUTCDate()) - 1);
+  const prev = { start: pStart, end: pEnd };
+  const full = last === monthEnd(last);
+  return { cur, prev: prev.start >= start ? prev : null,
+    prevName: full ? monthName(pStart) : `Same days in ${monthName(pStart)}`,
+    none: `Comparison starts in ${MONTH_NAMES[(toDate(cur.start).getUTCMonth() + 1) % 12]}` };
+}
+
+// One bar per week or month from the start to the last full day, the last one marked "so far" if unfinished.
+function periodBuckets(mode, start, last) {
+  const out = [];
+  for (let s = mode === "week" ? weekStart(start) : monthStart(start); s <= last;) {
+    const e = mode === "week" ? addDays(s, 6) : monthEnd(s);
+    const a = s < start ? start : s, b = e > last ? last : e;
+    const label = mode === "week" ? `${day(a)} to ${day(b)}` : `${monthName(s).slice(0, 3)} ${s.slice(0, 4)}`;
+    out.push({ start: a, end: b, label: e > last ? `${label} (so far)` : label });
+    s = addDays(e, 1);
+  }
+  return out;
+}
+
+function cmpDelta(cur, prev, lowerIsBetter) {
+  if (cur == null || prev == null || !prev) return "";
+  const change = ((cur - prev) / prev) * 100;
+  if (Math.abs(change) < 0.05) return `<div class="delta flat">No change</div>`;
+  const better = lowerIsBetter ? change < 0 : change > 0;
+  return `<div class="delta ${better ? "good" : "bad"}">${change > 0 ? "+" : ""}${change.toFixed(1)}% (${better ? "better" : "worse"})</div>`;
+}
+
+// spec: { id, source, start, last, metrics: [{ label, value(a, b), fmt, lowerIsBetter, sub }], monthlyOnly }
+function compare(spec) {
+  comparisons.push(spec);
+  spec.metricIndex = 0;
+  const seg = $(`${spec.id}-cmp-metric`);
+  if (seg) {
+    seg.innerHTML = spec.metrics.length > 1 ? spec.metrics.map((m, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(m.label)}</button>`).join("") : "";
+    seg.addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      spec.metricIndex = Number(b.dataset.i);
+      seg.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+      draw(charts.find((c) => c.id === `${spec.id}-cmp-chart`));
+    });
+  }
+  chart(`${spec.id}-cmp-chart`, (th) => {
+    const m = spec.metrics[spec.metricIndex];
+    const bk = periodBuckets(periodMode, spec.start, spec.last);
+    return { type: "bar", whole: m.whole !== false, yfmt: m.yfmt, reverse: m.lowerIsBetter && m.flip,
+      ytitle: m.lowerIsBetter && m.flip ? "Higher on chart = better spot" : undefined,
+      data: { labels: bk.map((b) => b.label), datasets: [bar(m.label, bk.map((b) => m.value(b.start, b.end)), th.s[0])] },
+      tooltip: { label: (c) => ` ${m.label}: ${m.fmt(c.parsed.y ?? c.parsed.x)}` } };
+  });
+  fillCompare(spec);
+}
+
+function fillCompare(spec) {
+  const p = periodsFor(periodMode, spec.start, spec.last);
+  const title = $(`${spec.id}-cmp-chart`).closest(".panel").querySelector(".period-title");
+  if (title) title.textContent = periodMode === "week" ? "Week by week" : "Month by month";
+  if (!p.cur) {
+    $(`${spec.id}-cmp-cards`).innerHTML = `<div class="card"><div class="label">Not enough days yet</div><div class="sub">${p.none}</div></div>`;
+    $(`${spec.id}-cmp-source`).textContent = spec.source(spec.start, spec.last);
+  } else {
+    $(`${spec.id}-cmp-cards`).innerHTML = spec.metrics.map((m) => {
+      const cur = m.value(p.cur.start, p.cur.end), prev = p.prev ? m.value(p.prev.start, p.prev.end) : null;
+      const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}` : p.none;
+      return card(m.label, m.fmt(cur), [sub, m.sub].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
+    }).join("");
+    $(`${spec.id}-cmp-source`).textContent = spec.source(p.cur.start, p.cur.end) +
+      (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
+  }
+  $(`${spec.id}-cmp-chart-source`).textContent = spec.source(spec.start, spec.last);
+}
+
+function setPeriodMode(mode) {
+  periodMode = mode;
+  try { localStorage.setItem("period", mode); } catch (e) {}
+  $("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
+  comparisons.forEach((spec) => { fillCompare(spec); draw(charts.find((c) => c.id === `${spec.id}-cmp-chart`)); });
+  monthlyTabs.forEach((fn) => fn());
+}
+const monthlyTabs = [];
+$("period-mode").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setPeriodMode(b.dataset.mode); });
+$("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === periodMode));
+
+// Sums over a run of daily rows, for any period.
+const rangeSum = (rows, key) => (a, b) => rows.reduce((t, r) => (r.date >= a && r.date <= b ? t + (typeof key === "function" ? key(r) : r[key] || 0) : t), 0);
+
 // ---------- Tab 1: Google Search ----------
 
 function sumSearch(rows) {
@@ -133,17 +247,6 @@ function renderSearch(d) {
     card("Times Google showed us", num(t.shown)) +
     card("Click rate", pct(t.rate), "Clicks divided by times shown") +
     card("Average spot on Google", spot(t.spot), "Lower is better");
-
-  const thisStart = addDays(last, -6), prevStart = addDays(last, -13), prevEnd = addDays(last, -7);
-  const cur = sumSearch(d.daily.filter((r) => r.date >= thisStart && r.date <= last));
-  const prevRows = d.daily.filter((r) => r.date >= prevStart && r.date <= prevEnd);
-  const prev = prevRows.length === 7 ? sumSearch(prevRows) : {};
-  $("search-week-source").textContent = `${src}, this week ${range(thisStart, last)}, last week ${range(prevStart, prevEnd)}.`;
-  $("search-week").innerHTML =
-    card("Clicks", num(cur.clicks), `Last week: ${num(prev.clicks)}`, delta(cur.clicks, prev.clicks)) +
-    card("Times Google showed us", num(cur.shown), `Last week: ${num(prev.shown)}`, delta(cur.shown, prev.shown)) +
-    card("Click rate", pct(cur.rate), `Last week: ${pct(prev.rate)}`, delta(cur.rate, prev.rate)) +
-    card("Average spot on Google", spot(cur.spot), `Last week: ${spot(prev.spot)}`, delta(cur.spot, prev.spot, true));
 
   $("search-daily-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   const metrics = {
@@ -181,6 +284,16 @@ function renderSearch(d) {
   $("search-queries-source").textContent = `${src}, ${range(d.start_date, last)}.`;
   table($("search-queries"), { rows: d.searches, search: "searches", sortKey: "clicks",
     columns: cols({ key: "search", label: "Search", search: true }) });
+
+  const clicks = rangeSum(d.daily, "clicks"), shown = rangeSum(d.daily, "times_shown");
+  const spotWeight = rangeSum(d.daily, (r) => r.avg_spot * r.times_shown);
+  compare({ id: "search", start: d.start_date, last, source: (a, b) => `${src}, ${range(a, b)}.`, metrics: [
+    { label: "Clicks", value: clicks, fmt: num },
+    { label: "Times Google showed us", value: shown, fmt: num },
+    { label: "Click rate", value: (a, b) => (shown(a, b) ? (clicks(a, b) / shown(a, b)) * 100 : null), fmt: (v) => pct(v), whole: false, yfmt: (v) => `${v}%` },
+    { label: "Average spot on Google", value: (a, b) => (shown(a, b) ? spotWeight(a, b) / shown(a, b) : null), fmt: spot, whole: false,
+      lowerIsBetter: true, flip: true, sub: "Lower is better" },
+  ] });
 }
 
 // ---------- Tab 2: Website visits ----------
@@ -264,6 +377,16 @@ function renderVisits(d) {
     { key: "page", label: "Page", search: true },
     { key: "views", label: "Times viewed", num: true, fmt: num },
   ] });
+
+  const all = rangeSum(d.daily, "sessions"), engaged = rangeSum(d.daily, "engagedSessions");
+  const emailRows = d.daily.map((r) => ({ date: r.date, visits: emailByDay[r.date] || 0 }));
+  compare({ id: "visits", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
+    source: (a, b) => `${src}, ${range(a, b)}, US Pacific time.`, metrics: [
+      { label: "Engaged visits", value: engaged, fmt: num },
+      { label: "All visits", value: all, fmt: num, sub: "Includes robots" },
+      { label: "Visits from email", value: rangeSum(emailRows, "visits"), fmt: num },
+      { label: "Share who engaged", value: (a, b) => (all(a, b) ? (engaged(a, b) / all(a, b)) * 100 : null), fmt: (v) => pct(v, 1), whole: false, yfmt: (v) => `${v}%` },
+    ] });
 }
 
 // ---------- Tab 3: Leads ----------
@@ -283,7 +406,8 @@ function renderLeads(d) {
   $("leads-source").textContent = `${src}, ${when}.`;
   const leadCard = (k) => card(d.lines[k].label, num(d.lines[k].count), LEAD_NOTES[k]);
   $("leads-cards").innerHTML = ["demo", "events", "gartner_offer", "contact"].map(leadCard).join("");
-  $("leads-more-cards").innerHTML = leadCard("other");
+  const jobs = (d.left_out || []).reduce((t, r) => t + r.count, 0);
+  $("leads-more-cards").innerHTML = leadCard("other") + card("Job applications", num(jobs), "Not counted as leads");
   $("leads-more-source").textContent = `${src}, ${when}.`;
 
   $("leads-core-source").textContent = `${src}, ${when}.`;
@@ -325,6 +449,10 @@ function renderLeads(d) {
     { key: "page", label: "Page", search: true },
     { key: "count", label: "Form fills", num: true, fmt: num },
   ] });
+
+  compare({ id: "leads", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
+    source: (a, b) => `${src}, ${range(a, b)}, US Pacific time.`,
+    metrics: ["demo", "events", "gartner_offer", "contact"].map((k) => ({ label: d.lines[k].label, value: rangeSum(d.daily, k), fmt: num })) });
 }
 
 // ---------- LinkedIn: company page and Kumar, never mixed ----------
@@ -360,23 +488,9 @@ const postLink = (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopen
 function renderLinkedIn(d) {
   const when = range(d.start_date, d.end_date);
   const co = d.company, k = d.kumar;
-  const coSrc = `Source: ${co.source}, ${when}.`;
+  const coSrc = `Source: ${co.source}, ${range(co.start_date, co.end_date)}.`;
   const kSrc = `Source: ${k.source}, ${when}.`;
   const sum = (rows, key) => rows.reduce((a, r) => a + r[key], 0);
-
-  // Key numbers and one chart per tab: the company page and Kumar each get their own tab
-  $("li-co-key-cards").innerHTML =
-    card("Times seen", num(sum(co.daily, "seen_total"))) +
-    card("Clicks", num(sum(co.daily, "clicks_total"))) +
-    card("Reactions", num(sum(co.daily, "reactions_total"))) +
-    card("Followers gained", num(sum(co.followers_daily, "gained")));
-  $("li-co-key-source").textContent = coSrc;
-  const coSeenWeeks = weekly(co.daily, "seen_total", d.start_date, d.end_date);
-  chart("li-co-key-chart", (th) => ({
-    type: "bar", whole: true,
-    data: { labels: coSeenWeeks.map((w) => w.label), datasets: [bar("Times seen", coSeenWeeks.map((w) => w.value), th.s[0])] },
-  }));
-  $("li-co-key-chart-source").textContent = coSrc;
 
   $("li-k-key-cards").innerHTML =
     card("Times seen", num(k.seen)) +
@@ -410,7 +524,7 @@ function renderLinkedIn(d) {
   }, [0, 1]);
   $("li-co-daily-source").textContent = coSrc;
 
-  const coWeeks = weekly(co.followers_daily, "gained", d.start_date, d.end_date);
+  const coWeeks = weekly(co.followers_daily, "gained", co.start_date, co.end_date);
   chart("li-co-followers", (th) => ({
     type: "bar", data: { labels: coWeeks.map((w) => w.label), datasets: [bar("Followers gained", coWeeks.map((w) => w.value), th.s[0])] },
   }));
@@ -444,7 +558,7 @@ function renderLinkedIn(d) {
     { key: "name", label: b[key].label, sort: false },
     { key: "followers", label: "Followers", num: true, fmt: num, sort: false },
   ] }));
-  $("li-co-breakdowns-source").textContent = `Source: ${co.source}, as exported on 21 Oct 2026.`;
+  $("li-co-breakdowns-source").textContent = `Source: ${co.source}, as exported on ${dayYear(co.breakdowns_as_of)}.`;
 
   // Kumar Chivukula
   $("li-k-source").textContent = kSrc;
@@ -507,6 +621,41 @@ function renderLinkedIn(d) {
     $("li-ko-period").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === btn));
     drawPeriod(); draw(charts.find((c) => c.id === "li-ko-chart"));
   });
+
+  compare({ id: "li-co", start: co.start_date, last: co.end_date, source: (a, b) => `Source: ${co.source}, ${range(a, b)}.`, metrics: [
+    { label: "Times seen", value: rangeSum(co.daily, "seen_total"), fmt: num },
+    { label: "Clicks", value: rangeSum(co.daily, "clicks_total"), fmt: num },
+    { label: "Followers gained", value: rangeSum(co.followers_daily, "gained"), fmt: num },
+    { label: "Posts published", value: rangeSum(co.posts.map((x) => ({ date: x.created })), () => 1), fmt: num },
+  ] });
+
+  const ka = d.kumar_all;
+  const kLast = ka.still_counting.includes(ka.end_date) ? addDays(ka.end_date, -1) : ka.end_date;
+  compare({ id: "li-k2", start: ka.start_date, last: kLast, source: (a, b) => `Source: ${k.source}, ${range(a, b)}.`, metrics: [
+    { label: "Times seen", value: rangeSum(ka.daily, "seen"), fmt: num },
+    { label: "Engagements", value: rangeSum(ka.daily, "engagements"), fmt: num },
+    { label: "Followers gained", value: rangeSum(ka.followers_daily, "gained"), fmt: num },
+  ] });
+}
+
+// Kumar's own posts and reposts: counted by month from his profile, two separate lines, never added together
+function renderKumarPosts(kp) {
+  const src = `Source: ${kp.source}`;
+  const months = kp.months, cur = months[months.length - 1], prev = months[months.length - 2];
+  const curName = `${monthName(cur.month + "-01")}${cur.so_far ? " so far" : ""}`;
+  const fill = () => {
+    $("li-k2-posts").innerHTML = [["Own posts", "own_posts"], ["Reposts", "reposts"]].map(([label, key]) =>
+      card(`${label}, ${curName}`, num(cur[key]), `${monthName(prev.month + "-01")}: ${num(prev[key])}`)).join("");
+    $("li-k2-posts-note").textContent = periodMode === "week" ? "Posts are counted by month, so they don't change with the week view." : "";
+  };
+  fill(); monthlyTabs.push(fill);
+  $("li-k2-posts-source").textContent = src;
+  table($("li-k2-posts-table"), { rows: months.map((m) => ({ ...m, name: `${monthName(m.month + "-01")} ${m.month.slice(0, 4)}${m.so_far ? " (so far)" : ""}` })), columns: [
+    { key: "name", label: "Month", sort: false },
+    { key: "own_posts", label: "Own posts", num: true, fmt: num, sort: false },
+    { key: "reposts", label: "Reposts", num: true, fmt: num, sort: false },
+  ] });
+  $("li-k2-posts-table-source").textContent = src;
 }
 
 // ---------- YouTube: Shorts and long videos never added together ----------
@@ -529,32 +678,12 @@ function renderYouTube(d, ga) {
   const src = `Source: YouTube Analytics API, Opsera channel, ${range(d.start_date, last)}.`;
   const c = d.channel;
 
-  // Key numbers: Shorts and long videos side by side, never added together
-  $("yt-key-cards").innerHTML =
-    card("Long videos: views", num(d.types.long.views)) +
-    card("Long videos: watch time", `${num(d.types.long.minutes)} min`) +
-    card("Shorts: views", num(d.types.shorts.views)) +
-    card("Subscribers gained", num(c.subs_gained), `${num(c.subs_lost)} lost`);
-  $("yt-key-source").textContent = src;
-  const keyWeeks = { long: weeksFilled(d.types.long.daily, ["views"], d.start_date, last), shorts: weeksFilled(d.types.shorts.daily, ["views"], d.start_date, last) };
-  const keyLabel = { long: "Long videos", shorts: "Shorts" };
-  let kind = "long";
-  chart("yt-key-chart", (th) => ({
-    type: "bar", whole: true,
-    data: { labels: keyWeeks[kind].map((w) => w.label), datasets: [bar(`Views, ${keyLabel[kind]}`, keyWeeks[kind].map((w) => w.views), th.s[0])] },
-  }));
-  $("yt-key-chart-source").textContent = src;
-  $("yt-key-type").addEventListener("click", (e) => {
-    const b = e.target.closest("button"); if (!b) return;
-    kind = b.dataset.m;
-    $("yt-key-type").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-    draw(charts.find((ch) => ch.id === "yt-key-chart"));
-  });
-
   $("yt-ch-cards").innerHTML =
     card("Subscribers gained", num(c.subs_gained)) +
     card("Subscribers lost", num(c.subs_lost)) +
-    card("Card clicks", num(c.card_clicks), `Card teaser clicks ${num(c.card_teaser_clicks)}`);
+    card("Card clicks", num(c.card_clicks), `Card teaser clicks ${num(c.card_teaser_clicks)}`) +
+    card("Shorts published", num(c.published.filter((v) => v.type === "shorts").length), "Public videos") +
+    (c.published.some((v) => v.type === "unknown") ? card("Videos not yet watched", num(c.published.filter((v) => v.type === "unknown").length), "Public, but YouTube can't tell Shorts from long videos until they're watched") : "");
   $("yt-ch-source").textContent = src;
 
   const subWeeks = weeksFilled(c.subs_daily, ["gained", "lost"], d.start_date, last);
@@ -653,17 +782,27 @@ function renderYouTube(d, ga) {
     $(`yt-${t}-listed`).textContent = l.views === v.views && l.minutes === v.minutes ? "" :
       `YouTube lists ${num(l.views)} of ${num(v.views)} views and ${num(l.minutes)} of ${num(v.minutes)} minutes by video.`;
   }
+
+  const published = (t) => rangeSum(c.published.filter((v) => v.type === t), () => 1);
+  compare({ id: "yt", start: d.start_date, last, source: (a, b) => `Source: YouTube Analytics API, Opsera channel, ${range(a, b)}.`, metrics: [
+    { label: "Long videos: views", value: rangeSum(d.types.long.daily, "views"), fmt: num },
+    { label: "Long videos: watch time", value: rangeSum(d.types.long.daily, "minutes"), fmt: (v) => `${num(v)} min` },
+    { label: "Shorts: views", value: rangeSum(d.types.shorts.daily, "views"), fmt: num },
+    { label: "Long videos published", value: published("long"), fmt: num, sub: "Public videos" },
+  ] });
 }
 
 // ---------- Tab 4: Kahoots ----------
 
 function renderKahoots(monthly, quarter) {
-  const q3 = (metric) => num(quarter.find((r) => r.metric === metric).q3);
+  const m = (key, month) => monthly.find((r) => r.month === month)[key];
+  const monthCard = (label, key) => card(label, num(m(key, "2026-09")), `August: ${num(m(key, "2026-08"))}`, cmpDelta(m(key, "2026-09"), m(key, "2026-08")));
   $("kahoots-cards").innerHTML =
-    card("Website visits", q3("Website visits"), "Q3 2026") +
-    card("Visits from people", q3("Visits from people, no robots"), "Q3 2026") +
-    card("All form fills", q3("All form fills"), "Q3 2026") +
-    card("Core forms", q3("Core forms (homepage, contact, about, platform)"), "Q3 2026");
+    monthCard("Website visits", "visits") +
+    monthCard("Visits from people", "people_visits") +
+    monthCard("Form fills", "form_fills");
+  const note = () => { $("kahoots-monthly-note").textContent = periodMode === "week" ? "Kahoots reported by month, so this tab compares September with August." : ""; };
+  note(); monthlyTabs.push(note);
   chart("kahoots-visits", (th) => ({
     type: "bar", stacked: true,
     data: { labels: monthly.map((r) => month(r.month)), datasets: [
@@ -686,12 +825,15 @@ function renderKahoots(monthly, quarter) {
 // ---------- Tab 5: Infrasity ----------
 
 function renderInfrasity(monthly) {
-  const sep = monthly.find((r) => r.month === "2026-09");
+  const sep = monthly.find((r) => r.month === "2026-09"), aug = monthly.find((r) => r.month === "2026-08");
+  const monthCard = (label, key, fmt, lower) => card(label, fmt(sep[key]), `August: ${fmt(aug[key])}${lower ? ". Lower is better" : ""}`, cmpDelta(sep[key], aug[key], lower));
   $("infrasity-cards").innerHTML =
-    card("Clicks", num(sep.google_clicks), "September 2026") +
-    card("Times Google showed us", num(sep.times_shown), "September 2026") +
-    card("Click rate", pct(sep.click_rate_pct), "September 2026") +
-    card("Average spot on Google", spot(sep.avg_spot), "September 2026. Lower is better");
+    monthCard("Clicks", "google_clicks", num) +
+    monthCard("Times Google showed us", "times_shown", num) +
+    monthCard("Click rate", "click_rate_pct", (v) => pct(v)) +
+    monthCard("Average spot on Google", "avg_spot", spot, true);
+  const note = () => { $("infrasity-monthly-note").textContent = periodMode === "week" ? "Infrasity reported by month, so this tab compares September with August." : ""; };
+  note(); monthlyTabs.push(note);
   table($("infrasity-table"), { rows: monthly.map((r) => ({ ...r, name: month(r.month) })), columns: [
     { key: "name", label: "Month", sort: false },
     { key: "google_clicks", label: "Clicks", num: true, fmt: num, sort: false },
@@ -764,14 +906,15 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 (async () => {
   renderTodo();
   try {
-    const [gsc, ga, leads, li, yt, km, kq, inf] = await Promise.all(
-      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
+    const [gsc, ga, leads, li, yt, kp, km, kq, inf] = await Promise.all(
+      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
     showTab(location.hash.slice(1));
     $("pulled").textContent = `Google numbers last pulled ${dayYear(gsc.pulled_at.slice(0, 10))}, ${gsc.pulled_at.slice(11, 16)} India time.`;
     renderSearch(gsc);
     renderVisits(ga);
     renderLeads(leads);
     renderLinkedIn(li);
+    renderKumarPosts(kp);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

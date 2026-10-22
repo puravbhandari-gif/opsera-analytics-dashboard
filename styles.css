@@ -141,3 +141,8 @@ details.more > summary::before { content: "+ "; font-weight: 600; }
 details.more[open] > summary::before { content: "- "; }
 details.more > summary:hover { color: var(--ink); }
 .seg.period { margin: 0 0 4px; }
+.top-controls { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; align-items: center; }
+.note-inline { color: var(--muted); font-size: 0.85rem; margin: -6px 0 10px; }
+.note-inline:empty { display: none; }
+@media (max-width: 600px) { .top-inner { flex-wrap: wrap; } .top-controls { justify-content: flex-start; } }
+@media (max-width: 600px) { .top { position: static; } }

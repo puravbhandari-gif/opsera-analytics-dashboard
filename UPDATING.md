@@ -7,7 +7,7 @@ Link: https://puravbhandari-gif.github.io/opsera-analytics-dashboard/
 Every Monday at about 8:00 in the morning India time, GitHub runs a small script for us. It:
 
 1. Signs in to Google with our read-only robot account (`dashboard-reader@opsera-analytics-dashboard.iam.gserviceaccount.com`).
-2. Pulls our numbers from Search Console and from Google Analytics "opsera.ai 2026", from 1 Oct 2026 up to yesterday.
+2. Pulls our numbers from Search Console, Google Analytics "opsera.ai 2026" and YouTube, from 1 Sep 2026 up to yesterday. Leads start on 1 Oct 2026, because the old site sent some September forms only to Google and not to HubSpot.
 3. Saves them in the `data` folder and republishes the page.
 
 GitHub sometimes starts scheduled jobs up to an hour late, so give it until about 9:30.
@@ -25,11 +25,15 @@ If a number doesn't add up, the script stops instead of guessing. When that happ
 
 The Kahoots and Infrasity tabs are kept exactly as reported. Their numbers live in `data/kahoots_monthly.json`, `data/kahoots_quarter.json` and `data/infrasity_monthly.json`, and the script never touches them.
 
-## The LinkedIn tab
+## Week by week or month by month
 
-The LinkedIn tab doesn't update on Mondays. Its numbers come from exports you download from LinkedIn yourself. The original files stay private in the Data folder on your Desktop and are never put in this public repo. Only `data/linkedin.json`, which holds the numbers the tab shows, is published.
+The switch at the top of the page changes every tab at once. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the same days last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
 
-To refresh it, download new exports from LinkedIn and ask Claude to update the LinkedIn tab. Claude moves the files into Desktop/Data and runs `scripts/convert_linkedin.py`, which checks that the numbers add up and stops if they don't. Then Claude shows you the result before publishing.
+## The LinkedIn tabs
+
+The LinkedIn brand and LinkedIn exec tabs don't update on Mondays. Their numbers come from exports you download from LinkedIn yourself. The original files stay private in the Data folder on your Desktop and are never put in this public repo. Only `data/linkedin.json`, which holds the numbers the tabs show, is published.
+
+To refresh them, download new exports from LinkedIn and ask Claude to update the LinkedIn tabs. Claude moves the files into Desktop/Data and runs `scripts/convert_linkedin.py`, which checks that the numbers add up and stops if they don't. Then Claude shows you the result before publishing.
 
 ## The YouTube tab
 
