@@ -830,13 +830,23 @@ function renderJourney(ga, leads, hub, gsc) {
     return steps;
   };
   let channel = "all";
+  let month = "";   // a picked month ("2026-06-01"), or "" to follow the period switch
   // Google search ends every step on the last day Search Console covers, so all steps use the same dates
   const lastFor = (ch) => (ch === "search" && gsc.last_day_with_data < gaLast ? gsc.last_day_with_data : gaLast);
+  const monthPick = $("journey-month");
+  for (let m = monthStart(start); m <= gaLast; m = addDays(monthEnd(m), 1)) {
+    monthPick.insertAdjacentHTML("beforeend", `<option value="${m}">${monthName(m)} ${m.slice(0, 4)}${monthEnd(m) > gaLast ? " (so far)" : ""}</option>`);
+  }
   const drawFunnel = () => {
     const last = lastFor(channel);
-    const p = periodsFor(periodMode, start, last);
-    const cur = p.cur || { start, end: last };
-    const steps = step(channel, cur.start, cur.end, periodMode);
+    let cur, mode = periodMode;
+    if (month) {
+      cur = { start: month < start ? start : month, end: monthEnd(month) < last ? monthEnd(month) : last };
+      mode = "month";
+    } else {
+      cur = periodsFor(periodMode, start, last).cur || { start, end: last };
+    }
+    const steps = step(channel, cur.start, cur.end, mode);
     $("journey-funnel-title").textContent = `Funnel, ${JOURNEY_CHANNELS[channel]}, ${range(cur.start, cur.end)}`;
     $("journey-funnel").innerHTML = funnelHtml(steps);
     const gscNote = channel === "search" ? "Search Console (first two steps), " : "";
@@ -847,7 +857,10 @@ function renderJourney(ga, leads, hub, gsc) {
       paid: "Google and HubSpot mark \"paid\" differently, so the steps don't line up." }[channel] || "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
   };
-  drawFunnel(); monthlyTabs.push(drawFunnel);
+  drawFunnel();
+  // the period switch above takes over again from a picked month
+  monthlyTabs.push(() => { month = ""; monthPick.value = ""; drawFunnel(); });
+  monthPick.addEventListener("change", () => { month = monthPick.value; drawFunnel(); });
   $("journey-channel").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     channel = b.dataset.ch;

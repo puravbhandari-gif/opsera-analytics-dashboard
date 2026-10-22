@@ -70,6 +70,8 @@ button.ghost, .seg button, .more {
 }
 button.ghost:hover, .seg button:hover, .more:hover { background: var(--wash); }
 .seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.pick { font-size: 0.85rem; color: var(--ink-2); display: flex; align-items: center; gap: 6px; }
+.pick select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; max-width: 100%; }
 .seg button.on { border-color: var(--accent); background: var(--wash); font-weight: 600; }
 
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin: 12px 0 16px; }
