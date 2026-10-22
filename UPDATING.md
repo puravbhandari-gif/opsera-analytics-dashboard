@@ -46,6 +46,14 @@ To move visits out of Untagged, add those tags to the links you post from now on
 
 Below those three lines, the tab shows a best guess for the Untagged visits: "Estimated: company page", "Estimated: Kumar" and "Can't tell". Every Monday, the update uses Apify to find posts since 1 Sep from the company page and from Kumar that link to opsera.ai, then matches them to Untagged visits by landing page and by date (the day of the post and the 3 days after). A visit only goes to one of them when just that account linked to the page in that window. Otherwise it stays "Can't tell". Links the accounts put in their own comments count too. This step uses the `APIFY_TOKEN` GitHub secret and costs about $0.10 to $0.40 a week in Apify. It's optional: if the secret is missing or Apify fails, only the estimate is skipped, everything else still updates, and the page says the estimate wasn't updated that week.
 
+## Customer journey tab and HubSpot
+
+The Customer journey tab follows marketing-driven demand from a website visit to a deal: visits, demo page and demo form come from Google Analytics, then contact, meeting and deal come from HubSpot. The channel switch shows one channel at a time. The LinkedIn split (company page, Kumar, untagged), the estimate and post-level detail are under More detail when LinkedIn is picked.
+
+The Monday update reads HubSpot with a read-only Service Key stored as the `HUBSPOT_TOKEN` secret. It's optional: if HubSpot fails, only HubSpot is skipped. Only counts and daily totals are saved, never names, emails, companies or single customer deals. What counts (agreed 22 Oct 2026): contacts created by a website form (job applicants left out), plus the Flutter Luma import as its own line; meetings and deals only after the person signed up and never with existing customers. Event sign-up lists from HubSpot also show on the Leads tab, each on its own line.
+
+To check HubSpot without changing the page, run **HubSpot check (doesn't change the page)** in the Actions tab.
+
 ## The YouTube tab
 
 The Monday update also pulls the Opsera YouTube channel's numbers from YouTube's own APIs. It uses a read-only login that marketing@opsera.io gave once. That login is stored as a GitHub secret called `YOUTUBE_TOKEN`, and a copy is kept on Purav's Mac in `~/.config/opsera-dashboard/`.

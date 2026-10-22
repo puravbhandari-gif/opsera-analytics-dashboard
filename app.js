@@ -179,7 +179,7 @@ function compare(spec) {
       draw(charts.find((c) => c.id === `${spec.id}-cmp-chart`));
     });
   }
-  chart(`${spec.id}-cmp-chart`, (th) => {
+  if ($(`${spec.id}-cmp-chart`)) chart(`${spec.id}-cmp-chart`, (th) => {
     const m = spec.metrics[spec.metricIndex];
     const bk = periodBuckets(periodMode, spec.start, spec.last);
     if (spec.together) {
@@ -198,7 +198,7 @@ function compare(spec) {
 
 function fillCompare(spec) {
   const p = periodsFor(periodMode, spec.start, spec.last);
-  const title = $(`${spec.id}-cmp-chart`).closest(".panel").querySelector(".period-title");
+  const title = $(`${spec.id}-cmp-chart`)?.closest(".panel").querySelector(".period-title");
   if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month" }[periodMode];
   if (!p.cur) {
     $(`${spec.id}-cmp-cards`).innerHTML = `<div class="card"><div class="label">Not enough days yet</div><div class="sub">${p.none}</div></div>`;
@@ -212,14 +212,14 @@ function fillCompare(spec) {
     $(`${spec.id}-cmp-source`).textContent = spec.source(p.cur.start, p.cur.end) +
       (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
   }
-  $(`${spec.id}-cmp-chart-source`).textContent = spec.source(spec.start, spec.last);
+  if ($(`${spec.id}-cmp-chart-source`)) $(`${spec.id}-cmp-chart-source`).textContent = spec.source(spec.start, spec.last);
 }
 
 function setPeriodMode(mode) {
   periodMode = mode;
   try { localStorage.setItem("period", mode); } catch (e) {}
   $("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
-  comparisons.forEach((spec) => { fillCompare(spec); draw(charts.find((c) => c.id === `${spec.id}-cmp-chart`)); });
+  comparisons.forEach((spec) => { fillCompare(spec); const c = charts.find((x) => x.id === `${spec.id}-cmp-chart`); if (c) draw(c); });
   monthlyTabs.forEach((fn) => fn());
 }
 const monthlyTabs = [];
@@ -718,6 +718,159 @@ function renderLinkedInVisits(ga) {
   $("li-web-tags-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}. Sources counted: ${li.sources_counted.join(", ")}.`;
 }
 
+// ---------- Customer journey: visit -> demo page -> demo form (Google Analytics) -> contact -> meeting -> deal (HubSpot) ----------
+
+const JOURNEY_CHANNELS = { all: "All", search: "Google search", linkedin: "LinkedIn", email: "Email", events: "Events",
+  paid: "Paid ads", ai: "AI tools", youtube: "YouTube", direct: "Direct" };
+const money = (v) => (v == null ? "-" : `$${nf.format(Math.round(v))}`);
+
+function renderJourney(ga, leads, hub) {
+  const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const start = ga.start_date;
+  const hubWhen = `HubSpot, last updated ${dayYear(hub.pulled_at.slice(0, 10))}`;
+  const booked = hub.meetings_daily.filter((r) => r.kind === "booked");
+
+  // Top: marketing-driven demo requests, meetings and new pipeline, against the period before
+  compare({ id: "journey", start, last: gaLast,
+    source: (a, b) => `Sources: Google Analytics (demo requests) and HubSpot (meetings, pipeline), ${range(a, b)}, US Pacific time.`,
+    metrics: [
+      { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
+      { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
+      { label: "New pipeline", value: rangeSum(hub.deals_daily, "amount"), fmt: money, sub: "Deals from marketing contacts" },
+    ] });
+
+  // One funnel, for the chosen channel and the period the switch at the top is set to
+  const step = (ch, a, b) => {
+    const inCh = (r) => ch === "all" || r.channel === ch;
+    const inRange = (r) => r.date >= a && r.date <= b;
+    const gaSum = (k) => ga.journey.filter((r) => r.channel === ch && inRange(r)).reduce((t2, r) => t2 + r[k], 0);
+    const hubSum = (rows, k) => rows.filter((r) => inCh(r) && r.demo && inRange(r)).reduce((t2, r) => t2 + r[k], 0);
+    return [
+      { label: "Visits", value: gaSum("visits"), src: "Google Analytics" },
+      { label: "Saw the demo page", value: gaSum("demo_page"), src: "Google Analytics" },
+      { label: "Filled the demo form", value: gaSum("demo_form"), src: "Google Analytics" },
+      { label: "New contact", value: hubSum(hub.contacts_daily.filter((r) => r.line === "form"), "count"), src: "HubSpot" },
+      { label: "Meeting", value: hubSum(booked, "count"), src: "HubSpot",
+        note: "Meetings with demo-form contacts only. The summary above counts meetings with any marketing contact." },
+      { label: "Deal", value: hubSum(hub.deals_daily, "count"), src: "HubSpot", extra: money(hubSum(hub.deals_daily, "amount")) },
+    ];
+  };
+  let channel = "all";
+  const drawFunnel = () => {
+    const p = periodsFor(periodMode, start, gaLast);
+    const cur = p.cur || { start, end: gaLast };
+    const steps = step(channel, cur.start, cur.end);
+    const top = Math.max(1, steps[0].value);
+    $("journey-funnel-title").textContent = `Funnel, ${JOURNEY_CHANNELS[channel]}, ${range(cur.start, cur.end)}`;
+    $("journey-funnel").innerHTML = steps.map((st, i) => {
+      // widths on a log scale so the small steps at the end stay visible
+      const w = 12 + 88 * (Math.log10(st.value + 1) / Math.log10(top + 1));
+      const prev = steps[i - 1];
+      const dropText = i && prev.value ? `${Math.round((st.value / prev.value) * 100)}% of the step before` : "&nbsp;";
+      const drop = i ? `<div class="funnel-step"><div></div><div class="funnel-drop">${dropText}</div></div>` : "";
+      return `${drop}<div class="funnel-step"><div class="funnel-label">${st.label}<small>${st.src}</small></div>
+        <div class="funnel-bar" style="width:${w}%">${num(st.value)}${st.extra && st.value ? ` (${st.extra})` : ""}</div></div>` +
+        (st.note ? `<div class="funnel-step"><div></div><div class="funnel-note">${esc(st.note)}</div></div>` : "");
+    }).join("");
+    $("journey-funnel-source").textContent = `Sources: Google Analytics, opsera.ai 2026 (first three steps) and HubSpot (last three), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
+    $("journey-linkedin").hidden = channel !== "linkedin";
+    $("journey-linkedin-hint").textContent = channel === "linkedin" ? "The company page, Kumar and untagged split, and the post-level detail, are under More detail." : "";
+    if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
+  };
+  drawFunnel(); monthlyTabs.push(drawFunnel);
+  $("journey-channel").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    channel = b.dataset.ch;
+    $("journey-channel").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    drawFunnel();
+  });
+
+  // More detail
+  table($("journey-channels"), { rows: Object.entries(JOURNEY_CHANNELS).map(([ch, name]) => {
+    const st = step(ch, start, gaLast);
+    return { name, visits: st[0].value, page: st[1].value, form: st[2].value, contact: st[3].value, meeting: st[4].value, deal: st[5].value };
+  }), columns: [
+    { key: "name", label: "Channel", sort: false },
+    { key: "visits", label: "Visits", num: true, fmt: num, sort: false },
+    { key: "page", label: "Demo page", num: true, fmt: num, sort: false },
+    { key: "form", label: "Demo form", num: true, fmt: num, sort: false },
+    { key: "contact", label: "Contact", num: true, fmt: num, sort: false },
+    { key: "meeting", label: "Meeting", num: true, fmt: num, sort: false },
+    { key: "deal", label: "Deal", num: true, fmt: num, sort: false },
+  ] });
+  $("journey-channels-source").textContent = `Sources: Google Analytics and HubSpot, ${range(start, gaLast)}, US Pacific time.`;
+
+  const mk = (k) => hub.meetings_daily.filter((r) => r.kind === k).reduce((t2, r) => t2 + r.count, 0);
+  $("journey-meetings").innerHTML = card("Meetings booked", num(mk("booked")), "After sign-up, up to yesterday") +
+    card("Upcoming", num(mk("upcoming")), "Booked for later") + card("With existing customers", num(mk("existing_customer")), "Not counted") +
+    card("Before sign-up", num(mk("before_signup")), "Not counted");
+  $("journey-meetings-source").textContent = `Source: ${hubWhen}, calendar meetings since ${dayYear(start)}. ${num(hub.meetings_all_calendar)} calendar meetings in all.`;
+  const dealCount = hub.deals_daily.reduce((t2, r) => t2 + r.count, 0);
+  $("journey-deals").innerHTML = card("Deals from marketing contacts", num(dealCount), hub.deals_by_stage.map(([st, n]) => `${st}: ${n}`).join(", ") || "None yet") +
+    card("New pipeline", money(hub.deals_daily.reduce((t2, r) => t2 + r.amount, 0))) +
+    card("Existing deals of these contacts", num(hub.existing_deals.count), `${money(hub.existing_deals.amount)}, created before sign-up. Not counted`);
+  $("journey-deals-source").textContent = `Source: ${hubWhen}, deals created since ${dayYear(start)}.`;
+  const contacts = (line) => hub.contacts_daily.filter((r) => r.line === line).reduce((t2, r) => t2 + r.count, 0);
+  $("journey-contacts").innerHTML = card("Form contacts", num(contacts("form")), `Demo form: ${num(hub.contacts_daily.filter((r) => r.line === "form" && r.demo).reduce((t2, r) => t2 + r.count, 0))}`) +
+    card("Luma event sign-ups", num(contacts("luma")), "Imported from Luma") +
+    card("Job applicants", num(hub.job_applicants_left_out), "Not counted");
+  $("journey-contacts-source").textContent = `Source: ${hubWhen}, contacts created by a form since ${dayYear(start)}, and the Flutter Luma import.`;
+  table($("journey-contacts-table"), { rows: hub.first_forms.map(([form, n]) => ({ form, n })).filter((r) => !/job application/i.test(r.form)), sortKey: "n", columns: [
+    { key: "form", label: "First form" }, { key: "n", label: "Contacts", num: true, fmt: num },
+  ] });
+  $("journey-contacts-table-source").textContent = `Source: ${hubWhen}.`;
+  if (Array.isArray(hub.campaigns)) {
+    table($("journey-campaigns"), { rows: hub.campaigns.filter((c) => /FY27|2026/i.test(c.name)), sortKey: "influencedContacts", columns: [
+      { key: "name", label: "Campaign" },
+      { key: "contactFirstTouch", label: "First touch", num: true, fmt: num },
+      { key: "influencedContacts", label: "Influenced", num: true, fmt: num },
+      { key: "influencedContacts_also_flutter_guests", label: "Also Flutter guests", num: true, fmt: num },
+    ] });
+    $("journey-campaigns-source").textContent = `Source: ${hubWhen}, ${num(hub.campaigns_checked)} campaigns checked.`;
+  }
+  table($("journey-li-fields"), { rows: hub.linkedin_fields.map(([field, n]) => ({ field, n })), sortKey: "n", columns: [
+    { key: "field", label: "Counted as LinkedIn because" }, { key: "n", label: "Contacts", num: true, fmt: num },
+  ] });
+  $("journey-li-fields-source").textContent = `Source: ${hubWhen}. ${num(hub.linkedin_contacts)} LinkedIn contacts; one contact can match more than one field but counts once.`;
+}
+
+function renderLeadsHubspot(hub) {
+  $("leads-hubspot-events").innerHTML = hub.events.map((e) => card(e.label, num(e.members),
+    [e.note, e.joined_daily.length ? `Added ${e.joined_daily.length > 1 ? `${dayYear(e.joined_daily[0].date)} to ${dayYear(e.joined_daily[e.joined_daily.length - 1].date)}` : dayYear(e.joined_daily[0].date)}` : ""].filter(Boolean).join(". "))).join("");
+  $("leads-hubspot-events-source").textContent = `Source: HubSpot lists, last updated ${dayYear(hub.pulled_at.slice(0, 10))}.`;
+}
+
+// From LinkedIn to the demo form: homepage -> /demo -> demo form, for each LinkedIn line, never added together
+function renderLinkedInPath(ga) {
+  const rows = ga.linkedin.demo_path;
+  const GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["untagged", "Untagged"]];
+  const src = "Source: Google Analytics, opsera.ai 2026, HubSpot demo form on /demo";
+  const start = ga.start_date, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const share = (part, whole) => (whole ? `${num(part)} (${Math.round((part / whole) * 100)}%)` : num(part));
+  const build = (el, a, b) => {
+    const sum = (g, k) => rows.reduce((t2, r) => (r.group === g && r.date >= a && r.date <= b ? t2 + r[k] : t2), 0);
+    table($(el), { rows: GROUPS.map(([g, label]) => ({ name: label, home: sum(g, "landed_home"), demo: sum(g, "home_then_demo"),
+      form: sum(g, "home_demo_form"), anyDemo: sum(g, "any_demo"), anyForm: sum(g, "any_demo_form") })), columns: [
+      { key: "name", label: "From", sort: false },
+      { key: "home", label: "Landed on homepage", num: true, fmt: num, sort: false },
+      { key: "demo", label: "Then /demo", num: true, fmt: (v, r) => share(v, r.home), sort: false },
+      { key: "form", label: "Then demo form", num: true, fmt: (v, r) => share(v, r.demo), sort: false },
+      { key: "anyDemo", label: "/demo, any page", num: true, fmt: num, sort: false },
+      { key: "anyForm", label: "Demo forms, any page", num: true, fmt: num, sort: false },
+    ] });
+  };
+  const fill = () => {
+    const p = periodsFor(periodMode, start, last);
+    const cur = p.cur || { start, end: last };
+    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far" }[periodMode];
+    build("li-path", cur.start, cur.end);
+    $("li-path-source").textContent = `${src}, ${range(cur.start, cur.end)}, US Pacific time.`;
+  };
+  fill(); monthlyTabs.push(fill);
+  build("li-path-all", start, last);
+  $("li-path-all-source").textContent = `${src}, ${range(start, last)}, US Pacific time.`;
+}
+
 // Estimated: Untagged LinkedIn visits matched to posts. Best guesses, never added to the tagged lines.
 function renderLinkedInEstimate(est, ga) {
   const GROUPS = [["estimated_company", "Estimated: company page"], ["estimated_kumar", "Estimated: Kumar"], ["cant_tell", "Can't tell"]];
@@ -999,8 +1152,8 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 (async () => {
   renderTodo();
   try {
-    const [gsc, ga, leads, li, yt, kp, est, km, kq, inf] = await Promise.all(
-      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "linkedin_estimate.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
+    const [gsc, ga, leads, li, yt, kp, est, hub, km, kq, inf] = await Promise.all(
+      ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "linkedin_estimate.json", "hubspot.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
     showTab(location.hash.slice(1));
     $("pulled").textContent = `Google numbers last pulled ${dayYear(gsc.pulled_at.slice(0, 10))}, ${gsc.pulled_at.slice(11, 16)} India time.`;
     renderSearch(gsc);
@@ -1010,6 +1163,9 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderKumarPosts(kp);
     renderLinkedInVisits(ga);
     renderLinkedInEstimate(est, ga);
+    renderLinkedInPath(ga);
+    renderJourney(ga, leads, hub);
+    renderLeadsHubspot(hub);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

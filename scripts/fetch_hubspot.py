@@ -122,6 +122,22 @@ def channel(p):
             "OTHER_CAMPAIGNS": "events" if any(w in detail for w in EVENT_WORDS) else "other"}.get(src, "other")
 
 
+def summarise_deals(deal_rows):
+    """The page is public, so deals are only kept as daily totals; no single customer's deal is listed."""
+    daily = collections.defaultdict(lambda: {"count": 0, "amount": 0.0})
+    for d in deal_rows:
+        if d["counts"] == "marketing":
+            row = daily[(d["date"], d["channel"], d["line"], d.get("demo", False))]
+            row["count"] += 1
+            row["amount"] += d["amount"]
+    existing = [d for d in deal_rows if d["counts"] == "existing"]
+    return {
+        "deals_daily": [{"date": k[0], "channel": k[1], "line": k[2], "demo": k[3], **v} for k, v in sorted(daily.items())],
+        "deals_by_stage": collections.Counter(d["stage"] for d in deal_rows if d["counts"] == "marketing").most_common(),
+        "existing_deals": {"count": len(existing), "amount": round(sum(d["amount"] for d in existing), 2)},
+    }
+
+
 def main():
     s = session()
     end = (dt.datetime.now(PACIFIC).date() - dt.timedelta(days=1)).isoformat()
@@ -267,7 +283,7 @@ def main():
         "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "demo": dm, "count": n}
                            for (d, l, ch, k, dm), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"], m["demo"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
-        "deals": sorted(deal_rows, key=lambda d: d["date"]),
+        **summarise_deals(deal_rows),
         "events": events,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),

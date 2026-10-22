@@ -1,0 +1,868 @@
+{
+ "source": "HubSpot",
+ "start_date": "2026-09-01",
+ "end_date": "2026-10-21",
+ "pulled_at": "2026-10-22T17:32+05:30",
+ "contacts_daily": [
+  {
+   "date": "2026-09-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-01",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-01",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-02",
+   "line": "luma",
+   "channel": "events",
+   "demo": false,
+   "count": 164
+  },
+  {
+   "date": "2026-09-02",
+   "line": "luma",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 10
+  },
+  {
+   "date": "2026-09-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-07",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-07",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-08",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-08",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-09-09",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-10",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 4
+  },
+  {
+   "date": "2026-09-11",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-11",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-11",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-11",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-12",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-13",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-14",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 7
+  },
+  {
+   "date": "2026-09-15",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-15",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-09-15",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-15",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-16",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-16",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-16",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-16",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-17",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-09-17",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-18",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-19",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-21",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-23",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-23",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-09-23",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-09-24",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-09-27",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-27",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-28",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-09-28",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-28",
+   "line": "form",
+   "channel": "other",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-09-29",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-29",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-30",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-10-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 2
+  },
+  {
+   "date": "2026-10-01",
+   "line": "form",
+   "channel": "paid",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-02",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-04",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-06",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 2
+  },
+  {
+   "date": "2026-10-07",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-08",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-10-08",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-09",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-13",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-10-13",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-14",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 16
+  },
+  {
+   "date": "2026-10-19",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-19",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-10-20",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 15
+  },
+  {
+   "date": "2026-10-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 10
+  }
+ ],
+ "first_forms": [
+  [
+   "Claim Your Free Modernization Project \u2013 Opsera at Gartner IT Symposium/Xpo 2026: Gartner Symposium | Modernization Offer",
+   40
+  ],
+  [
+   "Tokenomics: The Currency of Enterprise AI - Opsera: DG-FY27-Q3-Tokenomics-Webinar",
+   27
+  ],
+  [
+   "AI Coding Impact 2026 Benchmark Report - Opsera: DG-FY26-Q4-AI-BM-Report",
+   15
+  ],
+  [
+   "Contact - Opsera: Website | Contact Us",
+   13
+  ],
+  [
+   "Book a demo \u2014 Opsera: Handraiser | Demo Request",
+   10
+  ],
+  [
+   "Headless DevOps for Salesforce Orgs - Opsera: AgentForge | Early Access",
+   7
+  ],
+  [
+   "GitHub Universe Happy Hour : GitHubUniverse_HappyHour_Signup",
+   4
+  ],
+  [
+   "AI Coding Impact 2026 Benchmark Report \u2014 Opsera: DG-FY26-Q4-AI-BM-Report",
+   4
+  ],
+  [
+   "Schedule a Demo - Opsera: Handraiser | Demo Request",
+   3
+  ],
+  [
+   "Contact us \u2014 Opsera: Website | Contact Us",
+   3
+  ],
+  [
+   "From Velocity to Durable Value - Opsera: DG-FY27-Q2-Velocity-Whitepaper",
+   1
+  ],
+  [
+   "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms - Opsera: DG-FY27-Gartner-MQ",
+   1
+  ],
+  [
+   "How Engineering Leaders Use Data to Drive Productivity - Opsera: DG-2025-Q1-Whitepaper-How Engineering Leaders Use Data to Drive Productivity",
+   1
+  ],
+  [
+   "AI Budget Burning? How to Convert AI Spend Into Tangible Business Results - Opsera: DG-FY27-Q1-AI-Budget-Webinar_RECORDING",
+   1
+  ],
+  [
+   "Hummingbird AI - Opsera: Website | Hummingbird AI interest",
+   1
+  ],
+  [
+   "Request a Demo: Website | Contact Us",
+   1
+  ],
+  [
+   "Measuring the True Business Impact of AI Coding Assistants: Beyond Developer Metrics to Enterprise Value - Opsera: DG-FY26-Q2-Whitepaper-Measuring-AI-Assisstants",
+   1
+  ],
+  [
+   "Pricing - Opsera: Request Pricing",
+   1
+  ],
+  [
+   "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms \u2014 Opsera: DG-FY27-Gartner-MQ",
+   1
+  ]
+ ],
+ "existing_customers": 4,
+ "job_applicants_left_out": 65,
+ "linkedin_fields": [
+  [
+   "Original Source: LinkedIn",
+   8
+  ],
+  [
+   "Luma: LinkedIn",
+   5
+  ],
+  [
+   "UTM source: opserasocial",
+   2
+  ],
+  [
+   "UTM source: opseralinkedin",
+   1
+  ],
+  [
+   "UTM source: linkedin",
+   1
+  ],
+  [
+   "UTM source: Kumar link",
+   1
+  ]
+ ],
+ "linkedin_contacts": 17,
+ "meetings_daily": [
+  {
+   "date": "2026-09-04",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-09-08",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-11",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-22",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-09-24",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-01",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-02",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-09",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-10-30",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-18",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-25",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2027-01-29",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2027-02-16",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2027-02-26",
+   "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  }
+ ],
+ "meetings_all_calendar": 236,
+ "events": [
+  {
+   "key": "flutter_guests",
+   "label": "Flutter 2026: signed up (Luma import)",
+   "list": "Opsera Flutter 2026_ The AI-SDLC Summit - Guests - 2026-09-02-20-27-29.csv",
+   "note": "",
+   "members": 174,
+   "joined_daily": [
+    {
+     "date": "2026-09-02",
+     "count": 174
+    }
+   ]
+  },
+  {
+   "key": "flutter_attended",
+   "label": "Flutter 2026: attended",
+   "list": "Flutter 2026 Attendees",
+   "note": "",
+   "members": 87,
+   "joined_daily": [
+    {
+     "date": "2026-10-05",
+     "count": 86
+    },
+    {
+     "date": "2026-10-06",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "key": "tokenomics",
+   "label": "Tokenomics webinar",
+   "list": "DG-FY27-Q3-Tokenomics-Webinar",
+   "note": "May overlap with the website event form",
+   "members": 83,
+   "joined_daily": [
+    {
+     "date": "2026-09-18",
+     "count": 81
+    },
+    {
+     "date": "2026-09-27",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "key": "gartner_scans",
+   "label": "Gartner booth scans",
+   "list": "Gartner IT Symposium 2026 booth scans",
+   "note": "Booth scans, not sign-ups",
+   "members": 183,
+   "joined_daily": [
+    {
+     "date": "2026-10-20",
+     "count": 80
+    },
+    {
+     "date": "2026-10-21",
+     "count": 103
+    }
+   ]
+  }
+ ],
+ "campaigns": [
+  {
+   "name": "DG-2024-Q3-Gartner-Report-Engineering-Intelligence",
+   "start": "2024-09-27",
+   "contactFirstTouch": 4,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 1420,
+   "influencedContacts_also_flutter_guests": 2
+  },
+  {
+   "name": "DG-FY24-Q1-Gartner-Report",
+   "start": "2024-04-10",
+   "contactFirstTouch": 3,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 197,
+   "influencedContacts_also_flutter_guests": 1
+  },
+  {
+   "name": "DG-FY26-Q4-Gartner-Market-Guide",
+   "start": "2025-11-18",
+   "contactFirstTouch": 1,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 84,
+   "influencedContacts_also_flutter_guests": 4
+  },
+  {
+   "name": "DG-FY27-Gartner-MQ",
+   "start": null,
+   "contactFirstTouch": 4,
+   "contactFirstTouch_also_flutter_guests": 1,
+   "influencedContacts": 615,
+   "influencedContacts_also_flutter_guests": 11
+  },
+  {
+   "name": "DG-FY27-Q3-Event-Gartner-Symposium",
+   "start": null,
+   "contactFirstTouch": 9,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 66,
+   "influencedContacts_also_flutter_guests": 3
+  },
+  {
+   "name": "DG-FY27-Q3-Flutter-AISDLC-Sumit",
+   "start": null,
+   "contactFirstTouch": 0,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 1881,
+   "influencedContacts_also_flutter_guests": 28
+  },
+  {
+   "name": "DG-FY27-Q3-Tokenomics-Webinar",
+   "start": null,
+   "contactFirstTouch": 32,
+   "contactFirstTouch_also_flutter_guests": 1,
+   "influencedContacts": 1502,
+   "influencedContacts_also_flutter_guests": 15
+  },
+  {
+   "name": "Gartner MQ Report",
+   "start": null,
+   "contactFirstTouch": 3,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 77,
+   "influencedContacts_also_flutter_guests": 0
+  },
+  {
+   "name": "Gartner-Sign Up",
+   "start": null,
+   "contactFirstTouch": 0,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 0,
+   "influencedContacts_also_flutter_guests": 0
+  },
+  {
+   "name": "Gartner2023",
+   "start": null,
+   "contactFirstTouch": 0,
+   "contactFirstTouch_also_flutter_guests": 0,
+   "influencedContacts": 0,
+   "influencedContacts_also_flutter_guests": 0
+  }
+ ],
+ "campaigns_checked": 244,
+ "deals_daily": [
+  {
+   "date": "2026-10-07",
+   "channel": "search",
+   "line": "form",
+   "demo": true,
+   "count": 1,
+   "amount": 150000.0
+  }
+ ],
+ "deals_by_stage": [
+  [
+   "3 POC",
+   1
+  ]
+ ],
+ "existing_deals": {
+  "count": 10,
+  "amount": 4111758.0
+ }
+}

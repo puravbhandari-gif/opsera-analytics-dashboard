@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>opsera.ai Analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css?v=11">
+<link rel="stylesheet" href="styles.css?v=14">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -30,6 +30,7 @@
     <button role="tab" data-tab="search">Google Search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
+    <button role="tab" data-tab="journey">Customer journey</button>
     <button role="tab" data-tab="linkedin">LinkedIn brand</button>
     <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
     <button role="tab" data-tab="youtube">YouTube</button>
@@ -159,6 +160,13 @@
       <p class="source" id="leads-cmp-chart-source"></p>
     </div>
 
+    <div class="panel">
+      <h3>Event sign-ups in HubSpot</h3>
+      <div class="cards compact" id="leads-hubspot-events"></div>
+      <p class="source" id="leads-hubspot-events-source"></p>
+      <p class="note-inline">Each list is its own line and is never added to the others or to the website event forms above.</p>
+    </div>
+
     <details class="more">
       <summary>More detail</summary>
       <div class="cards" id="leads-cards"></div>
@@ -186,54 +194,115 @@
     </details>
   </section>
 
-  <!-- LinkedIn: Opsera company page -->
-  <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
-    <h2>LinkedIn brand: Opsera company page</h2>
-    <p class="lead">How often LinkedIn showed posts from the Opsera company page, and what people did with them.</p>
-
-    <div class="cards" id="li-co-cmp-cards"></div>
-    <p class="source" id="li-co-cmp-source"></p>
-
-    <div class="panel">
-      <div class="panel-head">
-        <h3 class="period-title">Week by week</h3>
-        <div class="seg" id="li-co-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
-      </div>
-      <div class="chart-box short"><canvas id="li-co-cmp-chart" aria-label="Company page by week or month"></canvas></div>
-      <p class="source" id="li-co-cmp-chart-source"></p>
-    </div>
-
-    <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
-    <p class="note-inline">Most past links weren't tagged, so Untagged will be the biggest for now.</p>
-    <div class="cards" id="li-web-cmp-cards"></div>
-    <p class="source" id="li-web-cmp-source"></p>
+  <!-- Customer journey -->
+  <section id="tab-journey" class="tab" role="tabpanel" hidden>
+    <h2>Customer journey</h2>
+    <p class="lead">How marketing turns website visits into demo requests, meetings and pipeline.</p>
+    <div class="cards" id="journey-cmp-cards"></div>
+    <p class="source" id="journey-cmp-source"></p>
 
     <div class="panel">
       <div class="panel-head">
-        <h3 class="period-title">Week by week</h3>
-        <div class="seg" id="li-web-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+        <h3 id="journey-funnel-title">Funnel</h3>
+        <div class="seg" id="journey-channel" role="group" aria-label="Choose a channel">
+          <button data-ch="all" class="on">All</button>
+          <button data-ch="search">Google search</button>
+          <button data-ch="linkedin">LinkedIn</button>
+          <button data-ch="email">Email</button>
+          <button data-ch="events">Events</button>
+          <button data-ch="paid">Paid ads</button>
+          <button data-ch="ai">AI tools</button>
+          <button data-ch="youtube">YouTube</button>
+          <button data-ch="direct">Direct</button>
+        </div>
       </div>
-      <div class="chart-box short"><canvas id="li-web-cmp-chart" aria-label="Visits to opsera.ai from LinkedIn by company page, Kumar and untagged"></canvas></div>
-      <p class="source" id="li-web-cmp-chart-source"></p>
-    </div>
-
-    <h3 class="section-title">Estimated: who sent the Untagged visits</h3>
-    <p class="note-inline">These are best guesses from matching posts to visits, kept apart from the tagged numbers above.</p>
-    <p class="note-inline" id="li-est-stale"></p>
-    <div class="cards" id="li-est-cmp-cards"></div>
-    <p class="source" id="li-est-cmp-source"></p>
-
-    <div class="panel">
-      <div class="panel-head">
-        <h3 class="period-title">Week by week</h3>
-        <div class="seg" id="li-est-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
-      </div>
-      <div class="chart-box short"><canvas id="li-est-cmp-chart" aria-label="Estimated company page, estimated Kumar and can't tell"></canvas></div>
-      <p class="source" id="li-est-cmp-chart-source"></p>
+      <div class="funnel" id="journey-funnel"></div>
+      <p class="source" id="journey-funnel-source"></p>
+      <p class="note-inline" id="journey-linkedin-hint"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
+      <p class="note">Visits, demo page and demo form come from Google Analytics; contacts, meetings and deals come from HubSpot, so a later step can now and then be bigger than the one before.</p>
+      <p class="note">Contacts are people whose first form was the demo form; meetings and deals only count after the person signed up, and never with existing customers.</p>
+      <p class="note">A deal can show up without a meeting when no calendar meeting was logged in HubSpot for that contact.</p>
+      <div class="panel">
+        <h3>Every channel, since 1 Sep</h3>
+        <div id="journey-channels"></div>
+        <p class="source" id="journey-channels-source"></p>
+        <p class="note">Google search includes other search engines, and a visit can count for two channels, such as an event email.</p>
+      </div>
+      <div class="panel">
+        <h3>Meetings with marketing contacts</h3>
+        <div class="cards compact" id="journey-meetings"></div>
+        <p class="source" id="journey-meetings-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Deals and pipeline</h3>
+        <div class="cards compact" id="journey-deals"></div>
+        <p class="source" id="journey-deals-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Marketing contacts in HubSpot</h3>
+        <div class="cards compact" id="journey-contacts"></div>
+        <p class="source" id="journey-contacts-source"></p>
+        <div id="journey-contacts-table"></div>
+        <p class="source" id="journey-contacts-table-source"></p>
+      </div>
+      <div class="panel" id="journey-campaigns-panel">
+        <h3>Event campaigns in HubSpot</h3>
+        <div id="journey-campaigns"></div>
+        <p class="source" id="journey-campaigns-source"></p>
+        <p class="note">Campaign tagging catches few of the Luma guests, so the Luma import list is used for Flutter instead.</p>
+      </div>
+
+      <div id="journey-linkedin">
+        <h3 class="section-title">LinkedIn in detail</h3>
+        <div class="panel">
+          <h3>LinkedIn contacts in HubSpot</h3>
+          <div id="journey-li-fields"></div>
+          <p class="source" id="journey-li-fields-source"></p>
+        </div>
+      <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
+      <p class="note-inline">Most past links weren't tagged, so Untagged will be the biggest for now.</p>
+      <div class="cards" id="li-web-cmp-cards"></div>
+      <p class="source" id="li-web-cmp-source"></p>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3 class="period-title">Week by week</h3>
+          <div class="seg" id="li-web-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+        </div>
+        <div class="chart-box short"><canvas id="li-web-cmp-chart" aria-label="Visits to opsera.ai from LinkedIn by company page, Kumar and untagged"></canvas></div>
+        <p class="source" id="li-web-cmp-chart-source"></p>
+      </div>
+
+      <h3 class="section-title">Estimated: who sent the Untagged visits</h3>
+      <p class="note-inline">These are best guesses from matching posts to visits, kept apart from the tagged numbers above.</p>
+      <p class="note-inline" id="li-est-stale"></p>
+      <div class="cards" id="li-est-cmp-cards"></div>
+      <p class="source" id="li-est-cmp-source"></p>
+
+      <div class="panel">
+        <div class="panel-head">
+          <h3 class="period-title">Week by week</h3>
+          <div class="seg" id="li-est-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+        </div>
+        <div class="chart-box short"><canvas id="li-est-cmp-chart" aria-label="Estimated company page, estimated Kumar and can't tell"></canvas></div>
+        <p class="source" id="li-est-cmp-chart-source"></p>
+      </div>
+
+      <h3 class="section-title">From LinkedIn to the demo form</h3>
+      <div class="panel">
+        <h3 id="li-path-title">Last full week</h3>
+        <div id="li-path"></div>
+        <p class="source" id="li-path-source"></p>
+        <h3 style="margin-top:20px">Since 1 Sep</h3>
+        <div id="li-path-all"></div>
+        <p class="source" id="li-path-all-source"></p>
+        <p class="note-inline">The last two columns count visits from any landing page, not just the homepage.</p>
+      </div>
+
       <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
       <div class="panel">
         <h3>Company page, Kumar and untagged</h3>
@@ -265,7 +334,29 @@
         <p class="source" id="li-est-posts-source"></p>
       </div>
 
-      <h3 class="section-title">The company page on LinkedIn</h3>
+      </div>
+    </details>
+  </section>
+
+  <!-- LinkedIn: Opsera company page -->
+  <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
+    <h2>LinkedIn brand: Opsera company page</h2>
+    <p class="lead">How often LinkedIn showed posts from the Opsera company page, and what people did with them.</p>
+
+    <div class="cards" id="li-co-cmp-cards"></div>
+    <p class="source" id="li-co-cmp-source"></p>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="li-co-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="li-co-cmp-chart" aria-label="Company page by week or month"></canvas></div>
+      <p class="source" id="li-co-cmp-chart-source"></p>
+    </div>
+
+    <details class="more">
+      <summary>More detail</summary>
       <div class="cards compact" id="li-co-cards"></div>
       <p class="source" id="li-co-source"></p>
       <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
@@ -523,6 +614,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=18"></script>
+<script src="app.js?v=23"></script>
 </body>
 </html>

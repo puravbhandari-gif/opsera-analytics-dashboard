@@ -6,6 +6,7 @@ The service account key is read from the GOOGLE_APPLICATION_CREDENTIALS path
 """
 import datetime as dt
 import json
+import re
 import os
 import sys
 from pathlib import Path
@@ -234,6 +235,50 @@ def leads(form_rows):
     }
 
 
+# Customer journey channels (agreed 22 Oct 2026). A visit can belong to more than one channel
+# (an event email is both email and events); channels are only ever shown one at a time.
+EVENT_WORDS = ("flutter", "tokenomics", "gartner", "summit", "webinar", "event", "dreamforce", "happy-hour", "happyhour", "flock")
+PAID_GROUPS = {"Paid Search", "Paid Social", "Display", "Cross-network", "Paid Other", "Paid Video", "Paid Shopping"}
+
+
+def journey_channels(group, source, campaign):
+    out = {"all"}
+    if group == "Organic Search":
+        out.add("search")
+    if re.fullmatch(LINKEDIN_SOURCES[4:], source, re.I):
+        out.add("linkedin")
+    if group == "Email":
+        out.add("email")
+    if any(w in campaign.lower() for w in EVENT_WORDS):
+        out.add("events")
+    if group in PAID_GROUPS:
+        out.add("paid")
+    if group == "AI Assistant":
+        out.add("ai")
+    if "youtube" in source.lower() or "youtu.be" in source.lower():
+        out.add("youtube")
+    if group == "Direct":
+        out.add("direct")
+    return out
+
+
+def journey(s, end):
+    dims = ["date", "sessionDefaultChannelGroup", "sessionSource", "sessionCampaignName"]
+    demo = {"filter": {"fieldName": "pagePath", "inListFilter": {"values": ["/demo", "/demo/"]}}}
+    rows = {}
+    def add(r, key, value):
+        for ch in journey_channels(r["sessionDefaultChannelGroup"], r["sessionSource"], r["sessionCampaignName"]):
+            row = rows.setdefault((r["date"], ch), {"date": r["date"], "channel": ch, "visits": 0, "demo_page": 0, "demo_form": 0})
+            row[key] += value
+    for r in ga_report(s, end, dims, ["sessions"]):
+        add(r, "visits", r["sessions"])
+    for r in ga_report(s, end, dims, ["sessions"], flt=demo):
+        add(r, "demo_page", r["sessions"])
+    for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
+        add(r, "demo_form", r["eventCount"])
+    return sorted(rows.values(), key=lambda r: (r["date"], r["channel"]))
+
+
 def linkedin_visits(s, end):
     li = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "FULL_REGEXP", "value": LINKEDIN_SOURCES, "caseSensitive": False}}}
     like = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "PARTIAL_REGEXP", "value": LINKEDIN_LIKE, "caseSensitive": False}}}
@@ -270,6 +315,30 @@ def linkedin_visits(s, end):
         g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
         row = forms.setdefault((r["date"], g, line), {"date": r["date"], "group": g, "line": line, "count": 0})
         row["count"] += r["eventCount"]
+    # The path homepage -> /demo -> demo form, per visit, for each LinkedIn line
+    path = {}
+    def step(date, g):
+        return path.setdefault((date, g), {"date": date, "group": g, "landed_home": 0, "home_then_demo": 0, "home_demo_form": 0,
+                                           "any_demo": 0, "any_demo_form": 0})
+    for r in ga_report(s, end, ["date", "landingPage"] + tag_dims, ["sessions"], flt=li):
+        if page_key(r["landingPage"]) == "/":
+            step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))["landed_home"] += r["sessions"]
+    for r in ga_report(s, end, ["date", "landingPage", "pagePath"] + tag_dims, ["sessions"], flt=li):
+        if page_key(r["pagePath"]) == "/demo":
+            row = step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))
+            row["any_demo"] += r["sessions"]
+            if page_key(r["landingPage"]) == "/":
+                row["home_then_demo"] += r["sessions"]
+    for r in ga_report(s, end, ["date", "landingPage", "pagePath"] + tag_dims, ["eventCount"], event_names=[FORM_EVENT], flt=li):
+        if page_key(r["pagePath"]) == "/demo":
+            row = step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))
+            row["any_demo_form"] += r["eventCount"]
+            if page_key(r["landingPage"]) == "/":
+                row["home_demo_form"] += r["eventCount"]
+    for r in path.values():
+        if r["home_then_demo"] > r["any_demo"] or r["home_demo_form"] > r["any_demo_form"]:
+            stop(f"The LinkedIn demo path doesn't add up on {r['date']} ({r['group']}).")
+
     counted = {r["sessionSource"] for r in tags}
     look_alikes = sorted({r["sessionSource"] for r in ga_report(s, end, ["sessionSource"], ["sessions"], flt=like)} - counted)
     return {
@@ -277,6 +346,7 @@ def linkedin_visits(s, end):
         "daily": sorted(daily.values(), key=lambda r: (r["date"], r["group"])),
         "landing": sorted(landing.values(), key=lambda r: -r["visits"]),
         "landing_daily": sorted(landing_daily.values(), key=lambda r: (r["date"], r["page"], r["group"])),
+        "demo_path": sorted(path.values(), key=lambda r: (r["date"], r["group"])),
         "tags": sorted(tags, key=lambda r: -r["visits"]),
         "forms": sorted(forms.values(), key=lambda r: (r["date"], r["group"])),
     }
@@ -308,6 +378,7 @@ def fetch_ga(s, end):
         "daily": daily, "channels": channels, "channel_daily": channel_daily,
         "sources": sources, "pages": pages,
         "linkedin": linkedin_visits(s, end),
+        "journey": journey(s, end),
     }, leads(form_rows)
 
 

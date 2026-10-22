@@ -41,6 +41,14 @@ jobs:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
         run: python scripts/fetch_youtube.py
 
+      # Optional: if HUBSPOT_TOKEN is missing or HubSpot fails, only HubSpot is skipped.
+      - name: Pull contacts, meetings and deals from HubSpot (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+        run: python scripts/fetch_hubspot.py
+
       # Optional: if APIFY_TOKEN is missing or Apify fails, only the estimate is skipped.
       # Everything else still updates, and the page shows the last estimate with its date.
       - name: Find LinkedIn posts that link to opsera.ai (optional)

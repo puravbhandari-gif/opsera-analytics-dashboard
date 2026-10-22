@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T16:58+05:30",
+ "pulled_at": "2026-10-22T17:33+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -341,7 +341,7 @@
    "sessions": 3258,
    "totalUsers": 3199,
    "engagedSessions": 522,
-   "averageSessionDuration": 15.19081197176182
+   "averageSessionDuration": 15.190811971761818
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10898,6 +10898,494 @@
     "engaged": 0
    }
   ],
+  "demo_path": [
+   {
+    "date": "2026-09-01",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-02",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-04",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-05",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-07",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-08",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-09",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-10",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-11",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-12",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-13",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-14",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-15",
+    "group": "untagged",
+    "landed_home": 5,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-16",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-17",
+    "group": "untagged",
+    "landed_home": 4,
+    "home_then_demo": 1,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-18",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-19",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-20",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-22",
+    "group": "untagged",
+    "landed_home": 7,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-23",
+    "group": "untagged",
+    "landed_home": 5,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-24",
+    "group": "untagged",
+    "landed_home": 5,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-25",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-27",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-28",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-29",
+    "group": "untagged",
+    "landed_home": 5,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-09-30",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-01",
+    "group": "untagged",
+    "landed_home": 13,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-02",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-03",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-04",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 1,
+    "home_demo_form": 1,
+    "any_demo": 1,
+    "any_demo_form": 1
+   },
+   {
+    "date": "2026-10-05",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-06",
+    "group": "company",
+    "landed_home": 4,
+    "home_then_demo": 1,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-06",
+    "group": "untagged",
+    "landed_home": 4,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-07",
+    "group": "company",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-07",
+    "group": "untagged",
+    "landed_home": 4,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-08",
+    "group": "company",
+    "landed_home": 7,
+    "home_then_demo": 1,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-08",
+    "group": "untagged",
+    "landed_home": 6,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 2,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-09",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-09",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 2,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-10",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-10",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-12",
+    "group": "untagged",
+    "landed_home": 5,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-13",
+    "group": "company",
+    "landed_home": 4,
+    "home_then_demo": 1,
+    "home_demo_form": 0,
+    "any_demo": 2,
+    "any_demo_form": 1
+   },
+   {
+    "date": "2026-10-13",
+    "group": "untagged",
+    "landed_home": 4,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-14",
+    "group": "company",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-15",
+    "group": "untagged",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-16",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-17",
+    "group": "untagged",
+    "landed_home": 7,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-18",
+    "group": "untagged",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-19",
+    "group": "untagged",
+    "landed_home": 6,
+    "home_then_demo": 3,
+    "home_demo_form": 0,
+    "any_demo": 4,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-20",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-20",
+    "group": "untagged",
+    "landed_home": 10,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-21",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-21",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   }
+  ],
   "tags": [
    {
     "sessionSource": "linkedin.com",
@@ -11013,5 +11501,2513 @@
     "count": 1
    }
   ]
- }
+ },
+ "journey": [
+  {
+   "date": "2026-09-01",
+   "channel": "all",
+   "visits": 822,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "direct",
+   "visits": 380,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "email",
+   "visits": 263,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "events",
+   "visits": 257,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "linkedin",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "search",
+   "visits": 146,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-01",
+   "channel": "youtube",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "ai",
+   "visits": 8,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "all",
+   "visits": 391,
+   "demo_page": 8,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "direct",
+   "visits": 158,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "email",
+   "visits": 32,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "events",
+   "visits": 31,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "linkedin",
+   "visits": 10,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-02",
+   "channel": "search",
+   "visits": 146,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "all",
+   "visits": 541,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "direct",
+   "visits": 260,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "email",
+   "visits": 108,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "events",
+   "visits": 110,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "linkedin",
+   "visits": 20,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-03",
+   "channel": "search",
+   "visits": 125,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "all",
+   "visits": 314,
+   "demo_page": 1,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "direct",
+   "visits": 154,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "email",
+   "visits": 70,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "events",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-04",
+   "channel": "search",
+   "visits": 67,
+   "demo_page": 1,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "all",
+   "visits": 110,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "direct",
+   "visits": 56,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "email",
+   "visits": 10,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "events",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "linkedin",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-05",
+   "channel": "search",
+   "visits": 33,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "all",
+   "visits": 159,
+   "demo_page": 8,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "direct",
+   "visits": 82,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "email",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "events",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "linkedin",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-06",
+   "channel": "search",
+   "visits": 62,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "all",
+   "visits": 229,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "direct",
+   "visits": 60,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "email",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "events",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-07",
+   "channel": "search",
+   "visits": 139,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "all",
+   "visits": 1747,
+   "demo_page": 283,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "direct",
+   "visits": 509,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "email",
+   "visits": 1015,
+   "demo_page": 278,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "events",
+   "visits": 930,
+   "demo_page": 279,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-08",
+   "channel": "search",
+   "visits": 190,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "all",
+   "visits": 358,
+   "demo_page": 17,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "direct",
+   "visits": 107,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "email",
+   "visits": 67,
+   "demo_page": 13,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "events",
+   "visits": 77,
+   "demo_page": 14,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "linkedin",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "search",
+   "visits": 161,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "youtube",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "all",
+   "visits": 866,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "direct",
+   "visits": 598,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "email",
+   "visits": 31,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "events",
+   "visits": 42,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "search",
+   "visits": 168,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-10",
+   "channel": "youtube",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "all",
+   "visits": 367,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "direct",
+   "visits": 131,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "email",
+   "visits": 53,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "events",
+   "visits": 18,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "linkedin",
+   "visits": 38,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-11",
+   "channel": "search",
+   "visits": 118,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "all",
+   "visits": 111,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "direct",
+   "visits": 46,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "email",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "events",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "linkedin",
+   "visits": 17,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-12",
+   "channel": "search",
+   "visits": 33,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "all",
+   "visits": 124,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "direct",
+   "visits": 62,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "email",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "events",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-13",
+   "channel": "search",
+   "visits": 49,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "all",
+   "visits": 303,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "direct",
+   "visits": 92,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "email",
+   "visits": 6,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "events",
+   "visits": 47,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "linkedin",
+   "visits": 12,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-14",
+   "channel": "search",
+   "visits": 141,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "all",
+   "visits": 516,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "direct",
+   "visits": 186,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "email",
+   "visits": 80,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "events",
+   "visits": 24,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "linkedin",
+   "visits": 15,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "search",
+   "visits": 196,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-15",
+   "channel": "youtube",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "ai",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "all",
+   "visits": 380,
+   "demo_page": 7,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "direct",
+   "visits": 173,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "email",
+   "visits": 35,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "events",
+   "visits": 56,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-16",
+   "channel": "search",
+   "visits": 122,
+   "demo_page": 1,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "ai",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "all",
+   "visits": 444,
+   "demo_page": 9,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "direct",
+   "visits": 183,
+   "demo_page": 7,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "email",
+   "visits": 64,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "events",
+   "visits": 78,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "linkedin",
+   "visits": 21,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-17",
+   "channel": "search",
+   "visits": 149,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "all",
+   "visits": 327,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "direct",
+   "visits": 128,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "email",
+   "visits": 27,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "events",
+   "visits": 29,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "linkedin",
+   "visits": 13,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-18",
+   "channel": "search",
+   "visits": 144,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "all",
+   "visits": 191,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "direct",
+   "visits": 110,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "email",
+   "visits": 10,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "events",
+   "visits": 12,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "linkedin",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-19",
+   "channel": "search",
+   "visits": 55,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-20",
+   "channel": "all",
+   "visits": 260,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-20",
+   "channel": "direct",
+   "visits": 151,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-20",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-20",
+   "channel": "search",
+   "visits": 93,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "all",
+   "visits": 290,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "direct",
+   "visits": 113,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "email",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "linkedin",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-21",
+   "channel": "search",
+   "visits": 149,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "all",
+   "visits": 804,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "direct",
+   "visits": 355,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "email",
+   "visits": 247,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "events",
+   "visits": 196,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "linkedin",
+   "visits": 11,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-22",
+   "channel": "search",
+   "visits": 175,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "all",
+   "visits": 302,
+   "demo_page": 2,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "direct",
+   "visits": 73,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "email",
+   "visits": 8,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "events",
+   "visits": 9,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "linkedin",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-23",
+   "channel": "search",
+   "visits": 192,
+   "demo_page": 1,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "all",
+   "visits": 295,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "direct",
+   "visits": 99,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "email",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "linkedin",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-24",
+   "channel": "search",
+   "visits": 168,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "all",
+   "visits": 234,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "direct",
+   "visits": 98,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "email",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "events",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "linkedin",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-25",
+   "channel": "search",
+   "visits": 115,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "all",
+   "visits": 157,
+   "demo_page": 7,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "direct",
+   "visits": 90,
+   "demo_page": 7,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "linkedin",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-26",
+   "channel": "search",
+   "visits": 57,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "all",
+   "visits": 180,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "direct",
+   "visits": 87,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "email",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "linkedin",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "search",
+   "visits": 77,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "all",
+   "visits": 300,
+   "demo_page": 3,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "direct",
+   "visits": 104,
+   "demo_page": 2,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "email",
+   "visits": 15,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-28",
+   "channel": "search",
+   "visits": 149,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "all",
+   "visits": 342,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "direct",
+   "visits": 107,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "email",
+   "visits": 13,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "events",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "linkedin",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-29",
+   "channel": "search",
+   "visits": 172,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "all",
+   "visits": 347,
+   "demo_page": 10,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "direct",
+   "visits": 128,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "email",
+   "visits": 26,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "events",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "linkedin",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-30",
+   "channel": "search",
+   "visits": 156,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "ai",
+   "visits": 8,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "all",
+   "visits": 1110,
+   "demo_page": 32,
+   "demo_form": 8
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "direct",
+   "visits": 776,
+   "demo_page": 17,
+   "demo_form": 4
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "email",
+   "visits": 26,
+   "demo_page": 2,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "linkedin",
+   "visits": 22,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-01",
+   "channel": "search",
+   "visits": 245,
+   "demo_page": 10,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "all",
+   "visits": 432,
+   "demo_page": 9,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "direct",
+   "visits": 249,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "email",
+   "visits": 11,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "events",
+   "visits": 7,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-02",
+   "channel": "search",
+   "visits": 149,
+   "demo_page": 4,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "all",
+   "visits": 242,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "direct",
+   "visits": 144,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "events",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-03",
+   "channel": "search",
+   "visits": 88,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "all",
+   "visits": 327,
+   "demo_page": 3,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "direct",
+   "visits": 215,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "email",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "events",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 1,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-04",
+   "channel": "search",
+   "visits": 98,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "all",
+   "visits": 427,
+   "demo_page": 7,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "direct",
+   "visits": 201,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "email",
+   "visits": 23,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "events",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "linkedin",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "paid",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-05",
+   "channel": "search",
+   "visits": 176,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "all",
+   "visits": 419,
+   "demo_page": 7,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "direct",
+   "visits": 185,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "email",
+   "visits": 11,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "events",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "linkedin",
+   "visits": 12,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-06",
+   "channel": "search",
+   "visits": 186,
+   "demo_page": 3,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "ai",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "all",
+   "visits": 484,
+   "demo_page": 14,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "direct",
+   "visits": 241,
+   "demo_page": 9,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "email",
+   "visits": 10,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "events",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "linkedin",
+   "visits": 15,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-07",
+   "channel": "search",
+   "visits": 191,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "ai",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "all",
+   "visits": 2765,
+   "demo_page": 24,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "direct",
+   "visits": 1771,
+   "demo_page": 13,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "email",
+   "visits": 779,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "events",
+   "visits": 6,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "linkedin",
+   "visits": 21,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "paid",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-08",
+   "channel": "search",
+   "visits": 144,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "all",
+   "visits": 516,
+   "demo_page": 17,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "direct",
+   "visits": 346,
+   "demo_page": 9,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "email",
+   "visits": 21,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "linkedin",
+   "visits": 9,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-09",
+   "channel": "search",
+   "visits": 123,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "all",
+   "visits": 299,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "direct",
+   "visits": 212,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "email",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "search",
+   "visits": 68,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-10",
+   "channel": "youtube",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "all",
+   "visits": 381,
+   "demo_page": 35,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "direct",
+   "visits": 259,
+   "demo_page": 27,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "email",
+   "visits": 13,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "events",
+   "visits": 8,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "linkedin",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-11",
+   "channel": "search",
+   "visits": 85,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "all",
+   "visits": 429,
+   "demo_page": 10,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "direct",
+   "visits": 232,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "email",
+   "visits": 13,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "linkedin",
+   "visits": 12,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-12",
+   "channel": "search",
+   "visits": 148,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "all",
+   "visits": 489,
+   "demo_page": 13,
+   "demo_form": 3
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "direct",
+   "visits": 254,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "email",
+   "visits": 28,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "events",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "linkedin",
+   "visits": 9,
+   "demo_page": 2,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "search",
+   "visits": 176,
+   "demo_page": 5,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "all",
+   "visits": 652,
+   "demo_page": 16,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "direct",
+   "visits": 398,
+   "demo_page": 9,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "email",
+   "visits": 57,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "events",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "linkedin",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-14",
+   "channel": "search",
+   "visits": 182,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "all",
+   "visits": 537,
+   "demo_page": 11,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "direct",
+   "visits": 326,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "email",
+   "visits": 25,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "events",
+   "visits": 12,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "linkedin",
+   "visits": 10,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-15",
+   "channel": "search",
+   "visits": 158,
+   "demo_page": 7,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "all",
+   "visits": 479,
+   "demo_page": 17,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "direct",
+   "visits": 290,
+   "demo_page": 11,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "email",
+   "visits": 58,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "linkedin",
+   "visits": 8,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-16",
+   "channel": "search",
+   "visits": 111,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "all",
+   "visits": 266,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "direct",
+   "visits": 205,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "linkedin",
+   "visits": 10,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-17",
+   "channel": "search",
+   "visits": 47,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "all",
+   "visits": 565,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "direct",
+   "visits": 479,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "email",
+   "visits": 8,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "events",
+   "visits": 5,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "linkedin",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-18",
+   "channel": "search",
+   "visits": 56,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "all",
+   "visits": 786,
+   "demo_page": 22,
+   "demo_form": 3
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "direct",
+   "visits": 584,
+   "demo_page": 12,
+   "demo_form": 2
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "email",
+   "visits": 32,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "events",
+   "visits": 4,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "linkedin",
+   "visits": 12,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-19",
+   "channel": "search",
+   "visits": 144,
+   "demo_page": 5,
+   "demo_form": 1
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "ai",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "all",
+   "visits": 787,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "direct",
+   "visits": 579,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "email",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "events",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "linkedin",
+   "visits": 17,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-20",
+   "channel": "search",
+   "visits": 137,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "ai",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "all",
+   "visits": 548,
+   "demo_page": 19,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "direct",
+   "visits": 349,
+   "demo_page": 13,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "email",
+   "visits": 9,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "events",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "linkedin",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "search",
+   "visits": 153,
+   "demo_page": 3,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-21",
+   "channel": "youtube",
+   "visits": 5,
+   "demo_page": 2,
+   "demo_form": 0
+  }
+ ]
 }
