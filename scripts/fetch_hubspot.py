@@ -215,11 +215,18 @@ def main():
         meeting_rows.append({"date": day, "channel": first["channel"], "line": first["line"], "kind": kind})
 
     # HubSpot campaigns named after the events, and how many contacts each is tagged with
-    campaigns = []
-    r = s.get(f"{API}/marketing/v3/campaigns", params={"limit": 100, "properties": "hs_name,hs_start_date,hs_end_date"}, timeout=60)
+    campaigns, all_campaigns, after = [], [], None
+    while True:
+        r = s.get(f"{API}/marketing/v3/campaigns", params={"limit": 100, "properties": "hs_name,hs_start_date,hs_end_date", **({"after": after} if after else {})}, timeout=60)
+        if r.status_code != 200:
+            break
+        all_campaigns += r.json().get("results", [])
+        after = (r.json().get("paging") or {}).get("next", {}).get("after")
+        if not after:
+            break
     if r.status_code == 200:
         guests = {c for c, v in contacts.items() if v["line"] == "luma"}
-        for c in r.json().get("results", []):
+        for c in all_campaigns:
             name = (c.get("properties") or {}).get("hs_name") or ""
             if not any(w in name.lower() for w in ("flutter", "tokenomics", "gartner", "luma")):
                 continue
@@ -256,6 +263,7 @@ def main():
         "deals": sorted(deal_rows, key=lambda d: d["date"]),
         "events": events,
         "campaigns": campaigns,
+        "campaigns_checked": len(all_campaigns),
     }
     OUT.write_text(json.dumps(out, indent=1))
     by = lambda rows, key: dict(collections.Counter(r[key] for r in rows))
