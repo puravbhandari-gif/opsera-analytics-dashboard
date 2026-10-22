@@ -39,8 +39,8 @@ def main():
 
     daily, matches = {}, {}
     for v in li["landing_daily"]:
-        if v["group"] != "untagged":
-            continue
+        if v["group"] != "untagged" or v["date"] < posts["start_date"]:
+            continue   # posts are only checked from their start date, so earlier visits aren't estimated
         day = dt.date.fromisoformat(v["date"])
         who = {acct for acct, posted, page, _ in links
                if same_page(v["page"], page) and 0 <= (day - dt.date.fromisoformat(posted)).days <= WINDOW_DAYS}
@@ -55,7 +55,7 @@ def main():
             m["engaged"] += v["engaged"]
             m["dates"].add(v["date"])
 
-    untagged = sum(r["visits"] for r in li["daily"] if r["group"] == "untagged")
+    untagged = sum(r["visits"] for r in li["daily"] if r["group"] == "untagged" and r["date"] >= posts["start_date"])
     split = sum(r["visits"] for r in daily.values())
     if abs(split - untagged) > max(2, untagged * 0.01):
         stop(f"Untagged visits by landing page add up to {split}, but Untagged by day is {untagged}.")
@@ -66,7 +66,7 @@ def main():
         "matches": sorted(({**m, "dates": sorted(m["dates"])} for m in matches.values()), key=lambda m: -m["visits"]),
         "linked_posts": [{"account": a, "date": d, "page": pg, "post": url} for a, d, pg, url in sorted(links, key=lambda x: x[1])],
         "untagged_total": untagged,
-        "end_date": ga["end_date"], "pulled_at": ga["pulled_at"],   # the estimate only covers days up to here
+        "start_date": posts["start_date"], "end_date": ga["end_date"], "pulled_at": ga["pulled_at"],   # the estimate only covers days up to here
     }
     (DATA / "linkedin_estimate.json").write_text(json.dumps(out, indent=1))
     for g in ("estimated_company", "estimated_kumar", "cant_tell"):

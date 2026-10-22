@@ -24,7 +24,7 @@ from zoneinfo import ZoneInfo
 import requests
 
 API = "https://api.hubapi.com"
-START_DATE = "2026-09-01"
+START_DATE = "2026-04-01"   # from 1 Apr, so "Last 3 months" can compare with the 3 months before
 SINCE = f"{START_DATE}T00:00:00Z"
 OUT = Path(__file__).resolve().parent.parent / "data" / "hubspot.json"
 PACIFIC = ZoneInfo("America/Los_Angeles")   # same days as Google Analytics

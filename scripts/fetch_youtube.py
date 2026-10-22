@@ -18,7 +18,7 @@ from pathlib import Path
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2.credentials import Credentials
 
-START_DATE = "2026-09-01"   # Sep added for month-by-month comparison (agreed 22 Oct 2026)
+START_DATE = "2026-04-01"   # from 1 Apr, so "Last 3 months" can compare with the 3 months before
 CHANNEL_ID = "UCpnT0NdkrOWp8v3bodeCGhQ"
 TOKEN_FILE = Path.home() / ".config" / "opsera-dashboard" / "youtube-token.json"
 OUT = Path(__file__).resolve().parent.parent / "data" / "youtube.json"

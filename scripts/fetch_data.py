@@ -15,7 +15,7 @@ from urllib.parse import quote
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
 
-START_DATE = "2026-09-01"   # Sep pulled from our own accounts for month-by-month comparison (agreed 22 Oct 2026)
+START_DATE = "2026-04-01"   # from 1 Apr, so "Last 3 months" can compare with the 3 months before (agreed 22 Oct 2026)
 LEADS_START = START_DATE   # Sep added 22 Oct 2026; the old site sent 17 September form fills only to Google, not HubSpot (noted on the page)
 GA_PROPERTY_ID = "256856286"
 GA_PROPERTY_NAME = "opsera.ai 2026"
@@ -222,7 +222,8 @@ def leads(form_rows):
         day[key] += r["eventCount"]
     for line in lines.values():
         line["pages"] = [{"page": p, "count": c} for p, c in sorted(line["pages"].items(), key=lambda x: -x[1])]
-    removed = [p for p in REMOVED_FORM_PAGES if any(x["page"] == page_key(p) for l in lines.values() for x in l["pages"])]
+    removed = sorted({page_key(r["pagePath"]) for r in form_rows if r["date"] >= NEW_SITE_LIVE}
+                     & {page_key(p) for p in REMOVED_FORM_PAGES})   # only the new site lost these forms
     if removed:
         stop(f"Pages we thought had no form recorded form fills: {removed}. Check before showing them as removed.")
     return {
