@@ -53,8 +53,14 @@ def session():
     return s
 
 
-def call(s, method, path, **kw):
+def call(s, method, path, partial_ok=False, **kw):
     r = s.request(method, API + path, timeout=60, **kw)
+    if r.status_code == 207 and partial_ok:
+        j = r.json()   # some records simply have no associations; anything else is a real problem
+        bad = [e for e in j.get("errors", []) if e.get("subCategory") != "crm.associations.NO_ASSOCIATIONS_FOUND"]
+        if bad:
+            stop(f"HubSpot {method} {path} returned errors: {str(bad[:2])[:300]}")
+        return j
     if r.status_code != 200:
         stop(f"HubSpot {method} {path} returned {r.status_code}: {r.text[:300]}")
     return r.json()
@@ -79,7 +85,7 @@ def associations(s, frm, to, ids):
     out = collections.defaultdict(set)
     ids = list(ids)
     for i in range(0, len(ids), 100):
-        j = call(s, "POST", f"/crm/v4/associations/{frm}/{to}/batch/read", json={"inputs": [{"id": str(x)} for x in ids[i:i + 100]]})
+        j = call(s, "POST", f"/crm/v4/associations/{frm}/{to}/batch/read", partial_ok=True, json={"inputs": [{"id": str(x)} for x in ids[i:i + 100]]})
         for r in j.get("results", []):
             for t in r.get("to", []):
                 out[str(r["from"]["id"])].add(str(t["toObjectId"]))
