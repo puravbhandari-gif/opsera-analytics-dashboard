@@ -1,0 +1,24 @@
+name: HubSpot check (doesn't change the page)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check what HubSpot can read (counts only)
+        env:
+          HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
+        run: |
+          python -m pip install -q -r requirements.txt
+          python scripts/hubspot_check.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: hubspot-check
+          path: hubspot_check.json
+          retention-days: 1
