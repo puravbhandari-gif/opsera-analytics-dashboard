@@ -125,6 +125,14 @@ def channel(p):
             "OTHER_CAMPAIGNS": "events" if any(w in detail for w in EVENT_WORDS) else "other"}.get(src, "other")
 
 
+def ai_tool(p):
+    text = f"{p.get('hs_analytics_source_data_1') or ''} {p.get('hs_analytics_first_referrer') or ''}"
+    for key, pattern in AI_TOOLS:
+        if re.search(pattern, text, re.I):
+            return key
+    return "other" if p.get("hs_analytics_source") == "AI_REFERRALS" else None
+
+
 def add_months(d, n):
     m = d.month - 1 + n
     y, m = d.year + m // 12, m % 12 + 1
