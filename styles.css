@@ -130,3 +130,13 @@ tbody tr:hover { background: var(--wash); }
   .chart-box { height: 260px; }
   .panel { padding: 12px; }
 }
+
+.lead { font-size: 1rem; color: var(--ink-2); margin: 4px 0 12px; }
+details.more { margin: 24px 0 8px; border-top: 1px solid var(--border); padding-top: 8px; }
+details.more > summary {
+  cursor: pointer; font-weight: 600; color: var(--ink-2); padding: 10px 0; list-style: none;
+}
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::before { content: "+ "; font-weight: 600; }
+details.more[open] > summary::before { content: "- "; }
+details.more > summary:hover { color: var(--ink); }

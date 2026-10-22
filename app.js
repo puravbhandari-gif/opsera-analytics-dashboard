@@ -156,16 +156,14 @@ function renderSearch(d) {
   chart("search-daily", (th) => ({
     type: "line",
     data: { labels: d.daily.map((r) => day(r.date)), datasets: [line(metrics[m].label, d.daily.map((r) => r[m]), th.s[0])] },
-    reverse: metrics[m].reverse, yfmt: metrics[m].yfmt,
+    reverse: metrics[m].reverse, yfmt: metrics[m].yfmt, ytitle: metrics[m].reverse ? "Higher on chart = better spot" : undefined,
     tooltip: { label: (c) => ` ${metrics[m].label}: ${metrics[m].fmt(c.parsed.y)}` },
   }));
-  const setNote = () => { $("search-daily-note").textContent = m === "avg_spot" ? "This chart is flipped, so up means a better spot." : ""; };
-  setNote();
   $("search-metric").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     m = b.dataset.m;
     $("search-metric").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-    draw(charts.find((c) => c.id === "search-daily")); setNote();
+    draw(charts.find((c) => c.id === "search-daily"));
   });
 
   const cols = (first) => [
@@ -214,8 +212,9 @@ function renderVisits(d) {
     card("Engaged visits", num(t.engagedSessions), "Stayed 10+ seconds, saw 2+ pages, or filled a form") +
     card("All visits", num(t.sessions), "Includes robots") +
     card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged` : "") +
-    card("People visiting", num(t.totalUsers), "Includes robots") +
     card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1));
+  $("visits-more-cards").innerHTML = card("People visiting", num(t.totalUsers), "Includes robots");
+  $("visits-more-source").textContent = `${src}, ${when}.`;
 
   $("visits-daily-source").textContent = `${src}, ${when}.`;
   const emailByDay = Object.fromEntries(d.channel_daily.filter((r) => r.sessionDefaultChannelGroup === "Email").map((r) => [r.date, r.sessions]));
@@ -282,7 +281,10 @@ function renderLeads(d) {
   const src = "Source: Google Analytics, opsera.ai 2026, HubSpot form fills";
   const when = `${range(d.start_date, d.end_date)}, US Pacific time`;
   $("leads-source").textContent = `${src}, ${when}.`;
-  $("leads-cards").innerHTML = LEAD_ORDER.map((k) => card(d.lines[k].label, num(d.lines[k].count), LEAD_NOTES[k])).join("");
+  const leadCard = (k) => card(d.lines[k].label, num(d.lines[k].count), LEAD_NOTES[k]);
+  $("leads-cards").innerHTML = ["demo", "events", "gartner_offer", "contact"].map(leadCard).join("");
+  $("leads-more-cards").innerHTML = leadCard("other");
+  $("leads-more-source").textContent = `${src}, ${when}.`;
 
   $("leads-core-source").textContent = `${src}, ${when}.`;
   const removed = "Form removed when the new site went live on 30 Sep. Visitors now go to Book a demo.";
@@ -361,6 +363,29 @@ function renderLinkedIn(d) {
   const coSrc = `Source: ${co.source}, ${when}.`;
   const kSrc = `Source: ${k.source}, ${when}.`;
   const sum = (rows, key) => rows.reduce((a, r) => a + r[key], 0);
+
+  // Key numbers: company page and Kumar side by side, never added together
+  $("li-key-cards").innerHTML =
+    card("Company page: times seen", num(sum(co.daily, "seen_total"))) +
+    card("Company page: followers gained", num(sum(co.followers_daily, "gained"))) +
+    card("Kumar: times seen", num(k.seen)) +
+    card("Kumar: followers gained", num(sum(k.followers_daily, "gained")));
+  $("li-key-source").textContent = `Source: LinkedIn exports for the Opsera company page and Kumar Chivukula's profile, ${when}.`;
+  const keyWeeks = { company: weekly(co.daily, "seen_total", d.start_date, d.end_date), kumar: weekly(k.daily, "seen", d.start_date, d.end_date) };
+  const keyLabel = { company: "Opsera company page", kumar: "Kumar Chivukula" };
+  let who = "company";
+  chart("li-key-chart", (th) => ({
+    type: "bar", whole: true,
+    data: { labels: keyWeeks[who].map((w) => w.label), datasets: [bar(`Times seen, ${keyLabel[who]}`, keyWeeks[who].map((w) => w.value), th.s[0])] },
+  }));
+  const setKeySource = () => { $("li-key-chart-source").textContent = who === "company" ? coSrc : kSrc; };
+  setKeySource();
+  $("li-key-who").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    who = b.dataset.m;
+    $("li-key-who").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    draw(charts.find((c) => c.id === "li-key-chart")); setKeySource();
+  });
 
   // Company page
   $("li-co-source").textContent = coSrc;
@@ -467,6 +492,28 @@ function renderYouTube(d, ga) {
   const last = d.last_day_with_data || d.end_date;
   const src = `Source: YouTube Analytics API, Opsera channel, ${range(d.start_date, last)}.`;
   const c = d.channel;
+
+  // Key numbers: Shorts and long videos side by side, never added together
+  $("yt-key-cards").innerHTML =
+    card("Long videos: views", num(d.types.long.views)) +
+    card("Long videos: watch time", `${num(d.types.long.minutes)} min`) +
+    card("Shorts: views", num(d.types.shorts.views)) +
+    card("Subscribers gained", num(c.subs_gained), `${num(c.subs_lost)} lost`);
+  $("yt-key-source").textContent = src;
+  const keyWeeks = { long: weeksFilled(d.types.long.daily, ["views"], d.start_date, last), shorts: weeksFilled(d.types.shorts.daily, ["views"], d.start_date, last) };
+  const keyLabel = { long: "Long videos", shorts: "Shorts" };
+  let kind = "long";
+  chart("yt-key-chart", (th) => ({
+    type: "bar", whole: true,
+    data: { labels: keyWeeks[kind].map((w) => w.label), datasets: [bar(`Views, ${keyLabel[kind]}`, keyWeeks[kind].map((w) => w.views), th.s[0])] },
+  }));
+  $("yt-key-chart-source").textContent = src;
+  $("yt-key-type").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    kind = b.dataset.m;
+    $("yt-key-type").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    draw(charts.find((ch) => ch.id === "yt-key-chart"));
+  });
 
   $("yt-ch-cards").innerHTML =
     card("Subscribers gained", num(c.subs_gained)) +
@@ -575,6 +622,12 @@ function renderYouTube(d, ga) {
 // ---------- Tab 4: Kahoots ----------
 
 function renderKahoots(monthly, quarter) {
+  const q3 = (metric) => num(quarter.find((r) => r.metric === metric).q3);
+  $("kahoots-cards").innerHTML =
+    card("Website visits", q3("Website visits"), "Q3 2026") +
+    card("Visits from people", q3("Visits from people, no robots"), "Q3 2026") +
+    card("All form fills", q3("All form fills"), "Q3 2026") +
+    card("Core forms", q3("Core forms (homepage, contact, about, platform)"), "Q3 2026");
   chart("kahoots-visits", (th) => ({
     type: "bar", stacked: true,
     data: { labels: monthly.map((r) => month(r.month)), datasets: [
@@ -597,6 +650,12 @@ function renderKahoots(monthly, quarter) {
 // ---------- Tab 5: Infrasity ----------
 
 function renderInfrasity(monthly) {
+  const sep = monthly.find((r) => r.month === "2026-09");
+  $("infrasity-cards").innerHTML =
+    card("Clicks", num(sep.google_clicks), "September 2026") +
+    card("Times Google showed us", num(sep.times_shown), "September 2026") +
+    card("Click rate", pct(sep.click_rate_pct), "September 2026") +
+    card("Average spot on Google", spot(sep.avg_spot), "September 2026. Lower is better");
   table($("infrasity-table"), { rows: monthly.map((r) => ({ ...r, name: month(r.month) })), columns: [
     { key: "name", label: "Month", sort: false },
     { key: "google_clicks", label: "Clicks", num: true, fmt: num, sort: false },
@@ -643,6 +702,7 @@ function showTab(name) {
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
   charts.forEach((c) => c.instance && c.instance.resize());
 }
+document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {
   const b = e.target.closest("button"); if (!b) return;
   history.replaceState(null, "", `#${b.dataset.tab}`); showTab(b.dataset.tab);

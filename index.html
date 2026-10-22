@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>opsera.ai Analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -32,18 +32,12 @@
 </header>
 
 <main>
-  <!-- Tab 1 -->
+  <!-- Google Search -->
   <section id="tab-search" class="tab" role="tabpanel">
     <h2>Google Search</h2>
+    <p class="lead">How often Google showed opsera.ai in search results, and how often people clicked through.</p>
     <div class="cards" id="search-cards"></div>
     <p class="source" id="search-source"></p>
-    <p class="note">Google reports 2 to 3 days late.</p>
-
-    <div class="panel">
-      <h3>This week against last week</h3>
-      <div class="cards compact" id="search-week"></div>
-      <p class="source" id="search-week-source"></p>
-    </div>
 
     <div class="panel">
       <div class="panel-head">
@@ -57,31 +51,37 @@
       </div>
       <div class="chart-box"><canvas id="search-daily" aria-label="Day by day Google search chart"></canvas></div>
       <p class="source" id="search-daily-source"></p>
-      <p class="note" id="search-daily-note"></p>
     </div>
 
-    <div class="panel">
-      <h3>Pages Google sent people to</h3>
-      <p class="note">Addresses with and without a final "/" count as one page, and rows don't add up to the total.</p>
-      <div id="search-pages"></div>
-      <p class="source" id="search-pages-source"></p>
-    </div>
-
-    <div class="panel">
-      <h3>Searches people used to find us</h3>
-      <p class="note">Google hides rare searches, so rows cover only part of all clicks.</p>
-      <div id="search-queries"></div>
-      <p class="source" id="search-queries-source"></p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Google reports 2 to 3 days late.</p>
+      <div class="panel">
+        <h3>This week against last week</h3>
+        <div class="cards compact" id="search-week"></div>
+        <p class="source" id="search-week-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Pages Google sent people to</h3>
+        <div id="search-pages"></div>
+        <p class="source" id="search-pages-source"></p>
+        <p class="note">Addresses with and without a final "/" count as one page, and rows don't add up to the total.</p>
+      </div>
+      <div class="panel">
+        <h3>Searches people used to find us</h3>
+        <div id="search-queries"></div>
+        <p class="source" id="search-queries-source"></p>
+        <p class="note">Google hides rare searches, so rows cover only part of all clicks.</p>
+      </div>
+    </details>
   </section>
 
-  <!-- Tab 2 -->
+  <!-- Website visits -->
   <section id="tab-visits" class="tab" role="tabpanel" hidden>
     <h2>Website visits</h2>
+    <p class="lead">Visits to opsera.ai, where engaged visits are people who stayed, which leaves out most email robots.</p>
     <div class="cards" id="visits-cards"></div>
     <p class="source" id="visits-source"></p>
-    <p class="note">Engaged visits leave out most email robots, which click every link but never stay.</p>
-    <p class="note">Google estimates each split on its own, so days and sources add up to slightly less than the total.</p>
 
     <div class="panel">
       <h3>Day by day</h3>
@@ -89,40 +89,38 @@
       <p class="source" id="visits-daily-source"></p>
     </div>
 
-    <div class="panel">
-      <h3>Where visits came from</h3>
-      <div class="chart-box tall"><canvas id="visits-channels" aria-label="Engaged visits and all visits by where they came from"></canvas></div>
-      <p class="source" id="visits-channels-source"></p>
-      <div id="visits-channels-table"></div>
-      <p class="source" id="visits-channels-table-source"></p>
-    </div>
-
-    <div class="panel">
-      <h3>Every source</h3>
-      <div id="visits-sources"></div>
-      <p class="source" id="visits-sources-source"></p>
-    </div>
-
-    <div class="panel">
-      <h3>Top pages people visited</h3>
-      <p class="note">Pages under /hs/preferences-center are email subscription pages, mostly opened by email robots.</p>
-      <div id="visits-pages"></div>
-      <p class="source" id="visits-pages-source"></p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <div class="cards compact" id="visits-more-cards"></div>
+      <p class="source" id="visits-more-source"></p>
+      <p class="note">Google estimates each split on its own, so days and sources add up to slightly less than the total.</p>
+      <div class="panel">
+        <h3>Where visits came from</h3>
+        <div class="chart-box tall"><canvas id="visits-channels" aria-label="Engaged visits and all visits by where they came from"></canvas></div>
+        <p class="source" id="visits-channels-source"></p>
+        <div id="visits-channels-table"></div>
+        <p class="source" id="visits-channels-table-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Every source</h3>
+        <div id="visits-sources"></div>
+        <p class="source" id="visits-sources-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Top pages people visited</h3>
+        <div id="visits-pages"></div>
+        <p class="source" id="visits-pages-source"></p>
+        <p class="note">Pages under /hs/preferences-center are email subscription pages, mostly opened by email robots.</p>
+      </div>
+    </details>
   </section>
 
-  <!-- Tab 3 -->
+  <!-- Leads -->
   <section id="tab-leads" class="tab" role="tabpanel" hidden>
     <h2>Leads</h2>
+    <p class="lead">Forms people filled in on opsera.ai, with each kind of form counted on its own.</p>
     <div class="cards" id="leads-cards"></div>
     <p class="source" id="leads-source"></p>
-    <p class="note">Event sign-ups on Luma aren't included until Luma is connected to HubSpot.</p>
-
-    <div class="panel">
-      <h3>Core site forms</h3>
-      <div id="leads-core"></div>
-      <p class="source" id="leads-core-source"></p>
-    </div>
 
     <div class="panel">
       <h3>Week by week</h3>
@@ -130,132 +128,172 @@
       <p class="source" id="leads-weekly-source"></p>
     </div>
 
-    <div class="panel">
-      <h3>Which page each form fill came from</h3>
-      <div id="leads-pages"></div>
-      <p class="source" id="leads-pages-source"></p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <div class="cards compact" id="leads-more-cards"></div>
+      <p class="source" id="leads-more-source"></p>
+      <p class="note">Event sign-ups on Luma aren't included until Luma is connected to HubSpot.</p>
+      <div class="panel">
+        <h3>Core site forms</h3>
+        <div id="leads-core"></div>
+        <p class="source" id="leads-core-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Which page each form fill came from</h3>
+        <div id="leads-pages"></div>
+        <p class="source" id="leads-pages-source"></p>
+      </div>
+    </details>
   </section>
 
   <!-- LinkedIn -->
   <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
     <h2>LinkedIn (Jul to Sep 2026)</h2>
-
-    <h3 class="section-title">Opsera company page</h3>
-    <div class="cards" id="li-co-cards"></div>
-    <p class="source" id="li-co-source"></p>
-    <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
+    <p class="lead">How often LinkedIn showed posts from the Opsera company page and from Kumar's profile, kept separate.</p>
+    <div class="cards" id="li-key-cards"></div>
+    <p class="source" id="li-key-source"></p>
 
     <div class="panel">
       <div class="panel-head">
-        <h3>Day by day, unpaid and paid</h3>
-        <div class="seg" id="li-co-metric" role="group" aria-label="Choose what the chart shows">
-          <button data-m="seen" class="on">Times seen</button>
-          <button data-m="clicks">Clicks</button>
-          <button data-m="reactions">Reactions</button>
-          <button data-m="comments">Comments</button>
+        <h3>Times seen, week by week</h3>
+        <div class="seg" id="li-key-who" role="group" aria-label="Choose whose numbers the chart shows">
+          <button data-m="company" class="on">Opsera company page</button>
+          <button data-m="kumar">Kumar Chivukula</button>
         </div>
       </div>
-      <div class="chart-box"><canvas id="li-co-daily" aria-label="Company page day by day, unpaid and paid"></canvas></div>
-      <p class="source" id="li-co-daily-source"></p>
+      <div class="chart-box short"><canvas id="li-key-chart" aria-label="LinkedIn times seen by week"></canvas></div>
+      <p class="source" id="li-key-chart-source"></p>
     </div>
 
-    <div class="panel">
-      <h3>Followers gained, week by week</h3>
-      <div class="chart-box short"><canvas id="li-co-followers" aria-label="Company page followers gained by week"></canvas></div>
-      <p class="source" id="li-co-followers-source"></p>
-      <p class="note">The export doesn't include the total follower count.</p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
 
-    <div class="panel">
-      <h3>Company page visits, day by day</h3>
-      <div class="chart-box"><canvas id="li-co-visits" aria-label="Company page views by day"></canvas></div>
-      <p class="source" id="li-co-visits-source"></p>
-      <p class="note">The total includes pages LinkedIn doesn't list separately.</p>
-    </div>
-
-    <div class="panel">
-      <h3>Posts</h3>
-      <div id="li-co-posts"></div>
-      <p class="source" id="li-co-posts-source"></p>
-      <p class="note">LinkedIn's post list counts a few more comments than its daily sheet.</p>
-    </div>
-
-    <div class="panel">
-      <h3>Who follows the company page</h3>
-      <div class="breakdowns" id="li-co-breakdowns"></div>
-      <p class="source" id="li-co-breakdowns-source"></p>
-      <p class="note">Each table comes from its own LinkedIn sheet, so their totals differ.</p>
-    </div>
-
-    <h3 class="section-title">Kumar Chivukula</h3>
-    <div class="cards" id="li-k-cards"></div>
-    <p class="source" id="li-k-source"></p>
-
-    <div class="panel">
-      <div class="panel-head">
-        <h3>Day by day</h3>
-        <div class="seg" id="li-k-metric" role="group" aria-label="Choose what the chart shows">
-          <button data-m="seen" class="on">Times seen</button>
-          <button data-m="engagements">Engagements</button>
+      <h3 class="section-title">Opsera company page</h3>
+      <div class="cards compact" id="li-co-cards"></div>
+      <p class="source" id="li-co-source"></p>
+      <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Day by day, unpaid and paid</h3>
+          <div class="seg" id="li-co-metric" role="group" aria-label="Choose what the chart shows">
+            <button data-m="seen" class="on">Times seen</button>
+            <button data-m="clicks">Clicks</button>
+            <button data-m="reactions">Reactions</button>
+            <button data-m="comments">Comments</button>
+          </div>
         </div>
+        <div class="chart-box"><canvas id="li-co-daily" aria-label="Company page day by day, unpaid and paid"></canvas></div>
+        <p class="source" id="li-co-daily-source"></p>
       </div>
-      <div class="chart-box"><canvas id="li-k-daily" aria-label="Kumar's profile day by day"></canvas></div>
-      <p class="source" id="li-k-daily-source"></p>
-    </div>
-
-    <div class="panel">
-      <h3>Followers gained, week by week</h3>
-      <div class="chart-box short"><canvas id="li-k-followers" aria-label="Kumar's followers gained by week"></canvas></div>
-      <p class="source" id="li-k-followers-source"></p>
-    </div>
-
-    <div class="panel">
-      <h3>Top posts</h3>
-      <p class="note">Includes older posts that were still being seen in this period.</p>
-      <div class="two-col">
-        <div><h4>By times seen</h4><div id="li-k-top-seen"></div><p class="source" id="li-k-top-seen-source"></p></div>
-        <div><h4>By engagements</h4><div id="li-k-top-eng"></div><p class="source" id="li-k-top-eng-source"></p></div>
+      <div class="panel">
+        <h3>Followers gained, week by week</h3>
+        <div class="chart-box short"><canvas id="li-co-followers" aria-label="Company page followers gained by week"></canvas></div>
+        <p class="source" id="li-co-followers-source"></p>
+        <p class="note">The export doesn't include the total follower count.</p>
       </div>
-    </div>
+      <div class="panel">
+        <h3>Company page visits, day by day</h3>
+        <div class="chart-box"><canvas id="li-co-visits" aria-label="Company page views by day"></canvas></div>
+        <p class="source" id="li-co-visits-source"></p>
+        <p class="note">The total includes pages LinkedIn doesn't list separately.</p>
+      </div>
+      <div class="panel">
+        <h3>Posts</h3>
+        <div id="li-co-posts"></div>
+        <p class="source" id="li-co-posts-source"></p>
+        <p class="note">LinkedIn's post list counts a few more comments than its daily sheet.</p>
+      </div>
+      <div class="panel">
+        <h3>Who follows the company page</h3>
+        <div class="breakdowns" id="li-co-breakdowns"></div>
+        <p class="source" id="li-co-breakdowns-source"></p>
+        <p class="note">Each table comes from its own LinkedIn sheet, so their totals differ.</p>
+      </div>
+
+      <h3 class="section-title">Kumar Chivukula</h3>
+      <div class="cards compact" id="li-k-cards"></div>
+      <p class="source" id="li-k-source"></p>
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Day by day</h3>
+          <div class="seg" id="li-k-metric" role="group" aria-label="Choose what the chart shows">
+            <button data-m="seen" class="on">Times seen</button>
+            <button data-m="engagements">Engagements</button>
+          </div>
+        </div>
+        <div class="chart-box"><canvas id="li-k-daily" aria-label="Kumar's profile day by day"></canvas></div>
+        <p class="source" id="li-k-daily-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Followers gained, week by week</h3>
+        <div class="chart-box short"><canvas id="li-k-followers" aria-label="Kumar's followers gained by week"></canvas></div>
+        <p class="source" id="li-k-followers-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Top posts</h3>
+        <div class="two-col">
+          <div><h4>By times seen</h4><div id="li-k-top-seen"></div><p class="source" id="li-k-top-seen-source"></p></div>
+          <div><h4>By engagements</h4><div id="li-k-top-eng"></div><p class="source" id="li-k-top-eng-source"></p></div>
+        </div>
+        <p class="note">Includes older posts that were still being seen in this period.</p>
+      </div>
+    </details>
   </section>
 
   <!-- YouTube -->
   <section id="tab-youtube" class="tab" role="tabpanel" hidden>
     <h2>YouTube</h2>
-    <p class="note">YouTube reports about 2 days late.</p>
-
-    <h3 class="section-title">Whole channel</h3>
-    <div class="cards" id="yt-ch-cards"></div>
-    <p class="source" id="yt-ch-source"></p>
-    <p class="note">End screen clicks aren't available from YouTube's standard reports.</p>
+    <p class="lead">Views and watch time on the Opsera YouTube channel, with Shorts and long videos counted separately.</p>
+    <div class="cards" id="yt-key-cards"></div>
+    <p class="source" id="yt-key-source"></p>
 
     <div class="panel">
-      <h3>Subscribers gained and lost, week by week</h3>
-      <div class="chart-box short"><canvas id="yt-subs" aria-label="Subscribers gained and lost by week"></canvas></div>
-      <p class="source" id="yt-subs-source"></p>
+      <div class="panel-head">
+        <h3>Views, week by week</h3>
+        <div class="seg" id="yt-key-type" role="group" aria-label="Choose Shorts or long videos">
+          <button data-m="long" class="on">Long videos</button>
+          <button data-m="shorts">Shorts</button>
+        </div>
+      </div>
+      <div class="chart-box short"><canvas id="yt-key-chart" aria-label="YouTube views by week"></canvas></div>
+      <p class="source" id="yt-key-chart-source"></p>
     </div>
 
-    <div class="panel">
-      <h3>YouTube searches that found our videos</h3>
-      <div id="yt-searches"></div>
-      <p class="source" id="yt-searches-source"></p>
-      <p class="note" id="yt-searches-note"></p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">YouTube reports about 2 days late.</p>
 
-    <div class="panel">
-      <h3>Visits to opsera.ai from YouTube</h3>
-      <div class="cards compact" id="yt-ga-cards"></div>
-      <p class="source" id="yt-ga-source"></p>
-    </div>
+      <h3 class="section-title">Whole channel</h3>
+      <div class="cards compact" id="yt-ch-cards"></div>
+      <p class="source" id="yt-ch-source"></p>
+      <p class="note">End screen clicks aren't available from YouTube's standard reports.</p>
+      <div class="panel">
+        <h3>Subscribers gained and lost, week by week</h3>
+        <div class="chart-box short"><canvas id="yt-subs" aria-label="Subscribers gained and lost by week"></canvas></div>
+        <p class="source" id="yt-subs-source"></p>
+      </div>
+      <div class="panel">
+        <h3>YouTube searches that found our videos</h3>
+        <div id="yt-searches"></div>
+        <p class="source" id="yt-searches-source"></p>
+        <p class="note" id="yt-searches-note"></p>
+      </div>
+      <div class="panel">
+        <h3>Visits to opsera.ai from YouTube</h3>
+        <div class="cards compact" id="yt-ga-cards"></div>
+        <p class="source" id="yt-ga-source"></p>
+      </div>
 
-    <div id="yt-types"></div>
+      <div id="yt-types"></div>
+    </details>
   </section>
 
-  <!-- Tab 4 -->
+  <!-- Before: Kahoots -->
   <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
     <h2>Before: Kahoots (Q3 2026)</h2>
-    <p class="note">Kept as Kahoots reported it, from the paused "opsera.ai 2025" account.</p>
+    <p class="lead">What Kahoots reported for July to September 2026 from the old "opsera.ai 2025" account, kept as reported.</p>
+    <div class="cards" id="kahoots-cards"></div>
+    <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
 
     <div class="panel">
       <h3>Visits from people and robots, by month</h3>
@@ -263,44 +301,55 @@
       <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
     </div>
 
-    <div class="panel">
-      <h3>Form fills by month</h3>
-      <div class="chart-box short"><canvas id="kahoots-forms" aria-label="Form fills by month"></canvas></div>
-      <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
-    </div>
-
-    <div class="panel">
-      <h3>Q2 against Q3</h3>
-      <div id="kahoots-quarter"></div>
-      <p class="source">Source: Kahoots Q3 2026 report, Apr to Sep 2026.</p>
-      <p class="note">The rest of All form fills is other forms, such as the Cursor plugin and Salesforce pages.</p>
-      <p class="note">Event sign-ups moved to Luma, which the website count can't see.</p>
-    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <div class="panel">
+        <h3>Form fills by month</h3>
+        <div class="chart-box short"><canvas id="kahoots-forms" aria-label="Form fills by month"></canvas></div>
+        <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
+      </div>
+      <div class="panel">
+        <h3>Q2 against Q3</h3>
+        <div id="kahoots-quarter"></div>
+        <p class="source">Source: Kahoots Q3 2026 report, Apr to Sep 2026.</p>
+        <p class="note">The rest of All form fills is other forms, such as the Cursor plugin and Salesforce pages.</p>
+        <p class="note">Event sign-ups moved to Luma, which the website count can't see.</p>
+      </div>
+    </details>
   </section>
 
-  <!-- Tab 5 -->
+  <!-- Before: Infrasity -->
   <section id="tab-infrasity" class="tab" role="tabpanel" hidden>
     <h2>Before: Infrasity (Jul to Sep 2026)</h2>
-    <p class="note">Kept as Infrasity reported it.</p>
-
-    <div class="panel">
-      <h3>Google Search by month</h3>
-      <div id="infrasity-table"></div>
-      <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
-    </div>
+    <p class="lead">Google search results Infrasity reported for July to September 2026, kept as reported.</p>
+    <div class="cards" id="infrasity-cards"></div>
+    <p class="source">Source: Infrasity monthly growth reports, Sep 2026.</p>
 
     <div class="panel">
       <h3>Google clicks on Forge pages at opsera.ai</h3>
       <div class="chart-box short"><canvas id="infrasity-forge" aria-label="Google clicks on Forge pages by month"></canvas></div>
       <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
     </div>
+
+    <details class="more">
+      <summary>More detail</summary>
+      <div class="panel">
+        <h3>Google Search by month</h3>
+        <div id="infrasity-table"></div>
+        <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
+      </div>
+    </details>
   </section>
 
-  <!-- Tab 6 -->
+  <!-- To do -->
   <section id="tab-todo" class="tab" role="tabpanel" hidden>
     <h2>To do</h2>
-    <p class="note">Ticks are saved in this browser only.</p>
+    <p class="lead">Next steps for the website and marketing, which you can tick off as you go.</p>
     <ul class="todo" id="todo"></ul>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Ticks are saved in this browser only.</p>
+    </details>
   </section>
 
   <p class="error" id="error" hidden></p>
@@ -311,6 +360,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=6"></script>
+<script src="app.js?v=7"></script>
 </body>
 </html>
