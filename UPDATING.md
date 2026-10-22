@@ -7,7 +7,7 @@ Link: https://puravbhandari-gif.github.io/opsera-analytics-dashboard/
 Every Monday at about 8:00 in the morning India time, GitHub runs a small script for us. It:
 
 1. Signs in to Google with our read-only robot account (`dashboard-reader@opsera-analytics-dashboard.iam.gserviceaccount.com`).
-2. Pulls our numbers from Search Console, Google Analytics "opsera.ai 2026" and YouTube, from 1 Sep 2026 up to yesterday. Leads start on 1 Oct 2026, because the old site sent some September forms only to Google and not to HubSpot.
+2. Pulls our numbers from Search Console, Google Analytics "opsera.ai 2026" and YouTube, from 1 Apr 2026 up to yesterday. Before October, the old site sent some homepage and contact form fills only to Google, not to HubSpot, so Leads come out low for those months.
 3. Saves them in the `data` folder and republishes the page.
 
 GitHub sometimes starts scheduled jobs up to an hour late, so give it until about 9:30.
@@ -27,7 +27,7 @@ The Kahoots and Infrasity tabs are kept exactly as reported. Their numbers live 
 
 ## Week by week or month by month
 
-The switch at the top of the page changes every tab at once. Day by day compares the last full day with the day before. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the whole of last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
+The switch at the top of the page changes every tab at once. Day by day compares the last full day with the day before. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the whole of last month. Last 3 months compares the 3 months up to yesterday with the 3 months before. The dashboard opens on the Customer journey tab. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
 
 ## The LinkedIn tabs
 

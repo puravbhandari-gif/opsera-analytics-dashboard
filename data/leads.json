@@ -1,28 +1,28 @@
 {
- "start_date": "2026-09-01",
+ "start_date": "2026-04-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:44+05:30",
+ "pulled_at": "2026-10-22T17:48+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
  "lines": {
   "demo": {
    "label": "Demo requests",
-   "count": 25,
+   "count": 69,
    "pages": [
     {
      "page": "/demo",
-     "count": 25
+     "count": 69
     }
    ]
   },
   "contact": {
    "label": "Contact forms",
-   "count": 13,
+   "count": 63,
    "pages": [
     {
      "page": "/contact",
-     "count": 13
+     "count": 63
     }
    ]
   },
@@ -38,53 +38,193 @@
   },
   "events": {
    "label": "Event sign-ups",
-   "count": 81,
+   "count": 250,
    "pages": [
     {
      "page": "/events/tokenomics-the-currency-of-enterprise-ai",
-     "count": 65
+     "count": 81
+    },
+    {
+     "page": "/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
+     "count": 55
+    },
+    {
+     "page": "/events/copilot-cursor-claude-code-what-250k-developers-revealed",
+     "count": 54
+    },
+    {
+     "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+     "count": 23
+    },
+    {
+     "page": "/events/meet-the-opsera-appsec-agents-for-ai-builders",
+     "count": 18
     },
     {
      "page": "/gartner-symposium",
      "count": 12
     },
     {
+     "page": "/github-universe-happy-hour",
+     "count": 4
+    },
+    {
      "page": "/events/gartner-summit-2026",
      "count": 2
     },
     {
-     "page": "/github-universe-happy-hour",
-     "count": 2
+     "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "count": 1
     }
    ]
   },
   "other": {
    "label": "Other forms",
-   "count": 43,
+   "count": 280,
    "pages": [
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "count": 17
+     "count": 98
+    },
+    {
+     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+     "count": 54
+    },
+    {
+     "page": "/resources/white-papers/from-velocity-to-durable-value",
+     "count": 46
+    },
+    {
+     "page": "/pricing",
+     "count": 10
+    },
+    {
+     "page": "/resources/report/gartner-market-guide-for-developer-productivity-insight-platforms",
+     "count": 8
+    },
+    {
+     "page": "/platform/hummingbird-ai",
+     "count": 7
     },
     {
      "page": "/headless-devops-for-salesforce-orgs",
      "count": 7
     },
     {
-     "page": "/platform/hummingbird-ai",
-     "count": 5
+     "page": "/resources/white-papers/measuring-the-true-business-impact-of-ai-coding-assistants-beyond-developer-metrics-to-enterprise-value",
+     "count": 6
     },
     {
-     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+     "page": "/resources/comparison-guides/opsera-vs-dx",
      "count": 4
     },
     {
-     "page": "/resources/white-papers/from-velocity-to-durable-value",
+     "page": "/resources/white-papers/how-engineering-leaders-use-data-to-drive-productivity",
+     "count": 3
+    },
+    {
+     "page": "/resources/webinars/lessons-from-dora-2025-the-future-of-devops-powered-by-ai",
+     "count": 3
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+     "count": 3
+    },
+    {
+     "page": "/resources/devops-huddles/episode-23-architecting-for-success-salesforce-devops-with-opsera",
+     "count": 2
+    },
+    {
+     "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+     "count": 2
+    },
+    {
+     "page": "/resources/white-papers/leading-technology-company-using-opsera-unified-insights-with-github-copilot",
      "count": 2
     },
     {
      "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
      "count": 2
+    },
+    {
+     "page": "/gartner",
+     "count": 1
+    },
+    {
+     "page": "/resources/white-papers/devops-for-dataops-accelerating-scalable-secure-software-delivery-in-databricks-with-opsera",
+     "count": 1
+    },
+    {
+     "page": "/partner-opportunity-reg",
+     "count": 1
+    },
+    {
+     "page": "/insights_in_a_box",
+     "count": 1
+    },
+    {
+     "page": "/resources/white-papers/making-the-most-out-of-github-advanced-security-how-to-prioritize-fix-and-improve-faster",
+     "count": 1
+    },
+    {
+     "page": "/resources/ebooks/implementing-a-robust-and-secure-environment-for-salesforce-deployments",
+     "count": 1
+    },
+    {
+     "page": "/github-copilot-metrics-14-day-free-trial",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+     "count": 1
+    },
+    {
+     "page": "/solutions/salesforce-devops-platform",
+     "count": 1
+    },
+    {
+     "page": "/solutions/scm-migration",
+     "count": 1
+    },
+    {
+     "page": "/resources/white-papers/how-organizations-can-drive-github-copilot-adoption-by-measuring-success-insights-and-real-data",
+     "count": 1
+    },
+    {
+     "page": "/github-rko-cocktail-party",
+     "count": 1
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-copado",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/enforce-code-security-across-the-entire-software-development-lifecycle",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/high-performing-engineering-team-workshop",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform",
+     "count": 1
+    },
+    {
+     "page": "/partners",
+     "count": 1
+    },
+    {
+     "page": "/resources/devops-huddles/episode-16-source-code-migration-made-easy",
+     "count": 1
+    },
+    {
+     "page": "/resources/devops-huddles/episode-17-top-5-salesforce-devops-challenges",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "count": 1
     },
     {
      "page": "/appfire-flow-sunset",
@@ -95,25 +235,1029 @@
      "count": 1
     },
     {
-     "page": "/resources/white-papers/how-engineering-leaders-use-data-to-drive-productivity",
-     "count": 1
-    },
-    {
      "page": "/dreamforce-2024-happy-hour",
-     "count": 1
-    },
-    {
-     "page": "/resources/white-papers/measuring-the-true-business-impact-of-ai-coding-assistants-beyond-developer-metrics-to-enterprise-value",
-     "count": 1
-    },
-    {
-     "page": "/pricing",
      "count": 1
     }
    ]
   }
  },
  "daily": [
+  {
+   "date": "2026-04-01",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-04-02",
+   "demo": 0,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 4,
+   "other": 0
+  },
+  {
+   "date": "2026-04-03",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-04-04",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-05",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-04-06",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-04-07",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 7,
+   "other": 2
+  },
+  {
+   "date": "2026-04-08",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 5,
+   "other": 0
+  },
+  {
+   "date": "2026-04-09",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 1
+  },
+  {
+   "date": "2026-04-13",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-15",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-16",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-17",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-19",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-04-20",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-04-21",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 21,
+   "other": 2
+  },
+  {
+   "date": "2026-04-22",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 9,
+   "other": 0
+  },
+  {
+   "date": "2026-04-23",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 3,
+   "other": 0
+  },
+  {
+   "date": "2026-04-26",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-04-27",
+   "demo": 1,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 6
+  },
+  {
+   "date": "2026-04-28",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 15,
+   "other": 2
+  },
+  {
+   "date": "2026-04-29",
+   "demo": 3,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 4,
+   "other": 5
+  },
+  {
+   "date": "2026-04-30",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-01",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 2
+  },
+  {
+   "date": "2026-05-04",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 1
+  },
+  {
+   "date": "2026-05-05",
+   "demo": 0,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-05-08",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-05-09",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-05-10",
+   "demo": 2,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-11",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-05-12",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-13",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-05-14",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-05-15",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 5
+  },
+  {
+   "date": "2026-05-16",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-05-17",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-05-18",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 4
+  },
+  {
+   "date": "2026-05-19",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-05-20",
+   "demo": 0,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-21",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 6
+  },
+  {
+   "date": "2026-05-24",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-05-25",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-26",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-05-27",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 1
+  },
+  {
+   "date": "2026-05-28",
+   "demo": 2,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-29",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-05-30",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-05-31",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-06-01",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-06-02",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-06-03",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-06-04",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-06-05",
+   "demo": 1,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 5
+  },
+  {
+   "date": "2026-06-06",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-06-08",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 4
+  },
+  {
+   "date": "2026-06-09",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-06-10",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-06-11",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-06-12",
+   "demo": 2,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 14,
+   "other": 0
+  },
+  {
+   "date": "2026-06-14",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 3
+  },
+  {
+   "date": "2026-06-15",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 14,
+   "other": 3
+  },
+  {
+   "date": "2026-06-16",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 3,
+   "other": 1
+  },
+  {
+   "date": "2026-06-17",
+   "demo": 2,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 13,
+   "other": 1
+  },
+  {
+   "date": "2026-06-18",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 9,
+   "other": 2
+  },
+  {
+   "date": "2026-06-19",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 3,
+   "other": 0
+  },
+  {
+   "date": "2026-06-20",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 1
+  },
+  {
+   "date": "2026-06-21",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 1
+  },
+  {
+   "date": "2026-06-22",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 4,
+   "other": 2
+  },
+  {
+   "date": "2026-06-23",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-06-24",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 2
+  },
+  {
+   "date": "2026-06-25",
+   "demo": 1,
+   "contact": 2,
+   "gartner_offer": 0,
+   "events": 6,
+   "other": 2
+  },
+  {
+   "date": "2026-06-26",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-06-27",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-06-28",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-06-29",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-06-30",
+   "demo": 1,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-01",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 1
+  },
+  {
+   "date": "2026-07-02",
+   "demo": 1,
+   "contact": 4,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-07-04",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-05",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-06",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-07",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-07-08",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-09",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-10",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-11",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 1
+  },
+  {
+   "date": "2026-07-12",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-13",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-15",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-16",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-17",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-07-20",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-21",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-22",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-07-23",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-07-24",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-07-27",
+   "demo": 2,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 7
+  },
+  {
+   "date": "2026-07-28",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-07-29",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 15
+  },
+  {
+   "date": "2026-07-30",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 11
+  },
+  {
+   "date": "2026-07-31",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 5
+  },
+  {
+   "date": "2026-08-01",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-02",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-03",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-08-04",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-08-05",
+   "demo": 1,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-08-06",
+   "demo": 1,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 4
+  },
+  {
+   "date": "2026-08-07",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 3
+  },
+  {
+   "date": "2026-08-10",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 6
+  },
+  {
+   "date": "2026-08-11",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 4
+  },
+  {
+   "date": "2026-08-12",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-13",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-14",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-08-15",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-08-17",
+   "demo": 1,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-08-18",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-08-19",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 2
+  },
+  {
+   "date": "2026-08-20",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-22",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-08-24",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-08-25",
+   "demo": 1,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 0
+  },
+  {
+   "date": "2026-08-26",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 5,
+   "other": 0
+  },
+  {
+   "date": "2026-08-27",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-08-28",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 3,
+   "other": 0
+  },
+  {
+   "date": "2026-08-29",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-08-30",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 0
+  },
+  {
+   "date": "2026-08-31",
+   "demo": 0,
+   "contact": 1,
+   "gartner_offer": 0,
+   "events": 2,
+   "other": 2
+  },
   {
    "date": "2026-09-01",
    "demo": 0,
@@ -411,7 +1555,7 @@
  "left_out": [
   {
    "page": "/job-application",
-   "count": 45
+   "count": 2452
   }
  ],
  "new_site_live": "2026-09-30"

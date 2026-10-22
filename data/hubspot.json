@@ -1,9 +1,1766 @@
 {
  "source": "HubSpot",
- "start_date": "2026-09-01",
+ "start_date": "2026-04-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:43+05:30",
+ "pulled_at": "2026-10-22T17:52+05:30",
  "contacts_daily": [
+  {
+   "date": "2026-04-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-01",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-02",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-02",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-02",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-03",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-04",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-05",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-06",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-06",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-07",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-04-07",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-07",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-09",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-09",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-10",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-13",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-13",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-04-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-14",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-15",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-04-16",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-16",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-16",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-18",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-04-21",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 8
+  },
+  {
+   "date": "2026-04-21",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-22",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-04-22",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-23",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-23",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-23",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-24",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-24",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-24",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-25",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-26",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-26",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "ai",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 7
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-27",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-28",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-29",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-04-29",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-30",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-30",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-05-01",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-04",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-04",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-04",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 4
+  },
+  {
+   "date": "2026-05-05",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-05-05",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-06",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-07",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-07",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-08",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-08",
+   "line": "form",
+   "channel": "paid",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-08",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-09",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-10",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-10",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-11",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-11",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-12",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-05-13",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-15",
+   "line": "form",
+   "channel": "ai",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-15",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-16",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-05-16",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-17",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-17",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-18",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-18",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-18",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-18",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-05-20",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-20",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-05-21",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-21",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-25",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-26",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-26",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-26",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-26",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-28",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-28",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-29",
+   "line": "form",
+   "channel": "other",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-05-30",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-31",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-05-31",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-01",
+   "line": "form",
+   "channel": "ai",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-06-01",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-02",
+   "line": "form",
+   "channel": "ai",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-02",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-03",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-04",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-05",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-06-05",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-07",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-08",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-08",
+   "line": "form",
+   "channel": "other",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-06-08",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-10",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-10",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-11",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-12",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 7
+  },
+  {
+   "date": "2026-06-12",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-06-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-14",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-14",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-14",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-15",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-15",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 10
+  },
+  {
+   "date": "2026-06-16",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-16",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-17",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-06-17",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 5
+  },
+  {
+   "date": "2026-06-17",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-06-18",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-18",
+   "line": "form",
+   "channel": "email",
+   "demo": false,
+   "count": 5
+  },
+  {
+   "date": "2026-06-18",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-06-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-06-19",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-20",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-20",
+   "line": "form",
+   "channel": "other",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-06-20",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-21",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-22",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-23",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-24",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-24",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-24",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-24",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-25",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-25",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-26",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-28",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-28",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-29",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-29",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-29",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-30",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-06-30",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-01",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-02",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-07-02",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-02",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-02",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-04",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-04",
+   "line": "form",
+   "channel": "other",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-05",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-05",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-06",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-07",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-08",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-08",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-09",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-09",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-10",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-11",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-11",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-12",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-13",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-13",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-15",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-15",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-16",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-17",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-20",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-20",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "line": "form",
+   "channel": "paid",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-23",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-24",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-24",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-27",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-27",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-28",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-29",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-29",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 10
+  },
+  {
+   "date": "2026-07-29",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-30",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 8
+  },
+  {
+   "date": "2026-07-31",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-31",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-07-31",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 5
+  },
+  {
+   "date": "2026-08-01",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-02",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-03",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-03",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-08-04",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-04",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-04",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-05",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-08-05",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-05",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-07",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-08-10",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-10",
+   "line": "form",
+   "channel": "paid",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-10",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-12",
+   "line": "form",
+   "channel": "ai",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-13",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-13",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-14",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-15",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-17",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-17",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-17",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-19",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-08-20",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-22",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-24",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "line": "form",
+   "channel": "linkedin",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-26",
+   "line": "form",
+   "channel": "direct",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-08-26",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 5
+  },
+  {
+   "date": "2026-08-27",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-27",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-28",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-28",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-29",
+   "line": "form",
+   "channel": "events",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-31",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
   {
    "date": "2026-09-01",
    "line": "form",
@@ -30,14 +1787,14 @@
    "line": "luma",
    "channel": "events",
    "demo": false,
-   "count": 164
+   "count": 162
   },
   {
    "date": "2026-09-02",
    "line": "luma",
    "channel": "linkedin",
    "demo": false,
-   "count": 10
+   "count": 9
   },
   {
    "date": "2026-09-03",
@@ -476,6 +2233,42 @@
  ],
  "ai_contacts_daily": [
   {
+   "date": "2026-04-01",
+   "tool": "copilot",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-27",
+   "tool": "chatgpt",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-15",
+   "tool": "perplexity",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-01",
+   "tool": "chatgpt",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-02",
+   "tool": "chatgpt",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-12",
+   "tool": "chatgpt",
+   "demo": false,
+   "count": 1
+  },
+  {
    "date": "2026-09-17",
    "tool": "chatgpt",
    "demo": false,
@@ -491,24 +2284,60 @@
  "ai_deals_daily": [],
  "first_forms": [
   [
+   "AI Coding Impact 2026 Benchmark Report - Opsera: DG-FY26-Q4-AI-BM-Report",
+   89
+  ],
+  [
+   "Contact - Opsera: Website | Contact Us",
+   55
+  ],
+  [
+   "LinkedIn Lead Generation Ad: AI Benchmark Report Form",
+   42
+  ],
+  [
    "Claim Your Free Modernization Project \u2013 Opsera at Gartner IT Symposium/Xpo 2026: Gartner Symposium | Modernization Offer",
    40
   ],
   [
    "Tokenomics: The Currency of Enterprise AI - Opsera: DG-FY27-Q3-Tokenomics-Webinar",
+   36
+  ],
+  [
+   "AI Budget Burning? How to Convert AI Panic Into Tangible Business Results - Opsera: DG-FY27-Q2-MQ-Roundtable",
+   33
+  ],
+  [
+   "Schedule a Demo - Opsera: Handraiser | Demo Request",
+   31
+  ],
+  [
+   "From Velocity to Durable Value - Opsera: DG-FY27-Q2-Velocity-Whitepaper",
+   30
+  ],
+  [
+   "Contact Us \u2013 Software Forge: FY27-Q1-Software-Forge-Registration",
    27
   ],
   [
-   "AI Coding Impact 2026 Benchmark Report - Opsera: DG-FY26-Q4-AI-BM-Report",
-   15
+   "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms - Opsera: DG-FY27-Gartner-MQ",
+   25
   ],
   [
-   "Contact - Opsera: Website | Contact Us",
-   13
+   "Copilot, Cursor, Claude Code: What 250K Developers Revealed - Opsera: DG-FY27-Q1-AI-BM-Report-Webinar",
+   12
+  ],
+  [
+   "AI Budget Burning? How to Convert AI Spend Into Tangible Business Results - Opsera: DG-FY27-Q2-MQ-Roundtable",
+   10
   ],
   [
    "Book a demo \u2014 Opsera: Handraiser | Demo Request",
    10
+  ],
+  [
+   "Pricing - Opsera: Request Pricing",
+   7
   ],
   [
    "Headless DevOps for Salesforce Orgs - Opsera: AgentForge | Early Access",
@@ -516,6 +2345,10 @@
   ],
   [
    "GitHub Universe Happy Hour : GitHubUniverse_HappyHour_Signup",
+   5
+  ],
+  [
+   "Meet the Opsera AppSec Agents for AI Builders - Opsera: DG-FY27-Q1-Meet-the-Agents-Webinar",
    4
   ],
   [
@@ -523,7 +2356,15 @@
    4
   ],
   [
-   "Schedule a Demo - Opsera: Handraiser | Demo Request",
+   "Opsera recognized as a Representative Vendor in the 2025 Gartner\u00ae Market Guide for Developer Productivity Insight Platforms - Opsera: DG-FY26-Q4-Gartner-Market-Guide",
+   3
+  ],
+  [
+   "Hummingbird AI - Opsera: Website | Hummingbird AI interest",
+   3
+  ],
+  [
+   "Opsera vs DX (Atlassian) - Opsera: Handraiser | Demo Request",
    3
   ],
   [
@@ -531,52 +2372,56 @@
    3
   ],
   [
-   "From Velocity to Durable Value - Opsera: DG-FY27-Q2-Velocity-Whitepaper",
-   1
+   "Episode 23: Architecting for Success: Salesforce DevOps with Opsera - Opsera: DG-2024-Q4-DevOps-Huddle-Architecting for Success",
+   2
   ],
   [
-   "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms - Opsera: DG-FY27-Gartner-MQ",
-   1
+   "Get the 2024 DORA Report: DG-2024-Q3-DORA-Report",
+   2
   ],
   [
-   "How Engineering Leaders Use Data to Drive Productivity - Opsera: DG-2025-Q1-Whitepaper-How Engineering Leaders Use Data to Drive Productivity",
-   1
-  ],
-  [
-   "AI Budget Burning? How to Convert AI Spend Into Tangible Business Results - Opsera: DG-FY27-Q1-AI-Budget-Webinar_RECORDING",
-   1
-  ],
-  [
-   "Hummingbird AI - Opsera: Website | Hummingbird AI interest",
-   1
-  ],
-  [
-   "Request a Demo: Website | Contact Us",
-   1
+   "Partners - Opsera: Partners Form",
+   2
   ],
   [
    "Measuring the True Business Impact of AI Coding Assistants: Beyond Developer Metrics to Enterprise Value - Opsera: DG-FY26-Q2-Whitepaper-Measuring-AI-Assisstants",
+   2
+  ],
+  [
+   "DG-FY27-Q3-Tokenomics-Webinar",
    1
   ],
   [
-   "Pricing - Opsera: Request Pricing",
+   "GitHub Copilot Metrics: 14-Day Free Trial | Opsera: DG-2024-Q2-Github-Copilot-Free Trial",
    1
   ],
   [
-   "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms \u2014 Opsera: DG-FY27-Gartner-MQ",
+   "DevOps for DataOps: Accelerating Scalable, Secure Software Delivery in Databricks with Opsera - Opsera: DG-2025-Q2-Whitepaper-Databricks",
+   1
+  ],
+  [
+   "AWS Summit Toronto | Meet Opsera: DG-FY26-Q3-Event-AWS-Summit-Toronto",
    1
   ]
  ],
  "existing_customers": 4,
- "job_applicants_left_out": 65,
+ "job_applicants_left_out": 2153,
  "linkedin_fields": [
   [
    "Original Source: LinkedIn",
-   8
+   20
+  ],
+  [
+   "UTM source: Kumar link",
+   5
   ],
   [
    "Luma: LinkedIn",
    5
+  ],
+  [
+   "UTM source: linkedin",
+   2
   ],
   [
    "UTM source: opserasocial",
@@ -585,18 +2430,386 @@
   [
    "UTM source: opseralinkedin",
    1
-  ],
-  [
-   "UTM source: linkedin",
-   1
-  ],
-  [
-   "UTM source: Kumar link",
-   1
   ]
  ],
- "linkedin_contacts": 17,
+ "linkedin_contacts": 32,
  "meetings_daily": [
+  {
+   "date": "2026-04-02",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-05",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-06",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-04-07",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-10",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-16",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-17",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-20",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-23",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-27",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-30",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-04-30",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-01",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-05",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-06",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-06",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-07",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-08",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-09",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-14",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-05-20",
+   "line": "form",
+   "channel": "direct",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-22",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-05-28",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-05-29",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-08",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-09",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-10",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-12",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-19",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-06-29",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 3
+  },
+  {
+   "date": "2026-07-03",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-13",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-16",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-21",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-24",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-07-27",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-28",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-29",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-07-29",
+   "line": "luma",
+   "channel": "events",
+   "kind": "existing_customer",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-03",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "line": "form",
+   "channel": "direct",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-14",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-19",
+   "line": "form",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-21",
+   "line": "luma",
+   "channel": "events",
+   "kind": "before_signup",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-08-26",
+   "line": "form",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
   {
    "date": "2026-09-04",
    "line": "luma",
@@ -614,9 +2827,25 @@
    "count": 1
   },
   {
+   "date": "2026-09-10",
+   "line": "form",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
    "date": "2026-09-11",
    "line": "luma",
    "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-15",
+   "line": "form",
+   "channel": "direct",
    "kind": "booked",
    "demo": false,
    "count": 1
@@ -633,6 +2862,14 @@
    "date": "2026-09-24",
    "line": "luma",
    "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-09-30",
+   "line": "form",
+   "channel": "direct",
    "kind": "booked",
    "demo": false,
    "count": 1
@@ -655,7 +2892,7 @@
   },
   {
    "date": "2026-10-09",
-   "line": "luma",
+   "line": "form",
    "channel": "events",
    "kind": "booked",
    "demo": false,
@@ -710,8 +2947,48 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 236,
+ "meetings_all_calendar": 800,
  "deals_daily": [
+  {
+   "date": "2026-04-30",
+   "channel": "direct",
+   "line": "form",
+   "demo": true,
+   "count": 1,
+   "amount": 100000.0
+  },
+  {
+   "date": "2026-05-08",
+   "channel": "search",
+   "line": "form",
+   "demo": false,
+   "count": 1,
+   "amount": 150000.0
+  },
+  {
+   "date": "2026-06-10",
+   "channel": "other",
+   "line": "form",
+   "demo": true,
+   "count": 1,
+   "amount": 150000.0
+  },
+  {
+   "date": "2026-08-13",
+   "channel": "direct",
+   "line": "form",
+   "demo": true,
+   "count": 1,
+   "amount": 150000.0
+  },
+  {
+   "date": "2026-09-09",
+   "channel": "search",
+   "line": "form",
+   "demo": false,
+   "count": 1,
+   "amount": 30000.0
+  },
   {
    "date": "2026-10-07",
    "channel": "search",
@@ -723,7 +3000,15 @@
  ],
  "deals_by_stage": [
   [
+   "2 Demo",
+   3
+  ],
+  [
    "3 POC",
+   2
+  ],
+  [
+   "8 ClosedLost",
    1
   ]
  ],
@@ -826,9 +3111,9 @@
    "name": "DG-FY27-Gartner-MQ",
    "start": null,
    "contactFirstTouch": 4,
-   "contactFirstTouch_also_flutter_guests": 1,
+   "contactFirstTouch_also_flutter_guests": 0,
    "influencedContacts": 615,
-   "influencedContacts_also_flutter_guests": 11
+   "influencedContacts_also_flutter_guests": 10
   },
   {
    "name": "DG-FY27-Q3-Event-Gartner-Symposium",
@@ -844,15 +3129,15 @@
    "contactFirstTouch": 0,
    "contactFirstTouch_also_flutter_guests": 0,
    "influencedContacts": 1881,
-   "influencedContacts_also_flutter_guests": 28
+   "influencedContacts_also_flutter_guests": 27
   },
   {
    "name": "DG-FY27-Q3-Tokenomics-Webinar",
    "start": null,
    "contactFirstTouch": 32,
-   "contactFirstTouch_also_flutter_guests": 1,
+   "contactFirstTouch_also_flutter_guests": 0,
    "influencedContacts": 1502,
-   "influencedContacts_also_flutter_guests": 15
+   "influencedContacts_also_flutter_guests": 14
   },
   {
    "name": "Gartner MQ Report",

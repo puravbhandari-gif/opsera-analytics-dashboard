@@ -109,7 +109,11 @@ const bar = (label, data, color) => ({ label, data, backgroundColor: color, bord
 // ---------- Week by week / month by month, one switch for every tab ----------
 
 let periodMode = "week";
-try { const saved = localStorage.getItem("period"); if (saved === "month" || saved === "day") periodMode = saved; } catch (e) {}
+try { const saved = localStorage.getItem("period"); if (["day", "month", "quarter"].includes(saved)) periodMode = saved; } catch (e) {}
+const addMonths = (d, n) => { const x = toDate(d); const day0 = x.getUTCDate(); x.setUTCDate(1); x.setUTCMonth(x.getUTCMonth() + n);
+  x.setUTCDate(Math.min(day0, toDate(monthEnd(iso(x))).getUTCDate())); return iso(x); };
+// Last 3 months: the 3 months up to the last full day, against the 3 months before
+const quarterOf = (last) => ({ start: addDays(addMonths(last, -3), 1), end: last });
 const comparisons = [];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const weekStart = (d) => addDays(d, -((toDate(d).getUTCDay() + 6) % 7));
@@ -124,6 +128,12 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
 // or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
+  if (mode === "quarter") {
+    const cur = quarterOf(last);
+    const prev = quarterOf(addDays(cur.start, -1));
+    return { cur: cur.start >= start ? cur : { start, end: last }, prev: prev.start >= start ? prev : null,
+      prevName: "3 months before", none: "No earlier 3 months yet" };
+  }
   if (mode === "day") {
     const prev = addDays(last, -1);
     return { cur: { start: last, end: last }, prev: prev >= start ? { start: prev, end: prev } : null,
@@ -147,6 +157,13 @@ function periodsFor(mode, start, last) {
 // One bar per week or month from the start to the last full day, the last one marked "so far" if unfinished.
 function periodBuckets(mode, start, last) {
   const out = [];
+  if (mode === "quarter") {   // back from the last full day in 3-month blocks
+    for (let q = quarterOf(last); q.end >= start; q = quarterOf(addDays(q.start, -1))) {
+      const a = q.start < start ? start : q.start;
+      out.unshift({ start: a, end: q.end, label: `${day(a)} to ${day(q.end)}${q.start < start ? " (part)" : ""}` });
+    }
+    return out;
+  }
   for (let s = mode === "week" ? weekStart(start) : mode === "day" ? start : monthStart(start); s <= last;) {
     const e = mode === "week" ? addDays(s, 6) : mode === "day" ? s : monthEnd(s);
     const a = s < start ? start : s, b = e > last ? last : e;
@@ -199,7 +216,7 @@ function compare(spec) {
 function fillCompare(spec) {
   const p = periodsFor(periodMode, spec.start, spec.last);
   const title = $(`${spec.id}-cmp-chart`)?.closest(".panel").querySelector(".period-title");
-  if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month" }[periodMode];
+  if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month", quarter: "3 months at a time" }[periodMode];
   if (!p.cur) {
     $(`${spec.id}-cmp-cards`).innerHTML = `<div class="card"><div class="label">Not enough days yet</div><div class="sub">${p.none}</div></div>`;
     $(`${spec.id}-cmp-source`).textContent = spec.source(spec.start, spec.last);
@@ -658,7 +675,7 @@ function renderKumarPosts(kp) {
   const fill = () => {
     $("li-k2-posts").innerHTML = [["Own posts", "own_posts"], ["Reposts", "reposts"]].map(([label, key]) =>
       card(`${label}, ${curName}`, num(cur[key]), `${monthName(prev.month + "-01")}: ${num(prev[key])}`)).join("");
-    $("li-k2-posts-note").textContent = periodMode !== "month" ? "Posts are counted by month, so they don't change with the day or week view." : "";
+    $("li-k2-posts-note").textContent = periodMode !== "month" ? "Posts are counted by month, so they don't change with the other views." : "";
   };
   fill(); monthlyTabs.push(fill);
   $("li-k2-posts-source").textContent = src;
@@ -953,7 +970,7 @@ function renderLinkedInPath(ga) {
   const fill = () => {
     const p = periodsFor(periodMode, start, last);
     const cur = p.cur || { start, end: last };
-    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far" }[periodMode];
+    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far", quarter: "Last 3 months" }[periodMode];
     build("li-path", cur.start, cur.end);
     $("li-path-source").textContent = `${src}, ${range(cur.start, cur.end)}, US Pacific time.`;
   };
@@ -970,7 +987,7 @@ function renderLinkedInEstimate(est, ga) {
   const estLast = lastFullDayPacific(est.end_date || ga.end_date, est.pulled_at || ga.pulled_at);
   $("li-est-stale").textContent = est.end_date && est.end_date < ga.end_date
     ? `The estimate wasn't updated this week, so it stops at ${dayYear(estLast)}.` : "";
-  compare({ id: "li-est", together: true, start: ga.start_date, last: estLast,
+  compare({ id: "li-est", together: true, start: est.start_date || ga.start_date, last: estLast,
     source: (a, b) => `${src}, ${when(a, b)}.`,
     metrics: GROUPS.map(([g, label]) => ({ label, value: rangeSum(est.daily.filter((r) => r.group === g), "visits"), fmt: num })) });
 
@@ -1132,13 +1149,22 @@ function renderYouTube(d, ga) {
 
 function renderKahoots(monthly, quarter) {
   const m = (key, month) => monthly.find((r) => r.month === month)[key];
-  const monthCard = (label, key) => card(label, num(m(key, "2026-09")), `August: ${num(m(key, "2026-08"))}`, cmpDelta(m(key, "2026-09"), m(key, "2026-08")));
-  $("kahoots-cards").innerHTML =
-    monthCard("Website visits", "visits") +
-    monthCard("Visits from people", "people_visits") +
-    monthCard("Form fills", "form_fills");
-  const note = () => { $("kahoots-monthly-note").textContent = periodMode !== "month" ? "Kahoots reported by month, so this tab compares September with August." : ""; };
-  note(); monthlyTabs.push(note);
+  const q = (metric) => quarter.find((r) => r.metric === metric);
+  const fillKahoots = () => {
+    if (periodMode === "quarter") {
+      const qCard = (label, metric) => card(label, num(q(metric).q3), `Q2: ${num(q(metric).q2)}`, cmpDelta(q(metric).q3, q(metric).q2));
+      $("kahoots-cards").innerHTML = qCard("Website visits", "Website visits") + qCard("Visits from people", "Visits from people, no robots") +
+        qCard("Form fills", "All form fills");
+      $("kahoots-monthly-note").textContent = "Kahoots reported by quarter too, so this compares Q3 (Jul to Sep) with Q2 (Apr to Jun).";
+      $("kahoots-cards-source").textContent = "Source: Kahoots Q3 2026 report, Q3 2026 compared with Q2 2026.";
+      return;
+    }
+    const monthCard = (label, key) => card(label, num(m(key, "2026-09")), `August: ${num(m(key, "2026-08"))}`, cmpDelta(m(key, "2026-09"), m(key, "2026-08")));
+    $("kahoots-cards").innerHTML = monthCard("Website visits", "visits") + monthCard("Visits from people", "people_visits") + monthCard("Form fills", "form_fills");
+    $("kahoots-monthly-note").textContent = periodMode !== "month" ? "Kahoots reported by month, so this tab compares September with August." : "";
+    $("kahoots-cards-source").textContent = "Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.";
+  };
+  fillKahoots(); monthlyTabs.push(fillKahoots);
   chart("kahoots-visits", (th) => ({
     type: "bar", stacked: true,
     data: { labels: monthly.map((r) => month(r.month)), datasets: [
@@ -1212,7 +1238,7 @@ function renderTodo() {
 // ---------- tabs and theme ----------
 
 function showTab(name) {
-  if (!$(`tab-${name}`)) name = "search";
+  if (!$(`tab-${name}`)) name = "journey";   // the dashboard opens on the Customer journey
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
   charts.forEach((c) => c.instance && c.instance.resize());

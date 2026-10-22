@@ -22,15 +22,16 @@
         <button data-mode="day">Day by day</button>
         <button data-mode="week" class="on">Week by week</button>
         <button data-mode="month">Month by month</button>
+        <button data-mode="quarter">Last 3 months</button>
       </div>
       <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
     </div>
   </div>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+    <button role="tab" data-tab="journey">Customer journey</button>
     <button role="tab" data-tab="search">Google Search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
-    <button role="tab" data-tab="journey">Customer journey</button>
     <button role="tab" data-tab="aeo">AEO</button>
     <button role="tab" data-tab="linkedin">LinkedIn brand</button>
     <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
@@ -43,7 +44,7 @@
 
 <main>
   <!-- Google Search -->
-  <section id="tab-search" class="tab" role="tabpanel">
+  <section id="tab-search" class="tab" role="tabpanel" hidden>
     <h2>Google Search</h2>
     <p class="lead">How often Google showed opsera.ai in search results, and how often people clicked through.</p>
 
@@ -181,7 +182,7 @@
       <div class="cards compact" id="leads-more-cards"></div>
       <p class="source" id="leads-more-source"></p>
       <p class="note">Event sign-ups on Luma aren't included until Luma is connected to HubSpot.</p>
-      <p class="note">September misses 15 homepage and 2 contact form fills that the old site sent only to Google, not to HubSpot.</p>
+      <p class="note">Before October, the old site sent some homepage and contact form fills only to Google, not to HubSpot, so earlier months come out low.</p>
       <div class="panel">
         <h3>Core site forms</h3>
         <div id="leads-core"></div>
@@ -196,7 +197,7 @@
   </section>
 
   <!-- Customer journey -->
-  <section id="tab-journey" class="tab" role="tabpanel" hidden>
+  <section id="tab-journey" class="tab" role="tabpanel">
     <h2>Customer journey</h2>
     <p class="lead">How marketing turns website visits into demo requests, meetings and pipeline.</p>
     <div class="cards" id="journey-cmp-cards"></div>
@@ -228,7 +229,7 @@
       <p class="note">Contacts are people whose first form was the demo form; meetings and deals only count after the person signed up, and never with existing customers.</p>
       <p class="note">A deal can show up without a meeting when no calendar meeting was logged in HubSpot for that contact.</p>
       <div class="panel">
-        <h3>Every channel, since 1 Sep</h3>
+        <h3>Every channel, since 1 Apr</h3>
         <div id="journey-channels"></div>
         <p class="source" id="journey-channels-source"></p>
         <p class="note">Google search is Google only in Google Analytics, but HubSpot's search includes other search engines; a visit can count for two channels, such as an event email.</p>
@@ -303,7 +304,7 @@
         <h3 id="li-path-title">Last full week</h3>
         <div id="li-path"></div>
         <p class="source" id="li-path-source"></p>
-        <h3 style="margin-top:20px">Since 1 Sep</h3>
+        <h3 style="margin-top:20px">Since 1 Apr</h3>
         <div id="li-path-all"></div>
         <p class="source" id="li-path-all-source"></p>
         <p class="note-inline">The last two columns count visits from any landing page, not just the homepage.</p>
@@ -370,7 +371,7 @@
       <summary>More detail</summary>
       <p class="note">Contacts are people whose first form was the demo form; the AI tool comes from HubSpot's original source.</p>
       <div class="panel">
-        <h3>Every AI tool, since 1 Sep</h3>
+        <h3>Every AI tool, since 1 Apr</h3>
         <div id="aeo-tools"></div>
         <p class="source" id="aeo-tools-source"></p>
       </div>
@@ -595,7 +596,7 @@
     <p class="lead">What Kahoots reported for July to September 2026 from the old "opsera.ai 2025" account, kept as reported.</p>
     <div class="cards" id="kahoots-cards"></div>
     <p class="note-inline" id="kahoots-monthly-note"></p>
-    <p class="source">Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.</p>
+    <p class="source" id="kahoots-cards-source">Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.</p>
 
     <div class="panel">
       <h3>Visits from people and robots, by month</h3>
@@ -663,6 +664,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=25"></script>
+<script src="app.js?v=27"></script>
 </body>
 </html>
