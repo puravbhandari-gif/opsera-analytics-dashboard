@@ -166,58 +166,108 @@ def main():
                         contacts[c["id"]] = {"line": "luma", "date": joined_on, "channel": "linkedin" if linkedin_fields(p) else "events",
                                              "linkedin_fields": linkedin_fields(p)}
 
-    # Meetings linked to a marketing contact, dated by when the meeting takes place
-    meetings = search(s, "meetings", [{"propertyName": "hs_meeting_start_time", "operator": "GTE", "value": SINCE}], ["hs_meeting_start_time"])
-    m_contacts = associations(s, "meetings", "contacts", [m["id"] for m in meetings])
-    meeting_rows = []
-    for m in meetings:
-        linked = [contacts[c] for c in m_contacts.get(m["id"], []) if c in contacts]
-        if linked:
-            first = min(linked, key=lambda x: x["date"])
-            meeting_rows.append({"date": pacific_day(m["properties"]["hs_meeting_start_time"]), "channel": first["channel"], "line": first["line"]})
-
-    # Deals linked to a marketing contact, dated by when the deal was created
+    # Deals linked to a marketing contact. Only deals created on or after the day the person became a
+    # marketing contact count as pipeline; older deals mark the person as an existing customer (agreed 22 Oct 2026).
     c_deals = associations(s, "contacts", "deals", contacts.keys())
     deal_ids = {d for ds in c_deals.values() for d in ds}
-    deal_rows = []
+    deal_rows, existing = [], set()
     if deal_ids:
         ids = list(deal_ids)
-        stages = {st["id"]: (p["label"], st["label"], st["metadata"].get("isClosed") == "true", float(st["metadata"].get("probability") or 0))
-                  for p in call(s, "GET", "/crm/v3/pipelines/deals")["results"] for st in p["stages"]}
+        stages = {st["id"]: (pl["label"], st["label"], st["metadata"].get("isClosed") == "true", float(st["metadata"].get("probability") or 0))
+                  for pl in call(s, "GET", "/crm/v3/pipelines/deals")["results"] for st in pl["stages"]}
         for i in range(0, len(ids), 100):
             j = call(s, "POST", "/crm/v3/objects/deals/batch/read", json={"inputs": [{"id": x} for x in ids[i:i + 100]],
                                                                           "properties": ["createdate", "amount", "dealstage", "pipeline"]})
             for d in j.get("results", []):
                 p = d["properties"]
-                owners = [contacts[c] for c, ds in c_deals.items() if d["id"] in ds]
-                first = min(owners, key=lambda x: x["date"])
+                owner_ids = [c for c, ds in c_deals.items() if d["id"] in ds]
+                first_id = min(owner_ids, key=lambda c: contacts[c]["date"])
+                first = contacts[first_id]
+                created = pacific_day(p["createdate"])
+                if created < first["date"]:
+                    existing.update(owner_ids)
                 pipeline, stage, closed, prob = stages.get(p.get("dealstage"), ("Unknown", "Unknown", False, 0))
-                deal_rows.append({"date": pacific_day(p["createdate"]), "channel": first["channel"], "line": first["line"],
+                deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"],
+                                  "counts": "marketing" if created >= first["date"] else "existing",
                                   "amount": float(p.get("amount") or 0), "pipeline": pipeline, "stage": stage,
-                                  "won": closed and prob >= 1, "lost": closed and prob == 0, "created_before_contact": pacific_day(p["createdate"]) < first["date"]})
+                                  "won": closed and prob >= 1, "lost": closed and prob == 0})
+
+    # Meetings linked to a marketing contact, dated by when they take place. Each meeting is put in one line:
+    # after sign-up (counted), upcoming, existing customer, or before sign-up. Only the first is a meeting booked.
+    meetings = search(s, "meetings", [{"propertyName": "hs_meeting_start_time", "operator": "GTE", "value": SINCE}], ["hs_meeting_start_time"])
+    m_contacts = associations(s, "meetings", "contacts", [m["id"] for m in meetings])
+    meeting_rows = []
+    for m in meetings:
+        linked = [c for c in m_contacts.get(m["id"], []) if c in contacts]
+        if not linked:
+            continue
+        first_id = min(linked, key=lambda c: contacts[c]["date"])
+        first = contacts[first_id]
+        day = pacific_day(m["properties"]["hs_meeting_start_time"])
+        if any(c in existing for c in linked):
+            kind = "existing_customer"
+        elif day < first["date"]:
+            kind = "before_signup"
+        elif day > end:
+            kind = "upcoming"
+        else:
+            kind = "booked"
+        meeting_rows.append({"date": day, "channel": first["channel"], "line": first["line"], "kind": kind})
+
+    # HubSpot campaigns named after the events, and how many contacts each is tagged with
+    campaigns = []
+    r = s.get(f"{API}/marketing/v3/campaigns", params={"limit": 100, "properties": "hs_name,hs_start_date,hs_end_date"}, timeout=60)
+    if r.status_code == 200:
+        guests = {c for c, v in contacts.items() if v["line"] == "luma"}
+        for c in r.json().get("results", []):
+            name = (c.get("properties") or {}).get("hs_name") or ""
+            if not any(w in name.lower() for w in ("flutter", "tokenomics", "gartner", "luma")):
+                continue
+            row = {"name": name, "start": (c.get("properties") or {}).get("hs_start_date")}
+            for kind in ("contactFirstTouch", "influencedContacts"):
+                ids, after = set(), None
+                while True:
+                    rr = s.get(f"{API}/marketing/v3/campaigns/{c['id']}/reports/contacts/{kind}", params={"limit": 100, **({"after": after} if after else {})}, timeout=60)
+                    if rr.status_code != 200:
+                        ids = None
+                        break
+                    jj = rr.json()
+                    ids |= {str(x.get("id")) for x in jj.get("results", [])}
+                    after = (jj.get("paging") or {}).get("next", {}).get("after")
+                    if not after:
+                        break
+                row[kind] = None if ids is None else len(ids)
+                row[f"{kind}_also_flutter_guests"] = None if ids is None else len(ids & guests)
+            campaigns.append(row)
+    else:
+        campaigns = f"{r.status_code}: {r.text[:200]}"
 
     daily = collections.Counter((c["date"], c["line"], c["channel"]) for c in contacts.values())
     out = {
         "source": "HubSpot", "start_date": START_DATE, "end_date": end,
         "pulled_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
         "contacts_daily": [{"date": d, "line": l, "channel": ch, "count": n} for (d, l, ch), n in sorted(daily.items())],
+        "existing_customers": len(existing),
         "linkedin_fields": collections.Counter(f for c in contacts.values() for f in c["linkedin_fields"]).most_common(),
         "linkedin_contacts": sum(1 for c in contacts.values() if c["channel"] == "linkedin"),
-        "meetings_daily": [{"date": d, "line": l, "channel": ch, "count": n}
-                           for (d, l, ch), n in sorted(collections.Counter((m["date"], m["line"], m["channel"]) for m in meeting_rows).items())],
+        "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "count": n}
+                           for (d, l, ch, k), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
         "deals": sorted(deal_rows, key=lambda d: d["date"]),
         "events": events,
+        "campaigns": campaigns,
     }
     OUT.write_text(json.dumps(out, indent=1))
     by = lambda rows, key: dict(collections.Counter(r[key] for r in rows))
     print(f"HubSpot {START_DATE} to {end}: form contacts {sum(1 for c in contacts.values() if c['line'] == 'form')}, "
-          f"Luma-import contacts {sum(1 for c in contacts.values() if c['line'] == 'luma')}")
+          f"Luma-import contacts {sum(1 for c in contacts.values() if c['line'] == 'luma')}, existing customers among them {len(existing)}")
     print("  contacts by channel:", by(contacts.values(), "channel"))
     print("  LinkedIn fields matched:", out["linkedin_fields"])
-    print(f"  meetings with a marketing contact: {len(meeting_rows)} of {len(meetings)} calendar meetings; by channel {by(meeting_rows, 'channel')}")
-    print(f"  deals linked to a marketing contact: {len(deal_rows)}, amount {sum(d['amount'] for d in deal_rows):,.0f}; by channel {by(deal_rows, 'channel')}")
+    print(f"  meetings linked to marketing contacts: {len(meeting_rows)} of {len(meetings)}; by kind {by(meeting_rows, 'kind')}")
+    print(f"  deals: marketing {sum(1 for d in deal_rows if d['counts'] == 'marketing')} "
+          f"(${sum(d['amount'] for d in deal_rows if d['counts'] == 'marketing'):,.0f}), existing {sum(1 for d in deal_rows if d['counts'] == 'existing')}")
     print("  events:", [(e["label"], e["members"]) for e in events])
+    print("  campaigns:", campaigns)
 
 
 if __name__ == "__main__":
