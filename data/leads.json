@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T16:27+05:30",
+ "pulled_at": "2026-10-22T16:39+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",

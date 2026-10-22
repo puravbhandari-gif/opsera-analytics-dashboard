@@ -19,6 +19,7 @@
     </div>
     <div class="top-controls">
       <div class="seg" id="period-mode" role="group" aria-label="Compare week by week or month by month">
+        <button data-mode="day">Day by day</button>
         <button data-mode="week" class="on">Week by week</button>
         <button data-mode="month">Month by month</button>
       </div>
@@ -202,8 +203,42 @@
       <p class="source" id="li-co-cmp-chart-source"></p>
     </div>
 
+    <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
+    <p class="note-inline">Most past links weren't tagged, so Untagged will be the biggest for now.</p>
+    <div class="cards" id="li-web-cmp-cards"></div>
+    <p class="source" id="li-web-cmp-source"></p>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3 class="period-title">Week by week</h3>
+        <div class="seg" id="li-web-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
+      </div>
+      <div class="chart-box short"><canvas id="li-web-cmp-chart" aria-label="Visits to opsera.ai from LinkedIn by company page, Kumar and untagged"></canvas></div>
+      <p class="source" id="li-web-cmp-chart-source"></p>
+    </div>
+
     <details class="more">
       <summary>More detail</summary>
+      <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
+      <div class="panel">
+        <h3>Company page, Kumar and untagged</h3>
+        <div id="li-web-groups"></div>
+        <p class="source" id="li-web-groups-source"></p>
+        <p class="note" id="li-web-other-tags"></p>
+      </div>
+      <div class="panel">
+        <h3>Pages those visits landed on</h3>
+        <div id="li-web-landing"></div>
+        <p class="source" id="li-web-landing-source"></p>
+        <p class="note">"(not set)" means Google recorded no landing page, usually a link preview or a robot.</p>
+      </div>
+      <div class="panel">
+        <h3>LinkedIn sources and tags counted</h3>
+        <div id="li-web-tags"></div>
+        <p class="source" id="li-web-tags-source"></p>
+      </div>
+
+      <h3 class="section-title">The company page on LinkedIn</h3>
       <div class="cards compact" id="li-co-cards"></div>
       <p class="source" id="li-co-source"></p>
       <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
@@ -461,6 +496,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=14"></script>
+<script src="app.js?v=16"></script>
 </body>
 </html>

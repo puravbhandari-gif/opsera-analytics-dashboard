@@ -13,7 +13,7 @@ const addDays = (s, n) => { const d = toDate(s); d.setUTCDate(d.getUTCDate() + n
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const day = (s) => { const d = toDate(s); return `${d.getUTCDate()} ${MONTHS[d.getUTCMonth()]}`; };
 const dayYear = (s) => `${day(s)} ${toDate(s).getUTCFullYear()}`;
-const range = (a, b) => `${day(a)} to ${dayYear(b)}`;
+const range = (a, b) => (a === b ? dayYear(a) : `${day(a)} to ${dayYear(b)}`);
 const month = (m) => toDate(`${m}-01`).toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
 const shortPage = (p) => p.replace(/^https?:\/\/(www\.)?opsera\.ai/, "") || "/";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -109,7 +109,7 @@ const bar = (label, data, color) => ({ label, data, backgroundColor: color, bord
 // ---------- Week by week / month by month, one switch for every tab ----------
 
 let periodMode = "week";
-try { if (localStorage.getItem("period") === "month") periodMode = "month"; } catch (e) {}
+try { const saved = localStorage.getItem("period"); if (saved === "month" || saved === "day") periodMode = saved; } catch (e) {}
 const comparisons = [];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const weekStart = (d) => addDays(d, -((toDate(d).getUTCDay() + 6) % 7));
@@ -124,6 +124,11 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
 // or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
+  if (mode === "day") {
+    const prev = addDays(last, -1);
+    return { cur: { start: last, end: last }, prev: prev >= start ? { start: prev, end: prev } : null,
+      prevName: "Day before", none: "No earlier day yet" };
+  }
   if (mode === "week") {
     const curEnd = toDate(last).getUTCDay() === 0 ? last : addDays(weekStart(last), -1);
     const cur = { start: addDays(curEnd, -6), end: curEnd };
@@ -142,10 +147,10 @@ function periodsFor(mode, start, last) {
 // One bar per week or month from the start to the last full day, the last one marked "so far" if unfinished.
 function periodBuckets(mode, start, last) {
   const out = [];
-  for (let s = mode === "week" ? weekStart(start) : monthStart(start); s <= last;) {
-    const e = mode === "week" ? addDays(s, 6) : monthEnd(s);
+  for (let s = mode === "week" ? weekStart(start) : mode === "day" ? start : monthStart(start); s <= last;) {
+    const e = mode === "week" ? addDays(s, 6) : mode === "day" ? s : monthEnd(s);
     const a = s < start ? start : s, b = e > last ? last : e;
-    const label = mode === "week" ? `${day(a)} to ${day(b)}` : `${monthName(s).slice(0, 3)} ${s.slice(0, 4)}`;
+    const label = mode === "day" ? day(a) : mode === "week" ? `${day(a)} to ${day(b)}` : `${monthName(s).slice(0, 3)} ${s.slice(0, 4)}`;
     out.push({ start: a, end: b, label: e > last ? `${label} (so far)` : label });
     s = addDays(e, 1);
   }
@@ -165,7 +170,7 @@ function compare(spec) {
   comparisons.push(spec);
   spec.metricIndex = 0;
   const seg = $(`${spec.id}-cmp-metric`);
-  if (seg) {
+  if (seg && !spec.together) {
     seg.innerHTML = spec.metrics.length > 1 ? spec.metrics.map((m, i) => `<button data-i="${i}" class="${i ? "" : "on"}">${esc(m.label)}</button>`).join("") : "";
     seg.addEventListener("click", (e) => {
       const b = e.target.closest("button"); if (!b) return;
@@ -177,6 +182,10 @@ function compare(spec) {
   chart(`${spec.id}-cmp-chart`, (th) => {
     const m = spec.metrics[spec.metricIndex];
     const bk = periodBuckets(periodMode, spec.start, spec.last);
+    if (spec.together) {
+      return { type: "bar", whole: true, data: { labels: bk.map((b) => b.label),
+        datasets: spec.metrics.map((mm, i) => bar(mm.label, bk.map((b) => mm.value(b.start, b.end)), th.s[i])) } };
+    }
     const values = bk.map((b) => m.value(b.start, b.end));
     const asLine = m.whole === false;
     return { type: asLine ? "line" : "bar", whole: m.whole !== false, yfmt: m.yfmt, reverse: m.lowerIsBetter && m.flip,
@@ -190,7 +199,7 @@ function compare(spec) {
 function fillCompare(spec) {
   const p = periodsFor(periodMode, spec.start, spec.last);
   const title = $(`${spec.id}-cmp-chart`).closest(".panel").querySelector(".period-title");
-  if (title) title.textContent = periodMode === "week" ? "Week by week" : "Month by month";
+  if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month" }[periodMode];
   if (!p.cur) {
     $(`${spec.id}-cmp-cards`).innerHTML = `<div class="card"><div class="label">Not enough days yet</div><div class="sub">${p.none}</div></div>`;
     $(`${spec.id}-cmp-source`).textContent = spec.source(spec.start, spec.last);
@@ -649,7 +658,7 @@ function renderKumarPosts(kp) {
   const fill = () => {
     $("li-k2-posts").innerHTML = [["Own posts", "own_posts"], ["Reposts", "reposts"]].map(([label, key]) =>
       card(`${label}, ${curName}`, num(cur[key]), `${monthName(prev.month + "-01")}: ${num(prev[key])}`)).join("");
-    $("li-k2-posts-note").textContent = periodMode === "week" ? "Posts are counted by month, so they don't change with the week view." : "";
+    $("li-k2-posts-note").textContent = periodMode !== "month" ? "Posts are counted by month, so they don't change with the day or week view." : "";
   };
   fill(); monthlyTabs.push(fill);
   $("li-k2-posts-source").textContent = src;
@@ -659,6 +668,54 @@ function renderKumarPosts(kp) {
     { key: "reposts", label: "Reposts", num: true, fmt: num, sort: false },
   ] });
   $("li-k2-posts-table-source").textContent = src;
+}
+
+// Visits to opsera.ai from all of LinkedIn: company page, Kumar and untagged, three lines never added together
+function renderLinkedInVisits(ga) {
+  const li = ga.linkedin;
+  const GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["untagged", "Untagged"]];
+  const src = "Source: Google Analytics, opsera.ai 2026";
+  const when = (a, b) => `${range(a, b)}, US Pacific time`;
+  compare({ id: "li-web", together: true, start: ga.start_date, last: lastFullDayPacific(ga.end_date, ga.pulled_at),
+    source: (a, b) => `${src}, ${when(a, b)}.`,
+    metrics: GROUPS.map(([g, label]) => ({ label: `${label}: visits`, value: rangeSum(li.daily.filter((r) => r.group === g), "visits"), fmt: num })) });
+
+  const all = (rows, g, key) => rows.filter((r) => r.group === g).reduce((t2, r) => t2 + r[key], 0);
+  const forms = (g, line) => li.forms.filter((r) => r.group === g && r.line === line).reduce((t2, r) => t2 + r.count, 0);
+  table($("li-web-groups"), { rows: GROUPS.map(([g, label]) => ({ name: label, visits: all(li.daily, g, "visits"), engaged: all(li.daily, g, "engaged"),
+    demo: forms(g, "demo"), events: forms(g, "events"), gartner: forms(g, "gartner_offer"), contact: forms(g, "contact"), other: forms(g, "other") })),
+    columns: [
+      { key: "name", label: "From", sort: false },
+      { key: "visits", label: "Visits", num: true, fmt: num, sort: false },
+      { key: "engaged", label: "Engaged visits", num: true, fmt: num, sort: false },
+      { key: "demo", label: "Demo requests", num: true, fmt: num, sort: false },
+      { key: "events", label: "Event sign-ups", num: true, fmt: num, sort: false },
+      { key: "gartner", label: "Gartner offer", num: true, fmt: num, sort: false },
+      { key: "contact", label: "Contact forms", num: true, fmt: num, sort: false },
+      { key: "other", label: "Other forms", num: true, fmt: num, sort: false },
+    ] });
+  $("li-web-groups-source").textContent = `${src}, HubSpot form fills, ${when(ga.start_date, ga.end_date)}.`;
+  const otherTags = li.tags.filter((r) => r.group === "untagged" && !["(referral)", "(not set)", ""].includes(r.sessionCampaignName));
+  $("li-web-other-tags").textContent = otherTags.length
+    ? `Untagged also holds ${num(otherTags.reduce((t2, r) => t2 + r.visits, 0))} visits with other tags: ${otherTags.map((r) => `"${r.sessionCampaignName}" (${num(r.visits)})`).join(", ")}.` : "";
+
+  const groupName = Object.fromEntries(GROUPS);
+  table($("li-web-landing"), { rows: li.landing.map((r) => ({ ...r, from: groupName[r.group] })), search: "pages", sortKey: "visits", columns: [
+    { key: "page", label: "Landing page", search: true },
+    { key: "from", label: "From", search: true },
+    { key: "visits", label: "Visits", num: true, fmt: num },
+    { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+  ] });
+  $("li-web-landing-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}.`;
+  table($("li-web-tags"), { rows: li.tags.map((r) => ({ ...r, from: groupName[r.group], campaign: r.sessionCampaignName || "(blank)", content: r.content || "(blank)" })), sortKey: "visits", columns: [
+    { key: "sessionSource", label: "Source" },
+    { key: "sessionMedium", label: "Type" },
+    { key: "campaign", label: "utm_campaign" },
+    { key: "content", label: "utm_content" },
+    { key: "from", label: "Counted as" },
+    { key: "visits", label: "Visits", num: true, fmt: num },
+  ] });
+  $("li-web-tags-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}. Sources counted: ${li.sources_counted.join(", ")}.`;
 }
 
 // ---------- YouTube: Shorts and long videos never added together ----------
@@ -804,7 +861,7 @@ function renderKahoots(monthly, quarter) {
     monthCard("Website visits", "visits") +
     monthCard("Visits from people", "people_visits") +
     monthCard("Form fills", "form_fills");
-  const note = () => { $("kahoots-monthly-note").textContent = periodMode === "week" ? "Kahoots reported by month, so this tab compares September with August." : ""; };
+  const note = () => { $("kahoots-monthly-note").textContent = periodMode !== "month" ? "Kahoots reported by month, so this tab compares September with August." : ""; };
   note(); monthlyTabs.push(note);
   chart("kahoots-visits", (th) => ({
     type: "bar", stacked: true,
@@ -835,7 +892,7 @@ function renderInfrasity(monthly) {
     monthCard("Times Google showed us", "times_shown", num) +
     monthCard("Click rate", "click_rate_pct", (v) => pct(v)) +
     monthCard("Average spot on Google", "avg_spot", spot, true);
-  const note = () => { $("infrasity-monthly-note").textContent = periodMode === "week" ? "Infrasity reported by month, so this tab compares September with August." : ""; };
+  const note = () => { $("infrasity-monthly-note").textContent = periodMode !== "month" ? "Infrasity reported by month, so this tab compares September with August." : ""; };
   note(); monthlyTabs.push(note);
   table($("infrasity-table"), { rows: monthly.map((r) => ({ ...r, name: month(r.month) })), columns: [
     { key: "name", label: "Month", sort: false },
@@ -918,6 +975,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderLeads(leads);
     renderLinkedIn(li);
     renderKumarPosts(kp);
+    renderLinkedInVisits(ga);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

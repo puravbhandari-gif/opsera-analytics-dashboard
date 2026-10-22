@@ -27,13 +27,22 @@ The Kahoots and Infrasity tabs are kept exactly as reported. Their numbers live 
 
 ## Week by week or month by month
 
-The switch at the top of the page changes every tab at once. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the whole of last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
+The switch at the top of the page changes every tab at once. Day by day compares the last full day with the day before. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the whole of last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
 
 ## The LinkedIn tabs
 
 The LinkedIn brand and LinkedIn exec tabs don't update on Mondays. Their numbers come from exports you download from LinkedIn yourself. The original files stay private in the Data folder on your Desktop and are never put in this public repo. Only `data/linkedin.json`, which holds the numbers the tabs show, is published.
 
 To refresh them, download new exports from LinkedIn and ask Claude to update the LinkedIn tabs. Claude moves the files into Desktop/Data and runs `scripts/convert_linkedin.py`, which checks that the numbers add up and stops if they don't. Then Claude shows you the result before publishing.
+
+## Visits to opsera.ai from LinkedIn
+
+The LinkedIn brand tab also shows website visits that started on LinkedIn, from Google Analytics, updated every Monday. They're split into three lines that are never added together:
+- Company page: links tagged `utm_campaign=brand-page`
+- Kumar: links tagged `utm_source=linkedin&utm_campaign=kumar`
+- Untagged: every other LinkedIn visit
+
+To move visits out of Untagged, add those tags to the links you post from now on.
 
 ## The YouTube tab
 

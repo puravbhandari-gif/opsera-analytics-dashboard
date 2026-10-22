@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T16:27+05:30",
+ "pulled_at": "2026-10-22T16:39+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -2594,7 +2594,7 @@
    "sessions": 345,
    "totalUsers": 328,
    "engagedSessions": 21,
-   "averageSessionDuration": 11.775717994202898
+   "averageSessionDuration": 11.7757179942029
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -2603,7 +2603,7 @@
    "sessions": 319,
    "totalUsers": 188,
    "engagedSessions": 131,
-   "averageSessionDuration": 132.95434659874607
+   "averageSessionDuration": 132.9543465987461
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -2639,7 +2639,7 @@
    "sessions": 63,
    "totalUsers": 30,
    "engagedSessions": 26,
-   "averageSessionDuration": 155.79930957142858
+   "averageSessionDuration": 155.79930957142855
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -8862,5 +8862,775 @@
    "page": "/wp-json/wp/v2/resource/8544",
    "views": 1
   }
- ]
+ ],
+ "linkedin": {
+  "sources_counted": [
+   "linkedIn",
+   "linkedin",
+   "linkedin.com",
+   "lnkd.in"
+  ],
+  "look_alikes_not_counted": [],
+  "daily": [
+   {
+    "date": "2026-09-01",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 5
+   },
+   {
+    "date": "2026-09-02",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 5
+   },
+   {
+    "date": "2026-09-03",
+    "group": "untagged",
+    "visits": 20,
+    "engaged": 9
+   },
+   {
+    "date": "2026-09-04",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-05",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-06",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-07",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-08",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-09",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-10",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-11",
+    "group": "untagged",
+    "visits": 38,
+    "engaged": 14
+   },
+   {
+    "date": "2026-09-12",
+    "group": "untagged",
+    "visits": 17,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-13",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-14",
+    "group": "untagged",
+    "visits": 12,
+    "engaged": 5
+   },
+   {
+    "date": "2026-09-15",
+    "group": "untagged",
+    "visits": 15,
+    "engaged": 8
+   },
+   {
+    "date": "2026-09-16",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-17",
+    "group": "untagged",
+    "visits": 21,
+    "engaged": 10
+   },
+   {
+    "date": "2026-09-18",
+    "group": "untagged",
+    "visits": 13,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-19",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-20",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
+    "date": "2026-09-21",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-22",
+    "group": "untagged",
+    "visits": 11,
+    "engaged": 6
+   },
+   {
+    "date": "2026-09-23",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-24",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 5
+   },
+   {
+    "date": "2026-09-25",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-09-26",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-09-27",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-28",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-29",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 1
+   },
+   {
+    "date": "2026-09-30",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-01",
+    "group": "untagged",
+    "visits": 22,
+    "engaged": 13
+   },
+   {
+    "date": "2026-10-02",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-03",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-04",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-05",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-06",
+    "group": "company",
+    "visits": 7,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-06",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-07",
+    "group": "company",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-07",
+    "group": "untagged",
+    "visits": 11,
+    "engaged": 8
+   },
+   {
+    "date": "2026-10-08",
+    "group": "company",
+    "visits": 8,
+    "engaged": 7
+   },
+   {
+    "date": "2026-10-08",
+    "group": "untagged",
+    "visits": 13,
+    "engaged": 8
+   },
+   {
+    "date": "2026-10-09",
+    "group": "company",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-10-09",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-10",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-10",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-11",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-12",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-12",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 5
+   },
+   {
+    "date": "2026-10-13",
+    "group": "company",
+    "visits": 5,
+    "engaged": 5
+   },
+   {
+    "date": "2026-10-13",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-14",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-14",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-15",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 5
+   },
+   {
+    "date": "2026-10-16",
+    "group": "untagged",
+    "visits": 8,
+    "engaged": 4
+   },
+   {
+    "date": "2026-10-17",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-18",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-19",
+    "group": "untagged",
+    "visits": 12,
+    "engaged": 10
+   },
+   {
+    "date": "2026-10-20",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-20",
+    "group": "untagged",
+    "visits": 16,
+    "engaged": 9
+   },
+   {
+    "date": "2026-10-21",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-21",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   }
+  ],
+  "landing": [
+   {
+    "page": "/",
+    "group": "untagged",
+    "visits": 147,
+    "engaged": 93
+   },
+   {
+    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "group": "untagged",
+    "visits": 76,
+    "engaged": 23
+   },
+   {
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 42,
+    "engaged": 4
+   },
+   {
+    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+    "group": "untagged",
+    "visits": 27,
+    "engaged": 15
+   },
+   {
+    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+    "group": "untagged",
+    "visits": 26,
+    "engaged": 11
+   },
+   {
+    "page": "/",
+    "group": "company",
+    "visits": 23,
+    "engaged": 18
+   },
+   {
+    "page": "/events/flutter-the-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 4
+   },
+   {
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 4
+   },
+   {
+    "page": "/gartner-symposium",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 4
+   },
+   {
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 8,
+    "engaged": 5
+   },
+   {
+    "page": "/agents",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 7
+   },
+   {
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 2
+   },
+   {
+    "page": "/forge",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 3
+   },
+   {
+    "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 2
+   },
+   {
+    "page": "/blog/frontier-benchmark-aug-2026",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 4
+   },
+   {
+    "page": "/gartner-symposium/free-modernization",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "page": "(not set)",
+    "group": "company",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "page": "/github-universe-happy-hour",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "page": "/headless-devops-for-salesforce-orgs",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "page": "/appfire-flow-sunset",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/forge-cursor-ai-speed-meets-enterprise-control",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "page": "/governance",
+    "group": "company",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "page": "/platform/toolchain-automation",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "page": "/about",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/the-high-speed-lane-cursor-opsera-agentic-devops",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/brickforge",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/cursor-plugin",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/flutter-2026-ai-sdlc-summit/utm_campaign=51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8nEEbBEw2-s8xt4R2oYdMoDNHPOlvt8cscbqHfmAYNdVDTYMI41zmAp5kBXxrNHZrPjr6P",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/for/sentinelone",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/forge/modernization",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/gartner-symposium/poc \u2192",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/partners",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/pricing",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/resources",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/comparison-guides/opsera-vs-harness",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/report/ai-coding-impact-2025-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/software-factory",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/unified-insights",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/wp-login.php",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   }
+  ],
+  "tags": [
+   {
+    "sessionSource": "linkedin.com",
+    "sessionMedium": "referral",
+    "sessionCampaignName": "(referral)",
+    "content": "(not set)",
+    "group": "untagged",
+    "visits": 392,
+    "engaged": 188
+   },
+   {
+    "sessionSource": "linkedin",
+    "sessionMedium": "social",
+    "sessionCampaignName": "brand-page",
+    "content": "profile-button",
+    "group": "company",
+    "visits": 34,
+    "engaged": 22
+   },
+   {
+    "sessionSource": "lnkd.in",
+    "sessionMedium": "referral",
+    "sessionCampaignName": "(referral)",
+    "content": "(not set)",
+    "group": "untagged",
+    "visits": 11,
+    "engaged": 5
+   },
+   {
+    "sessionSource": "linkedin",
+    "sessionMedium": "social",
+    "sessionCampaignName": "36500047-DG-FY27-Q1-AI-Adoption-Webinar",
+    "content": "(not set)",
+    "group": "untagged",
+    "visits": 9,
+    "engaged": 4
+   },
+   {
+    "sessionSource": "linkedin.com",
+    "sessionMedium": "referral",
+    "sessionCampaignName": "(referral)",
+    "content": "",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "sessionSource": "linkedin",
+    "sessionMedium": "social",
+    "sessionCampaignName": "promotion",
+    "content": "(not set)",
+    "group": "untagged",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "sessionSource": "linkedIn",
+    "sessionMedium": "cpc",
+    "sessionCampaignName": "Magic Quadrant 2026",
+    "content": "MQ Ad 2",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   }
+  ],
+  "forms": [
+   {
+    "date": "2026-09-01",
+    "group": "untagged",
+    "line": "other",
+    "count": 1
+   },
+   {
+    "date": "2026-09-11",
+    "group": "untagged",
+    "line": "events",
+    "count": 1
+   },
+   {
+    "date": "2026-09-13",
+    "group": "untagged",
+    "line": "events",
+    "count": 1
+   },
+   {
+    "date": "2026-09-15",
+    "group": "untagged",
+    "line": "other",
+    "count": 2
+   },
+   {
+    "date": "2026-09-19",
+    "group": "untagged",
+    "line": "other",
+    "count": 1
+   },
+   {
+    "date": "2026-10-04",
+    "group": "untagged",
+    "line": "demo",
+    "count": 1
+   },
+   {
+    "date": "2026-10-13",
+    "group": "company",
+    "line": "demo",
+    "count": 1
+   },
+   {
+    "date": "2026-10-15",
+    "group": "untagged",
+    "line": "gartner_offer",
+    "count": 1
+   }
+  ]
+ }
 }

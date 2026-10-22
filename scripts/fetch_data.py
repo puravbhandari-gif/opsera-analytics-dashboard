@@ -45,6 +45,20 @@ LEAD_LINES = [
 ]
 REMOVED_FORM_PAGES = ["/", "/about", "/platform"]
 LEFT_OUT_PAGES = ("/job-application",)   # job applications aren't sales leads
+
+# Visits from LinkedIn: source linkedin.com, lnkd.in, or a UTM source of linkedin (any capitals).
+# Three lines, never added together (agreed 22 Oct 2026): company page = utm_campaign "brand-page",
+# Kumar = utm_source "linkedin" with utm_campaign "kumar", untagged = everything else from LinkedIn.
+LINKEDIN_SOURCES = r"(?i)^(linkedin\.com|lnkd\.in|linkedin)$"
+LINKEDIN_LIKE = r"(?i)linkedin|lnkd"
+
+
+def linkedin_group(source, campaign):
+    if campaign.lower() == "brand-page":
+        return "company"
+    if source.lower() == "linkedin" and campaign.lower() == "kumar":
+        return "kumar"
+    return "untagged"
 NEW_SITE_LIVE = "2026-09-30"
 
 
@@ -153,7 +167,7 @@ def check_ga_property(s):
     return prop.get("timeZone")
 
 
-def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE):
+def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=None):
     rows, offset = [], 0
     while True:
         body = {
@@ -162,8 +176,13 @@ def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE):
             "metrics": [{"name": m} for m in metrics],
             "limit": 100000, "offset": offset,
         }
+        filters = []
         if event_names:
-            body["dimensionFilter"] = {"filter": {"fieldName": "eventName", "inListFilter": {"values": event_names}}}
+            filters.append({"filter": {"fieldName": "eventName", "inListFilter": {"values": event_names}}})
+        if flt:
+            filters.append(flt)
+        if filters:
+            body["dimensionFilter"] = filters[0] if len(filters) == 1 else {"andGroup": {"expressions": filters}}
         res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}:runReport", body)
         for row in res.get("rows", []):
             rec = {d: v["value"] for d, v in zip(dims, row.get("dimensionValues", []))}
@@ -215,6 +234,46 @@ def leads(form_rows):
     }
 
 
+def linkedin_visits(s, end):
+    li = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "FULL_REGEXP", "value": LINKEDIN_SOURCES, "caseSensitive": False}}}
+    like = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "PARTIAL_REGEXP", "value": LINKEDIN_LIKE, "caseSensitive": False}}}
+    tag_dims = ["sessionSource", "sessionMedium", "sessionCampaignName"]
+    daily = {}
+    for r in ga_report(s, end, ["date"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
+        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        row = daily.setdefault((r["date"], g), {"date": r["date"], "group": g, "visits": 0, "engaged": 0})
+        row["visits"] += r["sessions"]
+        row["engaged"] += r["engagedSessions"]
+    landing = {}
+    for r in ga_report(s, end, ["landingPage"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
+        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        row = landing.setdefault((page, g), {"page": page, "group": g, "visits": 0, "engaged": 0})
+        row["visits"] += r["sessions"]
+        row["engaged"] += r["engagedSessions"]
+    tags = [{**{k: r[k] for k in tag_dims}, "content": r["sessionManualAdContent"], "group": linkedin_group(r["sessionSource"], r["sessionCampaignName"]),
+             "visits": r["sessions"], "engaged": r["engagedSessions"]}
+            for r in ga_report(s, end, tag_dims + ["sessionManualAdContent"], ["sessions", "engagedSessions"], flt=li)]
+    forms = {}
+    for r in ga_report(s, end, ["date", "pagePath"] + tag_dims, ["eventCount"], event_names=[FORM_EVENT], start=LEADS_START, flt=li):
+        page = page_key(r["pagePath"])
+        if page.startswith(LEFT_OUT_PAGES):
+            continue
+        line = next((k for k, _, match in LEAD_LINES if match(page)), "other")
+        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        row = forms.setdefault((r["date"], g, line), {"date": r["date"], "group": g, "line": line, "count": 0})
+        row["count"] += r["eventCount"]
+    counted = {r["sessionSource"] for r in tags}
+    look_alikes = sorted({r["sessionSource"] for r in ga_report(s, end, ["sessionSource"], ["sessions"], flt=like)} - counted)
+    return {
+        "sources_counted": sorted(counted), "look_alikes_not_counted": look_alikes,
+        "daily": sorted(daily.values(), key=lambda r: (r["date"], r["group"])),
+        "landing": sorted(landing.values(), key=lambda r: -r["visits"]),
+        "tags": sorted(tags, key=lambda r: -r["visits"]),
+        "forms": sorted(forms.values(), key=lambda r: (r["date"], r["group"])),
+    }
+
+
 def fetch_ga(s, end):
     tz = check_ga_property(s)
     base = ["sessions", "totalUsers", "engagedSessions"]
@@ -240,6 +299,7 @@ def fetch_ga(s, end):
                        "channels": split_check("source", channels, totals["sessions"])},
         "daily": daily, "channels": channels, "channel_daily": channel_daily,
         "sources": sources, "pages": pages,
+        "linkedin": linkedin_visits(s, end),
     }, leads(form_rows)
 
 
