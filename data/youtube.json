@@ -3,7 +3,7 @@
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
  "last_day_with_data": "2026-10-19",
- "pulled_at": "2026-10-22T15:47+05:30",
+ "pulled_at": "2026-10-22T16:59+05:30",
  "channel": {
   "views": 654,
   "minutes": 509,
@@ -678,14 +678,14 @@
     },
     {
      "id": "vgr4ggGmMxA",
-     "title": "Opsera Pipeline Workflow Actions: Complete Lifecycle Control & Governance",
+     "title": "Opsera Pipeline Workflow Actions: Run, Lock and Audit CI/CD Pipelines",
      "views": 18,
      "minutes": 14,
      "avg_seconds": 66
     },
     {
      "id": "dym5WnSTKEc",
-     "title": "Claude Compliance Auditor",
+     "title": "SOC 2, HIPAA and PCI DSS Compliance Audit in Claude Code | Opsera",
      "views": 17,
      "minutes": 11,
      "avg_seconds": 55
@@ -797,7 +797,7 @@
     },
     {
      "id": "_7K0TxJZHHs",
-     "title": "Claude Security Audit",
+     "title": "Claude Code Security Audit with Markdown and HTML Reports | Opsera",
      "views": 9,
      "minutes": 1,
      "avg_seconds": 14
@@ -1000,7 +1000,7 @@
     },
     {
      "id": "iBa8cXPLJk8",
-     "title": "Claude SQL Scanner Agent",
+     "title": "SQL Injection Scanner for Claude Code | Opsera AI Agent",
      "views": 4,
      "minutes": 1,
      "avg_seconds": 39
@@ -1154,7 +1154,7 @@
     },
     {
      "id": "j3JMqo1vvHs",
-     "title": "Opsera AI Code Assistant Comparison Dashboard: Measure Impact, Optimize ROI & Boost Productivity",
+     "title": "AI Coding Assistant Comparison Dashboard: Adoption, Cost and Productivity | Opsera",
      "views": 2,
      "minutes": 0,
      "avg_seconds": 4
@@ -1343,7 +1343,7 @@
     },
     {
      "id": "_eASMbspKqs",
-     "title": "Opsera Cursor Security Audit Agent",
+     "title": "Security Audit in Cursor IDE: Secrets, IaC and SQL Injection Checks | Opsera",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 0
@@ -1392,7 +1392,7 @@
     },
     {
      "id": "9COHeEfD5Lc",
-     "title": "Opsera Cursor SQL Security Agent",
+     "title": "SQL Injection Scanner in Cursor IDE: Find and Fix SQL Risks | Opsera",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 0
@@ -1427,7 +1427,7 @@
     },
     {
      "id": "V9N8jfwciO8",
-     "title": "Opsera Architecture Analyzer Agent in Claude Code",
+     "title": "Architecture Risk Analysis in Claude Code | Opsera AI Agent",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 32
@@ -1476,14 +1476,14 @@
     },
     {
      "id": "obUHO7w_5c4",
-     "title": "Opsera Security Audit",
+     "title": "Security Scan and Autofix in Your IDE: Secrets, SAST and IaC | Opsera",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 14
     },
     {
      "id": "MwYBtqrqMEc",
-     "title": "Opsera Cursor Compliance Audit Agent",
+     "title": "SOC 2 Compliance Audit in Cursor IDE with an AI Agent | Opsera",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 16
@@ -1525,7 +1525,7 @@
     },
     {
      "id": "1TY7EJtT9pw",
-     "title": "Opsera Tool Registry: Total Visibility & Control Over Your Entire Toolchain",
+     "title": "Opsera Tool Registry: Connect, Monitor and Govern Your DevOps Tools",
      "views": 1,
      "minutes": 0,
      "avg_seconds": 10

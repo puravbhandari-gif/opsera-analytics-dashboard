@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-10-22T11:27+00:00",
+ "posts_pulled_at": "2026-10-22T11:30+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -342,8 +342,14 @@
   {
    "date": "2026-10-21",
    "group": "cant_tell",
-   "visits": 4,
+   "visits": 3,
    "engaged": 2
+  },
+  {
+   "date": "2026-10-21",
+   "group": "estimated_company",
+   "visits": 1,
+   "engaged": 0
   }
  ],
  "matches": [
@@ -441,6 +447,18 @@
    "dates": [
     "2026-10-15"
    ]
+  },
+  {
+   "page": "/gartner-symposium/free-modernization",
+   "group": "estimated_company",
+   "visits": 1,
+   "engaged": 0,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-10-21"
+   ]
   }
  ],
  "linked_posts": [
@@ -481,6 +499,12 @@
    "post": "https://www.linkedin.com/posts/kumar-chivukula_models-as-insider-risks-in-the-super-intelligence-activity-7515488328117559297-U8oC"
   },
   {
+   "account": "kumar",
+   "date": "2026-10-12",
+   "page": "/",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_models-as-insider-risks-in-the-super-intelligence-activity-7515488328117559297-U8oC"
+  },
+  {
    "account": "company",
    "date": "2026-10-15",
    "page": "/gartner-symposium",
@@ -497,9 +521,15 @@
    "date": "2026-10-19",
    "page": "/gartner-symposium",
    "post": "https://www.linkedin.com/posts/opsera_opsera-gartner-it-symposiumxpo-activity-7517970775287504896-2O26"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-20",
+   "page": "/gartner-symposium/free-modernization",
+   "post": "https://www.linkedin.com/posts/opsera_gartnersym-activity-7518389925608833024-wjQa"
   }
  ],
  "untagged_total": 420,
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T16:48+05:30"
+ "pulled_at": "2026-10-22T16:58+05:30"
 }
