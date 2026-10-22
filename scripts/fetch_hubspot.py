@@ -129,9 +129,12 @@ def main():
     # Marketing contacts: created by a website form since 1 Sep
     forms = search(s, "contacts", [{"propertyName": "createdate", "operator": "GTE", "value": SINCE},
                                    {"propertyName": "hs_object_source", "operator": "EQ", "value": "FORM"}], CONTACT_PROPS)
-    contacts = {}
+    contacts, job_applicants = {}, 0
     for c in forms:
         p = c["properties"]
+        if "job application" in (p.get("first_conversion_event_name") or "").lower():
+            job_applicants += 1   # people applying for jobs aren't marketing contacts, same as the Leads tab
+            continue
         contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p),
                              "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)"}
 
@@ -258,6 +261,7 @@ def main():
         "contacts_daily": [{"date": d, "line": l, "channel": ch, "demo": dm, "count": n} for (d, l, ch, dm), n in sorted(daily.items())],
         "first_forms": collections.Counter(c["first_form"] for c in contacts.values() if c["line"] == "form").most_common(30),
         "existing_customers": len(existing),
+        "job_applicants_left_out": job_applicants,
         "linkedin_fields": collections.Counter(f for c in contacts.values() for f in c["linkedin_fields"]).most_common(),
         "linkedin_contacts": sum(1 for c in contacts.values() if c["channel"] == "linkedin"),
         "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "demo": dm, "count": n}
