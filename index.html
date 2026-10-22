@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>opsera.ai Analytics</title>
+<title>Opsera analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css?v=16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css?v=17">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -13,12 +16,16 @@
 <body>
 <header class="top">
   <div class="top-inner">
-    <div>
-      <h1>opsera.ai analytics</h1>
-      <p class="muted" id="pulled">Loading numbers...</p>
+    <div class="brand">
+      <img class="logo-light" src="assets/logo.svg" alt="Opsera" width="108" height="28">
+      <img class="logo-dark" src="assets/logo-reversed.svg" alt="Opsera" width="108" height="28">
+      <div class="brand-text">
+        <h1>Website analytics</h1>
+        <p class="muted" id="pulled">Loading numbers...</p>
+      </div>
     </div>
     <div class="top-controls">
-      <div class="seg" id="period-mode" role="group" aria-label="Compare week by week or month by month">
+      <div class="seg" id="period-mode" role="group" aria-label="Choose the period">
         <button data-mode="day">Day by day</button>
         <button data-mode="week" class="on">Week by week</button>
         <button data-mode="month">Month by month</button>
@@ -29,7 +36,7 @@
   </div>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
     <button role="tab" data-tab="journey">Customer journey</button>
-    <button role="tab" data-tab="search">Google Search</button>
+    <button role="tab" data-tab="search">Google search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
     <button role="tab" data-tab="aeo">AEO</button>
@@ -45,8 +52,8 @@
 <main>
   <!-- Google Search -->
   <section id="tab-search" class="tab" role="tabpanel" hidden>
-    <h2>Google Search</h2>
-    <p class="lead">How often Google showed opsera.ai in search results, and how often people clicked through.</p>
+    <h2>Google search</h2>
+    <p class="lead">How often opsera.ai shows up on Google, and how often people click.</p>
 
     <div class="cards" id="search-cmp-cards"></div>
     <p class="source" id="search-cmp-source"></p>
@@ -83,13 +90,13 @@
         <h3>Pages Google sent people to</h3>
         <div id="search-pages"></div>
         <p class="source" id="search-pages-source"></p>
-        <p class="note">Addresses with and without a final "/" count as one page, and rows don't add up to the total.</p>
+        <p class="note">Addresses with and without a closing "/" count as the same page. Rows don't add up to the total.</p>
       </div>
       <div class="panel">
         <h3>Searches people used to find us</h3>
         <div id="search-queries"></div>
         <p class="source" id="search-queries-source"></p>
-        <p class="note">Google hides rare searches, so rows cover only part of all clicks.</p>
+        <p class="note">Google hides rare searches, so these rows cover only some of the clicks.</p>
       </div>
     </details>
   </section>
@@ -97,7 +104,7 @@
   <!-- Website visits -->
   <section id="tab-visits" class="tab" role="tabpanel" hidden>
     <h2>Website visits</h2>
-    <p class="lead">Visits to opsera.ai, where engaged visits are people who stayed, which leaves out most email robots.</p>
+    <p class="lead">Visits to opsera.ai. Engaged visits are people who stayed, which leaves out most email robots.</p>
 
     <div class="cards" id="visits-cmp-cards"></div>
     <p class="source" id="visits-cmp-source"></p>
@@ -137,10 +144,10 @@
         <p class="source" id="visits-sources-source"></p>
       </div>
       <div class="panel">
-        <h3>Top pages people visited</h3>
+        <h3>Most visited pages</h3>
         <div id="visits-pages"></div>
         <p class="source" id="visits-pages-source"></p>
-        <p class="note">Pages under /hs/preferences-center are email subscription pages, mostly opened by email robots.</p>
+        <p class="note">Pages under /hs/preferences-center are email subscription pages. Email robots open most of them.</p>
       </div>
     </details>
   </section>
@@ -148,7 +155,7 @@
   <!-- Leads -->
   <section id="tab-leads" class="tab" role="tabpanel" hidden>
     <h2>Leads</h2>
-    <p class="lead">Forms people filled in on opsera.ai, with each kind of form counted on its own.</p>
+    <p class="lead">Forms people filled in on opsera.ai. Each kind of form is counted on its own.</p>
 
     <div class="cards" id="leads-cmp-cards"></div>
     <p class="source" id="leads-cmp-source"></p>
@@ -166,7 +173,7 @@
       <h3>Event sign-ups in HubSpot</h3>
       <div class="cards compact" id="leads-hubspot-events"></div>
       <p class="source" id="leads-hubspot-events-source"></p>
-      <p class="note-inline">Each list is its own line and is never added to the others or to the website event forms above.</p>
+      <p class="note-inline">Each list stands alone. None is added to another, or to the event forms above.</p>
     </div>
 
     <details class="more">
@@ -181,10 +188,10 @@
       </div>
       <div class="cards compact" id="leads-more-cards"></div>
       <p class="source" id="leads-more-source"></p>
-      <p class="note">Event sign-ups on Luma aren't included until Luma is connected to HubSpot.</p>
-      <p class="note">Before October, the old site sent some homepage and contact form fills only to Google, not to HubSpot, so earlier months come out low.</p>
+      <p class="note">Luma sign-ups will show here once Luma is connected to HubSpot.</p>
+      <p class="note">Before October, the old site sent some homepage and contact form fills only to Google. That makes earlier months look low.</p>
       <div class="panel">
-        <h3>Core site forms</h3>
+        <h3>Main site forms</h3>
         <div id="leads-core"></div>
         <p class="source" id="leads-core-source"></p>
       </div>
@@ -199,14 +206,14 @@
   <!-- Customer journey -->
   <section id="tab-journey" class="tab" role="tabpanel">
     <h2>Customer journey</h2>
-    <p class="lead">How marketing turns website visits into demo requests, meetings and pipeline.</p>
+    <p class="lead">How marketing turns website visits into demo requests, meetings and deals.</p>
     <div class="cards" id="journey-cmp-cards"></div>
     <p class="source" id="journey-cmp-source"></p>
 
     <div class="panel">
       <div class="panel-head">
         <h3 id="journey-funnel-title">Funnel</h3>
-        <label class="pick">Month <select id="journey-month" aria-label="Choose a month for the funnel"><option value="">Same as the period above</option></select></label>
+        <label class="pick">Month <select id="journey-month" aria-label="Choose a month for the funnel"><option value="">Same as above</option></select></label>
         <div class="seg" id="journey-channel" role="group" aria-label="Choose a channel">
           <button data-ch="all" class="on">All</button>
           <button data-ch="search">Google search</button>
@@ -226,14 +233,14 @@
 
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Visits, demo page and demo form come from Google Analytics; contacts, meetings and deals come from HubSpot, so a later step can now and then be bigger than the one before.</p>
-      <p class="note">Contacts are people whose first form was the demo form; meetings and deals only count after the person signed up, and never with existing customers.</p>
-      <p class="note">A deal can show up without a meeting when no calendar meeting was logged in HubSpot for that contact.</p>
+      <p class="note">The first 3 steps come from Google Analytics and the last 3 from HubSpot. That's why a later step can sometimes be bigger.</p>
+      <p class="note">A contact is someone whose first form was the demo form. Meetings and deals count only after sign-up, and never with existing customers.</p>
+      <p class="note">A deal can appear without a meeting when nobody logged one in HubSpot.</p>
       <div class="panel">
-        <h3>Every channel, since 1 Apr</h3>
+        <h3>All channels since 1 Apr</h3>
         <div id="journey-channels"></div>
         <p class="source" id="journey-channels-source"></p>
-        <p class="note">Google search is Google only in Google Analytics, but HubSpot's search includes other search engines; a visit can count for two channels, such as an event email.</p>
+        <p class="note">In Google Analytics, Google search means Google only. HubSpot's search also covers other search engines. A visit can count for 2 channels, such as an event email.</p>
       </div>
       <div class="panel">
         <h3>Why Google visits can be higher than Search Console clicks</h3>
@@ -261,7 +268,7 @@
         <h3>Event campaigns in HubSpot</h3>
         <div id="journey-campaigns"></div>
         <p class="source" id="journey-campaigns-source"></p>
-        <p class="note">Campaign tagging catches few of the Luma guests, so the Luma import list is used for Flutter instead.</p>
+        <p class="note">Campaign tags miss most Luma guests, so Flutter uses the Luma import list instead.</p>
       </div>
 
       <div id="journey-linkedin">
@@ -272,7 +279,7 @@
           <p class="source" id="journey-li-fields-source"></p>
         </div>
       <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
-      <p class="note-inline">Most past links weren't tagged, so Untagged will be the biggest for now.</p>
+      <p class="note-inline">Most older links had no tag, so Untagged is the biggest group for now.</p>
       <div class="cards" id="li-web-cmp-cards"></div>
       <p class="source" id="li-web-cmp-source"></p>
 
@@ -285,8 +292,8 @@
         <p class="source" id="li-web-cmp-chart-source"></p>
       </div>
 
-      <h3 class="section-title">Estimated: who sent the Untagged visits</h3>
-      <p class="note-inline">These are best guesses from matching posts to visits, kept apart from the tagged numbers above.</p>
+      <h3 class="section-title">Estimate: who sent the untagged visits</h3>
+      <p class="note-inline">Best guesses, made by matching posts to visits. They stay apart from the tagged numbers above.</p>
       <p class="note-inline" id="li-est-stale"></p>
       <div class="cards" id="li-est-cmp-cards"></div>
       <p class="source" id="li-est-cmp-source"></p>
@@ -308,7 +315,7 @@
         <h3 style="margin-top:20px">Since 1 Apr</h3>
         <div id="li-path-all"></div>
         <p class="source" id="li-path-all-source"></p>
-        <p class="note-inline">The last two columns count visits from any landing page, not just the homepage.</p>
+        <p class="note-inline">The last 2 columns count every landing page, not only the homepage.</p>
       </div>
 
       <h3 class="section-title">Visits to opsera.ai from all of LinkedIn</h3>
@@ -349,7 +356,7 @@
   <!-- AEO -->
   <section id="tab-aeo" class="tab" role="tabpanel" hidden>
     <h2>AEO: visits from AI tools</h2>
-    <p class="lead">Visits to opsera.ai from AI assistants like ChatGPT, Gemini and Perplexity, and what they led to.</p>
+    <p class="lead">Visits from AI assistants like ChatGPT, Gemini and Perplexity, and what came next.</p>
     <div class="seg period" id="aeo-tool" role="group" aria-label="Choose an AI tool">
       <button data-tool="all" class="on">All</button>
       <button data-tool="chatgpt">ChatGPT</button>
@@ -370,9 +377,9 @@
 
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Contacts are people whose first form was the demo form; the AI tool comes from HubSpot's original source.</p>
+      <p class="note">A contact is someone whose first form was the demo form. HubSpot's original source names the AI tool.</p>
       <div class="panel">
-        <h3>Every AI tool, since 1 Apr</h3>
+        <h3>All AI tools since 1 Apr</h3>
         <div id="aeo-tools"></div>
         <p class="source" id="aeo-tools-source"></p>
       </div>
@@ -392,7 +399,7 @@
   <!-- LinkedIn: Opsera company page -->
   <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
     <h2>LinkedIn brand: Opsera company page</h2>
-    <p class="lead">How often LinkedIn showed posts from the Opsera company page, and what people did with them.</p>
+    <p class="lead">How often LinkedIn showed the company page's posts, and what people did with them.</p>
 
     <div class="cards" id="li-co-cmp-cards"></div>
     <p class="source" id="li-co-cmp-source"></p>
@@ -410,7 +417,7 @@
       <summary>More detail</summary>
       <div class="cards compact" id="li-co-cards"></div>
       <p class="source" id="li-co-source"></p>
-      <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
+      <p class="note">Paid means sponsored posts. Reposts are left out because LinkedIn's own sheets disagree on them.</p>
       <div class="panel">
         <div class="panel-head">
           <h3>Day by day, unpaid and paid</h3>
@@ -431,7 +438,7 @@
         <p class="note">The export doesn't include the total follower count.</p>
       </div>
       <div class="panel">
-        <h3>Company page visits, day by day</h3>
+        <h3>Company page views, day by day</h3>
         <div class="chart-box"><canvas id="li-co-visits" aria-label="Company page views by day"></canvas></div>
         <p class="source" id="li-co-visits-source"></p>
         <p class="note">The total includes pages LinkedIn doesn't list separately.</p>
@@ -455,7 +462,7 @@
   <!-- LinkedIn: Kumar Chivukula -->
   <section id="tab-linkedin-exec" class="tab" role="tabpanel" hidden>
     <h2>LinkedIn exec: Kumar Chivukula</h2>
-    <p class="lead">How often LinkedIn showed Kumar's posts, and how people responded to them.</p>
+    <p class="lead">How often LinkedIn showed Kumar's posts, and how people responded.</p>
 
     <div class="cards" id="li-k2-cmp-cards"></div>
     <p class="source" id="li-k2-cmp-source"></p>
@@ -508,7 +515,7 @@
           <div><h4>By times seen</h4><div id="li-ko-top-seen"></div><p class="source" id="li-ko-top-seen-source"></p></div>
           <div><h4>By engagements</h4><div id="li-ko-top-eng"></div><p class="source" id="li-ko-top-eng-source"></p></div>
         </div>
-        <p class="note">Includes older posts that were still being seen in this period.</p>
+        <p class="note">Includes older posts people still saw in this period.</p>
       </div>
 
       <h3 class="section-title">July to September 2026</h3>
@@ -540,7 +547,7 @@
           <div><h4>By times seen</h4><div id="li-k-top-seen"></div><p class="source" id="li-k-top-seen-source"></p></div>
           <div><h4>By engagements</h4><div id="li-k-top-eng"></div><p class="source" id="li-k-top-eng-source"></p></div>
         </div>
-        <p class="note">Includes older posts that were still being seen in this period.</p>
+        <p class="note">Includes older posts people still saw in this period.</p>
       </div>
     </details>
   </section>
@@ -548,7 +555,7 @@
   <!-- YouTube -->
   <section id="tab-youtube" class="tab" role="tabpanel" hidden>
     <h2>YouTube</h2>
-    <p class="lead">Views and watch time on the Opsera YouTube channel, with Shorts and long videos counted separately.</p>
+    <p class="lead">Views and watch time on Opsera's YouTube channel. We count Shorts and long videos separately.</p>
 
     <div class="cards" id="yt-cmp-cards"></div>
     <p class="source" id="yt-cmp-source"></p>
@@ -569,7 +576,7 @@
       <h3 class="section-title">Whole channel</h3>
       <div class="cards compact" id="yt-ch-cards"></div>
       <p class="source" id="yt-ch-source"></p>
-      <p class="note">End screen clicks aren't available from YouTube's standard reports.</p>
+      <p class="note">YouTube's standard reports don't include end screen clicks.</p>
       <div class="panel">
         <h3>Subscribers gained and lost, week by week</h3>
         <div class="chart-box short"><canvas id="yt-subs" aria-label="Subscribers gained and lost by week"></canvas></div>
@@ -594,7 +601,7 @@
   <!-- Before: Kahoots -->
   <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
     <h2>Before: Kahoots (Q3 2026)</h2>
-    <p class="lead">What Kahoots reported for July to September 2026 from the old "opsera.ai 2025" account, kept as reported.</p>
+    <p class="lead">What Kahoots reported for July to September 2026, from the old "opsera.ai 2025" account. Shown as reported.</p>
     <div class="cards" id="kahoots-cards"></div>
     <p class="note-inline" id="kahoots-monthly-note"></p>
     <p class="source" id="kahoots-cards-source">Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.</p>
@@ -613,10 +620,10 @@
         <p class="source">Source: Kahoots Q3 2026 report, Jul to Sep 2026.</p>
       </div>
       <div class="panel">
-        <h3>Q2 against Q3</h3>
+        <h3>Q2 and Q3</h3>
         <div id="kahoots-quarter"></div>
         <p class="source">Source: Kahoots Q3 2026 report, Apr to Sep 2026.</p>
-        <p class="note">The rest of All form fills is other forms, such as the Cursor plugin and Salesforce pages.</p>
+        <p class="note">The rest of all form fills comes from other forms, such as the Cursor plugin and Salesforce pages.</p>
         <p class="note">Event sign-ups moved to Luma, which the website count can't see.</p>
       </div>
     </details>
@@ -625,7 +632,7 @@
   <!-- Before: Infrasity -->
   <section id="tab-infrasity" class="tab" role="tabpanel" hidden>
     <h2>Before: Infrasity (Jul to Sep 2026)</h2>
-    <p class="lead">Google search results Infrasity reported for July to September 2026, kept as reported.</p>
+    <p class="lead">Google search results Infrasity reported for July to September 2026. Shown as reported.</p>
     <div class="cards" id="infrasity-cards"></div>
     <p class="note-inline" id="infrasity-monthly-note"></p>
     <p class="source">Source: Infrasity monthly growth reports, Sep 2026 compared with Aug 2026.</p>
@@ -639,7 +646,7 @@
     <details class="more">
       <summary>More detail</summary>
       <div class="panel">
-        <h3>Google Search by month</h3>
+        <h3>Google search by month</h3>
         <div id="infrasity-table"></div>
         <p class="source">Source: Infrasity monthly growth reports, Jul to Sep 2026.</p>
       </div>
@@ -649,11 +656,11 @@
   <!-- To do -->
   <section id="tab-todo" class="tab" role="tabpanel" hidden>
     <h2>To do</h2>
-    <p class="lead">Next steps for the website and marketing, which you can tick off as you go.</p>
+    <p class="lead">Next steps for the website and marketing. Tick them off as you go.</p>
     <ul class="todo" id="todo"></ul>
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Ticks are saved in this browser only.</p>
+      <p class="note">Ticks stay in this browser only.</p>
     </details>
   </section>
 
@@ -661,10 +668,10 @@
 </main>
 
 <footer>
-  <p class="muted">Google numbers update every Monday morning, India time.</p>
+  <p class="muted">Google, YouTube and HubSpot numbers update every Monday morning, India time. Google Analytics means the opsera.ai 2026 property.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=32"></script>
+<script src="app.js?v=35"></script>
 </body>
 </html>
