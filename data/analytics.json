@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T15:45+05:30",
+ "pulled_at": "2026-10-22T16:27+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -10,7 +10,7 @@
   "engagedSessions": 7124
  },
  "split_sums": {
-  "daily": 24742,
+  "daily": 24743,
   "channels": 24934
  },
  "daily": [
@@ -316,9 +316,9 @@
   },
   {
    "date": "2026-10-21",
-   "sessions": 546,
-   "totalUsers": 492,
-   "engagedSessions": 154
+   "sessions": 547,
+   "totalUsers": 493,
+   "engagedSessions": 155
   }
  ],
  "channels": [
@@ -332,7 +332,7 @@
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 6656,
-   "totalUsers": 4167,
+   "totalUsers": 4168,
    "engagedSessions": 3229,
    "averageSessionDuration": 165.8623669701022
   },
@@ -704,8 +704,8 @@
   {
    "date": "2026-10-21",
    "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 152,
-   "engagedSessions": 72
+   "sessions": 153,
+   "engagedSessions": 73
   },
   {
    "date": "2026-09-20",
@@ -2565,7 +2565,7 @@
    "sessionSource": "google",
    "sessionMedium": "organic",
    "sessions": 6282,
-   "totalUsers": 3930,
+   "totalUsers": 3931,
    "engagedSessions": 3009,
    "averageSessionDuration": 167.71625433970075
   },
@@ -2603,7 +2603,7 @@
    "sessions": 319,
    "totalUsers": 188,
    "engagedSessions": 131,
-   "averageSessionDuration": 132.9543465987461
+   "averageSessionDuration": 132.95434659874607
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -5955,6 +5955,10 @@
    "views": 6
   },
   {
+   "page": "/blog/9-ways-you-can-improve-security-posture",
+   "views": 6
+  },
+  {
    "page": "/blog/a-journey-towards-devops-at-scale",
    "views": 6
   },
@@ -6264,10 +6268,6 @@
   },
   {
    "page": "/blog/4-ways-to-automate-security-in-software-development",
-   "views": 5
-  },
-  {
-   "page": "/blog/9-ways-you-can-improve-security-posture",
    "views": 5
   },
   {

@@ -15,7 +15,7 @@ from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
 
 START_DATE = "2026-09-01"   # Sep pulled from our own accounts for month-by-month comparison (agreed 22 Oct 2026)
-LEADS_START = "2026-10-01"  # Leads start in Oct: the old site sent some September forms only to Google, not HubSpot
+LEADS_START = START_DATE   # Sep added 22 Oct 2026; the old site sent 17 September form fills only to Google, not HubSpot (noted on the page)
 GA_PROPERTY_ID = "256856286"
 GA_PROPERTY_NAME = "opsera.ai 2026"
 GA_MEASUREMENT_ID = "G-63FKQPLYRW"

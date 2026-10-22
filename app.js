@@ -122,7 +122,7 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 };
 
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
-// or this month so far against the same days last month.
+// or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
   if (mode === "week") {
     const curEnd = toDate(last).getUTCDay() === 0 ? last : addDays(weekStart(last), -1);
@@ -133,11 +133,9 @@ function periodsFor(mode, start, last) {
   }
   const cur = { start: monthStart(last), end: last };
   const pStart = monthStart(addDays(cur.start, -1));
-  const pEnd = addDays(pStart, Math.min(toDate(last).getUTCDate(), toDate(monthEnd(pStart)).getUTCDate()) - 1);
-  const prev = { start: pStart, end: pEnd };
-  const full = last === monthEnd(last);
+  const prev = { start: pStart, end: monthEnd(pStart) };   // always the whole previous month
   return { cur, prev: prev.start >= start ? prev : null,
-    prevName: full ? monthName(pStart) : `Same days in ${monthName(pStart)}`,
+    prevName: `${monthName(pStart)}, full month`,
     none: `Comparison starts in ${MONTH_NAMES[(toDate(cur.start).getUTCMonth() + 1) % 12]}` };
 }
 
@@ -179,9 +177,11 @@ function compare(spec) {
   chart(`${spec.id}-cmp-chart`, (th) => {
     const m = spec.metrics[spec.metricIndex];
     const bk = periodBuckets(periodMode, spec.start, spec.last);
-    return { type: "bar", whole: m.whole !== false, yfmt: m.yfmt, reverse: m.lowerIsBetter && m.flip,
+    const values = bk.map((b) => m.value(b.start, b.end));
+    const asLine = m.whole === false;
+    return { type: asLine ? "line" : "bar", whole: m.whole !== false, yfmt: m.yfmt, reverse: m.lowerIsBetter && m.flip,
       ytitle: m.lowerIsBetter && m.flip ? "Higher on chart = better spot" : undefined,
-      data: { labels: bk.map((b) => b.label), datasets: [bar(m.label, bk.map((b) => m.value(b.start, b.end)), th.s[0])] },
+      data: { labels: bk.map((b) => b.label), datasets: [asLine ? { ...line(m.label, values, th.s[0]), pointRadius: 4 } : bar(m.label, values, th.s[0])] },
       tooltip: { label: (c) => ` ${m.label}: ${m.fmt(c.parsed.y ?? c.parsed.x)}` } };
   });
   fillCompare(spec);
@@ -342,7 +342,16 @@ function renderVisits(d) {
 
   $("visits-channels-source").textContent = `${src}, ${when}.`;
   $("visits-channels-table-source").textContent = `${src}, ${when}.`;
-  const ch = d.channels.map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup), engaged: (r.engagedSessions / r.sessions) * 100 }))
+  // Groups under 20 visits share one "Small sources" line; the Every source table still lists each one.
+  const SMALL = 20;
+  const small = d.channels.filter((r) => r.sessions < SMALL);
+  const grouped = d.channels.filter((r) => r.sessions >= SMALL).map((r) => ({ ...r, name: channelName(r.sessionDefaultChannelGroup) }));
+  if (small.length) {
+    const add = (k) => small.reduce((t2, r) => t2 + r[k], 0);
+    grouped.push({ name: `Small sources (under ${SMALL} visits each)`, sessions: add("sessions"), engagedSessions: add("engagedSessions"), totalUsers: null,
+      averageSessionDuration: add("sessions") ? small.reduce((t2, r) => t2 + r.averageSessionDuration * r.sessions, 0) / add("sessions") : 0 });
+  }
+  const ch = grouped.map((r) => ({ ...r, engaged: (r.engagedSessions / r.sessions) * 100 }))
     .sort((a, b) => b.engagedSessions - a.engagedSessions);
   chart("visits-channels", (th) => ({
     type: "bar", horizontal: true,
@@ -498,12 +507,6 @@ function renderLinkedIn(d) {
     card("Engagements", num(sum(k.daily, "engagements")), "Reactions, comments, shares and clicks combined") +
     card("Followers gained", num(sum(k.followers_daily, "gained")));
   $("li-k-key-source").textContent = kSrc;
-  const kSeenWeeks = weekly(k.daily, "seen", d.start_date, d.end_date);
-  chart("li-k-key-chart", (th) => ({
-    type: "bar", whole: true,
-    data: { labels: kSeenWeeks.map((w) => w.label), datasets: [bar("Times seen", kSeenWeeks.map((w) => w.value), th.s[0])] },
-  }));
-  $("li-k-key-chart-source").textContent = kSrc;
 
   // Company page
   $("li-co-source").textContent = coSrc;

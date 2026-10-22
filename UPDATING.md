@@ -27,7 +27,7 @@ The Kahoots and Infrasity tabs are kept exactly as reported. Their numbers live 
 
 ## Week by week or month by month
 
-The switch at the top of the page changes every tab at once. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the same days last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
+The switch at the top of the page changes every tab at once. Week by week compares the last full Monday-to-Sunday week with the week before. Month by month compares this month so far with the whole of last month. The Kahoots and Infrasity tabs were reported by month, so they always compare September with August.
 
 ## The LinkedIn tabs
 
