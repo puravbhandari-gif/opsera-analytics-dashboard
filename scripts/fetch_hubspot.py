@@ -36,7 +36,8 @@ EVENT_LISTS = [   # (key, line label, exact HubSpot list name, note)
 ]
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
 CONTACT_PROPS = ["createdate", "hs_object_source", "hs_analytics_source", "hs_analytics_source_data_1", "hs_analytics_source_data_2",
-                 "hs_analytics_first_referrer", "utm_source", "utm_source_fc", "utm_source_rc", "luma_referrer"]
+                 "hs_analytics_first_referrer", "utm_source", "utm_source_fc", "utm_source_rc", "luma_referrer",
+                 "first_conversion_event_name", "recent_conversion_event_name"]
 
 
 def stop(msg):
@@ -131,7 +132,8 @@ def main():
     contacts = {}
     for c in forms:
         p = c["properties"]
-        contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p)}
+        contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p),
+                             "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)"}
 
     # Event lists, each its own line. Luma-imported guests also count as marketing contacts (line "luma").
     found = {l["name"]: l for l in call(s, "POST", "/crm/v3/lists/search", json={"query": "", "count": 500}).get("lists", [])}
@@ -164,7 +166,7 @@ def main():
                         joined_on = next((pacific_day(m["membershipTimestamp"]) for m in members if str(m["recordId"]) == c["id"] and m.get("membershipTimestamp")),
                                          pacific_day(p["createdate"]))
                         contacts[c["id"]] = {"line": "luma", "date": joined_on, "channel": "linkedin" if linkedin_fields(p) else "events",
-                                             "linkedin_fields": linkedin_fields(p)}
+                                             "linkedin_fields": linkedin_fields(p), "demo": False, "first_form": "(Luma import)"}
 
     # Deals linked to a marketing contact. Only deals created on or after the day the person became a
     # marketing contact count as pipeline; older deals mark the person as an existing customer (agreed 22 Oct 2026).
@@ -187,7 +189,7 @@ def main():
                 if created < first["date"]:
                     existing.update(owner_ids)
                 pipeline, stage, closed, prob = stages.get(p.get("dealstage"), ("Unknown", "Unknown", False, 0))
-                deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"],
+                deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"], "demo": first["demo"],
                                   "counts": "marketing" if created >= first["date"] else "existing",
                                   "amount": float(p.get("amount") or 0), "pipeline": pipeline, "stage": stage,
                                   "won": closed and prob >= 1, "lost": closed and prob == 0})
@@ -212,7 +214,7 @@ def main():
             kind = "upcoming"
         else:
             kind = "booked"
-        meeting_rows.append({"date": day, "channel": first["channel"], "line": first["line"], "kind": kind})
+        meeting_rows.append({"date": day, "channel": first["channel"], "line": first["line"], "kind": kind, "demo": first["demo"]})
 
     # HubSpot campaigns named after the events, and how many contacts each is tagged with
     campaigns, all_campaigns, after = [], [], None
@@ -249,16 +251,17 @@ def main():
     else:
         campaigns = f"{r.status_code}: {r.text[:200]}"
 
-    daily = collections.Counter((c["date"], c["line"], c["channel"]) for c in contacts.values())
+    daily = collections.Counter((c["date"], c["line"], c["channel"], c["demo"]) for c in contacts.values())
     out = {
         "source": "HubSpot", "start_date": START_DATE, "end_date": end,
         "pulled_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
-        "contacts_daily": [{"date": d, "line": l, "channel": ch, "count": n} for (d, l, ch), n in sorted(daily.items())],
+        "contacts_daily": [{"date": d, "line": l, "channel": ch, "demo": dm, "count": n} for (d, l, ch, dm), n in sorted(daily.items())],
+        "first_forms": collections.Counter(c["first_form"] for c in contacts.values() if c["line"] == "form").most_common(30),
         "existing_customers": len(existing),
         "linkedin_fields": collections.Counter(f for c in contacts.values() for f in c["linkedin_fields"]).most_common(),
         "linkedin_contacts": sum(1 for c in contacts.values() if c["channel"] == "linkedin"),
-        "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "count": n}
-                           for (d, l, ch, k), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"]) for m in meeting_rows).items())],
+        "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "demo": dm, "count": n}
+                           for (d, l, ch, k, dm), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"], m["demo"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
         "deals": sorted(deal_rows, key=lambda d: d["date"]),
         "events": events,
@@ -276,6 +279,8 @@ def main():
           f"(${sum(d['amount'] for d in deal_rows if d['counts'] == 'marketing'):,.0f}), existing {sum(1 for d in deal_rows if d['counts'] == 'existing')}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  campaigns:", campaigns)
+    print("  first forms of form contacts:", out["first_forms"][:12])
+    print(f"  demo-form contacts: {sum(1 for c in contacts.values() if c['demo'])}")
 
 
 if __name__ == "__main__":
