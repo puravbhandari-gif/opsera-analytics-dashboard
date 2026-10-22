@@ -16,6 +16,7 @@ import collections
 import datetime as dt
 import json
 import os
+import re
 import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -34,6 +35,8 @@ EVENT_LISTS = [   # (key, line label, exact HubSpot list name, note)
     ("tokenomics", "Tokenomics webinar", "DG-FY27-Q3-Tokenomics-Webinar", "May overlap with the website event form"),
     ("gartner_scans", "Gartner booth scans", "Gartner IT Symposium 2026 booth scans", "Booth scans, not sign-ups"),
 ]
+AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perplexity", r"perplexity"),
+            ("claude", r"claude|anthropic"), ("copilot", r"copilot")]   # same as scripts/fetch_data.py
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
 CONTACT_PROPS = ["createdate", "hs_object_source", "hs_analytics_source", "hs_analytics_source_data_1", "hs_analytics_source_data_2",
                  "hs_analytics_first_referrer", "utm_source", "utm_source_fc", "utm_source_rc", "luma_referrer",
@@ -138,6 +141,14 @@ def summarise_deals(deal_rows):
     }
 
 
+def ai_tool(p):
+    text = f"{p.get('hs_analytics_source_data_1') or ''} {p.get('hs_analytics_first_referrer') or ''}"
+    for key, pattern in AI_TOOLS:
+        if re.search(pattern, text, re.I):
+            return key
+    return "other" if p.get("hs_analytics_source") == "AI_REFERRALS" else None
+
+
 def main():
     s = session()
     end = (dt.datetime.now(PACIFIC).date() - dt.timedelta(days=1)).isoformat()
@@ -152,7 +163,8 @@ def main():
             job_applicants += 1   # people applying for jobs aren't marketing contacts, same as the Leads tab
             continue
         contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p),
-                             "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)"}
+                             "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)",
+                             "tool": ai_tool(p)}
 
     # Event lists, each its own line. Luma-imported guests also count as marketing contacts (line "luma").
     found = {l["name"]: l for l in call(s, "POST", "/crm/v3/lists/search", json={"query": "", "count": 500}).get("lists", [])}
@@ -208,7 +220,7 @@ def main():
                 if created < first["date"]:
                     existing.update(owner_ids)
                 pipeline, stage, closed, prob = stages.get(p.get("dealstage"), ("Unknown", "Unknown", False, 0))
-                deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"], "demo": first["demo"],
+                deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"], "demo": first["demo"], "tool": first.get("tool"),
                                   "counts": "marketing" if created >= first["date"] else "existing",
                                   "amount": float(p.get("amount") or 0), "pipeline": pipeline, "stage": stage,
                                   "won": closed and prob >= 1, "lost": closed and prob == 0})
@@ -275,6 +287,12 @@ def main():
         "source": "HubSpot", "start_date": START_DATE, "end_date": end,
         "pulled_at": dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
         "contacts_daily": [{"date": d, "line": l, "channel": ch, "demo": dm, "count": n} for (d, l, ch, dm), n in sorted(daily.items())],
+        "ai_contacts_daily": [{"date": d, "tool": tl, "demo": dm, "count": n} for (d, tl, dm), n in sorted(collections.Counter(
+            (c["date"], c["tool"], c["demo"]) for c in contacts.values() if c.get("tool")).items())],
+        "ai_deals_daily": [{"date": d, "tool": tl, "count": n, "amount": a} for (d, tl), (n, a) in sorted({
+            (x["date"], x["tool"]): (sum(1 for y in deal_rows if y["counts"] == "marketing" and y.get("tool") == x["tool"] and y["date"] == x["date"]),
+                                     sum(y["amount"] for y in deal_rows if y["counts"] == "marketing" and y.get("tool") == x["tool"] and y["date"] == x["date"]))
+            for x in deal_rows if x["counts"] == "marketing" and x.get("tool")}.items())],
         "first_forms": collections.Counter(c["first_form"] for c in contacts.values() if c["line"] == "form").most_common(30),
         "existing_customers": len(existing),
         "job_applicants_left_out": job_applicants,
@@ -301,6 +319,7 @@ def main():
     print("  campaigns:", campaigns)
     print("  first forms of form contacts:", out["first_forms"][:12])
     print(f"  demo-form contacts: {sum(1 for c in contacts.values() if c['demo'])}")
+    print("  AI-tool contacts:", dict(collections.Counter(c["tool"] for c in contacts.values() if c.get("tool"))))
 
 
 if __name__ == "__main__":
