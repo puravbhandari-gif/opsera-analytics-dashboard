@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:48+05:30",
+ "pulled_at": "2026-10-22T18:57+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -10516,7 +10516,7 @@
    "sessions": 70,
    "totalUsers": 30,
    "engagedSessions": 38,
-   "averageSessionDuration": 293.4381292857143
+   "averageSessionDuration": 293.43812928571424
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -15256,7 +15256,7 @@
  "pages": [
   {
    "page": "/",
-   "views": 21291
+   "views": 21328
   },
   {
    "page": "/hs/preferences-center/en/direct",
@@ -15268,7 +15268,7 @@
   },
   {
    "page": "/careers",
-   "views": 3568
+   "views": 3569
   },
   {
    "page": "/about",
@@ -15280,7 +15280,7 @@
   },
   {
    "page": "/agents",
-   "views": 2651
+   "views": 2652
   },
   {
    "page": "/platform",
@@ -15320,7 +15320,7 @@
   },
   {
    "page": "/blog",
-   "views": 936
+   "views": 939
   },
   {
    "page": "/careers/salesforce-devops-sales-engineer",
@@ -15376,7 +15376,7 @@
   },
   {
    "page": "/flutter-2026-ai-sdlc-summit",
-   "views": 630
+   "views": 631
   },
   {
    "page": "/wp-json/oembed/1.0/embed",
@@ -15432,7 +15432,7 @@
   },
   {
    "page": "/integrations",
-   "views": 384
+   "views": 385
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-dx",
@@ -15756,7 +15756,7 @@
   },
   {
    "page": "/customer-stories/cisco",
-   "views": 89
+   "views": 90
   },
   {
    "page": "/blog/best-devops-tools",
@@ -17571,6 +17571,10 @@
    "views": 14
   },
   {
+   "page": "/ecosystem/travis-ci",
+   "views": 14
+  },
+  {
    "page": "/resources/comparison-guides/opsera-vs-swarmia",
    "views": 14
   },
@@ -17783,15 +17787,15 @@
    "views": 12
   },
   {
+   "page": "/ecosystem/github",
+   "views": 12
+  },
+  {
    "page": "/resources/devops-huddles/episode-21-dreamforce-2024-preview-everything-new-for-salesforce",
    "views": 12
   },
   {
    "page": "/blog/g2-names-opsera-a-high-performer-across-devops-and-automation-categories-in-g2-winter-2022-report",
-   "views": 12
-  },
-  {
-   "page": "/ecosystem/travis-ci",
    "views": 12
   },
   {
@@ -17860,10 +17864,6 @@
   },
   {
    "page": "/ecosystem/cypress",
-   "views": 11
-  },
-  {
-   "page": "/ecosystem/github",
    "views": 11
   },
   {
@@ -17940,6 +17940,10 @@
   },
   {
    "page": "/newsroom/opsera-extends-unified-insights-and-actionable-intelligence-for-github-actions-workflows",
+   "views": 11
+  },
+  {
+   "page": "/ecosystem/dynatrace",
    "views": 11
   },
   {
@@ -18159,10 +18163,6 @@
    "views": 9
   },
   {
-   "page": "/ecosystem/dynatrace",
-   "views": 9
-  },
-  {
    "page": "/newsroom/opsera-extends-no-code-devops-orchestration-platform-to-salesforce-release-automation",
    "views": 9
   },
@@ -18200,10 +18200,6 @@
   },
   {
    "page": "/-temporary-slug-10a12b70-6a8f-41fc-b298-69cd9effb95c",
-   "views": 8
-  },
-  {
-   "page": "/-temporary-slug-39d662c2-0694-460f-8=",
    "views": 8
   },
   {
@@ -18271,7 +18267,7 @@
    "views": 8
   },
   {
-   "page": "/hs/preferences-center/en/page=",
+   "page": "/hs/preferences-center/en",
    "views": 8
   },
   {
@@ -18512,14 +18508,6 @@
   },
   {
    "page": "/-temporary-slug-2395d41d-cad7-49a4-ae55-1aebf6d916e3",
-   "views": 6
-  },
-  {
-   "page": "/-temporary-slug-a33410af-cc68-4019-8=",
-   "views": 6
-  },
-  {
-   "page": "/-temporary-slug-e816969f-be7e-4a23-b=",
    "views": 6
   },
   {
@@ -19095,6 +19083,10 @@
    "views": 4
   },
   {
+   "page": "/1",
+   "views": 4
+  },
+  {
    "page": "/-temporary-slug-60dd9b26-d14e-47ca-939c-f53963e26555",
    "views": 3
   },
@@ -19403,10 +19395,6 @@
    "views": 2
   },
   {
-   "page": "/-temporary-slug-e4ae1339-8902-4fd0-ba7=",
-   "views": 2
-  },
-  {
    "page": "/-temporary-slug-e77b8421-892b-44e0-bcb0-83d27ce95de9",
    "views": 2
   },
@@ -19507,10 +19495,6 @@
    "views": 2
   },
   {
-   "page": "/contactsupport@opsera.ai/",
-   "views": 2
-  },
-  {
    "page": "/contactus-ai-agents",
    "views": 2
   },
@@ -19531,19 +19515,11 @@
    "views": 2
   },
   {
-   "page": "/ecosystem/dynatrace/1444.a.e.l144.9e6d1.@cyberfusion.@centralbankei.bpczf",
-   "views": 2
-  },
-  {
    "page": "/ecosystem/openstack",
    "views": 2
   },
   {
    "page": "/ecosystem/rancher",
-   "views": 2
-  },
-  {
-   "page": "/ecosystem/travis-ci/1444.a.e.l144.9e6d1.@cyberfusion.hmac dtwe icbc idsa yfsa hyzr d9uz.1444.a.e.l144.9e6d1.@cyberfusion.pti.@centralbankei.@international.@billpaid",
    "views": 2
   },
   {
@@ -19823,11 +19799,19 @@
    "views": 2
   },
   {
+   "page": "/2",
+   "views": 2
+  },
+  {
    "page": "/f5",
    "views": 2
   },
   {
    "page": "/resources/reports/2026-ai-coding-impact-benchmark-report",
+   "views": 2
+  },
+  {
+   "page": "/wp-content/uploads/2025/07",
    "views": 2
   },
   {
@@ -19879,10 +19863,6 @@
    "views": 1
   },
   {
-   "page": "/-temporary-slug-21acdf95-dc7e-41c9-bef=",
-   "views": 1
-  },
-  {
    "page": "/-temporary-slug-23984d64-d10f-400f-babf-4cb92fed328e",
    "views": 1
   },
@@ -19900,10 +19880,6 @@
   },
   {
    "page": "/-temporary-slug-2e911c5a-b993-45c6-a1e1-5d807daba297",
-   "views": 1
-  },
-  {
-   "page": "/-temporary-slug-2e911c5a-b993-45c6-a1e=",
    "views": 1
   },
   {
@@ -20031,10 +20007,6 @@
    "views": 1
   },
   {
-   "page": "/-temporary-slug-8c3682d5-bc55-4e60-9d1=",
-   "views": 1
-  },
-  {
    "page": "/-temporary-slug-8c3682d5-bc55-4e60-9d1c-2ad98a28d735",
    "views": 1
   },
@@ -20083,23 +20055,11 @@
    "views": 1
   },
   {
-   "page": "/-temporary-slug-b99a719d-8640-4a9a-aaa=",
-   "views": 1
-  },
-  {
    "page": "/-temporary-slug-c5d30252-3b9f-4df9-bda2-dc74a4e5c210",
    "views": 1
   },
   {
    "page": "/-temporary-slug-c6092bc1-ed01-4344-a464-4af516b1a6b5",
-   "views": 1
-  },
-  {
-   "page": "/-temporary-slug-c8a8ab8b-845d-45e6-91a=",
-   "views": 1
-  },
-  {
-   "page": "/-temporary-slug-c9c8893f-a145-4d12-80e=",
    "views": 1
   },
   {
@@ -20115,19 +20075,11 @@
    "views": 1
   },
   {
-   "page": "/-temporary-slug-debaf368-ea71-45bf-8d4=",
-   "views": 1
-  },
-  {
    "page": "/-temporary-slug-e1ff78d9-ccaa-4b11-84d0-77354fbaf5f8",
    "views": 1
   },
   {
    "page": "/-temporary-slug-e23d95b2-a3f5-4c86-b760-79de3eda26e6",
-   "views": 1
-  },
-  {
-   "page": "/-temporary-slug-e816969f-be7e-4a23-b29=",
    "views": 1
   },
   {
@@ -20163,35 +20115,7 @@
    "views": 1
   },
   {
-   "page": "/1/0111019e8d5b0c7e-c8e05215-2f70-4356-b=",
-   "views": 1
-  },
-  {
-   "page": "/1/0111019e8d5b0c7e-c8e05215-2f70-4356-be5d-7d7ff0=",
-   "views": 1
-  },
-  {
-   "page": "/1/0111019fadbf18b4-ffbf3f97-6f8d-4f0e-8=",
-   "views": 1
-  },
-  {
-   "page": "/1/0111019fadbf18b4-ffbf3f97-6f8d-4f0e-8dcb-5aaf74=",
-   "views": 1
-  },
-  {
-   "page": "/2/0111019e8d5b0c7e-c8e05215-2f70-4356-be5d-7d7ff0=",
-   "views": 1
-  },
-  {
-   "page": "/2/0111019fadbf18b4-ffbf3f97-6f8d-4f0e-8dcb-5aaf74=",
-   "views": 1
-  },
-  {
    "page": "/404",
-   "views": 1
-  },
-  {
-   "page": "/;dmarc=pass",
    "views": 1
   },
   {
@@ -20239,10 +20163,6 @@
    "views": 1
   },
   {
-   "page": "/agents/vi=",
-   "views": 1
-  },
-  {
    "page": "/agents/vibeshift/[reference:2]",
    "views": 1
   },
@@ -20263,11 +20183,11 @@
    "views": 1
   },
   {
-   "page": "/api/mailings/click/PMRGSZBCHIZDQMJTGA2CYITVOJWCEORCNB2HI4DTHIXS65=",
+   "page": "/api/mailings/click",
    "views": 1
   },
   {
-   "page": "/api/mailings/opened/PMRGSZBCHIZTEMJQGA2CYITPOJTSEORCMU4GINLEGMYW=",
+   "page": "/api/mailings/opened",
    "views": 1
   },
   {
@@ -20287,19 +20207,7 @@
    "views": 1
   },
   {
-   "page": "/blog/13-code-quality-metrics-that-you-must-track&sa=U&ved=2ahUKEwjj--OQyqyKAxUm4TgGHbz4BzAQFnoECAMQDQ&usg=AOvVaw1FEEJ960uEdyC6JQEXb8ah",
-   "views": 1
-  },
-  {
-   "page": "/blog/13-code-quality-metrics-that-you-must-track&sa=U&ved=2ahUKEwjj--OQyqyKAxUm4TgGHbz4BzAQlqUEegQIAxAO&usg=AOvVaw3mByV3k_6xP1qV3RweyAw8",
-   "views": 1
-  },
-  {
    "page": "/blog/2026-01-15-ai-code-generation-productivity-report",
-   "views": 1
-  },
-  {
-   "page": "/blog/=",
    "views": 1
   },
   {
@@ -20435,10 +20343,6 @@
    "views": 1
   },
   {
-   "page": "/careers/1444.a.e.l144.9e6d1.@cyberfusion.cbff58c5030858sss.l1762658 85812 926909l001",
-   "views": 1
-  },
-  {
    "page": "/case-study/nortonlifelock",
    "views": 1
   },
@@ -20507,10 +20411,6 @@
    "views": 1
   },
   {
-   "page": "/customer-stories/cisco/1444.a.e.l144.9e6d1.@cyberfusion",
-   "views": 1
-  },
-  {
    "page": "/customers/honeywell",
    "views": 1
   },
@@ -20555,10 +20455,6 @@
    "views": 1
   },
   {
-   "page": "/ecosystem/github/1444.a.e.l144.9e6d1.@cyberfusion.autofix.ci.cd/ui",
-   "views": 1
-  },
-  {
    "page": "/en/careers",
    "views": 1
   },
@@ -20592,10 +20488,6 @@
   },
   {
    "page": "/feature/et-api",
-   "views": 1
-  },
-  {
-   "page": "/flutter-2026-ai-sdlc-summit/utm_campaign=51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8nEEbBEw2-s8xt4R2oYdMoDNHPOlvt8cscbqHfmAYNdVDTYMI41zmAp5kBXxrNHZrPjr6P",
    "views": 1
   },
   {
@@ -20691,27 +20583,11 @@
    "views": 1
   },
   {
-   "page": "/hs-f=",
-   "views": 1
-  },
-  {
-   "page": "/hs-fs=",
-   "views": 1
-  },
-  {
-   "page": "/hs/preferences-center/en=",
-   "views": 1
-  },
-  {
-   "page": "/hs=",
+   "page": "/hs/preferences-center",
    "views": 1
   },
   {
    "page": "/insights-demo",
-   "views": 1
-  },
-  {
-   "page": "/integrations/1444.a.e.l144.9e6d1.@cyberfusion.entreprise ai accelerated hmac",
    "views": 1
   },
   {
@@ -21071,14 +20947,6 @@
    "views": 1
   },
   {
-   "page": "/wp-content/uploads/2025/07/5f2ba11e378c8f49e8b28486_argo.png&download=true",
-   "views": 1
-  },
-  {
-   "page": "/wp-content/uploads/2025/07/5f2f44a3fe54f0baba461524_terraform-logo.png&download=true",
-   "views": 1
-  },
-  {
    "page": "/wp-content/uploads/2025/07/5f3a4cc9b3a3c780263afb1f_Instana_logo.png",
    "views": 1
   },
@@ -21104,10 +20972,6 @@
   },
   {
    "page": "/wp-content/uploads/2026/01/customer-stories-network-1024x538.png",
-   "views": 1
-  },
-  {
-   "page": "/wp-content=",
    "views": 1
   },
   {
@@ -23636,6 +23500,12 @@
     "engaged": 8
    },
    {
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "group": "untagged",
+    "visits": 11,
+    "engaged": 6
+   },
+   {
     "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
     "group": "untagged",
     "visits": 10,
@@ -23646,12 +23516,6 @@
     "group": "untagged",
     "visits": 10,
     "engaged": 5
-   },
-   {
-    "page": "/flutter-2026-ai-sdlc-summit",
-    "group": "untagged",
-    "visits": 10,
-    "engaged": 6
    },
    {
     "page": "/events/flutter-the-ai-sdlc-summit",
@@ -24090,12 +23954,6 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 1
-   },
-   {
-    "page": "/flutter-2026-ai-sdlc-summit/utm_campaign=51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8nEEbBEw2-s8xt4R2oYdMoDNHPOlvt8cscbqHfmAYNdVDTYMI41zmAp5kBXxrNHZrPjr6P",
-    "group": "untagged",
-    "visits": 1,
-    "engaged": 0
    },
    {
     "page": "/for/HubSpot",
@@ -30791,7 +30649,7 @@
    },
    {
     "date": "2026-09-22",
-    "page": "/flutter-2026-ai-sdlc-summit/utm_campaign=51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8nEEbBEw2-s8xt4R2oYdMoDNHPOlvt8cscbqHfmAYNdVDTYMI41zmAp5kBXxrNHZrPjr6P",
+    "page": "/flutter-2026-ai-sdlc-summit",
     "group": "untagged",
     "visits": 1,
     "engaged": 0

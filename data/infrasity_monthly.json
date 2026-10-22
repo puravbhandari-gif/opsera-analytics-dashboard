@@ -1,3 +1,3 @@
-[{"month":"2026-07","google_clicks":2436,"times_shown":1332897,"click_rate_pct":0.18,"avg_spot":8.5,"forge_page_clicks":196},
-{"month":"2026-08","google_clicks":2315,"times_shown":988995,"click_rate_pct":0.23,"avg_spot":10.5,"forge_page_clicks":194},
-{"month":"2026-09","google_clicks":2453,"times_shown":540000,"click_rate_pct":0.45,"avg_spot":10.6,"forge_page_clicks":480}]
+[{"month": "2026-07", "google_clicks": 2436, "times_shown": 1332897, "click_rate_pct": 0.18, "avg_spot": 8.5, "forge_page_clicks": 196},
+{"month": "2026-08", "google_clicks": 2315, "times_shown": 988995, "click_rate_pct": 0.23, "avg_spot": 10.5, "forge_page_clicks": 194},
+{"month": "2026-09", "google_clicks": 2453, "times_shown": 540000, "click_rate_pct": 0.45, "avg_spot": 10.6, "forge_page_clicks": 480, "reported": {"times_shown": "540K", "click_rate_pct_change": "+94.1%"}}]

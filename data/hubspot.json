@@ -2,7 +2,7 @@
  "source": "HubSpot",
  "start_date": "2026-04-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:52+05:30",
+ "pulled_at": "2026-10-22T18:56+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -2281,7 +2281,6 @@
    "count": 1
   }
  ],
- "ai_deals_daily": [],
  "first_forms": [
   [
    "AI Coding Impact 2026 Benchmark Report - Opsera: DG-FY26-Q4-AI-BM-Report",
@@ -2948,56 +2947,186 @@
   }
  ],
  "meetings_all_calendar": 800,
- "deals_daily": [
+ "deals_weekly": [
   {
-   "date": "2026-04-30",
+   "start": "2026-04-27",
+   "end": "2026-05-03",
    "channel": "direct",
-   "line": "form",
    "demo": true,
-   "count": 1,
-   "amount": 100000.0
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 100000.0,
+   "won_count": 0,
+   "won_amount": 0.0
   },
   {
-   "date": "2026-05-08",
+   "start": "2026-05-04",
+   "end": "2026-05-10",
    "channel": "search",
-   "line": "form",
    "demo": false,
-   "count": 1,
-   "amount": 150000.0
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
   },
   {
-   "date": "2026-06-10",
+   "start": "2026-06-08",
+   "end": "2026-06-14",
    "channel": "other",
-   "line": "form",
    "demo": true,
-   "count": 1,
-   "amount": 150000.0
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
   },
   {
-   "date": "2026-08-13",
+   "start": "2026-08-10",
+   "end": "2026-08-16",
    "channel": "direct",
-   "line": "form",
    "demo": true,
-   "count": 1,
-   "amount": 150000.0
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
   },
   {
-   "date": "2026-09-09",
+   "start": "2026-10-05",
+   "end": "2026-10-11",
    "channel": "search",
-   "line": "form",
-   "demo": false,
-   "count": 1,
-   "amount": 30000.0
-  },
-  {
-   "date": "2026-10-07",
-   "channel": "search",
-   "line": "form",
    "demo": true,
-   "count": 1,
-   "amount": 150000.0
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
   }
  ],
+ "deals_monthly": [
+  {
+   "start": "2026-04-01",
+   "end": "2026-04-30",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 100000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-05-01",
+   "end": "2026-05-31",
+   "channel": "search",
+   "demo": false,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-06-01",
+   "end": "2026-06-30",
+   "channel": "other",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-08-01",
+   "end": "2026-08-31",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-10-01",
+   "end": "2026-10-21",
+   "channel": "search",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  }
+ ],
+ "deals_quarters": [
+  {
+   "start": "2026-07-22",
+   "end": "2026-10-21",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-07-22",
+   "end": "2026-10-21",
+   "channel": "search",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-04-22",
+   "end": "2026-07-21",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 100000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-04-22",
+   "end": "2026-07-21",
+   "channel": "search",
+   "demo": false,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  },
+  {
+   "start": "2026-04-22",
+   "end": "2026-07-21",
+   "channel": "other",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0
+  }
+ ],
+ "deals_total": {
+  "open_count": 5,
+  "open_amount": 700000.0,
+  "won_count": 0,
+  "won_amount": 0
+ },
+ "deals_lost": {
+  "count": 1
+ },
  "deals_by_stage": [
   [
    "2 Demo",
@@ -3006,10 +3135,6 @@
   [
    "3 POC",
    2
-  ],
-  [
-   "8 ClosedLost",
-   1
   ]
  ],
  "existing_deals": {

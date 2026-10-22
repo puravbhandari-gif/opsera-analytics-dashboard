@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:48+05:30",
+ "pulled_at": "2026-10-22T18:57+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai",
  "last_day_with_data": "2026-10-20",
  "daily": [
@@ -1707,20 +1707,22 @@
   {
    "page": "https://opsera.ai/contact",
    "clicks": 84,
-   "times_shown": 5471,
+   "times_shown": 5473,
    "variants": [
     "https://opsera.ai/contact/",
-    "https://opsera.ai/contact"
+    "https://opsera.ai/contact",
+    "https://opsera.ai/contact?trk=public_post_reshare-text"
    ],
    "avg_spot": 4.9,
-   "click_rate_pct": 1.54
+   "click_rate_pct": 1.53
   },
   {
    "page": "https://opsera.ai/platform/unified-insights",
    "clicks": 80,
-   "times_shown": 11311,
+   "times_shown": 11330,
    "variants": [
-    "https://opsera.ai/platform/unified-insights/"
+    "https://opsera.ai/platform/unified-insights/",
+    "https://opsera.ai/platform/unified-insights?wtime={seek_to_second_number}"
    ],
    "avg_spot": 6.9,
    "click_rate_pct": 0.71
@@ -2141,9 +2143,10 @@
   {
    "page": "https://opsera.ai/job-application",
    "clicks": 22,
-   "times_shown": 2158,
+   "times_shown": 2160,
    "variants": [
-    "https://opsera.ai/job-application/"
+    "https://opsera.ai/job-application/",
+    "https://opsera.ai/job-application?weekdayJdUid=567858"
    ],
    "avg_spot": 7.1,
    "click_rate_pct": 1.02
@@ -2161,12 +2164,13 @@
   {
    "page": "https://opsera.ai/resources",
    "clicks": 22,
-   "times_shown": 19861,
+   "times_shown": 19921,
    "variants": [
     "https://opsera.ai/resources/",
-    "https://opsera.ai/resources"
+    "https://opsera.ai/resources",
+    "https://opsera.ai/resources?b6ae48ed_page=6"
    ],
-   "avg_spot": 25.4,
+   "avg_spot": 25.3,
    "click_rate_pct": 0.11
   },
   {
@@ -4172,12 +4176,13 @@
   {
    "page": "https://docs.agents.opsera.ai/terminal-setup/vs-code",
    "clicks": 2,
-   "times_shown": 109,
+   "times_shown": 111,
    "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/vs-code"
+    "https://docs.agents.opsera.ai/terminal-setup/vs-code",
+    "https://docs.agents.opsera.ai/terminal-setup/vs-code?ask=What+prerequisites+should+you+complete+before+starting+Opsera+Agents%3F"
    ],
-   "avg_spot": 18.3,
-   "click_rate_pct": 1.83
+   "avg_spot": 18.1,
+   "click_rate_pct": 1.8
   },
   {
    "page": "https://docs.opsera.ai/build-and-publish/database/liquibase-database-migrations",
@@ -4256,10 +4261,11 @@
   {
    "page": "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact",
    "clicks": 2,
-   "times_shown": 8646,
+   "times_shown": 8713,
    "variants": [
     "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact/",
-    "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact"
+    "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact",
+    "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact?ct_p2056i86409db80a=1.1.365.DEsEvQfABvdFETOG.365.DEsEvQfABvdFETOG.DEsEvQfABvdFETOG.null"
    ],
    "avg_spot": 11.1,
    "click_rate_pct": 0.02
@@ -4778,12 +4784,16 @@
   {
    "page": "https://docs.agents.opsera.ai/terminal-setup/claude-desktop",
    "clicks": 1,
-   "times_shown": 88,
+   "times_shown": 116,
    "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop"
+    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop",
+    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#before-you-begin",
+    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#setup-choose-your-method",
+    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#verify-its-working",
+    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#what-youll-accomplish"
    ],
-   "avg_spot": 8.4,
-   "click_rate_pct": 1.14
+   "avg_spot": 7.5,
+   "click_rate_pct": 0.86
   },
   {
    "page": "https://docs.opsera.ai/build-and-publish/builds/npm-nodebuild",
@@ -6076,46 +6086,6 @@
    "click_rate_pct": 0.0
   },
   {
-   "page": "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#before-you-begin",
-   "clicks": 0,
-   "times_shown": 1,
-   "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#before-you-begin"
-   ],
-   "avg_spot": 4.0,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#setup-choose-your-method",
-   "clicks": 0,
-   "times_shown": 9,
-   "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#setup-choose-your-method"
-   ],
-   "avg_spot": 4.4,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#verify-its-working",
-   "clicks": 0,
-   "times_shown": 9,
-   "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#verify-its-working"
-   ],
-   "avg_spot": 4.4,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#what-youll-accomplish",
-   "clicks": 0,
-   "times_shown": 9,
-   "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/claude-desktop#what-youll-accomplish"
-   ],
-   "avg_spot": 4.4,
-   "click_rate_pct": 0.0
-  },
-  {
    "page": "https://docs.agents.opsera.ai/terminal-setup/cursor-ide",
    "clicks": 0,
    "times_shown": 166,
@@ -6123,16 +6093,6 @@
     "https://docs.agents.opsera.ai/terminal-setup/cursor-ide"
    ],
    "avg_spot": 6.3,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://docs.agents.opsera.ai/terminal-setup/vs-code?ask=What+prerequisites+should+you+complete+before+starting+Opsera+Agents%3F",
-   "clicks": 0,
-   "times_shown": 2,
-   "variants": [
-    "https://docs.agents.opsera.ai/terminal-setup/vs-code?ask=What+prerequisites+should+you+complete+before+starting+Opsera+Agents%3F"
-   ],
-   "avg_spot": 6.5,
    "click_rate_pct": 0.0
   },
   {
@@ -8505,16 +8465,6 @@
    "click_rate_pct": 0.0
   },
   {
-   "page": "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact?ct_p2056i86409db80a=1.1.365.DEsEvQfABvdFETOG.365.DEsEvQfABvdFETOG.DEsEvQfABvdFETOG.null",
-   "clicks": 0,
-   "times_shown": 67,
-   "variants": [
-    "https://opsera.ai/blog/github-copilot-trends-and-measuring-impact?ct_p2056i86409db80a=1.1.365.DEsEvQfABvdFETOG.365.DEsEvQfABvdFETOG.DEsEvQfABvdFETOG.null"
-   ],
-   "avg_spot": 8.8,
-   "click_rate_pct": 0.0
-  },
-  {
    "page": "https://opsera.ai/blog/how-devops-platform-can-secure-you-against-log4j-vulnerabilities",
    "clicks": 0,
    "times_shown": 39,
@@ -9081,16 +9031,6 @@
     "https://opsera.ai/comparison/opsera-vs-copado"
    ],
    "avg_spot": 4.4,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://opsera.ai/contact?trk=public_post_reshare-text",
-   "clicks": 0,
-   "times_shown": 2,
-   "variants": [
-    "https://opsera.ai/contact?trk=public_post_reshare-text"
-   ],
-   "avg_spot": 2.5,
    "click_rate_pct": 0.0
   },
   {
@@ -9713,16 +9653,6 @@
     "https://opsera.ai/huddle/episode-19-measuring-downstream-impact-with-dora"
    ],
    "avg_spot": 7.1,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://opsera.ai/job-application?weekdayJdUid=567858",
-   "clicks": 0,
-   "times_shown": 2,
-   "variants": [
-    "https://opsera.ai/job-application?weekdayJdUid=567858"
-   ],
-   "avg_spot": 10.0,
    "click_rate_pct": 0.0
   },
   {
@@ -10577,16 +10507,6 @@
    "click_rate_pct": 0.0
   },
   {
-   "page": "https://opsera.ai/platform/unified-insights?wtime={seek_to_second_number}",
-   "clicks": 0,
-   "times_shown": 19,
-   "variants": [
-    "https://opsera.ai/platform/unified-insights?wtime={seek_to_second_number}"
-   ],
-   "avg_spot": 6.7,
-   "click_rate_pct": 0.0
-  },
-  {
    "page": "https://opsera.ai/resources/comparison-guides/opsera-vs-cloudbees",
    "clicks": 0,
    "times_shown": 395,
@@ -11130,16 +11050,6 @@
     "https://opsera.ai/resources/white-papers/opsera-leading-the-charge-accelerating-secure-automated-and-cost-efficient-software-delivery/"
    ],
    "avg_spot": 13.3,
-   "click_rate_pct": 0.0
-  },
-  {
-   "page": "https://opsera.ai/resources?b6ae48ed_page=6",
-   "clicks": 0,
-   "times_shown": 60,
-   "variants": [
-    "https://opsera.ai/resources?b6ae48ed_page=6"
-   ],
-   "avg_spot": 5.3,
    "click_rate_pct": 0.0
   },
   {
@@ -22140,13 +22050,6 @@
    "avg_spot": 45.2
   },
   {
-   "search": "%\"@vaiton86/argo-api\" \"getassegnati\"",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 9
-  },
-  {
    "search": "%\"automated repo-container generation pipeline\" \"55 of 100\"",
    "clicks": 0,
    "times_shown": 1,
@@ -23986,41 +23889,6 @@
    "times_shown": 1,
    "click_rate_pct": 0,
    "avg_spot": 29
-  },
-  {
-   "search": "@actions/github",
-   "clicks": 0,
-   "times_shown": 2,
-   "click_rate_pct": 0,
-   "avg_spot": 24
-  },
-  {
-   "search": "@cursor",
-   "clicks": 0,
-   "times_shown": 2,
-   "click_rate_pct": 0,
-   "avg_spot": 3.5
-  },
-  {
-   "search": "@cursor_ai",
-   "clicks": 0,
-   "times_shown": 15,
-   "click_rate_pct": 0,
-   "avg_spot": 6.8
-  },
-  {
-   "search": "@liatrio/react-dora-charts builddorastateforperiod source",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 7
-  },
-  {
-   "search": "@url.content maintainability performance",
-   "clicks": 0,
-   "times_shown": 5,
-   "click_rate_pct": 0,
-   "avg_spot": 17.6
   },
   {
    "search": "[ai-automation] cursor subscription | site:whop.com cursor+subscription",
@@ -31455,13 +31323,6 @@
    "times_shown": 1,
    "click_rate_pct": 0,
    "avg_spot": 20
-  },
-  {
-   "search": "ai sp@ce download",
-   "clicks": 0,
-   "times_shown": 2,
-   "click_rate_pct": 0,
-   "avg_spot": 33.5
   },
   {
    "search": "ai spec",
@@ -46913,13 +46774,6 @@
    "avg_spot": 36
   },
   {
-   "search": "azure/webapps-deploy@v2",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 35
-  },
-  {
    "search": "azurerm_cognitive_account",
    "clicks": 0,
    "times_shown": 1,
@@ -46932,13 +46786,6 @@
    "times_shown": 3,
    "click_rate_pct": 0,
    "avg_spot": 28.3
-  },
-  {
-   "search": "azurermwebappdeployment@4",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 27
   },
   {
    "search": "a\u00e7\u0131k kaynakl\u0131",
@@ -87814,13 +87661,6 @@
    "avg_spot": 5
   },
   {
-   "search": "cursor @codebase feature",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 8
-  },
-  {
    "search": "cursor a",
    "clicks": 0,
    "times_shown": 4,
@@ -88120,20 +87960,6 @@
    "times_shown": 61,
    "click_rate_pct": 0,
    "avg_spot": 5.8
-  },
-  {
-   "search": "cursor ai @codebase",
-   "clicks": 0,
-   "times_shown": 7,
-   "click_rate_pct": 0,
-   "avg_spot": 8.3
-  },
-  {
-   "search": "cursor ai @codebase feature",
-   "clicks": 0,
-   "times_shown": 24,
-   "click_rate_pct": 0,
-   "avg_spot": 7
   },
   {
    "search": "cursor ai academy",
@@ -115763,13 +115589,6 @@
    "times_shown": 11,
    "click_rate_pct": 0,
    "avg_spot": 7.6
-  },
-  {
-   "search": "devops@ediversa.com",
-   "clicks": 0,
-   "times_shown": 16,
-   "click_rate_pct": 0,
-   "avg_spot": 7.5
   },
   {
    "search": "devopsa",
@@ -151822,13 +151641,6 @@
    "avg_spot": 34
   },
   {
-   "search": "hi@cursor.com",
-   "clicks": 0,
-   "times_shown": 2,
-   "click_rate_pct": 0,
-   "avg_spot": 4.5
-  },
-  {
    "search": "hidden-zone com",
    "clicks": 0,
    "times_shown": 1,
@@ -173284,13 +173096,6 @@
    "avg_spot": 16.9
   },
   {
-   "search": "jenkins stapler @post vs @requirepost difference",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 2
-  },
-  {
    "search": "jenkins themes",
    "clicks": 0,
    "times_shown": 1,
@@ -187758,13 +187563,6 @@
    "times_shown": 1,
    "click_rate_pct": 0,
    "avg_spot": 1
-  },
-  {
-   "search": "npm install -g @github/copilot",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 10
   },
   {
    "search": "npm install security issue",
@@ -220231,13 +220029,6 @@
    "times_shown": 1,
    "click_rate_pct": 0,
    "avg_spot": 4
-  },
-  {
-   "search": "site:support.atlassian.com bitbucket cloud set up personal ssh keys ssh -t git@bitbucket.org",
-   "clicks": 0,
-   "times_shown": 1,
-   "click_rate_pct": 0,
-   "avg_spot": 11
   },
   {
    "search": "site:tracxn.com/d/companies tekton labs company",

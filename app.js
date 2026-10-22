@@ -442,7 +442,7 @@ function renderLeads(d) {
   const leadCard = (k) => card(d.lines[k].label, num(d.lines[k].count), LEAD_NOTES[k]);
   $("leads-cards").innerHTML = ["demo", "events", "gartner_offer", "contact"].map(leadCard).join("");
   const jobs = (d.left_out || []).reduce((t, r) => t + r.count, 0);
-  $("leads-more-cards").innerHTML = leadCard("other") + card("Job applications", num(jobs), "Not counted as leads");
+  $("leads-more-cards").innerHTML = leadCard("other") + card("Job application form fills", num(jobs), "Not counted as leads");
   $("leads-more-source").textContent = `${src}, ${when}.`;
 
   $("leads-core-source").textContent = `${src}, ${when}.`;
@@ -571,7 +571,6 @@ function renderLinkedIn(d) {
 
   table($("li-co-posts"), { rows: co.posts, search: "posts", sortKey: "seen", columns: [
     { key: "title", label: "Post", search: true, fmt: postLink },
-    { key: "posted_by", label: "Posted by", search: true },
     { key: "created", label: "Posted on", fmt: (v) => dayYear(v) },
     { key: "seen", label: "Times seen", num: true, fmt: num },
     { key: "clicks", label: "Clicks", num: true, fmt: num },
@@ -742,20 +741,47 @@ const JOURNEY_CHANNELS = { all: "All", search: "Google search", linkedin: "Linke
 const money = (v) => (v == null ? "-" : `$${nf.format(Math.round(v))}`);
 
 function funnelHtml(steps) {
-  const top = Math.max(1, ...steps.map((st) => st.value));
+  const top = Math.max(1, ...steps.map((st) => st.value || 0));
   return steps.map((st, i) => {
     // widths on a log scale so the small steps at the end stay visible
-    const w = 12 + 88 * (Math.log10(st.value + 1) / Math.log10(top + 1));
+    const w = st.value == null ? 12 : 12 + 88 * (Math.log10(st.value + 1) / Math.log10(top + 1));
     const prev = steps[i - 1];
     let dropText = "&nbsp;";
-    if (i && prev.value && st.value > prev.value) dropText = st.higherNote || "Higher than the step before, because the tools count differently";
-    else if (i && prev.value) dropText = `${Math.round((st.value / prev.value) * 100)}% of the step before`;
+    if (i && prev.value && st.value != null && st.value > prev.value) dropText = st.higherNote || "Higher than the step before, because the tools count differently";
+    else if (i && prev.value && st.value != null) dropText = `${Math.round((st.value / prev.value) * 100)}% of the step before`;
     const drop = i ? `<div class="funnel-step"><div></div><div class="funnel-drop">${dropText}</div></div>` : "";
     return `${drop}<div class="funnel-step"><div class="funnel-label">${st.label}<small>${st.src}</small></div>
-      <div class="funnel-bar" style="width:${w}%">${num(st.value)}${st.extra && st.value ? ` (${st.extra})` : ""}</div></div>` +
+      <div><div class="funnel-bar" style="width:${w}%">${st.value == null ? "&ndash;" : num(st.value)}</div>${st.extra && st.value ? `<div class="funnel-extra">${st.extra}</div>` : ""}</div></div>` +
       (st.note ? `<div class="funnel-step"><div></div><div class="funnel-note">${esc(st.note)}</div></div>` : "");
   }).join("");
 }
+
+// Deals are stored only as totals per week, month and 3 months (the page is public). Closed Lost is left out.
+// mode "all" adds up every month. Returns null when the period isn't one that's stored, such as a single day.
+function dealsIn(hub, mode, a, keep = () => true) {
+  const rows = { week: hub.deals_weekly, month: hub.deals_monthly, quarter: hub.deals_quarters, all: hub.deals_monthly }[mode];
+  if (!rows) return null;
+  if (mode === "week" && a !== weekStart(a)) return null;
+  if (mode === "month" && a !== monthStart(a)) return null;
+  let start = a;
+  let end = mode === "week" ? addDays(a, 6) : mode === "month" ? (monthEnd(a) < hub.end_date ? monthEnd(a) : hub.end_date) : hub.end_date;
+  if (mode === "quarter") {
+    // the stored 3 months end on the HubSpot pull day; a funnel that ends a day or two earlier uses the nearest one
+    const q = quarterOf(hub.end_date);
+    const p = quarterOf(addDays(q.start, -1));
+    const near = [q, p].find((x) => Math.abs(toDate(x.start) - toDate(a)) <= 7 * 864e5);
+    if (!near) return null;
+    ({ start, end } = near);
+  }
+  if (mode === "all") start = hub.start_date;
+  const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, start, end };
+  rows.filter((r) => (mode === "all" || r.start === start) && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount"].forEach((k) => { out[k] += r[k]; }));
+  return out;
+}
+
+// the deal step's note when the stored totals cover other dates than the rest of the funnel
+const dealNote = (d, a, b) => (!d ? "Deals are kept as weekly and monthly totals, so they can't be shown for a single day."
+  : d.start !== a || d.end !== b ? `Deals are kept as weekly and monthly totals, so this step covers ${range(d.start, d.end)}.` : "");
 
 function renderJourney(ga, leads, hub, gsc) {
   const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
@@ -769,11 +795,12 @@ function renderJourney(ga, leads, hub, gsc) {
     metrics: [
       { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
       { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
-      { label: "New pipeline", value: rangeSum(hub.deals_daily, "amount"), fmt: money, sub: "Deals from marketing contacts" },
+      { label: "New pipeline (open)", value: (a) => dealsIn(hub, periodMode, a)?.open_amount ?? null, fmt: money, sub: "Open deals from marketing contacts" },
+      { label: "Won", value: (a) => dealsIn(hub, periodMode, a)?.won_amount ?? null, fmt: money, sub: "Won deals from marketing contacts" },
     ] });
 
   // One funnel, for the chosen channel and the period the switch at the top is set to
-  const step = (ch, a, b) => {
+  const step = (ch, a, b, mode) => {
     const inCh = (r) => ch === "all" || r.channel === ch;
     const inRange = (r) => r.date >= a && r.date <= b;
     const gaSum = (k) => ga.journey.filter((r) => r.channel === ch && inRange(r)).reduce((t2, r) => t2 + r[k], 0);
@@ -781,16 +808,19 @@ function renderJourney(ga, leads, hub, gsc) {
     // AI tools in HubSpot use the same source match as the AEO tab
     const aiSum = (rows, k, demoOnly) => rows.filter((r) => inRange(r) && (!demoOnly || r.demo)).reduce((t2, r) => t2 + r[k], 0);
     const contacts = ch === "ai" ? aiSum(hub.ai_contacts_daily, "count", true) : hubSum(hub.contacts_daily.filter((r) => r.line === "form"), "count");
-    const deals = ch === "ai" ? aiSum(hub.ai_deals_daily, "count") : hubSum(hub.deals_daily, "count");
-    const amount = ch === "ai" ? aiSum(hub.ai_deals_daily, "amount") : hubSum(hub.deals_daily, "amount");
+    const d = dealsIn(hub, mode, a, (r) => r.demo && (ch === "all" || (ch === "ai" ? !!r.tool : r.channel === ch)));
+    // the All funnel starts from the same visits total as the Website visits tab
+    const visits = ch === "all" ? ga.daily.filter(inRange).reduce((t2, r) => t2 + r.sessions, 0) : gaSum("visits");
     const steps = [
-      { label: "Visits", value: gaSum("visits"), src: "Google Analytics", higherNote: "Higher than clicks: Google Analytics counts return visits again" },
+      { label: "Visits", value: visits, src: "Google Analytics", higherNote: "Higher than clicks: Google Analytics counts return visits again" },
       { label: "Saw the demo page", value: gaSum("demo_page"), src: "Google Analytics" },
       { label: "Filled the demo form", value: gaSum("demo_form"), src: "Google Analytics" },
       { label: "New contact", value: contacts, src: "HubSpot" },
       { label: "Meeting", value: hubSum(booked, "count"), src: "HubSpot",
         note: "Meetings with demo-form contacts only. The summary above counts meetings with any marketing contact." },
-      { label: "Deal", value: deals, src: "HubSpot", extra: money(amount) },
+      { label: "Deal", value: d ? d.open_count + d.won_count : null, src: "HubSpot",
+        extra: d ? `${money(d.open_amount)} open, ${money(d.won_amount)} won` : "",
+        note: mode === "all" ? "" : dealNote(d, a, b) },
     ];
     if (ch === "search") {
       const g = gsc.daily.filter(inRange);
@@ -800,16 +830,21 @@ function renderJourney(ga, leads, hub, gsc) {
     return steps;
   };
   let channel = "all";
+  // Google search ends every step on the last day Search Console covers, so all steps use the same dates
+  const lastFor = (ch) => (ch === "search" && gsc.last_day_with_data < gaLast ? gsc.last_day_with_data : gaLast);
   const drawFunnel = () => {
-    const p = periodsFor(periodMode, start, gaLast);
-    const cur = p.cur || { start, end: gaLast };
-    const steps = step(channel, cur.start, cur.end);
+    const last = lastFor(channel);
+    const p = periodsFor(periodMode, start, last);
+    const cur = p.cur || { start, end: last };
+    const steps = step(channel, cur.start, cur.end, periodMode);
     $("journey-funnel-title").textContent = `Funnel, ${JOURNEY_CHANNELS[channel]}, ${range(cur.start, cur.end)}`;
     $("journey-funnel").innerHTML = funnelHtml(steps);
-    const gscNote = channel === "search" ? `Search Console (first two steps, through ${dayYear(gsc.last_day_with_data < cur.end ? gsc.last_day_with_data : cur.end)}), ` : "";
+    const gscNote = channel === "search" ? "Search Console (first two steps), " : "";
     $("journey-funnel-source").textContent = `Sources: ${gscNote}Google Analytics, opsera.ai 2026 (visits to demo form) and HubSpot (contact to deal), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
     $("journey-linkedin").hidden = channel !== "linkedin";
-    $("journey-linkedin-hint").textContent = channel === "linkedin" ? "The company page, Kumar and untagged split, and the post-level detail, are under More detail." : "";
+    $("journey-linkedin-hint").textContent = {
+      linkedin: "The company page, Kumar and untagged split, and the post-level detail, are under More detail.",
+      paid: "Google and HubSpot mark \"paid\" differently, so the steps don't line up." }[channel] || "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
   };
   drawFunnel(); monthlyTabs.push(drawFunnel);
@@ -822,7 +857,7 @@ function renderJourney(ga, leads, hub, gsc) {
 
   // More detail
   table($("journey-channels"), { rows: Object.entries(JOURNEY_CHANNELS).map(([ch, name]) => {
-    const st = step(ch, start, gaLast);
+    const st = step(ch, start, lastFor(ch), "all");
     return { name, visits: st[0].value, page: st[1].value, form: st[2].value, contact: st[3].value, meeting: st[4].value, deal: st[5].value };
   }), columns: [
     { key: "name", label: "Channel", sort: false },
@@ -833,7 +868,7 @@ function renderJourney(ga, leads, hub, gsc) {
     { key: "meeting", label: "Meeting", num: true, fmt: num, sort: false },
     { key: "deal", label: "Deal", num: true, fmt: num, sort: false },
   ] });
-  $("journey-channels-source").textContent = `Sources: Google Analytics and HubSpot, ${range(start, gaLast)}, US Pacific time.`;
+  $("journey-channels-source").textContent = `Sources: Google Analytics and HubSpot, ${range(start, gaLast)}, US Pacific time; Google search ends ${dayYear(lastFor("search"))}, the last day Search Console covers.`;
 
   const gv = Object.fromEntries(ga.google_search_visits.map((r) => [r.kind, r.visits]));
   $("journey-google-visits").innerHTML = card("First visits", num(gv.new || 0)) + card("Return visits", num(gv.returning || 0)) +
@@ -844,15 +879,16 @@ function renderJourney(ga, leads, hub, gsc) {
     card("Upcoming", num(mk("upcoming")), "Booked for later") + card("With existing customers", num(mk("existing_customer")), "Not counted") +
     card("Before sign-up", num(mk("before_signup")), "Not counted");
   $("journey-meetings-source").textContent = `Source: ${hubWhen}, calendar meetings since ${dayYear(start)}. ${num(hub.meetings_all_calendar)} calendar meetings in all.`;
-  const dealCount = hub.deals_daily.reduce((t2, r) => t2 + r.count, 0);
-  $("journey-deals").innerHTML = card("Deals from marketing contacts", num(dealCount), hub.deals_by_stage.map(([st, n]) => `${st}: ${n}`).join(", ") || "None yet") +
-    card("New pipeline", money(hub.deals_daily.reduce((t2, r) => t2 + r.amount, 0))) +
+  const dt2 = hub.deals_total;
+  $("journey-deals").innerHTML = card("Open deals", num(dt2.open_count), `${money(dt2.open_amount)} pipeline. ${hub.deals_by_stage.map(([st, n]) => `${st}: ${n}`).join(", ")}`) +
+    card("Won deals", num(dt2.won_count), money(dt2.won_amount)) +
+    card("Closed lost", num(hub.deals_lost.count), "Not counted") +
     card("Existing deals of these contacts", num(hub.existing_deals.count), `${money(hub.existing_deals.amount)}, created before sign-up. Not counted`);
   $("journey-deals-source").textContent = `Source: ${hubWhen}, deals created since ${dayYear(start)}.`;
   const contacts = (line) => hub.contacts_daily.filter((r) => r.line === line).reduce((t2, r) => t2 + r.count, 0);
   $("journey-contacts").innerHTML = card("Form contacts", num(contacts("form")), `Demo form: ${num(hub.contacts_daily.filter((r) => r.line === "form" && r.demo).reduce((t2, r) => t2 + r.count, 0))}`) +
     card("Luma event sign-ups", num(contacts("luma")), "Imported from Luma") +
-    card("Job applicants", num(hub.job_applicants_left_out), "Not counted");
+    card("Job applicants (people)", num(hub.job_applicants_left_out), "Not counted");
   $("journey-contacts-source").textContent = `Source: ${hubWhen}, contacts created by a form since ${dayYear(start)}, and the Flutter Luma import.`;
   table($("journey-contacts-table"), { rows: hub.first_forms.map(([form, n]) => ({ form, n })).filter((r) => !/job application/i.test(r.form)), sortKey: "n", columns: [
     { key: "form", label: "First form" }, { key: "n", label: "Contacts", num: true, fmt: num },
@@ -901,7 +937,11 @@ function renderAeo(ga, hub) {
       { label: "Saw the demo page", value: sum(ai.daily, "demo_page"), src: "Google Analytics" },
       { label: "Filled the demo form", value: sum(ai.daily, "demo_form"), src: "Google Analytics" },
       { label: "New contact", value: sum(hub.ai_contacts_daily.filter((r) => r.demo), "count"), src: "HubSpot" },
-      { label: "Deal", value: sum(hub.ai_deals_daily, "count"), src: "HubSpot", extra: money(sum(hub.ai_deals_daily, "amount")) },
+      (() => {
+        const d = dealsIn(hub, periodMode, cur.start, (r) => r.demo && (tool === "all" ? !!r.tool : r.tool === tool));
+        return { label: "Deal", value: d ? d.open_count + d.won_count : null, src: "HubSpot", extra: d ? `${money(d.open_amount)} open, ${money(d.won_amount)} won` : "",
+          note: dealNote(d, cur.start, cur.end) };
+      })(),
     ]);
     $("aeo-funnel-source").textContent = `Sources: Google Analytics, opsera.ai 2026 (first three steps) and HubSpot (last two), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
   };
@@ -1188,7 +1228,10 @@ function renderKahoots(monthly, quarter) {
 
 function renderInfrasity(monthly) {
   const sep = monthly.find((r) => r.month === "2026-09"), aug = monthly.find((r) => r.month === "2026-08");
-  const monthCard = (label, key, fmt, lower) => card(label, fmt(sep[key]), `August: ${fmt(aug[key])}${lower ? ". Lower is better" : ""}`, cmpDelta(sep[key], aug[key], lower));
+  // where the report rounds or states its own change, show it exactly as reported
+  const shown = (r, key, fmt) => (r.reported && r.reported[key]) || fmt(r[key]);
+  const reportedChange = (key) => { const c = sep.reported && sep.reported[`${key}_change`]; return c ? `<div class="delta ${c.startsWith("+") ? "good" : "bad"}">${c} (${c.startsWith("+") ? "better" : "worse"})</div>` : null; };
+  const monthCard = (label, key, fmt, lower) => card(label, shown(sep, key, fmt), `August: ${shown(aug, key, fmt)}${lower ? ". Lower is better" : ""}`, reportedChange(key) || cmpDelta(sep[key], aug[key], lower));
   $("infrasity-cards").innerHTML =
     monthCard("Clicks", "google_clicks", num) +
     monthCard("Times Google showed us", "times_shown", num) +
@@ -1199,7 +1242,7 @@ function renderInfrasity(monthly) {
   table($("infrasity-table"), { rows: monthly.map((r) => ({ ...r, name: month(r.month) })), columns: [
     { key: "name", label: "Month", sort: false },
     { key: "google_clicks", label: "Clicks", num: true, fmt: num, sort: false },
-    { key: "times_shown", label: "Times Google showed us", num: true, fmt: num, sort: false },
+    { key: "times_shown", label: "Times Google showed us", num: true, fmt: (v, r) => (r.reported && r.reported.times_shown) || num(v), sort: false },
     { key: "click_rate_pct", label: "Click rate", num: true, fmt: (v) => pct(v), sort: false },
     { key: "avg_spot", label: "Average spot on Google", num: true, fmt: spot, sort: false },
   ] });

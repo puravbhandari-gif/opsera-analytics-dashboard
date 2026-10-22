@@ -89,7 +89,7 @@ def company(files=COMPANY, start=START, end=END):
         title = " ".join(r["Post title"].split())
         posts.append({
             "title": title[:100] + ("..." if len(title) > 100 else ""),
-            "link": r["Post link"], "posted_by": r["Posted by"], "created": iso(r["Created date"]),
+            "link": r["Post link"], "created": iso(r["Created date"]),   # who posted it is left out: the page is public
             "paid": r["Post type"] != "Organic", "video": r["Content Type"] == "Video",
             "seen": int(r["Impressions"]), "clicks": int(r["Clicks"]),
             "likes": int(r["Likes"]), "comments": int(r["Comments"]),

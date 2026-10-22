@@ -155,4 +155,5 @@ details.more > summary:hover { color: var(--ink); }
   color: #fff; font-weight: 650; font-variant-numeric: tabular-nums; min-width: 48px; }
 .funnel-drop { text-align: center; font-size: 0.78rem; color: var(--muted); line-height: 1.2; }
 @media (max-width: 600px) { .funnel-step { grid-template-columns: 90px 1fr; gap: 8px; } }
+.funnel-extra { text-align: center; font-size: 0.82rem; color: var(--ink-2); margin-top: 3px; }
 .funnel-note { text-align: center; font-size: 0.78rem; color: var(--ink-2); }

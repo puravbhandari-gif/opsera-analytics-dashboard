@@ -88,9 +88,20 @@ def call(s, method, url, body=None):
     return r.json()
 
 
+def clean_path(path):
+    """Drop anything after "?", and any part that looks like tracking (a=b&c=d), which can identify
+    the person who clicked an email. Agreed 22 Oct 2026: the page is public."""
+    path = path.split("?")[0].split("#")[0]
+    parts = path.split("/")
+    for i, part in enumerate(parts):
+        if "=" in part or "&" in part or "@" in part:
+            return "/".join(parts[:i]) or "/"
+    return path
+
+
 def page_key(path):
     """https://opsera.ai/x and https://opsera.ai/x/ (or /x and /x/) are one page."""
-    stripped = path.rstrip("/")
+    stripped = clean_path(path).rstrip("/")
     return stripped if stripped and not stripped.endswith(".ai") else stripped + "/"
 
 
@@ -146,7 +157,8 @@ def fetch_gsc(s, end):
     if not daily:
         stop("Search Console returned no days of data.")
     pages = merge_slash_variants(gsc_query(s, site, START_DATE, end, ["page"]))
-    searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"])]
+    # searches that contain an email address are left out, because the page is public
+    searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"]) if "@" not in r["keys"][0]]
     return {
         "source": f"Google Search Console, {site}",
         "last_day_with_data": daily[-1]["date"],
