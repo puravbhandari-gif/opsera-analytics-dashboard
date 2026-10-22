@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>opsera.ai Analytics</title>
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles.css?v=9">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -23,7 +23,8 @@
     <button role="tab" data-tab="search">Google Search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
-    <button role="tab" data-tab="linkedin">LinkedIn</button>
+    <button role="tab" data-tab="linkedin">LinkedIn brand</button>
+    <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
     <button role="tab" data-tab="youtube">YouTube</button>
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
@@ -146,29 +147,21 @@
     </details>
   </section>
 
-  <!-- LinkedIn -->
+  <!-- LinkedIn: Opsera company page -->
   <section id="tab-linkedin" class="tab" role="tabpanel" hidden>
-    <h2>LinkedIn (Jul to Sep 2026)</h2>
-    <p class="lead">How often LinkedIn showed posts from the Opsera company page and from Kumar's profile, kept separate.</p>
-    <div class="cards" id="li-key-cards"></div>
-    <p class="source" id="li-key-source"></p>
+    <h2>LinkedIn brand: Opsera company page (Jul to Sep 2026)</h2>
+    <p class="lead">How often LinkedIn showed posts from the Opsera company page, and what people did with them.</p>
+    <div class="cards" id="li-co-key-cards"></div>
+    <p class="source" id="li-co-key-source"></p>
 
     <div class="panel">
-      <div class="panel-head">
-        <h3>Times seen, week by week</h3>
-        <div class="seg" id="li-key-who" role="group" aria-label="Choose whose numbers the chart shows">
-          <button data-m="company" class="on">Opsera company page</button>
-          <button data-m="kumar">Kumar Chivukula</button>
-        </div>
-      </div>
-      <div class="chart-box short"><canvas id="li-key-chart" aria-label="LinkedIn times seen by week"></canvas></div>
-      <p class="source" id="li-key-chart-source"></p>
+      <h3>Times seen, week by week</h3>
+      <div class="chart-box short"><canvas id="li-co-key-chart" aria-label="Company page times seen by week"></canvas></div>
+      <p class="source" id="li-co-key-chart-source"></p>
     </div>
 
     <details class="more">
       <summary>More detail</summary>
-
-      <h3 class="section-title">Opsera company page</h3>
       <div class="cards compact" id="li-co-cards"></div>
       <p class="source" id="li-co-source"></p>
       <p class="note">Paid means sponsored ads, and reposts are left out because LinkedIn's own sheets disagree.</p>
@@ -210,7 +203,53 @@
         <p class="note">Each table comes from its own LinkedIn sheet, so their totals differ.</p>
       </div>
 
-      <h3 class="section-title">Kumar Chivukula</h3>
+    </details>
+  </section>
+
+  <!-- LinkedIn: Kumar Chivukula -->
+  <section id="tab-linkedin-exec" class="tab" role="tabpanel" hidden>
+    <h2>LinkedIn exec: Kumar Chivukula</h2>
+    <p class="lead">How often LinkedIn showed Kumar's posts in October, and how many people they reached.</p>
+    <div class="seg period" id="li-ko-period" role="group" aria-label="Choose the period">
+      <button data-p="7d" class="on">Last 7 days</button>
+      <button data-p="14d">Last 14 days</button>
+      <button data-p="oct">Since 1 Oct</button>
+    </div>
+    <div class="cards" id="li-ko-cards"></div>
+    <p class="source" id="li-ko-source"></p>
+
+    <div class="panel">
+      <h3>Times seen, day by day</h3>
+      <div class="chart-box short"><canvas id="li-ko-chart" aria-label="Kumar's times seen by day in October"></canvas></div>
+      <p class="source" id="li-ko-chart-source"></p>
+    </div>
+
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note" id="li-ko-counting"></p>
+
+      <h3 class="section-title">October</h3>
+      <div class="cards compact" id="li-ko-more-cards"></div>
+      <p class="source" id="li-ko-more-source"></p>
+      <div class="panel">
+        <h3 id="li-ko-top-title">Top posts</h3>
+        <div class="two-col">
+          <div><h4>By times seen</h4><div id="li-ko-top-seen"></div><p class="source" id="li-ko-top-seen-source"></p></div>
+          <div><h4>By engagements</h4><div id="li-ko-top-eng"></div><p class="source" id="li-ko-top-eng-source"></p></div>
+        </div>
+        <p class="note">Includes older posts that were still being seen in this period.</p>
+      </div>
+
+      <h3 class="section-title">July to September 2026</h3>
+      <div class="cards" id="li-k-key-cards"></div>
+      <p class="source" id="li-k-key-source"></p>
+
+      <div class="panel">
+        <h3>Times seen, week by week</h3>
+        <div class="chart-box short"><canvas id="li-k-key-chart" aria-label="Kumar's times seen by week"></canvas></div>
+        <p class="source" id="li-k-key-chart-source"></p>
+      </div>
+
       <div class="cards compact" id="li-k-cards"></div>
       <p class="source" id="li-k-source"></p>
       <div class="panel">
@@ -360,6 +399,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=7"></script>
+<script src="app.js?v=10"></script>
 </body>
 </html>

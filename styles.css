@@ -140,3 +140,4 @@ details.more > summary::-webkit-details-marker { display: none; }
 details.more > summary::before { content: "+ "; font-weight: 600; }
 details.more[open] > summary::before { content: "- "; }
 details.more > summary:hover { color: var(--ink); }
+.seg.period { margin: 0 0 4px; }

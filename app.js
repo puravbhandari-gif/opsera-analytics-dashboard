@@ -364,28 +364,32 @@ function renderLinkedIn(d) {
   const kSrc = `Source: ${k.source}, ${when}.`;
   const sum = (rows, key) => rows.reduce((a, r) => a + r[key], 0);
 
-  // Key numbers: company page and Kumar side by side, never added together
-  $("li-key-cards").innerHTML =
-    card("Company page: times seen", num(sum(co.daily, "seen_total"))) +
-    card("Company page: followers gained", num(sum(co.followers_daily, "gained"))) +
-    card("Kumar: times seen", num(k.seen)) +
-    card("Kumar: followers gained", num(sum(k.followers_daily, "gained")));
-  $("li-key-source").textContent = `Source: LinkedIn exports for the Opsera company page and Kumar Chivukula's profile, ${when}.`;
-  const keyWeeks = { company: weekly(co.daily, "seen_total", d.start_date, d.end_date), kumar: weekly(k.daily, "seen", d.start_date, d.end_date) };
-  const keyLabel = { company: "Opsera company page", kumar: "Kumar Chivukula" };
-  let who = "company";
-  chart("li-key-chart", (th) => ({
+  // Key numbers and one chart per tab: the company page and Kumar each get their own tab
+  $("li-co-key-cards").innerHTML =
+    card("Times seen", num(sum(co.daily, "seen_total"))) +
+    card("Clicks", num(sum(co.daily, "clicks_total"))) +
+    card("Reactions", num(sum(co.daily, "reactions_total"))) +
+    card("Followers gained", num(sum(co.followers_daily, "gained")));
+  $("li-co-key-source").textContent = coSrc;
+  const coSeenWeeks = weekly(co.daily, "seen_total", d.start_date, d.end_date);
+  chart("li-co-key-chart", (th) => ({
     type: "bar", whole: true,
-    data: { labels: keyWeeks[who].map((w) => w.label), datasets: [bar(`Times seen, ${keyLabel[who]}`, keyWeeks[who].map((w) => w.value), th.s[0])] },
+    data: { labels: coSeenWeeks.map((w) => w.label), datasets: [bar("Times seen", coSeenWeeks.map((w) => w.value), th.s[0])] },
   }));
-  const setKeySource = () => { $("li-key-chart-source").textContent = who === "company" ? coSrc : kSrc; };
-  setKeySource();
-  $("li-key-who").addEventListener("click", (e) => {
-    const b = e.target.closest("button"); if (!b) return;
-    who = b.dataset.m;
-    $("li-key-who").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-    draw(charts.find((c) => c.id === "li-key-chart")); setKeySource();
-  });
+  $("li-co-key-chart-source").textContent = coSrc;
+
+  $("li-k-key-cards").innerHTML =
+    card("Times seen", num(k.seen)) +
+    card("People reached", num(k.reached), "Different members who saw a post") +
+    card("Engagements", num(sum(k.daily, "engagements")), "Reactions, comments, shares and clicks combined") +
+    card("Followers gained", num(sum(k.followers_daily, "gained")));
+  $("li-k-key-source").textContent = kSrc;
+  const kSeenWeeks = weekly(k.daily, "seen", d.start_date, d.end_date);
+  chart("li-k-key-chart", (th) => ({
+    type: "bar", whole: true,
+    data: { labels: kSeenWeeks.map((w) => w.label), datasets: [bar("Times seen", kSeenWeeks.map((w) => w.value), th.s[0])] },
+  }));
+  $("li-k-key-chart-source").textContent = kSrc;
 
   // Company page
   $("li-co-source").textContent = coSrc;
@@ -471,6 +475,38 @@ function renderLinkedIn(d) {
   table($("li-k-top-eng"), { rows: k.top_by_engagements, search: "posts", sortKey: "engagements", pageSize: 10, columns: topCols("engagements", "Engagements") });
   $("li-k-top-seen-source").textContent = kSrc;
   $("li-k-top-eng-source").textContent = kSrc;
+
+  // Kumar's October: each export is its own period, shown one at a time, never added together
+  const oct = d.kumar_october;
+  const periods = Object.fromEntries(oct.periods.map((p) => [p.key, p]));
+  const counting = oct.still_counting.map(dayYear).join(", ");
+  $("li-ko-counting").textContent = counting ? `${counting} was still being counted when these were exported, so its numbers may change.` : "";
+  let period = "7d";
+  const drawPeriod = () => {
+    const p = periods[period];
+    const pSrc = `Source: LinkedIn export, Kumar Chivukula's profile, ${range(p.start_date, p.end_date)}.`;
+    $("li-ko-cards").innerHTML =
+      card("Times seen", num(p.seen)) +
+      card("People reached", num(p.reached), "Different members who saw a post") +
+      card("Engagements", num(sum(p.daily, "engagements")), "Reactions, comments, shares and clicks combined") +
+      card("Followers gained", num(sum(p.followers_daily, "gained")));
+    $("li-ko-more-cards").innerHTML = card("Total followers", num(p.total_followers), `On ${dayYear(p.total_followers_date)}`);
+    ["li-ko-source", "li-ko-chart-source", "li-ko-more-source", "li-ko-top-seen-source", "li-ko-top-eng-source"].forEach((id) => { $(id).textContent = pSrc; });
+    $("li-ko-top-title").textContent = `Top posts, ${p.label[0].toLowerCase()}${p.label.slice(1)}`;
+    table($("li-ko-top-seen"), { rows: p.top_by_seen, search: "posts", sortKey: "seen", pageSize: 10, columns: topCols("seen", "Times seen") });
+    table($("li-ko-top-eng"), { rows: p.top_by_engagements, search: "posts", sortKey: "engagements", pageSize: 10, columns: topCols("engagements", "Engagements") });
+  };
+  drawPeriod();
+  chart("li-ko-chart", (th) => ({
+    type: "bar", whole: true,
+    data: { labels: periods[period].daily.map((r) => day(r.date)), datasets: [bar("Times seen", periods[period].daily.map((r) => r.seen), th.s[0])] },
+  }));
+  $("li-ko-period").addEventListener("click", (e) => {
+    const btn = e.target.closest("button"); if (!btn) return;
+    period = btn.dataset.p;
+    $("li-ko-period").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === btn));
+    drawPeriod(); draw(charts.find((c) => c.id === "li-ko-chart"));
+  });
 }
 
 // ---------- YouTube: Shorts and long videos never added together ----------

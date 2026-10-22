@@ -8,6 +8,9 @@ public repo. Only the numbers the tab shows are written out. Run locally:
 Agreed with Purav on 21 Oct 2026: company and Kumar's numbers stay separate,
 reposts are left out (LinkedIn's two sheets disagree: 251 vs 29), unpaid and
 paid are shown side by side, and Life page views are left out (0 every day).
+Agreed on 22 Oct 2026: Kumar's October exports are shown as LinkedIn gave them,
+including 22 Oct while it was still being counted, using the 7-day copy whose
+summary matches its daily rows.
 """
 import datetime as dt
 import json
@@ -27,6 +30,11 @@ COMPANY = {
 }
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
+KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
+    ("7d", "Last 7 days", "2026-10-16", "2026-10-22"),
+    ("14d", "Last 14 days", "2026-10-09", "2026-10-22"),
+    ("oct", "Since 1 Oct", "2026-10-01", "2026-10-22"),
+]
 
 
 def stop(msg):
@@ -49,10 +57,11 @@ def by_header(rows, header_row):
     return [dict(zip(head, r)) for r in rows[header_row + 1:] if any(c != "" for c in r)]
 
 
-def check_days(label, dates):
-    want = [(dt.date(2026, 7, 1) + dt.timedelta(days=i)).isoformat() for i in range(92)]
+def check_days(label, dates, start=START, end=END):
+    first, last = dt.date.fromisoformat(start), dt.date.fromisoformat(end)
+    want = [(first + dt.timedelta(days=i)).isoformat() for i in range((last - first).days + 1)]
     if dates != want:
-        stop(f"{label} doesn't cover every day from {START} to {END}.")
+        stop(f"{label} doesn't cover every day from {start} to {end}.")
 
 
 def company():
@@ -118,27 +127,32 @@ def post_name(url):
     return slug.replace("-", " ").strip().capitalize()
 
 
-def kumar():
-    wb = openpyxl.load_workbook(SRC / KUMAR, read_only=True, data_only=True)
+def us(d):
+    y, m, dd = (int(x) for x in d.split("-"))
+    return f"{m}/{dd}/{y}"
+
+
+def kumar(name=KUMAR, start=START, end=END):
+    wb = openpyxl.load_workbook(SRC / name, read_only=True, data_only=True)
     sheet = lambda name: [list(r) for r in wb[name].iter_rows(values_only=True) if any(c not in (None, "") for c in r)]
 
     disc = {r[0]: r[1] for r in sheet("DISCOVERY")}
-    if disc.get("Overall Performance") != "7/1/2026 - 9/30/2026":
-        stop(f"Kumar's export covers {disc.get('Overall Performance')}, not 1 Jul to 30 Sep 2026.")
+    if disc.get("Overall Performance") != f"{us(start)} - {us(end)}":
+        stop(f"{name} covers {disc.get('Overall Performance')}, not {start} to {end}.")
     seen, reached = int(disc["Impressions"]), int(disc["Members reached"])
 
     eng = sheet("ENGAGEMENT")
     daily = [{"date": iso(r[0]), "seen": int(r[1]), "engagements": int(r[2])} for r in eng[1:]]
-    check_days("Kumar's engagement sheet", [r["date"] for r in daily])
+    check_days("Kumar's engagement sheet", [r["date"] for r in daily], start, end)
     if sum(r["seen"] for r in daily) != seen:
         stop(f"Kumar's daily times seen add up to {sum(r['seen'] for r in daily)}, but the summary says {seen}.")
 
     fol = sheet("FOLLOWERS")
     m = re.match(r"Total followers on (\S+)", fol[0][0])
-    if not m or iso(m.group(1)) != END:
-        stop(f"Kumar's follower total isn't for {END}: '{fol[0][0]}'.")
+    if not m or iso(m.group(1)) != end:
+        stop(f"Kumar's follower total isn't for {end}: '{fol[0][0]}'.")
     followers_daily = [{"date": iso(r[0]), "gained": int(r[1])} for r in fol[2:]]
-    check_days("Kumar's followers sheet", [r["date"] for r in followers_daily])
+    check_days("Kumar's followers sheet", [r["date"] for r in followers_daily], start, end)
 
     top = sheet("TOP POSTS")[2:]
     by_eng = [{"name": post_name(r[0]), "link": r[0], "published": iso(r[1]), "engagements": int(r[2])} for r in top if r[0]]
@@ -146,23 +160,37 @@ def kumar():
 
     return {
         "source": "LinkedIn export, Kumar Chivukula's profile",
-        "seen": seen, "reached": reached, "total_followers": int(fol[0][1]), "total_followers_date": END,
+        "start_date": start, "end_date": end,
+        "seen": seen, "reached": reached, "total_followers": int(fol[0][1]), "total_followers_date": end,
         "daily": daily, "followers_daily": followers_daily,
         "top_by_engagements": by_eng, "top_by_seen": by_seen,
     }
 
 
 def main():
-    missing = [n for n in [*COMPANY.values(), KUMAR] if not (SRC / n).exists()]
+    oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
+    missing = [n for n in [*COMPANY.values(), KUMAR, *oct_files.values()] if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
-    out = {"start_date": START, "end_date": END, "company": company(), "kumar": kumar()}
+    october = [{"key": key, "label": label, **kumar(oct_files[key], a, b)} for key, label, a, b in KUMAR_OCTOBER]
+    days = {}
+    for period in october:
+        for r in period["daily"]:
+            days.setdefault(r["date"], set()).add((r["seen"], r["engagements"]))
+    clash = sorted(d for d, v in days.items() if len(v) > 1)
+    if clash != [max(days)] and clash:
+        stop(f"Kumar's October exports disagree on these days: {clash}")
+    out = {"start_date": START, "end_date": END, "company": company(), "kumar": kumar(),
+           "kumar_october": {"periods": october, "still_counting": clash}}
     OUT.write_text(json.dumps(out, indent=1))
     c, k = out["company"], out["kumar"]
     print(f"Company: seen {sum(r['seen_total'] for r in c['daily'])}, posts {len(c['posts'])}, "
           f"followers gained {sum(r['gained'] for r in c['followers_daily'])}")
     print(f"Kumar: seen {k['seen']}, reached {k['reached']}, engagements {sum(r['engagements'] for r in k['daily'])}, "
           f"followers gained {sum(r['gained'] for r in k['followers_daily'])}, total {k['total_followers']}")
+    for o in out["kumar_october"]["periods"]:
+        print(f"Kumar {o['label']} ({o['start_date']} to {o['end_date']}): seen {o['seen']}, reached {o['reached']}, "
+              f"engagements {sum(r['engagements'] for r in o['daily'])}, followers gained {sum(r['gained'] for r in o['followers_daily'])}")
 
 
 if __name__ == "__main__":
