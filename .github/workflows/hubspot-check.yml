@@ -11,17 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check what HubSpot can read (counts only)
+      - name: Pull from HubSpot (counts and dates only)
         env:
           HUBSPOT_TOKEN: ${{ secrets.HUBSPOT_TOKEN }}
         run: |
           python -m pip install -q -r requirements.txt
-          python scripts/hubspot_check.py && cp hubspot_check.json hubspot_check1.json && python scripts/hubspot_check2.py && mv hubspot_check.json hubspot_check2.json && mv hubspot_check1.json hubspot_check.json && python scripts/hubspot_check3.py
+          python scripts/fetch_hubspot.py
       - uses: actions/upload-artifact@v4
         with:
           name: hubspot-check
-          path: |
-            hubspot_check.json
-            hubspot_check2.json
-            hubspot_check3.json
+          path: data/hubspot.json
           retention-days: 1
