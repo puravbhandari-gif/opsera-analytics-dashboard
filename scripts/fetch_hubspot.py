@@ -125,28 +125,56 @@ def channel(p):
             "OTHER_CAMPAIGNS": "events" if any(w in detail for w in EVENT_WORDS) else "other"}.get(src, "other")
 
 
-def summarise_deals(deal_rows):
-    """The page is public, so deals are only kept as daily totals; no single customer's deal is listed."""
-    daily = collections.defaultdict(lambda: {"count": 0, "amount": 0.0})
-    for d in deal_rows:
-        if d["counts"] == "marketing":
-            row = daily[(d["date"], d["channel"], d["line"], d.get("demo", False))]
-            row["count"] += 1
-            row["amount"] += d["amount"]
+def add_months(d, n):
+    m = d.month - 1 + n
+    y, m = d.year + m // 12, m % 12 + 1
+    last = (dt.date(y + (m == 12), m % 12 + 1, 1) - dt.timedelta(days=1)).day
+    return dt.date(y, m, min(d.day, last))
+
+
+def summarise_deals(deal_rows, end):
+    """The page is public, so marketing deals are kept only as totals per week, per month and per 3 months
+    (agreed 22 Oct 2026). Closed Lost deals are left out; open and won are kept apart."""
+    kept = [d for d in deal_rows if d["counts"] == "marketing" and not d["lost"]]
+    end_d, start_d = dt.date.fromisoformat(end), dt.date.fromisoformat(START_DATE)
+    weeks, months, quarters = [], [], []
+    w = start_d - dt.timedelta(days=start_d.weekday())
+    while w <= end_d:
+        weeks.append((w, min(w + dt.timedelta(6), end_d))); w += dt.timedelta(7)
+    m = start_d.replace(day=1)
+    while m <= end_d:
+        nxt = add_months(m, 1)
+        months.append((m, min(nxt - dt.timedelta(1), end_d))); m = nxt
+    q_end = end_d
+    for _ in range(2):   # the last 3 months, and the 3 months before
+        q_start = add_months(q_end, -3) + dt.timedelta(1)
+        if q_start >= start_d:
+            quarters.append((q_start, q_end))
+        q_end = q_start - dt.timedelta(1)
+
+    def totals(periods):
+        out = []
+        for a, b in periods:
+            groups = collections.defaultdict(lambda: {"open_count": 0, "open_amount": 0.0, "won_count": 0, "won_amount": 0.0})
+            for d in kept:
+                if a.isoformat() <= d["date"] <= b.isoformat():
+                    g = groups[(d["channel"], d.get("demo", False), d.get("tool"))]
+                    k = "won" if d["won"] else "open"
+                    g[f"{k}_count"] += 1
+                    g[f"{k}_amount"] += d["amount"]
+            out += [{"start": a.isoformat(), "end": b.isoformat(), "channel": ch, "demo": dm, "tool": tl, **v} for (ch, dm, tl), v in groups.items()]
+        return out
+
+    lost = [d for d in deal_rows if d["counts"] == "marketing" and d["lost"]]
     existing = [d for d in deal_rows if d["counts"] == "existing"]
     return {
-        "deals_daily": [{"date": k[0], "channel": k[1], "line": k[2], "demo": k[3], **v} for k, v in sorted(daily.items())],
-        "deals_by_stage": collections.Counter(d["stage"] for d in deal_rows if d["counts"] == "marketing").most_common(),
+        "deals_weekly": totals(weeks), "deals_monthly": totals(months), "deals_quarters": totals(quarters),
+        "deals_total": {k: sum(d["amount"] if "amount" in k else 1 for d in kept if (d["won"] == k.startswith("won")))
+                        for k in ("open_count", "open_amount", "won_count", "won_amount")},
+        "deals_lost": {"count": len(lost)},
+        "deals_by_stage": collections.Counter(d["stage"] for d in kept).most_common(),
         "existing_deals": {"count": len(existing), "amount": round(sum(d["amount"] for d in existing), 2)},
     }
-
-
-def ai_tool(p):
-    text = f"{p.get('hs_analytics_source_data_1') or ''} {p.get('hs_analytics_first_referrer') or ''}"
-    for key, pattern in AI_TOOLS:
-        if re.search(pattern, text, re.I):
-            return key
-    return "other" if p.get("hs_analytics_source") == "AI_REFERRALS" else None
 
 
 def main():
@@ -289,10 +317,6 @@ def main():
         "contacts_daily": [{"date": d, "line": l, "channel": ch, "demo": dm, "count": n} for (d, l, ch, dm), n in sorted(daily.items())],
         "ai_contacts_daily": [{"date": d, "tool": tl, "demo": dm, "count": n} for (d, tl, dm), n in sorted(collections.Counter(
             (c["date"], c["tool"], c["demo"]) for c in contacts.values() if c.get("tool")).items())],
-        "ai_deals_daily": [{"date": d, "tool": tl, "count": n, "amount": a} for (d, tl), (n, a) in sorted({
-            (x["date"], x["tool"]): (sum(1 for y in deal_rows if y["counts"] == "marketing" and y.get("tool") == x["tool"] and y["date"] == x["date"]),
-                                     sum(y["amount"] for y in deal_rows if y["counts"] == "marketing" and y.get("tool") == x["tool"] and y["date"] == x["date"]))
-            for x in deal_rows if x["counts"] == "marketing" and x.get("tool")}.items())],
         "first_forms": collections.Counter(c["first_form"] for c in contacts.values() if c["line"] == "form").most_common(30),
         "existing_customers": len(existing),
         "job_applicants_left_out": job_applicants,
@@ -301,7 +325,7 @@ def main():
         "meetings_daily": [{"date": d, "line": l, "channel": ch, "kind": k, "demo": dm, "count": n}
                            for (d, l, ch, k, dm), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"], m["demo"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
-        **summarise_deals(deal_rows),
+        **summarise_deals(deal_rows, end),
         "events": events,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
@@ -313,8 +337,9 @@ def main():
     print("  contacts by channel:", by(contacts.values(), "channel"))
     print("  LinkedIn fields matched:", out["linkedin_fields"])
     print(f"  meetings linked to marketing contacts: {len(meeting_rows)} of {len(meetings)}; by kind {by(meeting_rows, 'kind')}")
-    print(f"  deals: marketing {sum(1 for d in deal_rows if d['counts'] == 'marketing')} "
-          f"(${sum(d['amount'] for d in deal_rows if d['counts'] == 'marketing'):,.0f}), existing {sum(1 for d in deal_rows if d['counts'] == 'existing')}")
+    t = out["deals_total"]
+    print(f"  deals: open {t['open_count']} (${t['open_amount']:,.0f}), won {t['won_count']} (${t['won_amount']:,.0f}), "
+          f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  campaigns:", campaigns)
     print("  first forms of form contacts:", out["first_forms"][:12])
