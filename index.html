@@ -31,6 +31,7 @@
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
     <button role="tab" data-tab="journey">Customer journey</button>
+    <button role="tab" data-tab="aeo">AEO</button>
     <button role="tab" data-tab="linkedin">LinkedIn brand</button>
     <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
     <button role="tab" data-tab="youtube">YouTube</button>
@@ -230,7 +231,12 @@
         <h3>Every channel, since 1 Sep</h3>
         <div id="journey-channels"></div>
         <p class="source" id="journey-channels-source"></p>
-        <p class="note">Google search includes other search engines, and a visit can count for two channels, such as an event email.</p>
+        <p class="note">Google search is Google only in Google Analytics, but HubSpot's search includes other search engines; a visit can count for two channels, such as an event email.</p>
+      </div>
+      <div class="panel">
+        <h3>Why Google visits can be higher than Search Console clicks</h3>
+        <div class="cards compact" id="journey-google-visits"></div>
+        <p class="source" id="journey-google-visits-source"></p>
       </div>
       <div class="panel">
         <h3>Meetings with marketing contacts</h3>
@@ -334,6 +340,49 @@
         <p class="source" id="li-est-posts-source"></p>
       </div>
 
+      </div>
+    </details>
+  </section>
+
+  <!-- AEO -->
+  <section id="tab-aeo" class="tab" role="tabpanel" hidden>
+    <h2>AEO: visits from AI tools</h2>
+    <p class="lead">Visits to opsera.ai from AI assistants like ChatGPT, Gemini and Perplexity, and what they led to.</p>
+    <div class="seg period" id="aeo-tool" role="group" aria-label="Choose an AI tool">
+      <button data-tool="all" class="on">All</button>
+      <button data-tool="chatgpt">ChatGPT</button>
+      <button data-tool="gemini">Gemini</button>
+      <button data-tool="perplexity">Perplexity</button>
+      <button data-tool="claude">Claude</button>
+      <button data-tool="copilot">Copilot</button>
+    </div>
+    <div class="cards" id="aeo-cmp-cards"></div>
+    <p class="source" id="aeo-cmp-source"></p>
+    <p class="note-inline">Showing up in AI answers isn't tracked yet. It needs the Ahrefs Brand Radar add-on.</p>
+
+    <div class="panel">
+      <h3 id="aeo-funnel-title">Funnel</h3>
+      <div class="funnel" id="aeo-funnel"></div>
+      <p class="source" id="aeo-funnel-source"></p>
+    </div>
+
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Contacts are people whose first form was the demo form; the AI tool comes from HubSpot's original source.</p>
+      <div class="panel">
+        <h3>Every AI tool, since 1 Sep</h3>
+        <div id="aeo-tools"></div>
+        <p class="source" id="aeo-tools-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Pages AI visitors landed on</h3>
+        <div id="aeo-landing"></div>
+        <p class="source" id="aeo-landing-source"></p>
+      </div>
+      <div class="panel">
+        <h3>Sources counted as AI tools</h3>
+        <div id="aeo-sources"></div>
+        <p class="source" id="aeo-sources-source"></p>
       </div>
     </details>
   </section>
@@ -614,6 +663,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=23"></script>
+<script src="app.js?v=25"></script>
 </body>
 </html>

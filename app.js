@@ -724,7 +724,23 @@ const JOURNEY_CHANNELS = { all: "All", search: "Google search", linkedin: "Linke
   paid: "Paid ads", ai: "AI tools", youtube: "YouTube", direct: "Direct" };
 const money = (v) => (v == null ? "-" : `$${nf.format(Math.round(v))}`);
 
-function renderJourney(ga, leads, hub) {
+function funnelHtml(steps) {
+  const top = Math.max(1, ...steps.map((st) => st.value));
+  return steps.map((st, i) => {
+    // widths on a log scale so the small steps at the end stay visible
+    const w = 12 + 88 * (Math.log10(st.value + 1) / Math.log10(top + 1));
+    const prev = steps[i - 1];
+    let dropText = "&nbsp;";
+    if (i && prev.value && st.value > prev.value) dropText = st.higherNote || "Higher than the step before, because the tools count differently";
+    else if (i && prev.value) dropText = `${Math.round((st.value / prev.value) * 100)}% of the step before`;
+    const drop = i ? `<div class="funnel-step"><div></div><div class="funnel-drop">${dropText}</div></div>` : "";
+    return `${drop}<div class="funnel-step"><div class="funnel-label">${st.label}<small>${st.src}</small></div>
+      <div class="funnel-bar" style="width:${w}%">${num(st.value)}${st.extra && st.value ? ` (${st.extra})` : ""}</div></div>` +
+      (st.note ? `<div class="funnel-step"><div></div><div class="funnel-note">${esc(st.note)}</div></div>` : "");
+  }).join("");
+}
+
+function renderJourney(ga, leads, hub, gsc) {
   const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const start = ga.start_date;
   const hubWhen = `HubSpot, last updated ${dayYear(hub.pulled_at.slice(0, 10))}`;
@@ -745,34 +761,36 @@ function renderJourney(ga, leads, hub) {
     const inRange = (r) => r.date >= a && r.date <= b;
     const gaSum = (k) => ga.journey.filter((r) => r.channel === ch && inRange(r)).reduce((t2, r) => t2 + r[k], 0);
     const hubSum = (rows, k) => rows.filter((r) => inCh(r) && r.demo && inRange(r)).reduce((t2, r) => t2 + r[k], 0);
-    return [
-      { label: "Visits", value: gaSum("visits"), src: "Google Analytics" },
+    // AI tools in HubSpot use the same source match as the AEO tab
+    const aiSum = (rows, k, demoOnly) => rows.filter((r) => inRange(r) && (!demoOnly || r.demo)).reduce((t2, r) => t2 + r[k], 0);
+    const contacts = ch === "ai" ? aiSum(hub.ai_contacts_daily, "count", true) : hubSum(hub.contacts_daily.filter((r) => r.line === "form"), "count");
+    const deals = ch === "ai" ? aiSum(hub.ai_deals_daily, "count") : hubSum(hub.deals_daily, "count");
+    const amount = ch === "ai" ? aiSum(hub.ai_deals_daily, "amount") : hubSum(hub.deals_daily, "amount");
+    const steps = [
+      { label: "Visits", value: gaSum("visits"), src: "Google Analytics", higherNote: "Higher than clicks: Google Analytics counts return visits again" },
       { label: "Saw the demo page", value: gaSum("demo_page"), src: "Google Analytics" },
       { label: "Filled the demo form", value: gaSum("demo_form"), src: "Google Analytics" },
-      { label: "New contact", value: hubSum(hub.contacts_daily.filter((r) => r.line === "form"), "count"), src: "HubSpot" },
+      { label: "New contact", value: contacts, src: "HubSpot" },
       { label: "Meeting", value: hubSum(booked, "count"), src: "HubSpot",
         note: "Meetings with demo-form contacts only. The summary above counts meetings with any marketing contact." },
-      { label: "Deal", value: hubSum(hub.deals_daily, "count"), src: "HubSpot", extra: money(hubSum(hub.deals_daily, "amount")) },
+      { label: "Deal", value: deals, src: "HubSpot", extra: money(amount) },
     ];
+    if (ch === "search") {
+      const g = gsc.daily.filter(inRange);
+      steps.unshift({ label: "Showed up on Google", value: g.reduce((t2, r) => t2 + r.times_shown, 0), src: "Search Console" },
+                    { label: "Clicked", value: g.reduce((t2, r) => t2 + r.clicks, 0), src: "Search Console" });
+    }
+    return steps;
   };
   let channel = "all";
   const drawFunnel = () => {
     const p = periodsFor(periodMode, start, gaLast);
     const cur = p.cur || { start, end: gaLast };
     const steps = step(channel, cur.start, cur.end);
-    const top = Math.max(1, steps[0].value);
     $("journey-funnel-title").textContent = `Funnel, ${JOURNEY_CHANNELS[channel]}, ${range(cur.start, cur.end)}`;
-    $("journey-funnel").innerHTML = steps.map((st, i) => {
-      // widths on a log scale so the small steps at the end stay visible
-      const w = 12 + 88 * (Math.log10(st.value + 1) / Math.log10(top + 1));
-      const prev = steps[i - 1];
-      const dropText = i && prev.value ? `${Math.round((st.value / prev.value) * 100)}% of the step before` : "&nbsp;";
-      const drop = i ? `<div class="funnel-step"><div></div><div class="funnel-drop">${dropText}</div></div>` : "";
-      return `${drop}<div class="funnel-step"><div class="funnel-label">${st.label}<small>${st.src}</small></div>
-        <div class="funnel-bar" style="width:${w}%">${num(st.value)}${st.extra && st.value ? ` (${st.extra})` : ""}</div></div>` +
-        (st.note ? `<div class="funnel-step"><div></div><div class="funnel-note">${esc(st.note)}</div></div>` : "");
-    }).join("");
-    $("journey-funnel-source").textContent = `Sources: Google Analytics, opsera.ai 2026 (first three steps) and HubSpot (last three), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
+    $("journey-funnel").innerHTML = funnelHtml(steps);
+    const gscNote = channel === "search" ? `Search Console (first two steps, through ${dayYear(gsc.last_day_with_data < cur.end ? gsc.last_day_with_data : cur.end)}), ` : "";
+    $("journey-funnel-source").textContent = `Sources: ${gscNote}Google Analytics, opsera.ai 2026 (visits to demo form) and HubSpot (contact to deal), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
     $("journey-linkedin").hidden = channel !== "linkedin";
     $("journey-linkedin-hint").textContent = channel === "linkedin" ? "The company page, Kumar and untagged split, and the post-level detail, are under More detail." : "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
@@ -800,6 +818,10 @@ function renderJourney(ga, leads, hub) {
   ] });
   $("journey-channels-source").textContent = `Sources: Google Analytics and HubSpot, ${range(start, gaLast)}, US Pacific time.`;
 
+  const gv = Object.fromEntries(ga.google_search_visits.map((r) => [r.kind, r.visits]));
+  $("journey-google-visits").innerHTML = card("First visits", num(gv.new || 0)) + card("Return visits", num(gv.returning || 0)) +
+    card("Not placed by Google Analytics", num((gv["(not set)"] || 0) + (gv[""] || 0)), "Almost none engaged");
+  $("journey-google-visits-source").textContent = `Source: Google Analytics, opsera.ai 2026, Google organic visits, ${range(start, ga.end_date)}, US Pacific time. Search Console clicks, ${range(gsc.daily[0].date, gsc.last_day_with_data)}: ${num(gsc.daily.reduce((t2, r) => t2 + r.clicks, 0))}.`;
   const mk = (k) => hub.meetings_daily.filter((r) => r.kind === k).reduce((t2, r) => t2 + r.count, 0);
   $("journey-meetings").innerHTML = card("Meetings booked", num(mk("booked")), "After sign-up, up to yesterday") +
     card("Upcoming", num(mk("upcoming")), "Booked for later") + card("With existing customers", num(mk("existing_customer")), "Not counted") +
@@ -832,6 +854,75 @@ function renderJourney(ga, leads, hub) {
     { key: "field", label: "Counted as LinkedIn because" }, { key: "n", label: "Contacts", num: true, fmt: num },
   ] });
   $("journey-li-fields-source").textContent = `Source: ${hubWhen}. ${num(hub.linkedin_contacts)} LinkedIn contacts; one contact can match more than one field but counts once.`;
+}
+
+// ---------- AEO: visits from AI tools, and what they led to ----------
+
+const AI_TOOL_NAMES = { all: "All AI tools", chatgpt: "ChatGPT", gemini: "Gemini", perplexity: "Perplexity", claude: "Claude", copilot: "Copilot", other: "Other AI tools" };
+
+function renderAeo(ga, hub) {
+  const ai = ga.ai;
+  const start = ga.start_date, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const src = "Source: Google Analytics, opsera.ai 2026";
+  let tool = "all";
+  const pick = (rows) => rows.filter((r) => tool === "all" || r.tool === tool);
+  const spec = { id: "aeo", start, last, source: (a, b) => `${src}, ${AI_TOOL_NAMES[tool]}, ${range(a, b)}, US Pacific time.`,
+    metrics: [
+      { label: "Visits from AI tools", value: (a, b) => rangeSum(pick(ai.daily), "visits")(a, b), fmt: num },
+      { label: "Engaged visits", value: (a, b) => rangeSum(pick(ai.daily), "engaged")(a, b), fmt: num },
+      { label: "Demo requests", value: (a, b) => rangeSum(pick(ai.daily), "demo_form")(a, b), fmt: num, sub: "Website demo form" },
+    ] };
+  compare(spec);
+  const drawFunnel = () => {
+    const p = periodsFor(periodMode, start, last);
+    const cur = p.cur || { start, end: last };
+    const inRange = (r) => r.date >= cur.start && r.date <= cur.end;
+    const sum = (rows, k) => pick(rows).filter(inRange).reduce((t2, r) => t2 + r[k], 0);
+    $("aeo-funnel-title").textContent = `Funnel, ${AI_TOOL_NAMES[tool]}, ${range(cur.start, cur.end)}`;
+    $("aeo-funnel").innerHTML = funnelHtml([
+      { label: "AI visit", value: sum(ai.daily, "visits"), src: "Google Analytics" },
+      { label: "Saw the demo page", value: sum(ai.daily, "demo_page"), src: "Google Analytics" },
+      { label: "Filled the demo form", value: sum(ai.daily, "demo_form"), src: "Google Analytics" },
+      { label: "New contact", value: sum(hub.ai_contacts_daily.filter((r) => r.demo), "count"), src: "HubSpot" },
+      { label: "Deal", value: sum(hub.ai_deals_daily, "count"), src: "HubSpot", extra: money(sum(hub.ai_deals_daily, "amount")) },
+    ]);
+    $("aeo-funnel-source").textContent = `Sources: Google Analytics, opsera.ai 2026 (first three steps) and HubSpot (last two), ${range(cur.start, cur.end)}, US Pacific time. Bar widths are on a log scale.`;
+  };
+  drawFunnel(); monthlyTabs.push(drawFunnel);
+  $("aeo-tool").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    tool = b.dataset.tool;
+    $("aeo-tool").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    fillCompare(spec); drawFunnel();
+  });
+
+  // More detail
+  const tools = Object.keys(AI_TOOL_NAMES).filter((t) => t !== "all" && (t !== "other" || ai.daily.some((r) => r.tool === "other")));
+  table($("aeo-tools"), { rows: tools.map((t) => {
+    const rows = ai.daily.filter((r) => r.tool === t);
+    const s2 = (k) => rows.reduce((t2, r) => t2 + r[k], 0);
+    return { name: AI_TOOL_NAMES[t], visits: s2("visits"), engaged: s2("engaged"), page: s2("demo_page"), form: s2("demo_form"),
+      contact: hub.ai_contacts_daily.filter((r) => r.tool === t && r.demo).reduce((t2, r) => t2 + r.count, 0) };
+  }), sortKey: "visits", columns: [
+    { key: "name", label: "AI tool" },
+    { key: "visits", label: "Visits", num: true, fmt: num },
+    { key: "engaged", label: "Engaged", num: true, fmt: num },
+    { key: "page", label: "Demo page", num: true, fmt: num },
+    { key: "form", label: "Demo form", num: true, fmt: num },
+    { key: "contact", label: "Contact", num: true, fmt: num },
+  ] });
+  $("aeo-tools-source").textContent = `Sources: Google Analytics, opsera.ai 2026, and HubSpot (contacts), ${range(start, last)}, US Pacific time.`;
+  table($("aeo-landing"), { rows: ai.landing.map((r) => ({ ...r, name: AI_TOOL_NAMES[r.tool] })), search: "pages", sortKey: "visits", columns: [
+    { key: "page", label: "Landing page", search: true },
+    { key: "name", label: "AI tool", search: true },
+    { key: "visits", label: "Visits", num: true, fmt: num },
+    { key: "engaged", label: "Engaged", num: true, fmt: num },
+  ] });
+  $("aeo-landing-source").textContent = `${src}, ${range(start, ga.end_date)}, US Pacific time.`;
+  table($("aeo-sources"), { rows: ai.sources.map((r) => ({ ...r, name: AI_TOOL_NAMES[r.tool] })), sortKey: "name", sortDir: 1, columns: [
+    { key: "source", label: "Source in Google Analytics" }, { key: "name", label: "Counted as" },
+  ] });
+  $("aeo-sources-source").textContent = `${src}, ${range(start, ga.end_date)}.`;
 }
 
 function renderLeadsHubspot(hub) {
@@ -1164,7 +1255,8 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderLinkedInVisits(ga);
     renderLinkedInEstimate(est, ga);
     renderLinkedInPath(ga);
-    renderJourney(ga, leads, hub);
+    renderJourney(ga, leads, hub, gsc);
+    renderAeo(ga, hub);
     renderLeadsHubspot(hub);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);

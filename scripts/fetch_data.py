@@ -243,8 +243,8 @@ PAID_GROUPS = {"Paid Search", "Paid Social", "Display", "Cross-network", "Paid O
 
 def journey_channels(group, source, campaign):
     out = {"all"}
-    if group == "Organic Search":
-        out.add("search")
+    if group == "Organic Search" and source.lower() == "google":
+        out.add("search")   # Google only, so it lines up with Search Console
     if re.fullmatch(LINKEDIN_SOURCES[4:], source, re.I):
         out.add("linkedin")
     if group == "Email":
@@ -253,8 +253,8 @@ def journey_channels(group, source, campaign):
         out.add("events")
     if group in PAID_GROUPS:
         out.add("paid")
-    if group == "AI Assistant":
-        out.add("ai")
+    if ai_tool(group, source):
+        out.add("ai")   # same definition as the AEO tab
     if "youtube" in source.lower() or "youtu.be" in source.lower():
         out.add("youtube")
     if group == "Direct":
@@ -277,6 +277,60 @@ def journey(s, end):
     for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
         add(r, "demo_form", r["eventCount"])
     return sorted(rows.values(), key=lambda r: (r["date"], r["channel"]))
+
+
+# AI tools (agreed 22 Oct 2026): a visit counts for a tool when its source matches; anything else
+# Google files under "AI Assistant" counts as "Other AI tools".
+AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perplexity", r"perplexity"),
+            ("claude", r"claude|anthropic"), ("copilot", r"copilot")]
+
+
+def ai_tool(group, source):
+    for key, pattern in AI_TOOLS:
+        if re.search(pattern, source, re.I):
+            return key
+    return "other" if group == "AI Assistant" else None
+
+
+def ai_visits(s, end):
+    dims = ["date", "sessionDefaultChannelGroup", "sessionSource"]
+    demo = {"filter": {"fieldName": "pagePath", "inListFilter": {"values": ["/demo", "/demo/"]}}}
+    daily, landing = {}, {}
+    def row(date, tool):
+        return daily.setdefault((date, tool), {"date": date, "tool": tool, "visits": 0, "engaged": 0, "demo_page": 0, "demo_form": 0})
+    for r in ga_report(s, end, dims, ["sessions", "engagedSessions"]):
+        t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
+        if t:
+            x = row(r["date"], t); x["visits"] += r["sessions"]; x["engaged"] += r["engagedSessions"]
+    for r in ga_report(s, end, dims, ["sessions"], flt=demo):
+        t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
+        if t:
+            row(r["date"], t)["demo_page"] += r["sessions"]
+    for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
+        t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
+        if t:
+            row(r["date"], t)["demo_form"] += r["eventCount"]
+    sources = {}
+    for r in ga_report(s, end, ["landingPage", "sessionDefaultChannelGroup", "sessionSource"], ["sessions", "engagedSessions"]):
+        t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
+        if not t:
+            continue
+        page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        x = landing.setdefault((page, t), {"page": page, "tool": t, "visits": 0, "engaged": 0})
+        x["visits"] += r["sessions"]; x["engaged"] += r["engagedSessions"]
+        sources.setdefault(f"{r['sessionSource']} ({r['sessionDefaultChannelGroup']})", t)
+    return {"daily": sorted(daily.values(), key=lambda r: (r["date"], r["tool"])),
+            "landing": sorted(landing.values(), key=lambda r: -r["visits"]),
+            "sources": [{"source": k, "tool": v} for k, v in sorted(sources.items())]}
+
+
+def google_search_visits(s, end):
+    """Google organic visits split into first and return visits, to explain why visits can top Search Console clicks."""
+    rows = ga_report(s, end, ["newVsReturning"], ["sessions", "engagedSessions"],
+                     flt={"andGroup": {"expressions": [
+                         {"filter": {"fieldName": "sessionSource", "stringFilter": {"value": "google"}}},
+                         {"filter": {"fieldName": "sessionMedium", "stringFilter": {"value": "organic"}}}]}})
+    return [{"kind": r["newVsReturning"], "visits": r["sessions"], "engaged": r["engagedSessions"]} for r in rows]
 
 
 def linkedin_visits(s, end):
@@ -379,6 +433,8 @@ def fetch_ga(s, end):
         "sources": sources, "pages": pages,
         "linkedin": linkedin_visits(s, end),
         "journey": journey(s, end),
+        "ai": ai_visits(s, end),
+        "google_search_visits": google_search_visits(s, end),
     }, leads(form_rows)
 
 

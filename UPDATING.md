@@ -54,6 +54,10 @@ The Monday update reads HubSpot with a read-only Service Key stored as the `HUBS
 
 To check HubSpot without changing the page, run **HubSpot check (doesn't change the page)** in the Actions tab.
 
+## AEO tab
+
+The AEO tab shows visits to opsera.ai from AI tools (ChatGPT, Gemini, Perplexity, Claude, Copilot), from Google Analytics, and the demo forms, contacts and deals they led to, from HubSpot. A visit counts for a tool when its source matches the tool's name, even if Google files it under another channel. It updates every Monday with the rest. Showing up in AI answers isn't tracked yet; that needs the Ahrefs Brand Radar add-on.
+
 ## The YouTube tab
 
 The Monday update also pulls the Opsera YouTube channel's numbers from YouTube's own APIs. It uses a read-only login that marketing@opsera.io gave once. That login is stored as a GitHub secret called `YOUTUBE_TOKEN`, and a copy is kept on Purav's Mac in `~/.config/opsera-dashboard/`.

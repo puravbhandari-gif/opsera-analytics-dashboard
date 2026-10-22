@@ -1,7 +1,7 @@
 {
  "start_date": "2026-09-01",
  "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T17:33+05:30",
+ "pulled_at": "2026-10-22T17:44+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -341,7 +341,7 @@
    "sessions": 3258,
    "totalUsers": 3199,
    "engagedSessions": 522,
-   "averageSessionDuration": 15.190811971761818
+   "averageSessionDuration": 15.19081197176182
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -2594,7 +2594,7 @@
    "sessions": 345,
    "totalUsers": 328,
    "engagedSessions": 21,
-   "averageSessionDuration": 11.775717994202898
+   "averageSessionDuration": 11.7757179942029
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -11541,8 +11541,8 @@
   {
    "date": "2026-09-01",
    "channel": "search",
-   "visits": 146,
-   "demo_page": 2,
+   "visits": 137,
+   "demo_page": 1,
    "demo_form": 0
   },
   {
@@ -11597,7 +11597,7 @@
   {
    "date": "2026-09-02",
    "channel": "search",
-   "visits": 146,
+   "visits": 128,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -11646,7 +11646,7 @@
   {
    "date": "2026-09-03",
    "channel": "search",
-   "visits": 125,
+   "visits": 121,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -11688,7 +11688,7 @@
   {
    "date": "2026-09-04",
    "channel": "search",
-   "visits": 67,
+   "visits": 62,
    "demo_page": 1,
    "demo_form": 1
   },
@@ -11730,7 +11730,7 @@
   {
    "date": "2026-09-05",
    "channel": "search",
-   "visits": 33,
+   "visits": 31,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -11828,7 +11828,7 @@
   {
    "date": "2026-09-07",
    "channel": "search",
-   "visits": 139,
+   "visits": 137,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -11884,7 +11884,7 @@
   {
    "date": "2026-09-08",
    "channel": "search",
-   "visits": 190,
+   "visits": 175,
    "demo_page": 4,
    "demo_form": 0
   },
@@ -11933,7 +11933,7 @@
   {
    "date": "2026-09-09",
    "channel": "search",
-   "visits": 161,
+   "visits": 157,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -11989,7 +11989,7 @@
   {
    "date": "2026-09-10",
    "channel": "search",
-   "visits": 168,
+   "visits": 161,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12045,7 +12045,7 @@
   {
    "date": "2026-09-11",
    "channel": "search",
-   "visits": 118,
+   "visits": 111,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -12143,7 +12143,7 @@
   {
    "date": "2026-09-13",
    "channel": "search",
-   "visits": 49,
+   "visits": 47,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12185,7 +12185,7 @@
   {
    "date": "2026-09-14",
    "channel": "search",
-   "visits": 141,
+   "visits": 137,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12234,7 +12234,7 @@
   {
    "date": "2026-09-15",
    "channel": "search",
-   "visits": 196,
+   "visits": 191,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12290,9 +12290,9 @@
   {
    "date": "2026-09-16",
    "channel": "search",
-   "visits": 122,
-   "demo_page": 1,
-   "demo_form": 2
+   "visits": 116,
+   "demo_page": 0,
+   "demo_form": 0
   },
   {
    "date": "2026-09-17",
@@ -12339,7 +12339,7 @@
   {
    "date": "2026-09-17",
    "channel": "search",
-   "visits": 149,
+   "visits": 136,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12388,7 +12388,7 @@
   {
    "date": "2026-09-18",
    "channel": "search",
-   "visits": 144,
+   "visits": 131,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12437,7 +12437,7 @@
   {
    "date": "2026-09-19",
    "channel": "search",
-   "visits": 55,
+   "visits": 52,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12465,7 +12465,7 @@
   {
    "date": "2026-09-20",
    "channel": "search",
-   "visits": 93,
+   "visits": 91,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12514,7 +12514,7 @@
   {
    "date": "2026-09-21",
    "channel": "search",
-   "visits": 149,
+   "visits": 146,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12563,7 +12563,7 @@
   {
    "date": "2026-09-22",
    "channel": "search",
-   "visits": 175,
+   "visits": 163,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -12612,7 +12612,7 @@
   {
    "date": "2026-09-23",
    "channel": "search",
-   "visits": 192,
+   "visits": 184,
    "demo_page": 1,
    "demo_form": 1
   },
@@ -12661,7 +12661,7 @@
   {
    "date": "2026-09-24",
    "channel": "search",
-   "visits": 168,
+   "visits": 165,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12710,7 +12710,7 @@
   {
    "date": "2026-09-25",
    "channel": "search",
-   "visits": 115,
+   "visits": 109,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12759,7 +12759,14 @@
   {
    "date": "2026-09-26",
    "channel": "search",
-   "visits": 57,
+   "visits": 56,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-09-27",
+   "channel": "ai",
+   "visits": 1,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12808,7 +12815,7 @@
   {
    "date": "2026-09-27",
    "channel": "search",
-   "visits": 77,
+   "visits": 73,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -12864,7 +12871,7 @@
   {
    "date": "2026-09-28",
    "channel": "search",
-   "visits": 149,
+   "visits": 135,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -12913,7 +12920,7 @@
   {
    "date": "2026-09-29",
    "channel": "search",
-   "visits": 172,
+   "visits": 161,
    "demo_page": 3,
    "demo_form": 0
   },
@@ -12962,16 +12969,16 @@
   {
    "date": "2026-09-30",
    "channel": "search",
-   "visits": 156,
+   "visits": 149,
    "demo_page": 4,
    "demo_form": 0
   },
   {
    "date": "2026-10-01",
    "channel": "ai",
-   "visits": 8,
-   "demo_page": 0,
-   "demo_form": 0
+   "visits": 9,
+   "demo_page": 1,
+   "demo_form": 1
   },
   {
    "date": "2026-10-01",
@@ -13011,9 +13018,9 @@
   {
    "date": "2026-10-01",
    "channel": "search",
-   "visits": 245,
-   "demo_page": 10,
-   "demo_form": 2
+   "visits": 232,
+   "demo_page": 9,
+   "demo_form": 1
   },
   {
    "date": "2026-10-02",
@@ -13060,7 +13067,7 @@
   {
    "date": "2026-10-02",
    "channel": "search",
-   "visits": 149,
+   "visits": 144,
    "demo_page": 4,
    "demo_form": 1
   },
@@ -13102,7 +13109,7 @@
   {
    "date": "2026-10-03",
    "channel": "search",
-   "visits": 88,
+   "visits": 82,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -13151,7 +13158,7 @@
   {
    "date": "2026-10-04",
    "channel": "search",
-   "visits": 98,
+   "visits": 95,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -13207,7 +13214,7 @@
   {
    "date": "2026-10-05",
    "channel": "search",
-   "visits": 176,
+   "visits": 169,
    "demo_page": 4,
    "demo_form": 0
   },
@@ -13256,7 +13263,7 @@
   {
    "date": "2026-10-06",
    "channel": "search",
-   "visits": 186,
+   "visits": 173,
    "demo_page": 3,
    "demo_form": 2
   },
@@ -13312,8 +13319,8 @@
   {
    "date": "2026-10-07",
    "channel": "search",
-   "visits": 191,
-   "demo_page": 3,
+   "visits": 174,
+   "demo_page": 2,
    "demo_form": 0
   },
   {
@@ -13368,7 +13375,7 @@
   {
    "date": "2026-10-08",
    "channel": "search",
-   "visits": 144,
+   "visits": 134,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -13417,7 +13424,7 @@
   {
    "date": "2026-10-09",
    "channel": "search",
-   "visits": 123,
+   "visits": 113,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -13466,7 +13473,7 @@
   {
    "date": "2026-10-10",
    "channel": "search",
-   "visits": 68,
+   "visits": 67,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -13522,14 +13529,14 @@
   {
    "date": "2026-10-11",
    "channel": "search",
-   "visits": 85,
-   "demo_page": 3,
+   "visits": 74,
+   "demo_page": 1,
    "demo_form": 0
   },
   {
    "date": "2026-10-12",
    "channel": "ai",
-   "visits": 4,
+   "visits": 6,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -13571,9 +13578,16 @@
   {
    "date": "2026-10-12",
    "channel": "search",
-   "visits": 148,
+   "visits": 138,
    "demo_page": 2,
    "demo_form": 0
+  },
+  {
+   "date": "2026-10-13",
+   "channel": "ai",
+   "visits": 4,
+   "demo_page": 1,
+   "demo_form": 1
   },
   {
    "date": "2026-10-13",
@@ -13613,9 +13627,9 @@
   {
    "date": "2026-10-13",
    "channel": "search",
-   "visits": 176,
-   "demo_page": 5,
-   "demo_form": 2
+   "visits": 166,
+   "demo_page": 4,
+   "demo_form": 1
   },
   {
    "date": "2026-10-14",
@@ -13662,7 +13676,7 @@
   {
    "date": "2026-10-14",
    "channel": "search",
-   "visits": 182,
+   "visits": 166,
    "demo_page": 6,
    "demo_form": 0
   },
@@ -13711,7 +13725,7 @@
   {
    "date": "2026-10-15",
    "channel": "search",
-   "visits": 158,
+   "visits": 132,
    "demo_page": 7,
    "demo_form": 0
   },
@@ -13760,7 +13774,7 @@
   {
    "date": "2026-10-16",
    "channel": "search",
-   "visits": 111,
+   "visits": 104,
    "demo_page": 5,
    "demo_form": 0
   },
@@ -13802,7 +13816,7 @@
   {
    "date": "2026-10-17",
    "channel": "search",
-   "visits": 47,
+   "visits": 46,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -13851,7 +13865,7 @@
   {
    "date": "2026-10-18",
    "channel": "search",
-   "visits": 56,
+   "visits": 53,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -13900,14 +13914,14 @@
   {
    "date": "2026-10-19",
    "channel": "search",
-   "visits": 144,
-   "demo_page": 5,
-   "demo_form": 1
+   "visits": 134,
+   "demo_page": 4,
+   "demo_form": 0
   },
   {
    "date": "2026-10-20",
    "channel": "ai",
-   "visits": 1,
+   "visits": 2,
    "demo_page": 0,
    "demo_form": 0
   },
@@ -13949,7 +13963,7 @@
   {
    "date": "2026-10-20",
    "channel": "search",
-   "visits": 137,
+   "visits": 128,
    "demo_page": 1,
    "demo_form": 0
   },
@@ -13998,7 +14012,7 @@
   {
    "date": "2026-10-21",
    "channel": "search",
-   "visits": 153,
+   "visits": 145,
    "demo_page": 3,
    "demo_form": 0
   },
@@ -14008,6 +14022,1010 @@
    "visits": 5,
    "demo_page": 2,
    "demo_form": 0
+  }
+ ],
+ "ai": {
+  "daily": [
+   {
+    "date": "2026-09-02",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-02",
+    "tool": "claude",
+    "visits": 3,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-02",
+    "tool": "gemini",
+    "visits": 4,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-03",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-07",
+    "tool": "chatgpt",
+    "visits": 4,
+    "engaged": 3,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-08",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-08",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-09",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-10",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 3,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-10",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-11",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-12",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-12",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-12",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-13",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-15",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-15",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-16",
+    "tool": "chatgpt",
+    "visits": 4,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-16",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-17",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 3,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-17",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-17",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-18",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-19",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-21",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-21",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-22",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-22",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-23",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-24",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-24",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-25",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-25",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-26",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-27",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-28",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-28",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-29",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-29",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-29",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-30",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-09-30",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-01",
+    "tool": "chatgpt",
+    "visits": 6,
+    "engaged": 5,
+    "demo_page": 1,
+    "demo_form": 1
+   },
+   {
+    "date": "2026-10-01",
+    "tool": "gemini",
+    "visits": 3,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-02",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-03",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-04",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-05",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-06",
+    "tool": "chatgpt",
+    "visits": 4,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-07",
+    "tool": "chatgpt",
+    "visits": 5,
+    "engaged": 4,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-07",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-08",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 3,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-08",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-09",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-09",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-10",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-11",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-11",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-12",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-12",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-12",
+    "tool": "perplexity",
+    "visits": 2,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-13",
+    "tool": "chatgpt",
+    "visits": 4,
+    "engaged": 1,
+    "demo_page": 1,
+    "demo_form": 1
+   },
+   {
+    "date": "2026-10-14",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-15",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-15",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-16",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-17",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-18",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-19",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-20",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-21",
+    "tool": "gemini",
+    "visits": 6,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   }
+  ],
+  "landing": [
+   {
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 12,
+    "engaged": 10
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 7,
+    "engaged": 0
+   },
+   {
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 7,
+    "engaged": 1
+   },
+   {
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 6,
+    "engaged": 0
+   },
+   {
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "tool": "chatgpt",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 5,
+    "engaged": 4
+   },
+   {
+    "page": "/forge",
+    "tool": "chatgpt",
+    "visits": 5,
+    "engaged": 4
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+    "tool": "gemini",
+    "visits": 5,
+    "engaged": 2
+   },
+   {
+    "page": "/",
+    "tool": "gemini",
+    "visits": 5,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/legacy-code-modernization",
+    "tool": "chatgpt",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "page": "/forge",
+    "tool": "gemini",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
+    "tool": "gemini",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "page": "(not set)",
+    "tool": "claude",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/securing-your-secrets-in-opseras-devops-orchestration-platform",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/software-factory",
+    "tool": "perplexity",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/spec-driven-development",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/events/gartner-summit-2026",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/knowledge-base/value-stream-management/flow-distribution",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "page": "/privacy",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "page": "/unified-insights",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/platform/unified-insights/dora-metrics",
+    "tool": "gemini",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "page": "(not set)",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/agentic-devops",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/agents",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/ai-sdlc",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/ai-software-factory",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/cobol-modernization",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/dora-2025-report-ai-software-development",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/factory-ai-alternatives",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/sast-tools",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/careers/enterprise-account-executive",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/ecosystem/appdynamics",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/events/aws-reinvent",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/forge/modernization/coldfusion-to-java",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/knowledge-base/incident-analysis/repeat-incident-rate",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/newsroom/opsera-unveils-appsec-ai-agents-to-power-the-shift-from-traditional-sdlc-to-ai-sdlc",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/partners/databricks",
+    "tool": "claude",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/platform",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/platform/declarative-pipelines",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/platform/unified-insights",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "perplexity",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/resources/reports/2026-ai-coding-impact-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/salesforce-devops",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/software-factory",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/solutions/salesforce-devops-platform",
+    "tool": "chatgpt",
+    "visits": 1,
+    "engaged": 0
+   }
+  ],
+  "sources": [
+   {
+    "source": "chatgpt.com (AI Assistant)",
+    "tool": "chatgpt"
+   },
+   {
+    "source": "chatgpt.com (Organic Search)",
+    "tool": "chatgpt"
+   },
+   {
+    "source": "chatgpt.com (Referral)",
+    "tool": "chatgpt"
+   },
+   {
+    "source": "claude.ai (AI Assistant)",
+    "tool": "claude"
+   },
+   {
+    "source": "gemini (AI Assistant)",
+    "tool": "gemini"
+   },
+   {
+    "source": "gemini (Unassigned)",
+    "tool": "gemini"
+   },
+   {
+    "source": "gemini.google.com (AI Assistant)",
+    "tool": "gemini"
+   },
+   {
+    "source": "openai (Unassigned)",
+    "tool": "chatgpt"
+   },
+   {
+    "source": "perplexity (Unassigned)",
+    "tool": "perplexity"
+   },
+   {
+    "source": "perplexity.ai (AI Assistant)",
+    "tool": "perplexity"
+   }
+  ]
+ },
+ "google_search_visits": [
+  {
+   "kind": "new",
+   "visits": 3699,
+   "engaged": 2089
+  },
+  {
+   "kind": "returning",
+   "visits": 1769,
+   "engaged": 962
+  },
+  {
+   "kind": "(not set)",
+   "visits": 730,
+   "engaged": 3
+  },
+  {
+   "kind": "",
+   "visits": 34,
+   "engaged": 0
   }
  ]
 }
