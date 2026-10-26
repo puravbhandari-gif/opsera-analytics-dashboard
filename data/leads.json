@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T18:57+05:30",
+ "end_date": "2026-10-25",
+ "pulled_at": "2026-10-26T08:34+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
@@ -28,17 +28,17 @@
   },
   "gartner_offer": {
    "label": "Gartner free modernization offer",
-   "count": 58,
+   "count": 67,
    "pages": [
     {
      "page": "/gartner-symposium/free-modernization",
-     "count": 58
+     "count": 67
     }
    ]
   },
   "events": {
    "label": "Event sign-ups",
-   "count": 250,
+   "count": 251,
    "pages": [
     {
      "page": "/events/tokenomics-the-currency-of-enterprise-ai",
@@ -75,16 +75,20 @@
     {
      "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
      "count": 1
+    },
+    {
+     "page": "/events/github-universe",
+     "count": 1
     }
    ]
   },
   "other": {
    "label": "Other forms",
-   "count": 280,
+   "count": 282,
    "pages": [
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "count": 98
+     "count": 100
     },
     {
      "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
@@ -1543,6 +1547,30 @@
    "demo": 0,
    "contact": 0,
    "gartner_offer": 10,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-10-22",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 9,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-10-23",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
+   "other": 0
+  },
+  {
+   "date": "2026-10-25",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
    "events": 0,
    "other": 2
   }

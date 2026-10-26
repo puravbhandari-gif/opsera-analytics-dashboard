@@ -1,8 +1,8 @@
 {
  "source": "HubSpot",
  "start_date": "2026-04-01",
- "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T18:56+05:30",
+ "end_date": "2026-10-24",
+ "pulled_at": "2026-10-26T08:36+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -2229,6 +2229,20 @@
    "channel": "direct",
    "demo": false,
    "count": 10
+  },
+  {
+   "date": "2026-10-22",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 7
+  },
+  {
+   "date": "2026-10-25",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
   }
  ],
  "ai_contacts_daily": [
@@ -2291,12 +2305,12 @@
    55
   ],
   [
-   "LinkedIn Lead Generation Ad: AI Benchmark Report Form",
-   42
+   "Claim Your Free Modernization Project \u2013 Opsera at Gartner IT Symposium/Xpo 2026: Gartner Symposium | Modernization Offer",
+   47
   ],
   [
-   "Claim Your Free Modernization Project \u2013 Opsera at Gartner IT Symposium/Xpo 2026: Gartner Symposium | Modernization Offer",
-   40
+   "LinkedIn Lead Generation Ad: AI Benchmark Report Form",
+   42
   ],
   [
    "Tokenomics: The Currency of Enterprise AI - Opsera: DG-FY27-Q3-Tokenomics-Webinar",
@@ -2347,11 +2361,11 @@
    5
   ],
   [
-   "Meet the Opsera AppSec Agents for AI Builders - Opsera: DG-FY27-Q1-Meet-the-Agents-Webinar",
-   4
+   "AI Coding Impact 2026 Benchmark Report \u2014 Opsera: DG-FY26-Q4-AI-BM-Report",
+   5
   ],
   [
-   "AI Coding Impact 2026 Benchmark Report \u2014 Opsera: DG-FY26-Q4-AI-BM-Report",
+   "Meet the Opsera AppSec Agents for AI Builders - Opsera: DG-FY27-Q1-Meet-the-Agents-Webinar",
    4
   ],
   [
@@ -2946,7 +2960,7 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 800,
+ "meetings_all_calendar": 808,
  "deals_weekly": [
   {
    "start": "2026-04-27",
@@ -3051,7 +3065,7 @@
   },
   {
    "start": "2026-10-01",
-   "end": "2026-10-21",
+   "end": "2026-10-24",
    "channel": "search",
    "demo": true,
    "tool": null,
@@ -3063,8 +3077,8 @@
  ],
  "deals_quarters": [
   {
-   "start": "2026-07-22",
-   "end": "2026-10-21",
+   "start": "2026-07-25",
+   "end": "2026-10-24",
    "channel": "direct",
    "demo": true,
    "tool": null,
@@ -3074,8 +3088,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-07-22",
-   "end": "2026-10-21",
+   "start": "2026-07-25",
+   "end": "2026-10-24",
    "channel": "search",
    "demo": true,
    "tool": null,
@@ -3085,8 +3099,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-22",
-   "end": "2026-07-21",
+   "start": "2026-04-25",
+   "end": "2026-07-24",
    "channel": "direct",
    "demo": true,
    "tool": null,
@@ -3096,8 +3110,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-22",
-   "end": "2026-07-21",
+   "start": "2026-04-25",
+   "end": "2026-07-24",
    "channel": "search",
    "demo": false,
    "tool": null,
@@ -3107,8 +3121,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-22",
-   "end": "2026-07-21",
+   "start": "2026-04-25",
+   "end": "2026-07-24",
    "channel": "other",
    "demo": true,
    "tool": null,
@@ -3194,7 +3208,7 @@
    "label": "Gartner booth scans",
    "list": "Gartner IT Symposium 2026 booth scans",
    "note": "Booth scans, not sign-ups",
-   "members": 183,
+   "members": 267,
    "joined_daily": [
     {
      "date": "2026-10-20",
@@ -3203,6 +3217,10 @@
     {
      "date": "2026-10-21",
      "count": 103
+    },
+    {
+     "date": "2026-10-22",
+     "count": 84
     }
    ]
   }
@@ -3237,15 +3255,15 @@
    "start": null,
    "contactFirstTouch": 4,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 615,
+   "influencedContacts": 623,
    "influencedContacts_also_flutter_guests": 10
   },
   {
    "name": "DG-FY27-Q3-Event-Gartner-Symposium",
    "start": null,
-   "contactFirstTouch": 9,
+   "contactFirstTouch": 11,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 66,
+   "influencedContacts": 75,
    "influencedContacts_also_flutter_guests": 3
   },
   {

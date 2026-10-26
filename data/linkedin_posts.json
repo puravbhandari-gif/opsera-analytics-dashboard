@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-10-22T11:30+00:00",
+ "pulled_at": "2026-10-26T03:07+00:00",
  "posts": [
   {
    "account": "company",
@@ -326,6 +326,27 @@
    "post": "https://www.linkedin.com/posts/opsera_day-2-at-gartner-it-symposiumxpo-in-orlando-activity-7518784768810016768-Uuv_",
    "posted_utc": "2026-10-21T21:26:21.150Z",
    "date_pacific": "2026-10-21",
+   "opsera_pages": []
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_gartnersym-activity-7519075582484295681-ot1k",
+   "posted_utc": "2026-10-22T16:41:56.533Z",
+   "date_pacific": "2026-10-22",
+   "opsera_pages": []
+  },
+  {
+   "account": "kumar",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_gartnersym-activity-7519084447300730880-1rmA",
+   "posted_utc": "2026-10-22T17:17:10.070Z",
+   "date_pacific": "2026-10-22",
+   "opsera_pages": []
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_recap-of-opsera-gartner-it-symposiumxpo-activity-7519472767100936193-VrDc",
+   "posted_utc": "2026-10-23T19:00:12.725Z",
+   "date_pacific": "2026-10-23",
    "opsera_pages": []
   }
  ]

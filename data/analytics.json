@@ -1,17 +1,17 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-10-21",
- "pulled_at": "2026-10-22T18:57+05:30",
+ "end_date": "2026-10-25",
+ "pulled_at": "2026-10-26T08:34+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
-  "sessions": 78741,
-  "totalUsers": 63789,
-  "engagedSessions": 29602
+  "sessions": 81009,
+  "totalUsers": 65522,
+  "engagedSessions": 29944
  },
  "split_sums": {
-  "daily": 78846,
-  "channels": 78840
+  "daily": 80907,
+  "channels": 81122
  },
  "daily": [
   {
@@ -1234,67 +1234,98 @@
   },
   {
    "date": "2026-10-21",
-   "sessions": 547,
+   "sessions": 546,
    "totalUsers": 493,
-   "engagedSessions": 155
+   "engagedSessions": 159
+  },
+  {
+   "date": "2026-10-22",
+   "sessions": 1289,
+   "totalUsers": 1226,
+   "engagedSessions": 273
+  },
+  {
+   "date": "2026-10-23",
+   "sessions": 378,
+   "totalUsers": 339,
+   "engagedSessions": 113
+  },
+  {
+   "date": "2026-10-24",
+   "sessions": 246,
+   "totalUsers": 235,
+   "engagedSessions": 49
+  },
+  {
+   "date": "2026-10-25",
+   "sessions": 149,
+   "totalUsers": 145,
+   "engagedSessions": 28
   }
  ],
  "channels": [
   {
    "sessionDefaultChannelGroup": "Direct",
-   "sessions": 34508,
-   "totalUsers": 31974,
-   "engagedSessions": 9224,
-   "averageSessionDuration": 52.54479528807813
+   "sessions": 35800,
+   "totalUsers": 32984,
+   "engagedSessions": 9356,
+   "averageSessionDuration": 52.36059117407821
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 22902,
-   "totalUsers": 14412,
-   "engagedSessions": 11468,
-   "averageSessionDuration": 164.41606277744302
+   "sessions": 23211,
+   "totalUsers": 14625,
+   "engagedSessions": 11539,
+   "averageSessionDuration": 164.51517869971136
   },
   {
    "sessionDefaultChannelGroup": "Email",
-   "sessions": 9697,
-   "totalUsers": 9487,
-   "engagedSessions": 1881,
-   "averageSessionDuration": 17.803603461689185
+   "sessions": 9976,
+   "totalUsers": 9764,
+   "engagedSessions": 1902,
+   "averageSessionDuration": 17.673595258119487
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessions": 4168,
-   "totalUsers": 2878,
-   "engagedSessions": 2475,
-   "averageSessionDuration": 138.90548339155472
+   "sessions": 4215,
+   "totalUsers": 2899,
+   "engagedSessions": 2488,
+   "averageSessionDuration": 137.8646075376038
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
-   "sessions": 3505,
-   "totalUsers": 2251,
-   "engagedSessions": 2104,
-   "averageSessionDuration": 143.03275213181172
+   "sessions": 3526,
+   "totalUsers": 2258,
+   "engagedSessions": 2112,
+   "averageSessionDuration": 143.45525150510494
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
-   "sessions": 1760,
-   "totalUsers": 1379,
-   "engagedSessions": 742,
-   "averageSessionDuration": 123.79660203522728
+   "sessions": 1788,
+   "totalUsers": 1400,
+   "engagedSessions": 752,
+   "averageSessionDuration": 123.3068557533557
   },
   {
    "sessionDefaultChannelGroup": "Paid Search",
-   "sessions": 1755,
-   "totalUsers": 1419,
+   "sessions": 1760,
+   "totalUsers": 1424,
    "engagedSessions": 700,
-   "averageSessionDuration": 110.51905297037037
+   "averageSessionDuration": 110.20507838806819
   },
   {
    "sessionDefaultChannelGroup": "AI Assistant",
-   "sessions": 313,
-   "totalUsers": 206,
-   "engagedSessions": 146,
-   "averageSessionDuration": 195.8652236261981
+   "sessions": 327,
+   "totalUsers": 214,
+   "engagedSessions": 156,
+   "averageSessionDuration": 201.7766833975535
+  },
+  {
+   "sessionDefaultChannelGroup": "Organic Video",
+   "sessions": 311,
+   "totalUsers": 305,
+   "engagedSessions": 123,
+   "averageSessionDuration": 23.018282154340834
   },
   {
    "sessionDefaultChannelGroup": "Paid Social",
@@ -1302,13 +1333,6 @@
    "totalUsers": 160,
    "engagedSessions": 36,
    "averageSessionDuration": 39.42692524365483
-  },
-  {
-   "sessionDefaultChannelGroup": "Organic Video",
-   "sessions": 24,
-   "totalUsers": 17,
-   "engagedSessions": 14,
-   "averageSessionDuration": 217.38984279166667
   },
   {
    "sessionDefaultChannelGroup": "Cross-network",
@@ -1406,6 +1430,12 @@
    "engagedSessions": 46
   },
   {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 553,
+   "engagedSessions": 76
+  },
+  {
    "date": "2026-06-02",
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 521,
@@ -1456,8 +1486,8 @@
   {
    "date": "2026-10-21",
    "sessionDefaultChannelGroup": "Direct",
-   "sessions": 349,
-   "engagedSessions": 58
+   "sessions": 348,
+   "engagedSessions": 61
   },
   {
    "date": "2026-05-05",
@@ -1508,6 +1538,12 @@
    "engagedSessions": 106
   },
   {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Organic Video",
+   "sessions": 275,
+   "engagedSessions": 104
+  },
+  {
    "date": "2026-06-18",
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 266,
@@ -1530,6 +1566,12 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 260,
    "engagedSessions": 71
+  },
+  {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Email",
+   "sessions": 260,
+   "engagedSessions": 13
   },
   {
    "date": "2026-10-11",
@@ -1626,6 +1668,12 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 215,
    "engagedSessions": 33
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 214,
+   "engagedSessions": 34
   },
   {
    "date": "2026-10-10",
@@ -1752,6 +1800,12 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 191,
    "engagedSessions": 95
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 191,
+   "engagedSessions": 26
   },
   {
    "date": "2026-09-08",
@@ -1980,6 +2034,12 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 160,
    "engagedSessions": 79
+  },
+  {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 159,
+   "engagedSessions": 64
   },
   {
    "date": "2026-08-19",
@@ -3024,6 +3084,18 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 107,
    "engagedSessions": 33
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 107,
+   "engagedSessions": 51
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 107,
+   "engagedSessions": 13
   },
   {
    "date": "2026-05-28",
@@ -4076,6 +4148,12 @@
    "engagedSessions": 32
   },
   {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 38,
+   "engagedSessions": 16
+  },
+  {
    "date": "2026-04-18",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 37,
@@ -4272,6 +4350,12 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 32,
    "engagedSessions": 15
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 32,
+   "engagedSessions": 12
   },
   {
    "date": "2026-05-19",
@@ -5792,6 +5876,12 @@
    "engagedSessions": 8
   },
   {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessions": 15,
+   "engagedSessions": 5
+  },
+  {
    "date": "2026-04-08",
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 14,
@@ -5928,6 +6018,12 @@
    "sessionDefaultChannelGroup": "Organic Social",
    "sessions": 14,
    "engagedSessions": 10
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Email",
+   "sessions": 14,
+   "engagedSessions": 4
   },
   {
    "date": "2026-04-02",
@@ -6116,6 +6212,12 @@
    "engagedSessions": 8
   },
   {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 13,
+   "engagedSessions": 6
+  },
+  {
    "date": "2026-04-06",
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 12,
@@ -6234,6 +6336,18 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessions": 12,
    "engagedSessions": 7
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Organic Video",
+   "sessions": 12,
+   "engagedSessions": 5
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 12,
+   "engagedSessions": 6
   },
   {
    "date": "2026-04-02",
@@ -7052,6 +7166,12 @@
    "engagedSessions": 0
   },
   {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Organic Social",
+   "sessions": 8,
+   "engagedSessions": 7
+  },
+  {
    "date": "2026-04-03",
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 7,
@@ -7637,7 +7757,25 @@
    "date": "2026-10-21",
    "sessionDefaultChannelGroup": "AI Assistant",
    "sessions": 6,
+   "engagedSessions": 3
+  },
+  {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Organic Social",
+   "sessions": 6,
    "engagedSessions": 2
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 6,
+   "engagedSessions": 3
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessions": 6,
+   "engagedSessions": 1
   },
   {
    "date": "2026-04-01",
@@ -7952,7 +8090,25 @@
    "engagedSessions": 4
   },
   {
-   "date": "2026-10-21",
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "AI Assistant",
+   "sessions": 5,
+   "engagedSessions": 4
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "AI Assistant",
+   "sessions": 5,
+   "engagedSessions": 2
+  },
+  {
+   "date": "2026-10-23",
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessions": 5,
+   "engagedSessions": 4
+  },
+  {
+   "date": "2026-10-25",
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 5,
    "engagedSessions": 1
@@ -8406,6 +8562,12 @@
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 4,
    "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-21",
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessions": 4,
+   "engagedSessions": 1
   },
   {
    "date": "2026-04-10",
@@ -8934,6 +9096,18 @@
    "sessionDefaultChannelGroup": "Unassigned",
    "sessions": 3,
    "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-22",
+   "sessionDefaultChannelGroup": "Paid Search",
+   "sessions": 3,
+   "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Email",
+   "sessions": 3,
+   "engagedSessions": 1
   },
   {
    "date": "2026-04-05",
@@ -9502,6 +9676,30 @@
   {
    "date": "2026-10-17",
    "sessionDefaultChannelGroup": "Unassigned",
+   "sessions": 2,
+   "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "AI Assistant",
+   "sessions": 2,
+   "engagedSessions": 2
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "AI Assistant",
+   "sessions": 2,
+   "engagedSessions": 1
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "Email",
+   "sessions": 2,
+   "engagedSessions": 2
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "Referral",
    "sessions": 2,
    "engagedSessions": 0
   },
@@ -10272,6 +10470,18 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 1,
    "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-24",
+   "sessionDefaultChannelGroup": "Paid Search",
+   "sessions": 1,
+   "engagedSessions": 0
+  },
+  {
+   "date": "2026-10-25",
+   "sessionDefaultChannelGroup": "Paid Search",
+   "sessions": 1,
+   "engagedSessions": 0
   }
  ],
  "sources": [
@@ -10279,64 +10489,64 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
-   "sessions": 34508,
-   "totalUsers": 31974,
-   "engagedSessions": 9224,
-   "averageSessionDuration": 52.544795288078134
+   "sessions": 35800,
+   "totalUsers": 32984,
+   "engagedSessions": 9356,
+   "averageSessionDuration": 52.36059117407821
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessionSource": "google",
    "sessionMedium": "organic",
-   "sessions": 21341,
-   "totalUsers": 13575,
-   "engagedSessions": 10850,
-   "averageSessionDuration": 166.38220527969636
+   "sessions": 21556,
+   "totalUsers": 13771,
+   "engagedSessions": 10939,
+   "averageSessionDuration": 167.16682808136946
   },
   {
    "sessionDefaultChannelGroup": "Email",
    "sessionSource": "hs_email",
    "sessionMedium": "email",
-   "sessions": 8811,
-   "totalUsers": 8598,
-   "engagedSessions": 1657,
-   "averageSessionDuration": 16.918243938712973
+   "sessions": 9090,
+   "totalUsers": 8876,
+   "engagedSessions": 1678,
+   "averageSessionDuration": 16.80273826963696
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
    "sessionSource": "linkedin.com",
    "sessionMedium": "referral",
-   "sessions": 3029,
-   "totalUsers": 1992,
-   "engagedSessions": 1894,
-   "averageSessionDuration": 135.64969016507098
+   "sessions": 3044,
+   "totalUsers": 1998,
+   "engagedSessions": 1900,
+   "averageSessionDuration": 136.40102682720106
   },
   {
    "sessionDefaultChannelGroup": "Paid Search",
    "sessionSource": "google",
    "sessionMedium": "cpc",
-   "sessions": 1755,
-   "totalUsers": 1419,
+   "sessions": 1760,
+   "totalUsers": 1424,
    "engagedSessions": 700,
-   "averageSessionDuration": 110.51905297037037
+   "averageSessionDuration": 110.20507838806819
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessionSource": "bing",
    "sessionMedium": "organic",
-   "sessions": 1111,
-   "totalUsers": 672,
-   "engagedSessions": 498,
-   "averageSessionDuration": 154.880031569757
+   "sessions": 1122,
+   "totalUsers": 682,
+   "engagedSessions": 501,
+   "averageSessionDuration": 153.7041112673797
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "(not set)",
    "sessionMedium": "(not set)",
-   "sessions": 1094,
-   "totalUsers": 950,
+   "sessions": 1102,
+   "totalUsers": 958,
    "engagedSessions": 380,
-   "averageSessionDuration": 101.70452196526509
+   "averageSessionDuration": 101.00184229491833
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -10366,22 +10576,31 @@
    "averageSessionDuration": 26.48241776047904
   },
   {
+   "sessionDefaultChannelGroup": "Organic Video",
+   "sessionSource": "youtube",
+   "sessionMedium": "video",
+   "sessions": 287,
+   "totalUsers": 288,
+   "engagedSessions": 109,
+   "averageSessionDuration": 6.764214365853658
+  },
+  {
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "opsera.io",
    "sessionMedium": "referral",
-   "sessions": 280,
-   "totalUsers": 125,
-   "engagedSessions": 150,
-   "averageSessionDuration": 192.30529435
+   "sessions": 283,
+   "totalUsers": 127,
+   "engagedSessions": 152,
+   "averageSessionDuration": 190.4602981130742
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
    "sessionSource": "linkedin",
    "sessionMedium": "social",
-   "sessions": 242,
-   "totalUsers": 88,
-   "engagedSessions": 119,
-   "averageSessionDuration": 283.92344343388436
+   "sessions": 244,
+   "totalUsers": 89,
+   "engagedSessions": 121,
+   "averageSessionDuration": 282.2995071475409
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10403,6 +10622,15 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "teams.public.onecdn.static.microsoft",
+   "sessionMedium": "referral",
+   "sessions": 176,
+   "totalUsers": 97,
+   "engagedSessions": 76,
+   "averageSessionDuration": 222.42475381250003
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "syndicatedsearch.goog",
    "sessionMedium": "referral",
    "sessions": 170,
@@ -10411,22 +10639,13 @@
    "averageSessionDuration": 21.090290323529413
   },
   {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "teams.public.onecdn.static.microsoft",
-   "sessionMedium": "referral",
-   "sessions": 169,
-   "totalUsers": 92,
-   "engagedSessions": 74,
-   "averageSessionDuration": 230.9385476863905
-  },
-  {
    "sessionDefaultChannelGroup": "AI Assistant",
    "sessionSource": "chatgpt.com",
    "sessionMedium": "ai-assistant",
-   "sessions": 163,
-   "totalUsers": 109,
-   "engagedSessions": 92,
-   "averageSessionDuration": 187.87314607361964
+   "sessions": 166,
+   "totalUsers": 112,
+   "engagedSessions": 95,
+   "averageSessionDuration": 185.07435825903613
   },
   {
    "sessionDefaultChannelGroup": "Paid Social",
@@ -10447,22 +10666,22 @@
    "averageSessionDuration": 203.56496067647058
   },
   {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "thrillxdesign.com",
-   "sessionMedium": "referral",
-   "sessions": 105,
-   "totalUsers": 75,
-   "engagedSessions": 67,
-   "averageSessionDuration": 188.05004433333335
-  },
-  {
    "sessionDefaultChannelGroup": "AI Assistant",
    "sessionSource": "gemini.google.com",
    "sessionMedium": "ai-assistant",
-   "sessions": 104,
-   "totalUsers": 63,
-   "engagedSessions": 30,
-   "averageSessionDuration": 214.3286314230769
+   "sessions": 115,
+   "totalUsers": 68,
+   "engagedSessions": 37,
+   "averageSessionDuration": 233.62015202608694
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "thrillxdesign.com",
+   "sessionMedium": "referral",
+   "sessions": 107,
+   "totalUsers": 77,
+   "engagedSessions": 69,
+   "averageSessionDuration": 196.909044317757
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -10513,10 +10732,10 @@
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "employee promo",
    "sessionMedium": "employee promo",
-   "sessions": 70,
+   "sessions": 72,
    "totalUsers": 30,
-   "engagedSessions": 38,
-   "averageSessionDuration": 293.43812928571424
+   "engagedSessions": 39,
+   "averageSessionDuration": 285.6551216111111
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -10534,7 +10753,7 @@
    "sessions": 64,
    "totalUsers": 60,
    "engagedSessions": 52,
-   "averageSessionDuration": 7.319014375000001
+   "averageSessionDuration": 7.319014375
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10558,10 +10777,10 @@
    "sessionDefaultChannelGroup": "Organic Social",
    "sessionSource": "lnkd.in",
    "sessionMedium": "referral",
-   "sessions": 48,
+   "sessions": 49,
    "totalUsers": 43,
    "engagedSessions": 16,
-   "averageSessionDuration": 111.71778579166669
+   "averageSessionDuration": 109.43783097959185
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -10612,10 +10831,10 @@
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "dreamforce QR code",
    "sessionMedium": "(not set)",
-   "sessions": 42,
-   "totalUsers": 31,
-   "engagedSessions": 9,
-   "averageSessionDuration": 9.643084714285713
+   "sessions": 43,
+   "totalUsers": 32,
+   "engagedSessions": 10,
+   "averageSessionDuration": 9.824816976744186
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -10648,10 +10867,10 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "marketing.opsera.io",
    "sessionMedium": "referral",
-   "sessions": 35,
+   "sessions": 37,
    "totalUsers": 12,
    "engagedSessions": 25,
-   "averageSessionDuration": 217.29340474285715
+   "averageSessionDuration": 205.5478152972973
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -10718,6 +10937,15 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "mail.google.com",
+   "sessionMedium": "referral",
+   "sessions": 28,
+   "totalUsers": 12,
+   "engagedSessions": 11,
+   "averageSessionDuration": 40.19679985714286
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "perplexity.ai",
    "sessionMedium": "referral",
    "sessions": 27,
@@ -10726,13 +10954,13 @@
    "averageSessionDuration": 81.83640151851851
   },
   {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "mail.google.com",
-   "sessionMedium": "referral",
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "email signature",
+   "sessionMedium": "(not set)",
    "sessions": 26,
-   "totalUsers": 11,
-   "engagedSessions": 10,
-   "averageSessionDuration": 42.88807461538461
+   "totalUsers": 26,
+   "engagedSessions": 2,
+   "averageSessionDuration": 2.2569496538461538
   },
   {
    "sessionDefaultChannelGroup": "AI Assistant",
@@ -10762,13 +10990,22 @@
    "averageSessionDuration": 79.34960429166667
   },
   {
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "tradeshow",
+   "sessionMedium": "booth",
+   "sessions": 24,
+   "totalUsers": 6,
+   "engagedSessions": 8,
+   "averageSessionDuration": 205.59811308333335
+  },
+  {
    "sessionDefaultChannelGroup": "Organic Video",
    "sessionSource": "youtube.com",
    "sessionMedium": "referral",
    "sessions": 23,
    "totalUsers": 16,
    "engagedSessions": 14,
-   "averageSessionDuration": 226.68745321739132
+   "averageSessionDuration": 226.6874532173913
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10805,24 +11042,6 @@
    "totalUsers": 16,
    "engagedSessions": 14,
    "averageSessionDuration": 170.7057231304348
-  },
-  {
-   "sessionDefaultChannelGroup": "Unassigned",
-   "sessionSource": "email signature",
-   "sessionMedium": "(not set)",
-   "sessions": 23,
-   "totalUsers": 23,
-   "engagedSessions": 1,
-   "averageSessionDuration": 0.0032004347826086956
-  },
-  {
-   "sessionDefaultChannelGroup": "Unassigned",
-   "sessionSource": "tradeshow",
-   "sessionMedium": "booth",
-   "sessions": 23,
-   "totalUsers": 5,
-   "engagedSessions": 8,
-   "averageSessionDuration": 214.39150886956523
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10942,6 +11161,15 @@
    "averageSessionDuration": 23.814848722222223
   },
   {
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessionSource": "in.search.yahoo.com",
+   "sessionMedium": "referral",
+   "sessions": 17,
+   "totalUsers": 14,
+   "engagedSessions": 12,
+   "averageSessionDuration": 337.2513997058823
+  },
+  {
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "app.hubspot.com",
    "sessionMedium": "referral",
@@ -10958,15 +11186,6 @@
    "totalUsers": 9,
    "engagedSessions": 5,
    "averageSessionDuration": 17.06220205882353
-  },
-  {
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessionSource": "in.search.yahoo.com",
-   "sessionMedium": "referral",
-   "sessions": 16,
-   "totalUsers": 13,
-   "engagedSessions": 11,
-   "averageSessionDuration": 356.12073381249996
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -11003,6 +11222,15 @@
    "totalUsers": 4,
    "engagedSessions": 8,
    "averageSessionDuration": 460.03514656249996
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "partner.microsoft.com",
+   "sessionMedium": "referral",
+   "sessions": 16,
+   "totalUsers": 8,
+   "engagedSessions": 7,
+   "averageSessionDuration": 327.8465833125
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -11042,6 +11270,33 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "search.brave.com",
+   "sessionMedium": "referral",
+   "sessions": 14,
+   "totalUsers": 9,
+   "engagedSessions": 8,
+   "averageSessionDuration": 104.99627050000001
+  },
+  {
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "Kumar LinkedIn",
+   "sessionMedium": "(not set)",
+   "sessions": 14,
+   "totalUsers": 5,
+   "engagedSessions": 9,
+   "averageSessionDuration": 144.16519035714285
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "github.com",
+   "sessionMedium": "referral",
+   "sessions": 13,
+   "totalUsers": 9,
+   "engagedSessions": 8,
+   "averageSessionDuration": 242.1862939230769
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "localhost:8080",
    "sessionMedium": "referral",
    "sessions": 13,
@@ -11051,21 +11306,12 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "partner.microsoft.com",
+   "sessionSource": "reg.githubuniverse.com",
    "sessionMedium": "referral",
    "sessions": 13,
-   "totalUsers": 8,
-   "engagedSessions": 6,
-   "averageSessionDuration": 388.74680230769235
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "github.com",
-   "sessionMedium": "referral",
-   "sessions": 12,
-   "totalUsers": 8,
-   "engagedSessions": 7,
-   "averageSessionDuration": 257.77609808333335
+   "totalUsers": 12,
+   "engagedSessions": 8,
+   "averageSessionDuration": 354.0066206923077
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -11078,30 +11324,12 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "reg.githubuniverse.com",
-   "sessionMedium": "referral",
-   "sessions": 12,
-   "totalUsers": 11,
-   "engagedSessions": 7,
-   "averageSessionDuration": 382.16718091666667
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "growjo.com",
    "sessionMedium": "referral",
    "sessions": 11,
    "totalUsers": 8,
    "engagedSessions": 9,
    "averageSessionDuration": 58.96924645454545
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "search.brave.com",
-   "sessionMedium": "referral",
-   "sessions": 11,
-   "totalUsers": 8,
-   "engagedSessions": 7,
-   "averageSessionDuration": 130.47707590909093
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -11375,6 +11603,15 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "g2.com",
+   "sessionMedium": "referral",
+   "sessions": 6,
+   "totalUsers": 5,
+   "engagedSessions": 4,
+   "averageSessionDuration": 37.531676166666664
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "link.edgepilot.com",
    "sessionMedium": "referral",
    "sessions": 6,
@@ -11462,6 +11699,15 @@
    "totalUsers": 3,
    "engagedSessions": 2,
    "averageSessionDuration": 80.8911106
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "7462438.hs-sites.com",
+   "sessionMedium": "referral",
+   "sessions": 5,
+   "totalUsers": 5,
+   "engagedSessions": 3,
+   "averageSessionDuration": 22.201084
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -11573,15 +11819,6 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "7462438.hs-sites.com",
-   "sessionMedium": "referral",
-   "sessions": 4,
-   "totalUsers": 4,
-   "engagedSessions": 3,
-   "averageSessionDuration": 27.751355
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "app.nooks.in",
    "sessionMedium": "referral",
    "sessions": 4,
@@ -11642,15 +11879,6 @@
    "totalUsers": 1,
    "engagedSessions": 3,
    "averageSessionDuration": 720.04697125
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "g2.com",
-   "sessionMedium": "referral",
-   "sessions": 4,
-   "totalUsers": 4,
-   "engagedSessions": 3,
-   "averageSessionDuration": 53.709579749999996
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -12092,15 +12320,6 @@
    "totalUsers": 3,
    "engagedSessions": 2,
    "averageSessionDuration": 92.33411933333333
-  },
-  {
-   "sessionDefaultChannelGroup": "Unassigned",
-   "sessionSource": "Kumar LinkedIn",
-   "sessionMedium": "(not set)",
-   "sessions": 3,
-   "totalUsers": 1,
-   "engagedSessions": 2,
-   "averageSessionDuration": 120.54848666666668
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -12644,6 +12863,15 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "projectmanagers.net",
+   "sessionMedium": "referral",
+   "sessions": 2,
+   "totalUsers": 2,
+   "engagedSessions": 2,
+   "averageSessionDuration": 233.0968925
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "saasbrowser",
    "sessionMedium": "referral",
    "sessions": 2,
@@ -12716,12 +12944,30 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "wlda.tech",
+   "sessionMedium": "referral",
+   "sessions": 2,
+   "totalUsers": 2,
+   "engagedSessions": 1,
+   "averageSessionDuration": 7.7605065
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "zuva.io",
    "sessionMedium": "referral",
    "sessions": 2,
    "totalUsers": 2,
    "engagedSessions": 0,
    "averageSessionDuration": 3.257989
+  },
+  {
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "(not set)",
+   "sessionMedium": "referral_profile",
+   "sessions": 2,
+   "totalUsers": 2,
+   "engagedSessions": 0,
+   "averageSessionDuration": 0
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -12736,6 +12982,24 @@
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "Trinity Ventures job board",
    "sessionMedium": "getro.com",
+   "sessions": 2,
+   "totalUsers": 2,
+   "engagedSessions": 0,
+   "averageSessionDuration": 0
+  },
+  {
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "chatgpt.com",
+   "sessionMedium": "(none)",
+   "sessions": 2,
+   "totalUsers": 2,
+   "engagedSessions": 2,
+   "averageSessionDuration": 420.36763799999994
+  },
+  {
+   "sessionDefaultChannelGroup": "Unassigned",
+   "sessionSource": "email signature",
+   "sessionMedium": "",
    "sessions": 2,
    "totalUsers": 2,
    "engagedSessions": 0,
@@ -12965,6 +13229,15 @@
    "totalUsers": 1,
    "engagedSessions": 1,
    "averageSessionDuration": 48.454171
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "127.0.0.1:8765",
+   "sessionMedium": "referral",
+   "sessions": 1,
+   "totalUsers": 1,
+   "engagedSessions": 1,
+   "averageSessionDuration": 35.992106
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -13284,6 +13557,15 @@
   {
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "academy.com",
+   "sessionMedium": "referral",
+   "sessions": 1,
+   "totalUsers": 1,
+   "engagedSessions": 0,
+   "averageSessionDuration": 0
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "accounts.google.com",
    "sessionMedium": "referral",
    "sessions": 1,
    "totalUsers": 1,
@@ -14678,15 +14960,6 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "projectmanagers.net",
-   "sessionMedium": "referral",
-   "sessions": 1,
-   "totalUsers": 1,
-   "engagedSessions": 1,
-   "averageSessionDuration": 437.442046
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "promptledger-mcp-server.beta.p10y.ntnxdpro.com",
    "sessionMedium": "referral",
    "sessions": 1,
@@ -14756,6 +15029,15 @@
    "totalUsers": 1,
    "engagedSessions": 1,
    "averageSessionDuration": 35.646006
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "scanned.page",
+   "sessionMedium": "referral",
+   "sessions": 1,
+   "totalUsers": 1,
+   "engagedSessions": 1,
+   "averageSessionDuration": 261.087412
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -14864,6 +15146,15 @@
    "totalUsers": 1,
    "engagedSessions": 0,
    "averageSessionDuration": 8.393334
+  },
+  {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "taaft",
+   "sessionMedium": "referral",
+   "sessions": 1,
+   "totalUsers": 1,
+   "engagedSessions": 0,
+   "averageSessionDuration": 0
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -15083,15 +15374,6 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "wlda.tech",
-   "sessionMedium": "referral",
-   "sessions": 1,
-   "totalUsers": 1,
-   "engagedSessions": 1,
-   "averageSessionDuration": 15.521013
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "word-edit.officeapps.live.com",
    "sessionMedium": "referral",
    "sessions": 1,
@@ -15139,15 +15421,6 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "zuula.com",
    "sessionMedium": "referral",
-   "sessions": 1,
-   "totalUsers": 1,
-   "engagedSessions": 0,
-   "averageSessionDuration": 0
-  },
-  {
-   "sessionDefaultChannelGroup": "Unassigned",
-   "sessionSource": "(not set)",
-   "sessionMedium": "referral_profile",
    "sessions": 1,
    "totalUsers": 1,
    "engagedSessions": 0,
@@ -15209,15 +15482,6 @@
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
-   "sessionSource": "chatgpt.com",
-   "sessionMedium": "(none)",
-   "sessions": 1,
-   "totalUsers": 1,
-   "engagedSessions": 1,
-   "averageSessionDuration": 51.961524
-  },
-  {
-   "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "clutch.co",
    "sessionMedium": "(not set)",
    "sessions": 1,
@@ -15256,23 +15520,23 @@
  "pages": [
   {
    "page": "/",
-   "views": 21328
+   "views": 21643
   },
   {
    "page": "/hs/preferences-center/en/direct",
-   "views": 4828
+   "views": 5100
   },
   {
    "page": "/hs/preferences-center/en/page",
-   "views": 4371
+   "views": 4634
   },
   {
    "page": "/careers",
-   "views": 3569
+   "views": 3658
   },
   {
    "page": "/about",
-   "views": 3194
+   "views": 3238
   },
   {
    "page": "/job-application",
@@ -15280,15 +15544,15 @@
   },
   {
    "page": "/agents",
-   "views": 2652
+   "views": 2702
   },
   {
    "page": "/platform",
-   "views": 2294
+   "views": 2300
   },
   {
    "page": "/demo",
-   "views": 1853
+   "views": 1965
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
@@ -15296,7 +15560,7 @@
   },
   {
    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
-   "views": 1359
+   "views": 1361
   },
   {
    "page": "/careers/customer-success-engineer-devops",
@@ -15311,16 +15575,16 @@
    "views": 1013
   },
   {
-   "page": "/careers/pre-sales-solution-engineer",
-   "views": 992
+   "page": "/blog",
+   "views": 1013
   },
   {
    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-   "views": 987
+   "views": 998
   },
   {
-   "page": "/blog",
-   "views": 939
+   "page": "/careers/pre-sales-solution-engineer",
+   "views": 992
   },
   {
    "page": "/careers/salesforce-devops-sales-engineer",
@@ -15328,51 +15592,55 @@
   },
   {
    "page": "/resources",
-   "views": 859
+   "views": 866
   },
   {
    "page": "/contact",
-   "views": 749
+   "views": 750
   },
   {
    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
-   "views": 724
+   "views": 734
   },
   {
    "page": "/solutions/sdlc",
-   "views": 723
+   "views": 724
   },
   {
    "page": "/pricing",
-   "views": 718
+   "views": 721
+  },
+  {
+   "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+   "views": 714
+  },
+  {
+   "page": "/platform/unified-insights",
+   "views": 710
   },
   {
    "page": "/careers/devops-sales-engineer",
    "views": 709
   },
   {
-   "page": "/platform/unified-insights",
-   "views": 709
+   "page": "/customer-stories",
+   "views": 672
   },
   {
-   "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-   "views": 697
+   "page": "/brickforge",
+   "views": 670
+  },
+  {
+   "page": "/forge",
+   "views": 667
   },
   {
    "page": "/careers/enterprise-account-executive",
    "views": 655
   },
   {
-   "page": "/customer-stories",
-   "views": 647
-  },
-  {
    "page": "/ecosystem/twistlock",
-   "views": 641
-  },
-  {
-   "page": "/brickforge",
-   "views": 632
+   "views": 643
   },
   {
    "page": "/flutter-2026-ai-sdlc-summit",
@@ -15383,12 +15651,8 @@
    "views": 598
   },
   {
-   "page": "/forge",
-   "views": 579
-  },
-  {
    "page": "/hs/preferences-center/en/confirm",
-   "views": 579
+   "views": 587
   },
   {
    "page": "/developers",
@@ -15400,134 +15664,138 @@
   },
   {
    "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
-   "views": 489
+   "views": 500
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-copado",
-   "views": 461
+   "views": 462
   },
   {
    "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
-   "views": 453
-  },
-  {
-   "page": "/blog/software-factory",
-   "views": 421
+   "views": 458
   },
   {
    "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
-   "views": 418
+   "views": 445
+  },
+  {
+   "page": "/blog/software-factory",
+   "views": 442
   },
   {
    "page": "/solutions/data-and-analytics",
-   "views": 417
+   "views": 419
   },
   {
    "page": "/solutions/salesforce-devops-platform",
-   "views": 408
+   "views": 409
   },
   {
    "page": "/solutions/devsecops",
-   "views": 407
+   "views": 408
   },
   {
    "page": "/integrations",
-   "views": 385
-  },
-  {
-   "page": "/resources/comparison-guides/opsera-vs-dx",
-   "views": 376
+   "views": 389
   },
   {
    "page": "/solutions/saas-apps",
-   "views": 376
+   "views": 380
+  },
+  {
+   "page": "/partners",
+   "views": 379
+  },
+  {
+   "page": "/resources/comparison-guides/opsera-vs-dx",
+   "views": 377
   },
   {
    "page": "/ecosystem/argo-cd",
    "views": 374
   },
   {
-   "page": "/partners",
-   "views": 372
-  },
-  {
    "page": "/blog/what-is-agentic-devops",
-   "views": 353
+   "views": 365
   },
   {
    "page": "/platform/hummingbird-ai",
    "views": 325
   },
   {
+   "page": "/unified-insights",
+   "views": 308
+  },
+  {
    "page": "/brickforge-powered-by-opsera",
-   "views": 305
+   "views": 307
   },
   {
    "page": "/blog/13-code-quality-metrics-that-you-must-track",
-   "views": 301
-  },
-  {
-   "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
-   "views": 287
-  },
-  {
-   "page": "/blog/ai-sdlc",
-   "views": 287
+   "views": 307
   },
   {
    "page": "/gartner-symposium",
-   "views": 281
+   "views": 298
+  },
+  {
+   "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+   "views": 296
+  },
+  {
+   "page": "/blog/ai-sdlc",
+   "views": 290
   },
   {
    "page": "/hs/preferences-center/en/fallback",
-   "views": 265
+   "views": 269
   },
   {
    "page": "/LXRlbXBvcm",
    "views": 263
   },
   {
+   "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+   "views": 259
+  },
+  {
+   "page": "/blog/dora-2025-report-ai-software-development",
+   "views": 259
+  },
+  {
+   "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+   "views": 258
+  },
+  {
    "page": "/ty-event-registration",
    "views": 256
   },
   {
-   "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
-   "views": 253
-  },
-  {
-   "page": "/blog/dora-2025-report-ai-software-development",
-   "views": 251
-  },
-  {
-   "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
-   "views": 250
-  },
-  {
    "page": "/blog/the-new-devops-standard-moving-from-manual-templates-to-high-velocity-ai-agents",
-   "views": 248
+   "views": 249
   },
   {
    "page": "/blog/i-ran-an-ai-security-scan-on-a-notoriously-vulnerable-app-heres-what-happened",
-   "views": 236
+   "views": 237
   },
   {
    "page": "/blog/devsecops-tools",
-   "views": 234
+   "views": 236
+  },
+  {
+   "page": "/platform/devsecops-devops-governance",
+   "views": 235
   },
   {
    "page": "/ecosystem/sonatype-nexus",
    "views": 233
   },
   {
-   "page": "/blog/cleaning-up-the-mess-refactoring-with-ai-agents",
-   "views": 231
-  },
-  {
    "page": "/blog/how-to-measure-code-churn",
-   "views": 231
+   "views": 233
   },
   {
-   "page": "/platform/devsecops-devops-governance",
+   "page": "/blog/cleaning-up-the-mess-refactoring-with-ai-agents",
    "views": 231
   },
   {
@@ -15540,6 +15808,10 @@
   },
   {
    "page": "/platform/declarative-pipelines",
+   "views": 218
+  },
+  {
+   "page": "/gartner-symposium/free-modernization",
    "views": 217
   },
   {
@@ -15547,16 +15819,16 @@
    "views": 213
   },
   {
-   "page": "/newsroom",
-   "views": 197
-  },
-  {
-   "page": "/gartner-symposium/free-modernization",
-   "views": 194
-  },
-  {
    "page": "/forge/modernization",
-   "views": 191
+   "views": 212
+  },
+  {
+   "page": "/newsroom",
+   "views": 200
+  },
+  {
+   "page": "/privacy",
+   "views": 190
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
@@ -15564,43 +15836,47 @@
   },
   {
    "page": "/terms-of-service",
-   "views": 188
+   "views": 189
   },
   {
    "page": "/blog/what-is-code-smell",
-   "views": 187
+   "views": 189
   },
   {
-   "page": "/privacy",
-   "views": 187
+   "page": "/events",
+   "views": 185
   },
   {
    "page": "/copilot-cursor-claude-code-what-250k-developers-revealed",
    "views": 183
   },
   {
-   "page": "/events",
+   "page": "/blog/sast-tools",
    "views": 183
   },
   {
-   "page": "/unified-insights",
-   "views": 180
+   "page": "/agentic-devops",
+   "views": 177
   },
   {
-   "page": "/blog/sast-tools",
-   "views": 180
+   "page": "/blog/factory-ai-alternatives",
+   "views": 175
   },
   {
    "page": "/events/meet-the-opsera-appsec-agents-for-ai-builders",
    "views": 174
   },
   {
+   "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+   "views": 170
+  },
+  {
    "page": "/webinar-from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
    "views": 168
   },
   {
-   "page": "/blog/factory-ai-alternatives",
-   "views": 165
+   "page": "/blog/claude-code-alternative",
+   "views": 166
   },
   {
    "page": "/interactive-demo",
@@ -15611,7 +15887,7 @@
    "views": 162
   },
   {
-   "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+   "page": "/software-factory",
    "views": 157
   },
   {
@@ -15619,20 +15895,24 @@
    "views": 152
   },
   {
-   "page": "/blog/claude-code-alternative",
+   "page": "/blog/8090-ai-alternatives",
    "views": 148
   },
   {
-   "page": "/software-factory",
-   "views": 147
-  },
-  {
    "page": "/blog/frontier-ai-software-readiness-benchmark",
-   "views": 145
+   "views": 146
   },
   {
-   "page": "/blog/8090-ai-alternatives",
-   "views": 145
+   "page": "/salesforce-devops",
+   "views": 136
+  },
+  {
+   "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
+   "views": 136
+  },
+  {
+   "page": "/ecosystem/versionone",
+   "views": 133
   },
   {
    "page": "/agents/vibeshift",
@@ -15643,24 +15923,16 @@
    "views": 133
   },
   {
-   "page": "/ecosystem/versionone",
-   "views": 132
-  },
-  {
-   "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
-   "views": 132
-  },
-  {
    "page": "/solutions/leadership-dashboard",
+   "views": 133
+  },
+  {
+   "page": "/ecosystem/gitlab-ci",
    "views": 131
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
    "views": 131
-  },
-  {
-   "page": "/ecosystem/gitlab-ci",
-   "views": 127
   },
   {
    "page": "/blog/opsera-is-a-gartner-magic-quadrant-leader-heres-what-that-means-for-engineering-leaders",
@@ -15679,28 +15951,32 @@
    "views": 122
   },
   {
-   "page": "/ecosystem/gitlab-scm",
+   "page": "/knowledge-base/incident-analysis/repeat-incident-rate",
+   "views": 118
+  },
+  {
+   "page": "/blog/spec-driven-development",
    "views": 117
   },
   {
    "page": "/events/flutter-the-ai-sdlc-summit",
-   "views": 116
+   "views": 117
   },
   {
    "page": "/ecosystem/git",
-   "views": 116
+   "views": 117
   },
   {
-   "page": "/knowledge-base/incident-analysis/repeat-incident-rate",
-   "views": 116
+   "page": "/ecosystem/gitlab-scm",
+   "views": 117
+  },
+  {
+   "page": "/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins",
+   "views": 117
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
    "views": 115
-  },
-  {
-   "page": "/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins",
-   "views": 113
   },
   {
    "page": "/comparison/opsera-vs-harness",
@@ -15711,24 +15987,20 @@
    "views": 108
   },
   {
-   "page": "/solutions/copilot-dashboard",
-   "views": 105
+   "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+   "views": 108
   },
   {
    "page": "/headless-devops-for-salesforce-orgs",
-   "views": 105
+   "views": 106
   },
   {
    "page": "/blog/opsera-raises-20m-in-series-b-funding",
-   "views": 103
+   "views": 106
   },
   {
-   "page": "/salesforce-devops",
-   "views": 100
-  },
-  {
-   "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
-   "views": 100
+   "page": "/solutions/copilot-dashboard",
+   "views": 105
   },
   {
    "page": "/platform/unified-insights/dora-metrics",
@@ -15739,7 +16011,7 @@
    "views": 95
   },
   {
-   "page": "/blog/spec-driven-development",
+   "page": "/blog/change-failure-rate",
    "views": 94
   },
   {
@@ -15747,7 +16019,7 @@
    "views": 93
   },
   {
-   "page": "/blog/change-failure-rate",
+   "page": "/blog/legacy-code-modernization",
    "views": 93
   },
   {
@@ -15755,11 +16027,23 @@
    "views": 92
   },
   {
+   "page": "/blog/forge-cursor-ai-speed-meets-enterprise-control",
+   "views": 91
+  },
+  {
    "page": "/customer-stories/cisco",
    "views": 90
   },
   {
    "page": "/blog/best-devops-tools",
+   "views": 90
+  },
+  {
+   "page": "/cursor-plugin",
+   "views": 89
+  },
+  {
+   "page": "/devops-huddle",
    "views": 89
   },
   {
@@ -15767,15 +16051,11 @@
    "views": 87
   },
   {
-   "page": "/devops-huddle",
-   "views": 87
-  },
-  {
-   "page": "/agentic-devops",
+   "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
    "views": 85
   },
   {
-   "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+   "page": "/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine",
    "views": 85
   },
   {
@@ -15791,8 +16071,12 @@
    "views": 83
   },
   {
-   "page": "/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine",
+   "page": "/solutions/scm-migration",
    "views": 82
+  },
+  {
+   "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
+   "views": 81
   },
   {
    "page": "/ty-demo",
@@ -15803,47 +16087,39 @@
    "views": 80
   },
   {
-   "page": "/blog/forge-cursor-ai-speed-meets-enterprise-control",
+   "page": "/blog/software-factory-model",
    "views": 80
-  },
-  {
-   "page": "/cursor-plugin",
-   "views": 79
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-harness",
    "views": 79
   },
   {
-   "page": "/blog/legacy-code-modernization",
-   "views": 79
-  },
-  {
-   "page": "/solutions/scm-migration",
+   "page": "/solutions/opsera-github",
    "views": 78
   },
   {
-   "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
+   "page": "/resources/white-papers/making-the-most-out-of-github-advanced-security-how-to-prioritize-fix-and-improve-faster",
    "views": 77
   },
   {
-   "page": "/resources/white-papers/making-the-most-out-of-github-advanced-security-how-to-prioritize-fix-and-improve-faster",
-   "views": 76
-  },
-  {
    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor",
-   "views": 76
+   "views": 77
   },
   {
    "page": "/solutions/dora-metrics",
    "views": 76
   },
   {
-   "page": "/solutions/opsera-github",
+   "page": "/blog/cobol-modernization",
+   "views": 76
+  },
+  {
+   "page": "/blog/introducing-vibeshift-from-prototype-to-production-grade-app-in-one-command",
    "views": 75
   },
   {
-   "page": "/blog/software-factory-model",
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
    "views": 75
   },
   {
@@ -15851,23 +16127,19 @@
    "views": 74
   },
   {
-   "page": "/blog/cobol-modernization",
-   "views": 74
-  },
-  {
-   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
-   "views": 73
-  },
-  {
    "page": "/ecosystem/jmeter",
    "views": 73
   },
   {
-   "page": "/blog/introducing-vibeshift-from-prototype-to-production-grade-app-in-one-command",
-   "views": 72
+   "page": "/resources/webinars/honeywells-software-modernization-and-github-transformation",
+   "views": 73
   },
   {
    "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
+   "views": 71
+  },
+  {
+   "page": "/blog/agentic-ai-security",
    "views": 71
   },
   {
@@ -15875,7 +16147,11 @@
    "views": 70
   },
   {
-   "page": "/resources/webinars/honeywells-software-modernization-and-github-transformation",
+   "page": "/blog/ci-cd-business-benefits",
+   "views": 70
+  },
+  {
+   "page": "/ecosystem/prisma-container-security",
    "views": 70
   },
   {
@@ -15883,20 +16159,8 @@
    "views": 69
   },
   {
-   "page": "/blog/ci-cd-business-benefits",
-   "views": 69
-  },
-  {
-   "page": "/ecosystem/prisma-container-security",
-   "views": 69
-  },
-  {
-   "page": "/blog/agentic-ai-security",
-   "views": 69
-  },
-  {
    "page": "/blog/the-60-billion-signal-ai-is-redefining-enterprise-software-delivery",
-   "views": 67
+   "views": 68
   },
   {
    "page": "/customer-stories/infoblox-uses-opsera-unified-devops-platform-to-cut-tool-sprawl-by-two-thirds",
@@ -15907,6 +16171,14 @@
    "views": 66
   },
   {
+   "page": "/ecosystem/circle-ci",
+   "views": 65
+  },
+  {
+   "page": "/github-copilot-metrics-14-day-free-trial",
+   "views": 64
+  },
+  {
    "page": "/ai-budget-burning-roundtable",
    "views": 63
   },
@@ -15915,11 +16187,11 @@
    "views": 63
   },
   {
-   "page": "/author/kevin-railsback",
-   "views": 62
+   "page": "/blog/the-role-of-ai-in-modern-software-development",
+   "views": 63
   },
   {
-   "page": "/github-copilot-metrics-14-day-free-trial",
+   "page": "/author/kevin-railsback",
    "views": 62
   },
   {
@@ -15927,19 +16199,23 @@
    "views": 61
   },
   {
-   "page": "/blog/the-role-of-ai-in-modern-software-development",
-   "views": 61
-  },
-  {
    "page": "/author/shripad-hebbar",
    "views": 60
+  },
+  {
+   "page": "/ecosystem/blackduck",
+   "views": 59
   },
   {
    "page": "/blog/salesforce-dx-a-complete-guide",
    "views": 59
   },
   {
-   "page": "/ecosystem/circle-ci",
+   "page": "/solutions/gitcustodian",
+   "views": 59
+  },
+  {
+   "page": "/blog/snowflake-to-databricks-migration",
    "views": 59
   },
   {
@@ -15951,11 +16227,19 @@
    "views": 58
   },
   {
-   "page": "/ecosystem/blackduck",
-   "views": 57
+   "page": "/opsera-github",
+   "views": 58
   },
   {
-   "page": "/opsera-github",
+   "page": "/newsroom/opsera-and-cursor-partner-to-embed-autonomous-ai-agents-directly-into-ai-sdlc-workflows-for-next-gen-ai-driven-development",
+   "views": 58
+  },
+  {
+   "page": "/blog/enterprise-benchmark",
+   "views": 58
+  },
+  {
+   "page": "/resources/comparison-guides/opsera-vs-jenkins",
    "views": 57
   },
   {
@@ -15967,23 +16251,31 @@
    "views": 56
   },
   {
-   "page": "/resources/comparison-guides/opsera-vs-jenkins",
-   "views": 56
-  },
-  {
    "page": "/resources/report/gartner-market-guide-for-developer-productivity-insight-platforms",
    "views": 56
   },
   {
-   "page": "/newsroom/opsera-and-cursor-partner-to-embed-autonomous-ai-agents-directly-into-ai-sdlc-workflows-for-next-gen-ai-driven-development",
-   "views": 55
+   "page": "/events/github-universe",
+   "views": 56
   },
   {
-   "page": "/blog/enterprise-benchmark",
-   "views": 55
+   "page": "/opsera-vs-cloudbees",
+   "views": 54
+  },
+  {
+   "page": "/release-orchestration",
+   "views": 54
   },
   {
    "page": "/blog/g2-users-recognize-opsera-in-five-key-categories",
+   "views": 54
+  },
+  {
+   "page": "/ecosystem/docker-hub",
+   "views": 54
+  },
+  {
+   "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
    "views": 54
   },
   {
@@ -15991,11 +16283,7 @@
    "views": 54
   },
   {
-   "page": "/opsera-vs-cloudbees",
-   "views": 53
-  },
-  {
-   "page": "/ecosystem/docker-hub",
+   "page": "/scm-migration",
    "views": 53
   },
   {
@@ -16003,19 +16291,11 @@
    "views": 53
   },
   {
-   "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
-   "views": 53
-  },
-  {
-   "page": "/blog/snowflake-to-databricks-migration",
-   "views": 53
-  },
-  {
    "page": "/author/chandra-ranganathan",
    "views": 52
   },
   {
-   "page": "/solutions/gitcustodian",
+   "page": "/zoominfo-demo",
    "views": 52
   },
   {
@@ -16023,15 +16303,19 @@
    "views": 52
   },
   {
+   "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+   "views": 52
+  },
+  {
+   "page": "/-temporary-slug-decfad83-e2c7-44d2-8b04-7562b332761c",
+   "views": 51
+  },
+  {
+   "page": "/github-universe-happy-hour",
+   "views": 51
+  },
+  {
    "page": "/hummingbird-ai",
-   "views": 51
-  },
-  {
-   "page": "/release-orchestration",
-   "views": 51
-  },
-  {
-   "page": "/scm-migration",
    "views": 51
   },
   {
@@ -16039,15 +16323,11 @@
    "views": 51
   },
   {
-   "page": "/zoominfo-demo",
-   "views": 51
-  },
-  {
-   "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
-   "views": 51
-  },
-  {
    "page": "/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption",
+   "views": 51
+  },
+  {
+   "page": "/appfire-flow-sunset",
    "views": 51
   },
   {
@@ -16055,7 +16335,11 @@
    "views": 50
   },
   {
-   "page": "/github-universe-happy-hour",
+   "page": "/ecosystem/nexus",
+   "views": 50
+  },
+  {
+   "page": "/blog/operationalizing-ai-productivity-scaling-and-governing-the-ai-driven-lifecycle",
    "views": 50
   },
   {
@@ -16063,23 +16347,35 @@
    "views": 50
   },
   {
+   "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
+   "views": 50
+  },
+  {
+   "page": "/blog/blitzy-alternatives",
+   "views": 50
+  },
+  {
    "page": "/events/salesforce-devops-automation-productivity-compliance",
    "views": 49
   },
   {
-   "page": "/ecosystem/nexus",
+   "page": "/gartner",
    "views": 49
   },
   {
-   "page": "/blog/operationalizing-ai-productivity-scaling-and-governing-the-ai-driven-lifecycle",
-   "views": 49
-  },
-  {
-   "page": "/appfire-flow-sunset",
+   "page": "/partners/github",
    "views": 49
   },
   {
    "page": "/blog/10-must-have-salesforce-devops-tools-and-how-to-orchestrate-them-right",
+   "views": 48
+  },
+  {
+   "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
+   "views": 48
+  },
+  {
+   "page": "/blog/devops-orchestration",
    "views": 48
   },
   {
@@ -16091,7 +16387,11 @@
    "views": 47
   },
   {
-   "page": "/gartner",
+   "page": "/salesforce-devops-campaign",
+   "views": 47
+  },
+  {
+   "page": "/blog/devops-security-challenges",
    "views": 47
   },
   {
@@ -16099,15 +16399,7 @@
    "views": 47
   },
   {
-   "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
-   "views": 47
-  },
-  {
-   "page": "/blog/devops-orchestration",
-   "views": 47
-  },
-  {
-   "page": "/blog/blitzy-alternatives",
+   "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
    "views": 47
   },
   {
@@ -16123,24 +16415,20 @@
    "views": 46
   },
   {
-   "page": "/blog/devops-security-challenges",
-   "views": 46
-  },
-  {
    "page": "/ecosystem/gitops",
    "views": 46
   },
   {
-   "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
+   "page": "/blog/opsera-series-a-funding",
    "views": 46
   },
   {
-   "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
+   "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
    "views": 46
   },
   {
-   "page": "/salesforce-devops-campaign",
-   "views": 45
+   "page": "/blog/7-best-value-stream-management-tools",
+   "views": 46
   },
   {
    "page": "/salesforcefreetrial",
@@ -16159,19 +16447,11 @@
    "views": 45
   },
   {
-   "page": "/blog/opsera-series-a-funding",
+   "page": "/blog/improving-salesforce-devops-efficiency",
    "views": 45
   },
   {
    "page": "/blog/you-cant-improve-what-you-cant-measure-13-kpis-necessary-for-every-devops-leader",
-   "views": 45
-  },
-  {
-   "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
-   "views": 45
-  },
-  {
-   "page": "/blog/7-best-value-stream-management-tools",
    "views": 45
   },
   {
@@ -16183,7 +16463,11 @@
    "views": 44
   },
   {
-   "page": "/blog/improving-salesforce-devops-efficiency",
+   "page": "/ecosystem/azure-aks",
+   "views": 44
+  },
+  {
+   "page": "/blog/taking-control-of-github-security-how-opseras-advanced-security-dashboard-helps-you-manage-risk-at-scale",
    "views": 44
   },
   {
@@ -16199,15 +16483,23 @@
    "views": 44
   },
   {
+   "page": "/blog/devops-monitoring",
+   "views": 44
+  },
+  {
+   "page": "/platform/continuous-orchestration",
+   "views": 43
+  },
+  {
    "page": "/blog/how-honeywell-transformed-their-devops-and-you-can-too",
    "views": 43
   },
   {
-   "page": "/blog/taking-control-of-github-security-how-opseras-advanced-security-dashboard-helps-you-manage-risk-at-scale",
+   "page": "/resources/webinars/lessons-from-dora-2025-the-future-of-devops-powered-by-ai",
    "views": 43
   },
   {
-   "page": "/resources/webinars/lessons-from-dora-2025-the-future-of-devops-powered-by-ai",
+   "page": "/blog/devops-observability-what-is-it-and-how-to-implement-it",
    "views": 43
   },
   {
@@ -16219,6 +16511,10 @@
    "views": 42
   },
   {
+   "page": "/resources/white-papers/measuring-the-true-business-impact-of-ai-coding-assistants-beyond-developer-metrics-to-enterprise-value",
+   "views": 42
+  },
+  {
    "page": "/ecosystem/amazon-web-services-aws",
    "views": 42
   },
@@ -16227,11 +16523,19 @@
    "views": 42
   },
   {
-   "page": "/blog/devops-monitoring",
+   "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
    "views": 42
   },
   {
-   "page": "/platform/continuous-orchestration",
+   "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
+   "views": 42
+  },
+  {
+   "page": "/ebook/security-at-the-speed-of-software",
+   "views": 41
+  },
+  {
+   "page": "/salesforce",
    "views": 41
   },
   {
@@ -16243,19 +16547,7 @@
    "views": 41
   },
   {
-   "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
-   "views": 41
-  },
-  {
    "page": "/solutions/release-orchestration",
-   "views": 41
-  },
-  {
-   "page": "/blog/devops-observability-what-is-it-and-how-to-implement-it",
-   "views": 41
-  },
-  {
-   "page": "/partners/github",
    "views": 41
   },
   {
@@ -16263,36 +16555,28 @@
    "views": 40
   },
   {
-   "page": "/ebook/security-at-the-speed-of-software",
+   "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
    "views": 40
   },
   {
-   "page": "/resources/white-papers/measuring-the-true-business-impact-of-ai-coding-assistants-beyond-developer-metrics-to-enterprise-value",
+   "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot",
    "views": 40
+  },
+  {
+   "page": "/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders",
+   "views": 40
+  },
+  {
+   "page": "/ecosystem/bitbucket-scm",
+   "views": 39
   },
   {
    "page": "/customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-outcomes",
    "views": 39
   },
   {
-   "page": "/ecosystem/azure-aks",
+   "page": "/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience",
    "views": 39
-  },
-  {
-   "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
-   "views": 39
-  },
-  {
-   "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot",
-   "views": 39
-  },
-  {
-   "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
-   "views": 39
-  },
-  {
-   "page": "/ecosystem/bitbucket-scm",
-   "views": 38
   },
   {
    "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
@@ -16303,7 +16587,15 @@
    "views": 38
   },
   {
+   "page": "/ecosystem/coverity",
+   "views": 38
+  },
+  {
    "page": "/partners/lineaje",
+   "views": 38
+  },
+  {
+   "page": "/blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops",
    "views": 38
   },
   {
@@ -16311,12 +16603,16 @@
    "views": 38
   },
   {
-   "page": "/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience",
+   "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
    "views": 38
   },
   {
-   "page": "/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders",
-   "views": 38
+   "page": "/blog/harness-engineering",
+   "views": 37
+  },
+  {
+   "page": "/free-trial",
+   "views": 37
   },
   {
    "page": "/solutions/databricks",
@@ -16331,19 +16627,15 @@
    "views": 37
   },
   {
-   "page": "/blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops",
+   "page": "/blog/automate-to-empower-how-toolchain-automation-can-empower-and-elevate-your-teams",
    "views": 37
   },
   {
-   "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
+   "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
    "views": 37
   },
   {
    "page": "/-temporary-slug-b99a719d-8640-4a9a-aaaf-68e490d8339f",
-   "views": 36
-  },
-  {
-   "page": "/free-trial",
    "views": 36
   },
   {
@@ -16356,10 +16648,6 @@
   },
   {
    "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
-   "views": 36
-  },
-  {
-   "page": "/ecosystem/coverity",
    "views": 36
   },
   {
@@ -16379,8 +16667,20 @@
    "views": 36
   },
   {
-   "page": "/blog/automate-to-empower-how-toolchain-automation-can-empower-and-elevate-your-teams",
+   "page": "/solutions/platform-engineering",
    "views": 36
+  },
+  {
+   "page": "/blog/shift-left-security",
+   "views": 36
+  },
+  {
+   "page": "/resources/white-papers/how-organizations-can-drive-github-copilot-adoption-by-measuring-success-insights-and-real-data",
+   "views": 36
+  },
+  {
+   "page": "/documentation/salesforce-pipelines-user-guide",
+   "views": 35
   },
   {
    "page": "/gitcustodiandownload",
@@ -16403,19 +16703,7 @@
    "views": 35
   },
   {
-   "page": "/blog/shift-left-security",
-   "views": 35
-  },
-  {
-   "page": "/resources/white-papers/how-organizations-can-drive-github-copilot-adoption-by-measuring-success-insights-and-real-data",
-   "views": 35
-  },
-  {
    "page": "/newsroom/opsera-unveils-next-generation-ai-powered-devops-platform-with-hummingbird-ai-reasoning-agents-insights-in-a-box-and-github-mcp-integration",
-   "views": 35
-  },
-  {
-   "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
    "views": 35
   },
   {
@@ -16443,7 +16731,15 @@
    "views": 34
   },
   {
+   "page": "/blog/devsecops-automation",
+   "views": 34
+  },
+  {
    "page": "/blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve",
+   "views": 34
+  },
+  {
+   "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
    "views": 34
   },
   {
@@ -16452,10 +16748,6 @@
   },
   {
    "page": "/aws-reinvent-golf-and-dinner",
-   "views": 33
-  },
-  {
-   "page": "/documentation/salesforce-pipelines-user-guide",
    "views": 33
   },
   {
@@ -16471,10 +16763,6 @@
    "views": 33
   },
   {
-   "page": "/blog/devsecops-automation",
-   "views": 33
-  },
-  {
    "page": "/ecosystem/terrascan",
    "views": 33
   },
@@ -16483,7 +16771,19 @@
    "views": 32
   },
   {
+   "page": "/customer-stories/reflektion",
+   "views": 32
+  },
+  {
    "page": "/blog/ai-in-the-workplace-insights-from-the-2024-dora-report",
+   "views": 32
+  },
+  {
+   "page": "/blog/copado-vs-opsera-which-is-the-best-platform-for-salesforce-devops-and-beyond",
+   "views": 32
+  },
+  {
+   "page": "/blog/devops-tool-chains-imperative-for-devops-success-choice-vs-standardization",
    "views": 32
   },
   {
@@ -16491,7 +16791,11 @@
    "views": 32
   },
   {
-   "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
+   "page": "/ecosystem/bitbucket",
+   "views": 32
+  },
+  {
+   "page": "/knowledge-base/ci-cd-platform-analytics/deployment-success-rate",
    "views": 32
   },
   {
@@ -16503,15 +16807,15 @@
    "views": 31
   },
   {
-   "page": "/solutions/platform-engineering",
+   "page": "/blog/why-you-should-automate-code-reviews",
    "views": 31
   },
   {
-   "page": "/customer-stories/reflektion",
+   "page": "/blog/what-is-a-modern-ci-cd-pipeline",
    "views": 31
   },
   {
-   "page": "/knowledge-base/ci-cd-platform-analytics/deployment-success-rate",
+   "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
    "views": 31
   },
   {
@@ -16523,11 +16827,15 @@
    "views": 30
   },
   {
+   "page": "/old-drafts/unified-insights-old",
+   "views": 30
+  },
+  {
    "page": "/resources/devops-huddles/episode-16-source-code-migration-made-easy",
    "views": 30
   },
   {
-   "page": "/blog/why-you-should-automate-code-reviews",
+   "page": "/blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership",
    "views": 30
   },
   {
@@ -16535,23 +16843,7 @@
    "views": 30
   },
   {
-   "page": "/blog/copado-vs-opsera-which-is-the-best-platform-for-salesforce-devops-and-beyond",
-   "views": 30
-  },
-  {
-   "page": "/blog/devops-tool-chains-imperative-for-devops-success-choice-vs-standardization",
-   "views": 30
-  },
-  {
-   "page": "/blog/what-is-a-modern-ci-cd-pipeline",
-   "views": 30
-  },
-  {
    "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github-copilot",
-   "views": 30
-  },
-  {
-   "page": "/ecosystem/bitbucket",
    "views": 30
   },
   {
@@ -16568,14 +16860,6 @@
   },
   {
    "page": "/insights_in_a_box",
-   "views": 29
-  },
-  {
-   "page": "/old-drafts/unified-insights-old",
-   "views": 29
-  },
-  {
-   "page": "/blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership",
    "views": 29
   },
   {
@@ -16599,11 +16883,27 @@
    "views": 29
   },
   {
+   "page": "/blog/the-sql-migration-audit-we-scanned-the-tools-you-trust",
+   "views": 29
+  },
+  {
    "page": "/blog/top-devsecops-tools-and-how-to-orchestrate-them-with-opsera",
    "views": 29
   },
   {
    "page": "/blog/improving-devops-observability-with-value-streams-gamification",
+   "views": 29
+  },
+  {
+   "page": "/blog/github-copilot-trends-and-measuring-impact",
+   "views": 29
+  },
+  {
+   "page": "/blog/npm-supply-chain-attacks",
+   "views": 29
+  },
+  {
+   "page": "/ecosystem/jenkins",
    "views": 29
   },
   {
@@ -16619,7 +16919,7 @@
    "views": 28
   },
   {
-   "page": "/blog/the-sql-migration-audit-we-scanned-the-tools-you-trust",
+   "page": "/blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline",
    "views": 28
   },
   {
@@ -16627,15 +16927,7 @@
    "views": 28
   },
   {
-   "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
-   "views": 28
-  },
-  {
-   "page": "/blog/npm-supply-chain-attacks",
-   "views": 28
-  },
-  {
-   "page": "/ecosystem/jenkins",
+   "page": "/blog/claude-mythos-vulnerability",
    "views": 28
   },
   {
@@ -16655,7 +16947,15 @@
    "views": 27
   },
   {
-   "page": "/blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline",
+   "page": "/blog/how-opseras-dataops-pipeline-wizard-accelerates-reliable-data-delivery",
+   "views": 27
+  },
+  {
+   "page": "/blog/the-code-warriors-a-tale-of-devops-and-devsecops-evolution",
+   "views": 27
+  },
+  {
+   "page": "/ecosystem/splunk",
    "views": 27
   },
   {
@@ -16663,7 +16963,23 @@
    "views": 27
   },
   {
-   "page": "/blog/github-copilot-trends-and-measuring-impact",
+   "page": "/blog/the-hidden-costs-of-salesforce-implementations-devops-scoping",
+   "views": 27
+  },
+  {
+   "page": "/blog/devops-for-data-ops-how-opsera-brings-order-to-databricks-software-delivery",
+   "views": 27
+  },
+  {
+   "page": "/blog/no-code-kubernetes-pipelines",
+   "views": 27
+  },
+  {
+   "page": "/blog/the-no-code-approach-to-jenkins-pipelines",
+   "views": 27
+  },
+  {
+   "page": "/newsroom/opsera-unveils-appsec-ai-agents-to-power-the-shift-from-traditional-sdlc-to-ai-sdlc",
    "views": 27
   },
   {
@@ -16672,10 +16988,6 @@
   },
   {
    "page": "/-temporary-slug-767ec2ba-c4ae-46d2-9ae4-73ecd1cb30ed",
-   "views": 26
-  },
-  {
-   "page": "/blog/how-opseras-dataops-pipeline-wizard-accelerates-reliable-data-delivery",
    "views": 26
   },
   {
@@ -16691,10 +17003,6 @@
    "views": 26
   },
   {
-   "page": "/blog/the-code-warriors-a-tale-of-devops-and-devsecops-evolution",
-   "views": 26
-  },
-  {
    "page": "/ecosystem/datadog",
    "views": 26
   },
@@ -16703,15 +17011,11 @@
    "views": 26
   },
   {
-   "page": "/blog/no-code-kubernetes-pipelines",
-   "views": 26
-  },
-  {
-   "page": "/blog/the-hidden-costs-of-salesforce-implementations-devops-scoping",
-   "views": 26
-  },
-  {
    "page": "/knowledge-base/delivery-flow-performance/value-stream-management-explained-from-idea-to-customer-value",
+   "views": 26
+  },
+  {
+   "page": "/newsroom/opsera-unified-insights-now-available-in-the-microsoft-marketplace",
    "views": 26
   },
   {
@@ -16719,23 +17023,19 @@
    "views": 26
   },
   {
-   "page": "/newsroom/opsera-unveils-appsec-ai-agents-to-power-the-shift-from-traditional-sdlc-to-ai-sdlc",
-   "views": 26
-  },
-  {
    "page": "/resources/webinars/time-saved-productivity-and-software-development-loops",
    "views": 26
   },
   {
-   "page": "/blog/the-no-code-approach-to-jenkins-pipelines",
+   "page": "/ecosystem/jira-service-desk",
    "views": 26
   },
   {
-   "page": "/blog/claude-mythos-vulnerability",
+   "page": "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity",
    "views": 26
   },
   {
-   "page": "/ecosystem/splunk",
+   "page": "/-temporary-slug-556569ab-d604-4b7e-94ac-accedb5d61da",
    "views": 25
   },
   {
@@ -16755,15 +17055,15 @@
    "views": 25
   },
   {
-   "page": "/blog/devops-for-data-ops-how-opsera-brings-order-to-databricks-software-delivery",
-   "views": 25
-  },
-  {
-   "page": "/newsroom/opsera-unified-insights-now-available-in-the-microsoft-marketplace",
-   "views": 25
-  },
-  {
    "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+   "views": 25
+  },
+  {
+   "page": "/blog/devops-security",
+   "views": 25
+  },
+  {
+   "page": "/ecosystem/ansible",
    "views": 25
   },
   {
@@ -16775,19 +17075,11 @@
    "views": 25
   },
   {
-   "page": "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity",
-   "views": 25
-  },
-  {
    "page": "/-temporary-slug-5cb6b4c1-9d68-4cb2-b55f-322c65b2e3e8",
    "views": 24
   },
   {
    "page": "/-temporary-slug-c8a8ab8b-845d-45e6-91ab-5436de91217b",
-   "views": 24
-  },
-  {
-   "page": "/blog/harness-engineering",
    "views": 24
   },
   {
@@ -16807,7 +17099,7 @@
    "views": 24
   },
   {
-   "page": "/blog/devops-security",
+   "page": "/blog/cio-roundtable-learnings-and-trends-for-2024",
    "views": 24
   },
   {
@@ -16815,11 +17107,15 @@
    "views": 24
   },
   {
-   "page": "/ecosystem/jira-service-desk",
+   "page": "/knowledge-base/ci-cd-platform-analytics/build-failure-rate-what-it-tells-engineering-teams",
    "views": 24
   },
   {
    "page": "/knowledge-base/core-reliability-metrics/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it",
+   "views": 24
+  },
+  {
+   "page": "/resources/devops-huddles/insights",
    "views": 24
   },
   {
@@ -16839,10 +17135,6 @@
    "views": 23
   },
   {
-   "page": "/blog/cio-roundtable-learnings-and-trends-for-2024",
-   "views": 23
-  },
-  {
    "page": "/blog/why-the-opsera-databricks-partnership-matters-scaling-together-learning-together",
    "views": 23
   },
@@ -16855,7 +17147,7 @@
    "views": 23
   },
   {
-   "page": "/knowledge-base/ci-cd-platform-analytics/build-failure-rate-what-it-tells-engineering-teams",
+   "page": "/blog/what-is-devsecops",
    "views": 23
   },
   {
@@ -16871,15 +17163,15 @@
    "views": 23
   },
   {
+   "page": "/ecosystem/the-anchore-engine",
+   "views": 23
+  },
+  {
+   "page": "/blog/ai-software-factory",
+   "views": 23
+  },
+  {
    "page": "/-temporary-slug-ba364ad4-c96c-46e0-9e41-0c18dd4342c0",
-   "views": 22
-  },
-  {
-   "page": "/ecosystem/ansible",
-   "views": 22
-  },
-  {
-   "page": "/blog/what-is-devsecops",
    "views": 22
   },
   {
@@ -16887,7 +17179,7 @@
    "views": 22
   },
   {
-   "page": "/resources/devops-huddles/insights",
+   "page": "/ecosystem/new-relic",
    "views": 22
   },
   {
@@ -16895,11 +17187,19 @@
    "views": 22
   },
   {
-   "page": "/ecosystem/the-anchore-engine",
+   "page": "/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights",
+   "views": 22
+  },
+  {
+   "page": "/ecosystem/google-gke",
    "views": 22
   },
   {
    "page": "/ecosystem",
+   "views": 22
+  },
+  {
+   "page": "/resources/webinars/linkedin-live-session-with-workday-aws-and-opsera",
    "views": 22
   },
   {
@@ -16947,11 +17247,11 @@
    "views": 21
   },
   {
-   "page": "/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights",
+   "page": "/resources/devops-huddles/episode-18-measuring-github-copilot",
    "views": 21
   },
   {
-   "page": "/ecosystem/new-relic",
+   "page": "/ecosystem/slack",
    "views": 21
   },
   {
@@ -16959,15 +17259,19 @@
    "views": 21
   },
   {
-   "page": "/ecosystem/google-gke",
+   "page": "/blog/opsera-2021-recap",
    "views": 21
   },
   {
-   "page": "/resources/webinars/linkedin-live-session-with-workday-aws-and-opsera",
+   "page": "/knowledge-base/core-devex-metrics/what-is-developer-experience-devex-a-friendly-guide-for-engineers",
    "views": 21
   },
   {
    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+   "views": 21
+  },
+  {
+   "page": "/blog/frontier-benchmark-aug-2026",
    "views": 21
   },
   {
@@ -17023,7 +17327,7 @@
    "views": 20
   },
   {
-   "page": "/blog/opsera-2021-recap",
+   "page": "/ecosystem/jira-bug-reporting",
    "views": 20
   },
   {
@@ -17039,7 +17343,7 @@
    "views": 20
   },
   {
-   "page": "/knowledge-base/core-devex-metrics/what-is-developer-experience-devex-a-friendly-guide-for-engineers",
+   "page": "/resources/ebooks/the-new-dora-report-2023",
    "views": 20
   },
   {
@@ -17055,15 +17359,19 @@
    "views": 20
   },
   {
+   "page": "/newsroom/opsera-launches-new-advanced-reasoning-ai-and-autonomous-remediation-agents-for-agentic-devops",
+   "views": 20
+  },
+  {
    "page": "/newsroom/opsera-raises-15m-for-its-continuous-devops-orchestration-platform",
    "views": 20
   },
   {
-   "page": "/newsroom/opsera-raises-20m-to-drive-ai-powered-devops-platform-innovation-accelerating-ai-agent-adoption-and-developer-efficiency",
+   "page": "/blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success",
    "views": 20
   },
   {
-   "page": "/blog/ai-software-factory",
+   "page": "/newsroom/opsera-raises-20m-to-drive-ai-powered-devops-platform-innovation-accelerating-ai-agent-adoption-and-developer-efficiency",
    "views": 20
   },
   {
@@ -17076,10 +17384,6 @@
   },
   {
    "page": "/dreamforce-2025-meet-opsera",
-   "views": 19
-  },
-  {
-   "page": "/ecosystem/slack",
    "views": 19
   },
   {
@@ -17099,15 +17403,15 @@
    "views": 19
   },
   {
+   "page": "/ecosystem/xunit-net",
+   "views": 19
+  },
+  {
    "page": "/events/the-agentic-future-preparing-your-delivery-pipeline-for-2026",
    "views": 19
   },
   {
    "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
-   "views": 19
-  },
-  {
-   "page": "/resources/devops-huddles/episode-18-measuring-github-copilot",
    "views": 19
   },
   {
@@ -17119,7 +17423,7 @@
    "views": 19
   },
   {
-   "page": "/ecosystem/jira-bug-reporting",
+   "page": "/ecosystem/amazon-ecs",
    "views": 19
   },
   {
@@ -17135,11 +17439,19 @@
    "views": 19
   },
   {
-   "page": "/newsroom/opsera-launches-new-advanced-reasoning-ai-and-autonomous-remediation-agents-for-agentic-devops",
+   "page": "/newsroom/opsera-announces-new-patents-for-ai-powered-cloud-native-unified-devops-platform",
    "views": 19
   },
   {
-   "page": "/blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success",
+   "page": "/blog/technical-depth-in-ai-sdlc",
+   "views": 19
+  },
+  {
+   "page": "/newsroom/opsera-hires-patty-hatter-as-president-and-chief-operating-officer",
+   "views": 19
+  },
+  {
+   "page": "/blog/java-modernization-architecture",
    "views": 19
   },
   {
@@ -17148,10 +17460,6 @@
   },
   {
    "page": "/ecosystem/graylog",
-   "views": 18
-  },
-  {
-   "page": "/ecosystem/xunit-net",
    "views": 18
   },
   {
@@ -17171,15 +17479,11 @@
    "views": 18
   },
   {
-   "page": "/resources/ebooks/the-new-dora-report-2023",
-   "views": 18
-  },
-  {
    "page": "/blog/2021-gartner-market-guide-for-devops-value-stream-management-platforms-opsera-devops-orchestration",
    "views": 18
   },
   {
-   "page": "/newsroom/opsera-announces-new-patents-for-ai-powered-cloud-native-unified-devops-platform",
+   "page": "/blog/the-secret-life-of-a-build-how-ai-watches-learns-and-helps-it-improve",
    "views": 18
   },
   {
@@ -17191,11 +17495,19 @@
    "views": 18
   },
   {
+   "page": "/resources/webinars/enforce-code-security-across-the-entire-software-development-lifecycle",
+   "views": 18
+  },
+  {
+   "page": "/blog/healthcare-data-modernization",
+   "views": 18
+  },
+  {
    "page": "/partners/mindtree",
    "views": 18
   },
   {
-   "page": "/blog/technical-depth-in-ai-sdlc",
+   "page": "/newsroom/opsera-announces-series-a-plus-round-to-power-new-generative-ai-initiatives",
    "views": 18
   },
   {
@@ -17208,10 +17520,6 @@
   },
   {
    "page": "/dreamforce-digital-booth",
-   "views": 17
-  },
-  {
-   "page": "/ecosystem/amazon-ecs",
    "views": 17
   },
   {
@@ -17231,6 +17539,10 @@
    "views": 17
   },
   {
+   "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
+   "views": 17
+  },
+  {
    "page": "/webinars/devops-transformation-using-no-code-orchestration",
    "views": 17
   },
@@ -17243,15 +17555,15 @@
    "views": 17
   },
   {
-   "page": "/blog/the-secret-life-of-a-build-how-ai-watches-learns-and-helps-it-improve",
-   "views": 17
-  },
-  {
    "page": "/blog/welcoming-opseras-gitcustodian-monitor-prevent-secrets-in-your-source-code",
    "views": 17
   },
   {
-   "page": "/resources/webinars/enforce-code-security-across-the-entire-software-development-lifecycle",
+   "page": "/blog/how-the-collaboration-between-ciso-and-engineering-is-disrupting-the-software-industry",
+   "views": 17
+  },
+  {
+   "page": "/knowledge-base/category/ci-cd-platform-analytics",
    "views": 17
   },
   {
@@ -17259,7 +17571,23 @@
    "views": 17
   },
   {
+   "page": "/ecosystem/aws-elastic-beanstalk",
+   "views": 17
+  },
+  {
+   "page": "/ecosystem/nagios-log-management",
+   "views": 17
+  },
+  {
+   "page": "/ecosystem/pagerduty",
+   "views": 17
+  },
+  {
    "page": "/knowledge-base/delivery-flow-performance/flow-efficiency-metrics",
+   "views": 17
+  },
+  {
+   "page": "/resources/white-papers/leading-technology-company-using-opsera-unified-insights-with-github-copilot",
    "views": 17
   },
   {
@@ -17267,11 +17595,19 @@
    "views": 17
   },
   {
-   "page": "/newsroom/opsera-announces-series-a-plus-round-to-power-new-generative-ai-initiatives",
+   "page": "/ecosystem/kafka",
+   "views": 17
+  },
+  {
+   "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
    "views": 17
   },
   {
    "page": "/-temporary-slug-eaceb56a-a6ba-41fa-bbe2-c11667c3f115",
+   "views": 16
+  },
+  {
+   "page": "/blog/top-25-devops-tools-that-you-need-to-know",
    "views": 16
   },
   {
@@ -17283,7 +17619,11 @@
    "views": 16
   },
   {
-   "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
+   "page": "/jobs",
+   "views": 16
+  },
+  {
+   "page": "/opsera-for-cicd",
    "views": 16
   },
   {
@@ -17295,15 +17635,15 @@
    "views": 16
   },
   {
+   "page": "/blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments",
+   "views": 16
+  },
+  {
    "page": "/blog/takeaways-from-the-devops-huddle-episode-18-measuring-github-copilot",
    "views": 16
   },
   {
    "page": "/blog/want-better-developer-experience-start-by-removing-the-roadblocks",
-   "views": 16
-  },
-  {
-   "page": "/knowledge-base/category/ci-cd-platform-analytics",
    "views": 16
   },
   {
@@ -17315,6 +17655,14 @@
    "views": 16
   },
   {
+   "page": "/blog/a-day-with-opseras-devops-ai-assistant-your-ai-powered-devsecops-ally",
+   "views": 16
+  },
+  {
+   "page": "/blog/dungeons-developers-which-generative-ai-hero-will-save-your-build",
+   "views": 16
+  },
+  {
    "page": "/ecosystem/sysdig",
    "views": 16
   },
@@ -17323,7 +17671,7 @@
    "views": 16
   },
   {
-   "page": "/ecosystem/aws-elastic-beanstalk",
+   "page": "/blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline-part-2",
    "views": 16
   },
   {
@@ -17335,23 +17683,11 @@
    "views": 16
   },
   {
-   "page": "/blog/healthcare-data-modernization",
-   "views": 16
-  },
-  {
-   "page": "/blog/java-modernization-architecture",
-   "views": 16
-  },
-  {
    "page": "/knowledge-base/quality-risk/time-to-detect-vulnerability-ttdv",
    "views": 16
   },
   {
    "page": "/blog/application-modernization-strategy",
-   "views": 16
-  },
-  {
-   "page": "/blog/frontier-benchmark-aug-2026",
    "views": 16
   },
   {
@@ -17363,7 +17699,7 @@
    "views": 16
   },
   {
-   "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+   "page": "/newsroom/opsera-joins-aws-isv-accelerate-program",
    "views": 16
   },
   {
@@ -17391,10 +17727,6 @@
    "views": 15
   },
   {
-   "page": "/blog/top-25-devops-tools-that-you-need-to-know",
-   "views": 15
-  },
-  {
    "page": "/ecosystem/myget",
    "views": 15
   },
@@ -17403,15 +17735,7 @@
    "views": 15
   },
   {
-   "page": "/blog/how-the-collaboration-between-ciso-and-engineering-is-disrupting-the-software-industry",
-   "views": 15
-  },
-  {
    "page": "/blog/opsera-earns-g2-recognition-in-four-software-development-categories-for-summer-2023",
-   "views": 15
-  },
-  {
-   "page": "/blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments",
    "views": 15
   },
   {
@@ -17419,11 +17743,7 @@
    "views": 15
   },
   {
-   "page": "/resources/white-papers/leading-technology-company-using-opsera-unified-insights-with-github-copilot",
-   "views": 15
-  },
-  {
-   "page": "/blog/a-day-with-opseras-devops-ai-assistant-your-ai-powered-devsecops-ally",
+   "page": "/blog/opsera-is-included-as-an-honorable-mention-in-the-2023-gartner-r-magic-quadrant-tm-for-devops-platforms",
    "views": 15
   },
   {
@@ -17443,10 +17763,6 @@
    "views": 15
   },
   {
-   "page": "/blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline-part-2",
-   "views": 15
-  },
-  {
    "page": "/blog/important-no-code-devops-orchestration",
    "views": 15
   },
@@ -17455,7 +17771,7 @@
    "views": 15
   },
   {
-   "page": "/ecosystem/kafka",
+   "page": "/ecosystem/sonarqube",
    "views": 15
   },
   {
@@ -17495,10 +17811,6 @@
    "views": 14
   },
   {
-   "page": "/ecosystem/pagerduty",
-   "views": 14
-  },
-  {
    "page": "/forge/database-migration",
    "views": 14
   },
@@ -17507,15 +17819,19 @@
    "views": 14
   },
   {
-   "page": "/opsera-for-cicd",
-   "views": 14
-  },
-  {
    "page": "/opsera-vs-copado",
    "views": 14
   },
   {
-   "page": "/blog/dungeons-developers-which-generative-ai-hero-will-save-your-build",
+   "page": "/blog/adopting-no-code-devops-a-more-effective-devops-team",
+   "views": 14
+  },
+  {
+   "page": "/blog/ai-first-devops-at-aws-reinvent-2025-recap",
+   "views": 14
+  },
+  {
+   "page": "/blog/cicd-trend-report-2021-key-takeaways",
    "views": 14
   },
   {
@@ -17523,15 +17839,11 @@
    "views": 14
   },
   {
-   "page": "/blog/opsera-is-included-as-an-honorable-mention-in-the-2023-gartner-r-magic-quadrant-tm-for-devops-platforms",
-   "views": 14
-  },
-  {
    "page": "/blog/opsera-offers-aws-native-integrations-streamline-and-automate-your-software-delivery-faster",
    "views": 14
   },
   {
-   "page": "/ecosystem/nagios-log-management",
+   "page": "/blog/business-continuity-resilience-through-digital-transformation",
    "views": 14
   },
   {
@@ -17544,6 +17856,10 @@
   },
   {
    "page": "/resources/devops-huddles/the-secret-to-secret-management",
+   "views": 14
+  },
+  {
+   "page": "/blog/secure-software-factory",
    "views": 14
   },
   {
@@ -17575,15 +17891,19 @@
    "views": 14
   },
   {
+   "page": "/newsroom/business-intelligence-platform-opsera-raises-15-million-funding",
+   "views": 14
+  },
+  {
    "page": "/resources/comparison-guides/opsera-vs-swarmia",
    "views": 14
   },
   {
-   "page": "/newsroom/opsera-hires-patty-hatter-as-president-and-chief-operating-officer",
+   "page": "/ecosystem/zookeeper",
    "views": 14
   },
   {
-   "page": "/newsroom/opsera-joins-aws-isv-accelerate-program",
+   "page": "/newsroom/opsera-and-databricks-partner-to-empower-enterprises-to-streamline-devops-processes-by-automating-data-orchestration",
    "views": 14
   },
   {
@@ -17607,15 +17927,19 @@
    "views": 13
   },
   {
-   "page": "/blog/ai-first-devops-at-aws-reinvent-2025-recap",
-   "views": 13
-  },
-  {
    "page": "/ecosystem/junit",
    "views": 13
   },
   {
    "page": "/ecosystem/mattermost",
+   "views": 13
+  },
+  {
+   "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
+   "views": 13
+  },
+  {
+   "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
    "views": 13
   },
   {
@@ -17627,23 +17951,15 @@
    "views": 13
   },
   {
-   "page": "/blog/adopting-no-code-devops-a-more-effective-devops-team",
-   "views": 13
-  },
-  {
-   "page": "/blog/business-continuity-resilience-through-digital-transformation",
-   "views": 13
-  },
-  {
-   "page": "/blog/cicd-trend-report-2021-key-takeaways",
-   "views": 13
-  },
-  {
    "page": "/blog/dreamforce-2022-recap",
    "views": 13
   },
   {
    "page": "/blog/g2-reviews-recognizes-opsera-in-four-categories-for-software-development",
+   "views": 13
+  },
+  {
+   "page": "/blog/q1-wrapped-what-opsera-built-shipped-and-secured",
    "views": 13
   },
   {
@@ -17663,7 +17979,19 @@
    "views": 13
   },
   {
+   "page": "/blog/a-devops-journey-wisdom-from-the-special-operations-community",
+   "views": 13
+  },
+  {
+   "page": "/blog/opsera-and-developer-experience",
+   "views": 13
+  },
+  {
    "page": "/blog/opsera-announces-partnership-with-mindtree-to-accelerate-devops-initiatives",
+   "views": 13
+  },
+  {
+   "page": "/ecosystem/logstash",
    "views": 13
   },
   {
@@ -17679,18 +18007,6 @@
    "views": 13
   },
   {
-   "page": "/ecosystem/sonarqube",
-   "views": 13
-  },
-  {
-   "page": "/ecosystem/zookeeper",
-   "views": 13
-  },
-  {
-   "page": "/newsroom/business-intelligence-platform-opsera-raises-15-million-funding",
-   "views": 13
-  },
-  {
    "page": "/blog/meet-derek-ross-lead-solutions-engineer",
    "views": 13
   },
@@ -17700,6 +18016,10 @@
   },
   {
    "page": "/newsroom/opsera-announces-partnership-with-mindtree-to-accelerate-devops-initiatives",
+   "views": 13
+  },
+  {
+   "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
    "views": 13
   },
   {
@@ -17767,23 +18087,15 @@
    "views": 12
   },
   {
-   "page": "/blog/a-devops-journey-wisdom-from-the-special-operations-community",
-   "views": 12
-  },
-  {
-   "page": "/blog/opsera-and-developer-experience",
-   "views": 12
-  },
-  {
-   "page": "/blog/q1-wrapped-what-opsera-built-shipped-and-secured",
-   "views": 12
-  },
-  {
    "page": "/blog/rethinking-devops-for-orchestration-insights-security",
    "views": 12
   },
   {
    "page": "/blog/the-future-of-salesforce-devops-center",
+   "views": 12
+  },
+  {
+   "page": "/ecosystem/cypress",
    "views": 12
   },
   {
@@ -17799,7 +18111,19 @@
    "views": 12
   },
   {
+   "page": "/blog/opsera-is-one-of-the-10-hottest-devops-startups",
+   "views": 12
+  },
+  {
+   "page": "/blog/release-roundup-june-2024",
+   "views": 12
+  },
+  {
    "page": "/events/aws-reinvent",
+   "views": 12
+  },
+  {
+   "page": "/resources/devops-huddles/troubleshoot-pipelines-faster-unified-logs-and-build-manifests",
    "views": 12
   },
   {
@@ -17811,15 +18135,7 @@
    "views": 12
   },
   {
-   "page": "/newsroom/opsera-and-databricks-partner-to-empower-enterprises-to-streamline-devops-processes-by-automating-data-orchestration",
-   "views": 12
-  },
-  {
    "page": "/newsroom/opsera-announces-new-devops-for-dataops-solution-with-the-databricks-data-intelligence-platform",
-   "views": 12
-  },
-  {
-   "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
    "views": 12
   },
   {
@@ -17859,18 +18175,6 @@
    "views": 11
   },
   {
-   "page": "/blog/secure-software-factory",
-   "views": 11
-  },
-  {
-   "page": "/ecosystem/cypress",
-   "views": 11
-  },
-  {
-   "page": "/ecosystem/logstash",
-   "views": 11
-  },
-  {
    "page": "/ecosystem/splunk-analytics",
    "views": 11
   },
@@ -17883,10 +18187,6 @@
    "views": 11
   },
   {
-   "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
-   "views": 11
-  },
-  {
    "page": "/blog/g2-recognizes-opsera-in-six-categories-of-software-development",
    "views": 11
   },
@@ -17896,14 +18196,6 @@
   },
   {
    "page": "/blog/how-devops-platform-can-secure-you-against-log4j-vulnerabilities",
-   "views": 11
-  },
-  {
-   "page": "/blog/opsera-is-one-of-the-10-hottest-devops-startups",
-   "views": 11
-  },
-  {
-   "page": "/blog/release-roundup-june-2024",
    "views": 11
   },
   {
@@ -17920,6 +18212,10 @@
   },
   {
    "page": "/ecosystem/codefresh",
+   "views": 11
+  },
+  {
+   "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-platforms",
    "views": 11
   },
   {
@@ -17943,11 +18239,27 @@
    "views": 11
   },
   {
+   "page": "/newsroom/opsera-releases-native-ci-cd-automation-for-salesforce-2",
+   "views": 11
+  },
+  {
+   "page": "/knowledge-base/delivery-flow-performance/cycle-time-mastery-from-first-commit-to-production",
+   "views": 11
+  },
+  {
+   "page": "/newsroom/opsera-achieves-soc-2-type-ii-compliance",
+   "views": 11
+  },
+  {
    "page": "/ecosystem/dynatrace",
    "views": 11
   },
   {
    "page": "/newsroom/opsera-adds-native-aws-integrations-and-is-now-available-in-aws-marketplace",
+   "views": 11
+  },
+  {
+   "page": "/newsroom/opsera-showcases-new-and-innovative-salesforce-devops-capabilities-powered-by-hummingbird-ai-at-dreamforce-2024",
    "views": 11
   },
   {
@@ -18003,6 +18315,10 @@
    "views": 10
   },
   {
+   "page": "/forge/modernization/coldfusion-to-java",
+   "views": 10
+  },
+  {
    "page": "/platform-engineering",
    "views": 10
   },
@@ -18012,10 +18328,6 @@
   },
   {
    "page": "/request-demo",
-   "views": 10
-  },
-  {
-   "page": "/salesforce",
    "views": 10
   },
   {
@@ -18039,23 +18351,19 @@
    "views": 10
   },
   {
-   "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-platforms",
-   "views": 10
-  },
-  {
    "page": "/resources/devops-huddles/episode-20-unite-github-copilot-developer-experience-and-security",
    "views": 10
   },
   {
-   "page": "/resources/devops-huddles/troubleshoot-pipelines-faster-unified-logs-and-build-manifests",
+   "page": "/blog/an-opsera-vable-cloud-migration",
    "views": 10
   },
   {
-   "page": "/newsroom/opsera-releases-native-ci-cd-automation-for-salesforce-2",
+   "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
    "views": 10
   },
   {
-   "page": "/newsroom/opsera-achieves-soc-2-type-ii-compliance",
+   "page": "/newsroom/opsera-announces-low-code-salesforce-devops-pipeline-service",
    "views": 10
   },
   {
@@ -18063,11 +18371,15 @@
    "views": 10
   },
   {
-   "page": "/newsroom/opsera-showcases-new-and-innovative-salesforce-devops-capabilities-powered-by-hummingbird-ai-at-dreamforce-2024",
+   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-5",
    "views": 10
   },
   {
    "page": "/partners/google-cloud",
+   "views": 10
+  },
+  {
+   "page": "/newsroom/opsera-raises-15-million-series-a-funding-to-lead-continuous-orchestration-of-devops-and-software-delivery-4",
    "views": 10
   },
   {
@@ -18099,10 +18411,6 @@
    "views": 9
   },
   {
-   "page": "/jobs",
-   "views": 9
-  },
-  {
    "page": "/knowledge-base/quality-risk/understanding-system-hardening-timelines-in-devsecops-environments",
    "views": 9
   },
@@ -18127,10 +18435,6 @@
    "views": 9
   },
   {
-   "page": "/blog/an-opsera-vable-cloud-migration",
-   "views": 9
-  },
-  {
    "page": "/blog/key-takeaways-from-trailblazerdx-2024",
    "views": 9
   },
@@ -18147,11 +18451,7 @@
    "views": 9
   },
   {
-   "page": "/knowledge-base/delivery-flow-performance/cycle-time-mastery-from-first-commit-to-production",
-   "views": 9
-  },
-  {
-   "page": "/newsroom/opsera-announces-low-code-salesforce-devops-pipeline-service",
+   "page": "/blog/generative-ai-security",
    "views": 9
   },
   {
@@ -18175,15 +18475,15 @@
    "views": 9
   },
   {
+   "page": "/ecosystem/puppet",
+   "views": 9
+  },
+  {
    "page": "/knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-delivery-engine",
    "views": 9
   },
   {
    "page": "/newsroom/opsera-expands-enterprise-wide-saas-devops-platform-to-manage-the-release-lifecycle-across-saas-applications",
-   "views": 9
-  },
-  {
-   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-5",
    "views": 9
   },
   {
@@ -18263,7 +18563,7 @@
    "views": 8
   },
   {
-   "page": "/forge/modernization/coldfusion-to-java",
+   "page": "/forge/modernization/fortran-to-python",
    "views": 8
   },
   {
@@ -18272,6 +18572,10 @@
   },
   {
    "page": "/impressum",
+   "views": 8
+  },
+  {
+   "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
    "views": 8
   },
   {
@@ -18295,19 +18599,15 @@
    "views": 8
   },
   {
+   "page": "/terms",
+   "views": 8
+  },
+  {
    "page": "/trust",
    "views": 8
   },
   {
    "page": "/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github-copilot",
-   "views": 8
-  },
-  {
-   "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
-   "views": 8
-  },
-  {
-   "page": "/blog/generative-ai-security",
    "views": 8
   },
   {
@@ -18363,11 +18663,15 @@
    "views": 8
   },
   {
-   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration",
+   "page": "/newsroom/opsera-gitcustodian-proactively-secures-software-development-pipelines-to-protect-sensitive-data-found-in-source-code",
    "views": 8
   },
   {
-   "page": "/newsroom/opsera-raises-15-million-series-a-funding-to-lead-continuous-orchestration-of-devops-and-software-delivery-4",
+   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
+   "views": 8
+  },
+  {
+   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration",
    "views": 8
   },
   {
@@ -18388,6 +18692,10 @@
   },
   {
    "page": "/-temporary-slug-1bbf5811-cab0-476b-8212-c71c3c816298",
+   "views": 7
+  },
+  {
+   "page": "/-temporary-slug-a51ef9d6-6a9c-463f-bc65-4caedd38a32b",
    "views": 7
   },
   {
@@ -18439,10 +18747,6 @@
    "views": 7
   },
   {
-   "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
-   "views": 7
-  },
-  {
    "page": "/live-demo-opsera",
    "views": 7
   },
@@ -18456,10 +18760,6 @@
   },
   {
    "page": "/tahoe-dreamin-2022",
-   "views": 7
-  },
-  {
-   "page": "/terms",
    "views": 7
   },
   {
@@ -18479,19 +18779,7 @@
    "views": 7
   },
   {
-   "page": "/ecosystem/puppet",
-   "views": 7
-  },
-  {
    "page": "/newsroom/opsera-adds-salesforce-to-devops-orchestration-platform",
-   "views": 7
-  },
-  {
-   "page": "/newsroom/opsera-gitcustodian-proactively-secures-software-development-pipelines-to-protect-sensitive-data-found-in-source-code",
-   "views": 7
-  },
-  {
-   "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
    "views": 7
   },
   {
@@ -18499,7 +18787,23 @@
    "views": 7
   },
   {
+   "page": "/resources/devops-huddles/episode-22-day-in-the-life-of-a-salesforce-admin-using-opsera",
+   "views": 7
+  },
+  {
    "page": "/resources/devops-huddles/integrate-security-quality-into-your-ci-cd-pipelines-and-what-kpis-to-measure",
+   "views": 7
+  },
+  {
+   "page": "/blog/what-is-deployment-frequency",
+   "views": 7
+  },
+  {
+   "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer-what-it-is-how-it-works-and-how-teams-measure-its-impact",
+   "views": 7
+  },
+  {
+   "page": "/newsroom/opsera-launches-continuous-orchestration-approach-to-devops",
    "views": 7
   },
   {
@@ -18508,6 +18812,10 @@
   },
   {
    "page": "/-temporary-slug-2395d41d-cad7-49a4-ae55-1aebf6d916e3",
+   "views": 6
+  },
+  {
+   "page": "/-temporary-slug-d7dda495-0d13-44df-8c22-5ddf87243c8f",
    "views": 6
   },
   {
@@ -18543,15 +18851,15 @@
    "views": 6
   },
   {
-   "page": "/events/github-universe",
-   "views": 6
-  },
-  {
    "page": "/for/bill",
    "views": 6
   },
   {
    "page": "/for/intercom",
+   "views": 6
+  },
+  {
+   "page": "/forge/modernization-guide",
    "views": 6
   },
   {
@@ -18615,19 +18923,7 @@
    "views": 6
   },
   {
-   "page": "/resources/devops-huddles/episode-22-day-in-the-life-of-a-salesforce-admin-using-opsera",
-   "views": 6
-  },
-  {
    "page": "/resources/devops-huddles/speed-up-your-salesforce-app-releases-with-devops-automation",
-   "views": 6
-  },
-  {
-   "page": "/blog/what-is-deployment-frequency",
-   "views": 6
-  },
-  {
-   "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer-what-it-is-how-it-works-and-how-teams-measure-its-impact",
    "views": 6
   },
   {
@@ -18659,10 +18955,6 @@
    "views": 6
   },
   {
-   "page": "/newsroom/opsera-launches-continuous-orchestration-approach-to-devops",
-   "views": 6
-  },
-  {
    "page": "/newsroom/opsera-raises-15-million-for-continuous-orchestration-of-devops",
    "views": 6
   },
@@ -18671,15 +18963,7 @@
    "views": 5
   },
   {
-   "page": "/-temporary-slug-a51ef9d6-6a9c-463f-bc65-4caedd38a32b",
-   "views": 5
-  },
-  {
    "page": "/-temporary-slug-a8e03b40-56c3-4b17-b5f6-f0841b70474f",
-   "views": 5
-  },
-  {
-   "page": "/-temporary-slug-d7dda495-0d13-44df-8c22-5ddf87243c8f",
    "views": 5
   },
   {
@@ -18700,6 +18984,10 @@
   },
   {
    "page": "/comparison-guides/jenkins",
+   "views": 5
+  },
+  {
+   "page": "/cursor",
    "views": 5
   },
   {
@@ -18747,10 +19035,6 @@
    "views": 5
   },
   {
-   "page": "/forge/modernization-guide",
-   "views": 5
-  },
-  {
    "page": "/forge/modernization/cobol-to-csharp",
    "views": 5
   },
@@ -18763,6 +19047,10 @@
    "views": 5
   },
   {
+   "page": "/forge/modernization/security-modernization",
+   "views": 5
+  },
+  {
    "page": "/gartner-symposium/free-modernisation",
    "views": 5
   },
@@ -18771,7 +19059,7 @@
    "views": 5
   },
   {
-   "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
+   "page": "/huddle/episode-19-measuring-downstream-impact-with-dora",
    "views": 5
   },
   {
@@ -18836,6 +19124,10 @@
   },
   {
    "page": "/resources/devops-huddles/unified-insights-across-your-cicd-pipelines",
+   "views": 5
+  },
+  {
+   "page": "/resources/videos/keywest-networks-testimonial",
    "views": 5
   },
   {
@@ -18943,14 +19235,6 @@
    "views": 4
   },
   {
-   "page": "/forge/modernization/fortran-to-python",
-   "views": 4
-  },
-  {
-   "page": "/forge/modernization/security-modernization",
-   "views": 4
-  },
-  {
    "page": "/https:/opsera.ai/",
    "views": 4
   },
@@ -18960,6 +19244,10 @@
   },
   {
    "page": "/idea/security-at-the-speed-of-software",
+   "views": 4
+  },
+  {
+   "page": "/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor",
    "views": 4
   },
   {
@@ -19071,15 +19359,15 @@
    "views": 4
   },
   {
-   "page": "/resources/videos/keywest-networks-testimonial",
-   "views": 4
-  },
-  {
    "page": "/knowledge-base/quality-risk/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders",
    "views": 4
   },
   {
    "page": "/newsroom/opsera-simplifies-building-of-devops-pipelines",
+   "views": 4
+  },
+  {
+   "page": "/resources/devops-huddles/jenkins-plugin-love-or-hate-it",
    "views": 4
   },
   {
@@ -19159,7 +19447,7 @@
    "views": 3
   },
   {
-   "page": "/cursor",
+   "page": "/case-study/nortonlifelock",
    "views": 3
   },
   {
@@ -19211,10 +19499,6 @@
    "views": 3
   },
   {
-   "page": "/huddle/episode-19-measuring-downstream-impact-with-dora",
-   "views": 3
-  },
-  {
    "page": "/jobs/go-to-market-channel-partnerships-intern",
    "views": 3
   },
@@ -19223,7 +19507,7 @@
    "views": 3
   },
   {
-   "page": "/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor",
+   "page": "/knowledge-base/category/ai-code-assistant-comparisons",
    "views": 3
   },
   {
@@ -19351,10 +19635,6 @@
    "views": 3
   },
   {
-   "page": "/resources/devops-huddles/jenkins-plugin-love-or-hate-it",
-   "views": 3
-  },
-  {
    "page": "/resources/videos/reflektion-testimonial",
    "views": 3
   },
@@ -19436,6 +19716,10 @@
   },
   {
    "page": "/blog/2025-devops-ai-report",
+   "views": 2
+  },
+  {
+   "page": "/blog/Ny1iZXN0LX",
    "views": 2
   },
   {
@@ -19619,10 +19903,6 @@
    "views": 2
   },
   {
-   "page": "/knowledge-base/category/ai-code-assistant-comparisons",
-   "views": 2
-  },
-  {
    "page": "/knowledge-base/category/core-flow-metrics/feed",
    "views": 2
   },
@@ -19752,6 +20032,10 @@
   },
   {
    "page": "/wp-content/uploads/2025/07/6250593797074e7e37c8db9e_OctopusDeploy-logo-RGB.png",
+   "views": 2
+  },
+  {
+   "page": "/wp-content/uploads/2025/07/illustration-get-to-work.webp",
    "views": 2
   },
   {
@@ -20343,10 +20627,6 @@
    "views": 1
   },
   {
-   "page": "/case-study/nortonlifelock",
-   "views": 1
-  },
-  {
    "page": "/clickthrgh.asp",
    "views": 1
   },
@@ -20376,6 +20656,10 @@
   },
   {
    "page": "/compliance",
+   "views": 1
+  },
+  {
+   "page": "/contact,",
    "views": 1
   },
   {
@@ -20416,6 +20700,10 @@
   },
   {
    "page": "/cvs-health",
+   "views": 1
+  },
+  {
+   "page": "/dGVybXMtb2",
    "views": 1
   },
   {
@@ -20584,6 +20872,10 @@
   },
   {
    "page": "/hs/preferences-center",
+   "views": 1
+  },
+  {
+   "page": "/idea/salesforce-devops",
    "views": 1
   },
   {
@@ -20939,6 +21231,14 @@
    "views": 1
   },
   {
+   "page": "/wp-content/uploads/2025/02/618ac04d623bfe50bb750450_34.jpg",
+   "views": 1
+  },
+  {
+   "page": "/wp-content/uploads/2025/02/61dae02bb2a40853951ad728_Jenkins-Blog-banner.jpg",
+   "views": 1
+  },
+  {
    "page": "/wp-content/uploads/2025/07/5f2365efb4280914c34e0b16_Gitlab-png-1536x1392.png",
    "views": 1
   },
@@ -20955,7 +21255,7 @@
    "views": 1
   },
   {
-   "page": "/wp-content/uploads/2025/07/illustration-get-to-work.webp",
+   "page": "/wp-content/uploads/2025/07/measure-dora-dashboards-1.webp",
    "views": 1
   },
   {
@@ -20967,7 +21267,15 @@
    "views": 1
   },
   {
+   "page": "/wp-content/uploads/2025/07/screen-deployment-frequency.webp",
+   "views": 1
+  },
+  {
    "page": "/wp-content/uploads/2025/08/68755331e299b265711d28c7_blog_secret-life-of-build-1024x536.png",
+   "views": 1
+  },
+  {
+   "page": "/wp-content/uploads/2025/12/A-Leading-Network-Provider-Driving-Productivity-with-GitHub-Copilot-and-Opsera-Insights.pdf",
    "views": 1
   },
   {
@@ -23310,14 +23618,38 @@
     "group": "untagged",
     "visits": 4,
     "engaged": 2
+   },
+   {
+    "date": "2026-10-22",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-22",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-23",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-23",
+    "group": "untagged",
+    "visits": 7,
+    "engaged": 6
    }
   ],
   "landing": [
    {
     "page": "/",
     "group": "untagged",
-    "visits": 508,
-    "engaged": 311
+    "visits": 518,
+    "engaged": 318
    },
    {
     "page": "/careers/customer-success-engineer-devops",
@@ -23334,7 +23666,7 @@
    {
     "page": "(not set)",
     "group": "untagged",
-    "visits": 252,
+    "visits": 253,
     "engaged": 20
    },
    {
@@ -23434,16 +23766,16 @@
     "engaged": 11
    },
    {
+    "page": "/",
+    "group": "company",
+    "visits": 24,
+    "engaged": 19
+   },
+   {
     "page": "/blog/opsera-is-a-gartner-magic-quadrant-leader-heres-what-that-means-for-engineering-leaders",
     "group": "untagged",
     "visits": 24,
     "engaged": 16
-   },
-   {
-    "page": "/",
-    "group": "company",
-    "visits": 23,
-    "engaged": 18
    },
    {
     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
@@ -23746,6 +24078,12 @@
     "engaged": 1
    },
    {
+    "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
     "page": "/blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve",
     "group": "untagged",
     "visits": 2,
@@ -23884,12 +24222,6 @@
     "engaged": 1
    },
    {
-    "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
-    "group": "untagged",
-    "visits": 1,
-    "engaged": 0
-   },
-   {
     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
     "group": "untagged",
     "visits": 1,
@@ -23952,6 +24284,12 @@
    {
     "page": "/events/2025-dora-webinar",
     "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/events/github-universe",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -31437,6 +31775,48 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "date": "2026-10-22",
+    "page": "/",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-22",
+    "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-22",
+    "page": "/events/github-universe",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-23",
+    "page": "(not set)",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-23",
+    "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-23",
+    "page": "/",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 6
    }
   ],
   "demo_path": [
@@ -32978,6 +33358,33 @@
     "home_demo_form": 0,
     "any_demo": 0,
     "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-22",
+    "group": "untagged",
+    "landed_home": 4,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-23",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-23",
+    "group": "untagged",
+    "landed_home": 6,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
    }
   ],
   "tags": [
@@ -32987,8 +33394,8 @@
     "sessionCampaignName": "(referral)",
     "content": "(not set)",
     "group": "untagged",
-    "visits": 3017,
-    "engaged": 1884
+    "visits": 3034,
+    "engaged": 1893
    },
    {
     "sessionSource": "linkedin",
@@ -33014,7 +33421,7 @@
     "sessionCampaignName": "(referral)",
     "content": "(not set)",
     "group": "untagged",
-    "visits": 48,
+    "visits": 49,
     "engaged": 16
    },
    {
@@ -33032,8 +33439,8 @@
     "sessionCampaignName": "brand-page",
     "content": "profile-button",
     "group": "company",
-    "visits": 34,
-    "engaged": 22
+    "visits": 36,
+    "engaged": 24
    },
    {
     "sessionSource": "linkedIn",
@@ -33139,15 +33546,6 @@
     "sessionMedium": "social",
     "sessionCampaignName": "34235716-DG-FY26-Q4-Trends-Webinar",
     "content": "(not set)",
-    "group": "untagged",
-    "visits": 4,
-    "engaged": 2
-   },
-   {
-    "sessionSource": "linkedin.com",
-    "sessionMedium": "referral",
-    "sessionCampaignName": "(referral)",
-    "content": "",
     "group": "untagged",
     "visits": 4,
     "engaged": 2
@@ -43941,14 +44339,14 @@
   {
    "date": "2026-10-21",
    "channel": "all",
-   "visits": 548,
-   "demo_page": 19,
+   "visits": 546,
+   "demo_page": 18,
    "demo_form": 0
   },
   {
    "date": "2026-10-21",
    "channel": "direct",
-   "visits": 349,
+   "visits": 348,
    "demo_page": 13,
    "demo_form": 0
   },
@@ -43985,6 +44383,223 @@
    "channel": "youtube",
    "visits": 5,
    "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "ai",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "all",
+   "visits": 1290,
+   "demo_page": 92,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "direct",
+   "visits": 553,
+   "demo_page": 5,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "email",
+   "visits": 260,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "events",
+   "visits": 32,
+   "demo_page": 9,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "linkedin",
+   "visits": 6,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "paid",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "search",
+   "visits": 156,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-22",
+   "channel": "youtube",
+   "visits": 276,
+   "demo_page": 82,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "ai",
+   "visits": 5,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "all",
+   "visits": 377,
+   "demo_page": 11,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "direct",
+   "visits": 214,
+   "demo_page": 6,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "email",
+   "visits": 14,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "events",
+   "visits": 7,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "linkedin",
+   "visits": 8,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "search",
+   "visits": 103,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-23",
+   "channel": "youtube",
+   "visits": 12,
+   "demo_page": 4,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "ai",
+   "visits": 2,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "all",
+   "visits": 247,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "direct",
+   "visits": 191,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "email",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-24",
+   "channel": "search",
+   "visits": 33,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "ai",
+   "visits": 3,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "all",
+   "visits": 152,
+   "demo_page": 8,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "direct",
+   "visits": 107,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "email",
+   "visits": 3,
+   "demo_page": 1,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "events",
+   "visits": 2,
+   "demo_page": 2,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "paid",
+   "visits": 1,
+   "demo_page": 0,
+   "demo_form": 0
+  },
+  {
+   "date": "2026-10-25",
+   "channel": "search",
+   "visits": 31,
+   "demo_page": 3,
    "demo_form": 0
   }
  ],
@@ -46322,7 +46937,47 @@
     "date": "2026-10-21",
     "tool": "gemini",
     "visits": 6,
+    "engaged": 3,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-22",
+    "tool": "gemini",
+    "visits": 5,
+    "engaged": 4,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-23",
+    "tool": "gemini",
+    "visits": 5,
     "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-24",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-25",
+    "tool": "chatgpt",
+    "visits": 2,
+    "engaged": 2,
+    "demo_page": 0,
+    "demo_form": 0
+   },
+   {
+    "date": "2026-10-25",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0,
     "demo_page": 0,
     "demo_form": 0
    }
@@ -46343,32 +46998,32 @@
    {
     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
     "tool": "chatgpt",
-    "visits": 31,
-    "engaged": 17
+    "visits": 33,
+    "engaged": 19
    },
    {
     "page": "(not set)",
     "tool": "gemini",
-    "visits": 26,
+    "visits": 27,
     "engaged": 0
    },
    {
     "page": "/careers",
     "tool": "chatgpt",
-    "visits": 18,
-    "engaged": 15
+    "visits": 19,
+    "engaged": 16
+   },
+   {
+    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+    "tool": "chatgpt",
+    "visits": 12,
+    "engaged": 7
    },
    {
     "page": "(not set)",
     "tool": "perplexity",
     "visits": 11,
     "engaged": 0
-   },
-   {
-    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
-    "tool": "chatgpt",
-    "visits": 11,
-    "engaged": 6
    },
    {
     "page": "(not set)",
@@ -46395,12 +47050,6 @@
     "engaged": 4
    },
    {
-    "page": "/",
-    "tool": "gemini",
-    "visits": 8,
-    "engaged": 4
-   },
-   {
     "page": "/flutter-2026-ai-sdlc-summit",
     "tool": "chatgpt",
     "visits": 7,
@@ -46417,6 +47066,12 @@
     "tool": "gemini",
     "visits": 7,
     "engaged": 3
+   },
+   {
+    "page": "/",
+    "tool": "gemini",
+    "visits": 7,
+    "engaged": 5
    },
    {
     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
@@ -46503,6 +47158,12 @@
     "engaged": 0
    },
    {
+    "page": "/forge",
+    "tool": "gemini",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
     "tool": "perplexity",
     "visits": 4,
@@ -46539,10 +47200,16 @@
     "engaged": 2
    },
    {
-    "page": "/forge",
+    "page": "/blog/spec-driven-development",
     "tool": "gemini",
     "visits": 3,
     "engaged": 1
+   },
+   {
+    "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+    "tool": "gemini",
+    "visits": 3,
+    "engaged": 0
    },
    {
     "page": "/platform/declarative-pipelines",
@@ -46629,12 +47296,6 @@
     "engaged": 1
    },
    {
-    "page": "/blog/spec-driven-development",
-    "tool": "gemini",
-    "visits": 2,
-    "engaged": 1
-   },
-   {
     "page": "/blog/the-new-opsera-brand",
     "tool": "chatgpt",
     "visits": 2,
@@ -46645,12 +47306,6 @@
     "tool": "perplexity",
     "visits": 2,
     "engaged": 1
-   },
-   {
-    "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
-    "tool": "gemini",
-    "visits": 2,
-    "engaged": 0
    },
    {
     "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
@@ -46839,6 +47494,12 @@
     "engaged": 1
    },
    {
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
     "page": "/blog/cobol-modernization",
     "tool": "chatgpt",
     "visits": 1,
@@ -46881,6 +47542,12 @@
     "engaged": 0
    },
    {
+    "page": "/blog/harness-engineering",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/blog/how-honeywell-transformed-their-devops-and-you-can-too",
     "tool": "claude",
     "visits": 1,
@@ -46894,6 +47561,12 @@
    },
    {
     "page": "/blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/legacy-code-modernization",
     "tool": "gemini",
     "visits": 1,
     "engaged": 0
@@ -46915,6 +47588,18 @@
     "tool": "gemini",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "page": "/blog/snowflake-to-databricks-migration",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/software-factory",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "page": "/blog/the-60-billion-signal-ai-is-redefining-enterprise-software-delivery",
@@ -46987,6 +47672,12 @@
     "tool": "perplexity",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "page": "/cursor-plugin",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "page": "/customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-outcomes",
@@ -47073,6 +47764,12 @@
     "engaged": 0
    },
    {
+    "page": "/events/github-universe",
+    "tool": "gemini",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/for/docusign",
     "tool": "chatgpt",
     "visits": 1,
@@ -47082,7 +47779,7 @@
     "page": "/forge/modernization/coldfusion-to-java",
     "tool": "gemini",
     "visits": 1,
-    "engaged": 0
+    "engaged": 1
    },
    {
     "page": "/g2",
@@ -47375,22 +48072,22 @@
  "google_search_visits": [
   {
    "kind": "new",
-   "visits": 13223,
-   "engaged": 7762
+   "visits": 13368,
+   "engaged": 7818
   },
   {
    "kind": "returning",
-   "visits": 5709,
-   "engaged": 2990
+   "visits": 5806,
+   "engaged": 3034
   },
   {
    "kind": "(not set)",
-   "visits": 2247,
+   "visits": 2316,
    "engaged": 6
   },
   {
    "kind": "",
-   "visits": 34,
+   "visits": 9,
    "engaged": 0
   }
  ]
