@@ -1308,26 +1308,57 @@ function renderLookup(d) {
   const idx = (date) => Math.round((toDate(date) - toDate(d.start_date)) / 864e5);
   const isAsset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
   const plain = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ");
-  // pages match on their address and their title; the homepage also goes by these names
+  const SHOW = 15;        // never more than this many matches on screen
+  const WAIT_MS = 350;    // search once typing pauses this long
+
+  // Prepared once, when the tab opens: the text each page and campaign is found by, and each one's
+  // own rows, so a search only adds up the rows of what it found.
+  // Pages match on their address and their title; the homepage also goes by these names.
   const HOME = ["home", "homepage", "home page", "opsera.ai", "/"];
   const pageText = d.pages.map((p, i) => plain(`${p} ${d.titles[i]}${p === "/" ? " home homepage" : ""}`));
+  const pageLower = d.pages.map((p) => p.toLowerCase());
   const campText = d.campaigns.map(plain);
-  let matches = [], chosen = null;
-
-  // what each page and campaign did in the chosen period, to rank matches and leave out the empty ones
-  let active = null;
-  const activity = () => {
-    if (active && active.mode === periodMode) return active;
-    const cur = periodsFor(periodMode, d.start_date, gaLast).cur || { start: d.start_date, end: gaLast };
-    const gcur = periodsFor(periodMode, d.start_date, d.gsc_last_day).cur || { start: d.start_date, end: d.gsc_last_day };
-    const [a, b, ga, gb] = [idx(cur.start), idx(cur.end), idx(gcur.start), idx(gcur.end)];
-    const t = { mode: periodMode, pageVisits: d.pages.map(() => 0), pageAny: d.pages.map(() => 0), campVisits: d.campaigns.map(() => 0), campAny: d.campaigns.map(() => 0) };
-    d.visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.pageVisits[r[1]] += r[3]; t.pageAny[r[1]] += r[3]; } });
-    d.campaign_visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.campVisits[r[1]] += r[3]; t.campAny[r[1]] += r[3]; } });
-    d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.pageAny[r[1]] += r[3]; if (r[2] >= 0) t.campAny[r[2]] += r[3]; } });
-    d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) t.pageAny[r[1]] += r[2]; });
-    return (active = t);
+  const campLower = d.campaigns.map((c) => c.toLowerCase());
+  const asset = d.pages.map(isAsset);
+  const group = (rows, col, size) => {
+    const out = Array.from({ length: size }, () => []);
+    rows.forEach((r) => { if (r[col] >= 0) out[r[col]].push(r); });
+    return out;
   };
+  const P = d.pages.length, C = d.campaigns.length;
+  const rows = {
+    pageVisits: group(d.visits, 1, P), campVisits: group(d.campaign_visits, 1, C),
+    pageForms: group(d.forms, 1, P), campForms: group(d.forms, 2, C),
+    pageClicks: group(d.gsc, 1, P), both: group(d.page_campaign_visits, 1, P),
+  };
+  const sum = (list, col, per, keep) => {
+    if (!per) return null;
+    const a = idx(per.start), b = idx(per.end);
+    let t = 0;
+    for (const r of list) if (r[0] >= a && r[0] <= b && (!keep || keep(r))) t += r[col];
+    return t;
+  };
+
+  // The chosen period for Google Analytics and for Search Console, and what each page and campaign did in it,
+  // worked out once per period
+  let now = null;
+  const period = () => {
+    if (now && now.mode === periodMode) return now;
+    const p = periodsFor(periodMode, d.start_date, gaLast), g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
+    const cur = p.cur || { start: d.start_date, end: gaLast }, gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
+    const t = { mode: periodMode, p, g, cur, gcur,
+      page: { visits: new Array(P).fill(0), engaged: new Array(P).fill(0), forms: new Array(P).fill(0), clicks: new Array(P).fill(0) },
+      camp: { visits: new Array(C).fill(0), engaged: new Array(C).fill(0), forms: new Array(C).fill(0) } };
+    const [a, b, ga, gb] = [idx(cur.start), idx(cur.end), idx(gcur.start), idx(gcur.end)];
+    d.visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.page.visits[r[1]] += r[3]; t.page.engaged[r[1]] += r[4]; } });
+    d.campaign_visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.camp.visits[r[1]] += r[3]; t.camp.engaged[r[1]] += r[4]; } });
+    d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.page.forms[r[1]] += r[3]; if (r[2] >= 0) t.camp.forms[r[2]] += r[3]; } });
+    d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) t.page.clicks[r[1]] += r[2]; });
+    return (now = t);
+  };
+  const of = (m, t) => (m.kind === "page"
+    ? { visits: t.page.visits[m.i], engaged: t.page.engaged[m.i], forms: t.page.forms[m.i], clicks: t.page.clicks[m.i] }
+    : { visits: t.camp.visits[m.i], engaged: t.camp.engaged[m.i], forms: t.camp.forms[m.i], clicks: 0 });
 
   const find = (q) => {
     const bare = q.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "");
@@ -1337,55 +1368,60 @@ function renderLookup(d) {
     const words = plain(rest).split(" ").filter(Boolean);
     if (!words.length && !home) return [];
     const all = (text) => words.length > 0 && words.every((w) => text.includes(w));
-    const pages = d.pages.map((p, i) => ({ kind: "page", i, exact: p.toLowerCase() === path })).filter((m) => m.exact || all(pageText[m.i]));
-    const camps = d.campaigns.map((c, i) => ({ kind: "campaign", i, exact: c.toLowerCase() === q.trim().toLowerCase() }))
-      .filter((m) => m.exact || all(campText[m.i]));
-    return [...pages, ...camps];
+    const out = [];
+    for (let i = 0; i < P; i++) {
+      const exact = pageLower[i] === path;
+      if (exact || all(pageText[i])) out.push({ kind: "page", i, exact });
+    }
+    for (let i = 0; i < C; i++) {
+      const exact = campLower[i] === q.trim().toLowerCase();
+      if (exact || all(campText[i])) out.push({ kind: "campaign", i, exact });
+    }
+    return out;
   };
   const name = (m) => (m.kind === "page" ? d.pages[m.i] : d.campaigns[m.i]);
+  const label = (m) => `${m.kind === "page" ? "Page" : "Campaign"}: ${name(m)}`;
+  const tile = (title, value, sub, per, curPer) => {
+    const a = value(per.cur || curPer), b = per.prev ? value(per.prev) : null;
+    return card(title, num(a), [per.prev ? `${per.prevName}: ${num(b)}` : "", sub].filter(Boolean).join(". "), cmpDelta(a, b));
+  };
+  const sources = (t, showGsc) => {
+    $("lookup-source").textContent = `Source: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time).` +
+      (t.p.prev ? ` Compared with ${range(t.p.prev.start, t.p.prev.end)}.` : "");
+    $("lookup-gsc-source").textContent = showGsc ? `Google clicks: Search Console, ${range(t.gcur.start, t.gcur.end)}.` +
+      (t.g.prev ? ` Compared with ${range(t.g.prev.start, t.g.prev.end)}.` : "") : "Google clicks are counted by page, so campaigns don't have them.";
+  };
 
-  const show = () => {
-    $("lookup-result").hidden = !chosen;
-    if (!chosen) return;
-    if (chosen.kind === "all") return showAll(chosen.list);
+  let options = [], chosen = null, live = [];
+
+  // One page or campaign
+  const showOne = (m) => {
     $("lookup-from-panel").hidden = false; $("lookup-each-panel").hidden = true;
-    const m = chosen, page = m.kind === "page";
-    const p = periodsFor(periodMode, d.start_date, gaLast);
-    const cur = p.cur || { start: d.start_date, end: gaLast };
-    const g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
-    const gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
-    const within = (per) => (r) => per && r[0] >= idx(per.start) && r[0] <= idx(per.end);
-    const total = (rows, col, per) => rows.filter(within(per)).reduce((t, r) => t + r[col], 0);
-    const visits = (page ? d.visits : d.campaign_visits).filter((r) => r[1] === m.i);
-    const forms = d.forms.filter((r) => (page ? r[1] === m.i : r[2] === m.i));
-    const downloads = forms.filter((r) => isAsset(d.pages[r[1]]));
-    const tile = (label, rows, col, sub, per = p) => {
-      const now = total(rows, col, per.cur || cur), before = per.prev ? total(rows, col, per.prev) : null;
-      return card(label, num(now), [per.prev ? `${per.prevName}: ${num(before)}` : "", sub].filter(Boolean).join(". "), cmpDelta(now, before));
-    };
-
+    const t = period(), page = m.kind === "page";
+    const visits = page ? rows.pageVisits[m.i] : rows.campVisits[m.i];
+    const forms = page ? rows.pageForms[m.i] : rows.campForms[m.i];
+    const clicks = page ? rows.pageClicks[m.i] : [];
     $("lookup-title").textContent = name(m);
     $("lookup-subtitle").textContent = page ? (d.titles[m.i] || "Page on opsera.ai") : "Campaign (utm_campaign in Google Analytics)";
     $("lookup-cards").innerHTML =
-      tile("Visits", visits, 3, page ? "Landed on this page" : "From this campaign") +
-      tile("Engaged visits", visits, 4) +
-      (page && isAsset(d.pages[m.i]) ? tile("Downloads", forms, 3, "Form fills on this asset page")
-        : tile("Form fills", forms, 3) + (page ? "" : tile("Downloads", downloads, 3, "On report, white paper, ebook and guide pages"))) +
-      (page ? tile("Google clicks", d.gsc.filter((r) => r[1] === m.i), 2, `Times shown: ${num(total(d.gsc.filter((r) => r[1] === m.i), 3, gcur))}`, g) : "");
-    $("lookup-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).` +
-      (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
-    $("lookup-gsc-source").textContent = page ? `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.` +
-      (g.prev ? ` Compared with ${range(g.prev.start, g.prev.end)}.` : "") : "Google clicks are counted by page, so campaigns don't have them.";
-
+      tile("Visits", (per) => sum(visits, 3, per), page ? "Landed on this page" : "From this campaign", t.p, t.cur) +
+      tile("Engaged visits", (per) => sum(visits, 4, per), "", t.p, t.cur) +
+      (page && asset[m.i] ? tile("Downloads", (per) => sum(forms, 3, per), "Form fills on this asset page", t.p, t.cur)
+        : tile("Form fills", (per) => sum(forms, 3, per), "", t.p, t.cur) +
+          (page ? "" : tile("Downloads", (per) => sum(forms, 3, per, (r) => asset[r[1]]), "On report, white paper, ebook and guide pages", t.p, t.cur))) +
+      (page ? tile("Google clicks", (per) => sum(clicks, 2, per), `Times shown: ${num(sum(clicks, 3, t.gcur))}`, t.g, t.gcur) : "");
+    sources(t, page);
     const from = {};
-    visits.filter(within(cur)).forEach((r) => {
+    const a = idx(t.cur.start), b = idx(t.cur.end);
+    visits.forEach((r) => {
+      if (r[0] < a || r[0] > b) return;
       const key = page ? channelName(d.channels[r[2]]) : d.sources[r[2]];
       const row = from[key] || (from[key] = { name: key, visits: 0, engaged: 0 });
       row.visits += r[3]; row.engaged += r[4];
     });
-    const rows = Object.values(from);
-    if (rows.length) {
-      table($("lookup-from"), { rows, sortKey: "visits", pageSize: 15, columns: [
+    const list = Object.values(from);
+    if (list.length) {
+      table($("lookup-from"), { rows: list, sortKey: "visits", pageSize: SHOW, columns: [
         { key: "name", label: page ? "Came from" : "Source / type" },
         { key: "visits", label: "Visits", num: true, fmt: num },
         { key: "engaged", label: "Engaged visits", num: true, fmt: num },
@@ -1393,85 +1429,88 @@ function renderLookup(d) {
     } else {
       $("lookup-from").innerHTML = `<p class="muted">No visits in this period.</p>`;
     }
-    $("lookup-from-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).`;
+    $("lookup-from-source").textContent = `Source: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time).`;
   };
 
   // All matches: every matching page and campaign added up, each visit and form fill counted once
   const showAll = (list) => {
     $("lookup-from-panel").hidden = true; $("lookup-each-panel").hidden = false;
-    const pageSet = new Set(list.filter((m) => m.kind === "page").map((m) => m.i));
-    const campSet = new Set(list.filter((m) => m.kind === "campaign").map((m) => m.i));
-    const p = periodsFor(periodMode, d.start_date, gaLast);
-    const cur = p.cur || { start: d.start_date, end: gaLast };
-    const g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
-    const gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
-    const sum = (rows, keep, col, per) => (per ? rows.reduce((t, r) => (r[0] >= idx(per.start) && r[0] <= idx(per.end) && keep(r) ? t + r[col] : t), 0) : null);
-    const visitsIn = (col) => (per) => sum(d.visits, (r) => pageSet.has(r[1]), col, per) + sum(d.campaign_visits, (r) => campSet.has(r[1]), col, per)
-      - sum(d.page_campaign_visits, (r) => pageSet.has(r[1]) && campSet.has(r[2]), col, per);
-    const formHit = (r) => pageSet.has(r[1]) || campSet.has(r[2]);
-    const formsIn = (per) => sum(d.forms, formHit, 3, per);
-    const downloadsIn = (per) => sum(d.forms, (r) => formHit(r) && isAsset(d.pages[r[1]]), 3, per);
-    const clicksIn = (per) => sum(d.gsc, (r) => pageSet.has(r[1]), 2, per);
-    const tile = (label, value, sub, per = p) => {
-      const now = value(per.cur || (per === g ? gcur : cur)), before = per.prev ? value(per.prev) : null;
-      return card(label, num(now), [per.prev ? `${per.prevName}: ${num(before)}` : "", sub].filter(Boolean).join(". "), cmpDelta(now, before));
+    const t = period();
+    const pageIds = list.filter((m) => m.kind === "page").map((m) => m.i), campIds = list.filter((m) => m.kind === "campaign").map((m) => m.i);
+    const pageSet = new Set(pageIds), campSet = new Set(campIds);
+    const visitsIn = (col) => (per) => {
+      let v = 0;
+      for (const i of pageIds) v += sum(rows.pageVisits[i], col, per) - sum(rows.both[i], col, per, (r) => campSet.has(r[2]));
+      for (const i of campIds) v += sum(rows.campVisits[i], col, per);
+      return per ? v : null;
     };
+    const formsIn = (assetsOnly) => (per) => {
+      const keep = (r) => !assetsOnly || asset[r[1]];
+      let f = 0;
+      for (const i of pageIds) f += sum(rows.pageForms[i], 3, per, keep);
+      for (const i of campIds) f += sum(rows.campForms[i], 3, per, (r) => !pageSet.has(r[1]) && keep(r));   // not already counted with its page
+      return per ? f : null;
+    };
+    const clicksIn = (per) => { let c = 0; for (const i of pageIds) c += sum(rows.pageClicks[i], 2, per); return per ? c : null; };
     $("lookup-title").textContent = `All matches for "${$("lookup-q").value.trim()}"`;
-    $("lookup-subtitle").textContent = `${num(pageSet.size)} page${pageSet.size === 1 ? "" : "s"} and ${num(campSet.size)} campaign${campSet.size === 1 ? "" : "s"}, added up`;
-    $("lookup-cards").innerHTML = tile("Visits", visitsIn(3), "Each visit counted once") + tile("Engaged visits", visitsIn(4)) +
-      tile("Form fills", formsIn) + tile("Downloads", downloadsIn, "On report, white paper, ebook and guide pages") +
-      (pageSet.size ? tile("Google clicks", clicksIn, "Matching pages only", g) : "");
-    $("lookup-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).` +
-      (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
-    $("lookup-gsc-source").textContent = pageSet.size ? `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.` +
-      (g.prev ? ` Compared with ${range(g.prev.start, g.prev.end)}.` : "") : "";
-    const one = (m) => {
-      const pg = m.kind === "page", only = (r) => r[1] === m.i;
-      return { name: `${pg ? "Page" : "Campaign"}: ${name(m)}`, title: pg ? d.titles[m.i] : "",
-        visits: sum(pg ? d.visits : d.campaign_visits, only, 3, cur), engaged: sum(pg ? d.visits : d.campaign_visits, only, 4, cur),
-        forms: sum(d.forms, (r) => (pg ? r[1] : r[2]) === m.i, 3, cur), clicks: pg ? sum(d.gsc, only, 2, gcur) : null };
-    };
-    table($("lookup-each"), { rows: list.map(one), search: "matches", sortKey: "visits", pageSize: 15, columns: [
-      { key: "name", label: "Match", search: true },
-      { key: "title", label: "Page title", search: true },
+    $("lookup-subtitle").textContent = `${num(pageIds.length)} page${pageIds.length === 1 ? "" : "s"} and ${num(campIds.length)} campaign${campIds.length === 1 ? "" : "s"}, added up`;
+    $("lookup-cards").innerHTML = tile("Visits", visitsIn(3), "Each visit counted once", t.p, t.cur) + tile("Engaged visits", visitsIn(4), "", t.p, t.cur) +
+      tile("Form fills", formsIn(false), "", t.p, t.cur) + tile("Downloads", formsIn(true), "On report, white paper, ebook and guide pages", t.p, t.cur) +
+      (pageIds.length ? tile("Google clicks", clicksIn, "Matching pages only", t.g, t.gcur) : "");
+    sources(t, pageIds.length > 0);
+    if (!pageIds.length) $("lookup-gsc-source").textContent = "";
+    const top = list.slice(0, SHOW).map((m) => ({ name: label(m), title: m.kind === "page" ? d.titles[m.i] : "", ...of(m, t), clicks: m.kind === "page" ? t.page.clicks[m.i] : null }));
+    table($("lookup-each"), { rows: top, sortKey: "visits", pageSize: SHOW, columns: [
+      { key: "name", label: "Match" },
+      { key: "title", label: "Page title" },
       { key: "visits", label: "Visits", num: true, fmt: num },
       { key: "engaged", label: "Engaged visits", num: true, fmt: num },
       { key: "forms", label: "Form fills", num: true, fmt: num },
       { key: "clicks", label: "Google clicks", num: true, fmt: num },
     ] });
-    $("lookup-each-source").textContent = `Sources: Google Analytics, ${range(cur.start, cur.end)} (Pacific time), and Search Console for Google clicks, ${range(gcur.start, gcur.end)}.`;
+    $("lookup-each-source").textContent = (list.length > SHOW ? `The ${SHOW} busiest of ${num(list.length)} matches. The totals above add up all ${num(list.length)}. ` : "") +
+      `Sources: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time), and Search Console for Google clicks, ${range(t.gcur.start, t.gcur.end)}.`;
+  };
+
+  const show = () => {
+    $("lookup-result").hidden = !chosen;
+    if (chosen) (chosen.kind === "all" ? showAll(chosen.list) : showOne(chosen));
   };
 
   const search = (keep) => {
     const q = $("lookup-q").value;
-    const t = activity();
+    const t = period();
     const found = find(q);
-    const live = found.filter((m) => (m.kind === "page" ? t.pageAny : t.campAny)[m.i] > 0)
-      .sort((a, b) => b.exact - a.exact || (b.kind === "page" ? t.pageVisits : t.campVisits)[b.i] - (a.kind === "page" ? t.pageVisits : t.campVisits)[a.i]);
+    const busy = (m) => { const s = of(m, t); return s.visits + s.forms + s.clicks > 0; };
+    live = found.filter(busy).sort((a, b) => b.exact - a.exact || of(b, t).visits - of(a, t).visits);
     const left = found.length - live.length;
     // "All matches" comes first, and is picked unless the search names one page or campaign exactly
-    const options = live.length > 1 ? [{ kind: "all", list: live }, ...live.slice(0, 8)] : live;
+    options = live.length > 1 ? [{ kind: "all", list: live }, ...live.slice(0, 8)] : live;
     let pick = live.length > 1 && !live[0].exact ? 0 : options.indexOf(live[0]);
     if (keep && chosen) {   // a new period keeps what was picked, when it's still there
       const same = options.findIndex((m) => m.kind === chosen.kind && m.i === chosen.i);
       if (same >= 0) pick = same;
     }
     chosen = options[pick] || null;
-    matches = options;
     $("lookup-matches").innerHTML = options.length > 1 ? options.map((m, i) =>
-      `<button data-i="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})`
-        : `${m.kind === "page" ? "Page" : "Campaign"}: ${esc(name(m))}`}</button>`).join("") : "";
+      `<button data-i="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})` : esc(label(m))}</button>`).join("") : "";
     $("lookup-status").textContent = !q.trim() ? "Type above to look something up."
       : !found.length ? `No data for "${q.trim()}".`
       : !live.length ? `No data for "${q.trim()}" in this period.`
       : left ? `${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period ${left === 1 ? "is" : "are"} left out.` : "";
     show();
   };
-  let wait;
-  $("lookup-q").addEventListener("input", () => { clearTimeout(wait); wait = setTimeout(search, 150); });
+
+  let timer;
+  $("lookup-q").addEventListener("input", () => {
+    clearTimeout(timer);
+    $("lookup-status").textContent = $("lookup-q").value.trim() ? "Searching when you pause typing..." : "";
+    timer = setTimeout(search, WAIT_MS);
+  });
+  $("lookup-q").addEventListener("keydown", (e) => { if (e.key === "Enter") { clearTimeout(timer); search(); } });
   $("lookup-matches").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
-    chosen = matches[Number(b.dataset.i)];
+    chosen = options[Number(b.dataset.i)];
     $("lookup-matches").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
     show();
   });
