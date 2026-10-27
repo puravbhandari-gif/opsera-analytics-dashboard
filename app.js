@@ -1308,24 +1308,39 @@ function renderLookup(d) {
   const idx = (date) => Math.round((toDate(date) - toDate(d.start_date)) / 864e5);
   const isAsset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
   const plain = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ");
-  const noSite = (q) => q.trim().replace(/^https?:\/\/(www\.)?opsera\.ai/i, "");
-  // all-time visits, so the busiest page or campaign comes first among matches
-  const pageSize = new Array(d.pages.length).fill(0), campSize = new Array(d.campaigns.length).fill(0);
-  d.visits.forEach((r) => { pageSize[r[1]] += r[3]; });
-  d.campaign_visits.forEach((r) => { campSize[r[1]] += r[3]; });
-  const pageText = d.pages.map((p, i) => plain(`${p} ${d.titles[i]}`));
+  // pages match on their address and their title; the homepage also goes by these names
+  const HOME = ["home", "homepage", "home page", "opsera.ai", "/"];
+  const pageText = d.pages.map((p, i) => plain(`${p} ${d.titles[i]}${p === "/" ? " home homepage" : ""}`));
   const campText = d.campaigns.map(plain);
   let matches = [], chosen = null;
 
+  // what each page and campaign did in the chosen period, to rank matches and leave out the empty ones
+  let active = null;
+  const activity = () => {
+    if (active && active.mode === periodMode) return active;
+    const cur = periodsFor(periodMode, d.start_date, gaLast).cur || { start: d.start_date, end: gaLast };
+    const gcur = periodsFor(periodMode, d.start_date, d.gsc_last_day).cur || { start: d.start_date, end: d.gsc_last_day };
+    const [a, b, ga, gb] = [idx(cur.start), idx(cur.end), idx(gcur.start), idx(gcur.end)];
+    const t = { mode: periodMode, pageVisits: d.pages.map(() => 0), pageAny: d.pages.map(() => 0), campVisits: d.campaigns.map(() => 0), campAny: d.campaigns.map(() => 0) };
+    d.visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.pageVisits[r[1]] += r[3]; t.pageAny[r[1]] += r[3]; } });
+    d.campaign_visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.campVisits[r[1]] += r[3]; t.campAny[r[1]] += r[3]; } });
+    d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) { t.pageAny[r[1]] += r[3]; if (r[2] >= 0) t.campAny[r[2]] += r[3]; } });
+    d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) t.pageAny[r[1]] += r[2]; });
+    return (active = t);
+  };
+
   const find = (q) => {
-    const words = plain(noSite(q)).split(" ").filter(Boolean);
-    if (!words.length) return [];
-    const path = noSite(q).split("?")[0].replace(/(.)\/$/, "$1");
-    const all = (text) => words.every((w) => text.includes(w));
-    const pages = d.pages.map((p, i) => ({ kind: "page", i, exact: p === path, size: pageSize[i] })).filter((m) => m.exact || all(pageText[m.i]));
-    const camps = d.campaigns.map((c, i) => ({ kind: "campaign", i, exact: c.toLowerCase() === q.trim().toLowerCase(), size: campSize[i] }))
+    const bare = q.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "");
+    const rest = bare.startsWith("opsera.ai") ? bare.slice("opsera.ai".length) || "/" : bare;
+    const home = HOME.includes(bare.replace(/(.)\/$/, "$1"));
+    const path = home ? "/" : rest.split("?")[0].replace(/(.)\/$/, "$1");
+    const words = plain(rest).split(" ").filter(Boolean);
+    if (!words.length && !home) return [];
+    const all = (text) => words.length > 0 && words.every((w) => text.includes(w));
+    const pages = d.pages.map((p, i) => ({ kind: "page", i, exact: p.toLowerCase() === path })).filter((m) => m.exact || all(pageText[m.i]));
+    const camps = d.campaigns.map((c, i) => ({ kind: "campaign", i, exact: c.toLowerCase() === q.trim().toLowerCase() }))
       .filter((m) => m.exact || all(campText[m.i]));
-    return [...pages, ...camps].sort((a, b) => b.exact - a.exact || b.size - a.size);
+    return [...pages, ...camps];
   };
   const name = (m) => (m.kind === "page" ? d.pages[m.i] : d.campaigns[m.i]);
 
@@ -1412,12 +1427,13 @@ function renderLookup(d) {
       (g.prev ? ` Compared with ${range(g.prev.start, g.prev.end)}.` : "") : "";
     const one = (m) => {
       const pg = m.kind === "page", only = (r) => r[1] === m.i;
-      return { name: `${pg ? "Page" : "Campaign"}: ${name(m)}`,
+      return { name: `${pg ? "Page" : "Campaign"}: ${name(m)}`, title: pg ? d.titles[m.i] : "",
         visits: sum(pg ? d.visits : d.campaign_visits, only, 3, cur), engaged: sum(pg ? d.visits : d.campaign_visits, only, 4, cur),
         forms: sum(d.forms, (r) => (pg ? r[1] : r[2]) === m.i, 3, cur), clicks: pg ? sum(d.gsc, only, 2, gcur) : null };
     };
     table($("lookup-each"), { rows: list.map(one), search: "matches", sortKey: "visits", pageSize: 15, columns: [
       { key: "name", label: "Match", search: true },
+      { key: "title", label: "Page title", search: true },
       { key: "visits", label: "Visits", num: true, fmt: num },
       { key: "engaged", label: "Engaged visits", num: true, fmt: num },
       { key: "forms", label: "Form fills", num: true, fmt: num },
@@ -1426,18 +1442,29 @@ function renderLookup(d) {
     $("lookup-each-source").textContent = `Sources: Google Analytics, ${range(cur.start, cur.end)} (Pacific time), and Search Console for Google clicks, ${range(gcur.start, gcur.end)}.`;
   };
 
-  const search = () => {
+  const search = (keep) => {
     const q = $("lookup-q").value;
-    matches = find(q);
+    const t = activity();
+    const found = find(q);
+    const live = found.filter((m) => (m.kind === "page" ? t.pageAny : t.campAny)[m.i] > 0)
+      .sort((a, b) => b.exact - a.exact || (b.kind === "page" ? t.pageVisits : t.campVisits)[b.i] - (a.kind === "page" ? t.pageVisits : t.campVisits)[a.i]);
+    const left = found.length - live.length;
     // "All matches" comes first, and is picked unless the search names one page or campaign exactly
-    const options = matches.length > 1 ? [{ kind: "all", list: matches }, ...matches.slice(0, 8)] : matches;
-    const pick = matches.length > 1 && !matches[0].exact ? 0 : options.indexOf(matches[0]);
+    const options = live.length > 1 ? [{ kind: "all", list: live }, ...live.slice(0, 8)] : live;
+    let pick = live.length > 1 && !live[0].exact ? 0 : options.indexOf(live[0]);
+    if (keep && chosen) {   // a new period keeps what was picked, when it's still there
+      const same = options.findIndex((m) => m.kind === chosen.kind && m.i === chosen.i);
+      if (same >= 0) pick = same;
+    }
     chosen = options[pick] || null;
     matches = options;
     $("lookup-matches").innerHTML = options.length > 1 ? options.map((m, i) =>
       `<button data-i="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})`
         : `${m.kind === "page" ? "Page" : "Campaign"}: ${esc(name(m))}`}</button>`).join("") : "";
-    $("lookup-status").textContent = !q.trim() ? "Type above to look something up." : matches.length ? "" : `No data for "${q.trim()}".`;
+    $("lookup-status").textContent = !q.trim() ? "Type above to look something up."
+      : !found.length ? `No data for "${q.trim()}".`
+      : !live.length ? `No data for "${q.trim()}" in this period.`
+      : left ? `${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period ${left === 1 ? "is" : "are"} left out.` : "";
     show();
   };
   let wait;
@@ -1448,7 +1475,7 @@ function renderLookup(d) {
     $("lookup-matches").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
     show();
   });
-  monthlyTabs.push(show);
+  monthlyTabs.push(() => search(true));
   search();
 }
 
