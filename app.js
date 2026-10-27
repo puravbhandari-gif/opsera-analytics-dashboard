@@ -1381,6 +1381,9 @@ function renderLookup(d) {
   };
   const name = (m) => (m.kind === "page" ? d.pages[m.i] : d.campaigns[m.i]);
   const label = (m) => `${m.kind === "page" ? "Page" : "Campaign"}: ${name(m)}`;
+  // a page name opens the live page on opsera.ai in a new tab; campaigns and "(not set)" aren't pages
+  const pageLink = (path) => (path.startsWith("/")
+    ? `<a href="https://opsera.ai${encodeURI(path)}" target="_blank" rel="noopener">${esc(path)}</a>` : esc(path));
   const tile = (title, value, sub, per, curPer) => {
     const a = value(per.cur || curPer), b = per.prev ? value(per.prev) : null;
     return card(title, num(a), [per.prev ? `${per.prevName}: ${num(b)}` : "", sub].filter(Boolean).join(". "), cmpDelta(a, b));
@@ -1401,7 +1404,7 @@ function renderLookup(d) {
     const visits = page ? rows.pageVisits[m.i] : rows.campVisits[m.i];
     const forms = page ? rows.pageForms[m.i] : rows.campForms[m.i];
     const clicks = page ? rows.pageClicks[m.i] : [];
-    $("lookup-title").textContent = name(m);
+    $("lookup-title").innerHTML = page ? pageLink(name(m)) : esc(name(m));
     $("lookup-subtitle").textContent = page ? (d.titles[m.i] || "Page on opsera.ai") : "Campaign (utm_campaign in Google Analytics)";
     $("lookup-cards").innerHTML =
       tile("Visits", (per) => sum(visits, 3, per), page ? "Landed on this page" : "From this campaign", t.p, t.cur) +
@@ -1459,9 +1462,10 @@ function renderLookup(d) {
       (pageIds.length ? tile("Google clicks", clicksIn, "Matching pages only", t.g, t.gcur) : "");
     sources(t, pageIds.length > 0);
     if (!pageIds.length) $("lookup-gsc-source").textContent = "";
-    const top = list.slice(0, SHOW).map((m) => ({ name: label(m), title: m.kind === "page" ? d.titles[m.i] : "", ...of(m, t), clicks: m.kind === "page" ? t.page.clicks[m.i] : null }));
+    const top = list.slice(0, SHOW).map((m) => ({ name: label(m), path: m.kind === "page" ? d.pages[m.i] : null,
+      title: m.kind === "page" ? d.titles[m.i] : "", ...of(m, t), clicks: m.kind === "page" ? t.page.clicks[m.i] : null }));
     table($("lookup-each"), { rows: top, sortKey: "visits", pageSize: SHOW, columns: [
-      { key: "name", label: "Match" },
+      { key: "name", label: "Match", fmt: (v, r) => (r.path ? `Page: ${pageLink(r.path)}` : esc(v)) },
       { key: "title", label: "Page title" },
       { key: "visits", label: "Visits", num: true, fmt: num },
       { key: "engaged", label: "Engaged visits", num: true, fmt: num },
@@ -1492,8 +1496,10 @@ function renderLookup(d) {
       if (same >= 0) pick = same;
     }
     chosen = options[pick] || null;
-    $("lookup-matches").innerHTML = options.length > 1 ? options.map((m, i) =>
-      `<button data-i="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})` : esc(label(m))}</button>`).join("") : "";
+    // a page option is "Page", which picks it, then its address, which opens it (a link can't sit inside a button)
+    $("lookup-matches").innerHTML = options.length > 1 ? options.map((m, i) => (m.kind === "page"
+      ? `<span class="match-opt${i === pick ? " on" : ""}" data-opt="${i}"><button data-i="${i}" aria-label="Show ${esc(name(m))}">Page:</button>${pageLink(name(m))}</span>`
+      : `<button data-i="${i}" data-opt="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})` : esc(label(m))}</button>`)).join("") : "";
     $("lookup-status").textContent = !q.trim() ? "Type above to look something up."
       : !found.length ? `No data for "${q.trim()}".`
       : !live.length ? `No data for "${q.trim()}" in this period.`
@@ -1509,9 +1515,9 @@ function renderLookup(d) {
   });
   $("lookup-q").addEventListener("keydown", (e) => { if (e.key === "Enter") { clearTimeout(timer); search(); } });
   $("lookup-matches").addEventListener("click", (e) => {
-    const b = e.target.closest("button"); if (!b) return;
+    const b = e.target.closest("button"); if (!b) return;   // the page address is a link and opens the page instead
     chosen = options[Number(b.dataset.i)];
-    $("lookup-matches").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    $("lookup-matches").querySelectorAll("[data-opt]").forEach((x) => x.classList.toggle("on", x.dataset.opt === b.dataset.i));
     show();
   });
   monthlyTabs.push(() => search(true));
