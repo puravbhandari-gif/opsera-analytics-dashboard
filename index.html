@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Opsera analytics</title>
 <meta name="robots" content="noindex">
+<meta name="description" content="Opsera website analytics. For AI assistants: the dashboard's data, in plain text, is at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/index.md">
+<link rel="alternate" type="text/markdown" title="The dashboard's data in plain text, for AI assistants" href="https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/index.md">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=18">
+<link rel="stylesheet" href="styles.css?v=20">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
 </head>
 <body>
+<p class="for-ai" aria-hidden="true">For AI assistants: the dashboard's data, in plain text, is at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/index.md</p>
 <header class="top">
   <div class="top-inner">
     <div class="brand">
@@ -46,7 +49,6 @@
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
     <button role="tab" data-tab="lookup">Look up</button>
-    <button role="tab" data-tab="todo">To do</button>
   </nav>
 </header>
 
@@ -54,7 +56,7 @@
   <!-- Google Search -->
   <section id="tab-search" class="tab" role="tabpanel" hidden>
     <h2>Google search</h2>
-    <p class="lead">How often opsera.ai shows up on Google, and how often people click.</p>
+    <p class="lead">How often opsera.ai shows up on Google, and how many people click.</p>
 
     <div class="cards" id="search-cmp-cards"></div>
     <p class="source" id="search-cmp-source"></p>
@@ -105,7 +107,7 @@
   <!-- Website visits -->
   <section id="tab-visits" class="tab" role="tabpanel" hidden>
     <h2>Website visits</h2>
-    <p class="lead">Visits to opsera.ai. Engaged visits are people who stayed, which leaves out most email robots.</p>
+    <p class="lead">Visits to opsera.ai. The engaged ones are people who stayed, which leaves out most email robots.</p>
 
     <div class="cards" id="visits-cmp-cards"></div>
     <p class="source" id="visits-cmp-source"></p>
@@ -148,7 +150,7 @@
         <h3>Most visited pages</h3>
         <div id="visits-pages"></div>
         <p class="source" id="visits-pages-source"></p>
-        <p class="note">Pages under /hs/preferences-center are email subscription pages. Email robots open most of them.</p>
+        <p class="note">Everything under /hs/preferences-center is an email subscription page. Robots open most of them.</p>
       </div>
     </details>
   </section>
@@ -156,7 +158,7 @@
   <!-- Leads -->
   <section id="tab-leads" class="tab" role="tabpanel" hidden>
     <h2>Leads</h2>
-    <p class="lead">Forms people filled in on opsera.ai. Each kind of form is counted on its own.</p>
+    <p class="lead">Forms people filled in on opsera.ai. We count each kind on its own.</p>
 
     <div class="cards" id="leads-cmp-cards"></div>
     <p class="source" id="leads-cmp-source"></p>
@@ -174,7 +176,7 @@
       <h3>Event sign-ups in HubSpot</h3>
       <div class="cards compact" id="leads-hubspot-events"></div>
       <p class="source" id="leads-hubspot-events-source"></p>
-      <p class="note-inline">Each list stands alone. None is added to another, or to the event forms above.</p>
+      <p class="note-inline">Each list stands alone. We never add a list to another or to the event forms above.</p>
     </div>
 
     <details class="more">
@@ -184,13 +186,13 @@
 
       <div class="panel">
         <h3>Week by week</h3>
-        <div class="chart-box"><canvas id="leads-weekly" aria-label="Form fills by week, one bar per kind of form"></canvas></div>
+        <div class="chart-box"><canvas id="leads-weekly" aria-label="Form fills by week, 1 bar per kind of form"></canvas></div>
         <p class="source" id="leads-weekly-source"></p>
       </div>
       <div class="cards compact" id="leads-more-cards"></div>
       <p class="source" id="leads-more-source"></p>
-      <p class="note">Luma sign-ups will show here once Luma is connected to HubSpot.</p>
-      <p class="note">Before October, the old site sent some homepage and contact form fills only to Google. That makes earlier months look low.</p>
+      <p class="note">Sign-ups from Luma will show here once someone connects it to HubSpot.</p>
+      <p class="note">Before October, the old site sent some homepage and contact form fills only to Google, so earlier months look low.</p>
       <div class="panel">
         <h3>Main site forms</h3>
         <div id="leads-core"></div>
@@ -234,14 +236,14 @@
 
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">The first 3 steps come from Google Analytics and the last 3 from HubSpot. That's why a later step can sometimes be bigger.</p>
-      <p class="note">A contact is someone whose first form was the demo form. Meetings and deals count only after sign-up, and never with existing customers.</p>
-      <p class="note">A deal can appear without a meeting when nobody logged one in HubSpot.</p>
+      <p class="note">The first 3 steps come from Google Analytics and the last 3 from HubSpot, so a later step can sometimes be bigger.</p>
+      <p class="note">A contact is someone who first filled in the demo form. Meetings and deals count only after sign-up, and never with existing customers.</p>
+      <p class="note">A deal can appear without a meeting if HubSpot has no calendar entry for it.</p>
       <div class="panel">
         <h3>All channels since 1 Apr</h3>
         <div id="journey-channels"></div>
         <p class="source" id="journey-channels-source"></p>
-        <p class="note">In Google Analytics, Google search means Google only. HubSpot's search also covers other search engines. A visit can count for 2 channels, such as an event email.</p>
+        <p class="note">In Google Analytics this channel covers Google only. HubSpot's version also includes other search engines. A visit can count for 2 channels, such as an event email.</p>
       </div>
       <div class="panel">
         <h3>Why Google visits can be higher than Search Console clicks</h3>
@@ -269,7 +271,7 @@
         <h3>Event campaigns in HubSpot</h3>
         <div id="journey-campaigns"></div>
         <p class="source" id="journey-campaigns-source"></p>
-        <p class="note">Campaign tags miss most Luma guests, so Flutter uses the Luma import list instead.</p>
+        <p class="note">Campaign tags miss most Luma guests, so Flutter uses the import list instead.</p>
       </div>
 
       <div id="journey-linkedin">
@@ -294,7 +296,7 @@
       </div>
 
       <h3 class="section-title">Estimate: who sent the untagged visits</h3>
-      <p class="note-inline">Best guesses, made by matching posts to visits. They stay apart from the tagged numbers above.</p>
+      <p class="note-inline">Best guesses from matching posts to visits. They stay apart from the tagged numbers above.</p>
       <p class="note-inline" id="li-est-stale"></p>
       <div class="cards" id="li-est-cmp-cards"></div>
       <p class="source" id="li-est-cmp-source"></p>
@@ -304,7 +306,7 @@
           <h3 class="period-title">Week by week</h3>
           <div class="seg" id="li-est-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
         </div>
-        <div class="chart-box short"><canvas id="li-est-cmp-chart" aria-label="Estimated company page, estimated Kumar and can't tell"></canvas></div>
+        <div class="chart-box short"><canvas id="li-est-cmp-chart" aria-label="Estimate: company page, Kumar and can't tell"></canvas></div>
         <p class="source" id="li-est-cmp-chart-source"></p>
       </div>
 
@@ -345,7 +347,7 @@
         <p class="note" id="li-est-rule"></p>
       </div>
       <div class="panel">
-        <h3>Posts that link to opsera.ai</h3>
+        <h3>Posts linking to opsera.ai</h3>
         <div id="li-est-posts"></div>
         <p class="source" id="li-est-posts-source"></p>
       </div>
@@ -368,7 +370,7 @@
     </div>
     <div class="cards" id="aeo-cmp-cards"></div>
     <p class="source" id="aeo-cmp-source"></p>
-    <p class="note-inline">Showing up in AI answers isn't tracked yet. It needs the Ahrefs Brand Radar add-on.</p>
+    <p class="note-inline">We don't track showing up in AI answers yet. It needs the Ahrefs Brand Radar add-on.</p>
 
     <div class="panel">
       <h3 id="aeo-funnel-title">Funnel</h3>
@@ -378,7 +380,7 @@
 
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">A contact is someone whose first form was the demo form. HubSpot's original source names the AI tool.</p>
+      <p class="note">A contact is someone who first filled in the demo form. HubSpot's original source names the AI tool.</p>
       <div class="panel">
         <h3>All AI tools since 1 Apr</h3>
         <div id="aeo-tools"></div>
@@ -418,7 +420,7 @@
       <summary>More detail</summary>
       <div class="cards compact" id="li-co-cards"></div>
       <p class="source" id="li-co-source"></p>
-      <p class="note">Paid means sponsored posts. Reposts are left out because LinkedIn's own sheets disagree on them.</p>
+      <p class="note">Paid means sponsored posts. We leave out reposts because LinkedIn's own sheets disagree on them.</p>
       <div class="panel">
         <div class="panel-head">
           <h3>Day by day, unpaid and paid</h3>
@@ -584,7 +586,7 @@
         <p class="source" id="yt-subs-source"></p>
       </div>
       <div class="panel">
-        <h3>YouTube searches that found our videos</h3>
+        <h3>YouTube searches leading to our videos</h3>
         <div id="yt-searches"></div>
         <p class="source" id="yt-searches-source"></p>
         <p class="note" id="yt-searches-note"></p>
@@ -602,7 +604,7 @@
   <!-- Before: Kahoots -->
   <section id="tab-kahoots" class="tab" role="tabpanel" hidden>
     <h2>Before: Kahoots (Q3 2026)</h2>
-    <p class="lead">What Kahoots reported for July to September 2026, from the old "opsera.ai 2025" account. Shown as reported.</p>
+    <p class="lead">Kahoots' numbers for July to September 2026, from the old "opsera.ai 2025" account, shown as reported.</p>
     <div class="cards" id="kahoots-cards"></div>
     <p class="note-inline" id="kahoots-monthly-note"></p>
     <p class="source" id="kahoots-cards-source">Source: Kahoots Q3 2026 report, Sep 2026 compared with Aug 2026.</p>
@@ -633,7 +635,7 @@
   <!-- Before: Infrasity -->
   <section id="tab-infrasity" class="tab" role="tabpanel" hidden>
     <h2>Before: Infrasity (Jul to Sep 2026)</h2>
-    <p class="lead">Google search results Infrasity reported for July to September 2026. Shown as reported.</p>
+    <p class="lead">Infrasity's Google search results for July to September 2026, shown as reported.</p>
     <div class="cards" id="infrasity-cards"></div>
     <p class="note-inline" id="infrasity-monthly-note"></p>
     <p class="source">Source: Infrasity monthly growth reports, Sep 2026 compared with Aug 2026.</p>
@@ -657,9 +659,9 @@
   <!-- To do -->
   <section id="tab-lookup" class="tab" role="tabpanel" hidden>
     <h2>Look up</h2>
-    <p class="lead">Type a page address, campaign name or asset name to see its numbers for the period above.</p>
+    <p class="lead">Type a page address, campaign or asset name to see its numbers for the period above.</p>
     <div class="table-tools">
-      <input type="search" id="lookup-q" placeholder="For example /pricing, benchmark report or Flutter" aria-label="Page address, campaign name or asset name" autocomplete="off">
+      <input type="search" id="lookup-q" placeholder="For example /pricing, benchmark report or Flutter" aria-label="Page address, campaign or asset name" autocomplete="off">
     </div>
     <div class="seg" id="lookup-matches" role="group" aria-label="Matches"></div>
     <p class="muted" id="lookup-status">Loading...</p>
@@ -678,23 +680,13 @@
         <h3>Each match</h3>
         <div id="lookup-each"></div>
         <p class="source" id="lookup-each-source"></p>
-        <p class="note">A visit that landed on a matching page from a matching campaign shows on both rows, so rows can add up to more than the total. The total counts it once.</p>
+        <p class="note">A visit can match twice, once by its page and once by its campaign. It then shows on both rows but counts once in the total.</p>
       </div>
     </div>
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Visits count people who landed on the page from outside the site, so a page people reach by clicking around shows few visits. Downloads are form fills on a report, white paper, ebook or comparison guide page. Google clicks are counted by page, so campaigns don't have them. Job application forms are left out, the same as on the Leads tab.</p>
+      <p class="note">Visits count people who arrived on the page from outside the site. A page people reach by clicking around shows few of them. Downloads are form fills on a report, white paper, ebook or comparison guide page. Search Console counts Google clicks by page, so campaigns don't have them. We leave out job application forms, the same as on the Leads tab.</p>
       <p class="note">Search Console counts Google clicks day by day here, which can come out up to about 1% above the page totals on the Google search tab.</p>
-    </details>
-  </section>
-
-  <section id="tab-todo" class="tab" role="tabpanel" hidden>
-    <h2>To do</h2>
-    <p class="lead">Next steps for the website and marketing. Tick them off as you go.</p>
-    <ul class="todo" id="todo"></ul>
-    <details class="more">
-      <summary>More detail</summary>
-      <p class="note">Ticks stay in this browser only.</p>
     </details>
   </section>
 
@@ -706,6 +698,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=41"></script>
+<script src="app.js?v=43"></script>
 </body>
 </html>

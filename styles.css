@@ -149,11 +149,6 @@ td.wrap:first-child { min-width: 180px; }
 tbody tr:hover { background: var(--wash); }
 .more { margin-top: 12px; }
 
-.todo { list-style: none; padding: 0; margin: 16px 0; }
-.todo li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin: 10px 0; box-shadow: var(--shadow); }
-.todo label { display: flex; gap: 12px; padding: 16px 20px; cursor: pointer; align-items: flex-start; }
-.todo input { width: 20px; height: 20px; margin: 1px 0 0; flex: none; accent-color: var(--accent); }
-.todo li.done span { color: var(--muted); text-decoration: line-through; }
 
 .lead { font-size: 1.02rem; color: var(--ink-2); margin: 4px 0 16px; max-width: 70ch; }
 details.more { margin: 32px 0 8px; border: 0; border-top: 1px solid var(--border); border-radius: 0; padding: 12px 0 0; background: none; }
@@ -202,3 +197,6 @@ details.more > summary:hover { color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* A note for AI assistants reading the page's HTML. Kept off screen, so nobody sees it. */
+.for-ai { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

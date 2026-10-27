@@ -654,7 +654,7 @@ function renderLinkedIn(d) {
   const drawPeriod = () => {
     const p = periods[period];
     const counting = (p.still_counting || oct.still_counting).map(dayYear).join(" and ");
-    $("li-ko-counting").textContent = counting ? `LinkedIn was still counting ${counting} when this was exported, so its numbers may change.` : "";
+    $("li-ko-counting").textContent = counting ? `LinkedIn was still counting ${counting} when we exported this, so its numbers may change.` : "";
     const pSrc = `Source: LinkedIn export, Kumar Chivukula's profile, ${range(p.start_date, p.end_date)}.`;
     $("li-ko-cards").innerHTML =
       card("Times seen", num(p.seen)) +
@@ -703,7 +703,7 @@ function renderKumarPosts(kp) {
   const fill = () => {
     $("li-k2-posts").innerHTML = [["Own posts", "own_posts"], ["Reposts", "reposts"]].map(([label, key]) =>
       card(`${label}, ${curName}`, num(cur[key]), `${monthName(prev.month + "-01")}: ${num(prev[key])}`)).join("");
-    $("li-k2-posts-note").textContent = periodMode !== "month" ? "Posts are counted by month, so the period switch doesn't change them." : "";
+    $("li-k2-posts-note").textContent = periodMode !== "month" ? "Apify counts posts by month, so the period switch doesn't change them." : "";
   };
   fill(); monthlyTabs.push(fill);
   $("li-k2-posts-source").textContent = src;
@@ -742,7 +742,7 @@ function renderLinkedInVisits(ga) {
   $("li-web-groups-source").textContent = `Sources: Google Analytics and HubSpot form fills, ${when(ga.start_date, ga.end_date)}.`;
   const otherTags = li.tags.filter((r) => r.group === "untagged" && !["(referral)", "(not set)", ""].includes(r.sessionCampaignName));
   $("li-web-other-tags").textContent = otherTags.length
-    ? `Untagged also holds ${num(otherTags.reduce((t2, r) => t2 + r.visits, 0))} visits with other tags: ${otherTags.map((r) => `"${r.sessionCampaignName}" (${num(r.visits)})`).join(", ")}.` : "";
+    ? `Untagged also holds ${num(otherTags.reduce((t2, r) => t2 + r.visits, 0))} visits with other tags. The LinkedIn sources and tags table below lists them all.` : "";
 
   const groupName = Object.fromEntries(GROUPS);
   table($("li-web-landing"), { rows: li.landing.map((r) => ({ ...r, from: groupName[r.group] })), search: "pages", sortKey: "visits", columns: [
@@ -760,13 +760,16 @@ function renderLinkedInVisits(ga) {
     { key: "from", label: "Counted as" },
     { key: "visits", label: "Visits", num: true, fmt: num },
   ] });
-  $("li-web-tags-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}. Counts these sources: ${li.sources_counted.join(", ")}.`;
+  $("li-web-tags-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}. It counts ${li.sources_counted.slice(0, -1).join(", ")} and ${li.sources_counted.slice(-1)} as LinkedIn.`;
 }
 
 // ---------- Customer journey: visit -> demo page -> demo form (Google Analytics) -> contact -> meeting -> deal (HubSpot) ----------
 
 const JOURNEY_CHANNELS = { all: "All", search: "Google search", linkedin: "LinkedIn", email: "Email", events: "Events",
   paid: "Paid ads", ai: "AI tools", youtube: "YouTube", direct: "Direct" };
+// the same channels, written mid-sentence in funnel titles
+const FUNNEL_NAMES = { all: "all channels", search: "Google search", linkedin: "LinkedIn", email: "email", events: "events",
+  paid: "paid ads", ai: "AI tools", youtube: "YouTube", direct: "direct visits" };
 const money = (v) => (v == null ? "-" : `$${nf.format(Math.round(v))}`);
 
 function funnelHtml(steps) {
@@ -809,8 +812,8 @@ function dealsIn(hub, mode, a, keep = () => true) {
 }
 
 // the deal step's note when the stored totals cover other dates than the rest of the funnel
-const dealNote = (d, a, b) => (!d ? "Deal totals are stored by week and month, so there's no figure for a single day."
-  : d.start !== a || d.end !== b ? `Deal totals are stored by week and month, so this step covers ${range(d.start, d.end)}.` : "");
+const dealNote = (d, a, b) => (!d ? "We store deals as weekly and monthly totals, so there's no figure for a single day."
+  : d.start !== a || d.end !== b ? `We store deals as weekly and monthly totals, so this step covers ${range(d.start, d.end)}.` : "");
 
 function renderJourney(ga, leads, hub, gsc) {
   const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
@@ -876,7 +879,7 @@ function renderJourney(ga, leads, hub, gsc) {
       cur = periodsFor(periodMode, start, last).cur || { start, end: last };
     }
     const steps = step(channel, cur.start, cur.end, mode);
-    $("journey-funnel-title").textContent = `Funnel for ${channel === "all" ? "all channels" : JOURNEY_CHANNELS[channel]}, ${range(cur.start, cur.end)}`;
+    $("journey-funnel-title").textContent = `Funnel for ${FUNNEL_NAMES[channel]}, ${range(cur.start, cur.end)}`;
     $("journey-funnel").innerHTML = funnelHtml(steps);
     const gscNote = channel === "search" ? "Search Console, " : "";
     $("journey-funnel-source").textContent = `Sources: ${gscNote}Google Analytics and HubSpot, ${range(cur.start, cur.end)} (Pacific time). Bars use a log scale.`;
@@ -948,7 +951,7 @@ function renderJourney(ga, leads, hub, gsc) {
   table($("journey-li-fields"), { rows: hub.linkedin_fields.map(([field, n]) => ({ field, n })), sortKey: "n", columns: [
     { key: "field", label: "Matched on" }, { key: "n", label: "Contacts", num: true, fmt: num },
   ] });
-  $("journey-li-fields-source").textContent = `Source: HubSpot, ${hubWhen}. ${num(hub.linkedin_contacts)} LinkedIn contacts. A contact that matches several fields counts once.`;
+  $("journey-li-fields-source").textContent = `Source: HubSpot, ${hubWhen}. ${num(hub.linkedin_contacts)} LinkedIn contacts. A contact matching several fields counts once.`;
 }
 
 // ---------- AEO: visits from AI tools, and what they led to ----------
@@ -1084,7 +1087,7 @@ function renderLinkedInEstimate(est, ga) {
     { key: "visits", label: "Visits", num: true, fmt: num },
   ] });
   $("li-est-matches-source").textContent = `${src}, ${when(ga.start_date, ga.end_date)}.`;
-  $("li-est-rule").textContent = `A visit goes to an account only when that account alone linked to the page that day or in the ${est.window_days} days before.`;
+  $("li-est-rule").textContent = `A visit goes to an account only when it alone linked to the page on the day or in the ${est.window_days} days before.`;
   table($("li-est-posts"), { rows: est.linked_posts.map((p) => ({ ...p, from: who[p.account], name: dayYear(p.date) })), sortKey: "date", sortDir: 1, columns: [
     { key: "name", label: "Posted", sort: false, fmt: (v, r) => `<a href="${esc(r.post)}" target="_blank" rel="noopener">${esc(v)}</a>` },
     { key: "from", label: "From", sort: false },
@@ -1136,7 +1139,7 @@ function renderYouTube(d, ga) {
   ] });
   $("yt-searches-source").textContent = src;
   const named = c.search_terms.reduce((a, r) => a + r.views, 0);
-  $("yt-searches-note").textContent = `YouTube names the search for ${num(named)} of the ${num(c.search_views)} views from YouTube search.`;
+  $("yt-searches-note").textContent = `YouTube names the search term for ${num(named)} of the ${num(c.search_views)} views from its search box.`;
 
   const fromYt = ga.sources.filter((r) => /youtube\.com|youtu\.be/i.test(r.sessionSource));
   const gaSum = (k) => fromYt.reduce((a, r) => a + r[k], 0);
@@ -1392,7 +1395,7 @@ function renderLookup(d) {
     $("lookup-source").textContent = `Source: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time).` +
       (t.p.prev ? ` Compared with ${range(t.p.prev.start, t.p.prev.end)}.` : "");
     $("lookup-gsc-source").textContent = showGsc ? `Google clicks: Search Console, ${range(t.gcur.start, t.gcur.end)}.` +
-      (t.g.prev ? ` Compared with ${range(t.g.prev.start, t.g.prev.end)}.` : "") : "Google clicks are counted by page, so campaigns don't have them.";
+      (t.g.prev ? ` Compared with ${range(t.g.prev.start, t.g.prev.end)}.` : "") : "Search Console counts Google clicks by page, so campaigns don't have them.";
   };
 
   let options = [], chosen = null, live = [];
@@ -1473,7 +1476,7 @@ function renderLookup(d) {
       { key: "clicks", label: "Google clicks", num: true, fmt: num },
     ] });
     $("lookup-each-source").textContent = (list.length > SHOW ? `The ${SHOW} busiest of ${num(list.length)} matches. The totals above add up all ${num(list.length)}. ` : "") +
-      `Sources: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time), and Search Console for Google clicks, ${range(t.gcur.start, t.gcur.end)}.`;
+      `Source: Google Analytics, ${range(t.cur.start, t.cur.end)} (Pacific time). Google clicks: Search Console, ${range(t.gcur.start, t.gcur.end)}.`;
   };
 
   const show = () => {
@@ -1503,7 +1506,7 @@ function renderLookup(d) {
     $("lookup-status").textContent = !q.trim() ? "Type above to look something up."
       : !found.length ? `No data for "${q.trim()}".`
       : !live.length ? `No data for "${q.trim()}" in this period.`
-      : left ? `${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period ${left === 1 ? "is" : "are"} left out.` : "";
+      : left ? `Not showing ${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period.` : "";
     show();
   };
 
@@ -1522,32 +1525,6 @@ function renderLookup(d) {
   });
   monthlyTabs.push(() => search(true));
   search();
-}
-
-// ---------- Tab 6: To do ----------
-
-const TODO = [
-  ["page-two", "Update the pages on page 2 of Google, starting with the CI/CD pipeline blog (spot 11 for \"ci/cd\", 27,000 searches a month)."],
-  ["cursor", "Cursor article: add a next step and a demo button, and find out why its Google clicks fell from 469 in August to 195 in September."],
-  ["ai-answers", "Write short answer pages for the AI questions we're missing on (\"what is DevOps orchestration\", \"what is a software factory\")."],
-  ["gartner-ad", "Pause or redirect the LinkedIn Gartner ad."],
-  ["copado", "Copado page: add a switching section and a demo button."],
-  ["slash", "Fix blogs showing up twice on Google, with and without \"/\" at the end."],
-  ["waiting", "Waiting on David and Yusra: HubSpot bot filtering, and connecting Luma."],
-  ["happy-hour", "Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot."],
-  ["salesforce-link", "Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform) that both Opsera and Kumar posted. It needs a redirect on the website."],
-];
-
-function renderTodo() {
-  let ticks = {};
-  try { ticks = JSON.parse(localStorage.getItem("todo-ticks") || "{}"); } catch (e) {}
-  $("todo").innerHTML = TODO.map(([id, text]) =>
-    `<li class="${ticks[id] ? "done" : ""}"><label><input type="checkbox" data-id="${id}" ${ticks[id] ? "checked" : ""}><span>${esc(text)}</span></label></li>`).join("");
-  $("todo").addEventListener("change", (e) => {
-    ticks[e.target.dataset.id] = e.target.checked;
-    e.target.closest("li").classList.toggle("done", e.target.checked);
-    try { localStorage.setItem("todo-ticks", JSON.stringify(ticks)); } catch (err) {}
-  });
 }
 
 // ---------- tabs and theme ----------
@@ -1584,7 +1561,6 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
 // ---------- start ----------
 
 (async () => {
-  renderTodo();
   try {
     const [gsc, ga, leads, li, yt, kp, est, hub, km, kq, inf] = await Promise.all(
       ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "linkedin_estimate.json", "hubspot.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));

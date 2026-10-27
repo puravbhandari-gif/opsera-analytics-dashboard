@@ -1,0 +1,76 @@
+period_start,period_end,period_not_finished,came_from,visits,engaged_visits
+2026-04-01,2026-04-30,no,Google ad network,1,1
+2026-04-01,2026-04-30,no,"Direct (typed in, or unknown)",3509,1133
+2026-04-01,2026-04-30,no,Display ads,1,0
+2026-04-01,2026-04-30,no,Email,1064,477
+2026-04-01,2026-04-30,no,Search engines (mostly Google),2903,1542
+2026-04-01,2026-04-30,no,Shopping search,1,1
+2026-04-01,2026-04-30,no,Social media (LinkedIn and others),479,270
+2026-04-01,2026-04-30,no,Video sites,2,1
+2026-04-01,2026-04-30,no,Paid search ads,447,197
+2026-04-01,2026-04-30,no,Paid social ads,6,3
+2026-04-01,2026-04-30,no,Other websites,501,245
+2026-04-01,2026-04-30,no,Unlabelled,180,59
+2026-05-01,2026-05-31,no,Google ad network,4,2
+2026-05-01,2026-05-31,no,"Direct (typed in, or unknown)",3734,1165
+2026-05-01,2026-05-31,no,Email,1625,131
+2026-05-01,2026-05-31,no,Search engines (mostly Google),2666,1388
+2026-05-01,2026-05-31,no,Shopping search,1,1
+2026-05-01,2026-05-31,no,Social media (LinkedIn and others),800,428
+2026-05-01,2026-05-31,no,Video sites,2,2
+2026-05-01,2026-05-31,no,Paid search ads,651,257
+2026-05-01,2026-05-31,no,Paid social ads,3,1
+2026-05-01,2026-05-31,no,Other websites,1023,775
+2026-05-01,2026-05-31,no,Unlabelled,573,254
+2026-06-01,2026-06-30,no,"AI tools (ChatGPT, Gemini, Perplexity)",45,21
+2026-06-01,2026-06-30,no,"Direct (typed in, or unknown)",5537,1487
+2026-06-01,2026-06-30,no,Email,1550,260
+2026-06-01,2026-06-30,no,Search engines (mostly Google),3034,1554
+2026-06-01,2026-06-30,no,Social media (LinkedIn and others),739,504
+2026-06-01,2026-06-30,no,Video sites,1,1
+2026-06-01,2026-06-30,no,Paid search ads,260,101
+2026-06-01,2026-06-30,no,Other websites,744,386
+2026-06-01,2026-06-30,no,Unlabelled,423,185
+2026-07-01,2026-07-31,no,"AI tools (ChatGPT, Gemini, Perplexity)",84,38
+2026-07-01,2026-07-31,no,Google ad network,1,0
+2026-07-01,2026-07-31,no,"Direct (typed in, or unknown)",3821,1361
+2026-07-01,2026-07-31,no,Email,157,71
+2026-07-01,2026-07-31,no,Search engines (mostly Google),3761,1836
+2026-07-01,2026-07-31,no,Social media (LinkedIn and others),526,372
+2026-07-01,2026-07-31,no,Video sites,7,3
+2026-07-01,2026-07-31,no,Paid search ads,189,65
+2026-07-01,2026-07-31,no,Paid social ads,124,22
+2026-07-01,2026-07-31,no,Other websites,658,381
+2026-07-01,2026-07-31,no,Unlabelled,134,70
+2026-08-01,2026-08-31,no,"AI tools (ChatGPT, Gemini, Perplexity)",63,31
+2026-08-01,2026-08-31,no,Google ad network,1,1
+2026-08-01,2026-08-31,no,"Direct (typed in, or unknown)",4920,1554
+2026-08-01,2026-08-31,no,Email,2240,418
+2026-08-01,2026-08-31,no,Search engines (mostly Google),3517,1791
+2026-08-01,2026-08-31,no,Social media (LinkedIn and others),412,264
+2026-08-01,2026-08-31,no,Video sites,1,0
+2026-08-01,2026-08-31,no,Paid search ads,205,82
+2026-08-01,2026-08-31,no,Paid social ads,63,10
+2026-08-01,2026-08-31,no,Other websites,603,372
+2026-08-01,2026-08-31,no,Unlabelled,115,35
+2026-09-01,2026-09-30,no,"AI tools (ChatGPT, Gemini, Perplexity)",70,34
+2026-09-01,2026-09-30,no,"Direct (typed in, or unknown)",4880,1121
+2026-09-01,2026-09-30,no,Email,2213,323
+2026-09-01,2026-09-30,no,Search engines (mostly Google),3747,1868
+2026-09-01,2026-09-30,no,Social media (LinkedIn and others),313,142
+2026-09-01,2026-09-30,no,Video sites,6,3
+2026-09-01,2026-09-30,no,Paid search ads,4,0
+2026-09-01,2026-09-30,no,Paid social ads,1,0
+2026-09-01,2026-09-30,no,Other websites,330,180
+2026-09-01,2026-09-30,no,Unlabelled,247,136
+2026-10-01,2026-10-26,yes,"AI tools (ChatGPT, Gemini, Perplexity)",72,35
+2026-10-01,2026-10-26,yes,"Direct (typed in, or unknown)",9972,1721
+2026-10-01,2026-10-26,yes,Email,1713,237
+2026-10-01,2026-10-26,yes,Search engines (mostly Google),3412,1610
+2026-10-01,2026-10-26,yes,Shopping search,1,0
+2026-10-01,2026-10-26,yes,Social media (LinkedIn and others),227,129
+2026-10-01,2026-10-26,yes,Video sites,293,113
+2026-10-01,2026-10-26,yes,Paid Other,1,0
+2026-10-01,2026-10-26,yes,Paid search ads,10,0
+2026-10-01,2026-10-26,yes,Other websites,337,165
+2026-10-01,2026-10-26,yes,Unlabelled,469,33
