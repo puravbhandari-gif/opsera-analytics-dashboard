@@ -11,9 +11,13 @@ paid are shown side by side, and Life page views are left out (0 every day).
 Agreed on 22 Oct 2026: Kumar's October exports are shown as LinkedIn gave them,
 including 22 Oct while it was still being counted, using the 7-day copy whose
 summary matches its daily rows.
+27 Oct 2026: exports that overlap are joined with the newer one winning. An older
+export may differ only on days LinkedIn was still counting when it was exported
+(the company page's last 2 days, Kumar's export day). Anything else stops the update.
 """
 import datetime as dt
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -34,13 +38,20 @@ COMPANY_OCTOBER = {   # 1 to 20 Oct 2026 (LinkedIn's company data runs about 2 d
     "visitors": "opsera_visitors_1792662616762.xls",
 }
 COMPANY_OCTOBER_RANGE = ("2026-10-01", "2026-10-20")
-EXPORTED_ON = {"company": "2026-10-22"}
+COMPANY_LATE = {   # 11 to 25 Oct 2026, exported 27 Oct
+    "content": "opsera_content_1793093858323.xls",
+    "followers": "opsera_followers_1793093901379.xls",
+    "visitors": "opsera_visitors_1793093889013.xls",
+}
+COMPANY_LATE_RANGE = ("2026-10-11", "2026-10-25")
+COMPANY_DELAY_DAYS = 2   # LinkedIn: "Data is delayed by up to 2 days"
+EXPORTED_ON = {"company": "2026-10-27"}
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
 KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
-    ("7d", "Last 7 days", "2026-10-16", "2026-10-22"),
-    ("14d", "Last 14 days", "2026-10-09", "2026-10-22"),
-    ("oct", "Since 1 Oct", "2026-10-01", "2026-10-22"),
+    ("7d", "21 to 27 Oct", "2026-10-21", "2026-10-27"),
+    ("14d", "9 to 22 Oct", "2026-10-09", "2026-10-22"),
+    ("oct", "1 to 22 Oct", "2026-10-01", "2026-10-22"),
 ]
 
 
@@ -62,6 +73,21 @@ def xls_sheet(name, sheet):
 def by_header(rows, header_row):
     head = rows[header_row]
     return [dict(zip(head, r)) for r in rows[header_row + 1:] if any(c != "" for c in r)]
+
+
+def exported_on(name):
+    """The day (UTC) the export was downloaded. A day on or after it was still being counted."""
+    return dt.datetime.fromtimestamp(os.path.getmtime(SRC / name), dt.timezone.utc).date().isoformat()
+
+
+def join(label, older, newer, key, unsure):
+    """One run of days from two exports. The newer one wins where they overlap; the older one may
+    only differ on the days in `unsure` (still being counted when it was exported)."""
+    new = {r[key]: r for r in newer}
+    for r in older:
+        if r[key] in new and r != new[r[key]] and r[key] not in unsure:
+            stop(f"{label}: the two exports disagree on {r[key]}, which wasn't still being counted.")
+    return [r for r in older if r[key] not in new] + newer
 
 
 def check_days(label, dates, start=START, end=END):
@@ -179,31 +205,40 @@ def kumar(name=KUMAR, start=START, end=END):
 
 def main():
     oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
-    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), KUMAR, *oct_files.values()] if not (SRC / n).exists()]
+    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), KUMAR, *oct_files.values()]
+               if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
-    october = [{"key": key, "label": label, **kumar(oct_files[key], a, b)} for key, label, a, b in KUMAR_OCTOBER]
-    days = {}
-    for period in october:
-        for r in period["daily"]:
-            days.setdefault(r["date"], set()).add((r["seen"], r["engagements"]))
-    clash = sorted(d for d, v in days.items() if len(v) > 1)
-    if clash != [max(days)] and clash:
-        stop(f"Kumar's October exports disagree on these days: {clash}")
-    # The company page: July to September and October exports joined into one run of days (same source, no overlap)
-    q3, octo = company(), company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE)
-    co = {**q3, "end_date": octo["end_date"], "breakdowns": octo["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
-    for key in ("daily", "posts", "followers_daily", "visitors_daily"):
-        co[key] = q3[key] + octo[key]
-    # Kumar: July to September and the since-1-Oct export joined into one run of days
+    october = []
+    for key, label, a, b in KUMAR_OCTOBER:
+        period = {"key": key, "label": label, **kumar(oct_files[key], a, b)}
+        period["still_counting"] = [b] if exported_on(oct_files[key]) <= b else []
+        october.append(period)
+
+    # The company page: July to September, 1 to 20 Oct and 11 to 25 Oct joined into one run of days
+    q3, octo, late = company(), company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE)
+    octo_end = dt.date.fromisoformat(octo["end_date"])
+    unsure = {(octo_end - dt.timedelta(days=i)).isoformat() for i in range(COMPANY_DELAY_DAYS)}
+    co = {**q3, "end_date": late["end_date"], "breakdowns": late["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
+    for key in ("daily", "followers_daily", "visitors_daily"):
+        co[key] = q3[key] + join(f"Company {key}", octo[key], late[key], "date", unsure)
+        check_days(f"Company joined {key}", [r["date"] for r in co[key]], START, late["end_date"])
+    newer_posts = {p["link"] for p in late["posts"]}   # the newer export has the up-to-date counts for posts in both
+    co["posts"] = [p for p in q3["posts"] + octo["posts"] if p["link"] not in newer_posts] + late["posts"]
+
+    # Kumar: July to September, then 1 to 22 Oct and 21 to 27 Oct joined into one run of days
     since = next(p for p in october if p["key"] == "oct")
+    latest = max(october, key=lambda p: p["end_date"])
     k = kumar()
-    k_daily, k_followers = k["daily"] + since["daily"], k["followers_daily"] + since["followers_daily"]
-    check_days("Kumar's joined days", [r["date"] for r in k_daily], START, since["end_date"])
+    k_daily = k["daily"] + join("Kumar's days", since["daily"], latest["daily"], "date", set(since["still_counting"]))
+    k_followers = k["followers_daily"] + join("Kumar's followers", since["followers_daily"], latest["followers_daily"], "date",
+                                              set(since["still_counting"]))
+    check_days("Kumar's joined days", [r["date"] for r in k_daily], START, latest["end_date"])
+    still = sorted({d for p in october for d in p["still_counting"]})
     out = {"start_date": START, "end_date": END, "company": co, "kumar": k,
-           "kumar_october": {"periods": october, "still_counting": clash},
-           "kumar_all": {"start_date": START, "end_date": since["end_date"], "daily": k_daily, "followers_daily": k_followers,
-                         "still_counting": clash}}
+           "kumar_october": {"periods": october, "still_counting": still},
+           "kumar_all": {"start_date": START, "end_date": latest["end_date"], "daily": k_daily, "followers_daily": k_followers,
+                         "still_counting": latest["still_counting"]}}
     OUT.write_text(json.dumps(out, indent=1))
     c, k = out["company"], out["kumar"]
     print(f"Company: seen {sum(r['seen_total'] for r in c['daily'])}, posts {len(c['posts'])}, "

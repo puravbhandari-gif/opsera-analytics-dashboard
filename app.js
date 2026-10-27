@@ -648,11 +648,13 @@ function renderLinkedIn(d) {
   // Kumar's October: each export is its own period, shown one at a time, never added together
   const oct = d.kumar_october;
   const periods = Object.fromEntries(oct.periods.map((p) => [p.key, p]));
-  const counting = oct.still_counting.map(dayYear).join(", ");
-  $("li-ko-counting").textContent = counting ? `LinkedIn was still counting ${counting} when these were exported, so its numbers may change.` : "";
+  // the buttons name each export by its dates
+  $("li-ko-period").querySelectorAll("button").forEach((btn) => { if (periods[btn.dataset.p]) btn.textContent = periods[btn.dataset.p].label; });
   let period = "7d";
   const drawPeriod = () => {
     const p = periods[period];
+    const counting = (p.still_counting || oct.still_counting).map(dayYear).join(" and ");
+    $("li-ko-counting").textContent = counting ? `LinkedIn was still counting ${counting} when this was exported, so its numbers may change.` : "";
     const pSrc = `Source: LinkedIn export, Kumar Chivukula's profile, ${range(p.start_date, p.end_date)}.`;
     $("li-ko-cards").innerHTML =
       card("Times seen", num(p.seen)) +
@@ -695,7 +697,7 @@ function renderLinkedIn(d) {
 
 // Kumar's own posts and reposts: counted by month from his profile, two separate lines, never added together
 function renderKumarPosts(kp) {
-  const src = `Source: ${kp.source}`;
+  const src = kp.as_of ? `Source: ${kp.source}, checked ${dayYear(kp.as_of)}. Months follow UTC.` : `Source: ${kp.source}`;
   const months = kp.months, cur = months[months.length - 1], prev = months[months.length - 2];
   const curName = `${monthName(cur.month + "-01")}${cur.so_far ? " so far" : ""}`;
   const fill = () => {

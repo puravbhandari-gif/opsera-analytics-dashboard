@@ -1,8 +1,27 @@
-{"source": "LinkedIn profile scrape, 22 Oct. October own posts counted by hand.",
- "as_of": "2026-10-22",
+{
+ "source": "Kumar's public LinkedIn profile, read with Apify",
+ "as_of": "2026-10-27",
  "months": [
-  {"month": "2026-07", "own_posts": 9, "reposts": 16},
-  {"month": "2026-08", "own_posts": 4, "reposts": 14},
-  {"month": "2026-09", "own_posts": 7, "reposts": 8},
-  {"month": "2026-10", "own_posts": 5, "reposts": 1, "so_far": true}
- ]}
+  {
+   "month": "2026-07",
+   "own_posts": 9,
+   "reposts": 16
+  },
+  {
+   "month": "2026-08",
+   "own_posts": 4,
+   "reposts": 14
+  },
+  {
+   "month": "2026-09",
+   "own_posts": 7,
+   "reposts": 8
+  },
+  {
+   "month": "2026-10",
+   "own_posts": 5,
+   "reposts": 2,
+   "so_far": true
+  }
+ ]
+}

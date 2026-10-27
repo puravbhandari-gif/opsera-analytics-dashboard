@@ -59,6 +59,14 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python scripts/fetch_linkedin_posts.py
 
+      # Optional: if this fails, the LinkedIn exec tab keeps last week's post counts and their date.
+      - name: Count Kumar's own posts and reposts (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python scripts/count_kumar_posts.py
+
       - name: Estimate who sent the untagged LinkedIn visits (optional)
         if: github.event_name != 'push' && steps.posts.outcome == 'success'
         continue-on-error: true
