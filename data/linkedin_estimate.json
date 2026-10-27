@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-10-26T03:07+00:00",
+ "posts_pulled_at": "2026-10-27T09:50+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -362,6 +362,18 @@
    "group": "cant_tell",
    "visits": 7,
    "engaged": 6
+  },
+  {
+   "date": "2026-10-25",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 0
+  },
+  {
+   "date": "2026-10-26",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 2
   }
  ],
  "matches": [
@@ -541,8 +553,8 @@
    "post": "https://www.linkedin.com/posts/opsera_gartnersym-activity-7518389925608833024-wjQa"
   }
  ],
- "untagged_total": 432,
+ "untagged_total": 436,
  "start_date": "2026-09-01",
- "end_date": "2026-10-25",
- "pulled_at": "2026-10-26T08:34+05:30"
+ "end_date": "2026-10-26",
+ "pulled_at": "2026-10-27T15:16+05:30"
 }

@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-10-26T03:07+00:00",
+ "pulled_at": "2026-10-27T09:50+00:00",
  "posts": [
   {
    "account": "company",
@@ -347,6 +347,13 @@
    "post": "https://www.linkedin.com/posts/opsera_recap-of-opsera-gartner-it-symposiumxpo-activity-7519472767100936193-VrDc",
    "posted_utc": "2026-10-23T19:00:12.725Z",
    "date_pacific": "2026-10-23",
+   "opsera_pages": []
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-x-spacex-super-intelligence-partner-activity-7520507058740461568-bpZj",
+   "posted_utc": "2026-10-26T15:30:07.068Z",
+   "date_pacific": "2026-10-26",
    "opsera_pages": []
   }
  ]

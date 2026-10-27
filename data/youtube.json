@@ -1,12 +1,12 @@
 {
  "source": "YouTube Analytics API, Opsera channel",
  "start_date": "2026-04-01",
- "end_date": "2026-10-25",
- "last_day_with_data": "2026-10-23",
- "pulled_at": "2026-10-26T08:35+05:30",
+ "end_date": "2026-10-26",
+ "last_day_with_data": "2026-10-24",
+ "pulled_at": "2026-10-27T15:18+05:30",
  "channel": {
-  "views": 2692,
-  "minutes": 3817,
+  "views": 2697,
+  "minutes": 3819,
   "subs_gained": 29,
   "subs_lost": 14,
   "subs_daily": [
@@ -1039,6 +1039,11 @@
     "date": "2026-10-23",
     "gained": 1,
     "lost": 0
+   },
+   {
+    "date": "2026-10-24",
+    "gained": 0,
+    "lost": 0
    }
   ],
   "card_clicks": 0,
@@ -1078,6 +1083,10 @@
     "views": 1
    },
    {
+    "term": "dataops",
+    "views": 1
+   },
+   {
     "term": "dora metrics",
     "views": 1
    },
@@ -1114,7 +1123,7 @@
     "views": 1
    }
   ],
-  "search_views": 1064,
+  "search_views": 1068,
   "other_sites": [
    {
     "site": "iframely.net",
@@ -1298,8 +1307,8 @@
  },
  "types": {
   "long": {
-   "views": 2679,
-   "minutes": 3817,
+   "views": 2684,
+   "minutes": 3818,
    "avg_seconds": 97,
    "daily": [
     {
@@ -2537,6 +2546,12 @@
      "type": "long",
      "views": 14,
      "minutes": 18
+    },
+    {
+     "date": "2026-10-24",
+     "type": "long",
+     "views": 5,
+     "minutes": 0
     }
    ],
    "videos": [
@@ -2557,7 +2572,7 @@
     {
      "id": "dym5WnSTKEc",
      "title": "SOC 2, HIPAA and PCI DSS Compliance Audit in Claude Code | Opsera",
-     "views": 105,
+     "views": 106,
      "minutes": 82,
      "avg_seconds": 49
     },
@@ -2597,18 +2612,18 @@
      "avg_seconds": 38
     },
     {
-     "id": "MCKVWEAn_os",
-     "title": "Claude Code Usage and Cost Dashboard: Adoption, Tool Usage and AI Spend | Opsera",
-     "views": 64,
-     "minutes": 29,
-     "avg_seconds": 28
-    },
-    {
      "id": "ttX6uTEg2Oo",
      "title": "Webinar | Salesforce CI/CD: Speed Up Application Delivery with DevOps Automation | Opsera",
      "views": 64,
      "minutes": 271,
      "avg_seconds": 267
+    },
+    {
+     "id": "MCKVWEAn_os",
+     "title": "Claude Code Usage and Cost Dashboard: Adoption, Tool Usage and AI Spend | Opsera",
+     "views": 64,
+     "minutes": 29,
+     "avg_seconds": 28
     },
     {
      "id": "aZjMAfIbgMY",
@@ -2625,18 +2640,18 @@
      "avg_seconds": 84
     },
     {
-     "id": "AyzfYJfCwTY",
-     "title": "Terraform AI: Getting Started with Cloud Forge Infrastructure Provisioning",
-     "views": 43,
-     "minutes": 12,
-     "avg_seconds": 25
-    },
-    {
      "id": "KbdJckjHx9M",
      "title": "Introducing Opsera AI Release Notes \u2014 Every Deployment, Fully Documented",
      "views": 43,
      "minutes": 30,
      "avg_seconds": 46
+    },
+    {
+     "id": "AyzfYJfCwTY",
+     "title": "Terraform AI: Getting Started with Cloud Forge Infrastructure Provisioning",
+     "views": 43,
+     "minutes": 12,
+     "avg_seconds": 25
     },
     {
      "id": "pC9mLxz8aOs",
@@ -2674,18 +2689,18 @@
      "avg_seconds": 282
     },
     {
-     "id": "4bSKSpQdiIQ",
-     "title": "GitHub Advanced Security Demo: The GHAS Dashboard in Opsera",
-     "views": 33,
-     "minutes": 19,
-     "avg_seconds": 38
-    },
-    {
      "id": "FH280o85rHY",
      "title": "DORA Metrics and GitHub Copilot: Measuring the Effect on Code Quality",
      "views": 33,
      "minutes": 19,
      "avg_seconds": 35
+    },
+    {
+     "id": "4bSKSpQdiIQ",
+     "title": "GitHub Advanced Security Demo: The GHAS Dashboard in Opsera",
+     "views": 33,
+     "minutes": 19,
+     "avg_seconds": 38
     },
     {
      "id": "qLjkP1puaP4",
@@ -2716,18 +2731,18 @@
      "avg_seconds": 77
     },
     {
-     "id": "nuwn2pvC4tA",
-     "title": "Opsera Internal Developer Platform (IDP): Unified DevOps Made Easy | Beta",
-     "views": 29,
-     "minutes": 26,
-     "avg_seconds": 60
-    },
-    {
      "id": "iBa8cXPLJk8",
      "title": "SQL Injection Scanner for Claude Code | Opsera AI Agent",
      "views": 29,
      "minutes": 13,
      "avg_seconds": 31
+    },
+    {
+     "id": "nuwn2pvC4tA",
+     "title": "Opsera Internal Developer Platform (IDP): Unified DevOps Made Easy | Beta",
+     "views": 29,
+     "minutes": 26,
+     "avg_seconds": 60
     },
     {
      "id": "R_UnAXG0a3s",
@@ -2758,18 +2773,18 @@
      "avg_seconds": 43
     },
     {
-     "id": "wY4iUwj8Osg",
-     "title": "Software Supply Chain Security in DevOps Pipelines: Opsera and Lineaje Integration",
-     "views": 22,
-     "minutes": 7,
-     "avg_seconds": 26
-    },
-    {
      "id": "w4YUB63VXaQ",
      "title": "SRE Tools in One Place: PagerDuty and New Relic with IDP Agents | Opsera",
      "views": 22,
      "minutes": 12,
      "avg_seconds": 45
+    },
+    {
+     "id": "wY4iUwj8Osg",
+     "title": "Software Supply Chain Security in DevOps Pipelines: Opsera and Lineaje Integration",
+     "views": 22,
+     "minutes": 7,
+     "avg_seconds": 26
     },
     {
      "id": "USRtZV60n9E",
@@ -2807,18 +2822,18 @@
      "avg_seconds": 90
     },
     {
-     "id": "2HiW2yE1ZpM",
-     "title": "Introducing Opsera's Leadership Dashboard for Unified DevOps Insights",
-     "views": 18,
-     "minutes": 5,
-     "avg_seconds": 17
-    },
-    {
      "id": "exzXdufinTY",
      "title": "Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",
      "views": 18,
      "minutes": 13,
      "avg_seconds": 43
+    },
+    {
+     "id": "2HiW2yE1ZpM",
+     "title": "Introducing Opsera's Leadership Dashboard for Unified DevOps Insights",
+     "views": 18,
+     "minutes": 5,
+     "avg_seconds": 17
     },
     {
      "id": "rBdcfhsnXUM",
@@ -2842,11 +2857,11 @@
      "avg_seconds": 81
     },
     {
-     "id": "Uk42gxqR-Wk",
-     "title": "Honeywell\u2019s Software Modernization and GitHub Transformation to Enhance DevEx and Productivity",
+     "id": "L-DEh9qx0WM",
+     "title": "Secret Scanning: Stopping Token Exposure with GitHub Copilot and GitHub Advanced Security",
      "views": 16,
-     "minutes": 86,
-     "avg_seconds": 324
+     "minutes": 5,
+     "avg_seconds": 20
     },
     {
      "id": "J8xmXJ8oBco",
@@ -2856,11 +2871,11 @@
      "avg_seconds": 17
     },
     {
-     "id": "L-DEh9qx0WM",
-     "title": "Secret Scanning: Stopping Token Exposure with GitHub Copilot and GitHub Advanced Security",
+     "id": "Uk42gxqR-Wk",
+     "title": "Honeywell\u2019s Software Modernization and GitHub Transformation to Enhance DevEx and Productivity",
      "views": 16,
-     "minutes": 5,
-     "avg_seconds": 20
+     "minutes": 86,
+     "avg_seconds": 324
     },
     {
      "id": "V9N8jfwciO8",
@@ -2868,6 +2883,13 @@
      "views": 16,
      "minutes": 16,
      "avg_seconds": 60
+    },
+    {
+     "id": "fgroxzfnpos",
+     "title": "Opsera Pipeline Notifications \u2014 Smart Alerts for DevOps Teams",
+     "views": 15,
+     "minutes": 8,
+     "avg_seconds": 35
     },
     {
      "id": "7UYqC_t1dOw",
@@ -2884,18 +2906,11 @@
      "avg_seconds": 97
     },
     {
-     "id": "fgroxzfnpos",
-     "title": "Opsera Pipeline Notifications \u2014 Smart Alerts for DevOps Teams",
-     "views": 15,
-     "minutes": 8,
-     "avg_seconds": 35
-    },
-    {
-     "id": "DOaW-TDDgDk",
-     "title": "DevOps Huddle EP16: How to Migrate Bitbucket to GitHub: Source Code Migration | Opsera",
+     "id": "3916-Y_Wk6c",
+     "title": "DORA Metrics and DevEx for GitHub Copilot: Value and Impact",
      "views": 14,
-     "minutes": 8,
-     "avg_seconds": 42
+     "minutes": 17,
+     "avg_seconds": 73
     },
     {
      "id": "9mj_YXT2S9s",
@@ -2905,11 +2920,11 @@
      "avg_seconds": 11
     },
     {
-     "id": "3916-Y_Wk6c",
-     "title": "DORA Metrics and DevEx for GitHub Copilot: Value and Impact",
+     "id": "DOaW-TDDgDk",
+     "title": "DevOps Huddle EP16: How to Migrate Bitbucket to GitHub: Source Code Migration | Opsera",
      "views": 14,
-     "minutes": 17,
-     "avg_seconds": 73
+     "minutes": 8,
+     "avg_seconds": 42
     },
     {
      "id": "KHPIcKFUAEo",
@@ -2919,13 +2934,6 @@
      "avg_seconds": 56
     },
     {
-     "id": "uHqNqW42Nbc",
-     "title": "AI DevOps Insights for Engineering Leaders: Hummingbird AI in Opsera Dashboards",
-     "views": 13,
-     "minutes": 11,
-     "avg_seconds": 69
-    },
-    {
      "id": "XN1BKlrM4fE",
      "title": "Measuring the Impact of AI Code Assistants on Developer Productivity",
      "views": 13,
@@ -2933,11 +2941,11 @@
      "avg_seconds": 44
     },
     {
-     "id": "PzKib1dgNoA",
-     "title": "Measuring the ROI of GitHub Copilot Adoption",
-     "views": 12,
-     "minutes": 3,
-     "avg_seconds": 24
+     "id": "uHqNqW42Nbc",
+     "title": "AI DevOps Insights for Engineering Leaders: Hummingbird AI in Opsera Dashboards",
+     "views": 13,
+     "minutes": 11,
+     "avg_seconds": 69
     },
     {
      "id": "IiWxdKAgFq8",
@@ -2947,6 +2955,13 @@
      "avg_seconds": 78
     },
     {
+     "id": "mex5VPttcBA",
+     "title": "Webinar | DevOps Transformation Using No-Code Orchestration | Opsera",
+     "views": 12,
+     "minutes": 62,
+     "avg_seconds": 375
+    },
+    {
      "id": "1TY7EJtT9pw",
      "title": "Opsera Tool Registry: Connect, Monitor and Govern Your DevOps Tools",
      "views": 12,
@@ -2954,11 +2969,11 @@
      "avg_seconds": 55
     },
     {
-     "id": "mex5VPttcBA",
-     "title": "Webinar | DevOps Transformation Using No-Code Orchestration | Opsera",
+     "id": "PzKib1dgNoA",
+     "title": "Measuring the ROI of GitHub Copilot Adoption",
      "views": 12,
-     "minutes": 62,
-     "avg_seconds": 375
+     "minutes": 3,
+     "avg_seconds": 24
     },
     {
      "id": "MHuU8V0RYKU",
@@ -2968,11 +2983,11 @@
      "avg_seconds": 42
     },
     {
-     "id": "b7tgfJRCYD8",
-     "title": "Application Security Posture Dashboard: Complete Visibility into Your Vulnerability Landscape",
+     "id": "7HAKuKhJ5e4",
+     "title": "Webinar | DevSecOps at Workday: Shift Left Security Across Hundreds of Pipelines",
      "views": 10,
-     "minutes": 9,
-     "avg_seconds": 90
+     "minutes": 5,
+     "avg_seconds": 52
     },
     {
      "id": "EKB9DfOWJnc",
@@ -2989,11 +3004,11 @@
      "avg_seconds": 103
     },
     {
-     "id": "7HAKuKhJ5e4",
-     "title": "Webinar | DevSecOps at Workday: Shift Left Security Across Hundreds of Pipelines",
+     "id": "b7tgfJRCYD8",
+     "title": "Application Security Posture Dashboard: Complete Visibility into Your Vulnerability Landscape",
      "views": 10,
-     "minutes": 5,
-     "avg_seconds": 52
+     "minutes": 9,
+     "avg_seconds": 90
     },
     {
      "id": "-hwafWT40iw",
@@ -3001,6 +3016,13 @@
      "views": 10,
      "minutes": 7,
      "avg_seconds": 42
+    },
+    {
+     "id": "fA3HAn7QqcM",
+     "title": "Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams",
+     "views": 9,
+     "minutes": 3,
+     "avg_seconds": 25
     },
     {
      "id": "QnS-q2-Yh40",
@@ -3017,11 +3039,11 @@
      "avg_seconds": 37
     },
     {
-     "id": "fA3HAn7QqcM",
-     "title": "Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams",
+     "id": "4_ncYIcTwsA",
+     "title": "State of DevOps Reports: A Decade of DORA Measuring Software Delivery",
      "views": 9,
-     "minutes": 3,
-     "avg_seconds": 25
+     "minutes": 1,
+     "avg_seconds": 21
     },
     {
      "id": "edvSJhS5-E8",
@@ -3029,13 +3051,6 @@
      "views": 9,
      "minutes": 11,
      "avg_seconds": 76
-    },
-    {
-     "id": "4_ncYIcTwsA",
-     "title": "State of DevOps Reports: A Decade of DORA Measuring Software Delivery",
-     "views": 9,
-     "minutes": 1,
-     "avg_seconds": 21
     },
     {
      "id": "-Tn6K50Wh3Y",
@@ -3059,18 +3074,25 @@
      "avg_seconds": 38
     },
     {
-     "id": "Ae6enb26bJk",
-     "title": "Pipeline Parameters Tutorial: Centralize CI/CD Settings and Secrets in Opsera",
-     "views": 8,
-     "minutes": 14,
-     "avg_seconds": 110
-    },
-    {
      "id": "qacSDkCgs8A",
      "title": "Leading with Data to Simplify DevOps and Elevate DevEx",
      "views": 8,
      "minutes": 27,
      "avg_seconds": 204
+    },
+    {
+     "id": "hPn63stkN0w",
+     "title": "From Chaos to Clarity: Proving the Value of Copilot & GHAS with Opsera",
+     "views": 8,
+     "minutes": 3,
+     "avg_seconds": 23
+    },
+    {
+     "id": "Ae6enb26bJk",
+     "title": "Pipeline Parameters Tutorial: Centralize CI/CD Settings and Secrets in Opsera",
+     "views": 8,
+     "minutes": 14,
+     "avg_seconds": 110
     },
     {
      "id": "_eASMbspKqs",
@@ -3087,18 +3109,11 @@
      "avg_seconds": 67
     },
     {
-     "id": "hPn63stkN0w",
-     "title": "From Chaos to Clarity: Proving the Value of Copilot & GHAS with Opsera",
-     "views": 8,
-     "minutes": 3,
-     "avg_seconds": 23
-    },
-    {
-     "id": "UXjyzSOFqvU",
-     "title": "Part 2: GitHub Actions Dashboard Demo and Parallel Pipelines | Opsera",
+     "id": "FNb6LtkBVes",
+     "title": "Argo CD Demo: GitOps Deployment to Multiple Kubernetes Clusters with Opsera",
      "views": 7,
-     "minutes": 16,
-     "avg_seconds": 145
+     "minutes": 6,
+     "avg_seconds": 79
     },
     {
      "id": "obUHO7w_5c4",
@@ -3108,13 +3123,6 @@
      "avg_seconds": 62
     },
     {
-     "id": "FNb6LtkBVes",
-     "title": "Argo CD Demo: GitOps Deployment to Multiple Kubernetes Clusters with Opsera",
-     "views": 7,
-     "minutes": 6,
-     "avg_seconds": 79
-    },
-    {
      "id": "MwYBtqrqMEc",
      "title": "SOC 2 Compliance Audit in Cursor IDE with an AI Agent | Opsera",
      "views": 7,
@@ -3122,18 +3130,11 @@
      "avg_seconds": 74
     },
     {
-     "id": "GDEaYbDoD7Q",
-     "title": "Developer Investment Dashboard in Opsera: Cost, Utilization and Capitalization",
+     "id": "UXjyzSOFqvU",
+     "title": "Part 2: GitHub Actions Dashboard Demo and Parallel Pipelines | Opsera",
      "views": 7,
-     "minutes": 3,
-     "avg_seconds": 29
-    },
-    {
-     "id": "CDYyFNDEy-A",
-     "title": "GitHub Copilot Dashboard: Measure Copilot Impact Across Software Delivery",
-     "views": 7,
-     "minutes": 1,
-     "avg_seconds": 15
+     "minutes": 16,
+     "avg_seconds": 145
     },
     {
      "id": "eZKKIYsZYz8",
@@ -3143,11 +3144,25 @@
      "avg_seconds": 21
     },
     {
+     "id": "CDYyFNDEy-A",
+     "title": "GitHub Copilot Dashboard: Measure Copilot Impact Across Software Delivery",
+     "views": 7,
+     "minutes": 1,
+     "avg_seconds": 15
+    },
+    {
      "id": "5hn7Hg2krD0",
      "title": "Data Engineering DevOps: Automation Strategies for Modern Analytics (TDWI Webinar)",
      "views": 7,
      "minutes": 89,
      "avg_seconds": 764
+    },
+    {
+     "id": "GDEaYbDoD7Q",
+     "title": "Developer Investment Dashboard in Opsera: Cost, Utilization and Capitalization",
+     "views": 7,
+     "minutes": 3,
+     "avg_seconds": 29
     },
     {
      "id": "TqFgyays_Po",
@@ -3176,6 +3191,13 @@
      "views": 6,
      "minutes": 4,
      "avg_seconds": 48
+    },
+    {
+     "id": "kR5Ndq3In2Q",
+     "title": "What Is DataOps? Applying Agile and DevOps to the Data Lifecycle",
+     "views": 6,
+     "minutes": 1,
+     "avg_seconds": 24
     },
     {
      "id": "KA7HulwRFfQ",
@@ -3234,11 +3256,11 @@
      "avg_seconds": 60
     },
     {
-     "id": "ALfYdH6rSzU",
-     "title": "From AI Adoption to AI-Driven Business Outcomes: What to Measure and How to Drive Success",
+     "id": "LaZilgRTv-o",
+     "title": "Architecture Analysis in Your IDE: Tech Debt and a 90-Day Roadmap | Opsera",
      "views": 5,
-     "minutes": 0,
-     "avg_seconds": 6
+     "minutes": 9,
+     "avg_seconds": 110
     },
     {
      "id": "t3ttjoUDhus",
@@ -3248,18 +3270,11 @@
      "avg_seconds": 56
     },
     {
-     "id": "LaZilgRTv-o",
-     "title": "Architecture Analysis in Your IDE: Tech Debt and a 90-Day Roadmap | Opsera",
+     "id": "yRa3knNww-Y",
+     "title": "Android CI/CD: Automated Build, Signing and Google Play Publishing with Opsera",
      "views": 5,
-     "minutes": 9,
-     "avg_seconds": 110
-    },
-    {
-     "id": "kR5Ndq3In2Q",
-     "title": "What Is DataOps? Applying Agile and DevOps to the Data Lifecycle",
-     "views": 5,
-     "minutes": 1,
-     "avg_seconds": 24
+     "minutes": 5,
+     "avg_seconds": 107
     },
     {
      "id": "Lj7i0GkI1no",
@@ -3269,11 +3284,11 @@
      "avg_seconds": 33
     },
     {
-     "id": "yRa3knNww-Y",
-     "title": "Android CI/CD: Automated Build, Signing and Google Play Publishing with Opsera",
+     "id": "UPqjn0DvpOw",
+     "title": "Unified Insights Overview: DORA Metrics and Persona-Based DevOps Dashboards | Opsera",
      "views": 5,
-     "minutes": 5,
-     "avg_seconds": 107
+     "minutes": 7,
+     "avg_seconds": 93
     },
     {
      "id": "cCLbQxasOg8",
@@ -3290,18 +3305,11 @@
      "avg_seconds": 100
     },
     {
-     "id": "UPqjn0DvpOw",
-     "title": "Unified Insights Overview: DORA Metrics and Persona-Based DevOps Dashboards | Opsera",
-     "views": 5,
-     "minutes": 7,
-     "avg_seconds": 93
-    },
-    {
-     "id": "fYNJYH7NInw",
-     "title": "DevSecOps and the AWS Shared Responsibility Model",
+     "id": "ALfYdH6rSzU",
+     "title": "From AI Adoption to AI-Driven Business Outcomes: What to Measure and How to Drive Success",
      "views": 5,
      "minutes": 0,
-     "avg_seconds": 8
+     "avg_seconds": 6
     },
     {
      "id": "9COHeEfD5Lc",
@@ -3318,11 +3326,11 @@
      "avg_seconds": 50
     },
     {
-     "id": "kPP8ym_krmE",
-     "title": "AI Architecture Review of a React Codebase: Find Tech Debt | Opsera",
-     "views": 4,
-     "minutes": 6,
-     "avg_seconds": 102
+     "id": "fYNJYH7NInw",
+     "title": "DevSecOps and the AWS Shared Responsibility Model",
+     "views": 5,
+     "minutes": 0,
+     "avg_seconds": 8
     },
     {
      "id": "jj8wjW9yZcc",
@@ -3388,6 +3396,13 @@
      "avg_seconds": 12
     },
     {
+     "id": "QhW0Hv6XyIs",
+     "title": "SnapLogic DevOps Pipeline in Opsera: Approval Gate and SonarQube Quality Gates",
+     "views": 4,
+     "minutes": 2,
+     "avg_seconds": 37
+    },
+    {
      "id": "AOOjFB6X1z4",
      "title": "Webinar | Salesforce DevOps Automation: Keys to Productivity and Compliance | Opsera",
      "views": 4,
@@ -3402,11 +3417,11 @@
      "avg_seconds": 126
     },
     {
-     "id": "QhW0Hv6XyIs",
-     "title": "SnapLogic DevOps Pipeline in Opsera: Approval Gate and SonarQube Quality Gates",
+     "id": "kPP8ym_krmE",
+     "title": "AI Architecture Review of a React Codebase: Find Tech Debt | Opsera",
      "views": 4,
-     "minutes": 2,
-     "avg_seconds": 37
+     "minutes": 6,
+     "avg_seconds": 102
     },
     {
      "id": "xeXV3wppqxo",
@@ -3414,6 +3429,13 @@
      "views": 3,
      "minutes": 3,
      "avg_seconds": 70
+    },
+    {
+     "id": "Stg2KCB6yKc",
+     "title": "DevOps Huddle EP15: Secret Scanning with GitCustodian for DevSecOps | Opsera",
+     "views": 3,
+     "minutes": 2,
+     "avg_seconds": 48
     },
     {
      "id": "Wn303Yojtrs",
@@ -3430,13 +3452,6 @@
      "avg_seconds": 22
     },
     {
-     "id": "Stg2KCB6yKc",
-     "title": "DevOps Huddle EP15: Secret Scanning with GitCustodian for DevSecOps | Opsera",
-     "views": 3,
-     "minutes": 2,
-     "avg_seconds": 48
-    },
-    {
      "id": "iqaBbpqz0wo",
      "title": "Compliance Audit for SOC 2, HIPAA, PCI DSS and ISO 27001 in Your IDE | Opsera",
      "views": 3,
@@ -3449,6 +3464,13 @@
      "views": 3,
      "minutes": 5,
      "avg_seconds": 168
+    },
+    {
+     "id": "5yQD0TNV6C8",
+     "title": "Digital Transformation Leadership: Phased Rollouts and Executive Buy-In",
+     "views": 3,
+     "minutes": 0,
+     "avg_seconds": 5
     },
     {
      "id": "9OsdbjYdDUw",
@@ -3465,13 +3487,6 @@
      "avg_seconds": 41
     },
     {
-     "id": "Nj4EZtMkd80",
-     "title": "Webinar | Digital Transformation Strategy After COVID-19: Workforce Elasticity | Opsera",
-     "views": 3,
-     "minutes": 2,
-     "avg_seconds": 46
-    },
-    {
      "id": "Hwc9ffq3-Jo",
      "title": "AI in DevOps: Build, Customize and Fix Pipeline Workflows with Hummingbird AI",
      "views": 3,
@@ -3484,6 +3499,13 @@
      "views": 3,
      "minutes": 3,
      "avg_seconds": 226
+    },
+    {
+     "id": "Nj4EZtMkd80",
+     "title": "Webinar | Digital Transformation Strategy After COVID-19: Workforce Elasticity | Opsera",
+     "views": 3,
+     "minutes": 2,
+     "avg_seconds": 46
     },
     {
      "id": "smdDnACHAiQ",
@@ -3519,6 +3541,13 @@
      "views": 3,
      "minutes": 27,
      "avg_seconds": 541
+    },
+    {
+     "id": "hyfxLvJOWio",
+     "title": "GitHub Copilot Usage Metrics: Adoption, Acceptance Rates and ROI in the Contribution Report",
+     "views": 3,
+     "minutes": 0,
+     "avg_seconds": 0
     },
     {
      "id": "tPsOcmAxhm8",
@@ -3605,13 +3634,6 @@
      "avg_seconds": 186
     },
     {
-     "id": "5yQD0TNV6C8",
-     "title": "Digital Transformation Leadership: Phased Rollouts and Executive Buy-In",
-     "views": 2,
-     "minutes": 0,
-     "avg_seconds": 7
-    },
-    {
      "id": "5iqf-lsURlY",
      "title": "Measuring Developer Productivity and Code Quality with Opsera",
      "views": 2,
@@ -3661,18 +3683,18 @@
      "avg_seconds": 22
     },
     {
-     "id": "S0KTo3VSwd0",
-     "title": "Webinar | DORA Metrics: Improve DevOps Performance with the Four Key Metrics | Opsera",
-     "views": 2,
-     "minutes": 10,
-     "avg_seconds": 322
-    },
-    {
      "id": "2sZgKmNbOjY",
      "title": "DORA 2024 Uncovered: AI in Delivery Performance",
      "views": 2,
      "minutes": 0,
      "avg_seconds": 19
+    },
+    {
+     "id": "S0KTo3VSwd0",
+     "title": "Webinar | DORA Metrics: Improve DevOps Performance with the Four Key Metrics | Opsera",
+     "views": 2,
+     "minutes": 10,
+     "avg_seconds": 322
     },
     {
      "id": "j3pIaqi9pFw",
@@ -3836,13 +3858,6 @@
      "avg_seconds": 26
     },
     {
-     "id": "D0yfcBelXBw",
-     "title": "How Cisco Rolled Out GitHub Copilot Globally Using Workday Org Data",
-     "views": 1,
-     "minutes": 0,
-     "avg_seconds": 42
-    },
-    {
      "id": "SKeKELa7sZk",
      "title": "Tool Sprawl at Honeywell: Too Many Tools, Teams Not Aligned (Webinar Clip)",
      "views": 1,
@@ -3850,11 +3865,11 @@
      "avg_seconds": 7
     },
     {
-     "id": "1oixmD7z-tU",
-     "title": "Webinar | DevOps Lifecycle: Optimize Every Stage with a DevOps Platform | Opsera",
+     "id": "D0yfcBelXBw",
+     "title": "How Cisco Rolled Out GitHub Copilot Globally Using Workday Org Data",
      "views": 1,
-     "minutes": 1,
-     "avg_seconds": 66
+     "minutes": 0,
+     "avg_seconds": 42
     },
     {
      "id": "DN3pqXsKrvM",
@@ -3862,6 +3877,13 @@
      "views": 1,
      "minutes": 0,
      "avg_seconds": 13
+    },
+    {
+     "id": "1oixmD7z-tU",
+     "title": "Webinar | DevOps Lifecycle: Optimize Every Stage with a DevOps Platform | Opsera",
+     "views": 1,
+     "minutes": 1,
+     "avg_seconds": 66
     },
     {
      "id": "grczH4Crbbo",
@@ -3876,13 +3898,6 @@
      "views": 1,
      "minutes": 6,
      "avg_seconds": 367
-    },
-    {
-     "id": "hyfxLvJOWio",
-     "title": "GitHub Copilot Usage Metrics: Adoption, Acceptance Rates and ROI in the Contribution Report",
-     "views": 1,
-     "minutes": 0,
-     "avg_seconds": 0
     },
     {
      "id": "stur2ja5dY4",
@@ -3928,17 +3943,17 @@
     }
    ],
    "videos_listed": {
-    "views": 2669,
+    "views": 2674,
     "minutes": 3719
    },
    "sources": [
     {
      "source": "YouTube search",
-     "views": 1054
+     "views": 1058
     },
     {
      "source": "Google",
-     "views": 383
+     "views": 384
     },
     {
      "source": "Direct or unknown",

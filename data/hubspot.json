@@ -1,8 +1,8 @@
 {
  "source": "HubSpot",
  "start_date": "2026-04-01",
- "end_date": "2026-10-24",
- "pulled_at": "2026-10-26T08:36+05:30",
+ "end_date": "2026-10-26",
+ "pulled_at": "2026-10-27T15:18+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -2243,6 +2243,13 @@
    "channel": "direct",
    "demo": false,
    "count": 1
+  },
+  {
+   "date": "2026-10-26",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
   }
  ],
  "ai_contacts_daily": [
@@ -2341,11 +2348,11 @@
    12
   ],
   [
-   "AI Budget Burning? How to Convert AI Spend Into Tangible Business Results - Opsera: DG-FY27-Q2-MQ-Roundtable",
-   10
+   "Book a demo \u2014 Opsera: Handraiser | Demo Request",
+   11
   ],
   [
-   "Book a demo \u2014 Opsera: Handraiser | Demo Request",
+   "AI Budget Burning? How to Convert AI Spend Into Tangible Business Results - Opsera: DG-FY27-Q2-MQ-Roundtable",
    10
   ],
   [
@@ -2960,7 +2967,7 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 808,
+ "meetings_all_calendar": 810,
  "deals_weekly": [
   {
    "start": "2026-04-27",
@@ -3065,7 +3072,7 @@
   },
   {
    "start": "2026-10-01",
-   "end": "2026-10-24",
+   "end": "2026-10-26",
    "channel": "search",
    "demo": true,
    "tool": null,
@@ -3077,8 +3084,8 @@
  ],
  "deals_quarters": [
   {
-   "start": "2026-07-25",
-   "end": "2026-10-24",
+   "start": "2026-07-27",
+   "end": "2026-10-26",
    "channel": "direct",
    "demo": true,
    "tool": null,
@@ -3088,8 +3095,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-07-25",
-   "end": "2026-10-24",
+   "start": "2026-07-27",
+   "end": "2026-10-26",
    "channel": "search",
    "demo": true,
    "tool": null,
@@ -3099,8 +3106,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-25",
-   "end": "2026-07-24",
+   "start": "2026-04-27",
+   "end": "2026-07-26",
    "channel": "direct",
    "demo": true,
    "tool": null,
@@ -3110,8 +3117,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-25",
-   "end": "2026-07-24",
+   "start": "2026-04-27",
+   "end": "2026-07-26",
    "channel": "search",
    "demo": false,
    "tool": null,
@@ -3121,8 +3128,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-04-25",
-   "end": "2026-07-24",
+   "start": "2026-04-27",
+   "end": "2026-07-26",
    "channel": "other",
    "demo": true,
    "tool": null,
@@ -3255,7 +3262,7 @@
    "start": null,
    "contactFirstTouch": 4,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 623,
+   "influencedContacts": 651,
    "influencedContacts_also_flutter_guests": 10
   },
   {
@@ -3271,7 +3278,7 @@
    "start": null,
    "contactFirstTouch": 0,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 1881,
+   "influencedContacts": 1882,
    "influencedContacts_also_flutter_guests": 27
   },
   {
