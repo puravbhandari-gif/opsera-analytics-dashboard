@@ -1294,6 +1294,164 @@ function renderInfrasity(monthly) {
   }));
 }
 
+// ---------- Look up: one page or campaign, its numbers for the period above ----------
+
+let lookupLoad = null;   // data/lookup.json is loaded the first time the tab is opened
+function openLookup() {
+  if (!lookupLoad) lookupLoad = load("lookup.json").then(renderLookup)
+    .catch((err) => { $("lookup-status").textContent = `Couldn't load the look up numbers: ${err.message}`; });
+  return lookupLoad;
+}
+
+function renderLookup(d) {
+  const gaLast = lastFullDayPacific(d.end_date, d.pulled_at);
+  const idx = (date) => Math.round((toDate(date) - toDate(d.start_date)) / 864e5);
+  const isAsset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
+  const plain = (t) => t.toLowerCase().replace(/[^a-z0-9]+/g, " ");
+  const noSite = (q) => q.trim().replace(/^https?:\/\/(www\.)?opsera\.ai/i, "");
+  // all-time visits, so the busiest page or campaign comes first among matches
+  const pageSize = new Array(d.pages.length).fill(0), campSize = new Array(d.campaigns.length).fill(0);
+  d.visits.forEach((r) => { pageSize[r[1]] += r[3]; });
+  d.campaign_visits.forEach((r) => { campSize[r[1]] += r[3]; });
+  const pageText = d.pages.map((p, i) => plain(`${p} ${d.titles[i]}`));
+  const campText = d.campaigns.map(plain);
+  let matches = [], chosen = null;
+
+  const find = (q) => {
+    const words = plain(noSite(q)).split(" ").filter(Boolean);
+    if (!words.length) return [];
+    const path = noSite(q).split("?")[0].replace(/(.)\/$/, "$1");
+    const all = (text) => words.every((w) => text.includes(w));
+    const pages = d.pages.map((p, i) => ({ kind: "page", i, exact: p === path, size: pageSize[i] })).filter((m) => m.exact || all(pageText[m.i]));
+    const camps = d.campaigns.map((c, i) => ({ kind: "campaign", i, exact: c.toLowerCase() === q.trim().toLowerCase(), size: campSize[i] }))
+      .filter((m) => m.exact || all(campText[m.i]));
+    return [...pages, ...camps].sort((a, b) => b.exact - a.exact || b.size - a.size);
+  };
+  const name = (m) => (m.kind === "page" ? d.pages[m.i] : d.campaigns[m.i]);
+
+  const show = () => {
+    $("lookup-result").hidden = !chosen;
+    if (!chosen) return;
+    if (chosen.kind === "all") return showAll(chosen.list);
+    $("lookup-from-panel").hidden = false; $("lookup-each-panel").hidden = true;
+    const m = chosen, page = m.kind === "page";
+    const p = periodsFor(periodMode, d.start_date, gaLast);
+    const cur = p.cur || { start: d.start_date, end: gaLast };
+    const g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
+    const gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
+    const within = (per) => (r) => per && r[0] >= idx(per.start) && r[0] <= idx(per.end);
+    const total = (rows, col, per) => rows.filter(within(per)).reduce((t, r) => t + r[col], 0);
+    const visits = (page ? d.visits : d.campaign_visits).filter((r) => r[1] === m.i);
+    const forms = d.forms.filter((r) => (page ? r[1] === m.i : r[2] === m.i));
+    const downloads = forms.filter((r) => isAsset(d.pages[r[1]]));
+    const tile = (label, rows, col, sub, per = p) => {
+      const now = total(rows, col, per.cur || cur), before = per.prev ? total(rows, col, per.prev) : null;
+      return card(label, num(now), [per.prev ? `${per.prevName}: ${num(before)}` : "", sub].filter(Boolean).join(". "), cmpDelta(now, before));
+    };
+
+    $("lookup-title").textContent = name(m);
+    $("lookup-subtitle").textContent = page ? (d.titles[m.i] || "Page on opsera.ai") : "Campaign (utm_campaign in Google Analytics)";
+    $("lookup-cards").innerHTML =
+      tile("Visits", visits, 3, page ? "Landed on this page" : "From this campaign") +
+      tile("Engaged visits", visits, 4) +
+      (page && isAsset(d.pages[m.i]) ? tile("Downloads", forms, 3, "Form fills on this asset page")
+        : tile("Form fills", forms, 3) + (page ? "" : tile("Downloads", downloads, 3, "On report, white paper, ebook and guide pages"))) +
+      (page ? tile("Google clicks", d.gsc.filter((r) => r[1] === m.i), 2, `Times shown: ${num(total(d.gsc.filter((r) => r[1] === m.i), 3, gcur))}`, g) : "");
+    $("lookup-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).` +
+      (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
+    $("lookup-gsc-source").textContent = page ? `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.` +
+      (g.prev ? ` Compared with ${range(g.prev.start, g.prev.end)}.` : "") : "Google clicks are counted by page, so campaigns don't have them.";
+
+    const from = {};
+    visits.filter(within(cur)).forEach((r) => {
+      const key = page ? channelName(d.channels[r[2]]) : d.sources[r[2]];
+      const row = from[key] || (from[key] = { name: key, visits: 0, engaged: 0 });
+      row.visits += r[3]; row.engaged += r[4];
+    });
+    const rows = Object.values(from);
+    if (rows.length) {
+      table($("lookup-from"), { rows, sortKey: "visits", pageSize: 15, columns: [
+        { key: "name", label: page ? "Came from" : "Source / type" },
+        { key: "visits", label: "Visits", num: true, fmt: num },
+        { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      ] });
+    } else {
+      $("lookup-from").innerHTML = `<p class="muted">No visits in this period.</p>`;
+    }
+    $("lookup-from-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).`;
+  };
+
+  // All matches: every matching page and campaign added up, each visit and form fill counted once
+  const showAll = (list) => {
+    $("lookup-from-panel").hidden = true; $("lookup-each-panel").hidden = false;
+    const pageSet = new Set(list.filter((m) => m.kind === "page").map((m) => m.i));
+    const campSet = new Set(list.filter((m) => m.kind === "campaign").map((m) => m.i));
+    const p = periodsFor(periodMode, d.start_date, gaLast);
+    const cur = p.cur || { start: d.start_date, end: gaLast };
+    const g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
+    const gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
+    const sum = (rows, keep, col, per) => (per ? rows.reduce((t, r) => (r[0] >= idx(per.start) && r[0] <= idx(per.end) && keep(r) ? t + r[col] : t), 0) : null);
+    const visitsIn = (col) => (per) => sum(d.visits, (r) => pageSet.has(r[1]), col, per) + sum(d.campaign_visits, (r) => campSet.has(r[1]), col, per)
+      - sum(d.page_campaign_visits, (r) => pageSet.has(r[1]) && campSet.has(r[2]), col, per);
+    const formHit = (r) => pageSet.has(r[1]) || campSet.has(r[2]);
+    const formsIn = (per) => sum(d.forms, formHit, 3, per);
+    const downloadsIn = (per) => sum(d.forms, (r) => formHit(r) && isAsset(d.pages[r[1]]), 3, per);
+    const clicksIn = (per) => sum(d.gsc, (r) => pageSet.has(r[1]), 2, per);
+    const tile = (label, value, sub, per = p) => {
+      const now = value(per.cur || (per === g ? gcur : cur)), before = per.prev ? value(per.prev) : null;
+      return card(label, num(now), [per.prev ? `${per.prevName}: ${num(before)}` : "", sub].filter(Boolean).join(". "), cmpDelta(now, before));
+    };
+    $("lookup-title").textContent = `All matches for "${$("lookup-q").value.trim()}"`;
+    $("lookup-subtitle").textContent = `${num(pageSet.size)} page${pageSet.size === 1 ? "" : "s"} and ${num(campSet.size)} campaign${campSet.size === 1 ? "" : "s"}, added up`;
+    $("lookup-cards").innerHTML = tile("Visits", visitsIn(3), "Each visit counted once") + tile("Engaged visits", visitsIn(4)) +
+      tile("Form fills", formsIn) + tile("Downloads", downloadsIn, "On report, white paper, ebook and guide pages") +
+      (pageSet.size ? tile("Google clicks", clicksIn, "Matching pages only", g) : "");
+    $("lookup-source").textContent = `Source: Google Analytics, ${range(cur.start, cur.end)} (Pacific time).` +
+      (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
+    $("lookup-gsc-source").textContent = pageSet.size ? `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.` +
+      (g.prev ? ` Compared with ${range(g.prev.start, g.prev.end)}.` : "") : "";
+    const one = (m) => {
+      const pg = m.kind === "page", only = (r) => r[1] === m.i;
+      return { name: `${pg ? "Page" : "Campaign"}: ${name(m)}`,
+        visits: sum(pg ? d.visits : d.campaign_visits, only, 3, cur), engaged: sum(pg ? d.visits : d.campaign_visits, only, 4, cur),
+        forms: sum(d.forms, (r) => (pg ? r[1] : r[2]) === m.i, 3, cur), clicks: pg ? sum(d.gsc, only, 2, gcur) : null };
+    };
+    table($("lookup-each"), { rows: list.map(one), search: "matches", sortKey: "visits", pageSize: 15, columns: [
+      { key: "name", label: "Match", search: true },
+      { key: "visits", label: "Visits", num: true, fmt: num },
+      { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "forms", label: "Form fills", num: true, fmt: num },
+      { key: "clicks", label: "Google clicks", num: true, fmt: num },
+    ] });
+    $("lookup-each-source").textContent = `Sources: Google Analytics, ${range(cur.start, cur.end)} (Pacific time), and Search Console for Google clicks, ${range(gcur.start, gcur.end)}.`;
+  };
+
+  const search = () => {
+    const q = $("lookup-q").value;
+    matches = find(q);
+    // "All matches" comes first, and is picked unless the search names one page or campaign exactly
+    const options = matches.length > 1 ? [{ kind: "all", list: matches }, ...matches.slice(0, 8)] : matches;
+    const pick = matches.length > 1 && !matches[0].exact ? 0 : options.indexOf(matches[0]);
+    chosen = options[pick] || null;
+    matches = options;
+    $("lookup-matches").innerHTML = options.length > 1 ? options.map((m, i) =>
+      `<button data-i="${i}" class="${i === pick ? "on" : ""}">${m.kind === "all" ? `All matches (${num(m.list.length)})`
+        : `${m.kind === "page" ? "Page" : "Campaign"}: ${esc(name(m))}`}</button>`).join("") : "";
+    $("lookup-status").textContent = !q.trim() ? "Type above to look something up." : matches.length ? "" : `No data for "${q.trim()}".`;
+    show();
+  };
+  let wait;
+  $("lookup-q").addEventListener("input", () => { clearTimeout(wait); wait = setTimeout(search, 150); });
+  $("lookup-matches").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    chosen = matches[Number(b.dataset.i)];
+    $("lookup-matches").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    show();
+  });
+  monthlyTabs.push(show);
+  search();
+}
+
 // ---------- Tab 6: To do ----------
 
 const TODO = [
@@ -1328,6 +1486,7 @@ function showTab(name) {
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
+  if (name === "lookup") openLookup();
 }
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {

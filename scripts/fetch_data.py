@@ -10,7 +10,7 @@ import re
 import os
 import sys
 from pathlib import Path
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
@@ -451,9 +451,86 @@ def fetch_ga(s, end):
     }, leads(form_rows)
 
 
-def write(name, payload, meta):
+# ---------- Look up tab: one page or campaign at a time ----------
+
+# Form fills on these pages are downloads of a report, white paper, ebook or comparison guide.
+ASSET_PAGES = ("/resources/report/", "/resources/white-papers/", "/resources/ebooks/", "/resources/comparison-guides/")
+NOT_CAMPAIGNS = {"(direct)", "(organic)", "(referral)", "(not set)", "(none)", ""}
+
+
+def not_campaign(name):
+    """Google's own placeholders, such as "(organic)", aren't campaigns. Names with "@" are left out (the page is public)."""
+    return name in NOT_CAMPAIGNS or (name.startswith("(") and name.endswith(")")) or "@" in name
+
+
+def lookup(s, end, gsc_site):
+    """Daily numbers by page and by campaign, packed small (the tab loads them only when opened).
+    Each row starts with the day number counted from START_DATE. Sources are never added together."""
+    start = dt.date.fromisoformat(START_DATE)
+    day = lambda d: (dt.date.fromisoformat(d) - start).days
+    index = lambda table, key: table.setdefault(key, len(table))
+    pages, channels, campaigns, sources = {}, {}, {}, {}
+
+    def page_of(path):
+        return path if path == "(not set)" else page_key(path)
+
+    visits = {}
+    for r in ga_report(s, end, ["date", "landingPage", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"]):
+        k = (day(r["date"]), index(pages, page_of(r["landingPage"])), index(channels, r["sessionDefaultChannelGroup"]))
+        v = visits.setdefault(k, [0, 0])
+        v[0] += r["sessions"]; v[1] += r["engagedSessions"]
+    camp_visits = {}
+    for r in ga_report(s, end, ["date", "sessionCampaignName", "sessionSource", "sessionMedium"], ["sessions", "engagedSessions"]):
+        name = r["sessionCampaignName"]
+        if not_campaign(name):
+            continue
+        k = (day(r["date"]), index(campaigns, name), index(sources, f"{r['sessionSource']} / {r['sessionMedium']}"))
+        v = camp_visits.setdefault(k, [0, 0])
+        v[0] += r["sessions"]; v[1] += r["engagedSessions"]
+    # visits that landed on a page from a campaign, so "All matches" can count each visit once
+    both = {}
+    for r in ga_report(s, end, ["date", "landingPage", "sessionCampaignName"], ["sessions", "engagedSessions"]):
+        if not_campaign(r["sessionCampaignName"]):
+            continue
+        k = (day(r["date"]), index(pages, page_of(r["landingPage"])), index(campaigns, r["sessionCampaignName"]))
+        v = both.setdefault(k, [0, 0])
+        v[0] += r["sessions"]; v[1] += r["engagedSessions"]
+    forms = {}
+    for r in ga_report(s, end, ["date", "pagePath", "sessionCampaignName"], ["eventCount"], event_names=[FORM_EVENT], start=LEADS_START):
+        page = page_key(r["pagePath"])
+        if page.startswith(LEFT_OUT_PAGES):
+            continue   # job applications aren't sales leads, the same as the Leads tab
+        name = r["sessionCampaignName"]
+        camp = -1 if not_campaign(name) else index(campaigns, name)
+        k = (day(r["date"]), index(pages, page), camp)
+        forms[k] = forms.get(k, 0) + r["eventCount"]
+    gsc = {}
+    for r in gsc_query(s, gsc_site, START_DATE, end, ["date", "page"]):
+        k = (day(r["keys"][0]), index(pages, page_key(urlparse(r["keys"][1]).path or "/")))
+        v = gsc.setdefault(k, [0, 0])
+        v[0] += r["clicks"]; v[1] += r["impressions"]
+    best = {}
+    for r in ga_report(s, end, ["pagePath", "pageTitle"], ["screenPageViews"]):
+        key = page_key(r["pagePath"])
+        if key in pages and r["screenPageViews"] > best.get(key, ("", -1))[1]:
+            best[key] = (r["pageTitle"], r["screenPageViews"])
+    order = lambda t: [k for k, _ in sorted(t.items(), key=lambda x: x[1])]
+    return {
+        "source": f"Google Analytics 4, {GA_PROPERTY_NAME}, and Google Search Console, {gsc_site}",
+        "pages": order(pages), "titles": [best.get(p, ("", 0))[0] for p in order(pages)],
+        "channels": order(channels), "campaigns": order(campaigns), "sources": order(sources),
+        "asset_pages": list(ASSET_PAGES),
+        "visits": [[*k, *v] for k, v in sorted(visits.items())],
+        "campaign_visits": [[*k, *v] for k, v in sorted(camp_visits.items())],
+        "page_campaign_visits": [[*k, *v] for k, v in sorted(both.items())],
+        "forms": [[*k, v] for k, v in sorted(forms.items())],
+        "gsc": [[*k, *v] for k, v in sorted(gsc.items())],
+    }
+
+
+def write(name, payload, meta, compact=False):
     DATA_DIR.mkdir(exist_ok=True)
-    (DATA_DIR / name).write_text(json.dumps({**meta, **payload}, indent=1))
+    (DATA_DIR / name).write_text(json.dumps({**meta, **payload}, **({"separators": (",", ":")} if compact else {"indent": 1})))
 
 
 def main():
@@ -467,6 +544,8 @@ def main():
     write("analytics.json", ga, meta)
     write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data},
           {**meta, "start_date": LEADS_START})
+    look = lookup(s, end, gsc["source"].split(", ", 1)[1])
+    write("lookup.json", {**look, "gsc_last_day": gsc["last_day_with_data"]}, meta, compact=True)
 
     print(f"\nRange asked for: {START_DATE} to {end}")
     print(f"Search Console: last day with data {gsc['last_day_with_data']}, "

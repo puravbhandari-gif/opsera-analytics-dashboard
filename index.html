@@ -45,6 +45,7 @@
     <button role="tab" data-tab="youtube">YouTube</button>
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
+    <button role="tab" data-tab="lookup">Look up</button>
     <button role="tab" data-tab="todo">To do</button>
   </nav>
 </header>
@@ -654,6 +655,39 @@
   </section>
 
   <!-- To do -->
+  <section id="tab-lookup" class="tab" role="tabpanel" hidden>
+    <h2>Look up</h2>
+    <p class="lead">Type a page address, campaign name or asset name to see its numbers for the period above.</p>
+    <div class="table-tools">
+      <input type="search" id="lookup-q" placeholder="For example /pricing, benchmark report or Flutter" aria-label="Page address, campaign name or asset name" autocomplete="off">
+    </div>
+    <div class="seg" id="lookup-matches" role="group" aria-label="Matches"></div>
+    <p class="muted" id="lookup-status">Loading...</p>
+    <div id="lookup-result" hidden>
+      <h3 id="lookup-title"></h3>
+      <p class="muted" id="lookup-subtitle"></p>
+      <div class="cards" id="lookup-cards"></div>
+      <p class="source" id="lookup-source"></p>
+      <p class="source" id="lookup-gsc-source"></p>
+      <div class="panel" id="lookup-from-panel">
+        <h3>Where visits came from</h3>
+        <div id="lookup-from"></div>
+        <p class="source" id="lookup-from-source"></p>
+      </div>
+      <div class="panel" id="lookup-each-panel" hidden>
+        <h3>Each match</h3>
+        <div id="lookup-each"></div>
+        <p class="source" id="lookup-each-source"></p>
+        <p class="note">A visit that landed on a matching page from a matching campaign shows on both rows, so rows can add up to more than the total. The total counts it once.</p>
+      </div>
+    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Visits count people who landed on the page from outside the site, so a page people reach by clicking around shows few visits. Downloads are form fills on a report, white paper, ebook or comparison guide page. Google clicks are counted by page, so campaigns don't have them. Job application forms are left out, the same as on the Leads tab.</p>
+      <p class="note">Search Console counts Google clicks day by day here, which can come out up to about 1% above the page totals on the Google search tab.</p>
+    </details>
+  </section>
+
   <section id="tab-todo" class="tab" role="tabpanel" hidden>
     <h2>To do</h2>
     <p class="lead">Next steps for the website and marketing. Tick them off as you go.</p>
@@ -672,6 +706,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=36"></script>
+<script src="app.js?v=38"></script>
 </body>
 </html>
