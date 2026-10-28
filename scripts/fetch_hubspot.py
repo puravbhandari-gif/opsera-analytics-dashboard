@@ -47,10 +47,11 @@ EVENT_ROWS = [
     ("ai_adoption", "Copilot, Cursor, Claude Code: what 250k developers revealed", "Webinar", "2026-04-29", "2026-04-29",
      ["DG-FY27-Q1-AI-Adoption-Webinar"], [], ["/events/copilot-cursor-claude-code-what-250k-developers-revealed"],
      "Sign-ups include people who asked for the recording"),
-    ("mq_roundtable", "Gartner Magic Quadrant roundtable", "Roundtable", None, None, ["DG-FY27-Q2-MQ-Roundtable"], [], [], "Event date not known"),
-    ("ai_budget", "AI budget burning: turning AI spend into business results", "Webinar", "2026-06-25", "2026-06-25", [], [],
+    # The AI budget webinar on 25 Jun was the online Gartner Magic Quadrant roundtable (confirmed by Purav, 28 Oct 2026)
+    ("mq_roundtable", "AI budget burning: Gartner Magic Quadrant roundtable", "Webinar", "2026-06-25", "2026-06-25",
+     ["DG-FY27-Q2-MQ-Roundtable"], [],
      ["/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
-      "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results"], "No HubSpot sign-up list"),
+      "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results"], "Online executive roundtable"),
     ("tokenomics", "Tokenomics: the currency of enterprise AI", "Webinar", "2026-09-15", "2026-09-15",
      ["DG-FY27-Q3-Tokenomics-Webinar"], [], ["/events/tokenomics-the-currency-of-enterprise-ai"], "Sign-ups may overlap with the event page form"),
     ("flutter", "Flutter 2026: the AI-SDLC Summit", "Event", "2026-10-01", "2026-10-01",
@@ -172,6 +173,7 @@ def marketing_emails(s, since):
 # line (what recipients saw); lists show only a plain label and the number of people. Target-account
 # emails and lists, and HubSpot's automatic lists, are left out entirely, so a company name can't be probed.
 TARGET_ACCOUNTS = re.compile(r"\b(abm|abx|microsite)\b", re.I)
+LEFT_OUT_CAMPAIGN = re.compile(r"^(\d+-)?ET-|^[a-z0-9-]+\.[a-z]{2,}$", re.I)   # sales outreach codes and spam sites (agreed 28 Oct 2026)
 AUTOMATIC_LISTS = re.compile(r"^\s*(\[abm\]|abm\b|abx\b|\[email\]|\[workflows\]|\[ads\]|target\b)", re.I)
 
 
@@ -516,7 +518,7 @@ def main():
     # Campaigns tab: each email's HubSpot campaign, and the campaign each marketing deal's person first came in on
     # (their first link tag in HubSpot, else HubSpot's first-touch campaign). Target-account campaigns are left out.
     campaign_names = {c["id"]: (c.get("properties") or {}).get("hs_name") or "" for c in all_campaigns}
-    public = lambda n: n if n and not TARGET_ACCOUNTS.search(n) else ""
+    public = lambda n: n if n and not TARGET_ACCOUNTS.search(n) and not LEFT_OUT_CAMPAIGN.search(n) else ""
     emails = marketing_emails(s, START_DATE)
     for e in emails["rows"]:
         e["campaign"] = public(campaign_names.get(e["campaign_id"], ""))
