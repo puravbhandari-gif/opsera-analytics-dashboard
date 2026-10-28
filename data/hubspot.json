@@ -3314,5 +3314,57 @@
    "influencedContacts_also_flutter_guests": 0
   }
  ],
- "campaigns_checked": 244
+ "campaigns_checked": 244,
+ "deal_lines": [
+  {
+   "month": "2026-04",
+   "amount": 100000,
+   "status": "Open",
+   "stage": "2 Demo",
+   "came_from": "Direct",
+   "first_page": "/",
+   "first_form": "Schedule a Demo",
+   "product": "BrickForge"
+  },
+  {
+   "month": "2026-05",
+   "amount": 150000,
+   "status": "Open",
+   "stage": "2 Demo",
+   "came_from": "Google search",
+   "first_page": "/resources/comparison-guides/opsera-vs-copado",
+   "first_form": "Contact",
+   "product": "Forge, Platform, Agents"
+  },
+  {
+   "month": "2026-06",
+   "amount": 150000,
+   "status": "Open",
+   "stage": "2 Demo",
+   "came_from": "Other websites",
+   "first_page": "www.opsera.io/demo",
+   "first_form": "Schedule a Demo",
+   "product": "Forge, Unified Insights"
+  },
+  {
+   "month": "2026-08",
+   "amount": 150000,
+   "status": "Open",
+   "stage": "3 POC",
+   "came_from": "Direct",
+   "first_page": "/",
+   "first_form": "Schedule a Demo",
+   "product": "Copilot"
+  },
+  {
+   "month": "2026-10",
+   "amount": 150000,
+   "status": "Open",
+   "stage": "3 POC",
+   "came_from": "Google search",
+   "first_page": "/newsroom/opsera-releases-native-ci-cd-automation-for-salesforce-2",
+   "first_form": "Book a demo",
+   "product": "Salesforce DevOps"
+  }
+ ]
 }

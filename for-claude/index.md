@@ -12,7 +12,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - "Visits" are Google Analytics sessions. "Engaged visits" are visits where someone stayed 10+ seconds, saw 2+ pages or filled a form. They leave out most email robots.
 - Form fills count the HubSpot form event in Google Analytics. We leave out job application forms everywhere.
 - Asset downloads are form fills on pages under /resources/report/, /resources/white-papers/, /resources/ebooks/ or /resources/comparison-guides/. They're part of "other forms".
-- Deals exist only as weekly and monthly totals, without Closed Lost deals. There are no single deals and no daily deal numbers.
+- Deals exist as weekly and monthly totals, and as 1 line per marketing deal in deals_one_line_each.csv, without company or person names. Closed Lost deals stay out, and there are no daily deal numbers.
 - When the dashboard compares periods, it compares the last full week with the week before, or this month so far with the whole of last month.
 - A page in the page files is its address on opsera.ai, so `/pricing` is https://opsera.ai/pricing. Page titles are in the page_titles files.
 - We split page and page title files by part of the site: blog, resources, knowledge base and other. Big ones also split by quarter, month or week, as the file name says.
@@ -36,6 +36,7 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 - [customer_journey_funnel_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/customer_journey_funnel_by_week.csv): The funnel for each channel, by week. Sources: Search Console for the 2 Google columns, Google Analytics from visits to demo form, HubSpot from contacts to deals. 278 rows.
 - [customer_journey_summary_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/customer_journey_summary_by_month.csv): Customer journey tab, top numbers, by month. Sources: Google Analytics (demo requests), HubSpot (meetings and deals). 7 rows.
 - [customer_journey_summary_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/customer_journey_summary_by_week.csv): Customer journey tab, top numbers, by week. Sources: Google Analytics (demo requests), HubSpot (meetings and deals). 31 rows.
+- [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name. 5 rows.
 
 ## Website visits tab
 

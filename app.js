@@ -930,6 +930,25 @@ function renderJourney(ga, leads, hub, gsc) {
     card("Closed lost", num(hub.deals_lost.count), "Not counted") +
     card("Older deals for these contacts", num(hub.existing_deals.count), `${money(hub.existing_deals.amount)}, from before sign-up. Not counted`);
   $("journey-deals-source").textContent = `Source: HubSpot deals created since ${dayYear(start)}, ${hubWhen}.`;
+  // One line per marketing deal: where the person first came from, their first page and form, and the product
+  const lines = hub.deal_lines || [];
+  const pageCell = (v) => (v.startsWith("/") ? `<a href="https://opsera.ai${encodeURI(v)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v));
+  if (lines.length) {
+    table($("journey-deal-lines"), { rows: lines.map((d) => ({ ...d, monthName: `${MONTH_NAMES[Number(d.month.slice(5, 7)) - 1]} ${d.month.slice(0, 4)}` })), pageSize: 25, columns: [
+      { key: "monthName", label: "Month", sort: false },
+      { key: "came_from", label: "First came from", sort: false },
+      { key: "first_page", label: "First page", sort: false, fmt: pageCell },
+      { key: "first_form", label: "First form", sort: false },
+      { key: "product", label: "Product", sort: false },
+      { key: "status", label: "Open or won", sort: false },
+      { key: "amount", label: "Amount", num: true, fmt: money, sort: false },
+    ] });
+  } else {
+    $("journey-deal-lines").innerHTML = `<p class="muted">No marketing deals yet.</p>`;
+  }
+  const openSum = lines.filter((d) => d.status === "Open").reduce((t2, d) => t2 + d.amount, 0);
+  const wonSum = lines.filter((d) => d.status === "Won").reduce((t2, d) => t2 + d.amount, 0);
+  $("journey-deal-lines-source").textContent = `Source: HubSpot deals created since ${dayYear(start)}, ${hubWhen}. ${num(lines.length)} deals: ${money(openSum)} open and ${money(wonSum)} won.`;
   const contacts = (line) => hub.contacts_daily.filter((r) => r.line === line).reduce((t2, r) => t2 + r.count, 0);
   $("journey-contacts").innerHTML = card("Form contacts", num(contacts("form")), `Demo form: ${num(hub.contacts_daily.filter((r) => r.line === "form" && r.demo).reduce((t2, r) => t2 + r.count, 0))}`) +
     card("Luma event sign-ups", num(contacts("luma")), "Imported from Luma") +

@@ -327,6 +327,9 @@ def main():
     write("google_top_searches", ["search", "clicks", "times_google_showed_us", "click_rate_pct", "average_spot_on_google"],
           [[s["search"], s["clicks"], s["times_shown"], s["click_rate_pct"], s["avg_spot"]] for s in gsc["searches"][:600] if s["clicks"]],
           f"The searches bringing the most Google clicks, {gsc['start_date']} to {gsc_last}. Source: Search Console. Google hides rare searches")
+    write("deals_one_line_each", ["month", "first_came_from", "first_page", "first_form", "product", "open_or_won", "amount_usd"],
+          [[d["month"], d["came_from"], d["first_page"], d["first_form"], d["product"], d["status"], d["amount"]] for d in hub.get("deal_lines", [])],
+          "How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name")
     write("hubspot_event_lists", ["list", "members", "note", "first_added", "last_added"],
           [[e["label"], e["members"], e.get("note") or "", e["joined_daily"][0]["date"] if e["joined_daily"] else "", e["joined_daily"][-1]["date"] if e["joined_daily"] else ""]
            for e in hub["events"]], "Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot")
@@ -403,7 +406,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - "Visits" are Google Analytics sessions. "Engaged visits" are visits where someone stayed 10+ seconds, saw 2+ pages or filled a form. They leave out most email robots.
 - Form fills count the HubSpot form event in Google Analytics. We leave out job application forms everywhere.
 - Asset downloads are form fills on pages under /resources/report/, /resources/white-papers/, /resources/ebooks/ or /resources/comparison-guides/. They're part of "other forms".
-- Deals exist only as weekly and monthly totals, without Closed Lost deals. There are no single deals and no daily deal numbers.
+- Deals exist as weekly and monthly totals, and as 1 line per marketing deal in deals_one_line_each.csv, without company or person names. Closed Lost deals stay out, and there are no daily deal numbers.
 - When the dashboard compares periods, it compares the last full week with the week before, or this month so far with the whole of last month.
 - A page in the page files is its address on opsera.ai, so `/pricing` is https://opsera.ai/pricing. Page titles are in the page_titles files.
 - We split page and page title files by part of the site: blog, resources, knowledge base and other. Big ones also split by quarter, month or week, as the file name says.
@@ -424,6 +427,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 How marketing turns website visits into demo requests, meetings and deals. The funnel has 6 steps. Google Analytics counts visits, demo page views and demo form fills. HubSpot counts new contacts, meetings and deals. A contact is someone who first filled in the demo form. Meetings and deals count only after sign-up, never with existing customers. A later step can be bigger than the step before because the 2 tools count differently. For Google search, every step ends on Search Console's last day, and the first 2 columns are Search Console. "All channels" visits match the Website visits tab.
 
 {listing('customer_journey')}
+{listing('deals_one_line_each')}
 
 ## Website visits tab
 
