@@ -1,0 +1,453 @@
+{
+ "source": "Salesforce reports",
+ "exports": {
+  "opportunities": "2026-10-28",
+  "campaign_touches": "2026-10-27",
+  "meetings": "2026-10-27"
+ },
+ "opportunities_from": "2026-05-08",
+ "opportunities_to": "2026-10-23",
+ "share_without_contact_pct": 80,
+ "months": [
+  {
+   "month": "2026-05",
+   "quarter": "FY27 Q2",
+   "sourced_deals": 5,
+   "sourced_value": 498375,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "month": "2026-06",
+   "quarter": "FY27 Q2",
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 1,
+   "influenced_value": 150000
+  },
+  {
+   "month": "2026-07",
+   "quarter": "FY27 Q2",
+   "sourced_deals": 4,
+   "sourced_value": 400000,
+   "influenced_deals": 6,
+   "influenced_value": 600000
+  },
+  {
+   "month": "2026-08",
+   "quarter": "FY27 Q3",
+   "sourced_deals": 1,
+   "sourced_value": 268000,
+   "influenced_deals": 2,
+   "influenced_value": 350000
+  },
+  {
+   "month": "2026-09",
+   "quarter": "FY27 Q3",
+   "sourced_deals": 2,
+   "sourced_value": 738000,
+   "influenced_deals": 2,
+   "influenced_value": 600000
+  },
+  {
+   "month": "2026-10",
+   "quarter": "FY27 Q3",
+   "sourced_deals": 3,
+   "sourced_value": 350000,
+   "influenced_deals": 2,
+   "influenced_value": 150000
+  }
+ ],
+ "campaigns": [
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "deals": 6,
+   "value": 600000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Gartner-MQ",
+   "deals": 1,
+   "value": 588000,
+   "flag": ""
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY27-Q3-Gartner-Xpo",
+   "deals": 1,
+   "value": 500000,
+   "flag": ""
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-Demo Requests",
+   "deals": 3,
+   "value": 450000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-2025-Lantern_Records",
+   "deals": 3,
+   "value": 400000,
+   "flag": "under review"
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Insights-Nurture",
+   "deals": 2,
+   "value": 300000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-AWT Mumbai",
+   "deals": 1,
+   "value": 268000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
+   "deals": 2,
+   "value": 250000,
+   "flag": ""
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-2025-Lantern_Records",
+   "deals": 1,
+   "value": 200000,
+   "flag": "under review"
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Q2-CXO-Dinner",
+   "deals": 1,
+   "value": 150000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-Demo Requests",
+   "deals": 1,
+   "value": 150000,
+   "flag": ""
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY23-Dreamforce 2023",
+   "deals": 1,
+   "value": 100000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "Target-account campaign",
+   "deals": 1,
+   "value": 100000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "deals": 1,
+   "value": 100000,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Amber-High-Intent-Accounts",
+   "deals": 2,
+   "value": 98375,
+   "flag": ""
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY27-Q3-Event-Dreamforce",
+   "deals": 1,
+   "value": 0,
+   "flag": ""
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Invited-to-Discord-Community",
+   "deals": 1,
+   "value": 0,
+   "flag": ""
+  }
+ ],
+ "meetings": {
+  "months": [
+   {
+    "month": "2026-04",
+    "people": 7,
+    "outcomes": {
+     "Not recorded": 7
+    }
+   },
+   {
+    "month": "2026-05",
+    "people": 6,
+    "outcomes": {
+     "Not recorded": 6
+    }
+   },
+   {
+    "month": "2026-06",
+    "people": 33,
+    "outcomes": {
+     "Not recorded": 30,
+     "Meeting Cancelled": 2,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "month": "2026-07",
+    "people": 23,
+    "outcomes": {
+     "Meeting Cancelled": 2,
+     "Not recorded": 20,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "month": "2026-08",
+    "people": 36,
+    "outcomes": {
+     "Meeting Held": 11,
+     "Meeting Changed": 4,
+     "Meeting No Show - New Date TBD": 4,
+     "Meeting Cancelled": 14,
+     "Not recorded": 3
+    }
+   },
+   {
+    "month": "2026-09",
+    "people": 20,
+    "outcomes": {
+     "Meeting Cancelled": 10,
+     "Not recorded": 4,
+     "Meeting Changed": 2,
+     "Meeting Held": 3,
+     "Meeting No Show - New Date TBD": 1
+    }
+   },
+   {
+    "month": "2026-10",
+    "people": 16,
+    "outcomes": {
+     "Not recorded": 10,
+     "Meeting Held": 4,
+     "Meeting Cancelled": 1,
+     "Meeting No Show - New Date TBD": 1
+    }
+   }
+  ],
+  "campaigns": [
+   {
+    "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+    "people": 45,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-2025-Lantern_Records",
+    "people": 43,
+    "flag": "under review"
+   },
+   {
+    "campaign": "Target-account campaign",
+    "people": 34,
+    "flag": ""
+   },
+   {
+    "campaign": "Nurture 1 - General Nurture",
+    "people": 17,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-Demo Requests",
+    "people": 11,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q3-Event-Dreamforce",
+    "people": 8,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-GHAS-Nurture",
+    "people": 8,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Q2-Event-Databricks-AI-Summit",
+    "people": 7,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Insights-Nurture",
+    "people": 6,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-AWT Mumbai",
+    "people": 5,
+    "flag": ""
+   },
+   {
+    "campaign": "Nurture 2 - Salesforce DevOps",
+    "people": 4,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Warmly-Last-Seen-Visitors",
+    "people": 3,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY23-Dreamforce 2023",
+    "people": 3,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26 Marketing LinkedIn Outreach",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q1-Agentic-Launch",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-2024-Q3-Event-GitHub Universe",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q1-Amazon-Q-Webinar",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-AWS-Reinvent",
+    "people": 2,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q3-Gartner-Xpo",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q3-Gartner-Modernization-Offer",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Q3-Event-GitHub Universe",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q3-AgentForge-EarlyAccess",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Q4-Trends-Webinar",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY23-AWS Reinvent 2023",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Q2 Foundry-Gauranteed-Leads",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "FY27 Software Forge Registration",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Ongoing-Monthly-Newsletter",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY23-Q2-GitHub Actions",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "MQL Tracking",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26-Q1-Event-TrailblazersDX",
+    "people": 1,
+    "flag": ""
+   },
+   {
+    "campaign": "DG-FY26 Microsoft AI Tour NYC",
+    "people": 1,
+    "flag": ""
+   }
+  ],
+  "people": 141
+ }
+}

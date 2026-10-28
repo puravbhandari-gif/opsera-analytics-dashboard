@@ -1959,84 +1959,76 @@ function renderCampaigns(d, hub) {
   draw();
 }
 
-// ---------- Marketing pipeline (Customer journey): open and won marketing deals since 1 Apr, from HubSpot ----------
-// The Salesforce campaign fields are found by name on each Monday pull; until they reach HubSpot the cards and the
-// campaign table say so instead of showing a number. Deal, company and person names are never in the data.
+// ---------- Pipeline tab: marketing sourced and influenced pipeline, and campaign-influenced meetings ----------
+// From Salesforce exports, counts and totals only. Sales-only deals and every name stay out of the file.
 
-const fiscalQuarter = (d) => {   // Opsera's fiscal year starts in February: FY27 Q2 is May to July 2026
-  const m = Number(d.slice(5, 7)), y = Number(d.slice(0, 4)), q = Math.floor(((m + 10) % 12) / 3) + 1, fy = (m >= 2 ? y + 1 : y) % 100;
-  const first = ((q - 1) * 3 + 1) % 12 + 1, names = [0, 1, 2].map((i) => MONTHS[(first - 1 + i) % 12]);
-  return { key: `FY${fy}-Q${q}`, label: `FY${fy} Q${q} (${names[0]} to ${names[2]})` };
-};
-function renderPipeline(hub) {
-  const p = hub.all_pipeline;
-  if (!p || !p.rows) { $("pipe-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; return; }
-  // only marketing: a marketing Lead Source, or marketing sourced or influenced once the Salesforce fields arrive (the file holds only these)
-  const MARKETING_LEAD = /event|webinar|contact us|demo request|website|marketing|paid|organic|social|content|seo/i, SALES = /sdr|\bae\b|lantern/i;
-  const marketingLead = (r) => MARKETING_LEAD.test(r.lead_source) && !SALES.test(r.lead_source);
-  const rows = p.rows.filter((r) => marketingLead(r) || r.bucket === "Marketing sourced" || r.bucket === "Marketing influenced"), ready = Object.values(p.salesforce_fields).every(Boolean);
-  const pulledOn = (hub.all_pipeline_pulled_at || hub.pulled_at).slice(0, 10), pulled = dayYear(pulledOn);
-  const when = range(hub.start_date, pulledOn);
-  const total = (list) => list.reduce((t, r) => t + r.amount, 0);
-  const BUCKETS = ["Marketing sourced", "Marketing influenced"];
-  $("pipe-cards").innerHTML = BUCKETS.map((b) => {
-    if (!ready) return `<div class="card"><div class="label">${b}</div><div class="value wait">Waiting on Salesforce campaign fields</div><div class="sub">Count and value fill in once the fields reach HubSpot deals</div></div>`;
-    const list = rows.filter((r) => r.bucket === b);
-    return card(b, `${num(list.length)} deals`, `${money(total(list))} pipeline`);
-  }).join("");
-  $("pipe-cards-source").textContent = `Source: HubSpot deals (synced from Salesforce), created ${when}, updated ${pulled}.`;
+function renderPipeline(sf) {
+  // Counts and totals only, built from Salesforce exports kept outside the repo (scripts/build_salesforce_pipeline.py)
+  const months = sf.months, sum = (list, k) => list.reduce((t, r) => t + r[k], 0);
+  const days = [...new Set(Object.values(sf.exports))].sort();
+  const exports = days.length === 2 && days[0].slice(0, 7) === days[1].slice(0, 7) ? `${Number(days[0].slice(8))} and ${dayYear(days[1])}` : days.map(dayYear).join(" and ");
+  const when = range(sf.opportunities_from, sf.opportunities_to);
+  $("pipe-cards").innerHTML =
+    card("Marketing sourced", `${num(sum(months, "sourced_deals"))} deals`, `${money(sum(months, "sourced_value"))} pipeline`) +
+    card("Marketing influenced", `${num(sum(months, "influenced_deals"))} deals`, `${money(sum(months, "influenced_value"))} pipeline`);
+  $("pipe-cards-source").textContent = `Source: Salesforce opportunities created ${when}, open and won, exported ${exports}. Updated when new exports arrive, not on Mondays.`;
+  $("pipe-undercount").textContent = `These numbers are undercounted: ${sf.share_without_contact_pct}% of open and won opportunities have no contact attached in Salesforce, so their campaigns can't be seen.`;
 
   let group = "month";
-  const periodOf = (d) => (group === "month" ? { key: d.slice(0, 7), label: month(d.slice(0, 7)) } : fiscalQuarter(d));
-  const drawLead = () => {
+  const drawTime = () => {
     const by = {};
-    for (const r of rows.filter(marketingLead)) {
-      const per = periodOf(r.date), k = `${per.key}|${r.lead_source}|${r.product}`;
-      const x = by[k] || (by[k] = { periodKey: per.key, period: per.label, lead: r.lead_source, product: r.product, deals: 0, won: 0, value: 0 });
-      x.deals += 1; x.won += r.status === "Won" ? 1 : 0; x.value += r.amount;
+    for (const m of months) {
+      const key = group === "month" ? m.month : m.quarter;
+      const x = by[key] || (by[key] = { key, label: group === "month" ? month(m.month) : m.quarter.replace(/ Q(\d)/, (q, n) => ` Q${n} (${["Feb to Apr", "May to Jul", "Aug to Oct", "Nov to Jan"][n - 1]})`),
+        sourced_deals: 0, sourced_value: 0, influenced_deals: 0, influenced_value: 0 });
+      ["sourced_deals", "sourced_value", "influenced_deals", "influenced_value"].forEach((k) => { x[k] += m[k]; });
     }
-    table($("pipe-lead"), { rows: Object.values(by), search: "lead sources or products", sortKey: "periodKey", columns: [
-      { key: "periodKey", label: group === "month" ? "Month" : "Quarter", fmt: (v, r) => esc(r.period), csv: (r) => r.period },
-      { key: "lead", label: "Lead Source", search: true },
-      { key: "product", label: "Product", search: true },
-      { key: "deals", label: "Deals", num: true, fmt: num },
-      { key: "won", label: "Won", num: true, fmt: num },
-      { key: "value", label: "Value", num: true, fmt: money },
+    table($("pipe-time"), { rows: Object.values(by), sortKey: "key", columns: [
+      { key: "key", label: group === "month" ? "Month" : "Quarter", fmt: (v, r) => esc(r.label), csv: (r) => r.label },
+      { key: "sourced_deals", label: "Sourced deals", num: true, fmt: num },
+      { key: "sourced_value", label: "Sourced value", num: true, fmt: money },
+      { key: "influenced_deals", label: "Influenced deals", num: true, fmt: num },
+      { key: "influenced_value", label: "Influenced value", num: true, fmt: money },
     ] });
   };
   $("pipe-period").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     group = b.dataset.g;
     $("pipe-period").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
-    drawLead();
+    drawTime();
   });
-  drawLead();
-  $("pipe-lead-source").textContent = `Source: HubSpot's Lead Source field on each deal, created ${when}. Products come from words in the deal name.`;
-  $("pipe-lead-note").textContent = "Only marketing Lead Sources show, such as Events, Contact Us / Demo Request and Paid Social. Existing Customer, AE and SDR outreach, partners, vendors, bought lists, Direct and deals with no Lead Source are left out.";
+  drawTime();
+  $("pipe-time-source").textContent = `Source: Salesforce opportunities created ${when}, exported ${exports}. Sourced and influenced are never added together.`;
 
-  const WAIT = "Not in HubSpot yet";
-  let camp;
-  if (!ready) {
-    camp = [{ bucket: WAIT, primary: WAIT, first: WAIT, last: WAIT, deals: null, value: null }];
-  } else {
-    const by = {};
-    for (const r of rows.filter((x) => x.bucket !== "Sales only")) {
-      const k = [r.bucket, r.primary_campaign, r.first_campaign, r.last_campaign].join("|");
-      const x = by[k] || (by[k] = { bucket: r.bucket, primary: r.primary_campaign || "None", first: r.first_campaign || "None", last: r.last_campaign || "None", deals: 0, value: 0 });
-      x.deals += 1; x.value += r.amount;
-    }
-    camp = Object.values(by);
-  }
-  table($("pipe-campaigns"), { rows: camp, search: ready ? "campaigns" : undefined, sortKey: "value", columns: [
-    { key: "bucket", label: "Counts as", search: true },
-    { key: "primary", label: "Primary Campaign Source", search: true },
-    { key: "first", label: "Attrib First Campaign", search: true },
-    { key: "last", label: "Attrib Last Campaign", search: true },
-    { key: "deals", label: "Deals", num: true, fmt: (v) => (v == null ? "-" : num(v)) },
-    { key: "value", label: "Value", num: true, fmt: (v) => (v == null ? "-" : money(v)) },
+  table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: c.bucket === "sourced" ? "Marketing sourced" : "Marketing influenced" })),
+    search: "campaigns", sortKey: "value", columns: [
+      { key: "bucket", label: "Counts as", search: true },
+      { key: "campaign", label: "Campaign", search: true, fmt: (v, r) => esc(v) + (r.flag ? `<br><span class="muted">Counted as marketing for now, ${esc(r.flag)}</span>` : "") },
+      { key: "deals", label: "Deals", num: true, fmt: num },
+      { key: "value", label: "Value", num: true, fmt: money },
+    ] });
+  $("pipe-campaigns-source").textContent = `Source: Salesforce Primary Campaign Source, Attrib First and Last Campaign, and campaign touches on each opportunity, created ${when}. Target-account campaign names are hidden.`;
+
+  const mt = sf.meetings, OUT = ["Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded"];
+  const outcome = (k) => sum(mt.months.map((m) => ({ n: m.outcomes[k] || 0 })), "n");
+  $("pipe-meet-cards").innerHTML = card("People with a meeting", num(mt.people), "After joining a marketing campaign") +
+    card("Held", num(outcome("Meeting Held"))) + card("Cancelled", num(outcome("Meeting Cancelled"))) +
+    card("No outcome recorded", num(outcome("Not recorded")));
+  table($("pipe-meet-months"), { rows: mt.months.map((m) => ({ key: m.month, label: month(m.month), people: m.people, ...Object.fromEntries(OUT.map((k) => [k, m.outcomes[k] || 0])) })),
+    sortKey: "key", columns: [
+      { key: "key", label: "Month of the meeting", fmt: (v, r) => esc(r.label), csv: (r) => r.label },
+      { key: "people", label: "People", num: true, fmt: num },
+      { key: "Meeting Held", label: "Held", num: true, fmt: num },
+      { key: "Meeting Cancelled", label: "Cancelled", num: true, fmt: num },
+      { key: "Meeting No Show - New Date TBD", label: "No show", num: true, fmt: num },
+      { key: "Meeting Changed", label: "Moved", num: true, fmt: num },
+      { key: "Not recorded", label: "No outcome recorded", num: true, fmt: num },
+    ] });
+  $("pipe-meet-source").textContent = `Source: Salesforce campaign members with a meeting, since ${dayYear("2026-04-01")}, exported ${dayYear(sf.exports.meetings)}.`;
+  table($("pipe-meet-campaigns"), { rows: mt.campaigns, search: "campaigns", sortKey: "people", columns: [
+    { key: "campaign", label: "Campaign", search: true, fmt: (v, r) => esc(v) + (r.flag ? `<br><span class="muted">Counted as marketing for now, ${esc(r.flag)}</span>` : "") },
+    { key: "people", label: "People with a meeting", num: true, fmt: num },
   ] });
-  $("pipe-campaigns-source").textContent = ready ? `Source: Salesforce campaign fields on HubSpot deals, created ${when}.` :
-    `Source: HubSpot deals, checked ${pulled}. The Salesforce fields Primary Campaign Source, Attrib First Campaign and Attrib Last Campaign aren't on HubSpot deals yet. The Monday update looks for them each week and fills this in once they arrive.`;
 }
 
 function openContent() {
@@ -2291,7 +2283,8 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderAeo(ga, hub);
     renderLeadsHubspot(hub);
     renderEvents(hub, leads);
-    renderPipeline(hub);
+    load("salesforce_pipeline.json").then(renderPipeline)
+      .catch(() => { $("pipe-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; });
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

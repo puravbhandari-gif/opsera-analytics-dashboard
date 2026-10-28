@@ -398,16 +398,19 @@ def main():
                                         "email_clicks", "deals_hubspot", "deal_amount_usd"],
               [[k, *x] for k, x in sorted(camp.items(), key=lambda kv: -kv[1][0]) if x[0] or x[2] or x[4] or x[7]],
               f"Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to {ga_last}), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out")
-    ap = hub.get("all_pipeline")
-    if ap and ap.get("rows"):
-        fq = lambda d: f"FY{(int(d[:4]) + (1 if int(d[5:7]) >= 2 else 0)) % 100} Q{((int(d[5:7]) + 10) % 12) // 3 + 1}"
-        ready = all(ap["salesforce_fields"].values())
-        wait = lambda v: v if ready else "Not in HubSpot yet"
-        write("marketing_pipeline_deals", ["created_on", "fiscal_quarter", "status", "stage", "pipeline", "product", "lead_source", "amount_usd",
-                                     "primary_campaign_source", "attrib_first_campaign", "attrib_last_campaign", "counts_as"],
-              [[r["date"], fq(r["date"]), r["status"], r["stage"], r["pipeline"], r["product"], r["lead_source"], r["amount"],
-                wait(r["primary_campaign"] or ""), wait(r["first_campaign"] or ""), wait(r["last_campaign"] or ""), wait(r["bucket"] or "")] for r in ap["rows"]],
-              "Open and won marketing deals created since 1 Apr 2026 (a marketing Lead Source, or marketing sourced or influenced once the Salesforce campaign fields arrive), 1 line each, with no company or person. Existing Customer, AE and SDR outreach, partners, vendors, bought lists, Direct and blank Lead Sources are left out. The 3 Salesforce campaign fields fill in once they reach HubSpot deals. Fiscal quarters: FY27 Q2 is May to July 2026. Source: HubSpot deals, synced from Salesforce")
+    if (DATA / "salesforce_pipeline.json").exists():
+        sf = json.loads((DATA / "salesforce_pipeline.json").read_text())
+        made = f"Salesforce opportunities created {sf['opportunities_from']} to {sf['opportunities_to']}, exported {', '.join(sorted(set(sf['exports'].values())))}"
+        write("marketing_pipeline_by_month", ["month", "fiscal_quarter", "sourced_deals", "sourced_value_usd", "influenced_deals", "influenced_value_usd"],
+              [[m["month"], m["quarter"], m["sourced_deals"], m["sourced_value"], m["influenced_deals"], m["influenced_value"]] for m in sf["months"]],
+              f"Marketing sourced and influenced pipeline (open and won) by month. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. SDR and AE outreach count as sales. Undercounted: {sf['share_without_contact_pct']}% of opportunities have no contact attached. Source: {made}")
+        write("marketing_pipeline_campaigns", ["counts_as", "campaign", "deals", "value_usd"],
+              [[c["bucket"], c["campaign"], c["deals"], c["value"]] for c in sf["campaigns"]],
+              f"The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: {made}")
+        write("marketing_pipeline_meetings", ["month", "people", "held", "cancelled", "no_show", "moved", "no_outcome_recorded"],
+              [[m["month"], m["people"], *[m["outcomes"].get(k, 0) for k in ("Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded")]]
+               for m in sf["meetings"]["months"]],
+              f"Campaign-influenced meetings: people with a meeting since 1 Apr 2026 who joined a marketing campaign on or before it, each counted once. Source: Salesforce campaign members, exported {sf['exports']['meetings']}")
     if hub.get("event_rows"):
         fills = collections.Counter()
         for line in leads["lines"].values():
@@ -595,7 +598,7 @@ We never add Shorts and long videos together.
 
 ## Pipeline tab
 
-Marketing pipeline: open and won deals since 1 Apr from marketing Lead Sources. Marketing sourced and influenced fill in once the Salesforce campaign fields reach HubSpot deals.
+Marketing sourced and influenced pipeline from Salesforce exports (counts and totals only), and campaign-influenced meetings. Updated when new exports arrive, not on Mondays.
 
 {listing('marketing_pipeline')}
 {listing('deals_one_line_each')}

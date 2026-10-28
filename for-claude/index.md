@@ -142,9 +142,11 @@ We never add Shorts and long videos together.
 
 ## Pipeline tab
 
-Marketing pipeline: open and won deals since 1 Apr from marketing Lead Sources. Marketing sourced and influenced fill in once the Salesforce campaign fields reach HubSpot deals.
+Marketing sourced and influenced pipeline from Salesforce exports (counts and totals only), and campaign-influenced meetings. Updated when new exports arrive, not on Mondays.
 
-- [marketing_pipeline_deals.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_deals.csv): Open and won marketing deals created since 1 Apr 2026 (a marketing Lead Source, or marketing sourced or influenced once the Salesforce campaign fields arrive), 1 line each, with no company or person. Existing Customer, AE and SDR outreach, partners, vendors, bought lists, Direct and blank Lead Sources are left out. The 3 Salesforce campaign fields fill in once they reach HubSpot deals. Fiscal quarters: FY27 Q2 is May to July 2026. Source: HubSpot deals, synced from Salesforce. 16 rows.
+- [marketing_pipeline_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_by_month.csv): Marketing sourced and influenced pipeline (open and won) by month. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. SDR and AE outreach count as sales. Undercounted: 80% of opportunities have no contact attached. Source: Salesforce opportunities created 2026-05-08 to 2026-10-23, exported 2026-10-27, 2026-10-28. 6 rows.
+- [marketing_pipeline_campaigns.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_campaigns.csv): The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: Salesforce opportunities created 2026-05-08 to 2026-10-23, exported 2026-10-27, 2026-10-28. 17 rows.
+- [marketing_pipeline_meetings.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_meetings.csv): Campaign-influenced meetings: people with a meeting since 1 Apr 2026 who joined a marketing campaign on or before it, each counted once. Source: Salesforce campaign members, exported 2026-10-27. 7 rows.
 - [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name. 5 rows.
 
 ## Team metrics tab
