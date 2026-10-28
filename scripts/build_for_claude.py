@@ -349,6 +349,11 @@ def main():
     write("linkedin_exec_post_list", ["posted_on", "post", "link", "reactions", "comments"],
           [[x["date"], x["title"], x["link"], x["reactions"], x["comments"]] for x in kpl["posts"]],
           "Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify")
+    if (DATA / "gtm_calendar.json").exists():
+        gtm = json.loads((DATA / "gtm_calendar.json").read_text())
+        write("gtm_calendar", ["ship_date", "end_date", "item", "types"],
+              [[i["date"], i.get("end", ""), i["name"], "; ".join(i["types"])] for i in gtm["items"]],
+              f"Marketing launches, events and content from the GTM calendar, by ship date. The charts mark these dates. Source: {gtm['source']}, pulled {gtm['pulled_at'][:10]}")
     write("hubspot_event_lists", ["list", "members", "note", "first_added", "last_added"],
           [[e["label"], e["members"], e.get("note") or "", e["joined_daily"][0]["date"] if e["joined_daily"] else "", e["joined_daily"][-1]["date"] if e["joined_daily"] else ""]
            for e in hub["events"]], "Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot")
@@ -515,6 +520,12 @@ We never add Shorts and long videos together.
 Each person's metrics. The baseline is the July to September 2026 monthly average. "To set" means nobody has set a goal yet, so don't invent one. "Metrics coming" means the person hasn't sent their metrics yet.
 
 {listing('team_metrics')}
+
+## GTM calendar markers
+
+The small diamonds under dated charts. Each is a launch, event or piece of content on its ship date. Use them to see what was going on when a number moved, not as proof one caused the other.
+
+{listing('gtm_calendar')}
 
 ## Before: Kahoots and Before: Infrasity tabs
 

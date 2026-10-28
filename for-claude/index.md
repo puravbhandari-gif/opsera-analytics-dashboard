@@ -132,6 +132,12 @@ Each person's metrics. The baseline is the July to September 2026 monthly averag
 
 - [team_metrics.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/team_metrics.csv): Team metrics tab: each person's metrics, with the baseline (July to September 2026 monthly average), this month so far and the goal. 15 rows.
 
+## GTM calendar markers
+
+The small diamonds under dated charts. Each is a launch, event or piece of content on its ship date. Use them to see what was going on when a number moved, not as proof one caused the other.
+
+- [gtm_calendar.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/gtm_calendar.csv): Marketing launches, events and content from the GTM calendar, by ship date. The charts mark these dates. Source: Opsera GTM calendar in Notion, ship dates, pulled 2026-10-28. 26 rows.
+
 ## Before: Kahoots and Before: Infrasity tabs
 
 These match the agencies' own reports exactly.

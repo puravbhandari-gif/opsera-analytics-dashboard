@@ -1,0 +1,206 @@
+{
+ "source": "Opsera GTM calendar in Notion, ship dates",
+ "pulled_at": "2026-10-28T07:49:17+00:00",
+ "items": [
+  {
+   "name": "Flutter paid and partner promotion",
+   "types": [
+    "Ad",
+    "Campaign",
+    "Email"
+   ],
+   "date": "2026-09-01",
+   "end": "2026-09-22"
+  },
+  {
+   "name": "Gartner MQ Honorable Mention blog",
+   "types": [
+    "Blog"
+   ],
+   "date": "2026-09-01"
+  },
+  {
+   "name": "Kumar Forbes byline: Why faster software creation requires a new operating model",
+   "types": [
+    "Blog"
+   ],
+   "date": "2026-09-08"
+  },
+  {
+   "name": "Dreamforce 2026, booth 107",
+   "types": [
+    "Event"
+   ],
+   "date": "2026-09-15",
+   "end": "2026-09-17"
+  },
+  {
+   "name": "Headless DevOps for Salesforce launch, wire release and blog",
+   "types": [
+    "Blog",
+    "Press release",
+    "Product launch"
+   ],
+   "date": "2026-09-15"
+  },
+  {
+   "name": "Tokenomics webinar: The Currency of Enterprise AI",
+   "types": [
+    "Video",
+    "Webinar"
+   ],
+   "date": "2026-09-15"
+  },
+  {
+   "name": "Flutter 2026: The AI-SDLC Summit",
+   "types": [
+    "Event",
+    "Landing page",
+    "Video"
+   ],
+   "date": "2026-10-01"
+  },
+  {
+   "name": "Forge launch: Secure Software Factory",
+   "types": [
+    "Product launch"
+   ],
+   "date": "2026-10-01"
+  },
+  {
+   "name": "Rebrand to Enterprise Software Factory",
+   "types": [
+    "Product launch",
+    "Video"
+   ],
+   "date": "2026-10-01"
+  },
+  {
+   "name": "ORBIE Awards sponsorship",
+   "types": [
+    "Event"
+   ],
+   "date": "2026-10-02"
+  },
+  {
+   "name": "NeuBird FLOCK '26",
+   "types": [
+    "Email",
+    "Event"
+   ],
+   "date": "2026-10-14"
+  },
+  {
+   "name": "Customer email: rebrand, Flutter",
+   "types": [
+    "Campaign",
+    "Email"
+   ],
+   "date": "2026-10-16"
+  },
+  {
+   "name": "Gartner IT Symposium/Xpo, Orlando, booth 130",
+   "types": [
+    "Email",
+    "Event",
+    "Landing page"
+   ],
+   "date": "2026-10-19",
+   "end": "2026-10-22"
+  },
+  {
+   "name": "SpaceX Super Intelligence Partner Network, launch partner",
+   "types": [
+    "Campaign"
+   ],
+   "date": "2026-10-24"
+  },
+  {
+   "name": "GitHub Universe podcast",
+   "types": [
+    "Event",
+    "Podcast"
+   ],
+   "date": "2026-10-28"
+  },
+  {
+   "name": "GitHub Universe, 20x20 booth",
+   "types": [
+    "Event"
+   ],
+   "date": "2026-10-28",
+   "end": "2026-10-29"
+  },
+  {
+   "name": "Relaunch press release",
+   "types": [
+    "Press release"
+   ],
+   "date": "2026-10-28"
+  },
+  {
+   "name": "Governed autonomous change whitepaper",
+   "types": [
+    "Whitepaper"
+   ],
+   "date": "2026-11-06"
+  },
+  {
+   "name": "VIP game: Hawks vs Lakers, Atlanta",
+   "types": [
+    "Event"
+   ],
+   "date": "2026-11-09"
+  },
+  {
+   "name": "Insights relaunch press release",
+   "types": [
+    "Press release"
+   ],
+   "date": "2026-11-17"
+  },
+  {
+   "name": "Modernization roundtable",
+   "types": [
+    "Event",
+    "Webinar"
+   ],
+   "date": "2026-11-17"
+  },
+  {
+   "name": "VIP game: Pacers vs Rockets, Indianapolis",
+   "types": [
+    "Event"
+   ],
+   "date": "2026-11-18"
+  },
+  {
+   "name": "Tokenomics whitepaper",
+   "types": [
+    "Whitepaper"
+   ],
+   "date": "2026-11-20"
+  },
+  {
+   "name": "Insights benchmark report",
+   "types": [
+    "Report"
+   ],
+   "date": "2026-11-25"
+  },
+  {
+   "name": "Benchmark report webinar",
+   "types": [
+    "Webinar"
+   ],
+   "date": "2026-12-03"
+  },
+  {
+   "name": "ELC sponsored webinar",
+   "types": [
+    "Webinar"
+   ],
+   "date": "2026-12-10"
+  }
+ ]
+}

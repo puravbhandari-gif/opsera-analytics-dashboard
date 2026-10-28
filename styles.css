@@ -223,3 +223,13 @@ details.more > summary:hover { color: var(--ink); }
 
 /* Download CSV sits at the right of each table's tools */
 .table-tools .csv { margin-left: auto; }
+
+/* GTM calendar markers */
+.gtm-controls { display: flex; gap: 6px; align-items: center; }
+.gtm-controls select { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; max-width: 160px; }
+.gtm-controls select:disabled { opacity: 0.5; }
+.gtm-tip { position: absolute; z-index: 50; max-width: 300px; background: var(--surface); color: var(--ink-2); border: 1px solid var(--axis); border-radius: 8px; padding: 10px 12px; font-size: 13px; line-height: 1.4; pointer-events: none; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12); }
+.gtm-tip div + div { margin-top: 8px; }
+.gtm-tip strong { display: block; font-weight: 600; color: var(--ink); }
+.gtm-tip span { color: var(--muted); }
+.gtm-tip p { margin: 8px 0 0; font-size: 12px; color: var(--muted); }

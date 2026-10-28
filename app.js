@@ -149,8 +149,13 @@ function draw(c) {
     base.interaction = { mode: "nearest", axis: "y", intersect: false };
     base.scales = { x: { ...base.scales.y, reverse: false }, y: { grid: { display: false }, border: { color: t.axis }, ticks: { color: t.ink } } };
   }
-  c.instance = new Chart($(c.id), { type: cfg.type, data: cfg.data, options: base });
+  if (cfg.dates) {   // [start, end] for each label, so calendar markers can find their spot
+    base.plugins.gtm = { dates: cfg.dates, color: css("--accent"), line: t.muted };
+    base.layout = { padding: { bottom: 16 } };
+  }
+  c.instance = new Chart($(c.id), { type: cfg.type, data: cfg.data, options: base, plugins: [gtmMarkers] });
 }
+
 const line = (label, data, color) => ({ label, data, borderColor: color, backgroundColor: color, borderWidth: 2, pointRadius: 0, pointHoverRadius: 5, tension: 0.25 });
 const bar = (label, data, color) => ({ label, data, backgroundColor: color, borderColor: css("--surface"), borderWidth: { top: 0, left: 0, right: 0, bottom: 0 }, borderRadius: 4, borderSkipped: "start", maxBarThickness: 44 });
 
@@ -168,7 +173,7 @@ const view = (() => {
   const period = Object.keys(PERIOD_IN_ADDRESS).find((k) => PERIOD_IN_ADDRESS[k] === a.get("period"));
   if (period) periodMode = period;   // a link's period wins over the one this browser last used
   return { tab: tab || "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
-    type: a.get("type") || "all", q: a.get("q") || "" };
+    type: a.get("type") || "all", q: a.get("q") || "", markers: a.get("markers") !== "off", mtype: a.get("mtype") || "all" };
 })();
 function viewAddress() {
   const a = new URLSearchParams({ period: PERIOD_IN_ADDRESS[periodMode] });
@@ -177,9 +182,90 @@ function viewAddress() {
   if (view.person) a.set("person", view.person);
   if (view.type !== "all") a.set("type", view.type);
   if (view.q) a.set("q", view.q);
+  if (!gtm.on) a.set("markers", "off");
+  if (gtm.type !== "all") a.set("mtype", gtm.type);
   return `#${view.tab || "team"}?${a.toString()}`;
 }
 function saveView() { history.replaceState(null, "", viewAddress()); }
+
+// ---------- GTM calendar markers: a small diamond under each dated chart, on each item's ship date ----------
+
+const gtm = { items: [], on: view.markers, type: view.mtype, source: "" };
+const gtmTip = document.createElement("div");
+gtmTip.className = "gtm-tip"; gtmTip.hidden = true; gtmTip.setAttribute("role", "tooltip");
+document.body.appendChild(gtmTip);
+const gtmShown = () => (gtm.on ? gtm.items.filter((i) => gtm.type === "all" || i.types.includes(gtm.type)) : []);
+const gtmWhen = (i) => (i.end ? range(i.date, i.end) : dayYear(i.date));
+// Markers for one chart: one spot per label that has items, with every item that falls in it
+function gtmSpots(chart) {
+  const o = chart.options.plugins.gtm;
+  if (!o || !o.dates) return [];
+  const x = chart.scales.x, y = chart.chartArea.bottom + (x.height || 0) + 9, spots = [];
+  o.dates.forEach(([a, b], i) => {
+    const items = gtmShown().filter((it) => it.date >= a && it.date <= b);
+    if (items.length) spots.push({ x: x.getPixelForValue(i), y, items });
+  });
+  return spots;
+}
+const gtmMarkers = {
+  id: "gtm",
+  afterDraw(chart) {
+    const o = chart.options.plugins.gtm, spots = gtmSpots(chart);
+    if (!spots.length) return;
+    const ctx = chart.ctx, area = chart.chartArea;
+    ctx.save();
+    for (const s of spots) {
+      if (chart.$gtmHover === s.x) {   // a faint line up through the chart for the marker under the mouse
+        ctx.strokeStyle = o.color; ctx.globalAlpha = 0.5; ctx.setLineDash([3, 3]); ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(s.x, area.top); ctx.lineTo(s.x, area.bottom); ctx.stroke();
+        ctx.setLineDash([]); ctx.globalAlpha = 1;
+      }
+      const r = s.items.length > 1 ? 5.5 : 4.5;
+      ctx.fillStyle = o.color;
+      ctx.beginPath(); ctx.moveTo(s.x, s.y - r); ctx.lineTo(s.x + r, s.y); ctx.lineTo(s.x, s.y + r); ctx.lineTo(s.x - r, s.y); ctx.closePath(); ctx.fill();
+      if (s.items.length > 1) {
+        ctx.fillStyle = o.line; ctx.font = '600 10px "DM Sans", sans-serif'; ctx.textBaseline = "middle";
+        ctx.fillText(String(s.items.length), s.x + r + 3, s.y);
+      }
+    }
+    ctx.restore();
+  },
+  afterEvent(chart, args) {
+    const e = args.event;
+    if (!["mousemove", "click", "mouseout"].includes(e.type)) return;
+    const hit = e.type === "mouseout" ? null : gtmSpots(chart).find((s) => Math.abs(e.x - s.x) <= 8 && Math.abs(e.y - s.y) <= 10);
+    const was = chart.$gtmHover;
+    chart.$gtmHover = hit ? hit.x : null;
+    if (was !== chart.$gtmHover) args.changed = true;
+    if (!hit) { if (was != null) gtmTip.hidden = true; return; }
+    gtmTip.innerHTML = hit.items.map((i) => `<div><strong>${esc(i.name)}</strong><span>${esc(i.types.join(", "))}. ${gtmWhen(i)}</span></div>`).join("") +
+      `<p>Source: ${esc(gtm.source)}</p>`;
+    gtmTip.hidden = false;
+    const box = chart.canvas.getBoundingClientRect(), w = gtmTip.offsetWidth, h = gtmTip.offsetHeight;
+    const left = Math.min(Math.max(8, box.left + hit.x - w / 2), document.documentElement.clientWidth - w - 8);
+    const top = box.top + hit.y - h - 12;
+    gtmTip.style.left = `${left + scrollX}px`;
+    gtmTip.style.top = `${(top < 8 ? box.top + hit.y + 14 : top) + scrollY}px`;
+  },
+};
+function redrawDated() { charts.forEach((c) => { if (c.instance?.options.plugins.gtm) c.instance.update("none"); }); }
+function fillGtmControls() {
+  const types = [...new Set(gtm.items.flatMap((i) => i.types))].sort();
+  if (gtm.type !== "all" && !types.includes(gtm.type)) gtm.type = "all";
+  $("gtm-type").innerHTML = `<option value="all">All types</option>` + types.map((t) => `<option${t === gtm.type ? " selected" : ""}>${esc(t)}</option>`).join("");
+  $("gtm-type").disabled = !gtm.on;
+  $("gtm-toggle").textContent = `Calendar markers: ${gtm.on ? "On" : "Off"}`;
+  $("gtm-toggle").setAttribute("aria-pressed", String(gtm.on));
+}
+load("gtm_calendar.json").then((d) => {
+  gtm.items = d.items;
+  gtm.source = `${d.source}, pulled ${dayYear(d.pulled_at.slice(0, 10))}`;
+  $("gtm-controls").hidden = false;
+  fillGtmControls(); redrawDated();
+}).catch(() => {});   // no calendar file yet: the charts show no markers
+addEventListener("scroll", () => { gtmTip.hidden = true; }, { passive: true });
+$("gtm-toggle").addEventListener("click", () => { gtm.on = !gtm.on; gtmTip.hidden = true; fillGtmControls(); redrawDated(); saveView(); });
+$("gtm-type").addEventListener("change", () => { gtm.type = $("gtm-type").value; fillGtmControls(); redrawDated(); saveView(); });
 const addMonths = (d, n) => { const x = toDate(d); const day0 = x.getUTCDate(); x.setUTCDate(1); x.setUTCMonth(x.getUTCMonth() + n);
   x.setUTCDate(Math.min(day0, toDate(monthEnd(iso(x))).getUTCDate())); return iso(x); };
 // Last 3 months: the 3 months up to the last full day, against the 3 months before
@@ -270,12 +356,12 @@ function compare(spec) {
     const m = spec.metrics[spec.metricIndex];
     const bk = periodBuckets(periodMode, spec.start, spec.last);
     if (spec.together) {
-      return { type: "bar", whole: true, data: { labels: bk.map((b) => b.label),
+      return { type: "bar", whole: true, dates: bk.map((b) => [b.start, b.end]), data: { labels: bk.map((b) => b.label),
         datasets: spec.metrics.map((mm, i) => bar(mm.label, bk.map((b) => mm.value(b.start, b.end)), th.s[i])) } };
     }
     const values = bk.map((b) => m.value(b.start, b.end));
     const asLine = m.whole === false;
-    return { type: asLine ? "line" : "bar", whole: m.whole !== false, yfmt: m.yfmt, reverse: m.lowerIsBetter && m.flip,
+    return { type: asLine ? "line" : "bar", whole: m.whole !== false, yfmt: m.yfmt, dates: bk.map((b) => [b.start, b.end]), reverse: m.lowerIsBetter && m.flip,
       ytitle: m.lowerIsBetter && m.flip ? "Higher on the chart is a better spot" : undefined,
       data: { labels: bk.map((b) => b.label), datasets: [asLine ? { ...line(m.label, values, th.s[0]), pointRadius: 4 } : bar(m.label, values, th.s[0])] },
       tooltip: { label: (c) => ` ${m.label}: ${m.fmt(c.parsed.y ?? c.parsed.x)}` } };
@@ -356,7 +442,7 @@ function renderSearch(d) {
   };
   let m = "clicks";
   chart("search-daily", (th) => ({
-    type: "line",
+    type: "line", dates: d.daily.map((r) => [r.date, r.date]), 
     data: { labels: d.daily.map((r) => day(r.date)), datasets: [line(metrics[m].label, d.daily.map((r) => r[m]), th.s[0])] },
     reverse: metrics[m].reverse, yfmt: metrics[m].yfmt, ytitle: metrics[m].reverse ? "Higher on the chart is a better spot" : undefined,
     tooltip: { label: (c) => ` ${metrics[m].label}: ${metrics[m].fmt(c.parsed.y)}` },
@@ -431,7 +517,7 @@ function renderVisits(d) {
   $("visits-daily-source").textContent = `${src}, ${when}.`;
   const emailByDay = Object.fromEntries(d.channel_daily.filter((r) => r.sessionDefaultChannelGroup === "Email").map((r) => [r.date, r.sessions]));
   chart("visits-daily", (th) => ({
-    type: "line",
+    type: "line", dates: d.daily.map((r) => [r.date, r.date]), 
     data: { labels: d.daily.map((r) => day(r.date)), datasets: [
       line("Engaged visits", d.daily.map((r) => r.engagedSessions), th.s[0]),
       line("All visits", d.daily.map((r) => r.sessions), th.s[1]),
@@ -547,7 +633,7 @@ function renderLeads(d) {
   const label = (s) => { const a = s < d.start_date ? d.start_date : s, b = addDays(s, 6) > d.end_date ? d.end_date : addDays(s, 6); return `${day(a)} to ${day(b)}`; };
   $("leads-weekly-source").textContent = `${src}, ${when}.`;
   chart("leads-weekly", (th) => ({
-    type: "bar",
+    type: "bar", dates: starts.map((s) => [s, addDays(s, 6)]),
     data: { labels: starts.map(label), datasets: LEAD_ORDER.map((k, i) => bar(d.lines[k].label, starts.map((s) => weeks[s][k]), th.s[i])) },
   }));
 
@@ -574,14 +660,14 @@ function weekly(rows, key, start, end) {
     out[s] = (out[s] || 0) + r[key];
   }
   return Object.keys(out).sort().map((s) => ({
-    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, value: out[s],
+    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, value: out[s], start: s, end: addDays(s, 6),
   }));
 }
 
 function metricChart(id, segId, rows, metrics, colors) {
   let m = Object.keys(metrics)[0];
   chart(id, (th) => ({
-    type: "line",
+    type: "line", dates: rows.map((r) => [r.date, r.date]), 
     data: { labels: rows.map((r) => day(r.date)), datasets: metrics[m].map(([label, key], i) => line(label, rows.map((r) => r[key]), th.s[colors[i]])) },
   }));
   $(segId).addEventListener("click", (e) => {
@@ -629,13 +715,13 @@ function renderLinkedIn(d) {
 
   const coWeeks = weekly(co.followers_daily, "gained", co.start_date, co.end_date);
   chart("li-co-followers", (th) => ({
-    type: "bar", data: { labels: coWeeks.map((w) => w.label), datasets: [bar("Followers gained", coWeeks.map((w) => w.value), th.s[0])] },
+    type: "bar", dates: coWeeks.map((w) => [w.start, w.end]), data: { labels: coWeeks.map((w) => w.label), datasets: [bar("Followers gained", coWeeks.map((w) => w.value), th.s[0])] },
   }));
   $("li-co-followers-source").textContent = coSrc;
 
   chart("li-co-visits", (th) => ({
     type: "line",
-    data: { labels: co.visitors_daily.map((r) => day(r.date)), datasets: [
+    dates: co.visitors_daily.map((r) => [r.date, r.date]), data: { labels: co.visitors_daily.map((r) => day(r.date)), datasets: [
       line("All company page views", co.visitors_daily.map((r) => r.views_total), th.s[0]),
       line("Overview page views", co.visitors_daily.map((r) => r.views_overview), th.s[1]),
       line("Jobs page views", co.visitors_daily.map((r) => r.views_jobs), th.s[2]),
@@ -678,7 +764,7 @@ function renderLinkedIn(d) {
 
   const kWeeks = weekly(k.followers_daily, "gained", d.start_date, d.end_date);
   chart("li-k-followers", (th) => ({
-    type: "bar", data: { labels: kWeeks.map((w) => w.label), datasets: [bar("Followers gained", kWeeks.map((w) => w.value), th.s[0])] },
+    type: "bar", dates: kWeeks.map((w) => [w.start, w.end]), data: { labels: kWeeks.map((w) => w.label), datasets: [bar("Followers gained", kWeeks.map((w) => w.value), th.s[0])] },
   }));
   $("li-k-followers-source").textContent = kSrc;
 
@@ -717,7 +803,7 @@ function renderLinkedIn(d) {
   drawPeriod();
   chart("li-ko-chart", (th) => ({
     type: "bar", whole: true,
-    data: { labels: periods[period].daily.map((r) => day(r.date)), datasets: [bar("Times seen", periods[period].daily.map((r) => r.seen), th.s[0])] },
+    dates: periods[period].daily.map((r) => [r.date, r.date]), data: { labels: periods[period].daily.map((r) => day(r.date)), datasets: [bar("Times seen", periods[period].daily.map((r) => r.seen), th.s[0])] },
   }));
   $("li-ko-period").addEventListener("click", (e) => {
     const btn = e.target.closest("button"); if (!btn) return;
@@ -1176,7 +1262,7 @@ function weeksFilled(rows, keys, start, end) {
   for (let s = weekOf(start); s <= end; s = addDays(s, 7)) out[s] = Object.fromEntries(keys.map((k) => [k, 0]));
   for (const r of rows) if (out[weekOf(r.date)]) keys.forEach((k) => { out[weekOf(r.date)][k] += r[k]; });
   return Object.keys(out).sort().map((s) => ({
-    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, ...out[s],
+    label: `${day(s < start ? start : s)} to ${day(addDays(s, 6) > end ? end : addDays(s, 6))}`, ...out[s], start: s, end: addDays(s, 6),
   }));
 }
 
@@ -1195,7 +1281,7 @@ function renderYouTube(d, ga) {
 
   const subWeeks = weeksFilled(c.subs_daily, ["gained", "lost"], d.start_date, last);
   chart("yt-subs", (th) => ({
-    type: "bar", whole: true, data: { labels: subWeeks.map((w) => w.label), datasets: [
+    type: "bar", whole: true, dates: subWeeks.map((w) => [w.start, w.end]), data: { labels: subWeeks.map((w) => w.label), datasets: [
       bar("Subscribers gained", subWeeks.map((w) => w.gained), th.s[0]),
       bar("Subscribers lost", subWeeks.map((w) => w.lost), th.s[1]),
     ] },
@@ -1260,7 +1346,7 @@ function renderYouTube(d, ga) {
     const labels = { views: "Views", minutes: "Watch time (minutes)" };
     let m = "views";
     chart(`yt-${t}-weekly`, (th) => ({
-      type: "bar", whole: true, data: { labels: weeks.map((w) => w.label), datasets: [bar(labels[m], weeks.map((w) => w[m]), th.s[0])] },
+      type: "bar", whole: true, dates: weeks.map((w) => [w.start, w.end]), data: { labels: weeks.map((w) => w.label), datasets: [bar(labels[m], weeks.map((w) => w[m]), th.s[0])] },
     }));
     $(`yt-${t}-round`).textContent = weeks.reduce((a, w) => a + w.minutes, 0) === v.minutes ? "" :
       "YouTube rounds each day's watch time, so the weeks add up to a little less than the total.";
@@ -1321,7 +1407,7 @@ function renderKahoots(monthly, quarter) {
   fillKahoots(); monthlyTabs.push(fillKahoots);
   chart("kahoots-visits", (th) => ({
     type: "bar", stacked: true,
-    data: { labels: monthly.map((r) => month(r.month)), datasets: [
+    dates: monthly.map((r) => [`${r.month}-01`, monthEnd(`${r.month}-01`)]), data: { labels: monthly.map((r) => month(r.month)), datasets: [
       bar("Visits from people", monthly.map((r) => r.people_visits), th.s[0]),
       { ...bar("Robots (visits minus people)", monthly.map((r) => r.visits - r.people_visits), th.s[1]), borderWidth: { top: 0, bottom: 2, left: 0, right: 0 } },
     ] },
@@ -1329,7 +1415,7 @@ function renderKahoots(monthly, quarter) {
   }));
   chart("kahoots-forms", (th) => ({
     type: "bar",
-    data: { labels: monthly.map((r) => month(r.month)), datasets: [bar("Form fills", monthly.map((r) => r.form_fills), th.s[0])] },
+    dates: monthly.map((r) => [`${r.month}-01`, monthEnd(`${r.month}-01`)]), data: { labels: monthly.map((r) => month(r.month)), datasets: [bar("Form fills", monthly.map((r) => r.form_fills), th.s[0])] },
   }));
   table($("kahoots-quarter"), { rows: quarter, columns: [
     { key: "metric", label: "", sort: false },
@@ -1362,7 +1448,7 @@ function renderInfrasity(monthly) {
   ] });
   chart("infrasity-forge", (th) => ({
     type: "bar",
-    data: { labels: monthly.map((r) => month(r.month)), datasets: [bar("Google clicks on Forge pages", monthly.map((r) => r.forge_page_clicks), th.s[0])] },
+    dates: monthly.map((r) => [`${r.month}-01`, monthEnd(`${r.month}-01`)]), data: { labels: monthly.map((r) => month(r.month)), datasets: [bar("Google clicks on Forge pages", monthly.map((r) => r.forge_page_clicks), th.s[0])] },
   }));
 }
 

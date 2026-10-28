@@ -11,6 +11,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Copado page: add a switching section and a demo button.
 - [ ] Fix blogs showing up twice on Google, with and without "/" at the end.
 - [ ] Waiting on David and Yusra: HubSpot bot filtering, and connecting Luma.
+- [ ] Get a Notion workspace owner to create the read-only connection for the GTM calendar.
 - [ ] Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot.
 - [ ] Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform), which both Opsera and Kumar posted. It needs a redirect on the website.
 - [ ] Tag Kumar's "Visit my website" button.
@@ -37,7 +38,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
 - [x] Personal views: saved links per person.
-- [ ] GTM calendar markers on every dated chart, from Notion, with an on/off switch and a filter by type.
+- [x] GTM calendar markers on every dated chart, from Notion, with an on/off switch and a filter by type.
 - [ ] Google Ads on Customer journey, under the Paid ads funnel: spend, clicks, visits and cost per demo request by campaign.
 - [ ] Google rankings on Google search: average position week by week for key pages, and their top searches.
 - [ ] Events tab after Content: sign-ups, attended, event page form fills and meetings afterwards, 1 row per event.
