@@ -297,86 +297,55 @@ def add_months(d, n):
     return dt.date(y, m, min(d.day, last))
 
 
-# All pipeline (agreed 28 Oct 2026): every open and won deal created since 1 Apr, worked backwards from its contacts.
-# Sourced: a contact on the deal was first brought in by a HubSpot campaign (First Touch Converting Campaign) or a
-# marketing form, before the deal was created. Influenced: not sourced, but a contact touched a campaign before the
-# deal was created (marketing email click, form fill, event list, visit from a campaign link). Sales only: neither.
-# "Meetings Link" booking forms and job applications don't count as marketing forms.
-PIPELINE_PROPS = ["createdate", "hs_object_source", "hs_analytics_first_touch_converting_campaign", "hs_analytics_last_touch_converting_campaign",
-                  "first_conversion_date", "first_conversion_event_name", "recent_conversion_date", "recent_conversion_event_name",
-                  "hs_email_first_click_date", "utm_campaign_fc", "hs_analytics_first_timestamp"]
-NOT_MARKETING_FORM = re.compile(r"^meetings link|job application", re.I)
+# All pipeline (agreed 28 Oct 2026): every open and won deal created since 1 Apr, with its product (from words in the
+# deal name), HubSpot's Lead Source, and the 3 Salesforce campaign fields once they're synced to HubSpot deals.
+# The Salesforce fields are found by their label on every run, so they fill in without a code change:
+# - Marketing sourced: the Primary Campaign Source is a marketing campaign.
+# - Marketing influenced: not sourced, but Attrib First or Attrib Last Campaign is a marketing campaign.
+# - Sales only: none of the 3 is a marketing campaign.
+# SDR and AE outreach count as sales, not marketing campaigns. Deal names, companies and people are never kept.
+SALESFORCE_FIELDS = {"primary": re.compile(r"primary\s*campaign\s*source", re.I),
+                     "first": re.compile(r"attrib\w*\s*first\s*campaign", re.I),
+                     "last": re.compile(r"attrib\w*\s*last\s*campaign", re.I)}
+SALES_MOTIONS = re.compile(r"sdr|\bae\b|lantern", re.I)   # SDR-Meeting-Set, DG-SDR Outreach (Cold), AE Prospecting, AE Internal Referral, DG-2025-Lantern_Records
 
 
-def ms(stamp):
-    """HubSpot dates come as ISO text or epoch milliseconds; both become epoch milliseconds."""
-    if not stamp:
-        return None
-    if str(stamp).isdigit():
-        return int(stamp)
-    return int(dt.datetime.fromisoformat(str(stamp).replace("Z", "+00:00")).timestamp() * 1000)
-
-
-def all_pipeline(s, campaign_names, event_joins):
+def all_pipeline(s):
+    props = call(s, "GET", "/crm/v3/properties/deals")["results"]
+    fields = {k: next((p["name"] for p in props if rx.search(p.get("label") or "")), None) for k, rx in SALESFORCE_FIELDS.items()}
+    lead = next((p for p in props if p["name"] == "lead_source"), None)
+    lead_labels = {o["value"]: o["label"] for o in (lead or {}).get("options", [])}
     deals = search(s, "deals", [{"propertyName": "createdate", "operator": "GTE", "value": SINCE}],
-                   ["createdate", "amount", "dealstage", "pipeline"])
+                   ["createdate", "amount", "dealstage", "pipeline", "dealname", "lead_source"] + [f for f in fields.values() if f])
     stages = {st["id"]: (pl["label"], st["label"], st["metadata"].get("isClosed") == "true", float(st["metadata"].get("probability") or 0))
               for pl in call(s, "GET", "/crm/v3/pipelines/deals")["results"] for st in pl["stages"]}
-    keep = []
+
+    def public(v):
+        v = (v or "").strip()
+        if not v:
+            return ""
+        if EMAIL_ADDRESS.search(v):
+            return "Name hidden"
+        return "Target-account campaign" if TARGET_ACCOUNTS.search(v) else "Sales outreach" if LEFT_OUT_CAMPAIGN.search(v) else v
+
+    marketing = lambda v: bool(v) and not SALES_MOTIONS.search(v)
+    have_fields = any(fields.values())
+    rows = []
     for d in deals:
-        pipeline, stage, closed, prob = stages.get(d["properties"].get("dealstage"), ("Unknown", "Unknown", False, 0))
+        p = d["properties"]
+        pipeline, stage, closed, prob = stages.get(p.get("dealstage"), ("Unknown", "Unknown", False, 0))
         if closed and prob == 0:
             continue   # closed lost isn't pipeline
-        keep.append((d, pipeline, stage, closed and prob >= 1))
-    d_contacts = associations(s, "deals", "contacts", [d["id"] for d, *_ in keep])
-    ids = sorted({c for cs in d_contacts.values() for c in cs})
-    people = {}
-    for i in range(0, len(ids), 100):
-        j = call(s, "POST", "/crm/v3/objects/contacts/batch/read", json={"inputs": [{"id": x} for x in ids[i:i + 100]], "properties": PIPELINE_PROPS})
-        for c in j.get("results", []):
-            people[c["id"]] = c["properties"]
-    name = lambda guid: campaign_names.get(guid or "", "") or ("Unnamed HubSpot campaign" if guid else "")
-    public = lambda n: "Target-account campaign" if TARGET_ACCOUNTS.search(n) else "Sales outreach" if LEFT_OUT_CAMPAIGN.search(n) else n
-    rows = []
-    for d, pipeline, stage, won in keep:
-        created = ms(d["properties"]["createdate"])
-        bucket, campaign = "Sales only", ""
-        for c in sorted(d_contacts.get(d["id"], [])):
-            p = people.get(c, {})
-            if (ms(p.get("createdate")) or created) > created:
-                continue
-            form = p.get("first_conversion_event_name") or ""
-            if p.get("hs_analytics_first_touch_converting_campaign"):
-                bucket, campaign = "Marketing sourced", name(p["hs_analytics_first_touch_converting_campaign"])
-                break
-            if p.get("hs_object_source") == "FORM" and form and not NOT_MARKETING_FORM.search(form) and (ms(p.get("first_conversion_date")) or created + 1) <= created:
-                bucket, campaign = "Marketing sourced", "Form: " + form.split(" — ")[0].split(" - Opsera")[0].strip()
-                break
-        if bucket == "Sales only":
-            for c in sorted(d_contacts.get(d["id"], [])):
-                p = people.get(c, {})
-                touch = None
-                if p.get("hs_analytics_last_touch_converting_campaign") and (ms(p.get("createdate")) or created + 1) <= created:
-                    touch = name(p["hs_analytics_last_touch_converting_campaign"])
-                elif p.get("utm_campaign_fc") and (ms(p.get("hs_analytics_first_timestamp")) or created + 1) <= created:
-                    touch = re.sub(r"^\d+-", "", p["utm_campaign_fc"])
-                elif any(at <= created for lst, at in event_joins.get(c, [])):
-                    touch = next(lst for lst, at in sorted(event_joins[c], key=lambda x: x[1]) if at <= created)
-                elif (ms(p.get("hs_email_first_click_date")) or created + 1) <= created:
-                    touch = "Marketing email click"
-                else:
-                    for k in ("first", "recent"):
-                        f = p.get(f"{k}_conversion_event_name") or ""
-                        if f and not NOT_MARKETING_FORM.search(f) and (ms(p.get(f"{k}_conversion_date")) or created + 1) <= created:
-                            touch = "Form: " + f.split(" — ")[0].split(" - Opsera")[0].strip()
-                            break
-                if touch:
-                    bucket, campaign = "Marketing influenced", touch
-                    break
-        rows.append({"date": pacific_day(d["properties"]["createdate"]), "bucket": bucket, "campaign": public(campaign) if campaign else "",
-                     "status": "Won" if won else "Open", "stage": stage, "pipeline": pipeline,
-                     "amount": round(float(d["properties"].get("amount") or 0)), "contacts": len(d_contacts.get(d["id"], []))})
-    return sorted(rows, key=lambda r: r["date"])
+        camp = {k: public(p.get(f)) if f else None for k, f in fields.items()}
+        bucket = None
+        if have_fields:
+            bucket = ("Marketing sourced" if marketing(camp["primary"]) else
+                      "Marketing influenced" if marketing(camp["first"]) or marketing(camp["last"]) else "Sales only")
+        rows.append({"date": pacific_day(p["createdate"]), "status": "Won" if closed and prob >= 1 else "Open", "stage": stage, "pipeline": pipeline,
+                     "amount": round(float(p.get("amount") or 0)), "product": products_in(p.get("dealname")),
+                     "lead_source": public(lead_labels.get(p.get("lead_source"), p.get("lead_source"))) or "Not set",
+                     "primary_campaign": camp["primary"], "first_campaign": camp["first"], "last_campaign": camp["last"], "bucket": bucket})
+    return {"salesforce_fields": {k: bool(f) for k, f in fields.items()}, "rows": sorted(rows, key=lambda r: r["date"])}
 
 
 def summarise_deals(deal_rows, end):
@@ -604,22 +573,7 @@ def main():
     emails = marketing_emails(s, START_DATE)
     for e in emails["rows"]:
         e["campaign"] = public(campaign_names.get(e["campaign_id"], ""))
-    # All pipeline: when each contact joined each event list (sign-ups, attendees, booth scans)
-    event_joins = collections.defaultdict(list)
-    for _key, ename, _kind, _first, _last, signup_lists, attended_lists, _pages, _note in EVENT_ROWS:
-        for lname in signup_lists + attended_lists:
-            lst = found.get(lname)
-            if not lst:
-                continue
-            after = None
-            while True:
-                j = call(s, "GET", f"/crm/v3/lists/{lst['listId']}/memberships/join-order", params={"limit": 250, **({"after": after} if after else {})})
-                for m in j.get("results", []):
-                    event_joins[str(m["recordId"])].append((ename, ms(m.get("membershipTimestamp")) or 0))
-                after = (j.get("paging") or {}).get("next", {}).get("after")
-                if not after:
-                    break
-    pipeline_rows = all_pipeline(s, campaign_names, event_joins)
+    pipeline = all_pipeline(s)
     campaign_deals = [{"date": d["date"], "campaign": public(d["campaign"] or campaign_names.get(d["campaign_id"], "")),
                        "status": "Won" if d["won"] else "Open", "amount": round(d["amount"])}
                       for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]]
@@ -649,7 +603,7 @@ def main():
         "campaigns_checked": len(all_campaigns),
         "emails": public_emails(emails),
         "campaign_deals": campaign_deals,
-        "all_pipeline": pipeline_rows,
+        "all_pipeline": pipeline,
         "lists": public_lists(all_lists(s), START_DATE),
     }
     OUT.write_text(json.dumps(out, indent=1))
@@ -667,9 +621,8 @@ def main():
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
-    print("  all pipeline:", dict(collections.Counter(r["bucket"] for r in pipeline_rows)), "deals,",
-          {b: sum(r["amount"] for r in pipeline_rows if r["bucket"] == b) for b in ("Marketing sourced", "Marketing influenced", "Sales only")},
-          "| no contact on deal:", sum(1 for r in pipeline_rows if not r["contacts"]))
+    print("  all pipeline:", len(pipeline["rows"]), "open and won deals; Salesforce fields found:", pipeline["salesforce_fields"],
+          "| lead sources:", dict(collections.Counter(r["lead_source"] for r in pipeline["rows"])))
     print("  campaign deals:", [(d["date"], d["campaign"], d["status"]) for d in campaign_deals])
     print("  emails with a campaign:", sum(1 for e in emails["rows"] if e.get("campaign")), "of", len(emails["rows"]))
     print("  campaigns:", campaigns)
