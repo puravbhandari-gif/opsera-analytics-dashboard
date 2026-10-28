@@ -511,9 +511,14 @@ ASSET_PAGES = ("/resources/report/", "/resources/white-papers/", "/resources/ebo
 NOT_CAMPAIGNS = {"(direct)", "(organic)", "(referral)", "(not set)", "(none)", ""}
 
 
+# Left out of the public page (agreed 28 Oct 2026): target-account campaigns, sales outreach codes ("ET-...") and spam sites
+LEFT_OUT_CAMPAIGNS = re.compile(r"\b(abm|abx|microsite)\b|^(\d+-)?ET-|^[a-z0-9-]+\.[a-z]{2,}$", re.I)
+
+
 def not_campaign(name):
-    """Google's own placeholders, such as "(organic)", aren't campaigns. Names with "@" are left out (the page is public)."""
-    return name in NOT_CAMPAIGNS or (name.startswith("(") and name.endswith(")")) or "@" in name
+    """Google's own placeholders, such as "(organic)", aren't campaigns. Names with "@" are left out (the page is public),
+    and so are the campaigns in LEFT_OUT_CAMPAIGNS."""
+    return name in NOT_CAMPAIGNS or (name.startswith("(") and name.endswith(")")) or "@" in name or bool(LEFT_OUT_CAMPAIGNS.search(name))
 
 
 def live_title(path):

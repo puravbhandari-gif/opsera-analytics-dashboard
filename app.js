@@ -1887,6 +1887,71 @@ function renderEvents(hub, leads) {
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
 }
 
+// ---------- Campaigns: 1 row per campaign. Google Analytics link tags and HubSpot, side by side ----------
+
+let campaignsLoad = null;
+function openCampaigns() {
+  if (!campaignsLoad) campaignsLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderCampaigns(d, hub))
+    .catch((err) => { $("campaigns-status").textContent = `Couldn't load the campaign numbers: ${err.message}`; });
+  return campaignsLoad;
+}
+// HubSpot puts its campaign number in front of the name in link tags ("50406442-DG-FY27-..."); one name per campaign
+const campaignKey = (n) => { const x = n.replace(/^\d+-/, "").trim(); return /\s/.test(x) ? x : x.replace(/\+/g, " "); };   // "Magic+Quadrant+2026" is a link tag with + for spaces
+const leftOutCampaign = (n) => /\b(abm|abx|microsite)\b/i.test(n) || /^ET-/.test(n) || /^[a-z0-9-]+\.[a-z]{2,}$/i.test(n);
+function renderCampaigns(d, hub) {
+  const gaLast = lastFullDayPacific(d.end_date, d.pulled_at);
+  const dayOf = (i) => addDays(d.start_date, i);
+  let mode = "period";
+  const draw = () => {
+    const cur = mode === "all" ? { start: d.start_date, end: gaLast } : (periodsFor(periodMode, d.start_date, gaLast).cur || { start: d.start_date, end: gaLast });
+    const rows = {};
+    const row = (name) => rows[campaignKey(name)] || (rows[campaignKey(name)] = { name: campaignKey(name), visits: 0, engaged: 0, forms: 0,
+      emails: 0, sends: 0, opens: 0, clicks: 0, deals: 0, amount: 0 });
+    const inRange = (date) => date >= cur.start && date <= cur.end;
+    for (const [day, c, , v, e] of d.campaign_visits) {
+      if (!inRange(dayOf(day)) || leftOutCampaign(campaignKey(d.campaigns[c]))) continue;
+      const r = row(d.campaigns[c]); r.visits += v; r.engaged += e;
+    }
+    for (const [day, , c, n] of d.forms) {
+      if (c < 0 || !inRange(dayOf(day)) || leftOutCampaign(campaignKey(d.campaigns[c]))) continue;
+      row(d.campaigns[c]).forms += n;
+    }
+    for (const e of (hub.emails?.rows || [])) {
+      if (!e.campaign || !inRange(e.sent_on) || leftOutCampaign(e.campaign)) continue;
+      const r = row(e.campaign); r.emails += 1; r.sends += e.sends; r.opens += e.opens; r.clicks += e.clicks;
+    }
+    for (const x of (hub.campaign_deals || [])) {
+      if (!x.campaign || !inRange(x.date) || leftOutCampaign(x.campaign)) continue;
+      const r = row(x.campaign); r.deals += 1; r.amount += x.amount;
+    }
+    const list = Object.values(rows).filter((r) => r.visits || r.forms || r.sends || r.deals);
+    $("campaigns-status").textContent = list.length ? "" : "No campaigns in this period.";
+    $("campaigns-title").textContent = `Every campaign, ${range(cur.start, cur.end)}`;
+    table($("campaigns-table"), { rows: list, search: "campaigns", sortKey: "visits", columns: [
+      { key: "name", label: "Campaign", search: true },
+      { key: "visits", label: "Visits", num: true, fmt: num },
+      { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "forms", label: "Form fills", num: true, fmt: num },
+      { key: "emails", label: "Emails sent", num: true, fmt: num },
+      { key: "sends", label: "Email sends", num: true, fmt: num },
+      { key: "opens", label: "Email opens", num: true, fmt: num },
+      { key: "clicks", label: "Email clicks", num: true, fmt: num },
+      { key: "deals", label: "Deals", num: true, fmt: num },
+      { key: "amount", label: "Deal amount", num: true, fmt: money },
+    ] });
+    $("campaigns-source").textContent = `Visits, engaged visits and form fills: Google Analytics, ${range(cur.start, cur.end)} (Pacific time). Form fills leave out job applications.`;
+    $("campaigns-hub-source").textContent = `Emails and deals: HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Emails by the day they were sent; deals by the day they were created, open or won.`;
+  };
+  $("campaigns-range").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    mode = b.dataset.r;
+    $("campaigns-range").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    draw();
+  });
+  monthlyTabs.push(draw);   // follows the period switch
+  draw();
+}
+
 function openContent() {
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
     .catch((err) => { $("content-status").textContent = `Couldn't load the content numbers: ${err.message}`; });
@@ -2068,6 +2133,7 @@ function showTab(name) {
   if (name === "todo") openTodo();
   if (name === "content") openContent();
   if (name === "search") openRankings();
+  if (name === "campaigns") openCampaigns();
   // the footer views have no tab in the row, so start them at the top of the page
   if (!document.querySelector(`.tabs button[data-tab="${name}"]`)) window.scrollTo(0, 0);
 }

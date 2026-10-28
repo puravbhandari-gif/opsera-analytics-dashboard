@@ -42,7 +42,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Google Ads on Customer journey, under the Paid ads funnel: spend, clicks, visits and cost per demo request by campaign.
 - [x] Google rankings on Google search: average position week by week for key pages, and their top searches.
 - [x] Events tab after Content: sign-ups, attended, event page form fills and meetings afterwards, 1 row per event.
-- [ ] Campaigns tab: visits, engaged visits, form fills, email sends, opens and clicks, and deals, 1 row per campaign.
+- [x] Campaigns tab: visits, engaged visits, form fills, email sends, opens and clicks, and deals, 1 row per campaign.
 - [x] Content scorecard tab.
 - [x] Download button on every table.
 - [ ] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.

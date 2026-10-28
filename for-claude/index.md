@@ -54,7 +54,7 @@ Demo requests are form fills on /demo. Contact forms are on /contact. The Gartne
 - [leads_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_month.csv): Leads tab: form fills by kind of form, by month. Source: Google Analytics (HubSpot form event). 7 rows.
 - [leads_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_week.csv): Leads tab: form fills by kind of form, by week. Source: Google Analytics (HubSpot form event). 31 rows.
 - [hubspot_event_lists.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/hubspot_event_lists.csv): Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot. 4 rows.
-- [events_one_row_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/events_one_row_each.csv): Each webinar, roundtable and event since 1 Apr 2026. Sign-ups, attended and meetings come from HubSpot; event page form fills from Google Analytics. Never add the two together. Blank means no data. 9 rows.
+- [events_one_row_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/events_one_row_each.csv): Each webinar, roundtable and event since 1 Apr 2026. Sign-ups, attended and meetings come from HubSpot; event page form fills from Google Analytics. Never add the two together. Blank means no data. 8 rows.
 
 ## Pages, campaigns and assets (the Look up tab)
 
@@ -75,8 +75,9 @@ Visits count people who landed on the page from outside the site. Page files lis
 - [page_titles_main.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_main.csv): The title of each page: main pages 1 level deep (the homepage, /demo, /pricing and the like). Source: Google Analytics. 446 rows.
 - page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /_hcms/preview/template/multi to /wp-json/wp/v2/posts/681](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/683 to /wp/login](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
 - [page_titles_resources.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_resources.csv): The title of each page: pages under /resources/. Source: Google Analytics. 94 rows.
-- [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 327 rows.
-- [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 523 rows.
+- [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 301 rows.
+- [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 486 rows.
+- [campaigns_since_1_apr.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_since_1_apr.csv): Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to 2026-10-26), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out. 219 rows.
 
 ## Content tab
 

@@ -15,6 +15,7 @@ import csv
 import datetime as dt
 import io
 import json
+import re
 import sys
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -371,6 +372,32 @@ def main():
         write("gtm_calendar", ["ship_date", "end_date", "item", "types"],
               [[i["date"], i.get("end", ""), i["name"], "; ".join(i["types"])] for i in gtm["items"]],
               f"Marketing launches, events and content from the GTM calendar, by ship date. The charts mark these dates. Source: {gtm['source']}, pulled {gtm['pulled_at'][:10]}")
+    # Campaigns since 1 Apr, the same rules as the Campaigns tab
+    def campaign_key(n):
+        x = re.sub(r"^\d+-", "", n).strip()
+        return x if re.search(r"\s", x) else x.replace("+", " ")
+    left_out = lambda n: re.search(r"\b(abm|abx|microsite)\b", n, re.I) or n.startswith("ET-") or re.fullmatch(r"[a-z0-9-]+\.[a-z]{2,}", n, re.I)
+    camp = collections.defaultdict(lambda: [0, 0, 0, 0, 0, 0, 0, 0, 0])
+    on = lambda n: (dt.date.fromisoformat(look["start_date"]) + dt.timedelta(days=n)).isoformat()
+    for dnum, c, _, v, e in look["campaign_visits"]:
+        k = campaign_key(look["campaigns"][c])
+        if not left_out(k) and on(dnum) <= ga_last:
+            camp[k][0] += v; camp[k][1] += e
+    for dnum, _, c, n in look["forms"]:
+        k = campaign_key(look["campaigns"][c]) if c >= 0 else ""
+        if k and not left_out(k) and on(dnum) <= ga_last:
+            camp[k][2] += n
+    for e in (hub.get("emails") or {}).get("rows", []):
+        if e.get("campaign") and not left_out(e["campaign"]):
+            x = camp[e["campaign"]]; x[3] += 1; x[4] += e["sends"]; x[5] += e["opens"]; x[6] += e["clicks"]
+    for d in hub.get("campaign_deals", []):
+        if d["campaign"] and not left_out(d["campaign"]):
+            camp[d["campaign"]][7] += 1; camp[d["campaign"]][8] += d["amount"]
+    if camp:
+        write("campaigns_since_1_apr", ["campaign", "visits_ga", "engaged_visits_ga", "form_fills_ga", "emails_sent_hubspot", "email_sends", "email_opens",
+                                        "email_clicks", "deals_hubspot", "deal_amount_usd"],
+              [[k, *x] for k, x in sorted(camp.items(), key=lambda kv: -kv[1][0]) if x[0] or x[2] or x[4] or x[7]],
+              f"Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to {ga_last}), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out")
     if hub.get("event_rows"):
         fills = collections.Counter()
         for line in leads["lines"].values():
