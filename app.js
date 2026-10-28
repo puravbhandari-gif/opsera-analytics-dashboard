@@ -1968,10 +1968,13 @@ function renderPipeline(sf) {
   const days = [...new Set(Object.values(sf.exports))].sort();
   const exports = days.length === 2 && days[0].slice(0, 7) === days[1].slice(0, 7) ? `${Number(days[0].slice(8))} and ${dayYear(days[1])}` : days.map(dayYear).join(" and ");
   const when = range(sf.opportunities_from, sf.opportunities_to);
-  $("pipe-cards").innerHTML =
-    card("Marketing sourced", `${num(sum(months, "sourced_deals"))} deals`, `${money(sum(months, "sourced_value"))} pipeline`) +
-    card("Marketing influenced", `${num(sum(months, "influenced_deals"))} deals`, `${money(sum(months, "influenced_value"))} pipeline`);
-  $("pipe-cards-source").textContent = `Source: Salesforce opportunities created ${when}, open and won, exported ${exports}. Updated when new exports arrive, not on Mondays.`;
+  // The cards follow the period switch, by the day each deal was created, against the period before
+  const dealsLast = addDays(sf.exports.opportunities, -1), deals = (n) => `${num(n)} deal${n === 1 ? "" : "s"}`;
+  const bucketMetric = (label, k) => ({ label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals,
+    sub: (a, b) => `${money(rangeSum(sf.days, `${k}_value`)(a, b))} pipeline` });
+  compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast,
+    source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open and won, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
+    metrics: [bucketMetric("Marketing sourced", "sourced"), bucketMetric("Marketing influenced", "influenced")] });
   $("pipe-undercount").textContent = `These numbers are undercounted: ${sf.share_without_contact_pct}% of open and won opportunities have no contact attached in Salesforce, so their campaigns can't be seen.`;
 
   let group = "month";
@@ -2010,10 +2013,12 @@ function renderPipeline(sf) {
   $("pipe-campaigns-source").textContent = `Source: Salesforce Primary Campaign Source, Attrib First and Last Campaign, and campaign touches on each opportunity, created ${when}. Target-account campaign names are hidden.`;
 
   const mt = sf.meetings, OUT = ["Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded"];
-  const outcome = (k) => sum(mt.months.map((m) => ({ n: m.outcomes[k] || 0 })), "n");
-  $("pipe-meet-cards").innerHTML = card("People with a meeting", num(mt.people), "After joining a marketing campaign") +
-    card("Held", num(outcome("Meeting Held"))) + card("Cancelled", num(outcome("Meeting Cancelled"))) +
-    card("No outcome recorded", num(outcome("Not recorded")));
+  const outcome = (k) => rangeSum(mt.days, (r) => r.outcomes[k] || 0);
+  compare({ id: "pipe-meet", start: mt.since, last: addDays(sf.exports.meetings, -1),
+    source: (a, b) => `Source: Salesforce campaign members with a meeting on ${range(a, b)}, exported ${dayYear(sf.exports.meetings)}.`,
+    metrics: [{ label: "People with a meeting", value: rangeSum(mt.days, "people"), fmt: num, sub: "After joining a marketing campaign" },
+      { label: "Held", value: outcome("Meeting Held"), fmt: num }, { label: "Cancelled", value: outcome("Meeting Cancelled"), fmt: num, lowerIsBetter: true },
+      { label: "No outcome recorded", value: outcome("Not recorded"), fmt: num, lowerIsBetter: true }] });
   table($("pipe-meet-months"), { rows: mt.months.map((m) => ({ key: m.month, label: month(m.month), people: m.people, ...Object.fromEntries(OUT.map((k) => [k, m.outcomes[k] || 0])) })),
     sortKey: "key", columns: [
       { key: "key", label: "Month of the meeting", fmt: (v, r) => esc(r.label), csv: (r) => r.label },
@@ -2284,7 +2289,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderLeadsHubspot(hub);
     renderEvents(hub, leads);
     load("salesforce_pipeline.json").then(renderPipeline)
-      .catch(() => { $("pipe-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; });
+      .catch(() => { $("pipe-cmp-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; });
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

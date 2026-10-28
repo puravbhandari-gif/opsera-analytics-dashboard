@@ -5,6 +5,7 @@
   "campaign_touches": "2026-10-27",
   "meetings": "2026-10-27"
  },
+ "opportunities_cover_from": "2026-05-01",
  "opportunities_from": "2026-05-08",
  "opportunities_to": "2026-10-23",
  "share_without_contact_pct": 80,
@@ -56,6 +57,162 @@
    "sourced_value": 350000,
    "influenced_deals": 2,
    "influenced_value": 150000
+  }
+ ],
+ "days": [
+  {
+   "date": "2026-05-08",
+   "sourced_deals": 2,
+   "sourced_value": 198375,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-05-20",
+   "sourced_deals": 3,
+   "sourced_value": 300000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-06-08",
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-06-10",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 150000
+  },
+  {
+   "date": "2026-07-07",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 1,
+   "influenced_value": 100000
+  },
+  {
+   "date": "2026-07-08",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 100000
+  },
+  {
+   "date": "2026-07-10",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-07-13",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 2,
+   "influenced_value": 200000
+  },
+  {
+   "date": "2026-07-16",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-07-22",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-07-28",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 2,
+   "influenced_value": 200000
+  },
+  {
+   "date": "2026-08-12",
+   "sourced_deals": 1,
+   "sourced_value": 268000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-08-13",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 150000
+  },
+  {
+   "date": "2026-08-21",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 200000
+  },
+  {
+   "date": "2026-09-01",
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-09-22",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 500000
+  },
+  {
+   "date": "2026-09-23",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 100000
+  },
+  {
+   "date": "2026-09-24",
+   "sourced_deals": 1,
+   "sourced_value": 588000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-10-01",
+   "sourced_deals": 1,
+   "sourced_value": 200000,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-10-06",
+   "sourced_deals": 1,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0
+  },
+  {
+   "date": "2026-10-07",
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 1,
+   "influenced_value": 150000
+  },
+  {
+   "date": "2026-10-22",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 0
   }
  ],
  "campaigns": [
@@ -180,6 +337,570 @@
   }
  ],
  "meetings": {
+  "since": "2026-04-01",
+  "days": [
+   {
+    "date": "2026-04-02",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-06",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-08",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-17",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-23",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-24",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-04-30",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-05-11",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 2
+    }
+   },
+   {
+    "date": "2026-05-15",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 2
+    }
+   },
+   {
+    "date": "2026-05-18",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-05-19",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-01",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-02",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-08",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-09",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 1,
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-12",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-15",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-19",
+    "people": 4,
+    "outcomes": {
+     "Not recorded": 4
+    }
+   },
+   {
+    "date": "2026-06-22",
+    "people": 4,
+    "outcomes": {
+     "Not recorded": 4
+    }
+   },
+   {
+    "date": "2026-06-23",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 2
+    }
+   },
+   {
+    "date": "2026-06-24",
+    "people": 4,
+    "outcomes": {
+     "Not recorded": 4
+    }
+   },
+   {
+    "date": "2026-06-25",
+    "people": 4,
+    "outcomes": {
+     "Meeting Held": 1,
+     "Not recorded": 3
+    }
+   },
+   {
+    "date": "2026-06-26",
+    "people": 5,
+    "outcomes": {
+     "Not recorded": 4,
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-06-29",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-06-30",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 2
+    }
+   },
+   {
+    "date": "2026-07-01",
+    "people": 6,
+    "outcomes": {
+     "Not recorded": 6
+    }
+   },
+   {
+    "date": "2026-07-02",
+    "people": 4,
+    "outcomes": {
+     "Not recorded": 3,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-07-03",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-06",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-07",
+    "people": 3,
+    "outcomes": {
+     "Not recorded": 3
+    }
+   },
+   {
+    "date": "2026-07-08",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-09",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 1,
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-07-10",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-13",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-14",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-15",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-07-22",
+    "people": 1,
+    "outcomes": {
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-08-01",
+    "people": 8,
+    "outcomes": {
+     "Meeting Changed": 1,
+     "Meeting No Show - New Date TBD": 1,
+     "Meeting Cancelled": 6
+    }
+   },
+   {
+    "date": "2026-08-03",
+    "people": 2,
+    "outcomes": {
+     "Meeting Held": 1,
+     "Meeting Changed": 1
+    }
+   },
+   {
+    "date": "2026-08-05",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-10",
+    "people": 4,
+    "outcomes": {
+     "Meeting No Show - New Date TBD": 1,
+     "Meeting Cancelled": 3
+    }
+   },
+   {
+    "date": "2026-08-12",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 2
+    }
+   },
+   {
+    "date": "2026-08-13",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-08-14",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-17",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 1,
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-08-18",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-19",
+    "people": 2,
+    "outcomes": {
+     "Meeting No Show - New Date TBD": 1,
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-08-20",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 1,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-21",
+    "people": 1,
+    "outcomes": {
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-08-24",
+    "people": 2,
+    "outcomes": {
+     "Meeting Changed": 1,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-25",
+    "people": 1,
+    "outcomes": {
+     "Meeting No Show - New Date TBD": 1
+    }
+   },
+   {
+    "date": "2026-08-26",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-08-27",
+    "people": 2,
+    "outcomes": {
+     "Meeting Held": 2
+    }
+   },
+   {
+    "date": "2026-08-28",
+    "people": 2,
+    "outcomes": {
+     "Meeting Held": 1,
+     "Meeting Changed": 1
+    }
+   },
+   {
+    "date": "2026-08-31",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-09-02",
+    "people": 1,
+    "outcomes": {
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-09-03",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 1,
+     "Meeting No Show - New Date TBD": 1
+    }
+   },
+   {
+    "date": "2026-09-08",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 2
+    }
+   },
+   {
+    "date": "2026-09-09",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 1,
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-09-10",
+    "people": 1,
+    "outcomes": {
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-09-14",
+    "people": 3,
+    "outcomes": {
+     "Meeting Held": 1,
+     "Meeting Cancelled": 2
+    }
+   },
+   {
+    "date": "2026-09-21",
+    "people": 2,
+    "outcomes": {
+     "Meeting Cancelled": 2
+    }
+   },
+   {
+    "date": "2026-09-22",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 1,
+     "Meeting Changed": 1
+    }
+   },
+   {
+    "date": "2026-09-23",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-09-25",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-09-28",
+    "people": 2,
+    "outcomes": {
+     "Not recorded": 1,
+     "Meeting Changed": 1
+    }
+   },
+   {
+    "date": "2026-09-29",
+    "people": 1,
+    "outcomes": {
+     "Meeting Cancelled": 1
+    }
+   },
+   {
+    "date": "2026-10-01",
+    "people": 3,
+    "outcomes": {
+     "Meeting No Show - New Date TBD": 1,
+     "Meeting Held": 1,
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-10-02",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-10-05",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-10-06",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-10-08",
+    "people": 1,
+    "outcomes": {
+     "Not recorded": 1
+    }
+   },
+   {
+    "date": "2026-10-14",
+    "people": 3,
+    "outcomes": {
+     "Meeting Cancelled": 1,
+     "Not recorded": 2
+    }
+   },
+   {
+    "date": "2026-10-16",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-10-20",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-10-22",
+    "people": 1,
+    "outcomes": {
+     "Meeting Held": 1
+    }
+   },
+   {
+    "date": "2026-10-26",
+    "people": 3,
+    "outcomes": {
+     "Not recorded": 3
+    }
+   }
+  ],
   "months": [
    {
     "month": "2026-04",
@@ -363,12 +1084,12 @@
     "flag": ""
    },
    {
-    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
+    "campaign": "DG-FY26-Q4-Trends-Webinar",
     "people": 1,
     "flag": ""
    },
    {
-    "campaign": "DG-FY26-Q4-Trends-Webinar",
+    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
     "people": 1,
     "flag": ""
    },
@@ -378,7 +1099,7 @@
     "flag": ""
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1,
     "flag": ""
    },
@@ -388,7 +1109,7 @@
     "flag": ""
    },
    {
-    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1,
     "flag": ""
    },
@@ -428,12 +1149,12 @@
     "flag": ""
    },
    {
-    "campaign": "DG-FY23-Q2-GitHub Actions",
+    "campaign": "MQL Tracking",
     "people": 1,
     "flag": ""
    },
    {
-    "campaign": "MQL Tracking",
+    "campaign": "DG-FY23-Q2-GitHub Actions",
     "people": 1,
     "flag": ""
    },

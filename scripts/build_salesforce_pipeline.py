@@ -75,6 +75,8 @@ def read(kind):
     table = max(p.tables, key=len)
     head = table[0]
     stamp = re.search(r"(\d{4}-\d{2}-\d{2})-\d{2}-\d{2}-\d{2}", found[-1]).group(1)
+    since = re.search(r"-(\d{2})-(\d{2})-(\d{4})\.xls$", found[-1])   # "…-05-01-2026.xls": the report starts on 1 May 2026
+    read.covers_from = f"{since.group(3)}-{since.group(1)}-{since.group(2)}" if since else None
     return [dict(zip(head, r)) for r in table[1:] if any(r)], stamp
 
 
@@ -106,6 +108,7 @@ def fiscal_quarter(d):
 
 def main():
     opps, opps_on = read("opportunities")
+    opps_cover_from = read.covers_from
     touches, touches_on = read("touches")
     meets, meets_on = read("meetings")
 
@@ -115,6 +118,7 @@ def main():
             touched[t["Opportunity Name"]].add(t["Campaign Name"])
 
     by_month = collections.defaultdict(lambda: {"sourced": [0, 0], "influenced": [0, 0]})
+    by_day = collections.defaultdict(lambda: {"sourced": [0, 0], "influenced": [0, 0]})   # for the period switch
     by_campaign = collections.defaultdict(lambda: [0, 0])
     counted = no_contact = 0
     for o in opps:
@@ -133,9 +137,9 @@ def main():
             bucket = "influenced" if campaign else None
         if not bucket:
             continue   # sales only: not written
-        x = by_month[created.strftime("%Y-%m")][bucket]
-        x[0] += 1
-        x[1] += amount
+        for x in (by_month[created.strftime("%Y-%m")][bucket], by_day[created.isoformat()][bucket]):
+            x[0] += 1
+            x[1] += amount
         c = by_campaign[(bucket, public(campaign))]
         c[0] += 1
         c[1] += amount
@@ -148,23 +152,30 @@ def main():
         p = people.setdefault((m.get("Email") or "").lower() or id(m), {"date": when, "outcome": m.get("Meeting Outcome") or "Not recorded", "campaigns": set()})
         p["campaigns"].add(public(campaign))
     meet_months = collections.defaultdict(collections.Counter)
+    meet_days = collections.defaultdict(collections.Counter)
     meet_campaigns = collections.Counter()
     for p in people.values():
         meet_months[p["date"].strftime("%Y-%m")][p["outcome"]] += 1
+        meet_days[p["date"].isoformat()][p["outcome"]] += 1
         for c in p["campaigns"]:
             meet_campaigns[c] += 1
 
     out = {
         "source": "Salesforce reports",
         "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "meetings": meets_on},
+        "opportunities_cover_from": opps_cover_from or START.isoformat(),
         "opportunities_from": min(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),
         "opportunities_to": max(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),
         "share_without_contact_pct": round(no_contact / counted * 100) if counted else None,
         "months": [{"month": k, "quarter": fiscal_quarter(day(f"{k[5:]}/01/{k[:4]}")),
                     "sourced_deals": v["sourced"][0], "sourced_value": v["sourced"][1],
                     "influenced_deals": v["influenced"][0], "influenced_value": v["influenced"][1]} for k, v in sorted(by_month.items())],
+        "days": [{"date": k, "sourced_deals": v["sourced"][0], "sourced_value": v["sourced"][1],
+                  "influenced_deals": v["influenced"][0], "influenced_value": v["influenced"][1]} for k, v in sorted(by_day.items())],
         "campaigns": [{"bucket": b, "campaign": c, "deals": v[0], "value": v[1], "flag": CHECKING.get(c, "")} for (b, c), v in sorted(by_campaign.items(), key=lambda x: -x[1][1])],
-        "meetings": {"months": [{"month": k, "people": sum(v.values()), "outcomes": dict(v)} for k, v in sorted(meet_months.items())],
+        "meetings": {"since": START.isoformat(),
+                     "days": [{"date": k, "people": sum(v.values()), "outcomes": dict(v)} for k, v in sorted(meet_days.items())],
+                     "months": [{"month": k, "people": sum(v.values()), "outcomes": dict(v)} for k, v in sorted(meet_months.items())],
                      "campaigns": [{"campaign": c, "people": n, "flag": CHECKING.get(c, "")} for c, n in meet_campaigns.most_common()],
                      "people": len(people)},
     }
