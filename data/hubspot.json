@@ -12989,5 +12989,151 @@
     ]
    }
   ]
- }
+ },
+ "event_rows": [
+  {
+   "key": "appsec_agents",
+   "name": "Meet the Opsera AppSec agents",
+   "kind": "Webinar",
+   "first_day": "2026-04-08",
+   "last_day": "2026-04-08",
+   "pages": [
+    "/events/meet-the-opsera-appsec-agents-for-ai-builders"
+   ],
+   "note": "",
+   "signed_up": 21,
+   "attended": null,
+   "meetings_after": 0,
+   "people_with_meeting": 0,
+   "meetings_upcoming": 0
+  },
+  {
+   "key": "ai_benchmark",
+   "name": "AI benchmark report",
+   "kind": "Webinar",
+   "first_day": null,
+   "last_day": null,
+   "pages": [],
+   "note": "Event date not known",
+   "signed_up": 49,
+   "attended": null,
+   "meetings_after": null,
+   "people_with_meeting": null,
+   "meetings_upcoming": null
+  },
+  {
+   "key": "ai_adoption",
+   "name": "Copilot, Cursor, Claude Code: what 250k developers revealed",
+   "kind": "Webinar",
+   "first_day": "2026-04-29",
+   "last_day": "2026-04-29",
+   "pages": [
+    "/events/copilot-cursor-claude-code-what-250k-developers-revealed"
+   ],
+   "note": "Sign-ups include people who asked for the recording",
+   "signed_up": 485,
+   "attended": null,
+   "meetings_after": 22,
+   "people_with_meeting": 8,
+   "meetings_upcoming": 5
+  },
+  {
+   "key": "mq_roundtable",
+   "name": "Gartner Magic Quadrant roundtable",
+   "kind": "Roundtable",
+   "first_day": null,
+   "last_day": null,
+   "pages": [],
+   "note": "Event date not known",
+   "signed_up": 62,
+   "attended": null,
+   "meetings_after": null,
+   "people_with_meeting": null,
+   "meetings_upcoming": null
+  },
+  {
+   "key": "ai_budget",
+   "name": "AI budget burning: turning AI spend into business results",
+   "kind": "Webinar",
+   "first_day": "2026-06-25",
+   "last_day": "2026-06-25",
+   "pages": [
+    "/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
+    "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results"
+   ],
+   "note": "No HubSpot sign-up list",
+   "signed_up": null,
+   "attended": null,
+   "meetings_after": null,
+   "people_with_meeting": null,
+   "meetings_upcoming": null
+  },
+  {
+   "key": "tokenomics",
+   "name": "Tokenomics: the currency of enterprise AI",
+   "kind": "Webinar",
+   "first_day": "2026-09-15",
+   "last_day": "2026-09-15",
+   "pages": [
+    "/events/tokenomics-the-currency-of-enterprise-ai"
+   ],
+   "note": "Sign-ups may overlap with the event page form",
+   "signed_up": 83,
+   "attended": null,
+   "meetings_after": 1,
+   "people_with_meeting": 1,
+   "meetings_upcoming": 1
+  },
+  {
+   "key": "flutter",
+   "name": "Flutter 2026: the AI-SDLC Summit",
+   "kind": "Event",
+   "first_day": "2026-10-01",
+   "last_day": "2026-10-01",
+   "pages": [
+    "/flutter-2026-ai-sdlc-summit"
+   ],
+   "note": "Sign-ups are the Luma guest list",
+   "signed_up": 174,
+   "attended": 87,
+   "meetings_after": 5,
+   "people_with_meeting": 4,
+   "meetings_upcoming": 6
+  },
+  {
+   "key": "gartner",
+   "name": "Gartner IT Symposium/Xpo, Orlando",
+   "kind": "Event",
+   "first_day": "2026-10-19",
+   "last_day": "2026-10-22",
+   "pages": [
+    "/gartner-symposium",
+    "/events/gartner-summit-2026"
+   ],
+   "note": "Attended means booth scans",
+   "signed_up": null,
+   "attended": 267,
+   "meetings_after": 0,
+   "people_with_meeting": 0,
+   "meetings_upcoming": 0
+  },
+  {
+   "key": "github_universe",
+   "name": "GitHub Universe",
+   "kind": "Event",
+   "first_day": "2026-10-28",
+   "last_day": "2026-10-29",
+   "pages": [
+    "/events/github-universe",
+    "/github-universe-happy-hour"
+   ],
+   "note": "No HubSpot list yet",
+   "signed_up": null,
+   "attended": null,
+   "meetings_after": null,
+   "people_with_meeting": null,
+   "meetings_upcoming": null
+  }
+ ],
+ "event_rows_pulled_at": "2026-10-28T14:02+05:30"
 }

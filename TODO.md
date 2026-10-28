@@ -41,7 +41,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] GTM calendar markers on every dated chart, from Notion, with an on/off switch and a filter by type.
 - [x] Google Ads on Customer journey, under the Paid ads funnel: spend, clicks, visits and cost per demo request by campaign.
 - [x] Google rankings on Google search: average position week by week for key pages, and their top searches.
-- [ ] Events tab after Content: sign-ups, attended, event page form fills and meetings afterwards, 1 row per event.
+- [x] Events tab after Content: sign-ups, attended, event page form fills and meetings afterwards, 1 row per event.
 - [ ] Campaigns tab: visits, engaged visits, form fills, email sends, opens and clicks, and deals, 1 row per campaign.
 - [x] Content scorecard tab.
 - [x] Download button on every table.

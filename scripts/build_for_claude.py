@@ -371,6 +371,18 @@ def main():
         write("gtm_calendar", ["ship_date", "end_date", "item", "types"],
               [[i["date"], i.get("end", ""), i["name"], "; ".join(i["types"])] for i in gtm["items"]],
               f"Marketing launches, events and content from the GTM calendar, by ship date. The charts mark these dates. Source: {gtm['source']}, pulled {gtm['pulled_at'][:10]}")
+    if hub.get("event_rows"):
+        fills = collections.Counter()
+        for line in leads["lines"].values():
+            for pg in line["pages"]:
+                fills[pg["page"]] += pg["count"]
+        blank = lambda v: "" if v is None else v
+        write("events_one_row_each", ["first_day", "last_day", "event", "kind", "signed_up_hubspot", "attended_hubspot", "event_page_form_fills_google_analytics",
+                                      "meetings_afterwards_hubspot", "people_with_a_meeting", "meetings_booked_for_later", "note"],
+              [[e["first_day"] or "", e["last_day"] or "", e["name"], e["kind"], blank(e["signed_up"]), blank(e["attended"]),
+                sum(fills[p] for p in e["pages"]) if e["pages"] else "", blank(e["meetings_after"]), blank(e["people_with_meeting"]),
+                blank(e["meetings_upcoming"]), e["note"]] for e in hub["event_rows"]],
+              "Each webinar, roundtable and event since 1 Apr 2026. Sign-ups, attended and meetings come from HubSpot; event page form fills from Google Analytics. Never add the two together. Blank means no data")
     write("hubspot_event_lists", ["list", "members", "note", "first_added", "last_added"],
           [[e["label"], e["members"], e.get("note") or "", e["joined_daily"][0]["date"] if e["joined_daily"] else "", e["joined_daily"][-1]["date"] if e["joined_daily"] else ""]
            for e in hub["events"]], "Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot")
@@ -486,6 +498,7 @@ Demo requests are form fills on /demo. Contact forms are on /contact. The Gartne
 
 {listing('leads')}
 {listing('hubspot_event_lists')}
+{listing('events_one_row_each')}
 
 ## Pages, campaigns and assets (the Look up tab)
 

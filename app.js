@@ -1863,6 +1863,30 @@ const CONTENT_TYPES = [
 ];
 
 let contentLoad = null;   // loads the page and deal data the first time the tab is opened
+// ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------
+
+function renderEvents(hub, leads) {
+  const rows = hub.event_rows || [];
+  if (!rows.length) { $("events-table").innerHTML = `<p class="muted">No data</p>`; return; }
+  const fills = {};
+  Object.values(leads.lines).forEach((l) => l.pages.forEach((p) => { fills[p.page] = (fills[p.page] || 0) + p.count; }));
+  const list = rows.map((e) => ({ ...e,
+    when: e.first_day ? (e.first_day === e.last_day ? dayYear(e.first_day) : range(e.first_day, e.last_day)) : "Date not known",
+    form_fills: e.pages.length ? e.pages.reduce((t, p) => t + (fills[p] || 0), 0) : null }));
+  const dash = (v) => (v == null ? "-" : num(v));
+  table($("events-table"), { rows: list, search: "events", sortKey: "first_day", columns: [
+    { key: "name", label: "Event", search: true, fmt: (v, r) => `${esc(v)}<br><span class="muted">${esc(r.kind)}. ${r.when}</span>`, csv: (r) => `${r.name} | ${r.kind} | ${r.first_day || "Date not known"}${r.last_day && r.last_day !== r.first_day ? ` to ${r.last_day}` : ""}` },
+    { key: "signed_up", label: "Signed up", num: true, fmt: dash },
+    { key: "attended", label: "Attended", num: true, fmt: dash },
+    { key: "form_fills", label: "Event page form fills", num: true, fmt: dash },
+    { key: "meetings_after", label: "Meetings afterwards", num: true, fmt: dash },
+    { key: "people_with_meeting", label: "People with a meeting", num: true, fmt: dash },
+    { key: "meetings_upcoming", label: "Meetings booked for later", num: true, fmt: dash },
+    { key: "note", label: "Note", search: true, sort: false },
+  ] });
+  $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
+}
+
 function openContent() {
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
     .catch((err) => { $("content-status").textContent = `Couldn't load the content numbers: ${err.message}`; });
@@ -2098,6 +2122,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderJourney(ga, leads, hub, gsc);
     renderAeo(ga, hub);
     renderLeadsHubspot(hub);
+    renderEvents(hub, leads);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

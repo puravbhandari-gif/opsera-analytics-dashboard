@@ -54,6 +54,7 @@ Demo requests are form fills on /demo. Contact forms are on /contact. The Gartne
 - [leads_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_month.csv): Leads tab: form fills by kind of form, by month. Source: Google Analytics (HubSpot form event). 7 rows.
 - [leads_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_week.csv): Leads tab: form fills by kind of form, by week. Source: Google Analytics (HubSpot form event). 31 rows.
 - [hubspot_event_lists.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/hubspot_event_lists.csv): Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot. 4 rows.
+- [events_one_row_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/events_one_row_each.csv): Each webinar, roundtable and event since 1 Apr 2026. Sign-ups, attended and meetings come from HubSpot; event page form fills from Google Analytics. Never add the two together. Blank means no data. 9 rows.
 
 ## Pages, campaigns and assets (the Look up tab)
 

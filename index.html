@@ -46,6 +46,7 @@
     <button role="tab" data-tab="team">Team metrics</button>
     <button role="tab" data-tab="journey">Customer journey</button>
     <button role="tab" data-tab="content">Content</button>
+    <button role="tab" data-tab="events">Events</button>
     <button role="tab" data-tab="search">Google search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
@@ -59,6 +60,17 @@
 
 <main>
   <!-- Google Search -->
+  <section id="tab-events" class="tab" role="tabpanel" hidden>
+    <h2>Events</h2>
+    <p class="lead">Each webinar, roundtable and event since 1 Apr: who signed up, who came, form fills on its page, and meetings with those people afterwards.</p>
+    <div class="panel">
+      <h3>Every event</h3>
+      <div id="events-table"></div>
+      <p class="source" id="events-source"></p>
+      <p class="note">Signed up and attended come from the event's HubSpot lists. Event page form fills come from Google Analytics, so they're never added to the HubSpot numbers. Meetings afterwards are calendar meetings with anyone on the event's lists, held after its last day and up to yesterday; existing customers are included. Meetings booked for a later date show on their own.</p>
+    </div>
+  </section>
+
   <section id="tab-content" class="tab" role="tabpanel" hidden>
     <h2>Content</h2>
     <p class="lead">How each blog post, report, white paper, eBook, guide and comparison page did in the period above.</p>
@@ -785,6 +797,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=63"></script>
+<script src="app.js?v=65"></script>
 </body>
 </html>
