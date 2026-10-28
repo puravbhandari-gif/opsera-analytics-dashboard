@@ -25,6 +25,6 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Business questions check, after the team replies.
 - [ ] Personal views: saved links per person.
 - [ ] Campaigns tab.
-- [ ] Content scorecard tab.
+- [x] Content scorecard tab.
 - [ ] Download button on every table.
 - [ ] Monday Slack post with the top numbers.
