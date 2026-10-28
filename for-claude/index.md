@@ -38,6 +38,7 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 - [customer_journey_summary_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/customer_journey_summary_by_month.csv): Customer journey tab, top numbers, by month. Sources: Google Analytics (demo requests), HubSpot (meetings and deals). 7 rows.
 - [customer_journey_summary_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/customer_journey_summary_by_week.csv): Customer journey tab, top numbers, by week. Sources: Google Analytics (demo requests), HubSpot (meetings and deals). 31 rows.
 - [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name. 5 rows.
+- [google_ads_by_campaign.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_ads_by_campaign.csv): Google Ads spend and ad clicks (counted by Google Ads) with visits and demo requests (counted by Google Analytics), per campaign per month. Brand search visits and demo requests from 16 Jun 2026 are too low because of a tracking problem. Source: Google Analytics, opsera.ai 2026, linked to Google Ads. 12 rows.
 
 ## Website visits tab
 

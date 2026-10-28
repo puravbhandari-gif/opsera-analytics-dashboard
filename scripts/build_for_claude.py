@@ -10,6 +10,7 @@ totals, page addresses are cut at "?" and "@", and no names or emails are writte
 (LinkedIn post titles, page titles and campaign names, as on the dashboard).
 Agreed with Purav on 27 Oct 2026.
 """
+import collections
 import csv
 import datetime as dt
 import io
@@ -349,6 +350,14 @@ def main():
     write("linkedin_exec_post_list", ["posted_on", "post", "link", "reactions", "comments"],
           [[x["date"], x["title"], x["link"], x["reactions"], x["comments"]] for x in kpl["posts"]],
           "Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify")
+    ads = collections.defaultdict(lambda: [0.0, 0, 0, 0])
+    for r in ga.get("google_ads_daily", []):
+        x = ads[(r["date"][:7], r["campaign"])]
+        x[0] += r["spend"]; x[1] += r["ad_clicks"]; x[2] += r["visits"]; x[3] += r["demo_requests"]
+    if ads:
+        write("google_ads_by_campaign", ["month", "campaign", "spend_usd", "ad_clicks", "visits", "demo_requests"],
+              [[m, c, round(x[0], 2), x[1], x[2], x[3]] for (m, c), x in sorted(ads.items())],
+              "Google Ads spend and ad clicks (counted by Google Ads) with visits and demo requests (counted by Google Analytics), per campaign per month. Brand search visits and demo requests from 16 Jun 2026 are too low because of a tracking problem. Source: Google Analytics, opsera.ai 2026, linked to Google Ads")
     if (DATA / "gtm_calendar.json").exists():
         gtm = json.loads((DATA / "gtm_calendar.json").read_text())
         write("gtm_calendar", ["ship_date", "end_date", "item", "types"],
@@ -456,6 +465,7 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 
 {listing('customer_journey')}
 {listing('deals_one_line_each')}
+{listing('google_ads')}
 
 ## Website visits tab
 

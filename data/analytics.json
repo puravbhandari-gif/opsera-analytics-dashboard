@@ -49676,5 +49676,2725 @@
    "engaged": 25,
    "robots": 866
   }
+ ],
+ "google_ads_daily": [
+  {
+   "date": "2026-04-01",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.27,
+   "ad_clicks": 11,
+   "visits": 11,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-01",
+   "campaign": "Competitors",
+   "spend": 27.27,
+   "ad_clicks": 12,
+   "visits": 9,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-02",
+   "campaign": "Brand - Search - M+D",
+   "spend": 18.77,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-02",
+   "campaign": "Competitors",
+   "spend": 23.49,
+   "ad_clicks": 13,
+   "visits": 8,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-03",
+   "campaign": "Brand - Search - M+D",
+   "spend": 25.58,
+   "ad_clicks": 8,
+   "visits": 12,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-03",
+   "campaign": "Competitors",
+   "spend": 30.38,
+   "ad_clicks": 17,
+   "visits": 13,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-04",
+   "campaign": "Competitors",
+   "spend": 23.06,
+   "ad_clicks": 11,
+   "visits": 9,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-05",
+   "campaign": "Brand - Search - M+D",
+   "spend": 1.84,
+   "ad_clicks": 1,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-05",
+   "campaign": "Competitors",
+   "spend": 19.75,
+   "ad_clicks": 13,
+   "visits": 10,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-06",
+   "campaign": "Brand - Search - M+D",
+   "spend": 18.99,
+   "ad_clicks": 6,
+   "visits": 9,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-06",
+   "campaign": "Competitors",
+   "spend": 28.05,
+   "ad_clicks": 14,
+   "visits": 14,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-07",
+   "campaign": "Brand - Search - M+D",
+   "spend": 28.01,
+   "ad_clicks": 6,
+   "visits": 6,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-07",
+   "campaign": "Competitors",
+   "spend": 15.7,
+   "ad_clicks": 9,
+   "visits": 7,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-08",
+   "campaign": "Brand - Search - M+D",
+   "spend": 25.2,
+   "ad_clicks": 7,
+   "visits": 11,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-08",
+   "campaign": "Competitors",
+   "spend": 2.81,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-09",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.33,
+   "ad_clicks": 7,
+   "visits": 6,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-09",
+   "campaign": "Competitors",
+   "spend": 13.31,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-10",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.25,
+   "ad_clicks": 5,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-10",
+   "campaign": "Competitors",
+   "spend": 46.81,
+   "ad_clicks": 11,
+   "visits": 9,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-11",
+   "campaign": "Brand - Search - M+D",
+   "spend": 7.46,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-11",
+   "campaign": "Competitors",
+   "spend": 49.96,
+   "ad_clicks": 6,
+   "visits": 4,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-12",
+   "campaign": "Brand - Search - M+D",
+   "spend": 0.0,
+   "ad_clicks": 0,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-12",
+   "campaign": "Competitors",
+   "spend": 38.64,
+   "ad_clicks": 6,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-13",
+   "campaign": "Brand - Search - M+D",
+   "spend": 29.93,
+   "ad_clicks": 5,
+   "visits": 6,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-13",
+   "campaign": "Competitors",
+   "spend": 22.41,
+   "ad_clicks": 6,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-14",
+   "campaign": "Brand - Search - M+D",
+   "spend": 17.92,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-14",
+   "campaign": "Competitors",
+   "spend": 25.14,
+   "ad_clicks": 12,
+   "visits": 7,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-15",
+   "campaign": "Brand - Search - M+D",
+   "spend": 18.73,
+   "ad_clicks": 10,
+   "visits": 11,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-15",
+   "campaign": "Competitors",
+   "spend": 22.85,
+   "ad_clicks": 7,
+   "visits": 7,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-16",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.63,
+   "ad_clicks": 6,
+   "visits": 11,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-16",
+   "campaign": "Competitors",
+   "spend": 21.38,
+   "ad_clicks": 10,
+   "visits": 5,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-17",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.52,
+   "ad_clicks": 8,
+   "visits": 11,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-17",
+   "campaign": "Competitors",
+   "spend": 19.34,
+   "ad_clicks": 6,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-18",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.5,
+   "ad_clicks": 2,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-18",
+   "campaign": "Competitors",
+   "spend": 10.1,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-19",
+   "campaign": "Brand - Search - M+D",
+   "spend": 12.28,
+   "ad_clicks": 3,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-19",
+   "campaign": "Competitors",
+   "spend": 10.1,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-20",
+   "campaign": "Brand - Search - M+D",
+   "spend": 23.98,
+   "ad_clicks": 10,
+   "visits": 14,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-20",
+   "campaign": "Competitors",
+   "spend": 49.99,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-21",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.54,
+   "ad_clicks": 8,
+   "visits": 9,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-21",
+   "campaign": "Competitors",
+   "spend": 49.04,
+   "ad_clicks": 12,
+   "visits": 11,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-22",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.35,
+   "ad_clicks": 11,
+   "visits": 16,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-22",
+   "campaign": "Competitors",
+   "spend": 23.96,
+   "ad_clicks": 7,
+   "visits": 5,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-23",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.15,
+   "ad_clicks": 12,
+   "visits": 12,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-23",
+   "campaign": "Competitors",
+   "spend": 23.57,
+   "ad_clicks": 6,
+   "visits": 5,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-24",
+   "campaign": "Brand - Search - M+D",
+   "spend": 12.15,
+   "ad_clicks": 8,
+   "visits": 13,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-24",
+   "campaign": "Competitors",
+   "spend": 22.28,
+   "ad_clicks": 8,
+   "visits": 6,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-25",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.41,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-25",
+   "campaign": "Competitors",
+   "spend": 20.27,
+   "ad_clicks": 6,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-26",
+   "campaign": "Brand - Search - M+D",
+   "spend": 4.8,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-26",
+   "campaign": "Competitors",
+   "spend": 14.85,
+   "ad_clicks": 6,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-27",
+   "campaign": "Brand - Search - M+D",
+   "spend": 22.33,
+   "ad_clicks": 11,
+   "visits": 22,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-27",
+   "campaign": "Competitors",
+   "spend": 37.93,
+   "ad_clicks": 9,
+   "visits": 6,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-28",
+   "campaign": "Brand - Search - M+D",
+   "spend": 25.55,
+   "ad_clicks": 14,
+   "visits": 16,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-28",
+   "campaign": "Competitors",
+   "spend": 21.23,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-29",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.89,
+   "ad_clicks": 9,
+   "visits": 16,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-29",
+   "campaign": "Competitors",
+   "spend": 26.34,
+   "ad_clicks": 5,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-30",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.77,
+   "ad_clicks": 10,
+   "visits": 12,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-04-30",
+   "campaign": "Competitors",
+   "spend": 18.51,
+   "ad_clicks": 7,
+   "visits": 6,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-01",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.67,
+   "ad_clicks": 7,
+   "visits": 12,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-01",
+   "campaign": "Competitors",
+   "spend": 2.47,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-02",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.3,
+   "ad_clicks": 3,
+   "visits": 5,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-02",
+   "campaign": "Competitors",
+   "spend": 49.96,
+   "ad_clicks": 15,
+   "visits": 12,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-03",
+   "campaign": "Brand - Search - M+D",
+   "spend": 6.66,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-03",
+   "campaign": "Competitors",
+   "spend": 22.28,
+   "ad_clicks": 11,
+   "visits": 9,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-04",
+   "campaign": "Brand - Search - M+D",
+   "spend": 30.0,
+   "ad_clicks": 14,
+   "visits": 18,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-04",
+   "campaign": "Competitors",
+   "spend": 31.34,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-05",
+   "campaign": "Brand - Search - M+D",
+   "spend": 21.55,
+   "ad_clicks": 18,
+   "visits": 24,
+   "engaged": 16,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-05",
+   "campaign": "Competitors",
+   "spend": 29.06,
+   "ad_clicks": 14,
+   "visits": 10,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-06",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.86,
+   "ad_clicks": 19,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-06",
+   "campaign": "Competitors",
+   "spend": 8.05,
+   "ad_clicks": 7,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-07",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.09,
+   "ad_clicks": 16,
+   "visits": 18,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-07",
+   "campaign": "Competitors",
+   "spend": 37.5,
+   "ad_clicks": 18,
+   "visits": 15,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-08",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.68,
+   "ad_clicks": 13,
+   "visits": 16,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-08",
+   "campaign": "Competitors",
+   "spend": 28.34,
+   "ad_clicks": 7,
+   "visits": 7,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-09",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.0,
+   "ad_clicks": 3,
+   "visits": 5,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-09",
+   "campaign": "Competitors",
+   "spend": 29.56,
+   "ad_clicks": 15,
+   "visits": 13,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-10",
+   "campaign": "Brand - Search - M+D",
+   "spend": 4.33,
+   "ad_clicks": 3,
+   "visits": 6,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-10",
+   "campaign": "Competitors",
+   "spend": 31.55,
+   "ad_clicks": 17,
+   "visits": 12,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-11",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.31,
+   "ad_clicks": 7,
+   "visits": 14,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-11",
+   "campaign": "Competitors",
+   "spend": 19.36,
+   "ad_clicks": 10,
+   "visits": 9,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-12",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.51,
+   "ad_clicks": 9,
+   "visits": 10,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-12",
+   "campaign": "Competitors",
+   "spend": 23.8,
+   "ad_clicks": 7,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-13",
+   "campaign": "Brand - Search - M+D",
+   "spend": 29.34,
+   "ad_clicks": 18,
+   "visits": 17,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-13",
+   "campaign": "Competitors",
+   "spend": 9.89,
+   "ad_clicks": 8,
+   "visits": 8,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-14",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.26,
+   "ad_clicks": 11,
+   "visits": 11,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-14",
+   "campaign": "Competitors",
+   "spend": 31.45,
+   "ad_clicks": 18,
+   "visits": 18,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-15",
+   "campaign": "Brand - Search - M+D",
+   "spend": 12.08,
+   "ad_clicks": 9,
+   "visits": 12,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-15",
+   "campaign": "Competitors",
+   "spend": 23.85,
+   "ad_clicks": 12,
+   "visits": 15,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-16",
+   "campaign": "Brand - Search - M+D",
+   "spend": 3.79,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-16",
+   "campaign": "Competitors",
+   "spend": 17.63,
+   "ad_clicks": 10,
+   "visits": 10,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-17",
+   "campaign": "Brand - Search - M+D",
+   "spend": 7.44,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-17",
+   "campaign": "Competitors",
+   "spend": 33.47,
+   "ad_clicks": 17,
+   "visits": 16,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-18",
+   "campaign": "Brand - Search - M+D",
+   "spend": 29.91,
+   "ad_clicks": 15,
+   "visits": 15,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-18",
+   "campaign": "Competitors",
+   "spend": 20.54,
+   "ad_clicks": 17,
+   "visits": 14,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-19",
+   "campaign": "Brand - Search - M+D",
+   "spend": 17.71,
+   "ad_clicks": 11,
+   "visits": 13,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-19",
+   "campaign": "Competitors",
+   "spend": 38.78,
+   "ad_clicks": 24,
+   "visits": 18,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-20",
+   "campaign": "Brand - Search - M+D",
+   "spend": 18.8,
+   "ad_clicks": 15,
+   "visits": 20,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-20",
+   "campaign": "Competitors",
+   "spend": 24.1,
+   "ad_clicks": 10,
+   "visits": 9,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-21",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.55,
+   "ad_clicks": 9,
+   "visits": 12,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-21",
+   "campaign": "Competitors",
+   "spend": 24.93,
+   "ad_clicks": 16,
+   "visits": 15,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-22",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.54,
+   "ad_clicks": 11,
+   "visits": 7,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-22",
+   "campaign": "Competitors",
+   "spend": 9.25,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-23",
+   "campaign": "Brand - Search - M+D",
+   "spend": 1.5,
+   "ad_clicks": 1,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-23",
+   "campaign": "Competitors",
+   "spend": 6.64,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-24",
+   "campaign": "Brand - Search - M+D",
+   "spend": 6.48,
+   "ad_clicks": 6,
+   "visits": 4,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-24",
+   "campaign": "Competitors",
+   "spend": 32.12,
+   "ad_clicks": 14,
+   "visits": 14,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-25",
+   "campaign": "Brand - Search - M+D",
+   "spend": 22.01,
+   "ad_clicks": 8,
+   "visits": 8,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-25",
+   "campaign": "Competitors",
+   "spend": 30.37,
+   "ad_clicks": 13,
+   "visits": 8,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-26",
+   "campaign": "Brand - Search - M+D",
+   "spend": 17.36,
+   "ad_clicks": 16,
+   "visits": 23,
+   "engaged": 13,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-26",
+   "campaign": "Competitors",
+   "spend": 24.41,
+   "ad_clicks": 10,
+   "visits": 9,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-27",
+   "campaign": "Brand - Search - M+D",
+   "spend": 23.03,
+   "ad_clicks": 15,
+   "visits": 19,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-27",
+   "campaign": "Competitors",
+   "spend": 30.47,
+   "ad_clicks": 13,
+   "visits": 11,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-28",
+   "campaign": "Brand - Search - M+D",
+   "spend": 21.41,
+   "ad_clicks": 16,
+   "visits": 18,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-28",
+   "campaign": "Competitors",
+   "spend": 27.87,
+   "ad_clicks": 8,
+   "visits": 7,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-29",
+   "campaign": "Brand - Search - M+D",
+   "spend": 8.74,
+   "ad_clicks": 5,
+   "visits": 8,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-29",
+   "campaign": "Competitors",
+   "spend": 21.67,
+   "ad_clicks": 8,
+   "visits": 8,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-30",
+   "campaign": "Brand - Search - M+D",
+   "spend": 6.55,
+   "ad_clicks": 5,
+   "visits": 6,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-30",
+   "campaign": "Competitors",
+   "spend": 21.0,
+   "ad_clicks": 10,
+   "visits": 9,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-31",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.41,
+   "ad_clicks": 10,
+   "visits": 12,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-05-31",
+   "campaign": "Competitors",
+   "spend": 18.4,
+   "ad_clicks": 9,
+   "visits": 8,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-01",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.83,
+   "ad_clicks": 10,
+   "visits": 16,
+   "engaged": 9,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-01",
+   "campaign": "Competitors",
+   "spend": 26.61,
+   "ad_clicks": 14,
+   "visits": 11,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-02",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.06,
+   "ad_clicks": 19,
+   "visits": 16,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-02",
+   "campaign": "Competitors",
+   "spend": 24.58,
+   "ad_clicks": 8,
+   "visits": 7,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-03",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.41,
+   "ad_clicks": 8,
+   "visits": 9,
+   "engaged": 6,
+   "demo_requests": 1
+  },
+  {
+   "date": "2026-06-03",
+   "campaign": "Competitors",
+   "spend": 0.29,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-04",
+   "campaign": "Brand - Search - M+D",
+   "spend": 5.15,
+   "ad_clicks": 7,
+   "visits": 10,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-04",
+   "campaign": "Competitors",
+   "spend": 49.68,
+   "ad_clicks": 24,
+   "visits": 21,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-05",
+   "campaign": "Brand - Search - M+D",
+   "spend": 7.4,
+   "ad_clicks": 8,
+   "visits": 10,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-05",
+   "campaign": "Competitors",
+   "spend": 38.71,
+   "ad_clicks": 22,
+   "visits": 18,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-06",
+   "campaign": "Brand - Search - M+D",
+   "spend": 2.62,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-06",
+   "campaign": "Competitors",
+   "spend": 33.64,
+   "ad_clicks": 18,
+   "visits": 13,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-07",
+   "campaign": "Brand - Search - M+D",
+   "spend": 24.05,
+   "ad_clicks": 8,
+   "visits": 6,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-07",
+   "campaign": "Competitors",
+   "spend": 29.43,
+   "ad_clicks": 11,
+   "visits": 10,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-08",
+   "campaign": "Brand - Search - M+D",
+   "spend": 30.0,
+   "ad_clicks": 8,
+   "visits": 13,
+   "engaged": 5,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-08",
+   "campaign": "Competitors",
+   "spend": 21.01,
+   "ad_clicks": 16,
+   "visits": 7,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-09",
+   "campaign": "Brand - Search - M+D",
+   "spend": 30.91,
+   "ad_clicks": 8,
+   "visits": 16,
+   "engaged": 7,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-09",
+   "campaign": "Competitors",
+   "spend": 16.91,
+   "ad_clicks": 14,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-10",
+   "campaign": "Brand - Search - M+D",
+   "spend": 24.75,
+   "ad_clicks": 6,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-10",
+   "campaign": "Competitors",
+   "spend": 6.24,
+   "ad_clicks": 6,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-11",
+   "campaign": "Brand - Search - M+D",
+   "spend": 16.82,
+   "ad_clicks": 5,
+   "visits": 7,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-12",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.05,
+   "ad_clicks": 6,
+   "visits": 7,
+   "engaged": 5,
+   "demo_requests": 1
+  },
+  {
+   "date": "2026-06-12",
+   "campaign": "Competitors",
+   "spend": 28.1,
+   "ad_clicks": 16,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-13",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.88,
+   "ad_clicks": 6,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-13",
+   "campaign": "Competitors",
+   "spend": 49.77,
+   "ad_clicks": 21,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-14",
+   "campaign": "Brand - Search - M+D",
+   "spend": 2.17,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-14",
+   "campaign": "Competitors",
+   "spend": 48.52,
+   "ad_clicks": 12,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-15",
+   "campaign": "Brand - Search - M+D",
+   "spend": 30.0,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-15",
+   "campaign": "Competitors",
+   "spend": 29.81,
+   "ad_clicks": 9,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-16",
+   "campaign": "Brand - Search - M+D",
+   "spend": 25.22,
+   "ad_clicks": 8,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-16",
+   "campaign": "Competitors",
+   "spend": 30.36,
+   "ad_clicks": 9,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-17",
+   "campaign": "Brand - Search - M+D",
+   "spend": 18.97,
+   "ad_clicks": 12,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 2
+  },
+  {
+   "date": "2026-06-17",
+   "campaign": "Competitors",
+   "spend": 24.24,
+   "ad_clicks": 9,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-18",
+   "campaign": "Brand - Search - M+D",
+   "spend": 16.37,
+   "ad_clicks": 7,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-18",
+   "campaign": "Competitors",
+   "spend": 4.39,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-19",
+   "campaign": "Brand - Search - M+D",
+   "spend": 17.01,
+   "ad_clicks": 8,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-19",
+   "campaign": "Competitors",
+   "spend": 27.43,
+   "ad_clicks": 13,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-20",
+   "campaign": "Brand - Search - M+D",
+   "spend": 0.71,
+   "ad_clicks": 1,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-20",
+   "campaign": "Competitors",
+   "spend": 35.84,
+   "ad_clicks": 12,
+   "visits": 3,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-21",
+   "campaign": "Brand - Search - M+D",
+   "spend": 0.68,
+   "ad_clicks": 1,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-21",
+   "campaign": "Competitors",
+   "spend": 14.04,
+   "ad_clicks": 5,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-22",
+   "campaign": "Brand - Search - M+D",
+   "spend": 29.15,
+   "ad_clicks": 17,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-22",
+   "campaign": "Competitors",
+   "spend": 6.55,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-23",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.29,
+   "ad_clicks": 11,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-23",
+   "campaign": "Competitors",
+   "spend": 20.77,
+   "ad_clicks": 7,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-24",
+   "campaign": "Brand - Search - M+D",
+   "spend": 23.77,
+   "ad_clicks": 8,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-24",
+   "campaign": "Competitors",
+   "spend": 30.71,
+   "ad_clicks": 7,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-25",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.25,
+   "ad_clicks": 6,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-25",
+   "campaign": "Competitors",
+   "spend": 30.38,
+   "ad_clicks": 9,
+   "visits": 3,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-26",
+   "campaign": "Brand - Search - M+D",
+   "spend": 6.37,
+   "ad_clicks": 8,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-26",
+   "campaign": "Competitors",
+   "spend": 40.21,
+   "ad_clicks": 8,
+   "visits": 3,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-27",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.24,
+   "ad_clicks": 5,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-27",
+   "campaign": "Competitors",
+   "spend": 25.83,
+   "ad_clicks": 6,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-28",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.84,
+   "ad_clicks": 6,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-28",
+   "campaign": "Competitors",
+   "spend": 5.24,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-29",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.46,
+   "ad_clicks": 12,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-29",
+   "campaign": "Competitors",
+   "spend": 5.05,
+   "ad_clicks": 2,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-30",
+   "campaign": "Brand - Search - M+D",
+   "spend": 12.7,
+   "ad_clicks": 4,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-06-30",
+   "campaign": "Competitors",
+   "spend": 49.83,
+   "ad_clicks": 9,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-01",
+   "campaign": "Brand - Search - M+D",
+   "spend": 16.1,
+   "ad_clicks": 17,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-01",
+   "campaign": "Competitors",
+   "spend": 25.15,
+   "ad_clicks": 7,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-02",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.62,
+   "ad_clicks": 9,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-02",
+   "campaign": "Competitors",
+   "spend": 24.24,
+   "ad_clicks": 8,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-03",
+   "campaign": "Brand - Search - M+D",
+   "spend": 8.05,
+   "ad_clicks": 8,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-03",
+   "campaign": "Competitors",
+   "spend": 6.02,
+   "ad_clicks": 3,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-04",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.85,
+   "ad_clicks": 10,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-04",
+   "campaign": "Competitors",
+   "spend": 28.65,
+   "ad_clicks": 10,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-05",
+   "campaign": "Brand - Search - M+D",
+   "spend": 8.03,
+   "ad_clicks": 7,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-05",
+   "campaign": "Competitors",
+   "spend": 44.72,
+   "ad_clicks": 4,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-06",
+   "campaign": "Brand - Search - M+D",
+   "spend": 29.79,
+   "ad_clicks": 20,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-06",
+   "campaign": "Competitors",
+   "spend": 8.62,
+   "ad_clicks": 3,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-07",
+   "campaign": "Brand - Search - M+D",
+   "spend": 21.73,
+   "ad_clicks": 27,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-07",
+   "campaign": "Competitors",
+   "spend": 43.24,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-08",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.55,
+   "ad_clicks": 20,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-08",
+   "campaign": "Competitors",
+   "spend": 27.13,
+   "ad_clicks": 4,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-09",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.8,
+   "ad_clicks": 25,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-09",
+   "campaign": "Competitors",
+   "spend": 1.59,
+   "ad_clicks": 1,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-09",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 0.94,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-10",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.62,
+   "ad_clicks": 31,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-10",
+   "campaign": "Competitors",
+   "spend": 47.17,
+   "ad_clicks": 3,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-11",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.9,
+   "ad_clicks": 20,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-11",
+   "campaign": "Competitors",
+   "spend": 26.18,
+   "ad_clicks": 10,
+   "visits": 8,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-12",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.89,
+   "ad_clicks": 24,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-12",
+   "campaign": "Competitors",
+   "spend": 25.74,
+   "ad_clicks": 17,
+   "visits": 14,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-13",
+   "campaign": "Brand - Search - M+D",
+   "spend": 12.05,
+   "ad_clicks": 27,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-13",
+   "campaign": "Competitors",
+   "spend": 6.93,
+   "ad_clicks": 6,
+   "visits": 4,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-13",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 12.45,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-14",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.56,
+   "ad_clicks": 31,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-14",
+   "campaign": "Competitors",
+   "spend": 42.65,
+   "ad_clicks": 28,
+   "visits": 26,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-14",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 23.51,
+   "ad_clicks": 1,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-15",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.09,
+   "ad_clicks": 15,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-15",
+   "campaign": "Competitors",
+   "spend": 25.5,
+   "ad_clicks": 8,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-15",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.99,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-16",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.16,
+   "ad_clicks": 25,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-16",
+   "campaign": "Competitors",
+   "spend": 23.84,
+   "ad_clicks": 9,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-16",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 16.08,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-17",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.63,
+   "ad_clicks": 38,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-17",
+   "campaign": "Competitors",
+   "spend": 19.7,
+   "ad_clicks": 6,
+   "visits": 6,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-17",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.34,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-18",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.14,
+   "ad_clicks": 27,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-18",
+   "campaign": "Competitors",
+   "spend": 3.24,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-19",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.37,
+   "ad_clicks": 18,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-19",
+   "campaign": "Competitors",
+   "spend": 4.64,
+   "ad_clicks": 3,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-20",
+   "campaign": "Brand - Search - M+D",
+   "spend": 10.36,
+   "ad_clicks": 30,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-20",
+   "campaign": "Competitors",
+   "spend": 56.31,
+   "ad_clicks": 11,
+   "visits": 7,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-20",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.25,
+   "ad_clicks": 3,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-21",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.8,
+   "ad_clicks": 33,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-21",
+   "campaign": "Competitors",
+   "spend": 49.98,
+   "ad_clicks": 11,
+   "visits": 11,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-21",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.13,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-22",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.35,
+   "ad_clicks": 38,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-22",
+   "campaign": "Competitors",
+   "spend": 26.28,
+   "ad_clicks": 8,
+   "visits": 7,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-22",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.95,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-23",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.31,
+   "ad_clicks": 43,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-23",
+   "campaign": "Competitors",
+   "spend": 28.52,
+   "ad_clicks": 9,
+   "visits": 4,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-23",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 11.22,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-24",
+   "campaign": "Brand - Search - M+D",
+   "spend": 17.19,
+   "ad_clicks": 41,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-24",
+   "campaign": "Competitors",
+   "spend": 19.71,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-24",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.07,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-25",
+   "campaign": "Brand - Search - M+D",
+   "spend": 26.78,
+   "ad_clicks": 20,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-25",
+   "campaign": "Competitors",
+   "spend": 18.61,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-26",
+   "campaign": "Brand - Search - M+D",
+   "spend": 24.79,
+   "ad_clicks": 25,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-26",
+   "campaign": "Competitors",
+   "spend": 24.03,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-26",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.0,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-27",
+   "campaign": "Brand - Search - M+D",
+   "spend": 24.29,
+   "ad_clicks": 32,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-27",
+   "campaign": "Competitors",
+   "spend": 12.42,
+   "ad_clicks": 7,
+   "visits": 6,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-27",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 22.1,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-28",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.89,
+   "ad_clicks": 25,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-28",
+   "campaign": "Competitors",
+   "spend": 8.54,
+   "ad_clicks": 5,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-28",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 8.84,
+   "ad_clicks": 1,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-29",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.83,
+   "ad_clicks": 18,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-29",
+   "campaign": "Competitors",
+   "spend": 45.15,
+   "ad_clicks": 12,
+   "visits": 13,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-29",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 19.24,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-30",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.28,
+   "ad_clicks": 24,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-30",
+   "campaign": "Competitors",
+   "spend": 21.3,
+   "ad_clicks": 5,
+   "visits": 4,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-30",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 12.88,
+   "ad_clicks": 1,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-31",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.97,
+   "ad_clicks": 27,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-31",
+   "campaign": "Competitors",
+   "spend": 19.47,
+   "ad_clicks": 6,
+   "visits": 6,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-07-31",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 11.38,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-01",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.54,
+   "ad_clicks": 16,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-01",
+   "campaign": "Competitors",
+   "spend": 10.28,
+   "ad_clicks": 5,
+   "visits": 5,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-02",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.65,
+   "ad_clicks": 16,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-02",
+   "campaign": "Competitors",
+   "spend": 37.07,
+   "ad_clicks": 10,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-02",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 29.3,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-03",
+   "campaign": "Brand - Search - M+D",
+   "spend": 19.44,
+   "ad_clicks": 34,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-03",
+   "campaign": "Competitors",
+   "spend": 26.11,
+   "ad_clicks": 7,
+   "visits": 9,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-03",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 23.83,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-04",
+   "campaign": "Brand - Search - M+D",
+   "spend": 15.8,
+   "ad_clicks": 27,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-04",
+   "campaign": "Competitors",
+   "spend": 23.21,
+   "ad_clicks": 8,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-04",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 21.32,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-05",
+   "campaign": "Brand - Search - M+D",
+   "spend": 16.26,
+   "ad_clicks": 29,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-05",
+   "campaign": "Competitors",
+   "spend": 33.57,
+   "ad_clicks": 11,
+   "visits": 6,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-05",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 15.58,
+   "ad_clicks": 1,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-06",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.98,
+   "ad_clicks": 34,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-06",
+   "campaign": "Competitors",
+   "spend": 28.14,
+   "ad_clicks": 6,
+   "visits": 5,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-06",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 10.32,
+   "ad_clicks": 3,
+   "visits": 3,
+   "engaged": 3,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-07",
+   "campaign": "Brand - Search - M+D",
+   "spend": 13.17,
+   "ad_clicks": 28,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-07",
+   "campaign": "Competitors",
+   "spend": 52.65,
+   "ad_clicks": 14,
+   "visits": 12,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-07",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 42.83,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-08",
+   "campaign": "Brand - Search - M+D",
+   "spend": 7.56,
+   "ad_clicks": 20,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-08",
+   "campaign": "Competitors",
+   "spend": 87.24,
+   "ad_clicks": 27,
+   "visits": 21,
+   "engaged": 8,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-08",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 42.8,
+   "ad_clicks": 2,
+   "visits": 1,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-09",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.82,
+   "ad_clicks": 19,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-09",
+   "campaign": "Competitors",
+   "spend": 71.14,
+   "ad_clicks": 18,
+   "visits": 14,
+   "engaged": 6,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-09",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 35.47,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-10",
+   "campaign": "Brand - Search - M+D",
+   "spend": 11.31,
+   "ad_clicks": 31,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-10",
+   "campaign": "Competitors",
+   "spend": 70.49,
+   "ad_clicks": 15,
+   "visits": 12,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-10",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 59.78,
+   "ad_clicks": 4,
+   "visits": 4,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-11",
+   "campaign": "Brand - Search - M+D",
+   "spend": 21.82,
+   "ad_clicks": 30,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-11",
+   "campaign": "Competitors",
+   "spend": 138.53,
+   "ad_clicks": 28,
+   "visits": 22,
+   "engaged": 11,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-11",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 52.37,
+   "ad_clicks": 5,
+   "visits": 5,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-12",
+   "campaign": "Brand - Search - M+D",
+   "spend": 14.55,
+   "ad_clicks": 36,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-12",
+   "campaign": "Competitors",
+   "spend": 85.46,
+   "ad_clicks": 19,
+   "visits": 17,
+   "engaged": 4,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-12",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 49.79,
+   "ad_clicks": 4,
+   "visits": 3,
+   "engaged": 2,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-13",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.0,
+   "ad_clicks": 22,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-13",
+   "campaign": "Competitors",
+   "spend": 85.05,
+   "ad_clicks": 25,
+   "visits": 21,
+   "engaged": 10,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-13",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 31.73,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-14",
+   "campaign": "Brand - Search - M+D",
+   "spend": 9.22,
+   "ad_clicks": 31,
+   "visits": 0,
+   "engaged": 0,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-14",
+   "campaign": "Competitors",
+   "spend": 18.56,
+   "ad_clicks": 7,
+   "visits": 4,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-14",
+   "campaign": "Gartner Magic Quadrant",
+   "spend": 13.59,
+   "ad_clicks": 2,
+   "visits": 2,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-17",
+   "campaign": "Competitors",
+   "spend": 0.0,
+   "ad_clicks": 0,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  },
+  {
+   "date": "2026-08-21",
+   "campaign": "Competitors",
+   "spend": 0.0,
+   "ad_clicks": 0,
+   "visits": 1,
+   "engaged": 1,
+   "demo_requests": 0
+  }
  ]
 }

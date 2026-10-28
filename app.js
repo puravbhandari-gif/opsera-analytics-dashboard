@@ -1021,7 +1021,52 @@ function renderJourney(ga, leads, hub, gsc) {
       linkedin: "More detail splits these visits into company page, Kumar and untagged, post by post.",
       paid: "Google and HubSpot mark \"paid\" differently, so the steps don't line up." }[channel] || "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
+    drawAds(cur);
   };
+  // Google Ads by campaign, for the same dates as the funnel. Spend and ad clicks come from Google Ads through
+  // Google Analytics' link; visits and demo requests from Google Analytics. Rows stay per campaign.
+  const ads = ga.google_ads_daily || [];
+  const adsLast = ads.filter((r) => r.spend > 0).map((r) => r.date).sort().pop();
+  const adTotals = (a, b) => {
+    const by = {};
+    for (const r of ads) {
+      if (r.date < a || r.date > b) continue;
+      const x = by[r.campaign] || (by[r.campaign] = { campaign: r.campaign, spend: 0, ad_clicks: 0, visits: 0, demo_requests: 0 });
+      x.spend += r.spend; x.ad_clicks += r.ad_clicks; x.visits += r.visits; x.demo_requests += r.demo_requests;
+    }
+    return Object.values(by).map((x) => ({ ...x, per_demo: x.demo_requests ? x.spend / x.demo_requests : null }));
+  };
+  const adCards = (rows) => {
+    const t = (k) => rows.reduce((s2, r) => s2 + r[k], 0);
+    const demos = t("demo_requests");
+    return card("Spend", money(t("spend"))) + card("Ad clicks", num(t("ad_clicks")), "Counted by Google Ads") +
+      card("Visits from Google Ads", num(t("visits")), "Counted by Google Analytics") + card("Demo requests", num(demos)) +
+      card("Cost per demo request", demos ? money(t("spend") / demos) : "-", demos ? "" : "No demo requests from ads");
+  };
+  function drawAds(cur) {
+    const rows = adTotals(cur.start, cur.end);
+    $("journey-ads-title").textContent = `Google Ads by campaign, ${range(cur.start, cur.end)}`;
+    const since = adTotals(start, gaLast), sinceSpend = since.reduce((s2, r) => s2 + r.spend, 0), sinceDemos = since.reduce((s2, r) => s2 + r.demo_requests, 0);
+    const sinceLine = `Since ${dayYear(start)}: ${money(sinceSpend)} spent, ${num(sinceDemos)} demo request${sinceDemos === 1 ? "" : "s"} from ads.`;
+    if (!rows.length) {
+      $("journey-ads-cards").innerHTML = `<div class="card"><div class="label">No Google Ads in this period</div><div class="sub">${adsLast ? `The last ad spend was on ${dayYear(adsLast)}. ` : ""}${sinceLine}</div></div>`;
+      $("journey-ads").innerHTML = "";
+    } else {
+      $("journey-ads-cards").innerHTML = adCards(rows);
+      table($("journey-ads"), { rows, sortKey: "spend", columns: [
+        { key: "campaign", label: "Campaign" },
+        { key: "spend", label: "Spend", num: true, fmt: money },
+        { key: "ad_clicks", label: "Ad clicks", num: true, fmt: num },
+        { key: "visits", label: "Visits", num: true, fmt: num },
+        { key: "demo_requests", label: "Demo requests", num: true, fmt: num },
+        { key: "per_demo", label: "Cost per demo request", num: true, fmt: (v) => (v == null ? "No demo requests" : money(v)) },
+      ] });
+      countUp($("journey-ads-cards"));
+    }
+    // brand search's ad clicks stopped arriving as visits on 16 Jun 2026 (found 28 Oct 2026)
+    $("journey-ads-brand").hidden = !(cur.end >= "2026-06-16" && rows.some((r) => r.campaign === "Brand - Search - M+D"));
+    $("journey-ads-source").textContent = `Source: Google Analytics, opsera.ai 2026, with spend and ad clicks from the linked Google Ads account, ${range(cur.start, cur.end)} (Pacific time). ${rows.length ? sinceLine : ""}`.trim();
+  }
   if ([...monthPick.options].some((o) => o.value && o.value === view.funnelmonth)) { month = view.funnelmonth; monthPick.value = month; }
   $("journey-channel").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x.dataset.ch === channel));
   drawFunnel();

@@ -440,6 +440,36 @@ def linkedin_visits(s, end):
     }
 
 
+def google_ads(s, end):
+    """Google Ads spend, ad clicks, visits and demo requests per campaign per day, from GA4's Google Ads link.
+    Always pulled by day: GA4 inflates ad cost and ad clicks when they're asked for by month (checked 28 Oct 2026,
+    about 30 times too high), while day, week and whole-period totals agree."""
+    rows = {}
+    def row(r):
+        return rows.setdefault((r["date"], r["sessionGoogleAdsCampaignName"]), {
+            "date": r["date"], "campaign": r["sessionGoogleAdsCampaignName"],
+            "spend": 0.0, "ad_clicks": 0, "visits": 0, "engaged": 0, "demo_requests": 0})
+    dims = ["date", "sessionGoogleAdsCampaignName"]
+    for r in ga_report(s, end, dims, ["advertiserAdCost", "advertiserAdClicks", "sessions", "engagedSessions"]):
+        if r["sessionGoogleAdsCampaignName"] == "(not set)":
+            continue
+        x = row(r)
+        x["spend"] += r["advertiserAdCost"]; x["ad_clicks"] += r["advertiserAdClicks"]
+        x["visits"] += r["sessions"]; x["engaged"] += r["engagedSessions"]
+    demo = {"filter": {"fieldName": "pagePath", "inListFilter": {"values": ["/demo", "/demo/"]}}}
+    for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo):
+        if r["sessionGoogleAdsCampaignName"] != "(not set)":
+            row(r)["demo_requests"] += r["eventCount"]
+    out = sorted(rows.values(), key=lambda r: (r["date"], r["campaign"]))
+    for r in out:
+        r["spend"] = round(r["spend"], 2)
+    # the check: the daily rows must add up to GA4's own whole-period total
+    whole = sum(r["advertiserAdCost"] for r in ga_report(s, end, ["sessionGoogleAdsCampaignName"], ["advertiserAdCost"]))
+    if abs(sum(r["spend"] for r in out) - whole) > 1:
+        stop(f"Google Ads spend by day ({sum(r['spend'] for r in out):.2f}) doesn't match the whole period ({whole:.2f}).")
+    return out
+
+
 def fetch_ga(s, end):
     tz = check_ga_property(s)
     base = ["sessions", "totalUsers", "engagedSessions"]
@@ -470,6 +500,7 @@ def fetch_ga(s, end):
         "ai": ai_visits(s, end),
         "google_search_visits": google_search_visits(s, end),
         "email_robots_daily": email_robots(s, end),
+        "google_ads_daily": google_ads(s, end),
     }, leads(form_rows)
 
 
