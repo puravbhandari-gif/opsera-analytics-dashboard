@@ -36,6 +36,31 @@ EVENT_LISTS = [   # (key, line label, exact HubSpot list name, note)
     ("tokenomics", "Tokenomics webinar", "DG-FY27-Q3-Tokenomics-Webinar", "May overlap with the website event form"),
     ("gartner_scans", "Gartner booth scans", "Gartner IT Symposium 2026 booth scans", "Booth scans, not sign-ups"),
 ]
+# One row per event for the Events tab (agreed 28 Oct 2026). Lists are matched by their exact HubSpot name; each
+# 2026 webinar and roundtable list is filled by that event's own form. Dates are the event's last day, from the live
+# event page or the GTM calendar; None means the date isn't known, so meetings afterwards aren't counted.
+# (key, name, kind, first day, last day, sign-up lists, attended lists, event pages, note)
+EVENT_ROWS = [
+    ("appsec_agents", "Meet the Opsera AppSec agents", "Webinar", "2026-04-08", "2026-04-08",
+     ["Meet the Agents workshop registrants"], [], ["/events/meet-the-opsera-appsec-agents-for-ai-builders"], ""),
+    ("ai_benchmark", "AI benchmark report", "Webinar", None, None, ["AI BM Report Webinar Registrants"], [], [], "Event date not known"),
+    ("ai_adoption", "Copilot, Cursor, Claude Code: what 250k developers revealed", "Webinar", "2026-04-29", "2026-04-29",
+     ["DG-FY27-Q1-AI-Adoption-Webinar"], [], ["/events/copilot-cursor-claude-code-what-250k-developers-revealed"],
+     "Sign-ups include people who asked for the recording"),
+    ("mq_roundtable", "Gartner Magic Quadrant roundtable", "Roundtable", None, None, ["DG-FY27-Q2-MQ-Roundtable"], [], [], "Event date not known"),
+    ("ai_budget", "AI budget burning: turning AI spend into business results", "Webinar", "2026-06-25", "2026-06-25", [], [],
+     ["/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
+      "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results"], "No HubSpot sign-up list"),
+    ("tokenomics", "Tokenomics: the currency of enterprise AI", "Webinar", "2026-09-15", "2026-09-15",
+     ["DG-FY27-Q3-Tokenomics-Webinar"], [], ["/events/tokenomics-the-currency-of-enterprise-ai"], "Sign-ups may overlap with the event page form"),
+    ("flutter", "Flutter 2026: the AI-SDLC Summit", "Event", "2026-10-01", "2026-10-01",
+     ["Opsera Flutter 2026_ The AI-SDLC Summit - Guests - 2026-09-02-20-27-29.csv"], ["Flutter 2026 Attendees"], ["/flutter-2026-ai-sdlc-summit"],
+     "Sign-ups are the Luma guest list"),
+    ("gartner", "Gartner IT Symposium/Xpo, Orlando", "Event", "2026-10-19", "2026-10-22",
+     [], ["Gartner IT Symposium 2026 booth scans"], ["/gartner-symposium", "/events/gartner-summit-2026"], "Attended means booth scans"),
+    ("github_universe", "GitHub Universe", "Event", "2026-10-28", "2026-10-29", [], [],
+     ["/events/github-universe", "/github-universe-happy-hour"], "No HubSpot list yet"),
+]
 AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perplexity", r"perplexity"),
             ("claude", r"claude|anthropic"), ("copilot", r"copilot")]   # same as scripts/fetch_data.py
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
@@ -417,6 +442,39 @@ def main():
             kind = "booked"
         meeting_rows.append({"date": day, "channel": first["channel"], "line": first["line"], "kind": kind, "demo": first["demo"]})
 
+    # Events tab: people on each event's lists, and calendar meetings with them after the event's last day
+    def members_of(name):
+        lst = found.get(name)
+        if not lst:
+            hit = call(s, "POST", "/crm/v3/lists/search", json={"query": name[:40], "count": 50}).get("lists", [])
+            found.update({l["name"]: l for l in hit})
+            lst = found.get(name)
+        if not lst:
+            stop(f"Can't find the HubSpot list \"{name}\". Check whether it was renamed.")
+        ids, after = set(), None
+        while True:
+            j = call(s, "GET", f"/crm/v3/lists/{lst['listId']}/memberships/join-order", params={"limit": 250, **({"after": after} if after else {})})
+            ids |= {str(m["recordId"]) for m in j.get("results", [])}
+            after = (j.get("paging") or {}).get("next", {}).get("after")
+            if not after:
+                return ids
+    meeting_day = {m["id"]: pacific_day(m["properties"]["hs_meeting_start_time"]) for m in meetings}
+    event_rows = []
+    for key, name, kind, first_day, last_day, signup_lists, attended_lists, pages, note in EVENT_ROWS:
+        signed = set().union(*[members_of(n) for n in signup_lists]) if signup_lists else None
+        attended = set().union(*[members_of(n) for n in attended_lists]) if attended_lists else None
+        people = (signed or set()) | (attended or set())
+        row = {"key": key, "name": name, "kind": kind, "first_day": first_day, "last_day": last_day, "pages": pages, "note": note,
+               "signed_up": None if signed is None else len(signed), "attended": None if attended is None else len(attended),
+               "meetings_after": None, "people_with_meeting": None, "meetings_upcoming": None}
+        if people and last_day:
+            after_ids = [m for m, cs in m_contacts.items() if meeting_day.get(m, "") > last_day and people & set(cs)]
+            done = [m for m in after_ids if meeting_day[m] <= end]
+            row["meetings_after"] = len(done)
+            row["meetings_upcoming"] = len(after_ids) - len(done)
+            row["people_with_meeting"] = len({c for m in done for c in m_contacts[m] if c in people})
+        event_rows.append(row)
+
     # HubSpot campaigns named after the events, and how many contacts each is tagged with
     campaigns, all_campaigns, after = [], [], None
     while True:
@@ -472,6 +530,7 @@ def main():
                         "came_from": d["came_from"], "first_page": d["first_page"], "first_form": d["first_form"], "product": d["product"]}
                        for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]],
         "events": events,
+        "event_rows": event_rows,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
         "emails": public_emails(marketing_emails(s, START_DATE)),
@@ -491,6 +550,7 @@ def main():
     print(f"  deals: open {t['open_count']} (${t['open_amount']:,.0f}), won {t['won_count']} (${t['won_amount']:,.0f}), "
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
+    print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
     print("  campaigns:", campaigns)
     print("  first forms of form contacts:", out["first_forms"][:12])
     print(f"  demo-form contacts: {sum(1 for c in contacts.values() if c['demo'])}")
