@@ -141,6 +141,43 @@ def marketing_emails(s, since):
             return {"error": None, "rows": sorted(rows, key=lambda x: x["sent_on"])}
 
 
+# Privacy for Look up (agreed 28 Oct 2026). Internal email and list names often hold staff first names and
+# target companies, so they're stored only as scrambled word codes for matching. Emails show their subject
+# line (what recipients saw); lists show only a plain label and the number of people. Target-account
+# emails and lists, and HubSpot's automatic lists, are left out entirely, so a company name can't be probed.
+TARGET_ACCOUNTS = re.compile(r"\b(abm|abx|microsite)\b", re.I)
+AUTOMATIC_LISTS = re.compile(r"^\s*(\[abm\]|abm\b|abx\b|\[email\]|\[workflows\]|\[ads\]|target\b)", re.I)
+
+
+def word_index(text):
+    """Words as short scrambled codes (FNV-1a, 32 bits): Look up can match a word without the file holding the text."""
+    out = []
+    for w in dict.fromkeys(re.findall(r"[a-z0-9]+", (text or "").lower())):
+        if len(w) < 3:
+            continue
+        h = 0x811C9DC5
+        for b in w.encode():
+            h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+        out.append(f"{h:08x}")
+    return out
+
+
+def public_emails(found):
+    if found["error"]:
+        return found
+    rows = [{k: v for k, v in e.items() if k != "name"} | {"words": word_index(f"{e['name']} {e['subject']}")}
+            for e in found["rows"] if not TARGET_ACCOUNTS.search(e["name"]) and not e["subject"].startswith("Built for ")]
+    return {"error": None, "left_out_target_accounts": len(found["rows"]) - len(rows), "rows": rows}
+
+
+def public_lists(found, since):
+    if found["error"]:
+        return found
+    rows = [{"people": l["people"], "kind": l["kind"], "updated_on": l["updated_on"], "words": word_index(l["name"])}
+            for l in found["rows"] if not AUTOMATIC_LISTS.search(l["name"]) and l["updated_on"] >= since]
+    return {"error": None, "rows": sorted(rows, key=lambda x: -(x["people"] or 0))}
+
+
 def all_lists(s):
     """Every HubSpot list's name and how many people are on it (for Look up). No members are read."""
     rows, offset = [], 0
@@ -437,8 +474,8 @@ def main():
         "events": events,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
-        "emails": marketing_emails(s, START_DATE),
-        "lists": all_lists(s),
+        "emails": public_emails(marketing_emails(s, START_DATE)),
+        "lists": public_lists(all_lists(s), START_DATE),
     }
     OUT.write_text(json.dumps(out, indent=1))
     by = lambda rows, key: dict(collections.Counter(r[key] for r in rows))

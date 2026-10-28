@@ -332,6 +332,15 @@ def main():
     write("deals_one_line_each", ["month", "first_came_from", "first_page", "first_form", "product", "open_or_won", "amount_usd"],
           [[d["month"], d["came_from"], d["first_page"], d["first_form"], d["product"], d["status"], d["amount"]] for d in hub.get("deal_lines", [])],
           "How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name")
+    em = hub.get("emails") or {}
+    if em.get("rows"):
+        write("hubspot_marketing_emails", ["sent_on", "subject", "sends", "opens", "clicks", "open_rate_pct", "click_rate_pct"],
+              [[e["sent_on"], e["subject"], e["sends"], e["opens"], e["clicks"], e["open_rate_pct"], e["click_rate_pct"]] for e in em["rows"]],
+              "HubSpot marketing emails since 1 Apr 2026 with sends, opens and clicks. The subject line shows; emails aimed at named target accounts are left out. Source: HubSpot")
+    kpl = json.loads((DATA / "kumar_post_list.json").read_text()) if (DATA / "kumar_post_list.json").exists() else {"posts": []}
+    write("linkedin_exec_post_list", ["posted_on", "post", "link", "reactions", "comments"],
+          [[x["date"], x["title"], x["link"], x["reactions"], x["comments"]] for x in kpl["posts"]],
+          "Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify")
     write("hubspot_event_lists", ["list", "members", "note", "first_added", "last_added"],
           [[e["label"], e["members"], e.get("note") or "", e["joined_daily"][0]["date"] if e["joined_daily"] else "", e["joined_daily"][-1]["date"] if e["joined_daily"] else ""]
            for e in hub["events"]], "Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot")

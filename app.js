@@ -1321,13 +1321,75 @@ function renderInfrasity(monthly) {
 // ---------- Look up: one page or campaign, its numbers for the period above ----------
 
 let lookupLoad = null;   // data/lookup.json is loaded the first time the tab is opened
+// Words as short scrambled codes, the same as the pull scripts make (FNV-1a, 32 bits), so emails, lists and
+// posts can be matched without the public files holding their names or text
+function wordCode(w) {
+  let h = 0x811c9dc5;
+  for (const b of new TextEncoder().encode(w)) h = Math.imul(h ^ b, 0x01000193) >>> 0;
+  return h.toString(16).padStart(8, "0");
+}
+
+// Emails, lists and LinkedIn posts for a search, each its own section, never added into the website numbers
+function lookupExtras(q, hub, li, kp) {
+  const words = [...new Set(q.toLowerCase().replace(/^https?:\/\//, "").split(/[^a-z0-9]+/).filter((w) => w.length >= 3))];
+  if (!words.length) return "";
+  const codes = words.map(wordCode);
+  const hit = (list) => codes.every((c) => list.includes(c));
+  const pct = (v) => (v == null ? "-" : `${v.toFixed(1)}%`);
+  // HubSpot's personal placeholders, shown as plain words: "{{ contact.firstname }}" becomes [first name]
+  const readable = (subject) => subject.replace(/\{\{\s*contact\.firstname\s*\}\}/g, "[first name]")
+    .replace(/\{\{\s*personalization_token\('[^']*',\s*'([^']*)'\)\s*\}\}/g, "[$1]").replace(/\{\{[^}]*\}\}/g, "[personal detail]");
+  const section = (title, body, source) => `<div class="panel"><h3>${title}</h3>${body}<p class="source">${source}</p></div>`;
+  const tableHtml = (head, rows, numCols) => `<div class="table-wrap"><table><thead><tr>${head.map((h, i) =>
+    `<th class="${numCols.includes(i) ? "num" : ""}">${h}</th>`).join("")}</tr></thead><tbody>${rows.map((r) =>
+    `<tr>${r.map((c, i) => `<td class="${numCols.includes(i) ? "num" : "wrap"}">${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  const more = (n) => (n > 15 ? `<p class="muted">The 15 newest of ${num(n)}.</p>` : "");
+  const said = `"${esc(q.trim())}"`;
+  const out = [];
+
+  const emails = (hub.emails && hub.emails.rows || []).filter((e) => hit(e.words)).sort((a, b) => (a.sent_on < b.sent_on ? 1 : -1));
+  out.push(section(`HubSpot marketing emails matching ${said}`, emails.length
+    ? tableHtml(["Sent", "Subject", "Sends", "Opens", "Clicks", "Open rate", "Click rate"],
+      emails.slice(0, 15).map((e) => [dayYear(e.sent_on), esc(readable(e.subject)), num(e.sends), num(e.opens), num(e.clicks), pct(e.open_rate_pct), pct(e.click_rate_pct)]), [2, 3, 4, 5, 6]) + more(emails.length)
+    : `<p class="muted">No marketing emails match.</p>`,
+    `Source: HubSpot, emails sent since ${dayYear(hub.start_date)}, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Rates are opens and clicks out of emails delivered. The subject line shows, never who it went to. Emails aimed at named target accounts are left out.`));
+
+  const lists = (hub.lists && hub.lists.rows || []).filter((l) => hit(l.words));
+  out.push(section(`HubSpot lists matching ${said}`, lists.length
+    ? tableHtml(["List", "Kind", "People", "Last updated"],
+      lists.slice(0, 15).map((l, i) => [`List ${i + 1}`, esc(l.kind), num(l.people), dayYear(l.updated_on)]), [2]) + (lists.length > 15 ? `<p class="muted">The 15 biggest of ${num(lists.length)}.</p>` : "")
+    : `<p class="muted">No lists match.</p>`,
+    `Source: HubSpot lists updated since ${dayYear(hub.start_date)}, counted ${dayYear(hub.pulled_at.slice(0, 10))}. List names often hold people's and companies' names, so they don't show. Target-account and automatic lists are left out.`));
+
+  // Kumar's times seen comes from the LinkedIn exports' top posts, matched by the post's address
+  const slug = (url) => (url || "").replace(/[?#].*$/, "").replace(/-(share|activity|ugcPost)-.*$/, "");
+  const seenBy = {};
+  [["Jul to Sep", li.kumar.top_by_seen], ...li.kumar_october.periods.map((p) => [p.label, p.top_by_seen])].forEach(([label, rows]) =>
+    (rows || []).forEach((r) => { const k = slug(r.link); if (!seenBy[k] || r.seen > seenBy[k].seen) seenBy[k] = { seen: r.seen, label }; }));
+  const link = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+  const posts = [
+    ...(li.company.posts || []).filter((p) => hit(p.words || [])).map((p) => ({ date: p.created, from: "Company page", post: link(p.link, p.title),
+      seen: num(p.seen), clicks: num(p.clicks), reactions: num(p.likes), comments: num(p.comments) })),
+    ...(kp.posts || []).filter((p) => hit(p.words || [])).map((p) => { const s2 = seenBy[slug(p.link)];
+      return { date: p.date, from: "Kumar", post: link(p.link, p.title), seen: s2 ? `${num(s2.seen)} (${esc(s2.label)})` : "-", clicks: "-",
+        reactions: p.reactions == null ? "-" : num(p.reactions), comments: p.comments == null ? "-" : num(p.comments) }; }),
+  ].sort((a, b) => (a.date < b.date ? 1 : -1));
+  out.push(section(`LinkedIn posts mentioning ${said}`, posts.length
+    ? tableHtml(["Posted", "From", "Post", "Times seen", "Clicks", "Reactions", "Comments"],
+      posts.slice(0, 15).map((p) => [dayYear(p.date), p.from, p.post, p.seen, p.clicks, p.reactions, p.comments]), [3, 4, 5, 6]) + more(posts.length)
+    : `<p class="muted">No company page or Kumar posts mention it.</p>`,
+    `Sources: company page posts from LinkedIn exports, ${range(li.company.start_date, li.company.end_date)}. Kumar's posts from his public profile, read with Apify on ${dayYear(kp.as_of)}. His times seen comes from LinkedIn exports, only for posts in their top posts, for the period named.`));
+  return out.join("");
+}
+
 function openLookup() {
-  if (!lookupLoad) lookupLoad = load("lookup.json").then(renderLookup)
+  if (!lookupLoad) lookupLoad = Promise.all(["lookup.json", "hubspot.json", "linkedin.json", "kumar_post_list.json"].map(load))
+    .then(([d, hub, li, kp]) => renderLookup(d, { hub, li, kp }))
     .catch((err) => { $("lookup-status").textContent = `Couldn't load the look up numbers: ${err.message}`; });
   return lookupLoad;
 }
 
-function renderLookup(d) {
+function renderLookup(d, extra) {
   const gaLast = lastFullDayPacific(d.end_date, d.pulled_at);
   const idx = (date) => Math.round((toDate(date) - toDate(d.start_date)) / 864e5);
   const isAsset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
@@ -1528,6 +1590,7 @@ function renderLookup(d) {
       : !found.length ? `No data for "${q.trim()}".`
       : !live.length ? `No data for "${q.trim()}" in this period.`
       : left ? `Not showing ${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period.` : "";
+    $("lookup-extras").innerHTML = extra ? lookupExtras(q, extra.hub, extra.li, extra.kp) : "";
     show();
   };
 

@@ -3366,5 +3366,9628 @@
    "first_form": "Book a demo",
    "product": "Salesforce DevOps"
   }
- ]
+ ],
+ "emails": {
+  "error": null,
+  "left_out_target_accounts": 43,
+  "rows": [
+   {
+    "sent_on": "2026-04-02",
+    "subject": "[Private invite] AI-SDLC workshop with Opsera",
+    "kind": "BATCH_EMAIL",
+    "sends": 5107,
+    "opens": 370,
+    "clicks": 21,
+    "open_rate_pct": 7.5,
+    "click_rate_pct": 0.4,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "a165ddb8",
+     "d55997bc",
+     "73d5d200",
+     "62cb0d0c",
+     "13860110",
+     "1327bcbb",
+     "0c4afe69",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-04-02",
+    "subject": "[Private invite] AI-SDLC workshop with Opsera",
+    "kind": "BATCH_EMAIL",
+    "sends": 110,
+    "opens": 11,
+    "clicks": 0,
+    "open_rate_pct": 13.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "d55997bc",
+     "73d5d200",
+     "62cb0d0c",
+     "13860110",
+     "1327bcbb",
+     "0c4afe69",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-04-06",
+    "subject": "We value your feedback on AI.",
+    "kind": "BATCH_EMAIL",
+    "sends": 59,
+    "opens": 3,
+    "clicks": 1,
+    "open_rate_pct": 5.1,
+    "click_rate_pct": 1.7,
+    "words": [
+     "9f21b24f",
+     "60785ef2",
+     "37e96daa",
+     "8a8753c7",
+     "425ed3ca",
+     "00f0e6aa",
+     "3684a602"
+    ]
+   },
+   {
+    "sent_on": "2026-04-07",
+    "subject": "[Workshop Invite] When AI starts reviewing its own code",
+    "kind": "BATCH_EMAIL",
+    "sends": 6650,
+    "opens": 597,
+    "clicks": 236,
+    "open_rate_pct": 9.5,
+    "click_rate_pct": 3.7,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "a165ddb8",
+     "d55997bc",
+     "73d5d200",
+     "13860110",
+     "7f778519",
+     "eeb85ac4",
+     "e2cc6abf",
+     "80f867d9",
+     "a515afbf",
+     "f9316cf4"
+    ]
+   },
+   {
+    "sent_on": "2026-04-07",
+    "subject": "Boost Your DevOps Workflow with Opsera's Latest Features \ud83d\ude80",
+    "kind": "BATCH_EMAIL",
+    "sends": 145,
+    "opens": 26,
+    "clicks": 0,
+    "open_rate_pct": 17.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "f8e9242c",
+     "00f0e6aa",
+     "157170b8",
+     "f16d5ca8",
+     "0c4afe69",
+     "41704246",
+     "5f8383ca"
+    ]
+   },
+   {
+    "sent_on": "2026-04-08",
+    "subject": "We value your feedback on AI.",
+    "kind": "BATCH_EMAIL",
+    "sends": 56,
+    "opens": 3,
+    "clicks": 1,
+    "open_rate_pct": 5.4,
+    "click_rate_pct": 1.8,
+    "words": [
+     "9f21b24f",
+     "60785ef2",
+     "37e96daa",
+     "8a8753c7",
+     "425ed3ca",
+     "00f0e6aa",
+     "3684a602"
+    ]
+   },
+   {
+    "sent_on": "2026-04-09",
+    "subject": "Boost Your DevOps Workflow with Opsera's Latest Features \ud83d\ude80",
+    "kind": "BATCH_EMAIL",
+    "sends": 1,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2b885b82",
+     "f8e9242c",
+     "00f0e6aa",
+     "157170b8",
+     "f16d5ca8",
+     "0c4afe69",
+     "41704246",
+     "5f8383ca"
+    ]
+   },
+   {
+    "sent_on": "2026-04-10",
+    "subject": "Your recording is ready: Meet the Opsera AppSec Agents workshop",
+    "kind": "BATCH_EMAIL",
+    "sends": 21,
+    "opens": 7,
+    "clicks": 1,
+    "open_rate_pct": 33.3,
+    "click_rate_pct": 4.8,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "88d37956",
+     "b40eb21c",
+     "3687395b",
+     "5d4ba441",
+     "9f21b24f"
+    ]
+   },
+   {
+    "sent_on": "2026-04-15",
+    "subject": "\u00a0Success with AI Requires Much More than Adoption",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 767,
+    "opens": 144,
+    "clicks": 33,
+    "open_rate_pct": 18.8,
+    "click_rate_pct": 4.3,
+    "words": [
+     "665c06c8",
+     "f80a81d8",
+     "3a5fbf10",
+     "0c4afe69",
+     "9b8caa55",
+     "d12fe57c",
+     "e85541e0",
+     "e5185c1a",
+     "e0946331"
+    ]
+   },
+   {
+    "sent_on": "2026-04-15",
+    "subject": "Successful AI DevOps Transformation In 90 Days",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 820,
+    "opens": 137,
+    "clicks": 25,
+    "open_rate_pct": 16.8,
+    "click_rate_pct": 3.1,
+    "words": [
+     "665c06c8",
+     "f80a81d8",
+     "66d5f47b",
+     "157170b8",
+     "5cee2030",
+     "f691d28a"
+    ]
+   },
+   {
+    "sent_on": "2026-04-15",
+    "subject": "\u00a0AI Coding Is Fast. Can Your Pipelines Handle It?",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1002,
+    "opens": 157,
+    "clicks": 38,
+    "open_rate_pct": 15.9,
+    "click_rate_pct": 3.9,
+    "words": [
+     "665c06c8",
+     "f80a81d8",
+     "1a59fc07",
+     "029402af",
+     "f0743965",
+     "00f0e6aa",
+     "844e04d0",
+     "2e7fcbd3"
+    ]
+   },
+   {
+    "sent_on": "2026-04-15",
+    "subject": "Watch the Recording: Meet the Opsera AppSec Agents workshop",
+    "kind": "BATCH_EMAIL",
+    "sends": 19581,
+    "opens": 669,
+    "clicks": 146,
+    "open_rate_pct": 3.5,
+    "click_rate_pct": 0.8,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "5b6c4f70",
+     "24b9216b",
+     "5fb7b228",
+     "b40eb21c",
+     "96908b6c",
+     "88d37956",
+     "3687395b",
+     "5d4ba441",
+     "9f21b24f"
+    ]
+   },
+   {
+    "sent_on": "2026-04-20",
+    "subject": "A gift card for your feedback on Opsera.",
+    "kind": "BATCH_EMAIL",
+    "sends": 273,
+    "opens": 12,
+    "clicks": 2,
+    "open_rate_pct": 4.4,
+    "click_rate_pct": 0.7,
+    "words": [
+     "9f21b24f",
+     "60785ef2",
+     "37e96daa",
+     "8a8753c7",
+     "8a7324ef",
+     "8827595f",
+     "acf38390",
+     "00f0e6aa",
+     "3684a602",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-04-20",
+    "subject": "What's New in Unified Insights: New Dashboards, Enhanced AI & Smarter Analytics\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2608,
+    "opens": 80,
+    "clicks": 3,
+    "open_rate_pct": 3.1,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "e48b05ad",
+     "665c06c8",
+     "856e942f",
+     "28999611",
+     "c3e55978",
+     "2d8caab7",
+     "4c29c125",
+     "5c10448b"
+    ]
+   },
+   {
+    "sent_on": "2026-04-20",
+    "subject": "What's New in Opsera | Logik.io CPQ CI/CD, Salesforce Insights & Pipeline Automation",
+    "kind": "BATCH_EMAIL",
+    "sends": 203,
+    "opens": 38,
+    "clicks": 0,
+    "open_rate_pct": 19.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "0f29c2a6",
+     "bb16bb41",
+     "856e942f",
+     "28999611",
+     "c67f2a79",
+     "fd4affd5",
+     "665c06c8",
+     "d3442983",
+     "576bb12a"
+    ]
+   },
+   {
+    "sent_on": "2026-04-20",
+    "subject": "Faster Pipelines, Smarter Delivery \u2014 New Platform & SDLC Updates from Opsera",
+    "kind": "BATCH_EMAIL",
+    "sends": 2537,
+    "opens": 75,
+    "clicks": 1,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2a4a32b2",
+     "0f29c2a6",
+     "1327bcbb",
+     "279cb564",
+     "844e04d0",
+     "4c29c125",
+     "f9c53a55",
+     "28999611",
+     "17860705",
+     "95cd8075"
+    ]
+   },
+   {
+    "sent_on": "2026-04-21",
+    "subject": "[Workshop Invite] Kill Spaghetti Code, Ship Structure",
+    "kind": "BATCH_EMAIL",
+    "sends": 6418,
+    "opens": 551,
+    "clicks": 184,
+    "open_rate_pct": 9.0,
+    "click_rate_pct": 3.0,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "a165ddb8",
+     "d55997bc",
+     "73d5d200",
+     "13860110",
+     "c50f4599",
+     "790d083c",
+     "f9316cf4",
+     "ac56f17f",
+     "6f5525c6"
+    ]
+   },
+   {
+    "sent_on": "2026-04-21",
+    "subject": "Webinar: Copilot, Cursor, Claude Code: What 250K Developers Revealed",
+    "kind": "BATCH_EMAIL",
+    "sends": 48579,
+    "opens": 2367,
+    "clicks": 311,
+    "open_rate_pct": 4.9,
+    "click_rate_pct": 0.6,
+    "words": [
+     "19bb34eb",
+     "205a0a01",
+     "876fffdd",
+     "7c696443",
+     "e336320f",
+     "e1fc8517",
+     "f9316cf4",
+     "856e942f",
+     "72fc97c1",
+     "4636d19a",
+     "3f01bfd1"
+    ]
+   },
+   {
+    "sent_on": "2026-04-22",
+    "subject": "[Invite] The architecture talk your team keeps skipping",
+    "kind": "BATCH_EMAIL",
+    "sends": 6015,
+    "opens": 522,
+    "clicks": 189,
+    "open_rate_pct": 8.8,
+    "click_rate_pct": 3.2,
+    "words": [
+     "c2826e5f",
+     "d568180c",
+     "a165ddb8",
+     "d55997bc",
+     "73d5d200",
+     "13860110",
+     "b40eb21c",
+     "67c36cc2",
+     "142ce44f",
+     "00f0e6aa",
+     "a2fd7d0c",
+     "a78a58e1",
+     "6af3b09a"
+    ]
+   },
+   {
+    "sent_on": "2026-04-23",
+    "subject": "Introducing Forge. The future of enterprise software delivery is here.",
+    "kind": "BATCH_EMAIL",
+    "sends": 3916,
+    "opens": 161,
+    "clicks": 5,
+    "open_rate_pct": 4.1,
+    "click_rate_pct": 0.1,
+    "words": [
+     "89b29c10",
+     "f1b83866",
+     "8a8753c7",
+     "c09344de",
+     "99437a21",
+     "b40eb21c",
+     "55563696",
+     "f4a407c2",
+     "42278e90",
+     "f9c53a55",
+     "213b65cb"
+    ]
+   },
+   {
+    "sent_on": "2026-04-27",
+    "subject": "What's New in Unified Insights: \u00a0Revamped Sprint KPI Tables & Cleaner Jira Board Mapping",
+    "kind": "BATCH_EMAIL",
+    "sends": 2558,
+    "opens": 77,
+    "clicks": 0,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "e48b05ad",
+     "665c06c8",
+     "2b885b82",
+     "856e942f",
+     "28999611",
+     "4d0fe845",
+     "76f15155",
+     "5c2ff905",
+     "20890fc4",
+     "db850449",
+     "a718ff71",
+     "ef92fe2b",
+     "26045d85"
+    ]
+   },
+   {
+    "sent_on": "2026-04-28",
+    "subject": "[Webinar] 250K Developers Set the Benchmark. How Does Your AI Program Stack Up?",
+    "kind": "BATCH_EMAIL",
+    "sends": 61764,
+    "opens": 2134,
+    "clicks": 384,
+    "open_rate_pct": 3.5,
+    "click_rate_pct": 0.6,
+    "words": [
+     "19bb34eb",
+     "205a0a01",
+     "876fffdd",
+     "72fc97c1",
+     "4636d19a",
+     "c6270703",
+     "b40eb21c",
+     "1ab344ec",
+     "01c3ac8d",
+     "20dc1db0",
+     "00f0e6aa",
+     "3d8466cb",
+     "625163ff"
+    ]
+   },
+   {
+    "sent_on": "2026-04-28",
+    "subject": "Your workshop recording is ready: Kill Spaghetti Code. Ship Structure.",
+    "kind": "BATCH_EMAIL",
+    "sends": 12,
+    "opens": 2,
+    "clicks": 1,
+    "open_rate_pct": 16.7,
+    "click_rate_pct": 8.3,
+    "words": [
+     "c50f4599",
+     "790d083c",
+     "f9316cf4",
+     "d568180c",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "ac56f17f",
+     "6f5525c6"
+    ]
+   },
+   {
+    "sent_on": "2026-04-29",
+    "subject": "The missing sidebar for your Cursor workflow",
+    "kind": "BATCH_EMAIL",
+    "sends": 95,
+    "opens": 4,
+    "clicks": 1,
+    "open_rate_pct": 4.3,
+    "click_rate_pct": 1.1,
+    "words": [
+     "e7e19b94",
+     "acf38390",
+     "b40eb21c",
+     "e336320f",
+     "60785ef2",
+     "b6f40207",
+     "c87acfc7",
+     "00f0e6aa",
+     "f16d5ca8"
+    ]
+   },
+   {
+    "sent_on": "2026-04-29",
+    "subject": "Claude Code is 10x faster. Is your verification?",
+    "kind": "BATCH_EMAIL",
+    "sends": 95,
+    "opens": 5,
+    "clicks": 0,
+    "open_rate_pct": 5.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e7e19b94",
+     "acf38390",
+     "b40eb21c",
+     "e1fc8517",
+     "f9316cf4",
+     "60785ef2",
+     "2f337c74",
+     "279cb564",
+     "00f0e6aa",
+     "65872ade"
+    ]
+   },
+   {
+    "sent_on": "2026-04-30",
+    "subject": "Your webinar recording is ready: Copilot, Cursor, Claude Code: What 250K Developers Revealed",
+    "kind": "BATCH_EMAIL",
+    "sends": 54,
+    "opens": 12,
+    "clicks": 5,
+    "open_rate_pct": 22.6,
+    "click_rate_pct": 9.4,
+    "words": [
+     "19bb34eb",
+     "205a0a01",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "7c696443",
+     "e336320f",
+     "e1fc8517",
+     "f9316cf4",
+     "856e942f",
+     "72fc97c1",
+     "4636d19a",
+     "3f01bfd1"
+    ]
+   },
+   {
+    "sent_on": "2026-04-30",
+    "subject": "Did You Know: Pipeline Run View is redesigned for faster debugging",
+    "kind": "BATCH_EMAIL",
+    "sends": 2677,
+    "opens": 126,
+    "clicks": 7,
+    "open_rate_pct": 4.7,
+    "click_rate_pct": 0.3,
+    "words": [
+     "f23bb04f",
+     "0bba4fb0",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "d3442983",
+     "2acd4eca",
+     "dba4f4f8",
+     "952997c7",
+     "acf38390",
+     "279cb564",
+     "9f127f33"
+    ]
+   },
+   {
+    "sent_on": "2026-05-04",
+    "subject": "Opsera Release Notes | Smarter Pipelines, Richer Salesforce Workflows \u2014 What's New in Opsera\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 193,
+    "opens": 37,
+    "clicks": 3,
+    "open_rate_pct": 19.6,
+    "click_rate_pct": 1.6,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "4c29c125",
+     "844e04d0",
+     "27133cfc",
+     "ea292cc1",
+     "856e942f",
+     "28999611"
+    ]
+   },
+   {
+    "sent_on": "2026-05-04",
+    "subject": "Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",
+    "kind": "BATCH_EMAIL",
+    "sends": 2536,
+    "opens": 77,
+    "clicks": 3,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "e48b05ad",
+     "665c06c8",
+     "2b885b82",
+     "bfc4f618",
+     "c7e16877",
+     "3b3e18e8",
+     "acf38390",
+     "32c1f689",
+     "f0e72c76",
+     "256ccb35",
+     "f8ce75e3",
+     "7f37f5e5",
+     "1705ad44",
+     "d3442983"
+    ]
+   },
+   {
+    "sent_on": "2026-05-04",
+    "subject": "Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",
+    "kind": "BATCH_EMAIL",
+    "sends": 2479,
+    "opens": 82,
+    "clicks": 7,
+    "open_rate_pct": 3.3,
+    "click_rate_pct": 0.3,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2a4a32b2",
+     "0f29c2a6",
+     "1327bcbb",
+     "856e942f",
+     "8f259e5f",
+     "bb34a54d",
+     "d3442983",
+     "f352e36f",
+     "542abc6b",
+     "2a577ae7",
+     "8c911c01",
+     "b6873945",
+     "923fa396",
+     "05a26650"
+    ]
+   },
+   {
+    "sent_on": "2026-05-05",
+    "subject": "April Newsletter: The missing piece in AI-driven software, solved",
+    "kind": "BATCH_EMAIL",
+    "sends": 63325,
+    "opens": 2614,
+    "clicks": 305,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.5,
+    "words": [
+     "0d8eaca0",
+     "3687395b",
+     "f31ea7f7",
+     "6a99dc1a",
+     "b40eb21c",
+     "b6f40207",
+     "f4c5f285",
+     "f954395b",
+     "42278e90",
+     "f951603c"
+    ]
+   },
+   {
+    "sent_on": "2026-05-06",
+    "subject": "An invitation just for {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 5834,
+    "opens": 93,
+    "clicks": 4,
+    "open_rate_pct": 1.6,
+    "click_rate_pct": 0.1,
+    "words": [
+     "13860110",
+     "9a50cbcf",
+     "9dd7e26e",
+     "b6a81717",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-05-11",
+    "subject": "Opsera Release Notes | Copilot Cumulative Totals, Agent Activity Toggle & On-Premise Jira Linked Issues\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2536,
+    "opens": 145,
+    "clicks": 9,
+    "open_rate_pct": 5.7,
+    "click_rate_pct": 0.4,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "7c696443",
+     "4b64751a",
+     "2256b58a",
+     "4fe7f1a6",
+     "a229d2ec",
+     "40296205",
+     "722c182c",
+     "a718ff71",
+     "7fce9580",
+     "7a6ffc49"
+    ]
+   },
+   {
+    "sent_on": "2026-05-12",
+    "subject": "[Workshop Invite] Your Team Is Using Cursor. Here's How You Ship It Safely.",
+    "kind": "BATCH_EMAIL",
+    "sends": 5360,
+    "opens": 490,
+    "clicks": 47,
+    "open_rate_pct": 9.2,
+    "click_rate_pct": 0.9,
+    "words": [
+     "e336320f",
+     "d568180c",
+     "a165ddb8",
+     "d55997bc",
+     "73d5d200",
+     "13860110",
+     "00f0e6aa",
+     "a2fd7d0c",
+     "69ce1407",
+     "213b65cb",
+     "01c3ac8d",
+     "50b8d09c",
+     "ac56f17f",
+     "6a4d24bf"
+    ]
+   },
+   {
+    "sent_on": "2026-05-15",
+    "subject": "Did you know? Pipeline Notifications now deliver conditional alerts\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2655,
+    "opens": 127,
+    "clicks": 7,
+    "open_rate_pct": 4.8,
+    "click_rate_pct": 0.3,
+    "words": [
+     "f23bb04f",
+     "d3442983",
+     "f352e36f",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "28b19af7",
+     "c2b4e50e",
+     "9915afb3",
+     "d284613e"
+    ]
+   },
+   {
+    "sent_on": "2026-05-18",
+    "subject": "Opsera Release Notes |New for Salesforce: CPQ transfers, EventRelay, smarter code scans",
+    "kind": "BATCH_EMAIL",
+    "sends": 189,
+    "opens": 34,
+    "clicks": 0,
+    "open_rate_pct": 18.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "28999611",
+     "acf38390",
+     "7d1fb3a2",
+     "fd4affd5",
+     "8d286eaf",
+     "52a2de6c",
+     "4c29c125",
+     "f9316cf4",
+     "8c911c01"
+    ]
+   },
+   {
+    "sent_on": "2026-05-18",
+    "subject": "Opsera Release Notes |AI release notes, pipeline backup & recovery, and more",
+    "kind": "BATCH_EMAIL",
+    "sends": 2465,
+    "opens": 72,
+    "clicks": 0,
+    "open_rate_pct": 2.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "2a4a32b2",
+     "0f29c2a6",
+     "1327bcbb",
+     "2b885b82",
+     "d3442983",
+     "32afa6df",
+     "2eadcf06",
+     "e85541e0"
+    ]
+   },
+   {
+    "sent_on": "2026-05-18",
+    "subject": "Opsera Release Notes | Hummingbird AI for Leadership, Contributor Statistics\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2533,
+    "opens": 80,
+    "clicks": 18,
+    "open_rate_pct": 3.2,
+    "click_rate_pct": 0.7,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "88205b37",
+     "acf38390",
+     "01ef608e",
+     "df697eea",
+     "cd3d6c0a"
+    ]
+   },
+   {
+    "sent_on": "2026-05-18",
+    "subject": "Your workshop recording is ready: Ship AI-Generated Code with Enterprise Guardrails",
+    "kind": "BATCH_EMAIL",
+    "sends": 15,
+    "opens": 4,
+    "clicks": 2,
+    "open_rate_pct": 26.7,
+    "click_rate_pct": 13.3,
+    "words": [
+     "e336320f",
+     "d568180c",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "ac56f17f",
+     "7cdd4142",
+     "f9316cf4",
+     "0c4afe69",
+     "f4a407c2",
+     "929a15ab"
+    ]
+   },
+   {
+    "sent_on": "2026-05-22",
+    "subject": "An invitation just for {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 531,
+    "opens": 10,
+    "clicks": 2,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.4,
+    "words": [
+     "13860110",
+     "9a50cbcf",
+     "9dd7e26e",
+     "b6a81717",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-05-27",
+    "subject": "Join us {{ contact.firstname }} for a forum on token economics.",
+    "kind": "BATCH_EMAIL",
+    "sends": 137,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "13860110",
+     "9580b830",
+     "fcebc453",
+     "89b29c10",
+     "95858f56",
+     "c922bc79",
+     "4303b923",
+     "6976b5ba",
+     "acf38390",
+     "9479ea32",
+     "72e4cfed"
+    ]
+   },
+   {
+    "sent_on": "2026-05-27",
+    "subject": "Great connecting at Agentforce World Tour Mumbai",
+    "kind": "LOCALTIME_EMAIL",
+    "sends": 293,
+    "opens": 46,
+    "clicks": 4,
+    "open_rate_pct": 15.7,
+    "click_rate_pct": 1.4,
+    "words": [
+     "57d8622d",
+     "37a3e893",
+     "3783f063",
+     "e9803882",
+     "fb1355ee",
+     "5fb60aa7"
+    ]
+   },
+   {
+    "sent_on": "2026-05-29",
+    "subject": "Did you know? Opsera's Notification Center centralizes every pipeline approval",
+    "kind": "BATCH_EMAIL",
+    "sends": 2653,
+    "opens": 110,
+    "clicks": 16,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.6,
+    "words": [
+     "f23bb04f",
+     "d3442983",
+     "ea3d3046",
+     "e4bb6ec6",
+     "2b885b82",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "3687395b",
+     "058c4484",
+     "63b97a95",
+     "094ef704",
+     "76037226"
+    ]
+   },
+   {
+    "sent_on": "2026-06-01",
+    "subject": "Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "2b885b82",
+     "629c4eff",
+     "aaf01d19",
+     "d8e0fc32",
+     "f217317a",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f"
+    ]
+   },
+   {
+    "sent_on": "2026-06-01",
+    "subject": "Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 182,
+    "opens": 34,
+    "clicks": 0,
+    "open_rate_pct": 18.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "629c4eff",
+     "aaf01d19",
+     "d8e0fc32",
+     "f217317a",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f"
+    ]
+   },
+   {
+    "sent_on": "2026-06-01",
+    "subject": "Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",
+    "kind": "BATCH_EMAIL",
+    "sends": 2450,
+    "opens": 119,
+    "clicks": 13,
+    "open_rate_pct": 4.9,
+    "click_rate_pct": 0.5,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "1327bcbb",
+     "2a4a32b2",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f",
+     "f4e20ef7",
+     "9fbda08d",
+     "1ac6a97e",
+     "6932a9ae",
+     "22dc7932",
+     "4368b0ec",
+     "2b0b962b"
+    ]
+   },
+   {
+    "sent_on": "2026-06-01",
+    "subject": "[Invite Only] Breakfast before DAIS? June 16",
+    "kind": "BATCH_EMAIL",
+    "sends": 146,
+    "opens": 6,
+    "clicks": 1,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.7,
+    "words": [
+     "13860110",
+     "f6ba74fa",
+     "9a32f866",
+     "82416065",
+     "40293d93",
+     "9d9e89f7",
+     "3845ff3e"
+    ]
+   },
+   {
+    "sent_on": "2026-06-01",
+    "subject": "AI token economics forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 80,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 2.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "13860110",
+     "9580b830",
+     "fcebc453",
+     "89b29c10",
+     "95858f56",
+     "9479ea32",
+     "72e4cfed"
+    ]
+   },
+   {
+    "sent_on": "2026-06-02",
+    "subject": "Opsera is a Gartner\u00ae Magic Quadrant\u2122 Leader, see what\u2019s next",
+    "kind": "BATCH_EMAIL",
+    "sends": 69590,
+    "opens": 2029,
+    "clicks": 317,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.5,
+    "words": [
+     "0d8eaca0",
+     "3687395b",
+     "d6a2e186",
+     "6a99dc1a",
+     "2edc649c",
+     "e4eb258c",
+     "f5dbe545",
+     "b0d588e4",
+     "b526ec40",
+     "856e942f",
+     "5cb68de8"
+    ]
+   },
+   {
+    "sent_on": "2026-06-02",
+    "subject": "[Invite Only] Breakfast before DAIS? June 16",
+    "kind": "BATCH_EMAIL",
+    "sends": 376,
+    "opens": 20,
+    "clicks": 14,
+    "open_rate_pct": 5.3,
+    "click_rate_pct": 3.7,
+    "words": [
+     "13860110",
+     "f6ba74fa",
+     "9a32f866",
+     "82416065",
+     "40293d93",
+     "9d9e89f7",
+     "3845ff3e"
+    ]
+   },
+   {
+    "sent_on": "2026-06-02",
+    "subject": "Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",
+    "kind": "BATCH_EMAIL",
+    "sends": 1,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "1327bcbb",
+     "2a4a32b2",
+     "2b885b82",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f",
+     "f4e20ef7",
+     "9fbda08d",
+     "1ac6a97e",
+     "6932a9ae",
+     "22dc7932",
+     "4368b0ec",
+     "2b0b962b"
+    ]
+   },
+   {
+    "sent_on": "2026-06-02",
+    "subject": "Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 1,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "d6a2e186",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "2b885b82",
+     "629c4eff",
+     "aaf01d19",
+     "d8e0fc32",
+     "f217317a",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f"
+    ]
+   },
+   {
+    "sent_on": "2026-06-03",
+    "subject": "[Limited Seats] Forum on AI token waste.",
+    "kind": "BATCH_EMAIL",
+    "sends": 88,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 1.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "609a6d33",
+     "d3be3f67",
+     "bde64e3e",
+     "43f659a5",
+     "e9b35e81",
+     "95858f56",
+     "9479ea32",
+     "7f46acb5"
+    ]
+   },
+   {
+    "sent_on": "2026-06-03",
+    "subject": "Thank you for your Forge demo request.",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 40,
+    "opens": 9,
+    "clicks": 0,
+    "open_rate_pct": 22.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "89b29c10",
+     "aefd3536",
+     "3eaa09b2",
+     "165985e3",
+     "50b8d09c",
+     "acf38390",
+     "00f0e6aa"
+    ]
+   },
+   {
+    "sent_on": "2026-06-03",
+    "subject": "15 seats. Palo Alto. Token waste.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2064,
+    "opens": 40,
+    "clicks": 1,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "d3be3f67",
+     "bde64e3e",
+     "e9b35e81",
+     "9479ea32",
+     "7f46acb5"
+    ]
+   },
+   {
+    "sent_on": "2026-06-05",
+    "subject": "See AI-Driven DevOps Live in Action",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 20,
+    "opens": 2,
+    "clicks": 1,
+    "open_rate_pct": 11.1,
+    "click_rate_pct": 5.6,
+    "words": [
+     "4d34ee21",
+     "42278e90",
+     "13860110",
+     "d6dfb05d",
+     "aefd3536",
+     "b526ec40",
+     "f954395b",
+     "157170b8",
+     "07f017af",
+     "c4642eff"
+    ]
+   },
+   {
+    "sent_on": "2026-06-07",
+    "subject": "An invitation just for {{ contact.firstname }}",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1970,
+    "opens": 554,
+    "clicks": 450,
+    "open_rate_pct": 28.6,
+    "click_rate_pct": 23.2,
+    "words": [
+     "13860110",
+     "9f21b24f",
+     "2d6d90f2",
+     "9a50cbcf",
+     "9dd7e26e",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-06-08",
+    "subject": "Opsera Release Notes | Automated Variable Sharing, Salesforce CLI Upgrade & Data 360 Metadata Support",
+    "kind": "BATCH_EMAIL",
+    "sends": 182,
+    "opens": 46,
+    "clicks": 7,
+    "open_rate_pct": 25.3,
+    "click_rate_pct": 3.8,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "5be63d0d",
+     "19385305",
+     "90d9d0d3",
+     "0d903d89",
+     "dc97cc77",
+     "d872e2a5",
+     "d1554ac4",
+     "66225340",
+     "3b3e18e8"
+    ]
+   },
+   {
+    "sent_on": "2026-06-08",
+    "subject": "Invitation Only - Limited Seats - Token efficiency forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2450,
+    "opens": 39,
+    "clicks": 2,
+    "open_rate_pct": 1.7,
+    "click_rate_pct": 0.1,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "d3be3f67",
+     "bde64e3e",
+     "737e061e",
+     "9d9e89f7",
+     "43f659a5",
+     "e9b35e81",
+     "9479ea32",
+     "3e944e58",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-06-15",
+    "subject": "{{ contact.firstname }} - Dinner's on me.",
+    "kind": "BATCH_EMAIL",
+    "sends": 70,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 1.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "609a6d33",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-06-15",
+    "subject": "Opsera Release Notes | Pipeline Canvas Persistence, Expanded OIC Coverage & Pinpoint Git Custodian PR Findings\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2413,
+    "opens": 95,
+    "clicks": 1,
+    "open_rate_pct": 3.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "40293d93",
+     "1327bcbb",
+     "2a4a32b2",
+     "d3442983",
+     "83172271",
+     "54c237b0",
+     "fe044378",
+     "c0386c82",
+     "f7f1b61b",
+     "49f6a34a",
+     "542abc6b",
+     "2a577ae7",
+     "c3eb88cf"
+    ]
+   },
+   {
+    "sent_on": "2026-06-15",
+    "subject": "Opsera Release Notes | Follow-Up Questions in Hummingbird AI, SDLC Hierarchy Graph & Deployment Frequency Metric Views\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2480,
+    "opens": 64,
+    "clicks": 0,
+    "open_rate_pct": 2.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "40293d93",
+     "665c06c8",
+     "5b6c4f70",
+     "f857cd02",
+     "88205b37",
+     "1327bcbb",
+     "10112a28",
+     "b9780647",
+     "251b4cfe",
+     "2fb31c01",
+     "c9af4301",
+     "4facf6d1"
+    ]
+   },
+   {
+    "sent_on": "2026-06-15",
+    "subject": "Opsera Release Notes | Pipeline Canvas Persistence, Hummingbird AI Intelligence & Slack/Teams for Salesforce\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 178,
+    "opens": 35,
+    "clicks": 1,
+    "open_rate_pct": 19.7,
+    "click_rate_pct": 0.6,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "40293d93",
+     "7d1fb3a2",
+     "2a4a32b2",
+     "d3442983",
+     "83172271",
+     "54c237b0",
+     "88205b37",
+     "392cccc2",
+     "ea9b2927",
+     "140c8eed",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-06-15",
+    "subject": "What do NVIDIA, Box and Thoughtspot have in common?",
+    "kind": "BATCH_EMAIL",
+    "sends": 1997,
+    "opens": 16,
+    "clicks": 0,
+    "open_rate_pct": 0.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "856e942f",
+     "7881bafe",
+     "70c67e32",
+     "0f29c2a6",
+     "e7ce1b42",
+     "f5ce03fb",
+     "4d5b0474"
+    ]
+   },
+   {
+    "sent_on": "2026-06-17",
+    "subject": "What Eaton and Cisco do that most AI programs don't",
+    "kind": "BATCH_EMAIL",
+    "sends": 1444,
+    "opens": 16,
+    "clicks": 0,
+    "open_rate_pct": 1.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "bc5d33fd",
+     "205a0a01",
+     "876fffdd",
+     "856e942f",
+     "cf85e230",
+     "0f29c2a6",
+     "9151aa80",
+     "cb18332c",
+     "fb532132",
+     "8f6db3a8",
+     "ed68c80e"
+    ]
+   },
+   {
+    "sent_on": "2026-06-18",
+    "subject": "Java modernization viability baseline analysis.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1099,
+    "opens": 19,
+    "clicks": 1,
+    "open_rate_pct": 1.8,
+    "click_rate_pct": 0.1,
+    "words": [
+     "c3155d86",
+     "51cceffa",
+     "d3b4ca9d",
+     "abf8de42",
+     "081fb565",
+     "db819b62",
+     "872f4106",
+     "bc250623"
+    ]
+   },
+   {
+    "sent_on": "2026-06-18",
+    "subject": "An invitation just for {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 1971,
+    "opens": 11,
+    "clicks": 0,
+    "open_rate_pct": 0.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-06-19",
+    "subject": "Did you know every Opsera pipeline run now ships with documentation?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2584,
+    "opens": 86,
+    "clicks": 2,
+    "open_rate_pct": 3.3,
+    "click_rate_pct": 0.1,
+    "words": [
+     "f23bb04f",
+     "5e0cb715",
+     "1036ae7e",
+     "83815eca",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "094ef704",
+     "3687395b",
+     "d3442983",
+     "2acd4eca",
+     "28b19af7",
+     "58dd75e4",
+     "0c4afe69",
+     "488e9481"
+    ]
+   },
+   {
+    "sent_on": "2026-06-22",
+    "subject": "[Workshop Recording] So You Think You Can Vibe Code?",
+    "kind": "BATCH_EMAIL",
+    "sends": 51,
+    "opens": 6,
+    "clicks": 3,
+    "open_rate_pct": 11.8,
+    "click_rate_pct": 5.9,
+    "words": [
+     "cc8b8e33",
+     "d568180c",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "96908b6c",
+     "50b8d09c",
+     "7cc7ca5b",
+     "f0743965",
+     "bd9e09f9",
+     "f9316cf4"
+    ]
+   },
+   {
+    "sent_on": "2026-06-22",
+    "subject": "Dinner invite for {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 2184,
+    "opens": 25,
+    "clicks": 1,
+    "open_rate_pct": 1.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "13860110",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-06-23",
+    "subject": "Code debt is quiet. Until you try to move Java.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1017,
+    "opens": 13,
+    "clicks": 0,
+    "open_rate_pct": 1.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "89b29c10",
+     "081fb565",
+     "24f208e4",
+     "f9316cf4",
+     "93d839dc",
+     "ea353217",
+     "bab5214f",
+     "50b8d09c",
+     "ac1db00e",
+     "184b0014"
+    ]
+   },
+   {
+    "sent_on": "2026-06-24",
+    "subject": "{{ contact.firstname }}, so glad we found each other in NYC",
+    "kind": "BATCH_EMAIL",
+    "sends": 36,
+    "opens": 2,
+    "clicks": 1,
+    "open_rate_pct": 5.6,
+    "click_rate_pct": 2.8,
+    "words": [
+     "c97160d1",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "695ab86b",
+     "64ff7b9f",
+     "147aa128",
+     "c87d8df5",
+     "347b93e1"
+    ]
+   },
+   {
+    "sent_on": "2026-06-24",
+    "subject": "{{ contact.firstname }} - join us tomorrow for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 1942,
+    "opens": 37,
+    "clicks": 2,
+    "open_rate_pct": 2.0,
+    "click_rate_pct": 0.1,
+    "words": [
+     "874cbac7",
+     "eec9d849",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "ac3c2a26",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-06-25",
+    "subject": "A lot has changed since DAIS 2025",
+    "kind": "BATCH_EMAIL",
+    "sends": 209,
+    "opens": 16,
+    "clicks": 2,
+    "open_rate_pct": 7.7,
+    "click_rate_pct": 1.0,
+    "words": [
+     "875f385d",
+     "bdb158aa",
+     "f3c342e6",
+     "f6ba74fa",
+     "41293f26",
+     "17f478c0",
+     "63e1d819",
+     "ae7f4d1c",
+     "b2fa08eb",
+     "c09344de",
+     "ea44dd0f",
+     "4c5165c8",
+     "edbf0fe3",
+     "4629e89b",
+     "b536a99d"
+    ]
+   },
+   {
+    "sent_on": "2026-06-25",
+    "subject": "Great meeting you at DAIS \u2014 here's the next step",
+    "kind": "BATCH_EMAIL",
+    "sends": 284,
+    "opens": 7,
+    "clicks": 2,
+    "open_rate_pct": 2.5,
+    "click_rate_pct": 0.7,
+    "words": [
+     "875f385d",
+     "bdb158aa",
+     "f3c342e6",
+     "184e0683",
+     "16fa9c87",
+     "7a968ed4",
+     "0d8b883a",
+     "8318e578",
+     "fb1355ee",
+     "50b8d09c",
+     "f6ba74fa",
+     "213b65cb",
+     "b40eb21c",
+     "5cb68de8",
+     "c7441a0f"
+    ]
+   },
+   {
+    "sent_on": "2026-06-25",
+    "subject": "Starting in 2 hours: What Eaton and Cisco do that most AI programs don't",
+    "kind": "BATCH_EMAIL",
+    "sends": 20098,
+    "opens": 415,
+    "clicks": 49,
+    "open_rate_pct": 2.1,
+    "click_rate_pct": 0.2,
+    "words": [
+     "bc5d33fd",
+     "205a0a01",
+     "876fffdd",
+     "24b9216b",
+     "2370e859",
+     "02ff0734",
+     "856e942f",
+     "cf85e230",
+     "0f29c2a6",
+     "9151aa80",
+     "cb18332c",
+     "fb532132",
+     "8f6db3a8",
+     "ed68c80e"
+    ]
+   },
+   {
+    "sent_on": "2026-06-25",
+    "subject": "Looking forward to our meeting \u2014 install BrickForge before we connect",
+    "kind": "BATCH_EMAIL",
+    "sends": 25,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "875f385d",
+     "bdb158aa",
+     "f3c342e6",
+     "8467c7f7",
+     "8318e578",
+     "16fa9c87",
+     "9ba78aeb",
+     "5506547a",
+     "b45fa81a",
+     "a91a3339",
+     "0d8b883a",
+     "8463e1a0",
+     "3845ff3e",
+     "aae0ccf9"
+    ]
+   },
+   {
+    "sent_on": "2026-06-25",
+    "subject": "Dead code, CVEs, no tests. How much of this is yours?",
+    "kind": "BATCH_EMAIL",
+    "sends": 1595,
+    "opens": 40,
+    "clicks": 25,
+    "open_rate_pct": 2.5,
+    "click_rate_pct": 1.6,
+    "words": [
+     "89b29c10",
+     "081fb565",
+     "24f208e4",
+     "b5df2b27",
+     "f9316cf4",
+     "440d75c8",
+     "5b22cf22",
+     "01c3ac8d",
+     "d12fe57c",
+     "da2bd281",
+     "543b679b"
+    ]
+   },
+   {
+    "sent_on": "2026-06-26",
+    "subject": "Opsera Release Notes | DORA Email Reports, Golden Pipeline Adoption Tracking & Claude Code Sub-Agent",
+    "kind": "BATCH_EMAIL",
+    "sends": 2321,
+    "opens": 92,
+    "clicks": 3,
+    "open_rate_pct": 4.0,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "40293d93",
+     "665c06c8",
+     "32c1f689",
+     "8a8753c7",
+     "19b3cb48",
+     "1705ad44",
+     "d3442983",
+     "e0946331",
+     "c4a9977c",
+     "e1fc8517",
+     "f9316cf4",
+     "dc4e3915",
+     "4fe7f1a6"
+    ]
+   },
+   {
+    "sent_on": "2026-06-29",
+    "subject": "Opsera Release Notes | Path-Based Webhook Filtering, Bulk Step Insertion & Pipeline Tagging Governance",
+    "kind": "BATCH_EMAIL",
+    "sends": 2270,
+    "opens": 61,
+    "clicks": 14,
+    "open_rate_pct": 2.7,
+    "click_rate_pct": 0.6,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "2a4a32b2",
+     "84874d36",
+     "1e3e23f4",
+     "a0ebd926",
+     "f50b1a41",
+     "7739f22d",
+     "c7441a0f",
+     "8c28eaee",
+     "d3442983",
+     "aa0d94dc",
+     "aaf01d19"
+    ]
+   },
+   {
+    "sent_on": "2026-06-29",
+    "subject": "Opsera Release Notes | Vlocity Webhook Automation, Rollback Deployment & Permission Set Group Pre-Validation",
+    "kind": "BATCH_EMAIL",
+    "sends": 170,
+    "opens": 32,
+    "clicks": 6,
+    "open_rate_pct": 18.8,
+    "click_rate_pct": 3.5,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "82416065",
+     "40293d93",
+     "7d1fb3a2",
+     "629c4eff",
+     "a0ebd926",
+     "576bb12a",
+     "7ccad87d",
+     "251b4cfe",
+     "2bdaad02",
+     "c6270703",
+     "5fb91e8c",
+     "4a7ab7e6",
+     "f217317a"
+    ]
+   },
+   {
+    "sent_on": "2026-06-29",
+    "subject": "Your webinar recording is ready: AI Budget Burning? How to Convert AI Spend Into Tangible Business Results",
+    "kind": "BATCH_EMAIL",
+    "sends": 54,
+    "opens": 8,
+    "clicks": 0,
+    "open_rate_pct": 15.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "bc5d33fd",
+     "205a0a01",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "39baa088",
+     "9580b830",
+     "01c3ac8d",
+     "6239b678",
+     "7d7591b3",
+     "2f91a723",
+     "f731d635",
+     "2ab24e4b",
+     "6c4f4af5"
+    ]
+   },
+   {
+    "sent_on": "2026-06-29",
+    "subject": "Your competitors started their Java migration. You haven't.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1664,
+    "opens": 47,
+    "clicks": 28,
+    "open_rate_pct": 2.9,
+    "click_rate_pct": 1.7,
+    "words": [
+     "89b29c10",
+     "081fb565",
+     "24f208e4",
+     "00f0e6aa",
+     "c62808e8",
+     "80595b9e",
+     "cbfd3c67",
+     "2b0b962b",
+     "50b8d09c",
+     "884fa38f"
+    ]
+   },
+   {
+    "sent_on": "2026-06-30",
+    "subject": "Thank You + Key Takeaways: Tokenomics CXO Roundtable",
+    "kind": "BATCH_EMAIL",
+    "sends": 3,
+    "opens": 2,
+    "clicks": 2,
+    "open_rate_pct": 66.7,
+    "click_rate_pct": 66.7,
+    "words": [
+     "609a6d33",
+     "0f5ea3e3",
+     "82416065",
+     "57b20f7d",
+     "5b6c4f70",
+     "c5181aa0",
+     "165985e3",
+     "50b8d09c",
+     "6815c86c",
+     "2bd1f7a5",
+     "5211c603",
+     "bc5d33fd"
+    ]
+   },
+   {
+    "sent_on": "2026-06-30",
+    "subject": "Missed our CXO Tokenomics Roundtable? Recap + Exclusive Access",
+    "kind": "BATCH_EMAIL",
+    "sends": 15,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 14.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "609a6d33",
+     "0f5ea3e3",
+     "82416065",
+     "57b20f7d",
+     "5b6c4f70",
+     "a947e23c",
+     "3ba788b0",
+     "a91a3339",
+     "5211c603",
+     "bc5d33fd",
+     "3e308718",
+     "080f41db",
+     "1126caeb"
+    ]
+   },
+   {
+    "sent_on": "2026-06-30",
+    "subject": "Thank You + Key Takeaways: Tokenomics CXO Roundtable",
+    "kind": "BATCH_EMAIL",
+    "sends": 8,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 25.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "609a6d33",
+     "0f5ea3e3",
+     "82416065",
+     "57b20f7d",
+     "5b6c4f70",
+     "c5181aa0",
+     "165985e3",
+     "50b8d09c",
+     "6815c86c",
+     "2bd1f7a5",
+     "5211c603",
+     "bc5d33fd"
+    ]
+   },
+   {
+    "sent_on": "2026-07-10",
+    "subject": "Opsera Release Notes | PDF Export for Executive Reporting Now Available Across All Dashboards",
+    "kind": "BATCH_EMAIL",
+    "sends": 2315,
+    "opens": 47,
+    "clicks": 0,
+    "open_rate_pct": 2.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "9a3d08ff",
+     "665c06c8",
+     "694dc915",
+     "fb080cb3",
+     "acf38390",
+     "562a13b1",
+     "0baf62ad",
+     "28b19af7",
+     "66fdf298",
+     "b567c124",
+     "13254bc4",
+     "c3e55978"
+    ]
+   },
+   {
+    "sent_on": "2026-07-10",
+    "subject": "Did you know? You can now bulk-manage your pipelines",
+    "kind": "BATCH_EMAIL",
+    "sends": 2439,
+    "opens": 88,
+    "clicks": 6,
+    "open_rate_pct": 3.6,
+    "click_rate_pct": 0.2,
+    "words": [
+     "f23bb04f",
+     "7739f22d",
+     "d3442983",
+     "8065cb2f",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "f0743965",
+     "28b19af7",
+     "03a168f6",
+     "00f0e6aa",
+     "844e04d0"
+    ]
+   },
+   {
+    "sent_on": "2026-07-10",
+    "subject": "Invitation just for {{ contact.firstname }} - software delivery forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 979,
+    "opens": 22,
+    "clicks": 5,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.5,
+    "words": [
+     "57b20f7d",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "42278e90",
+     "f9c53a55",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-13",
+    "subject": "Opsera Release Notes | Template Propagation, Apex Compilation Checks & Logik CPQ Asset Management\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 170,
+    "opens": 28,
+    "clicks": 0,
+    "open_rate_pct": 16.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "9a3d08ff",
+     "7d1fb3a2",
+     "694aaa0b",
+     "5afd5921",
+     "c6cd0dc1",
+     "0d9019d4",
+     "af0f65dc",
+     "c67f2a79",
+     "fd4affd5",
+     "dce3a09b",
+     "234b0316"
+    ]
+   },
+   {
+    "sent_on": "2026-07-13",
+    "subject": "Opsera Release Notes | Template Propagation, Configurable Container Sizes & Enhanced SDLC Pipelines\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2265,
+    "opens": 96,
+    "clicks": 5,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.2,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "9a3d08ff",
+     "1327bcbb",
+     "694aaa0b",
+     "5afd5921",
+     "b26b4694",
+     "8daff178",
+     "4535e4fd",
+     "2d8caab7",
+     "844e04d0"
+    ]
+   },
+   {
+    "sent_on": "2026-07-13",
+    "subject": "Invitation just for {{ contact.firstname }} - tokenomics forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1124,
+    "opens": 30,
+    "clicks": 4,
+    "open_rate_pct": 2.8,
+    "click_rate_pct": 0.4,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "5211c603",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-13",
+    "subject": "Invitation just for {{ contact.firstname }} - tokenomics forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 29,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 6.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "609a6d33",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "5211c603",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-13",
+    "subject": "{{ contact.firstname }} | Invitation only AI forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 932,
+    "opens": 10,
+    "clicks": 2,
+    "open_rate_pct": 1.1,
+    "click_rate_pct": 0.2,
+    "words": [
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "737e061e",
+     "9d9e89f7",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-15",
+    "subject": "Invitation just for {{ contact.firstname }} - tokenomics forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 38,
+    "opens": 3,
+    "clicks": 0,
+    "open_rate_pct": 9.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "609a6d33",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "5211c603",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-15",
+    "subject": "{{ contact.firstname }} - Invitation only AI forum and dinner.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1144,
+    "opens": 24,
+    "clicks": 4,
+    "open_rate_pct": 2.1,
+    "click_rate_pct": 0.4,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "737e061e",
+     "9d9e89f7",
+     "95858f56",
+     "0f29c2a6"
+    ]
+   },
+   {
+    "sent_on": "2026-07-15",
+    "subject": "Dinner invitation for {{ contact.firstname }}\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 923,
+    "opens": 9,
+    "clicks": 4,
+    "open_rate_pct": 1.0,
+    "click_rate_pct": 0.4,
+    "words": [
+     "57b20f7d",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-07-16",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 62,
+    "opens": 3,
+    "clicks": 2,
+    "open_rate_pct": 4.9,
+    "click_rate_pct": 3.3,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "e5a4f945",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-16",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 636,
+    "opens": 25,
+    "clicks": 3,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.5,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "c00af369",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-16",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 404,
+    "opens": 18,
+    "clicks": 4,
+    "open_rate_pct": 4.5,
+    "click_rate_pct": 1.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "2d305535",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-17",
+    "subject": "Limited seats for {{ contact.firstname }} - AI context engineering forum.",
+    "kind": "BATCH_EMAIL",
+    "sends": 922,
+    "opens": 4,
+    "clicks": 0,
+    "open_rate_pct": 0.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "57b20f7d",
+     "43f659a5",
+     "e9b35e81",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "8c87107c",
+     "c5725fb0",
+     "95858f56"
+    ]
+   },
+   {
+    "sent_on": "2026-07-20",
+    "subject": "{{ contact.firstname }} - Dinner next week on us.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1116,
+    "opens": 45,
+    "clicks": 4,
+    "open_rate_pct": 4.0,
+    "click_rate_pct": 0.4,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-07-21",
+    "subject": "{{ contact.firstname }} - RSVP today.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2494,
+    "opens": 54,
+    "clicks": 7,
+    "open_rate_pct": 2.2,
+    "click_rate_pct": 0.3,
+    "words": [
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "acf3f494",
+     "420372be"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 29,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "9c10caeb",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "{{ contact.firstname }} - AI speed doesn't have to incur more tech debt.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1665,
+    "opens": 48,
+    "clicks": 31,
+    "open_rate_pct": 2.9,
+    "click_rate_pct": 1.9,
+    "words": [
+     "89b29c10",
+     "081fb565",
+     "24f208e4",
+     "4303b923",
+     "6976b5ba",
+     "7b80c780",
+     "9883047a",
+     "f5ce03fb",
+     "4ea4fa8c",
+     "e85541e0",
+     "a3f90171",
+     "93d839dc"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "What AI coding adoption actually looks like at companies your size",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "5f318981",
+     "856e942f",
+     "1a59fc07",
+     "e0946331",
+     "aabd0868",
+     "6fc5ca7f",
+     "0be7cf36",
+     "8c6e32a8",
+     "00f0e6aa",
+     "23a0d95c"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "Where in your delivery lifecycle are you losing your AI gains?",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "5f318981",
+     "056c1458",
+     "00f0e6aa",
+     "f9c53a55",
+     "47ddd94f",
+     "406f344d",
+     "50b8d09c",
+     "252c9213",
+     "9278aff7"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "Gartner named Opsera a Leader. Here's what we think it means.",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "5f318981",
+     "2edc649c",
+     "d3e553a6",
+     "3687395b",
+     "b0d588e4",
+     "213b65cb",
+     "856e942f",
+     "7cc7ca5b",
+     "3ebac865"
+    ]
+   },
+   {
+    "sent_on": "2026-07-23",
+    "subject": "{{ contact.firstname }} - RSVP for Blown Context & Broken Code.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2414,
+    "opens": 22,
+    "clicks": 8,
+    "open_rate_pct": 0.9,
+    "click_rate_pct": 0.3,
+    "words": [
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "acf3f494",
+     "acf38390",
+     "c82a9b5d",
+     "8c87107c",
+     "786dd8a0",
+     "f9316cf4"
+    ]
+   },
+   {
+    "sent_on": "2026-07-27",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 308,
+    "opens": 8,
+    "clicks": 1,
+    "open_rate_pct": 2.6,
+    "click_rate_pct": 0.3,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "2d305535",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-27",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 26,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 3.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "e5a4f945",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-27",
+    "subject": "Opsera Release Notes | Live Template Propagation Tracking, Oracle Artifact Mapping & Azure CLI ACR Selection\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2264,
+    "opens": 107,
+    "clicks": 2,
+    "open_rate_pct": 4.7,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "9a3d08ff",
+     "07f017af",
+     "694aaa0b",
+     "5afd5921",
+     "c4a9977c",
+     "f4e20ef7",
+     "7eab9823",
+     "26045d85",
+     "3758c2e0",
+     "0d903d89",
+     "334a4efd",
+     "4364e615"
+    ]
+   },
+   {
+    "sent_on": "2026-07-27",
+    "subject": "Opsera Release Notes | Live Template Propagation Tracking, Deployment Timeouts & Reusable Logik Manifests\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 170,
+    "opens": 32,
+    "clicks": 2,
+    "open_rate_pct": 18.8,
+    "click_rate_pct": 1.2,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "9a3d08ff",
+     "7d1fb3a2",
+     "07f017af",
+     "694aaa0b",
+     "5afd5921",
+     "c4a9977c",
+     "251b4cfe",
+     "3411c421",
+     "b819133c",
+     "c67f2a79",
+     "480c4435"
+    ]
+   },
+   {
+    "sent_on": "2026-07-27",
+    "subject": "Hi {{ contact.firstname }} - join us for dinner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 466,
+    "opens": 27,
+    "clicks": 7,
+    "open_rate_pct": 6.0,
+    "click_rate_pct": 1.5,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "c00af369",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "acf38390"
+    ]
+   },
+   {
+    "sent_on": "2026-07-28",
+    "subject": "{{ contact.firstname }} - The hummingbird is the word on AI software delivery.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2434,
+    "opens": 23,
+    "clicks": 2,
+    "open_rate_pct": 0.9,
+    "click_rate_pct": 0.1,
+    "words": [
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "b40eb21c",
+     "88205b37",
+     "6a98e9fd",
+     "42278e90",
+     "f9c53a55"
+    ]
+   },
+   {
+    "sent_on": "2026-07-29",
+    "subject": "{{ contact.firstname }} - You've got something you want to share.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1105,
+    "opens": 33,
+    "clicks": 5,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.5,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "50b8d09c",
+     "581bb82d",
+     "7e47596b",
+     "8b2c112f",
+     "a9c9fc38"
+    ]
+   },
+   {
+    "sent_on": "2026-07-29",
+    "subject": "Win deeper adoption of Copilot with Opsera",
+    "kind": "BATCH_EMAIL",
+    "sends": 79,
+    "opens": 4,
+    "clicks": 0,
+    "open_rate_pct": 5.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "89e7fa47",
+     "fe30d09f",
+     "bed023b3",
+     "4c17246f",
+     "8a8753c7",
+     "0bf7cb59",
+     "0f9b4a24",
+     "e0946331",
+     "7c696443",
+     "0c4afe69",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-07-31",
+    "subject": "Dinner's on us, {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 2409,
+    "opens": 23,
+    "clicks": 13,
+    "open_rate_pct": 1.0,
+    "click_rate_pct": 0.5,
+    "words": [
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-07-31",
+    "subject": "Invitation just for {{ contact.firstname }}\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 1285,
+    "opens": 32,
+    "clicks": 7,
+    "open_rate_pct": 2.5,
+    "click_rate_pct": 0.5,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "737e061e",
+     "8f259e5f",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-08-03",
+    "subject": "Did You Know? Your Pipeline Can Adapt at Runtime",
+    "kind": "BATCH_EMAIL",
+    "sends": 2430,
+    "opens": 64,
+    "clicks": 7,
+    "open_rate_pct": 2.6,
+    "click_rate_pct": 0.3,
+    "words": [
+     "f23bb04f",
+     "d3442983",
+     "48a52ed9",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "00f0e6aa",
+     "f0743965",
+     "d18fea7f",
+     "44c0392b"
+    ]
+   },
+   {
+    "sent_on": "2026-08-03",
+    "subject": "{{ contact.firstname }} - dinner's on us next week.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1278,
+    "opens": 26,
+    "clicks": 5,
+    "open_rate_pct": 2.0,
+    "click_rate_pct": 0.4,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-08-03",
+    "subject": "Dinner Thursday - on us, {{ contact.firstname }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 2430,
+    "opens": 28,
+    "clicks": 18,
+    "open_rate_pct": 1.2,
+    "click_rate_pct": 0.7,
+    "words": [
+     "57b20f7d",
+     "121ee9b7",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-08-04",
+    "subject": "{{ contact.firstname }} - dinner on us next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 395,
+    "opens": 11,
+    "clicks": 1,
+    "open_rate_pct": 2.8,
+    "click_rate_pct": 0.3,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "2d305535",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-08-05",
+    "subject": "{{ contact.firstname }} - dinner on us next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 21,
+    "opens": 1,
+    "clicks": 1,
+    "open_rate_pct": 4.8,
+    "click_rate_pct": 4.8,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "9c10caeb",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-08-05",
+    "subject": "{{ contact.firstname }} - dinner on us next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 37,
+    "opens": 3,
+    "clicks": 0,
+    "open_rate_pct": 8.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "e5a4f945",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-08-05",
+    "subject": "{{ contact.firstname }} - dinner on us next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 588,
+    "opens": 26,
+    "clicks": 1,
+    "open_rate_pct": 4.4,
+    "click_rate_pct": 0.2,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "c00af369",
+     "4303b923",
+     "6976b5ba",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-08-06",
+    "subject": "Holding a dinner reservation for {{ contact.firstname }}\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 1274,
+    "opens": 29,
+    "clicks": 1,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.1,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "9481fed0",
+     "be35d2b9",
+     "acf38390",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-08-07",
+    "subject": "Lots of tech debt, {{ contact.firstname }} ?",
+    "kind": "BATCH_EMAIL",
+    "sends": 57,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "898aec7c",
+     "df232561",
+     "a3f90171",
+     "93d839dc",
+     "4303b923",
+     "6976b5ba"
+    ]
+   },
+   {
+    "sent_on": "2026-08-10",
+    "subject": "{{ contact.firstname }} - Call for speakers.",
+    "kind": "BATCH_EMAIL",
+    "sends": 7,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 14.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "6849a642",
+     "13860110",
+     "609a6d33",
+     "4303b923",
+     "6976b5ba",
+     "b3f184a9",
+     "acf38390",
+     "5cf09f23"
+    ]
+   },
+   {
+    "sent_on": "2026-08-10",
+    "subject": "Opsera Release Notes | Service Principal Auth for Azure DevOps, OIC Rollback Enhancements & Logik CPQ Dependency Logic\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2258,
+    "opens": 98,
+    "clicks": 10,
+    "open_rate_pct": 4.3,
+    "click_rate_pct": 0.4,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "3e63f834",
+     "1327bcbb",
+     "56dfde64",
+     "cfa1ba29",
+     "953fa84f",
+     "acf38390",
+     "3758c2e0",
+     "157170b8",
+     "c0386c82",
+     "7ccad87d",
+     "92df61c6",
+     "c67f2a79",
+     "fd4affd5",
+     "7d610a54",
+     "ce7f3711"
+    ]
+   },
+   {
+    "sent_on": "2026-08-10",
+    "subject": "Opsera Release Notes | Prevalidation for Webhook & PR Pipelines, Auto Jira Sync & Logik CPQ Dependency Logic\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 169,
+    "opens": 21,
+    "clicks": 4,
+    "open_rate_pct": 12.6,
+    "click_rate_pct": 2.4,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "17c6537c",
+     "7d1fb3a2",
+     "ac415315",
+     "acf38390",
+     "a0ebd926",
+     "844e04d0",
+     "923fa396",
+     "a718ff71",
+     "097acf9a",
+     "c67f2a79",
+     "fd4affd5",
+     "7d610a54",
+     "ce7f3711"
+    ]
+   },
+   {
+    "sent_on": "2026-08-10",
+    "subject": "{{ contact.firstname }} - Dinner's on us on Thursday.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1274,
+    "opens": 27,
+    "clicks": 0,
+    "open_rate_pct": 2.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "4303b923",
+     "6976b5ba",
+     "121ee9b7"
+    ]
+   },
+   {
+    "sent_on": "2026-08-12",
+    "subject": "Invitation only - {{ contact.firstname }} (Tomorrow)",
+    "kind": "BATCH_EMAIL",
+    "sends": 320,
+    "opens": 29,
+    "clicks": 2,
+    "open_rate_pct": 9.1,
+    "click_rate_pct": 0.6,
+    "words": [
+     "f5858a65",
+     "57b20f7d",
+     "737e061e",
+     "9d9e89f7",
+     "4303b923",
+     "6976b5ba",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-08-18",
+    "subject": "Save the Date: Opsera Flutter 2026, The AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 5703,
+    "opens": 128,
+    "clicks": 19,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.3,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "c09344de",
+     "ccff7e48",
+     "b40eb21c",
+     "d472dc59",
+     "3687395b",
+     "40293d93",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-20",
+    "subject": "[Invite Only] Opsera Flutter 2026: The AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 30154,
+    "opens": 862,
+    "clicks": 186,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.6,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "f7fa3daf",
+     "c09344de",
+     "9d9e89f7",
+     "3687395b",
+     "40293d93",
+     "b40eb21c",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-24",
+    "subject": "Did You Know | Your IDP Can Do More Than Show You Information \u2014 Meet IDP Agents",
+    "kind": "BATCH_EMAIL",
+    "sends": 2421,
+    "opens": 73,
+    "clicks": 2,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.1,
+    "words": [
+     "f23bb04f",
+     "7dcfc0b0",
+     "9f21b24f",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "00f0e6aa",
+     "f0743965",
+     "e85541e0",
+     "e5185c1a",
+     "a947e23c",
+     "6cab33b5",
+     "88d37956"
+    ]
+   },
+   {
+    "sent_on": "2026-08-24",
+    "subject": "Opsera Release Notes | Multi-Command Maven Builds, Multi-Service Kubernetes Deployments & Targeted Monorepo Security Scans\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 2257,
+    "opens": 110,
+    "clicks": 6,
+    "open_rate_pct": 4.9,
+    "click_rate_pct": 0.3,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "3e63f834",
+     "1327bcbb",
+     "43d67fb2",
+     "93594ab2",
+     "a6e29488",
+     "be7f3d70",
+     "56dfde64",
+     "74afb95d",
+     "f6f981f7",
+     "44d713c9",
+     "9de14bbe",
+     "c92cc9bb",
+     "8c911c01"
+    ]
+   },
+   {
+    "sent_on": "2026-08-24",
+    "subject": "Opsera Release Notes | Jira-Driven OmniStudio Deployments, CSV Component Selection & Expanded OmniStudio Metadata\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 167,
+    "opens": 15,
+    "clicks": 0,
+    "open_rate_pct": 9.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "17c6537c",
+     "7d1fb3a2",
+     "a718ff71",
+     "f954395b",
+     "ce765a7a",
+     "f6f981f7",
+     "f847265f",
+     "5efd6ee0",
+     "4364e615",
+     "fe044378",
+     "66225340"
+    ]
+   },
+   {
+    "sent_on": "2026-08-26",
+    "subject": "Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 266,
+    "opens": 5,
+    "clicks": 1,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.4,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "e5a4f945",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "6db76eef",
+     "9b0f2144",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-26",
+    "subject": "Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit.",
+    "kind": "BATCH_EMAIL",
+    "sends": 927,
+    "opens": 43,
+    "clicks": 8,
+    "open_rate_pct": 4.7,
+    "click_rate_pct": 0.9,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "c00af369",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "6db76eef",
+     "9b0f2144",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-26",
+    "subject": "Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 26,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "39a21e9b",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "6db76eef",
+     "9b0f2144",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-26",
+    "subject": "Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 24,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 8.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "416aec5d",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "6db76eef",
+     "9b0f2144",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-26",
+    "subject": "Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 26,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "1c8bcfa6",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "6db76eef",
+     "9b0f2144",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-08-27",
+    "subject": "{{ contact.firstname }} \u2014 an invite-only evening on the AI-SDLC",
+    "kind": "BATCH_EMAIL",
+    "sends": 3694,
+    "opens": 88,
+    "clicks": 23,
+    "open_rate_pct": 2.4,
+    "click_rate_pct": 0.6,
+    "words": [
+     "175c54d9",
+     "ead87d82",
+     "4303b923",
+     "6976b5ba",
+     "13860110",
+     "9d9e89f7",
+     "c3b8342f",
+     "b40eb21c",
+     "1327bcbb"
+    ]
+   },
+   {
+    "sent_on": "2026-08-28",
+    "subject": "Tokenomics: the new discipline every AI leader needs to know",
+    "kind": "BATCH_EMAIL",
+    "sends": 58670,
+    "opens": 824,
+    "clicks": 122,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.3,
+    "words": [
+     "5211c603",
+     "4203acb2",
+     "876fffdd",
+     "24b9216b",
+     "b40eb21c",
+     "28999611",
+     "2ef66c8f",
+     "094ef704",
+     "b0d588e4",
+     "8539c9ba",
+     "464bc5aa"
+    ]
+   },
+   {
+    "sent_on": "2026-08-31",
+    "subject": "[Preferred Invite] Opsera Flutter 2026, The AI-SDLC Summit",
+    "kind": "BATCH_EMAIL",
+    "sends": 26,
+    "opens": 4,
+    "clicks": 1,
+    "open_rate_pct": 15.4,
+    "click_rate_pct": 3.8,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "0f5ea3e3",
+     "57b20f7d",
+     "28a723a3",
+     "4d1c749e",
+     "3687395b",
+     "40293d93",
+     "b40eb21c",
+     "1327bcbb",
+     "ead87d82"
+    ]
+   },
+   {
+    "sent_on": "2026-09-01",
+    "subject": "An evening at the winery with 100 AI leaders",
+    "kind": "BATCH_EMAIL",
+    "sends": 23926,
+    "opens": 218,
+    "clicks": 38,
+    "open_rate_pct": 0.9,
+    "click_rate_pct": 0.2,
+    "words": [
+     "175c54d9",
+     "ead87d82",
+     "c3b8342f",
+     "b40eb21c",
+     "288a4351",
+     "0c4afe69",
+     "6733d49c",
+     "f72605b5"
+    ]
+   },
+   {
+    "sent_on": "2026-09-03",
+    "subject": "Private invitation for {{ contact.firstname }} - join the AI-SDLC conversations at Flutter 2026",
+    "kind": "BATCH_EMAIL",
+    "sends": 557,
+    "opens": 54,
+    "clicks": 9,
+    "open_rate_pct": 10.0,
+    "click_rate_pct": 1.7,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "e5a4f945",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "b40eb21c",
+     "1327bcbb",
+     "7550b62f",
+     "40293d93"
+    ]
+   },
+   {
+    "sent_on": "2026-09-07",
+    "subject": "Opsera Release Notes | Release Branch Filtering in Org Insights, Deployment Checkpoints and Smarter Commit Selection",
+    "kind": "BATCH_EMAIL",
+    "sends": 136,
+    "opens": 26,
+    "clicks": 0,
+    "open_rate_pct": 19.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "ca270d4f",
+     "7d1fb3a2",
+     "b6873945",
+     "f50b1a41",
+     "9c1df059",
+     "665c06c8",
+     "251b4cfe",
+     "48efd1e4",
+     "0f29c2a6",
+     "4c29c125",
+     "334bd0fc",
+     "4364e615"
+    ]
+   },
+   {
+    "sent_on": "2026-09-07",
+    "subject": "Opsera Release Notes | Rename User Groups Without Losing Any Configuration\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 1484,
+    "opens": 81,
+    "clicks": 1,
+    "open_rate_pct": 5.5,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "ca270d4f",
+     "2a4a32b2",
+     "81f2b7d3",
+     "60785ef2",
+     "af6bcb6d",
+     "3ff21de3",
+     "252c9213",
+     "2c29f04d",
+     "b2c3d7b9"
+    ]
+   },
+   {
+    "sent_on": "2026-09-08",
+    "subject": "Tokens are capital now. Are you managing them like it?",
+    "kind": "BATCH_EMAIL",
+    "sends": 52395,
+    "opens": 852,
+    "clicks": 72,
+    "open_rate_pct": 1.6,
+    "click_rate_pct": 0.1,
+    "words": [
+     "5211c603",
+     "4203acb2",
+     "876fffdd",
+     "24b9216b",
+     "fcebc453",
+     "406f344d",
+     "e12037ab",
+     "28b19af7",
+     "50b8d09c",
+     "ec9750e1",
+     "e422e7e3",
+     "0be7cf36"
+    ]
+   },
+   {
+    "sent_on": "2026-09-09",
+    "subject": "Private invitation for {{ contact.firstname }} - join the healthcare AI-SDLC conversations at Flutter 2026",
+    "kind": "BATCH_EMAIL",
+    "sends": 2259,
+    "opens": 33,
+    "clicks": 2,
+    "open_rate_pct": 1.5,
+    "click_rate_pct": 0.1,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "ef93ae56",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "b40eb21c",
+     "1327bcbb",
+     "7550b62f",
+     "40293d93"
+    ]
+   },
+   {
+    "sent_on": "2026-09-10",
+    "subject": "Private invitation for {{ personalization_token('contact.firstname', 'you') }} - join the AI-SDLC conversations at Flutter 2026",
+    "kind": "BATCH_EMAIL",
+    "sends": 100,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 2.1,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "c00af369",
+     "62cb0d0c",
+     "737e061e",
+     "acf38390",
+     "3f412173",
+     "9479ea32",
+     "4303b923",
+     "6976b5ba",
+     "50b8d09c",
+     "c922bc79",
+     "b40eb21c",
+     "1327bcbb",
+     "7550b62f",
+     "40293d93"
+    ]
+   },
+   {
+    "sent_on": "2026-09-10",
+    "subject": "Did You Know Your Teams Can Self-Serve Platform Operations?\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 1482,
+    "opens": 71,
+    "clicks": 0,
+    "open_rate_pct": 4.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "f23bb04f",
+     "7dcfc0b0",
+     "9f21b24f",
+     "7c783614",
+     "d762953e",
+     "50b8d09c",
+     "464bc5aa",
+     "00f0e6aa",
+     "140c8eed",
+     "f0743965",
+     "645ba277",
+     "0ead3654",
+     "2a4a32b2",
+     "8065cb2f"
+    ]
+   },
+   {
+    "sent_on": "2026-09-10",
+    "subject": "Don't just replace Appfire Flow - upgrade.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1196,
+    "opens": 16,
+    "clicks": 10,
+    "open_rate_pct": 1.3,
+    "click_rate_pct": 0.8,
+    "words": [
+     "35742be0",
+     "bdc81695",
+     "737e061e",
+     "ed68c80e",
+     "8f259e5f",
+     "a13884c3",
+     "dc97cc77"
+    ]
+   },
+   {
+    "sent_on": "2026-09-16",
+    "subject": "A peek behind our new Salesforce product - Come see us at Dreamforce Booth 107",
+    "kind": "BATCH_EMAIL",
+    "sends": 631,
+    "opens": 12,
+    "clicks": 4,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.6,
+    "words": [
+     "06bc16af",
+     "40293d93",
+     "728b3059",
+     "d55997bc",
+     "fc038921",
+     "af15011e",
+     "dced8a09",
+     "a91a3339",
+     "28999611",
+     "7d1fb3a2",
+     "e548412c",
+     "fd42bc61",
+     "b526ec40",
+     "16fa9c87",
+     "6633d309"
+    ]
+   },
+   {
+    "sent_on": "2026-09-16",
+    "subject": "A peek behind our new Salesforce product - Come see us at Dreamforce",
+    "kind": "BATCH_EMAIL",
+    "sends": 1349,
+    "opens": 14,
+    "clicks": 2,
+    "open_rate_pct": 1.0,
+    "click_rate_pct": 0.1,
+    "words": [
+     "06bc16af",
+     "40293d93",
+     "fc038921",
+     "8b50ca58",
+     "af15011e",
+     "dced8a09",
+     "a91a3339",
+     "28999611",
+     "7d1fb3a2",
+     "e548412c",
+     "fd42bc61",
+     "b526ec40"
+    ]
+   },
+   {
+    "sent_on": "2026-09-16",
+    "subject": "A peek behind our new Salesforce product - Come see us at Dreamforce",
+    "kind": "BATCH_EMAIL",
+    "sends": 589,
+    "opens": 12,
+    "clicks": 4,
+    "open_rate_pct": 2.0,
+    "click_rate_pct": 0.7,
+    "words": [
+     "06bc16af",
+     "40293d93",
+     "7d1fb3a2",
+     "5531dc65",
+     "4636d19a",
+     "7e2da425",
+     "af15011e",
+     "dced8a09",
+     "a91a3339",
+     "28999611",
+     "e548412c",
+     "fd42bc61",
+     "b526ec40"
+    ]
+   },
+   {
+    "sent_on": "2026-09-17",
+    "subject": "Two weeks out: join the AI-SDLC conversations at Opsera's Flutter 2026\u00a0",
+    "kind": "BATCH_EMAIL",
+    "sends": 22364,
+    "opens": 551,
+    "clicks": 34,
+    "open_rate_pct": 2.5,
+    "click_rate_pct": 0.2,
+    "words": [
+     "175c54d9",
+     "24b9216b",
+     "be248829",
+     "b59e6a6a",
+     "ab1a365f",
+     "c922bc79",
+     "b40eb21c",
+     "1327bcbb",
+     "7550b62f",
+     "3687395b",
+     "40293d93"
+    ]
+   },
+   {
+    "sent_on": "2026-09-18",
+    "subject": "Your webinar recording is ready: Tokenomics: The Currency of Enterprise AI",
+    "kind": "BATCH_EMAIL",
+    "sends": 76,
+    "opens": 11,
+    "clicks": 2,
+    "open_rate_pct": 14.7,
+    "click_rate_pct": 2.7,
+    "words": [
+     "5211c603",
+     "205a0a01",
+     "5b6c4f70",
+     "b9bd7cb5",
+     "00f0e6aa",
+     "96908b6c",
+     "660ec0f4",
+     "b40eb21c",
+     "ddf28636",
+     "f4a407c2"
+    ]
+   },
+   {
+    "sent_on": "2026-09-22",
+    "subject": "Flutter 2026 is almost here (and almost full)",
+    "kind": "BATCH_EMAIL",
+    "sends": 95,
+    "opens": 7,
+    "clicks": 0,
+    "open_rate_pct": 7.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "39a21e9b",
+     "0c4afe69",
+     "c09344de",
+     "40293d93",
+     "72ba176f",
+     "213b65cb",
+     "0f29c2a6",
+     "ff79b33c"
+    ]
+   },
+   {
+    "sent_on": "2026-09-22",
+    "subject": "Flutter 2026 is almost here (and almost full)",
+    "kind": "BATCH_EMAIL",
+    "sends": 193,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "416aec5d",
+     "0c4afe69",
+     "c09344de",
+     "40293d93",
+     "72ba176f",
+     "213b65cb",
+     "0f29c2a6",
+     "ff79b33c"
+    ]
+   },
+   {
+    "sent_on": "2026-09-22",
+    "subject": "Flutter 2026 is almost here (and almost full)",
+    "kind": "BATCH_EMAIL",
+    "sends": 621,
+    "opens": 68,
+    "clicks": 2,
+    "open_rate_pct": 11.1,
+    "click_rate_pct": 0.3,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "e5a4f945",
+     "0c4afe69",
+     "c09344de",
+     "40293d93",
+     "72ba176f",
+     "213b65cb",
+     "0f29c2a6",
+     "ff79b33c"
+    ]
+   },
+   {
+    "sent_on": "2026-09-22",
+    "subject": "Opsera Release Notes | Failed-Step Log Context Now Available Directly in Jira",
+    "kind": "BATCH_EMAIL",
+    "sends": 1347,
+    "opens": 48,
+    "clicks": 15,
+    "open_rate_pct": 3.6,
+    "click_rate_pct": 1.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "ca270d4f",
+     "2a4a32b2",
+     "e0accfb4",
+     "c7441a0f",
+     "3f515151",
+     "8c87107c",
+     "28b19af7",
+     "66fdf298",
+     "f0fb290b",
+     "a718ff71"
+    ]
+   },
+   {
+    "sent_on": "2026-09-22",
+    "subject": "Opsera Release Notes | Failed-Step Logs in Jira, Expanded Salesforce Metadata & Component-Level Jira Worklogs",
+    "kind": "BATCH_EMAIL",
+    "sends": 136,
+    "opens": 6,
+    "clicks": 1,
+    "open_rate_pct": 4.4,
+    "click_rate_pct": 0.7,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "ca270d4f",
+     "7d1fb3a2",
+     "e0accfb4",
+     "c7441a0f",
+     "cf02b886",
+     "a718ff71",
+     "fe044378",
+     "66225340",
+     "5efd6ee0",
+     "9b99e7dd",
+     "19705763"
+    ]
+   },
+   {
+    "sent_on": "2026-09-23",
+    "subject": "Flutter 2026 is almost here (and almost full)",
+    "kind": "BATCH_EMAIL",
+    "sends": 140,
+    "opens": 7,
+    "clicks": 7,
+    "open_rate_pct": 5.0,
+    "click_rate_pct": 5.0,
+    "words": [
+     "175c54d9",
+     "13860110",
+     "c00af369",
+     "0c4afe69",
+     "c09344de",
+     "40293d93",
+     "72ba176f",
+     "213b65cb",
+     "0f29c2a6",
+     "ff79b33c"
+    ]
+   },
+   {
+    "sent_on": "2026-09-28",
+    "subject": "{{ contact.firstname }} - Congratulations: You're an Opsera Customer Awards 2026 Winner",
+    "kind": "BATCH_EMAIL",
+    "sends": 27,
+    "opens": 14,
+    "clicks": 9,
+    "open_rate_pct": 51.9,
+    "click_rate_pct": 33.3,
+    "words": [
+     "609a6d33",
+     "175c54d9",
+     "40293d93",
+     "27c0dc1f",
+     "b994c98f",
+     "4303b923",
+     "6976b5ba",
+     "145ba714",
+     "50b8d09c",
+     "3687395b",
+     "a4bdaa19",
+     "fefb3906"
+    ]
+   },
+   {
+    "sent_on": "2026-09-28",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 680,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "72e05e2d",
+     "75413203",
+     "def08c82",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-09-28",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 541,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 0.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "72e05e2d",
+     "75413203",
+     "def08c82",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-09-28",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 31,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 3.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e1fc8517",
+     "f9316cf4",
+     "205a0a01",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-09-30",
+    "subject": "{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2841,
+    "opens": 86,
+    "clicks": 6,
+    "open_rate_pct": 3.7,
+    "click_rate_pct": 0.3,
+    "words": [
+     "39a21e9b",
+     "72e05e2d",
+     "75413203",
+     "0f29c2a6",
+     "2edc649c",
+     "4303b923",
+     "6976b5ba",
+     "b526ec40",
+     "50b8d09c",
+     "37f0ef47",
+     "d990c0ce"
+    ]
+   },
+   {
+    "sent_on": "2026-10-05",
+    "subject": "{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?",
+    "kind": "BATCH_EMAIL",
+    "sends": 4163,
+    "opens": 2,
+    "clicks": 1,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "416aec5d",
+     "72e05e2d",
+     "75413203",
+     "0f29c2a6",
+     "2edc649c",
+     "4303b923",
+     "6976b5ba",
+     "b526ec40",
+     "50b8d09c",
+     "37f0ef47",
+     "d990c0ce"
+    ]
+   },
+   {
+    "sent_on": "2026-10-05",
+    "subject": "Opsera Release Notes | Pipeline Event Webhooks & Dynamic JFrog Image Selection for Argo CD",
+    "kind": "BATCH_EMAIL",
+    "sends": 1483,
+    "opens": 38,
+    "clicks": 1,
+    "open_rate_pct": 2.6,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "af475c49",
+     "2a4a32b2",
+     "d3442983",
+     "fe30d09f",
+     "a84720cf",
+     "4f5296ae",
+     "83636c2f",
+     "b35135fa",
+     "4364e615",
+     "acf38390",
+     "910a9458"
+    ]
+   },
+   {
+    "sent_on": "2026-10-05",
+    "subject": "{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2350,
+    "opens": 37,
+    "clicks": 0,
+    "open_rate_pct": 1.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "4303b923",
+     "6976b5ba",
+     "b526ec40",
+     "50b8d09c",
+     "37f0ef47",
+     "d990c0ce"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 8,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 12.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c00af369",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 42,
+    "opens": 5,
+    "clicks": 0,
+    "open_rate_pct": 11.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e5a4f945",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 13,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 7.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "416aec5d",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 1,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 6,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 16.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 70,
+    "opens": 14,
+    "clicks": 0,
+    "open_rate_pct": 20.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e82bd96f",
+     "175c54d9",
+     "40293d93",
+     "5b6c4f70",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "72e05e2d",
+     "75413203",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-07",
+    "subject": "From \"I need infrastructure\" to deployed \u2014 without a single ticket.",
+    "kind": "BATCH_EMAIL",
+    "sends": 1477,
+    "opens": 41,
+    "clicks": 1,
+    "open_rate_pct": 2.8,
+    "click_rate_pct": 0.1,
+    "words": [
+     "f23bb04f",
+     "7dcfc0b0",
+     "9f21b24f",
+     "7c783614",
+     "95cd8075",
+     "72ea8bed",
+     "bf3ec10e",
+     "b6c1a57f",
+     "3ff21de3",
+     "7f2346e9",
+     "6517b3e5"
+    ]
+   },
+   {
+    "sent_on": "2026-10-08",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 5704,
+    "opens": 484,
+    "clicks": 41,
+    "open_rate_pct": 8.8,
+    "click_rate_pct": 0.7,
+    "words": [
+     "e5a4f945",
+     "72e05e2d",
+     "75413203",
+     "def08c82",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-08",
+    "subject": "{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",
+    "kind": "BATCH_EMAIL",
+    "sends": 3657,
+    "opens": 84,
+    "clicks": 2,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.1,
+    "words": [
+     "c00af369",
+     "72e05e2d",
+     "75413203",
+     "def08c82",
+     "4303b923",
+     "6976b5ba",
+     "3f412173",
+     "9479ea32",
+     "891cfe4f",
+     "24f208e4",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-12",
+    "subject": "{{ contact.firstname }} - See you at Gartner IT Xpo?",
+    "kind": "BATCH_EMAIL",
+    "sends": 868,
+    "opens": 33,
+    "clicks": 0,
+    "open_rate_pct": 3.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "d59947bc",
+     "2edc649c",
+     "d990c0ce",
+     "13860110",
+     "4303b923",
+     "6976b5ba",
+     "b526ec40",
+     "50b8d09c"
+    ]
+   },
+   {
+    "sent_on": "2026-10-13",
+    "subject": "{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 31,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 4.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "a91a3339",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-13",
+    "subject": "{{ contact.firstname }} - Simplify legacy code modernization.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2707,
+    "opens": 22,
+    "clicks": 3,
+    "open_rate_pct": 0.8,
+    "click_rate_pct": 0.1,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "4303b923",
+     "6976b5ba",
+     "42956e6a",
+     "bccda55e",
+     "f9316cf4",
+     "db819b62"
+    ]
+   },
+   {
+    "sent_on": "2026-10-14",
+    "subject": "{{ contact.firstname }} - Modernize 50k lines of code at no-cost.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2694,
+    "opens": 16,
+    "clicks": 0,
+    "open_rate_pct": 0.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "d940d530",
+     "c1d9c9dd",
+     "4303b923",
+     "6976b5ba",
+     "29d4c274",
+     "6698ff91",
+     "e1e4263c",
+     "f9316cf4",
+     "e85c3338"
+    ]
+   },
+   {
+    "sent_on": "2026-10-14",
+    "subject": "{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 734,
+    "opens": 24,
+    "clicks": 4,
+    "open_rate_pct": 3.4,
+    "click_rate_pct": 0.6,
+    "words": [
+     "b645a05d",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-14",
+    "subject": "{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 139,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "c922bc79",
+     "a91a3339",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "Your request to Opsera.",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 1,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 100.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "d990c0ce",
+     "40293d93",
+     "c1948a38",
+     "0d8b883a",
+     "00f0e6aa",
+     "3eaa09b2",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "Thanks for signing up to see Opsera in action!",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 296,
+    "opens": 89,
+    "clicks": 40,
+    "open_rate_pct": 33.2,
+    "click_rate_pct": 14.9,
+    "words": [
+     "923fa396",
+     "3ede8f51",
+     "aefd3536",
+     "3eaa09b2",
+     "beed41b0",
+     "acf38390",
+     "3e8026b4",
+     "b526ec40",
+     "3687395b",
+     "c4642eff"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "{{ contact.firstname }} - Accelerate modernization and refactoring.",
+    "kind": "BATCH_EMAIL",
+    "sends": 60,
+    "opens": 7,
+    "clicks": 0,
+    "open_rate_pct": 11.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "b645a05d",
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "9d9f16f0",
+     "db819b62",
+     "0f29c2a6",
+     "f59d0f45"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "{{ contact.firstname }} - Accelerate modernization and refactoring.",
+    "kind": "BATCH_EMAIL",
+    "sends": 12,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "416aec5d",
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "9d9f16f0",
+     "db819b62",
+     "0f29c2a6",
+     "f59d0f45"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "{{ contact.firstname }} - Accelerate modernization and refactoring.",
+    "kind": "BATCH_EMAIL",
+    "sends": 12,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c00af369",
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "9d9f16f0",
+     "db819b62",
+     "0f29c2a6",
+     "f59d0f45"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "{{ contact.firstname }} - Accelerate modernization and refactoring.",
+    "kind": "BATCH_EMAIL",
+    "sends": 12,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 16.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "9d9f16f0",
+     "db819b62",
+     "0f29c2a6",
+     "f59d0f45"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "{{ contact.firstname }} - Accelerate modernization and refactoring.",
+    "kind": "BATCH_EMAIL",
+    "sends": 9,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 22.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "9d9f16f0",
+     "db819b62",
+     "0f29c2a6",
+     "f59d0f45"
+    ]
+   },
+   {
+    "sent_on": "2026-10-15",
+    "subject": "Be Opsera's guest at the 2026 WLDA Summit & Awards Gala",
+    "kind": "BATCH_EMAIL",
+    "sends": 1520,
+    "opens": 42,
+    "clicks": 3,
+    "open_rate_pct": 2.8,
+    "click_rate_pct": 0.2,
+    "words": [
+     "fa034b4d",
+     "224be33e",
+     "13860110",
+     "3687395b",
+     "be5cdbf3",
+     "b40eb21c",
+     "40293d93",
+     "ead87d82",
+     "27c0dc1f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "Opsera has a new look",
+    "kind": "BATCH_EMAIL",
+    "sends": 4970,
+    "opens": 94,
+    "clicks": 6,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.1,
+    "words": [
+     "3687395b",
+     "28999611",
+     "e6ef5696",
+     "c09344de",
+     "edbf0fe3"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",
+    "kind": "BATCH_EMAIL",
+    "sends": 111,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c00af369",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",
+    "kind": "BATCH_EMAIL",
+    "sends": 113,
+    "opens": 8,
+    "clicks": 0,
+    "open_rate_pct": 7.5,
+    "click_rate_pct": 0.0,
+    "words": [
+     "b645a05d",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",
+    "kind": "BATCH_EMAIL",
+    "sends": 44,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - Ready to modernize legacy code?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2728,
+    "opens": 16,
+    "clicks": 0,
+    "open_rate_pct": 0.6,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "d940d530",
+     "c1d9c9dd",
+     "4303b923",
+     "6976b5ba",
+     "660ec0f4",
+     "29d4c274",
+     "bccda55e",
+     "f9316cf4"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - Atlanta Hawks v. LA Lakers in our private suite.",
+    "kind": "BATCH_EMAIL",
+    "sends": 711,
+    "opens": 16,
+    "clicks": 1,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.1,
+    "words": [
+     "b645a05d",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "877f0914",
+     "a91a3339",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-16",
+    "subject": "{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 152,
+    "opens": 3,
+    "clicks": 0,
+    "open_rate_pct": 2.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-18",
+    "subject": "Modernizing legacy code at Gartner IT Symposium/Xpo.",
+    "kind": "BATCH_EMAIL",
+    "sends": 2792,
+    "opens": 58,
+    "clicks": 6,
+    "open_rate_pct": 2.1,
+    "click_rate_pct": 0.2,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "d940d530",
+     "c1d9c9dd",
+     "8f170d87",
+     "bccda55e",
+     "f9316cf4",
+     "37f0ef47",
+     "d990c0ce"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 153,
+    "opens": 6,
+    "clicks": 1,
+    "open_rate_pct": 3.9,
+    "click_rate_pct": 0.7,
+    "words": [
+     "39a21e9b",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "Next steps for your Gartner Forge Modernization offer",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 56,
+    "opens": 10,
+    "clicks": 2,
+    "open_rate_pct": 17.9,
+    "click_rate_pct": 3.6,
+    "words": [
+     "2edc649c",
+     "d990c0ce",
+     "40293d93",
+     "db819b62",
+     "c1d9c9dd",
+     "5cb68de8",
+     "2c35b134",
+     "acf38390",
+     "00f0e6aa",
+     "89b29c10"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "Opsera Release Notes | Bulk Deletion, Branch Triggers, Deployment Summary in User Story Insights & Jira Status Comments",
+    "kind": "BATCH_EMAIL",
+    "sends": 135,
+    "opens": 5,
+    "clicks": 0,
+    "open_rate_pct": 3.7,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "af475c49",
+     "7d1fb3a2",
+     "7739f22d",
+     "00168f9f",
+     "b6873945",
+     "05a26650",
+     "251b4cfe",
+     "10a44713",
+     "60785ef2",
+     "b3e79cb2",
+     "665c06c8",
+     "a718ff71",
+     "ba4b77ef",
+     "5886d2d7"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "Opsera Release Notes | Bulk Deletion via API, Branch Creation Triggers & Improved Folder Management",
+    "kind": "BATCH_EMAIL",
+    "sends": 1335,
+    "opens": 29,
+    "clicks": 0,
+    "open_rate_pct": 2.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "af475c49",
+     "2a4a32b2",
+     "7739f22d",
+     "00168f9f",
+     "69122c13",
+     "386aaa87",
+     "b6873945",
+     "30627d24",
+     "05a26650",
+     "5ec8e5fd",
+     "d96eb5dd",
+     "234b0316"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "{{ contact.firstname }} - Atlanta Hawks v. LA Lakers in our private suite.",
+    "kind": "BATCH_EMAIL",
+    "sends": 713,
+    "opens": 19,
+    "clicks": 1,
+    "open_rate_pct": 2.7,
+    "click_rate_pct": 0.1,
+    "words": [
+     "b645a05d",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "877f0914",
+     "a91a3339",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "{{ contact.firstname }} - Orlando Magic v. Atlanta Hawks",
+    "kind": "BATCH_EMAIL",
+    "sends": 2194,
+    "opens": 59,
+    "clicks": 3,
+    "open_rate_pct": 2.7,
+    "click_rate_pct": 0.1,
+    "words": [
+     "1c8bcfa6",
+     "e4eb258c",
+     "ef853eed",
+     "4303b923",
+     "6976b5ba",
+     "44c87c5a",
+     "877f0914"
+    ]
+   },
+   {
+    "sent_on": "2026-10-19",
+    "subject": "{{ contact.firstname }} - Are you here in Orlando?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2790,
+    "opens": 93,
+    "clicks": 1,
+    "open_rate_pct": 3.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "609a6d33",
+     "4303b923",
+     "6976b5ba",
+     "406f344d",
+     "50b8d09c",
+     "213b65cb",
+     "44c87c5a"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "{{ contact.firstname }} - Private suite at the Farm for Lakers game.",
+    "kind": "BATCH_EMAIL",
+    "sends": 223,
+    "opens": 2,
+    "clicks": 1,
+    "open_rate_pct": 0.9,
+    "click_rate_pct": 0.5,
+    "words": [
+     "1c8bcfa6",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "62cb0d0c",
+     "99d6137f",
+     "b40eb21c",
+     "fd902939",
+     "acf38390",
+     "4249d707"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "{{ contact.firstname }} - Private suite at the Fieldhouse.",
+    "kind": "BATCH_EMAIL",
+    "sends": 106,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.0,
+    "words": [
+     "b645a05d",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "62cb0d0c",
+     "99d6137f",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "{{ contact.firstname }} - Private suite at the Fieldhouse",
+    "kind": "BATCH_EMAIL",
+    "sends": 53,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "62cb0d0c",
+     "99d6137f",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "{{ contact.firstname }} - Private suite at the Fieldhouse.",
+    "kind": "BATCH_EMAIL",
+    "sends": 112,
+    "opens": 3,
+    "clicks": 1,
+    "open_rate_pct": 2.7,
+    "click_rate_pct": 0.9,
+    "words": [
+     "c00af369",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "62cb0d0c",
+     "99d6137f",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 76,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "129734d8",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-10-21",
+    "subject": "Quick coffee at Gartner?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2631,
+    "opens": 17,
+    "clicks": 8,
+    "open_rate_pct": 0.6,
+    "click_rate_pct": 0.3,
+    "words": [
+     "2edc649c",
+     "c326f4c5",
+     "609a6d33",
+     "95cd8075",
+     "16fa9c87",
+     "f739c3bc",
+     "8e2c7aa1"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "Follow-up discussion to Gartner? Time tomorrow?",
+    "kind": "BATCH_EMAIL",
+    "sends": 4,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "d59947bc",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "b2db881c",
+     "5b6c4f70",
+     "300d5451",
+     "5d3c9be4",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "Follow-up discussion to Gartner? Time tomorrow?",
+    "kind": "BATCH_EMAIL",
+    "sends": 7,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 14.3,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "b2db881c",
+     "5b6c4f70",
+     "300d5451",
+     "5d3c9be4",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "Follow-up discussion to Gartner? Time tomorrow?",
+    "kind": "BATCH_EMAIL",
+    "sends": 4,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 25.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "b2db881c",
+     "5b6c4f70",
+     "300d5451",
+     "5d3c9be4",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "Follow-up discussion to Gartner? Time tomorrow?",
+    "kind": "BATCH_EMAIL",
+    "sends": 5,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c00af369",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "b2db881c",
+     "5b6c4f70",
+     "300d5451",
+     "5d3c9be4",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "Follow-up discussion to Gartner? Time tomorrow?",
+    "kind": "BATCH_EMAIL",
+    "sends": 11,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 18.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "416aec5d",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "b2db881c",
+     "5b6c4f70",
+     "300d5451",
+     "5d3c9be4",
+     "ac3c2a26"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "GitHub Universe next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 2099,
+    "opens": 63,
+    "clicks": 0,
+    "open_rate_pct": 3.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e28886ab",
+     "22dc7932",
+     "78ebc7f6",
+     "a165ddb8",
+     "87e1198f",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-10-22",
+    "subject": "GitHub Universe next week?",
+    "kind": "BATCH_EMAIL",
+    "sends": 7751,
+    "opens": 168,
+    "clicks": 0,
+    "open_rate_pct": 2.2,
+    "click_rate_pct": 0.0,
+    "words": [
+     "e28886ab",
+     "22dc7932",
+     "78ebc7f6",
+     "5cb68de8",
+     "d5c6965d"
+    ]
+   },
+   {
+    "sent_on": "2026-10-23",
+    "subject": "{{ contact.firstname }} - Thanks for booking with Opsera.",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 2,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 50.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "22dc7932",
+     "78ebc7f6",
+     "40293d93",
+     "c1948a38",
+     "aefd3536",
+     "e7e19b94",
+     "67a15244",
+     "4303b923",
+     "6976b5ba",
+     "beed41b0",
+     "acf38390",
+     "8c086450",
+     "0c4afe69",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",
+    "kind": "BATCH_EMAIL",
+    "sends": 112,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "c00af369",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "e85afaf2",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",
+    "kind": "BATCH_EMAIL",
+    "sends": 109,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 1.8,
+    "click_rate_pct": 0.0,
+    "words": [
+     "b645a05d",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "e85afaf2",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "{{ contact.firstname }} Hawks/Lakers game day at the Farm is getting closer.",
+    "kind": "BATCH_EMAIL",
+    "sends": 716,
+    "opens": 3,
+    "clicks": 0,
+    "open_rate_pct": 0.4,
+    "click_rate_pct": 0.0,
+    "words": [
+     "b645a05d",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "4249d707",
+     "e44f21fd",
+     "b40eb21c",
+     "fd902939",
+     "7337a547",
+     "f5ee6083"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "{{ contact.firstname }} - A GitHub Universe-only offer from Opsera.",
+    "kind": "BATCH_EMAIL",
+    "sends": 10379,
+    "opens": 237,
+    "clicks": 70,
+    "open_rate_pct": 2.3,
+    "click_rate_pct": 0.7,
+    "words": [
+     "22dc7932",
+     "78ebc7f6",
+     "e82bd96f",
+     "1faee677",
+     "16fa9c87",
+     "4303b923",
+     "6976b5ba",
+     "9d9e89f7",
+     "c1d9c9dd",
+     "95cd8075",
+     "3687395b"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "{{ contact.firstname }} - Hawks/Lakers game day at the Farm is getting closer.",
+    "kind": "BATCH_EMAIL",
+    "sends": 100,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 1.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "1c8bcfa6",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "4249d707",
+     "e44f21fd",
+     "b40eb21c",
+     "fd902939",
+     "7337a547",
+     "f5ee6083"
+    ]
+   },
+   {
+    "sent_on": "2026-10-26",
+    "subject": "Activate your Gartner free code modernization trial.",
+    "kind": "BATCH_EMAIL",
+    "sends": 50,
+    "opens": 5,
+    "clicks": 0,
+    "open_rate_pct": 10.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "2edc649c",
+     "db819b62",
+     "b2db881c",
+     "3f434070",
+     "00f0e6aa",
+     "99b3eedb",
+     "f9316cf4",
+     "bd77f9d3"
+    ]
+   },
+   {
+    "sent_on": "2026-10-27",
+    "subject": "{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",
+    "kind": "BATCH_EMAIL",
+    "sends": 54,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "words": [
+     "39a21e9b",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "e85afaf2",
+     "b40eb21c",
+     "9383c581"
+    ]
+   },
+   {
+    "sent_on": "2026-10-27",
+    "subject": "{{ contact.firstname }} - Thanks for visiting us at Gartner in Orlando.",
+    "kind": "BATCH_EMAIL",
+    "sends": 135,
+    "opens": 16,
+    "clicks": 2,
+    "open_rate_pct": 11.9,
+    "click_rate_pct": 1.5,
+    "words": [
+     "2edc649c",
+     "a3f90171",
+     "b2db881c",
+     "4303b923",
+     "6976b5ba",
+     "beed41b0",
+     "acf38390",
+     "88522b5c",
+     "44c87c5a"
+    ]
+   }
+  ]
+ },
+ "lists": {
+  "error": null,
+  "rows": [
+   {
+    "people": 84441,
+    "kind": "Active",
+    "updated_on": "2026-07-02",
+    "words": [
+     "1529cc18",
+     "cf5c1f9b",
+     "1bd670a0",
+     "67826267",
+     "96785ab5"
+    ]
+   },
+   {
+    "people": 81709,
+    "kind": "Active",
+    "updated_on": "2026-04-22",
+    "words": [
+     "00e27e4b",
+     "1e3e23f4",
+     "d975992f",
+     "8a8753c7",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 66571,
+    "kind": "Active",
+    "updated_on": "2026-07-17",
+    "words": [
+     "a42d3271"
+    ]
+   },
+   {
+    "people": 62540,
+    "kind": "Active",
+    "updated_on": "2026-04-22",
+    "words": [
+     "00e27e4b",
+     "1e3e23f4",
+     "d975992f",
+     "8a8753c7",
+     "0cfb5881",
+     "4a7ab7e6",
+     "4329424c"
+    ]
+   },
+   {
+    "people": 55920,
+    "kind": "Active",
+    "updated_on": "2026-04-22",
+    "words": [
+     "00e27e4b",
+     "1e3e23f4",
+     "3dddb9fd",
+     "621caf0e",
+     "fc038921",
+     "0f29c2a6",
+     "a4213c0a"
+    ]
+   },
+   {
+    "people": 54000,
+    "kind": "Active",
+    "updated_on": "2026-04-27",
+    "words": [
+     "7a968ed4",
+     "a515afbf",
+     "96e6b96b"
+    ]
+   },
+   {
+    "people": 52922,
+    "kind": "Active",
+    "updated_on": "2026-06-08",
+    "words": [
+     "3dddb9fd",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 49908,
+    "kind": "Active",
+    "updated_on": "2026-04-22",
+    "words": [
+     "c982a718",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 45696,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "12c0d7b1",
+     "3b1787cc"
+    ]
+   },
+   {
+    "people": 35898,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 33376,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd",
+     "32608848",
+     "8a8753c7",
+     "0f5781a6"
+    ]
+   },
+   {
+    "people": 31430,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "b2fa08eb",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 30929,
+    "kind": "Active",
+    "updated_on": "2026-05-21",
+    "words": [
+     "2fb1a5fc",
+     "e82bd96f",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 24327,
+    "kind": "Active",
+    "updated_on": "2026-07-31",
+    "words": [
+     "8c6e32a8",
+     "0c4afe69",
+     "7afe4abf",
+     "aa62e8bc",
+     "815dfa76"
+    ]
+   },
+   {
+    "people": 23919,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "29b19c8a",
+     "f9befe96",
+     "0cfb5881",
+     "0f29c2a6",
+     "e82bd96f",
+     "4303b923"
+    ]
+   },
+   {
+    "people": 19279,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "4bf4922d",
+     "d55997bc"
+    ]
+   },
+   {
+    "people": 18645,
+    "kind": "Active",
+    "updated_on": "2026-08-17",
+    "words": [
+     "7a968ed4",
+     "31ed74bb",
+     "b536a99d"
+    ]
+   },
+   {
+    "people": 15400,
+    "kind": "Active",
+    "updated_on": "2026-04-29",
+    "words": [
+     "7a968ed4",
+     "0c4afe69",
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 11718,
+    "kind": "Active",
+    "updated_on": "2026-04-21",
+    "words": [
+     "cdfca31a",
+     "157170b8",
+     "ec991211",
+     "0cfb455b",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 11545,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "7d1fb3a2",
+     "84d1546a",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 11420,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "e367307e",
+     "c224c220"
+    ]
+   },
+   {
+    "people": 11179,
+    "kind": "Active",
+    "updated_on": "2026-06-23",
+    "words": [
+     "96f4dd9f",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 11179,
+    "kind": "Active",
+    "updated_on": "2026-06-19",
+    "words": [
+     "701889c0",
+     "46294705",
+     "4f5296ae"
+    ]
+   },
+   {
+    "people": 10195,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "0f29c2a6",
+     "1e801cec",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 9657,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "f2200e9f",
+     "28999611",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 9451,
+    "kind": "Active",
+    "updated_on": "2026-05-29",
+    "words": [
+     "f2200e9f",
+     "831eb2f4"
+    ]
+   },
+   {
+    "people": 9418,
+    "kind": "Active",
+    "updated_on": "2026-09-09",
+    "words": [
+     "2edc649c",
+     "40293d93",
+     "00af55d7",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 8979,
+    "kind": "Active",
+    "updated_on": "2026-06-15",
+    "words": [
+     "12a632be",
+     "e4c35bdc",
+     "3e7a1e1b"
+    ]
+   },
+   {
+    "people": 8420,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "7b855149",
+     "2de78e29"
+    ]
+   },
+   {
+    "people": 8373,
+    "kind": "Active",
+    "updated_on": "2026-10-19",
+    "words": [
+     "22dc7932",
+     "78ebc7f6",
+     "13254bc4",
+     "37968efd",
+     "d6e12155",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 8183,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "0f29c2a6",
+     "1e801cec",
+     "3757b0a1",
+     "5127f14d",
+     "67826267"
+    ]
+   },
+   {
+    "people": 7308,
+    "kind": "Active",
+    "updated_on": "2026-06-15",
+    "words": [
+     "13a63451",
+     "4f516a81",
+     "87e1198f",
+     "a229d2ec"
+    ]
+   },
+   {
+    "people": 6972,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "4bf4922d",
+     "a3f90171",
+     "6556dc9f",
+     "96785ab5"
+    ]
+   },
+   {
+    "people": 6585,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "c09344de",
+     "1e801cec",
+     "3757b0a1",
+     "5127f14d",
+     "67826267"
+    ]
+   },
+   {
+    "people": 6414,
+    "kind": "Active",
+    "updated_on": "2026-07-27",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "a8e99c47",
+     "3b1787cc"
+    ]
+   },
+   {
+    "people": 6149,
+    "kind": "Active",
+    "updated_on": "2026-09-30",
+    "words": [
+     "416aec5d",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 5809,
+    "kind": "Active",
+    "updated_on": "2026-09-24",
+    "words": [
+     "2edc649c",
+     "f05a4ae6",
+     "0c4afe69",
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd"
+    ]
+   },
+   {
+    "people": 5741,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "e5a4f945",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 5612,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "6fd4bec0",
+     "0cfb5881",
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 5489,
+    "kind": "Active",
+    "updated_on": "2026-09-04",
+    "words": [
+     "c54cb882",
+     "69ce1407",
+     "35742be0",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 5253,
+    "kind": "Active",
+    "updated_on": "2026-04-24",
+    "words": [
+     "42278e90",
+     "89b29c10",
+     "0f541687",
+     "c5725fb0",
+     "f72605b5"
+    ]
+   },
+   {
+    "people": 4979,
+    "kind": "Active",
+    "updated_on": "2026-07-27",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 4866,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "6db76eef",
+     "9b0f2144",
+     "a8e99c47",
+     "3b1787cc"
+    ]
+   },
+   {
+    "people": 4816,
+    "kind": "Active",
+    "updated_on": "2026-09-15",
+    "words": [
+     "7afe4abf",
+     "328f4c1e",
+     "60d56f8c",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 4694,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "f2200e9f",
+     "8c6e32a8",
+     "63e1d819",
+     "5a45cc6a"
+    ]
+   },
+   {
+    "people": 4658,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "3687395b",
+     "a3f90171",
+     "6556dc9f",
+     "112a90d4",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 4556,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "a229d2ec",
+     "d22f9095",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 4437,
+    "kind": "Active",
+    "updated_on": "2026-10-01",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "a310d5f0",
+     "0640657c",
+     "96785ab5"
+    ]
+   },
+   {
+    "people": 4207,
+    "kind": "Static",
+    "updated_on": "2026-07-07",
+    "words": [
+     "89b29c10",
+     "0f5ea3e3",
+     "57b20f7d",
+     "4460277f",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 4205,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "6db76eef",
+     "9b0f2144",
+     "3b1787cc",
+     "0f29c2a6",
+     "a4213c0a"
+    ]
+   },
+   {
+    "people": 3816,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "c00af369",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 3757,
+    "kind": "Active",
+    "updated_on": "2026-06-05",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "6db76eef",
+     "9b0f2144"
+    ]
+   },
+   {
+    "people": 3458,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "0f29c2a6",
+     "337a0cca"
+    ]
+   },
+   {
+    "people": 3430,
+    "kind": "Active",
+    "updated_on": "2026-04-16",
+    "words": [
+     "4303b923",
+     "2ae5e1c3",
+     "0e8eae33",
+     "6fd4bec0",
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 3299,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "2ae5e1c3",
+     "e82bd96f",
+     "7afe4abf",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 3299,
+    "kind": "Active",
+    "updated_on": "2026-06-25",
+    "words": [
+     "50deaba7",
+     "e82bd96f",
+     "7afe4abf",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 3130,
+    "kind": "Active",
+    "updated_on": "2026-08-12",
+    "words": [
+     "e4350540",
+     "fce32734",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 3125,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "2edc649c",
+     "00af55d7",
+     "37968efd",
+     "0f29c2a6",
+     "d6e12155",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 2942,
+    "kind": "Active",
+    "updated_on": "2026-06-04",
+    "words": [
+     "a2c77168",
+     "0f29c2a6",
+     "f3878b7e",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 2940,
+    "kind": "Active",
+    "updated_on": "2026-06-29",
+    "words": [
+     "8c6e32a8",
+     "0c4afe69",
+     "7afe4abf",
+     "9fbda08d",
+     "d872e2a5"
+    ]
+   },
+   {
+    "people": 2853,
+    "kind": "Active",
+    "updated_on": "2026-06-12",
+    "words": [
+     "c0f8db37",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 2817,
+    "kind": "Static",
+    "updated_on": "2026-05-19",
+    "words": [
+     "dee3036c",
+     "261bb4ad",
+     "f2200e9f",
+     "37651ac2",
+     "fcefccca",
+     "9b732a16",
+     "40293d93",
+     "574dacbf"
+    ]
+   },
+   {
+    "people": 2743,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "7667b01c",
+     "a31eda03"
+    ]
+   },
+   {
+    "people": 2743,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "70cc3f97",
+     "7667b01c"
+    ]
+   },
+   {
+    "people": 2697,
+    "kind": "Active",
+    "updated_on": "2026-05-12",
+    "words": [
+     "4881d841",
+     "8cdfbd85",
+     "ddd42fdc",
+     "1f47a245"
+    ]
+   },
+   {
+    "people": 2636,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "39a21e9b",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 2593,
+    "kind": "Active",
+    "updated_on": "2026-05-07",
+    "words": [
+     "4881d841",
+     "8cdfbd85",
+     "6ccaf138",
+     "ddd42fdc",
+     "1f47a245",
+     "3687395b"
+    ]
+   },
+   {
+    "people": 2569,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "6d48538c"
+    ]
+   },
+   {
+    "people": 2516,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd",
+     "32608848",
+     "8a8753c7",
+     "0f5781a6",
+     "96e6b96b"
+    ]
+   },
+   {
+    "people": 2516,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "4bf4922d",
+     "cedcb8f0",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
+    ]
+   },
+   {
+    "people": 2486,
+    "kind": "Static",
+    "updated_on": "2026-04-16",
+    "words": [
+     "3687395b",
+     "2a4a32b2",
+     "1327bcbb",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 2482,
+    "kind": "Active",
+    "updated_on": "2026-06-12",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "a7a31e55",
+     "866c8a43",
+     "0f29c2a6",
+     "be1a3784",
+     "949b51e3"
+    ]
+   },
+   {
+    "people": 2477,
+    "kind": "Static",
+    "updated_on": "2026-04-16",
+    "words": [
+     "3687395b",
+     "e48b05ad",
+     "665c06c8",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 2474,
+    "kind": "Active",
+    "updated_on": "2026-10-12",
+    "words": [
+     "13254bc4",
+     "7a968ed4"
+    ]
+   },
+   {
+    "people": 2409,
+    "kind": "Active",
+    "updated_on": "2026-06-10",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "28999611",
+     "e1ee7746",
+     "ba85df6a"
+    ]
+   },
+   {
+    "people": 2382,
+    "kind": "Active",
+    "updated_on": "2026-06-06",
+    "words": [
+     "7a968ed4",
+     "ef672de8",
+     "ab5684c8",
+     "1ac6a97e",
+     "2b0b962b",
+     "f4a407c2",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 2379,
+    "kind": "Active",
+    "updated_on": "2026-09-10",
+    "words": [
+     "35742be0",
+     "174d9c62",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 2357,
+    "kind": "Active",
+    "updated_on": "2026-05-29",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "e4c35bdc",
+     "337a0cca"
+    ]
+   },
+   {
+    "people": 2347,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "c615bb47",
+     "63d10eb9",
+     "294fc75c"
+    ]
+   },
+   {
+    "people": 2277,
+    "kind": "Active",
+    "updated_on": "2026-06-03",
+    "words": [
+     "8172c362",
+     "0f29c2a6",
+     "a3f90171",
+     "7a6ccb01",
+     "1ac6a97e",
+     "2b0b962b",
+     "89193acd",
+     "1ce2cb64",
+     "f4a407c2",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 2234,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "886f1733",
+     "7afe4abf",
+     "2fae3ec5",
+     "2ff4499c"
+    ]
+   },
+   {
+    "people": 2230,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "f9befe96",
+     "0cfb5881",
+     "0f29c2a6",
+     "e82bd96f",
+     "4303b923"
+    ]
+   },
+   {
+    "people": 2208,
+    "kind": "Active",
+    "updated_on": "2026-05-22",
+    "words": [
+     "7812e25a",
+     "cedcb8f0",
+     "67c2444a"
+    ]
+   },
+   {
+    "people": 2054,
+    "kind": "Active",
+    "updated_on": "2026-08-12",
+    "words": [
+     "4bf4922d",
+     "b2fa08eb",
+     "ef93ae56",
+     "cfd5a595",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 2000,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "b2fa08eb",
+     "37968efd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 1967,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "2edc649c",
+     "00af55d7",
+     "8c6e32a8",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 1946,
+    "kind": "Static",
+    "updated_on": "2026-07-08",
+    "words": [
+     "89b29c10",
+     "1f6a832c",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 1747,
+    "kind": "Active",
+    "updated_on": "2026-06-09",
+    "words": [
+     "f3878b7e",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "6db76eef",
+     "9b0f2144"
+    ]
+   },
+   {
+    "people": 1718,
+    "kind": "Active",
+    "updated_on": "2026-07-31",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "4460277f",
+     "ba85df6a",
+     "a8e99c47",
+     "3b1787cc"
+    ]
+   },
+   {
+    "people": 1707,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "1c8bcfa6",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 1675,
+    "kind": "Active",
+    "updated_on": "2026-07-31",
+    "words": [
+     "9c7f8847",
+     "5c8ff3a6",
+     "c462a115",
+     "5955feaa"
+    ]
+   },
+   {
+    "people": 1674,
+    "kind": "Active",
+    "updated_on": "2026-06-10",
+    "words": [
+     "aa4183fb",
+     "5cee2030",
+     "f4a407c2",
+     "a3f90171",
+     "0f29c2a6",
+     "8172c362",
+     "7a6ccb01",
+     "2d679963",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 1403,
+    "kind": "Active",
+    "updated_on": "2026-06-27",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "e01ca295",
+     "d2799a41"
+    ]
+   },
+   {
+    "people": 1386,
+    "kind": "Active",
+    "updated_on": "2026-04-08",
+    "words": [
+     "2fb1a5fc",
+     "e82bd96f",
+     "cedcb8f0",
+     "0c4afe69",
+     "1a947346"
+    ]
+   },
+   {
+    "people": 1371,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "6db76eef",
+     "9b0f2144",
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd"
+    ]
+   },
+   {
+    "people": 1309,
+    "kind": "Static",
+    "updated_on": "2026-07-17",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "9a3d08ff",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 1307,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "ad79f5db"
+    ]
+   },
+   {
+    "people": 1299,
+    "kind": "Active",
+    "updated_on": "2026-07-24",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
+    ]
+   },
+   {
+    "people": 1279,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "42278e90",
+     "89b29c10",
+     "ff5ded4d",
+     "815dfa76"
+    ]
+   },
+   {
+    "people": 1240,
+    "kind": "Active",
+    "updated_on": "2026-08-04",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "4460277f",
+     "ba85df6a"
+    ]
+   },
+   {
+    "people": 1204,
+    "kind": "Active",
+    "updated_on": "2026-10-19",
+    "words": [
+     "1c8bcfa6",
+     "2edc649c",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 1183,
+    "kind": "Active",
+    "updated_on": "2026-04-08",
+    "words": [
+     "e82bd96f",
+     "4303b923",
+     "7a968ed4",
+     "0c4afe69",
+     "1a947346"
+    ]
+   },
+   {
+    "people": 1172,
+    "kind": "Active",
+    "updated_on": "2026-06-02",
+    "words": [
+     "26bb595d",
+     "d472dc59",
+     "d6a2e186",
+     "0dc48142"
+    ]
+   },
+   {
+    "people": 1128,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "fb532132",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "6db76eef",
+     "9b0f2144"
+    ]
+   },
+   {
+    "people": 1126,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "e710f325"
+    ]
+   },
+   {
+    "people": 1067,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "2e70890c",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 1039,
+    "kind": "Active",
+    "updated_on": "2026-10-13",
+    "words": [
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 1033,
+    "kind": "Active",
+    "updated_on": "2026-04-13",
+    "words": [
+     "1a947346",
+     "cedcb8f0",
+     "0ac95089",
+     "dee3036c",
+     "31ac849e"
+    ]
+   },
+   {
+    "people": 989,
+    "kind": "Active",
+    "updated_on": "2026-08-24",
+    "words": [
+     "0e8eae33",
+     "175c54d9",
+     "425d3ac5",
+     "fc97cde5",
+     "c8f069e0"
+    ]
+   },
+   {
+    "people": 983,
+    "kind": "Active",
+    "updated_on": "2026-06-09",
+    "words": [
+     "783132f6",
+     "ac8c0137",
+     "0f29c2a6",
+     "0dc48142",
+     "9b759fb9"
+    ]
+   },
+   {
+    "people": 980,
+    "kind": "Active",
+    "updated_on": "2026-08-17",
+    "words": [
+     "89b29c10",
+     "38c8ea47",
+     "0ab739f0",
+     "92b778e5",
+     "acf38390",
+     "112a90d4",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 979,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "294fc75c",
+     "a229d2ec",
+     "d22f9095",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 979,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
+    ]
+   },
+   {
+    "people": 965,
+    "kind": "Active",
+    "updated_on": "2026-10-12",
+    "words": [
+     "d59947bc",
+     "2edc649c",
+     "40293d93",
+     "c54cb882"
+    ]
+   },
+   {
+    "people": 958,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "105d93e5"
+    ]
+   },
+   {
+    "people": 936,
+    "kind": "Active",
+    "updated_on": "2026-04-15",
+    "words": [
+     "1a947346",
+     "7a968ed4",
+     "0ac95089",
+     "c8f069e0",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 892,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "e5a4f945",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 889,
+    "kind": "Active",
+    "updated_on": "2026-07-24",
+    "words": [
+     "c462a115",
+     "5955feaa"
+    ]
+   },
+   {
+    "people": 889,
+    "kind": "Active",
+    "updated_on": "2026-07-31",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "4460277f",
+     "ba85df6a",
+     "e206d1e7",
+     "bfa8cd7f"
+    ]
+   },
+   {
+    "people": 887,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "0f29c2a6",
+     "1e801cec",
+     "cedcb8f0",
+     "89e7fa47",
+     "3e63f834"
+    ]
+   },
+   {
+    "people": 867,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "3687395b",
+     "9f21b24f",
+     "37e24810",
+     "cd84ee3f",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 833,
+    "kind": "Active",
+    "updated_on": "2026-06-02",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "815dfa76",
+     "06755279",
+     "6ccaf138",
+     "9f21b24f"
+    ]
+   },
+   {
+    "people": 799,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "2edc649c",
+     "c09344de",
+     "0f29c2a6",
+     "aa62e8bc",
+     "242ab48e"
+    ]
+   },
+   {
+    "people": 794,
+    "kind": "Active",
+    "updated_on": "2026-07-13",
+    "words": [
+     "aa62e8bc",
+     "8d39bde6",
+     "67826267",
+     "6e6f1dc1"
+    ]
+   },
+   {
+    "people": 748,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "877f0914",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 740,
+    "kind": "Active",
+    "updated_on": "2026-07-25",
+    "words": [
+     "8c6e32a8",
+     "0c4afe69",
+     "df93e527",
+     "e336320f"
+    ]
+   },
+   {
+    "people": 686,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "31ed74bb",
+     "82416065"
+    ]
+   },
+   {
+    "people": 686,
+    "kind": "Active",
+    "updated_on": "2026-08-27",
+    "words": [
+     "31ed74bb",
+     "420372be"
+    ]
+   },
+   {
+    "people": 686,
+    "kind": "Active",
+    "updated_on": "2026-07-01",
+    "words": [
+     "0746795c",
+     "7a968ed4",
+     "420372be"
+    ]
+   },
+   {
+    "people": 657,
+    "kind": "Static",
+    "updated_on": "2026-05-01",
+    "words": [
+     "dee3036c",
+     "261bb4ad",
+     "13860110",
+     "9f21b24f",
+     "89b29c10",
+     "2d6d90f2",
+     "9b732a16",
+     "9a50cbcf",
+     "40293d93",
+     "574dacbf"
+    ]
+   },
+   {
+    "people": 603,
+    "kind": "Active",
+    "updated_on": "2026-07-14",
+    "words": [
+     "8c6e32a8",
+     "b40eb21c",
+     "4460277f",
+     "32608848",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 586,
+    "kind": "Static",
+    "updated_on": "2026-06-01",
+    "words": [
+     "0b9aeaca",
+     "392cccc2",
+     "62592a1a",
+     "9e0e3e7a",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 539,
+    "kind": "Active",
+    "updated_on": "2026-09-28",
+    "words": [
+     "1c8bcfa6",
+     "16e2c1f2",
+     "6261af7f",
+     "2e3d90b1",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 537,
+    "kind": "Active",
+    "updated_on": "2026-05-22",
+    "words": [
+     "5d4ba441",
+     "dedc590e",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 535,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "5c4ac3bc"
+    ]
+   },
+   {
+    "people": 506,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "7881bafe"
+    ]
+   },
+   {
+    "people": 499,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "22dc7932",
+     "63d10eb9"
+    ]
+   },
+   {
+    "people": 487,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "874cbac7",
+     "eec9d849",
+     "f29c1082"
+    ]
+   },
+   {
+    "people": 485,
+    "kind": "Active",
+    "updated_on": "2026-05-20",
+    "words": [
+     "0e8eae33",
+     "e0946331",
+     "205a0a01"
+    ]
+   },
+   {
+    "people": 479,
+    "kind": "Static",
+    "updated_on": "2026-07-02",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "89b29c10",
+     "0cfb5881",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 469,
+    "kind": "Static",
+    "updated_on": "2026-06-29",
+    "words": [
+     "f4dda67f",
+     "13254bc4",
+     "cedcb8f0",
+     "c708c45c",
+     "54eed4d0",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 463,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "240ebb1b"
+    ]
+   },
+   {
+    "people": 447,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "b3b61a0e",
+     "5fffea8c"
+    ]
+   },
+   {
+    "people": 446,
+    "kind": "Active",
+    "updated_on": "2026-08-12",
+    "words": [
+     "b2fa08eb",
+     "37968efd",
+     "953445ed",
+     "6b98ed8f"
+    ]
+   },
+   {
+    "people": 439,
+    "kind": "Active",
+    "updated_on": "2026-04-29",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "d472dc59",
+     "0d8b883a",
+     "c6270703",
+     "425ed3ca"
+    ]
+   },
+   {
+    "people": 430,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "52b50bc8",
+     "ed6f8f70",
+     "b0451f45"
+    ]
+   },
+   {
+    "people": 423,
+    "kind": "Active",
+    "updated_on": "2026-09-09",
+    "words": [
+     "6db76eef",
+     "9b0f2144",
+     "7725920d",
+     "d6e12155",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 409,
+    "kind": "Active",
+    "updated_on": "2026-07-16",
+    "words": [
+     "89b29c10",
+     "ac8c5c51",
+     "95cd8075",
+     "3757b0a1"
+    ]
+   },
+   {
+    "people": 407,
+    "kind": "Active",
+    "updated_on": "2026-04-03",
+    "words": [
+     "2fae3ec5",
+     "341bdc2e",
+     "0ddb0669",
+     "9a50cbcf",
+     "13860110",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 400,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "e313b7d0"
+    ]
+   },
+   {
+    "people": 398,
+    "kind": "Static",
+    "updated_on": "2026-07-28",
+    "words": [
+     "50b8d09c",
+     "f18dd2de",
+     "62592a1a",
+     "1a683cb6",
+     "e4350540",
+     "e4009afe",
+     "193f4a7a"
+    ]
+   },
+   {
+    "people": 385,
+    "kind": "Active",
+    "updated_on": "2026-08-17",
+    "words": [
+     "89b29c10",
+     "e548412c",
+     "ac8c5c51"
+    ]
+   },
+   {
+    "people": 381,
+    "kind": "Active",
+    "updated_on": "2026-08-31",
+    "words": [
+     "3170b31c",
+     "ba2719ef",
+     "ab3a8a0a",
+     "408cfca8",
+     "acf38390",
+     "96e6b96b",
+     "db819b62",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 373,
+    "kind": "Active",
+    "updated_on": "2026-06-16",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "2347f736",
+     "89b29c10",
+     "40293d93",
+     "c0f8db37",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 373,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "886f1733",
+     "7afe4abf",
+     "54eed4d0",
+     "0c4afe69",
+     "2fae3ec5"
+    ]
+   },
+   {
+    "people": 371,
+    "kind": "Static",
+    "updated_on": "2026-07-15",
+    "words": [
+     "f5fbdadc",
+     "c09344de",
+     "8172c362",
+     "0f29c2a6",
+     "a3f90171",
+     "7a6ccb01",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 368,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "0e9c0ded",
+     "0fd9bc91",
+     "d96a9e35",
+     "1a683cb6",
+     "63d10eb9",
+     "294fc75c"
+    ]
+   },
+   {
+    "people": 366,
+    "kind": "Active",
+    "updated_on": "2026-06-16",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "2347f736",
+     "89b29c10",
+     "1ba28c0e",
+     "40293d93",
+     "c0f8db37",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 348,
+    "kind": "Active",
+    "updated_on": "2026-04-01",
+    "words": [
+     "f4748112",
+     "48b1a816",
+     "aefd3536",
+     "3eaa09b2",
+     "4058c747"
+    ]
+   },
+   {
+    "people": 342,
+    "kind": "Active",
+    "updated_on": "2026-08-25",
+    "words": [
+     "c09344de",
+     "94e93fea",
+     "a8e99c47"
+    ]
+   },
+   {
+    "people": 340,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "90ad4210",
+     "3b952e97",
+     "3028b3db"
+    ]
+   },
+   {
+    "people": 336,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "f5fbdadc",
+     "c09344de",
+     "698e7417",
+     "0f29c2a6",
+     "e548412c",
+     "a3f90171",
+     "d49dd484",
+     "7a6ccb01",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 334,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "9151aa80",
+     "094b363d"
+    ]
+   },
+   {
+    "people": 325,
+    "kind": "Active",
+    "updated_on": "2026-04-22",
+    "words": [
+     "2ae5e1c3",
+     "0e8eae33",
+     "4bf4922d",
+     "d55997bc",
+     "10066ae1",
+     "3d8466cb"
+    ]
+   },
+   {
+    "people": 320,
+    "kind": "Active",
+    "updated_on": "2026-05-08",
+    "words": [
+     "f6ba74fa",
+     "40293d93",
+     "ef93ae56",
+     "663d1a66",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 316,
+    "kind": "Static",
+    "updated_on": "2026-06-24",
+    "words": [
+     "0e8eae33",
+     "b2fa08eb",
+     "ead87d82",
+     "40293d93",
+     "bd727fa6"
+    ]
+   },
+   {
+    "people": 316,
+    "kind": "Active",
+    "updated_on": "2026-08-17",
+    "words": [
+     "f5fbdadc",
+     "8382e121",
+     "28999611",
+     "9865b509",
+     "803328a9",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 314,
+    "kind": "Active",
+    "updated_on": "2026-06-09",
+    "words": [
+     "2eba068b",
+     "acf38390",
+     "609a6d33",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 297,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "b5cfd085",
+     "f801948c"
+    ]
+   },
+   {
+    "people": 295,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "4860455d"
+    ]
+   },
+   {
+    "people": 292,
+    "kind": "Active",
+    "updated_on": "2026-08-31",
+    "words": [
+     "6db76eef",
+     "9b0f2144",
+     "a4bdaa19",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 287,
+    "kind": "Static",
+    "updated_on": "2026-05-26",
+    "words": [
+     "0e8eae33",
+     "1d68416f",
+     "e9803882"
+    ]
+   },
+   {
+    "people": 284,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "0746795c",
+     "2347f736",
+     "a3f90171",
+     "cedcb8f0",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 283,
+    "kind": "Active",
+    "updated_on": "2026-06-05",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "815dfa76",
+     "06755279",
+     "6ccaf138",
+     "aefd3536"
+    ]
+   },
+   {
+    "people": 279,
+    "kind": "Active",
+    "updated_on": "2026-10-26",
+    "words": [
+     "c075320c",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 275,
+    "kind": "Active",
+    "updated_on": "2026-07-20",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "d59947bc",
+     "e367307e",
+     "b8d35465"
+    ]
+   },
+   {
+    "people": 274,
+    "kind": "Static",
+    "updated_on": "2026-04-17",
+    "words": [
+     "9f21b24f",
+     "b5712015",
+     "5e7cc513"
+    ]
+   },
+   {
+    "people": 267,
+    "kind": "Static",
+    "updated_on": "2026-10-20",
+    "words": [
+     "2edc649c",
+     "37f0ef47",
+     "40293d93",
+     "16fa9c87",
+     "8c911c01"
+    ]
+   },
+   {
+    "people": 259,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "416aec5d",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 248,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de"
+    ]
+   },
+   {
+    "people": 237,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "1c8bcfa6",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 235,
+    "kind": "Active",
+    "updated_on": "2026-10-13",
+    "words": [
+     "39a21e9b",
+     "e44f21fd",
+     "89b29c10",
+     "876fffdd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 235,
+    "kind": "Active",
+    "updated_on": "2026-04-15",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "f801948c",
+     "e79397f1",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 230,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "06bc16af",
+     "40293d93",
+     "35648278",
+     "8c911c01"
+    ]
+   },
+   {
+    "people": 225,
+    "kind": "Static",
+    "updated_on": "2026-04-16",
+    "words": [
+     "3687395b",
+     "2a4a32b2",
+     "7d1fb3a2",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 225,
+    "kind": "Static",
+    "updated_on": "2026-07-01",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "4460277f",
+     "c38f3be5",
+     "b5f82e71",
+     "8c6e32a8",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 223,
+    "kind": "Active",
+    "updated_on": "2026-09-24",
+    "words": [
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd",
+     "8c6e32a8",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 221,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "7842c881"
+    ]
+   },
+   {
+    "people": 221,
+    "kind": "Active",
+    "updated_on": "2026-05-22",
+    "words": [
+     "fcefccca",
+     "4303b923",
+     "b157ffee"
+    ]
+   },
+   {
+    "people": 216,
+    "kind": "Active",
+    "updated_on": "2026-06-07",
+    "words": [
+     "c5725fb0",
+     "f72605b5",
+     "5c6e1222",
+     "6dcd6ca5",
+     "82416065",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 208,
+    "kind": "Active",
+    "updated_on": "2026-04-16",
+    "words": [
+     "4303b923",
+     "2ae5e1c3",
+     "0e8eae33",
+     "6fd4bec0",
+     "d940d530",
+     "616f8939"
+    ]
+   },
+   {
+    "people": 204,
+    "kind": "Active",
+    "updated_on": "2026-06-15",
+    "words": [
+     "bcac51e3",
+     "d35ec4c9",
+     "ce7a9367",
+     "edbf0fe3",
+     "addf1e8f"
+    ]
+   },
+   {
+    "people": 194,
+    "kind": "Static",
+    "updated_on": "2026-07-22",
+    "words": [
+     "30414fe8",
+     "f1f2c68a",
+     "e6de9f61",
+     "3687395b",
+     "13254bc4",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 187,
+    "kind": "Active",
+    "updated_on": "2026-08-27",
+    "words": [
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "04d092fd",
+     "67826267"
+    ]
+   },
+   {
+    "people": 185,
+    "kind": "Active",
+    "updated_on": "2026-06-03",
+    "words": [
+     "826f1d3e",
+     "3d3c9730",
+     "0f5781a6"
+    ]
+   },
+   {
+    "people": 182,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4bf4922d",
+     "cedcb8f0",
+     "0c4afe69",
+     "04d092fd",
+     "67826267"
+    ]
+   },
+   {
+    "people": 181,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "c09344de",
+     "cf85e230"
+    ]
+   },
+   {
+    "people": 176,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd",
+     "aa62e8bc"
+    ]
+   },
+   {
+    "people": 174,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "175c54d9",
+     "2fb1a5fc",
+     "3687395b"
+    ]
+   },
+   {
+    "people": 174,
+    "kind": "Static",
+    "updated_on": "2026-09-03",
+    "words": [
+     "3687395b",
+     "175c54d9",
+     "40293d93",
+     "b40eb21c",
+     "1327bcbb",
+     "ead87d82",
+     "2c2d8a80",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 171,
+    "kind": "Active",
+    "updated_on": "2026-04-14",
+    "words": [
+     "f4748112",
+     "19bb34eb",
+     "4058c747",
+     "0d8eaca0"
+    ]
+   },
+   {
+    "people": 165,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd",
+     "d22f9095",
+     "aa62e8bc",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 163,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "3b1787cc",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 159,
+    "kind": "Active",
+    "updated_on": "2026-06-13",
+    "words": [
+     "10a62f98",
+     "99b3eedb",
+     "c708c45c",
+     "a229d2ec"
+    ]
+   },
+   {
+    "people": 158,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "43eca75c"
+    ]
+   },
+   {
+    "people": 155,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "39a21e9b",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 152,
+    "kind": "Active",
+    "updated_on": "2026-10-20",
+    "words": [
+     "2edc649c",
+     "4303b923",
+     "c8f069e0",
+     "1e39d5b7",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 150,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "c00af369",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 146,
+    "kind": "Static",
+    "updated_on": "2026-04-30",
+    "words": [
+     "886f1733",
+     "13254bc4",
+     "54eed4d0",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 139,
+    "kind": "Active",
+    "updated_on": "2026-07-25",
+    "words": [
+     "e336320f",
+     "8c6e32a8",
+     "81001c24",
+     "29b19c8a",
+     "3757b0a1"
+    ]
+   },
+   {
+    "people": 139,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "1c8bcfa6",
+     "6261af7f",
+     "ef853eed",
+     "bd2c3575"
+    ]
+   },
+   {
+    "people": 135,
+    "kind": "Static",
+    "updated_on": "2026-10-22",
+    "words": [
+     "2edc649c",
+     "ab5684c8",
+     "16fa9c87",
+     "8c911c01"
+    ]
+   },
+   {
+    "people": 135,
+    "kind": "Active",
+    "updated_on": "2026-10-27",
+    "words": [
+     "2edc649c",
+     "a3f90171",
+     "16fa9c87",
+     "8c911c01",
+     "f7fa3daf",
+     "fec3a7d4",
+     "7a968ed4"
+    ]
+   },
+   {
+    "people": 129,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "78ebc7f6",
+     "d6e12155",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 125,
+    "kind": "Active",
+    "updated_on": "2026-06-02",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "0dc48142"
+    ]
+   },
+   {
+    "people": 124,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "e5a4f945",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 124,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "f2200e9f",
+     "8c6e32a8",
+     "63e1d819",
+     "5a45cc6a",
+     "f691d28a"
+    ]
+   },
+   {
+    "people": 121,
+    "kind": "Active",
+    "updated_on": "2026-05-28",
+    "words": [
+     "f2200e9f",
+     "0f29c2a6",
+     "4d34ee21",
+     "a229d2ec",
+     "328f4c1e"
+    ]
+   },
+   {
+    "people": 120,
+    "kind": "Active",
+    "updated_on": "2026-09-24",
+    "words": [
+     "2edc649c",
+     "f05a4ae6",
+     "0c4afe69",
+     "e44f21fd",
+     "876fffdd"
+    ]
+   },
+   {
+    "people": 120,
+    "kind": "Active",
+    "updated_on": "2026-05-27",
+    "words": [
+     "4bf4922d",
+     "96e382a7",
+     "1d30d80c",
+     "ef672de8",
+     "1ac6a97e",
+     "2b0b962b",
+     "acf38390",
+     "3c5c055c",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 119,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "c00af369",
+     "c075320c"
+    ]
+   },
+   {
+    "people": 116,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "c075320c",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 114,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "227104ea"
+    ]
+   },
+   {
+    "people": 107,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "898aec7c",
+     "cedcb8f0",
+     "4460277f"
+    ]
+   },
+   {
+    "people": 104,
+    "kind": "Active",
+    "updated_on": "2026-04-24",
+    "words": [
+     "42278e90",
+     "89b29c10",
+     "ef4ae9cb"
+    ]
+   },
+   {
+    "people": 103,
+    "kind": "Active",
+    "updated_on": "2026-06-03",
+    "words": [
+     "2eba068b",
+     "acf38390",
+     "6da059b6",
+     "7afe4abf",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 103,
+    "kind": "Active",
+    "updated_on": "2026-05-27",
+    "words": [
+     "89b29c10",
+     "2b251de3",
+     "d1c5907e",
+     "bed023b3",
+     "95858f56",
+     "dcc341b0"
+    ]
+   },
+   {
+    "people": 95,
+    "kind": "Active",
+    "updated_on": "2026-04-10",
+    "words": [
+     "8c6e32a8",
+     "84d1546a",
+     "7d1fb3a2"
+    ]
+   },
+   {
+    "people": 95,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "63e1d819",
+     "abf095df",
+     "06755279",
+     "75597a67",
+     "e1fc8517",
+     "875f385d",
+     "7dc29488"
+    ]
+   },
+   {
+    "people": 94,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "058c4484",
+     "1c4b54db",
+     "621caf0e"
+    ]
+   },
+   {
+    "people": 93,
+    "kind": "Static",
+    "updated_on": "2026-07-29",
+    "words": [
+     "40293d93",
+     "4c17246f",
+     "7a968ed4",
+     "193f4a7a"
+    ]
+   },
+   {
+    "people": 92,
+    "kind": "Active",
+    "updated_on": "2026-08-03",
+    "words": [
+     "c8f069e0",
+     "3e63f834",
+     "57b20f7d",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 92,
+    "kind": "Static",
+    "updated_on": "2026-04-20",
+    "words": [
+     "3687395b",
+     "4bf4922d",
+     "d55997bc",
+     "2448ca2f",
+     "0cfb5881",
+     "e336320f",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 90,
+    "kind": "Active",
+    "updated_on": "2026-09-04",
+    "words": [
+     "8c6e32a8",
+     "69ce1407",
+     "35742be0"
+    ]
+   },
+   {
+    "people": 90,
+    "kind": "Active",
+    "updated_on": "2026-06-09",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "815dfa76",
+     "06755279",
+     "6ccaf138",
+     "4303b923",
+     "89b29c10"
+    ]
+   },
+   {
+    "people": 88,
+    "kind": "Static",
+    "updated_on": "2026-04-20",
+    "words": [
+     "3687395b",
+     "4bf4922d",
+     "d55997bc",
+     "2448ca2f",
+     "0cfb5881",
+     "e1fc8517",
+     "f9316cf4",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 87,
+    "kind": "Active",
+    "updated_on": "2026-10-05",
+    "words": [
+     "175c54d9",
+     "40293d93",
+     "17f478c0"
+    ]
+   },
+   {
+    "people": 86,
+    "kind": "Active",
+    "updated_on": "2026-07-20",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "d59947bc",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 85,
+    "kind": "Active",
+    "updated_on": "2026-04-17",
+    "words": [
+     "f2200e9f",
+     "5a45cc6a",
+     "63e1d819",
+     "f691d28a"
+    ]
+   },
+   {
+    "people": 83,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "0e8eae33",
+     "5211c603",
+     "205a0a01"
+    ]
+   },
+   {
+    "people": 83,
+    "kind": "Active",
+    "updated_on": "2026-06-12",
+    "words": [
+     "c62808e8"
+    ]
+   },
+   {
+    "people": 80,
+    "kind": "Active",
+    "updated_on": "2026-08-20",
+    "words": [
+     "31ed74bb",
+     "da2bd281",
+     "d67a0605",
+     "6e6f1dc1",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 78,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "cedcb8f0",
+     "d35ec4c9",
+     "c42af02a"
+    ]
+   },
+   {
+    "people": 76,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4303b923",
+     "edbf0fe3",
+     "d35ec4c9",
+     "addf1e8f"
+    ]
+   },
+   {
+    "people": 75,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "39a21e9b",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 75,
+    "kind": "Active",
+    "updated_on": "2026-06-03",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "7a968ed4",
+     "1ac6a97e",
+     "2b0b962b"
+    ]
+   },
+   {
+    "people": 74,
+    "kind": "Active",
+    "updated_on": "2026-07-14",
+    "words": [
+     "4460277f",
+     "9b0f2144",
+     "c54cb882",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 74,
+    "kind": "Active",
+    "updated_on": "2026-07-13",
+    "words": [
+     "4460277f",
+     "cedcb8f0",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 73,
+    "kind": "Active",
+    "updated_on": "2026-10-26",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "abf095df",
+     "06755279",
+     "cfdb2d7c",
+     "875f385d"
+    ]
+   },
+   {
+    "people": 72,
+    "kind": "Active",
+    "updated_on": "2026-10-23",
+    "words": [
+     "f2dde8a9",
+     "0d8b883a",
+     "8318e578",
+     "0f29c2a6",
+     "2471847e"
+    ]
+   },
+   {
+    "people": 70,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "e82bd96f",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 68,
+    "kind": "Active",
+    "updated_on": "2026-06-12",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "815dfa76",
+     "cfdb2d7c",
+     "2edc649c"
+    ]
+   },
+   {
+    "people": 67,
+    "kind": "Active",
+    "updated_on": "2026-06-25",
+    "words": [
+     "f2200e9f",
+     "815dfa76",
+     "4facf6d1",
+     "2347f736",
+     "89b29c10",
+     "fce32734",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 65,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "1c8bcfa6",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 64,
+    "kind": "Active",
+    "updated_on": "2026-07-07",
+    "words": [
+     "4460277f",
+     "408cfca8",
+     "1529cc18",
+     "c6899ba1"
+    ]
+   },
+   {
+    "people": 62,
+    "kind": "Active",
+    "updated_on": "2026-06-29",
+    "words": [
+     "0e8eae33",
+     "bc5d33fd"
+    ]
+   },
+   {
+    "people": 61,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "175c54d9",
+     "9e0e3e7a"
+    ]
+   },
+   {
+    "people": 58,
+    "kind": "Static",
+    "updated_on": "2026-04-06",
+    "words": [
+     "783a58fa",
+     "37e24810"
+    ]
+   },
+   {
+    "people": 56,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "39a21e9b",
+     "c075320c"
+    ]
+   },
+   {
+    "people": 54,
+    "kind": "Active",
+    "updated_on": "2026-06-25",
+    "words": [
+     "9580b830",
+     "fcebc453",
+     "b5e821c3",
+     "216b57b8",
+     "b40eb21c",
+     "28999611",
+     "72e4cfed",
+     "42278e90",
+     "f9c53a55",
+     "2c2d8a80",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 54,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "013f7aab",
+     "4ba70b3d"
+    ]
+   },
+   {
+    "people": 53,
+    "kind": "Active",
+    "updated_on": "2026-04-28",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "1e801cec",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 53,
+    "kind": "Active",
+    "updated_on": "2026-08-06",
+    "words": [
+     "c8f069e0",
+     "4460277f",
+     "0f5ea3e3",
+     "57b20f7d",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 51,
+    "kind": "Active",
+    "updated_on": "2026-10-26",
+    "words": [
+     "2edc649c",
+     "db819b62",
+     "c1d9c9dd",
+     "4058c747",
+     "4ef8a2e1"
+    ]
+   },
+   {
+    "people": 51,
+    "kind": "Static",
+    "updated_on": "2026-06-22",
+    "words": [
+     "50b8d09c",
+     "7cc7ca5b",
+     "f0743965",
+     "bd9e09f9",
+     "f9316cf4",
+     "2c2d8a80",
+     "9e0e3e7a",
+     "40293d93",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 51,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "c00af369",
+     "ab320c6c",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 50,
+    "kind": "Static",
+    "updated_on": "2026-04-30",
+    "words": [
+     "886f1733",
+     "e39b1245",
+     "54eed4d0",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 49,
+    "kind": "Active",
+    "updated_on": "2026-04-30",
+    "words": [
+     "19bb34eb",
+     "205a0a01",
+     "b9bd7cb5"
+    ]
+   },
+   {
+    "people": 49,
+    "kind": "Active",
+    "updated_on": "2026-06-11",
+    "words": [
+     "9c7f8847",
+     "5c8ff3a6",
+     "c6270703"
+    ]
+   },
+   {
+    "people": 48,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "e5a4f945",
+     "e44f21fd",
+     "89b29c10",
+     "876fffdd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 48,
+    "kind": "Active",
+    "updated_on": "2026-06-01",
+    "words": [
+     "b38cbe7a"
+    ]
+   },
+   {
+    "people": 47,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "e5a4f945",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 47,
+    "kind": "Active",
+    "updated_on": "2026-10-07",
+    "words": [
+     "c00af369",
+     "e44f21fd",
+     "89b29c10",
+     "876fffdd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 45,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "0e8eae33",
+     "b2fa08eb",
+     "ead87d82",
+     "40293d93",
+     "ff7adebe",
+     "0d8b883a",
+     "c6270703"
+    ]
+   },
+   {
+    "people": 45,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "c8f069e0",
+     "89b29c10",
+     "0f5ea3e3",
+     "57b20f7d",
+     "13860110",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 44,
+    "kind": "Active",
+    "updated_on": "2026-05-08",
+    "words": [
+     "f6ba74fa",
+     "6b98ed8f",
+     "872757cc",
+     "0cfb5881",
+     "95cd8075",
+     "0cfb455b",
+     "7a968ed4",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 43,
+    "kind": "Static",
+    "updated_on": "2026-10-22",
+    "words": [
+     "2edc649c",
+     "2fb1a5fc",
+     "ab5684c8",
+     "16fa9c87",
+     "8c911c01"
+    ]
+   },
+   {
+    "people": 43,
+    "kind": "Active",
+    "updated_on": "2026-06-01",
+    "words": [
+     "5c8ff3a6",
+     "c6270703"
+    ]
+   },
+   {
+    "people": 42,
+    "kind": "Active",
+    "updated_on": "2026-10-27",
+    "words": [
+     "2edc649c",
+     "13254bc4",
+     "fec3a7d4",
+     "7a968ed4"
+    ]
+   },
+   {
+    "people": 41,
+    "kind": "Active",
+    "updated_on": "2026-08-03",
+    "words": [
+     "e3496ac1",
+     "acf38390",
+     "17c6537c",
+     "57b20f7d"
+    ]
+   },
+   {
+    "people": 40,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "39a21e9b",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 39,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "6311a8ac"
+    ]
+   },
+   {
+    "people": 38,
+    "kind": "Active",
+    "updated_on": "2026-06-15",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "c0f8db37",
+     "bd7bba09"
+    ]
+   },
+   {
+    "people": 38,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "4bd02db4",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 36,
+    "kind": "Active",
+    "updated_on": "2026-09-30",
+    "words": [
+     "416aec5d",
+     "e44f21fd",
+     "89b29c10",
+     "876fffdd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 36,
+    "kind": "Static",
+    "updated_on": "2026-06-23",
+    "words": [
+     "c97160d1",
+     "99863551",
+     "b6032c0f"
+    ]
+   },
+   {
+    "people": 35,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "4460277f",
+     "609a6d33",
+     "88f674e1"
+    ]
+   },
+   {
+    "people": 35,
+    "kind": "Static",
+    "updated_on": "2026-04-20",
+    "words": [
+     "c7dd6978",
+     "19bb34eb",
+     "9135d745",
+     "57b20f7d",
+     "5f42a126"
+    ]
+   },
+   {
+    "people": 35,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "fcefccca",
+     "9b732a16",
+     "89b29c10",
+     "f847265f"
+    ]
+   },
+   {
+    "people": 34,
+    "kind": "Active",
+    "updated_on": "2026-04-03",
+    "words": [
+     "0e9c0ded",
+     "205a0a01",
+     "8e447707",
+     "27cd3c84"
+    ]
+   },
+   {
+    "people": 34,
+    "kind": "Active",
+    "updated_on": "2026-09-26",
+    "words": [
+     "e1fc8517",
+     "205a0a01",
+     "17f478c0"
+    ]
+   },
+   {
+    "people": 34,
+    "kind": "Active",
+    "updated_on": "2026-09-28",
+    "words": [
+     "1c8bcfa6",
+     "e44f21fd",
+     "89b29c10",
+     "876fffdd",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 32,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "e5a4f945",
+     "281f00b7"
+    ]
+   },
+   {
+    "people": 32,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "57b20f7d",
+     "e3496ac1"
+    ]
+   },
+   {
+    "people": 31,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "39a21e9b",
+     "6261af7f",
+     "ef853eed",
+     "bd2c3575"
+    ]
+   },
+   {
+    "people": 30,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "d940d530",
+     "6a096bcc",
+     "6d48538c"
+    ]
+   },
+   {
+    "people": 29,
+    "kind": "Active",
+    "updated_on": "2026-08-06",
+    "words": [
+     "9e0e3e7a",
+     "acf38390",
+     "17c6537c",
+     "57b20f7d"
+    ]
+   },
+   {
+    "people": 29,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "402a547c",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 27,
+    "kind": "Active",
+    "updated_on": "2026-09-28",
+    "words": [
+     "175c54d9",
+     "da2182b6",
+     "b994c98f"
+    ]
+   },
+   {
+    "people": 27,
+    "kind": "Active",
+    "updated_on": "2026-08-28",
+    "words": [
+     "7842c881"
+    ]
+   },
+   {
+    "people": 26,
+    "kind": "Active",
+    "updated_on": "2026-08-17",
+    "words": [
+     "c09344de",
+     "94e93fea",
+     "02fdf0db",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 25,
+    "kind": "Static",
+    "updated_on": "2026-05-29",
+    "words": [
+     "b2fa08eb",
+     "0f29c2a6",
+     "3687395b",
+     "9135d745",
+     "57b20f7d",
+     "193f4a7a"
+    ]
+   },
+   {
+    "people": 25,
+    "kind": "Static",
+    "updated_on": "2026-06-01",
+    "words": [
+     "0e8eae33",
+     "0f5ea3e3",
+     "57b20f7d",
+     "193f4a7a"
+    ]
+   },
+   {
+    "people": 25,
+    "kind": "Active",
+    "updated_on": "2026-09-09",
+    "words": [
+     "96e6b96b",
+     "8c6e32a8",
+     "69ce1407",
+     "35742be0"
+    ]
+   },
+   {
+    "people": 24,
+    "kind": "Active",
+    "updated_on": "2026-08-13",
+    "words": [
+     "c09344de",
+     "cf85e230",
+     "02fdf0db",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 24,
+    "kind": "Active",
+    "updated_on": "2026-09-17",
+    "words": [
+     "175c54d9",
+     "781243b0",
+     "0cfb5881",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 22,
+    "kind": "Static",
+    "updated_on": "2026-04-03",
+    "words": [
+     "0e9c0ded",
+     "205a0a01",
+     "7afe4abf",
+     "b9bd7cb5"
+    ]
+   },
+   {
+    "people": 21,
+    "kind": "Active",
+    "updated_on": "2026-04-07",
+    "words": [
+     "88d37956",
+     "b40eb21c",
+     "9f21b24f",
+     "d568180c",
+     "b9bd7cb5"
+    ]
+   },
+   {
+    "people": 21,
+    "kind": "Active",
+    "updated_on": "2026-08-06",
+    "words": [
+     "e3496ac1",
+     "acf38390",
+     "4460277f",
+     "17c6537c",
+     "57b20f7d"
+    ]
+   },
+   {
+    "people": 19,
+    "kind": "Active",
+    "updated_on": "2026-08-14",
+    "words": [
+     "c09344de",
+     "54a9a29f"
+    ]
+   },
+   {
+    "people": 19,
+    "kind": "Static",
+    "updated_on": "2026-10-22",
+    "words": [
+     "2edc649c",
+     "94aec663",
+     "16fa9c87",
+     "8c911c01"
+    ]
+   },
+   {
+    "people": 18,
+    "kind": "Active",
+    "updated_on": "2026-06-25",
+    "words": [
+     "89b29c10",
+     "0f5ea3e3",
+     "57b20f7d",
+     "82416065",
+     "9e0e3e7a"
+    ]
+   },
+   {
+    "people": 18,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "39a21e9b",
+     "6c9a5498"
+    ]
+   },
+   {
+    "people": 16,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "c09344de",
+     "93339342",
+     "54a9a29f"
+    ]
+   },
+   {
+    "people": 16,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "c00af369",
+     "ab320c6c"
+    ]
+   },
+   {
+    "people": 15,
+    "kind": "Active",
+    "updated_on": "2026-07-15",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "c00af369",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 15,
+    "kind": "Active",
+    "updated_on": "2026-08-13",
+    "words": [
+     "c09344de",
+     "54a9a29f",
+     "02fdf0db",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 15,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "0f5ea3e3",
+     "57b20f7d",
+     "82416065",
+     "40293d93",
+     "a947e23c"
+    ]
+   },
+   {
+    "people": 15,
+    "kind": "Static",
+    "updated_on": "2026-05-14",
+    "words": [
+     "0e8eae33",
+     "e336320f",
+     "d568180c"
+    ]
+   },
+   {
+    "people": 14,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "c09344de",
+     "0ea8f53c",
+     "02fdf0db",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 14,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "416aec5d",
+     "cff5ef88"
+    ]
+   },
+   {
+    "people": 14,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "416aec5d",
+     "c075320c"
+    ]
+   },
+   {
+    "people": 13,
+    "kind": "Active",
+    "updated_on": "2026-10-14",
+    "words": [
+     "877f0914",
+     "2fae3ec5",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 13,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "416aec5d",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 13,
+    "kind": "Active",
+    "updated_on": "2026-07-15",
+    "words": [
+     "a7a31e55",
+     "cedcb8f0",
+     "2eba068b",
+     "67c2444a"
+    ]
+   },
+   {
+    "people": 13,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "57b20f7d",
+     "c5181aa0"
+    ]
+   },
+   {
+    "people": 12,
+    "kind": "Active",
+    "updated_on": "2026-08-12",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "e3496ac1"
+    ]
+   },
+   {
+    "people": 11,
+    "kind": "Active",
+    "updated_on": "2026-04-27",
+    "words": [
+     "67c36cc2",
+     "b6e3fd73",
+     "d568180c",
+     "b9bd7cb5"
+    ]
+   },
+   {
+    "people": 11,
+    "kind": "Static",
+    "updated_on": "2026-10-14",
+    "words": [
+     "22dc7932",
+     "1c8bcfa6",
+     "0bff2a82"
+    ]
+   },
+   {
+    "people": 11,
+    "kind": "Active",
+    "updated_on": "2026-10-22",
+    "words": [
+     "416aec5d",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 9,
+    "kind": "Active",
+    "updated_on": "2026-07-23",
+    "words": [
+     "0f5ea3e3",
+     "57b20f7d",
+     "82416065",
+     "40293d93",
+     "c5181aa0"
+    ]
+   },
+   {
+    "people": 8,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "175c54d9",
+     "6f58bb69"
+    ]
+   },
+   {
+    "people": 8,
+    "kind": "Active",
+    "updated_on": "2026-08-10",
+    "words": [
+     "3687395b",
+     "ead87d82",
+     "609a6d33",
+     "6849a642",
+     "13860110",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 8,
+    "kind": "Static",
+    "updated_on": "2026-10-27",
+    "words": [
+     "73814cbd",
+     "fe30d09f"
+    ]
+   },
+   {
+    "people": 8,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "c00af369",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 7,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "39a21e9b",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 7,
+    "kind": "Active",
+    "updated_on": "2026-08-14",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "c5181aa0"
+    ]
+   },
+   {
+    "people": 7,
+    "kind": "Active",
+    "updated_on": "2026-10-22",
+    "words": [
+     "1c8bcfa6",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c"
+    ]
+   },
+   {
+    "people": 7,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "8c6e32a8",
+     "3ff21de3",
+     "f5674cd4"
+    ]
+   },
+   {
+    "people": 6,
+    "kind": "Active",
+    "updated_on": "2026-08-31",
+    "words": [
+     "cedcb8f0",
+     "0c4afe69",
+     "3202b127",
+     "74c6847e",
+     "a2a4583a"
+    ]
+   },
+   {
+    "people": 6,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "105d93e5",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-09-03",
+    "words": [
+     "c09344de",
+     "7667b01c",
+     "02fdf0db",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-06-29",
+    "words": [
+     "89b29c10",
+     "c7dd6978",
+     "0f29c2a6",
+     "c0f8db37",
+     "bed023b3"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-10-26",
+    "words": [
+     "ef853eed",
+     "bd2c3575",
+     "9e0e3e7a"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-04-06",
+    "words": [
+     "bdf0855a",
+     "ef01af58",
+     "f89daae5"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-10-22",
+    "words": [
+     "c00af369",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c",
+     "40293d93"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-06-12",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "abf095df",
+     "06755279",
+     "dfb502e9",
+     "c708c45c"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-10-22",
+    "words": [
+     "39a21e9b",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-08-14",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "9e0e3e7a"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-07-15",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "2d305535",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-10-22",
+    "words": [
+     "d59947bc",
+     "fec3a7d4",
+     "7a968ed4",
+     "2edc649c"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "c09344de",
+     "c8790a35",
+     "93339342"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-05-08",
+    "words": [
+     "7afe4abf",
+     "328f4c1e",
+     "18a7beee",
+     "60d56f8c",
+     "4674caee",
+     "29b19c8a"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-07-09",
+    "words": [
+     "cedcb8f0",
+     "31ed74bb",
+     "4bf4922d"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "9a796d00",
+     "89b29c10",
+     "a2fd7d0c"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-06-17",
+    "words": [
+     "bd2b9bd6",
+     "a7a31e55",
+     "0f29c2a6",
+     "e82bd96f",
+     "4303b923"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-04-24",
+    "words": [
+     "29b19c8a",
+     "06d73a77",
+     "7d1fb3a2"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
+    "words": [
+     "1c8bcfa6",
+     "175c54d9",
+     "5b6c4f70"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-10-19",
+    "words": [
+     "c075320c",
+     "5b33a4e1",
+     "fb343bd2",
+     "29b19c8a",
+     "7261c8af"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "416aec5d",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-05-08",
+    "words": [
+     "9c7f8847",
+     "5c8ff3a6",
+     "d472dc59",
+     "c6270703"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-09-04",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-09-08",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5",
+     "29b19c8a",
+     "06d73a77"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-10-05",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "815dfa76",
+     "06755279",
+     "6ccaf138",
+     "1f6a832c",
+     "21d08197"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-08-20",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
+    ]
+   },
+   {
+    "people": 1,
+    "kind": "Active",
+    "updated_on": "2026-05-04",
+    "words": [
+     "7b855149",
+     "831eb2f4",
+     "7a968ed4",
+     "29b19c8a",
+     "4ae004bd",
+     "bed023b3"
+    ]
+   },
+   {
+    "people": 1,
+    "kind": "Active",
+    "updated_on": "2026-04-29",
+    "words": [
+     "c224c220",
+     "7a968ed4",
+     "0c4afe69",
+     "bed023b3"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-05-28",
+    "words": [
+     "2eba068b",
+     "acf38390",
+     "609a6d33",
+     "d1c5907e",
+     "0f29c2a6",
+     "e82bd96f",
+     "c708c45c",
+     "625c860f"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-07-15",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "e5a4f945",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-07-23",
+    "words": [
+     "4460277f",
+     "57b20f7d",
+     "9c10caeb",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-04-02",
+    "words": [
+     "341bdc2e",
+     "0ddb0669",
+     "8a8753c7"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "1c8bcfa6",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-04-13",
+    "words": [
+     "dd3e8af6"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "81001c24",
+     "cef90b6c",
+     "fc9adf03",
+     "b6e52130"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "7afe4abf",
+     "328f4c1e",
+     "18a7beee",
+     "60d56f8c",
+     "4bf4922d",
+     "4674caee"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-10-21",
+    "words": [
+     "8c6e32a8",
+     "0c4afe69",
+     "ef01af58",
+     "f89daae5"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-09-08",
+    "words": [
+     "aa62e8bc",
+     "8d39bde6",
+     "6e6f1dc1",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "b6f40207",
+     "8a8753c7",
+     "0f29c2a6",
+     "7afe4abf"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-09-29",
+    "words": [
+     "7d1fb3a2",
+     "60d56f8c",
+     "aa62e8bc",
+     "e79397f1"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Active",
+    "updated_on": "2026-06-29",
+    "words": [
+     "4bf4922d",
+     "29b19c8a",
+     "c5f847a1",
+     "0c4afe69",
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894"
+    ]
+   },
+   {
+    "people": 0,
+    "kind": "Static",
+    "updated_on": "2026-06-25",
+    "words": [
+     "886f1733",
+     "603dcb24",
+     "261bb4ad"
+    ]
+   }
+  ]
+ }
 }

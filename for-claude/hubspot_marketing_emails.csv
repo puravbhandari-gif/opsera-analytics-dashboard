@@ -1,0 +1,235 @@
+sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
+2026-04-02,[Private invite] AI-SDLC workshop with Opsera,5107,370,21,7.5,0.4
+2026-04-02,[Private invite] AI-SDLC workshop with Opsera,110,11,0,13.6,0.0
+2026-04-06,We value your feedback on AI.,59,3,1,5.1,1.7
+2026-04-07,[Workshop Invite] When AI starts reviewing its own code,6650,597,236,9.5,3.7
+2026-04-07,Boost Your DevOps Workflow with Opsera's Latest Features 🚀,145,26,0,17.9,0.0
+2026-04-08,We value your feedback on AI.,56,3,1,5.4,1.8
+2026-04-09,Boost Your DevOps Workflow with Opsera's Latest Features 🚀,1,1,0,100.0,0.0
+2026-04-10,Your recording is ready: Meet the Opsera AppSec Agents workshop,21,7,1,33.3,4.8
+2026-04-15, Success with AI Requires Much More than Adoption,767,144,33,18.8,4.3
+2026-04-15,Successful AI DevOps Transformation In 90 Days,820,137,25,16.8,3.1
+2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1002,157,38,15.9,3.9
+2026-04-15,Watch the Recording: Meet the Opsera AppSec Agents workshop,19581,669,146,3.5,0.8
+2026-04-20,A gift card for your feedback on Opsera.,273,12,2,4.4,0.7
+2026-04-20,"What's New in Unified Insights: New Dashboards, Enhanced AI & Smarter Analytics ",2608,80,3,3.1,0.1
+2026-04-20,"What's New in Opsera | Logik.io CPQ CI/CD, Salesforce Insights & Pipeline Automation",203,38,0,19.4,0.0
+2026-04-20,"Faster Pipelines, Smarter Delivery — New Platform & SDLC Updates from Opsera",2537,75,1,3.0,0.0
+2026-04-21,"[Workshop Invite] Kill Spaghetti Code, Ship Structure",6418,551,184,9.0,3.0
+2026-04-21,"Webinar: Copilot, Cursor, Claude Code: What 250K Developers Revealed",48579,2367,311,4.9,0.6
+2026-04-22,[Invite] The architecture talk your team keeps skipping,6015,522,189,8.8,3.2
+2026-04-23,Introducing Forge. The future of enterprise software delivery is here.,3916,161,5,4.1,0.1
+2026-04-27,What's New in Unified Insights:  Revamped Sprint KPI Tables & Cleaner Jira Board Mapping,2558,77,0,3.0,0.0
+2026-04-28,[Webinar] 250K Developers Set the Benchmark. How Does Your AI Program Stack Up?,61764,2134,384,3.5,0.6
+2026-04-28,Your workshop recording is ready: Kill Spaghetti Code. Ship Structure.,12,2,1,16.7,8.3
+2026-04-29,The missing sidebar for your Cursor workflow,95,4,1,4.3,1.1
+2026-04-29,Claude Code is 10x faster. Is your verification?,95,5,0,5.6,0.0
+2026-04-30,"Your webinar recording is ready: Copilot, Cursor, Claude Code: What 250K Developers Revealed",54,12,5,22.6,9.4
+2026-04-30,Did You Know: Pipeline Run View is redesigned for faster debugging,2677,126,7,4.7,0.3
+2026-05-04,"Opsera Release Notes | Smarter Pipelines, Richer Salesforce Workflows — What's New in Opsera ",193,37,3,19.6,1.6
+2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
+2026-05-04,"Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",2479,82,7,3.3,0.3
+2026-05-05,"April Newsletter: The missing piece in AI-driven software, solved",63325,2614,305,4.2,0.5
+2026-05-06,An invitation just for {{ contact.firstname }},5834,93,4,1.6,0.1
+2026-05-11,"Opsera Release Notes | Copilot Cumulative Totals, Agent Activity Toggle & On-Premise Jira Linked Issues ",2536,145,9,5.7,0.4
+2026-05-12,[Workshop Invite] Your Team Is Using Cursor. Here's How You Ship It Safely.,5360,490,47,9.2,0.9
+2026-05-15,Did you know? Pipeline Notifications now deliver conditional alerts ,2655,127,7,4.8,0.3
+2026-05-18,"Opsera Release Notes |New for Salesforce: CPQ transfers, EventRelay, smarter code scans",189,34,0,18.0,0.0
+2026-05-18,"Opsera Release Notes |AI release notes, pipeline backup & recovery, and more",2465,72,0,2.9,0.0
+2026-05-18,"Opsera Release Notes | Hummingbird AI for Leadership, Contributor Statistics ",2533,80,18,3.2,0.7
+2026-05-18,Your workshop recording is ready: Ship AI-Generated Code with Enterprise Guardrails,15,4,2,26.7,13.3
+2026-05-22,An invitation just for {{ contact.firstname }},531,10,2,1.9,0.4
+2026-05-27,Join us {{ contact.firstname }} for a forum on token economics.,137,2,0,1.5,0.0
+2026-05-27,Great connecting at Agentforce World Tour Mumbai,293,46,4,15.7,1.4
+2026-05-29,Did you know? Opsera's Notification Center centralizes every pipeline approval,2653,110,16,4.2,0.6
+2026-06-01,"Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations ",2,2,0,100.0,0.0
+2026-06-01,"Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations ",182,34,0,18.7,0.0
+2026-06-01,"Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",2450,119,13,4.9,0.5
+2026-06-01,[Invite Only] Breakfast before DAIS? June 16,146,6,1,4.2,0.7
+2026-06-01,AI token economics forum.,80,2,0,2.5,0.0
+2026-06-02,"Opsera is a Gartner® Magic Quadrant™ Leader, see what’s next",69590,2029,317,3.0,0.5
+2026-06-02,[Invite Only] Breakfast before DAIS? June 16,376,20,14,5.3,3.7
+2026-06-02,"Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",1,1,0,100.0,0.0
+2026-06-02,"Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations ",1,1,0,100.0,0.0
+2026-06-03,[Limited Seats] Forum on AI token waste.,88,1,0,1.2,0.0
+2026-06-03,Thank you for your Forge demo request.,40,9,0,22.5,0.0
+2026-06-03,15 seats. Palo Alto. Token waste.,2064,40,1,1.9,0.0
+2026-06-05,See AI-Driven DevOps Live in Action,20,2,1,11.1,5.6
+2026-06-07,An invitation just for {{ contact.firstname }},1970,554,450,28.6,23.2
+2026-06-08,"Opsera Release Notes | Automated Variable Sharing, Salesforce CLI Upgrade & Data 360 Metadata Support",182,46,7,25.3,3.8
+2026-06-08,Invitation Only - Limited Seats - Token efficiency forum.,2450,39,2,1.7,0.1
+2026-06-15,{{ contact.firstname }} - Dinner's on me.,70,1,0,1.4,0.0
+2026-06-15,"Opsera Release Notes | Pipeline Canvas Persistence, Expanded OIC Coverage & Pinpoint Git Custodian PR Findings ",2413,95,1,3.9,0.0
+2026-06-15,"Opsera Release Notes | Follow-Up Questions in Hummingbird AI, SDLC Hierarchy Graph & Deployment Frequency Metric Views ",2480,64,0,2.6,0.0
+2026-06-15,"Opsera Release Notes | Pipeline Canvas Persistence, Hummingbird AI Intelligence & Slack/Teams for Salesforce ",178,35,1,19.7,0.6
+2026-06-15,"What do NVIDIA, Box and Thoughtspot have in common?",1997,16,0,0.8,0.0
+2026-06-17,What Eaton and Cisco do that most AI programs don't,1444,16,0,1.1,0.0
+2026-06-18,Java modernization viability baseline analysis.,1099,19,1,1.8,0.1
+2026-06-18,An invitation just for {{ contact.firstname }},1971,11,0,0.6,0.0
+2026-06-19,Did you know every Opsera pipeline run now ships with documentation?,2584,86,2,3.3,0.1
+2026-06-22,[Workshop Recording] So You Think You Can Vibe Code?,51,6,3,11.8,5.9
+2026-06-22,Dinner invite for {{ contact.firstname }},2184,25,1,1.1,0.0
+2026-06-23,Code debt is quiet. Until you try to move Java.,1017,13,0,1.3,0.0
+2026-06-24,"{{ contact.firstname }}, so glad we found each other in NYC",36,2,1,5.6,2.8
+2026-06-24,{{ contact.firstname }} - join us tomorrow for dinner?,1942,37,2,2.0,0.1
+2026-06-25,A lot has changed since DAIS 2025,209,16,2,7.7,1.0
+2026-06-25,Great meeting you at DAIS — here's the next step,284,7,2,2.5,0.7
+2026-06-25,Starting in 2 hours: What Eaton and Cisco do that most AI programs don't,20098,415,49,2.1,0.2
+2026-06-25,Looking forward to our meeting — install BrickForge before we connect,25,0,0,0.0,0.0
+2026-06-25,"Dead code, CVEs, no tests. How much of this is yours?",1595,40,25,2.5,1.6
+2026-06-26,"Opsera Release Notes | DORA Email Reports, Golden Pipeline Adoption Tracking & Claude Code Sub-Agent",2321,92,3,4.0,0.1
+2026-06-29,"Opsera Release Notes | Path-Based Webhook Filtering, Bulk Step Insertion & Pipeline Tagging Governance",2270,61,14,2.7,0.6
+2026-06-29,"Opsera Release Notes | Vlocity Webhook Automation, Rollback Deployment & Permission Set Group Pre-Validation",170,32,6,18.8,3.5
+2026-06-29,Your webinar recording is ready: AI Budget Burning? How to Convert AI Spend Into Tangible Business Results,54,8,0,15.1,0.0
+2026-06-29,Your competitors started their Java migration. You haven't.,1664,47,28,2.9,1.7
+2026-06-30,Thank You + Key Takeaways: Tokenomics CXO Roundtable,3,2,2,66.7,66.7
+2026-06-30,Missed our CXO Tokenomics Roundtable? Recap + Exclusive Access,15,2,0,14.3,0.0
+2026-06-30,Thank You + Key Takeaways: Tokenomics CXO Roundtable,8,2,0,25.0,0.0
+2026-07-10,Opsera Release Notes | PDF Export for Executive Reporting Now Available Across All Dashboards,2315,47,0,2.0,0.0
+2026-07-10,Did you know? You can now bulk-manage your pipelines,2439,88,6,3.6,0.2
+2026-07-10,Invitation just for {{ contact.firstname }} - software delivery forum.,979,22,5,2.3,0.5
+2026-07-13,"Opsera Release Notes | Template Propagation, Apex Compilation Checks & Logik CPQ Asset Management ",170,28,0,16.5,0.0
+2026-07-13,"Opsera Release Notes | Template Propagation, Configurable Container Sizes & Enhanced SDLC Pipelines ",2265,96,5,4.2,0.2
+2026-07-13,Invitation just for {{ contact.firstname }} - tokenomics forum.,1124,30,4,2.8,0.4
+2026-07-13,Invitation just for {{ contact.firstname }} - tokenomics forum.,29,2,0,6.9,0.0
+2026-07-13,{{ contact.firstname }} | Invitation only AI forum.,932,10,2,1.1,0.2
+2026-07-15,Invitation just for {{ contact.firstname }} - tokenomics forum.,38,3,0,9.7,0.0
+2026-07-15,{{ contact.firstname }} - Invitation only AI forum and dinner.,1144,24,4,2.1,0.4
+2026-07-15,Dinner invitation for {{ contact.firstname }} ,923,9,4,1.0,0.4
+2026-07-16,Hi {{ contact.firstname }} - join us for dinner?,62,3,2,4.9,3.3
+2026-07-16,Hi {{ contact.firstname }} - join us for dinner?,636,25,3,4.2,0.5
+2026-07-16,Hi {{ contact.firstname }} - join us for dinner?,404,18,4,4.5,1.0
+2026-07-17,Limited seats for {{ contact.firstname }} - AI context engineering forum.,922,4,0,0.4,0.0
+2026-07-20,{{ contact.firstname }} - Dinner next week on us.,1116,45,4,4.0,0.4
+2026-07-21,{{ contact.firstname }} - RSVP today.,2494,54,7,2.2,0.3
+2026-07-23,Hi {{ contact.firstname }} - join us for dinner?,29,0,0,0.0,0.0
+2026-07-23,{{ contact.firstname }} - AI speed doesn't have to incur more tech debt.,1665,48,31,2.9,1.9
+2026-07-23,What AI coding adoption actually looks like at companies your size,1,0,0,0.0,0.0
+2026-07-23,Where in your delivery lifecycle are you losing your AI gains?,1,0,0,0.0,0.0
+2026-07-23,Gartner named Opsera a Leader. Here's what we think it means.,1,0,0,0.0,0.0
+2026-07-23,{{ contact.firstname }} - RSVP for Blown Context & Broken Code.,2414,22,8,0.9,0.3
+2026-07-27,Hi {{ contact.firstname }} - join us for dinner?,308,8,1,2.6,0.3
+2026-07-27,Hi {{ contact.firstname }} - join us for dinner?,26,1,0,3.8,0.0
+2026-07-27,"Opsera Release Notes | Live Template Propagation Tracking, Oracle Artifact Mapping & Azure CLI ACR Selection ",2264,107,2,4.7,0.1
+2026-07-27,"Opsera Release Notes | Live Template Propagation Tracking, Deployment Timeouts & Reusable Logik Manifests ",170,32,2,18.8,1.2
+2026-07-27,Hi {{ contact.firstname }} - join us for dinner?,466,27,7,6.0,1.5
+2026-07-28,{{ contact.firstname }} - The hummingbird is the word on AI software delivery.,2434,23,2,0.9,0.1
+2026-07-29,{{ contact.firstname }} - You've got something you want to share.,1105,33,5,3.0,0.5
+2026-07-29,Win deeper adoption of Copilot with Opsera,79,4,0,5.1,0.0
+2026-07-31,"Dinner's on us, {{ contact.firstname }}",2409,23,13,1.0,0.5
+2026-07-31,Invitation just for {{ contact.firstname }} ,1285,32,7,2.5,0.5
+2026-08-03,Did You Know? Your Pipeline Can Adapt at Runtime,2430,64,7,2.6,0.3
+2026-08-03,{{ contact.firstname }} - dinner's on us next week.,1278,26,5,2.0,0.4
+2026-08-03,"Dinner Thursday - on us, {{ contact.firstname }}",2430,28,18,1.2,0.7
+2026-08-04,{{ contact.firstname }} - dinner on us next week?,395,11,1,2.8,0.3
+2026-08-05,{{ contact.firstname }} - dinner on us next week?,21,1,1,4.8,4.8
+2026-08-05,{{ contact.firstname }} - dinner on us next week?,37,3,0,8.1,0.0
+2026-08-05,{{ contact.firstname }} - dinner on us next week?,588,26,1,4.4,0.2
+2026-08-06,Holding a dinner reservation for {{ contact.firstname }} ,1274,29,1,2.3,0.1
+2026-08-07,"Lots of tech debt, {{ contact.firstname }} ?",57,0,0,0.0,0.0
+2026-08-10,{{ contact.firstname }} - Call for speakers.,7,1,0,14.3,0.0
+2026-08-10,"Opsera Release Notes | Service Principal Auth for Azure DevOps, OIC Rollback Enhancements & Logik CPQ Dependency Logic ",2258,98,10,4.3,0.4
+2026-08-10,"Opsera Release Notes | Prevalidation for Webhook & PR Pipelines, Auto Jira Sync & Logik CPQ Dependency Logic ",169,21,4,12.6,2.4
+2026-08-10,{{ contact.firstname }} - Dinner's on us on Thursday.,1274,27,0,2.1,0.0
+2026-08-12,Invitation only - {{ contact.firstname }} (Tomorrow),320,29,2,9.1,0.6
+2026-08-18,"Save the Date: Opsera Flutter 2026, The AI-SDLC Summit",5703,128,19,2.3,0.3
+2026-08-20,[Invite Only] Opsera Flutter 2026: The AI-SDLC Summit,30154,862,186,3.0,0.6
+2026-08-24,Did You Know | Your IDP Can Do More Than Show You Information — Meet IDP Agents,2421,73,2,3.0,0.1
+2026-08-24,"Opsera Release Notes | Multi-Command Maven Builds, Multi-Service Kubernetes Deployments & Targeted Monorepo Security Scans ",2257,110,6,4.9,0.3
+2026-08-24,"Opsera Release Notes | Jira-Driven OmniStudio Deployments, CSV Component Selection & Expanded OmniStudio Metadata ",167,15,0,9.0,0.0
+2026-08-26,Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit,266,5,1,1.9,0.4
+2026-08-26,Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit.,927,43,8,4.7,0.9
+2026-08-26,Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit,26,0,0,0.0,0.0
+2026-08-26,Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit,24,2,0,8.3,0.0
+2026-08-26,Private invitation for {{ contact.firstname }} - Bay Area AI-SDLC Summit,26,0,0,0.0,0.0
+2026-08-27,{{ contact.firstname }} — an invite-only evening on the AI-SDLC,3694,88,23,2.4,0.6
+2026-08-28,Tokenomics: the new discipline every AI leader needs to know,58670,824,122,1.9,0.3
+2026-08-31,"[Preferred Invite] Opsera Flutter 2026, The AI-SDLC Summit",26,4,1,15.4,3.8
+2026-09-01,An evening at the winery with 100 AI leaders,23926,218,38,0.9,0.2
+2026-09-03,Private invitation for {{ contact.firstname }} - join the AI-SDLC conversations at Flutter 2026,557,54,9,10.0,1.7
+2026-09-07,"Opsera Release Notes | Release Branch Filtering in Org Insights, Deployment Checkpoints and Smarter Commit Selection",136,26,0,19.1,0.0
+2026-09-07,Opsera Release Notes | Rename User Groups Without Losing Any Configuration ,1484,81,1,5.5,0.1
+2026-09-08,Tokens are capital now. Are you managing them like it?,52395,852,72,1.6,0.1
+2026-09-09,Private invitation for {{ contact.firstname }} - join the healthcare AI-SDLC conversations at Flutter 2026,2259,33,2,1.5,0.1
+2026-09-10,"Private invitation for {{ personalization_token('contact.firstname', 'you') }} - join the AI-SDLC conversations at Flutter 2026",100,2,0,2.1,0.0
+2026-09-10,Did You Know Your Teams Can Self-Serve Platform Operations? ,1482,71,0,4.8,0.0
+2026-09-10,Don't just replace Appfire Flow - upgrade.,1196,16,10,1.3,0.8
+2026-09-16,A peek behind our new Salesforce product - Come see us at Dreamforce Booth 107,631,12,4,1.9,0.6
+2026-09-16,A peek behind our new Salesforce product - Come see us at Dreamforce,1349,14,2,1.0,0.1
+2026-09-16,A peek behind our new Salesforce product - Come see us at Dreamforce,589,12,4,2.0,0.7
+2026-09-17,Two weeks out: join the AI-SDLC conversations at Opsera's Flutter 2026 ,22364,551,34,2.5,0.2
+2026-09-18,Your webinar recording is ready: Tokenomics: The Currency of Enterprise AI,76,11,2,14.7,2.7
+2026-09-22,Flutter 2026 is almost here (and almost full),95,7,0,7.4,0.0
+2026-09-22,Flutter 2026 is almost here (and almost full),193,2,0,1.0,0.0
+2026-09-22,Flutter 2026 is almost here (and almost full),621,68,2,11.1,0.3
+2026-09-22,Opsera Release Notes | Failed-Step Log Context Now Available Directly in Jira,1347,48,15,3.6,1.1
+2026-09-22,"Opsera Release Notes | Failed-Step Logs in Jira, Expanded Salesforce Metadata & Component-Level Jira Worklogs",136,6,1,4.4,0.7
+2026-09-23,Flutter 2026 is almost here (and almost full),140,7,7,5.0,5.0
+2026-09-28,{{ contact.firstname }} - Congratulations: You're an Opsera Customer Awards 2026 Winner,27,14,9,51.9,33.3
+2026-09-28,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",680,0,0,0.0,0.0
+2026-09-28,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",541,1,0,0.2,0.0
+2026-09-28,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",31,1,0,3.6,0.0
+2026-09-30,{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?,2841,86,6,3.7,0.3
+2026-10-05,{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?,4163,2,1,0.0,0.0
+2026-10-05,Opsera Release Notes | Pipeline Event Webhooks & Dynamic JFrog Image Selection for Argo CD,1483,38,1,2.6,0.1
+2026-10-05,{{ contact.firstname }} - See you at Gartner IT Symposium/Xpo?,2350,37,0,1.6,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",8,1,0,12.5,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",42,5,0,11.9,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",13,1,0,7.7,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",1,1,0,100.0,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",6,1,0,16.7,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",70,14,0,20.0,0.0
+2026-10-07,"From ""I need infrastructure"" to deployed — without a single ticket.",1477,41,1,2.8,0.1
+2026-10-08,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",5704,484,41,8.8,0.7
+2026-10-08,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",3657,84,2,2.3,0.1
+2026-10-12,{{ contact.firstname }} - See you at Gartner IT Xpo?,868,33,0,3.8,0.0
+2026-10-13,"{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",31,1,0,4.2,0.0
+2026-10-13,{{ contact.firstname }} - Simplify legacy code modernization.,2707,22,3,0.8,0.1
+2026-10-14,{{ contact.firstname }} - Modernize 50k lines of code at no-cost.,2694,16,0,0.6,0.0
+2026-10-14,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",734,24,4,3.4,0.6
+2026-10-14,"{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",139,2,0,1.4,0.0
+2026-10-15,Your request to Opsera.,1,1,0,100.0,0.0
+2026-10-15,Thanks for signing up to see Opsera in action!,296,89,40,33.2,14.9
+2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,60,7,0,11.9,0.0
+2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
+2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
+2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,2,0,16.7,0.0
+2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,9,2,0,22.2,0.0
+2026-10-15,Be Opsera's guest at the 2026 WLDA Summit & Awards Gala,1520,42,3,2.8,0.2
+2026-10-16,Opsera has a new look,4970,94,6,1.9,0.1
+2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",111,2,0,1.8,0.0
+2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",113,8,0,7.5,0.0
+2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",44,1,0,2.3,0.0
+2026-10-16,{{ contact.firstname }} - Ready to modernize legacy code?,2728,16,0,0.6,0.0
+2026-10-16,{{ contact.firstname }} - Atlanta Hawks v. LA Lakers in our private suite.,711,16,1,2.3,0.1
+2026-10-16,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",152,3,0,2.0,0.0
+2026-10-18,Modernizing legacy code at Gartner IT Symposium/Xpo.,2792,58,6,2.1,0.2
+2026-10-19,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",153,6,1,3.9,0.7
+2026-10-19,Next steps for your Gartner Forge Modernization offer,56,10,2,17.9,3.6
+2026-10-19,"Opsera Release Notes | Bulk Deletion, Branch Triggers, Deployment Summary in User Story Insights & Jira Status Comments",135,5,0,3.7,0.0
+2026-10-19,"Opsera Release Notes | Bulk Deletion via API, Branch Creation Triggers & Improved Folder Management",1335,29,0,2.2,0.0
+2026-10-19,{{ contact.firstname }} - Atlanta Hawks v. LA Lakers in our private suite.,713,19,1,2.7,0.1
+2026-10-19,{{ contact.firstname }} - Orlando Magic v. Atlanta Hawks,2194,59,3,2.7,0.1
+2026-10-19,{{ contact.firstname }} - Are you here in Orlando?,2790,93,1,3.3,0.0
+2026-10-21,{{ contact.firstname }} - Private suite at the Farm for Lakers game.,223,2,1,0.9,0.5
+2026-10-21,{{ contact.firstname }} - Private suite at the Fieldhouse.,106,2,0,1.9,0.0
+2026-10-21,{{ contact.firstname }} - Private suite at the Fieldhouse,53,0,0,0.0,0.0
+2026-10-21,{{ contact.firstname }} - Private suite at the Fieldhouse.,112,3,1,2.7,0.9
+2026-10-21,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",76,0,0,0.0,0.0
+2026-10-21,Quick coffee at Gartner?,2631,17,8,0.6,0.3
+2026-10-22,Follow-up discussion to Gartner? Time tomorrow?,4,0,0,0.0,0.0
+2026-10-22,Follow-up discussion to Gartner? Time tomorrow?,7,1,0,14.3,0.0
+2026-10-22,Follow-up discussion to Gartner? Time tomorrow?,4,1,0,25.0,0.0
+2026-10-22,Follow-up discussion to Gartner? Time tomorrow?,5,0,0,0.0,0.0
+2026-10-22,Follow-up discussion to Gartner? Time tomorrow?,11,2,0,18.2,0.0
+2026-10-22,GitHub Universe next week?,2099,63,0,3.0,0.0
+2026-10-22,GitHub Universe next week?,7751,168,0,2.2,0.0
+2026-10-23,{{ contact.firstname }} - Thanks for booking with Opsera.,2,1,0,50.0,0.0
+2026-10-26,"{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",112,0,0,0.0,0.0
+2026-10-26,"{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",109,2,0,1.8,0.0
+2026-10-26,{{ contact.firstname }} Hawks/Lakers game day at the Farm is getting closer.,716,3,0,0.4,0.0
+2026-10-26,{{ contact.firstname }} - A GitHub Universe-only offer from Opsera.,10379,237,70,2.3,0.7
+2026-10-26,{{ contact.firstname }} - Hawks/Lakers game day at the Farm is getting closer.,100,1,0,1.0,0.0
+2026-10-26,Activate your Gartner free code modernization trial.,50,5,0,10.0,0.0
+2026-10-27,"{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",54,0,0,0.0,0.0
+2026-10-27,{{ contact.firstname }} - Thanks for visiting us at Gartner in Orlando.,135,16,2,11.9,1.5
