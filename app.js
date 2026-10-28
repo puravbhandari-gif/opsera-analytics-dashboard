@@ -949,6 +949,10 @@ function dealsIn(hub, mode, a, keep = () => true) {
 const dealNote = (d, a, b) => (!d ? "We store deals as weekly and monthly totals, so there's no figure for a single day."
   : d.start !== a || d.end !== b ? `We store deals as weekly and monthly totals, so this step covers ${range(d.start, d.end)}.` : "");
 
+// The Google Ads panel lives on the Campaigns tab and is drawn for that tab's dates
+let adsDraw = null, adsPending = null;
+function drawAdsFor(cur) { if (adsDraw) adsDraw(cur); else adsPending = cur; }
+
 function renderJourney(ga, leads, hub, gsc) {
   const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const start = ga.start_date;
@@ -1022,10 +1026,9 @@ function renderJourney(ga, leads, hub, gsc) {
       linkedin: "More detail splits these visits into company page, Kumar and untagged, post by post.",
       paid: "Google and HubSpot mark \"paid\" differently, so the steps don't line up." }[channel] || "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
-    drawAds(cur);
   };
-  // Google Ads by campaign, for the same dates as the funnel. Spend and ad clicks come from Google Ads through
-  // Google Analytics' link; visits and demo requests from Google Analytics. Rows stay per campaign.
+  // Google Ads by campaign (on the Campaigns tab, for that tab's dates). Spend and ad clicks come from Google Ads
+  // through Google Analytics' link; visits and demo requests from Google Analytics. Rows stay per campaign.
   const ads = ga.google_ads_daily || [];
   const adsLast = ads.filter((r) => r.spend > 0).map((r) => r.date).sort().pop();
   const adTotals = (a, b) => {
@@ -1068,6 +1071,8 @@ function renderJourney(ga, leads, hub, gsc) {
     $("journey-ads-brand").hidden = !(cur.end >= "2026-06-16" && rows.some((r) => r.campaign === "Brand - Search - M+D"));
     $("journey-ads-source").textContent = `Source: Google Analytics, opsera.ai 2026, with spend and ad clicks from the linked Google Ads account, ${range(cur.start, cur.end)} (Pacific time). ${rows.length ? sinceLine : ""}`.trim();
   }
+  adsDraw = drawAds;
+  drawAds(adsPending || periodsFor(periodMode, start, gaLast).cur || { start, end: gaLast });
   if ([...monthPick.options].some((o) => o.value && o.value === view.funnelmonth)) { month = view.funnelmonth; monthPick.value = month; }
   $("journey-channel").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x.dataset.ch === channel));
   drawFunnel();
@@ -1941,6 +1946,7 @@ function renderCampaigns(d, hub) {
       { key: "amount", label: "Deal amount", num: true, fmt: money },
     ] });
     $("campaigns-source").textContent = `Visits, engaged visits and form fills: Google Analytics, ${range(cur.start, cur.end)} (Pacific time). Form fills leave out job applications.`;
+    drawAdsFor(cur);
     $("campaigns-hub-source").textContent = `Emails and deals: HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Emails by the day they were sent; deals by the day they were created, open or won.`;
   };
   $("campaigns-range").addEventListener("click", (e) => {

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=29">
+<link rel="stylesheet" href="styles.css?v=30">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -45,20 +45,45 @@
   <div class="tabs-row">
   <button class="tabs-arrow left" type="button" aria-label="Show earlier tabs" hidden>&lsaquo;</button>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
-    <button role="tab" data-tab="team">Team metrics</button>
-    <button role="tab" data-tab="pipeline">Pipeline</button>
-    <button role="tab" data-tab="journey">Customer journey</button>
-    <button role="tab" data-tab="content">Content</button>
-    <button role="tab" data-tab="events">Events</button>
-    <button role="tab" data-tab="campaigns">Campaigns</button>
-    <button role="tab" data-tab="search">Google search</button>
-    <button role="tab" data-tab="visits">Website visits</button>
-    <button role="tab" data-tab="leads">Leads</button>
-    <button role="tab" data-tab="aeo">AEO</button>
-    <button role="tab" data-tab="linkedin">LinkedIn brand</button>
-    <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
-    <button role="tab" data-tab="youtube">YouTube</button>
-    <button role="tab" data-tab="lookup">Look up</button>
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">Results</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="team">Team metrics</button>
+        <button role="tab" data-tab="pipeline">Pipeline</button>
+        <button role="tab" data-tab="leads">Leads</button>
+        <button role="tab" data-tab="journey">Customer journey</button>
+      </div>
+    </div>
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">Traffic</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="visits">Website visits</button>
+        <button role="tab" data-tab="search">Google search</button>
+        <button role="tab" data-tab="aeo">AEO</button>
+      </div>
+    </div>
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">What we ran</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="campaigns">Campaigns</button>
+        <button role="tab" data-tab="events">Events</button>
+        <button role="tab" data-tab="content">Content</button>
+      </div>
+    </div>
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">Social</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="linkedin">LinkedIn brand</button>
+        <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
+        <button role="tab" data-tab="youtube">YouTube</button>
+      </div>
+    </div>
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">Tool</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="lookup">Look up</button>
+      </div>
+    </div>
   </nav>
   <button class="tabs-arrow right" type="button" aria-label="Show more tabs" hidden>&rsaquo;</button>
   </div>
@@ -74,6 +99,13 @@
       <div id="events-table"></div>
       <p class="source" id="events-source"></p>
       <p class="note">Signed up and attended come from the event's HubSpot lists. Event page form fills come from Google Analytics, so they're never added to the HubSpot numbers. Meetings afterwards are calendar meetings with anyone on the event's lists, held after its last day and up to yesterday; existing customers are included. Meetings booked for a later date show on their own.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Event sign-ups in HubSpot</h3>
+      <div class="cards compact" id="leads-hubspot-events"></div>
+      <p class="source" id="leads-hubspot-events-source"></p>
+      <p class="note-inline">Each list stands alone. We never add a list to another or to the event page form fills.</p>
     </div>
   </section>
 
@@ -91,6 +123,15 @@
       <p class="source" id="campaigns-source"></p>
       <p class="source" id="campaigns-hub-source"></p>
       <p class="note">Visits, engaged visits and form fills come from Google Analytics, matched on the campaign's link tag (utm_campaign). Email sends, opens and clicks, and deals, come from HubSpot. The 2 sources count different things, so email clicks and visits won't match, and they're never added together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out.</p>
+    </div>
+
+    <div class="panel">
+      <h3 id="journey-ads-title">Google Ads by campaign</h3>
+      <div class="cards" id="journey-ads-cards"></div>
+      <div id="journey-ads"></div>
+      <p class="source" id="journey-ads-source"></p>
+      <p class="note-inline" id="journey-ads-brand" hidden>Brand search ("Brand - Search - M+D"): visits and demo requests from 16 Jun are too low because of a tracking problem.</p>
+      <p class="note">Ad clicks come from Google Ads and visits from Google Analytics, so visits are lower: some people leave before the page loads or block tracking. Cost per demo request is a campaign's spend divided by its demo requests. The Paid ads funnel on Customer journey also counts LinkedIn ads and other paid visits, so its numbers are higher.</p>
     </div>
   </section>
 
@@ -249,13 +290,6 @@
       <p class="source" id="leads-cmp-chart-source"></p>
     </div>
 
-    <div class="panel">
-      <h3>Event sign-ups in HubSpot</h3>
-      <div class="cards compact" id="leads-hubspot-events"></div>
-      <p class="source" id="leads-hubspot-events-source"></p>
-      <p class="note-inline">Each list stands alone. We never add a list to another or to the event forms above.</p>
-    </div>
-
     <details class="more">
       <summary>More detail</summary>
       <div class="cards" id="leads-cards"></div>
@@ -309,6 +343,13 @@
       <p class="source" id="pipe-campaigns-source"></p>
       <p class="note">Marketing sourced: the Primary Campaign Source is a marketing campaign. Marketing influenced: not sourced, but the Attrib First or Attrib Last Campaign is a marketing campaign. SDR and AE outreach count as sales for now. Quarters follow Opsera's fiscal year, so Q2 is May to July.</p>
     </div>
+
+    <div class="panel">
+      <h3>How each deal came in</h3>
+      <div id="journey-deal-lines"></div>
+      <p class="source" id="journey-deal-lines-source"></p>
+      <p class="note">Each line is a deal created after the person became a marketing contact, open or won. HubSpot has no product field, so the product comes from words in the deal name. HubSpot doesn't ask "how did you hear about us", so there's no answer to show.</p>
+    </div>
   </section>
 
   <section id="tab-journey" class="tab" role="tabpanel">
@@ -338,15 +379,6 @@
       <p class="note-inline" id="journey-linkedin-hint"></p>
     </div>
 
-    <div class="panel">
-      <h3 id="journey-ads-title">Google Ads by campaign</h3>
-      <div class="cards" id="journey-ads-cards"></div>
-      <div id="journey-ads"></div>
-      <p class="source" id="journey-ads-source"></p>
-      <p class="note-inline" id="journey-ads-brand" hidden>Brand search ("Brand - Search - M+D"): visits and demo requests from 16 Jun are too low because of a tracking problem.</p>
-      <p class="note">Ad clicks come from Google Ads and visits from Google Analytics, so visits are lower: some people leave before the page loads or block tracking. Cost per demo request is a campaign's spend divided by its demo requests. The Paid ads funnel above also counts LinkedIn ads and other paid visits, so its numbers are higher.</p>
-    </div>
-
 
     <details class="more">
       <summary>More detail</summary>
@@ -373,12 +405,6 @@
         <h3>Deals and pipeline</h3>
         <div class="cards compact" id="journey-deals"></div>
         <p class="source" id="journey-deals-source"></p>
-      </div>
-      <div class="panel">
-        <h3>How each deal came in</h3>
-        <div id="journey-deal-lines"></div>
-        <p class="source" id="journey-deal-lines-source"></p>
-        <p class="note">Each line is a deal created after the person became a marketing contact, open or won. HubSpot has no product field, so the product comes from words in the deal name. HubSpot doesn't ask "how did you hear about us", so there's no answer to show.</p>
       </div>
       <div class="panel">
         <h3>Marketing contacts in HubSpot</h3>
@@ -645,7 +671,6 @@
       <div class="cards" id="li-k-key-cards"></div>
       <p class="source" id="li-k-key-source"></p>
 
-
       <div class="cards compact" id="li-k-cards"></div>
       <p class="source" id="li-k-source"></p>
       <div class="panel">
@@ -848,6 +873,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=72"></script>
+<script src="app.js?v=73"></script>
 </body>
 </html>

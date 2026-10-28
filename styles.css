@@ -75,7 +75,10 @@ p { margin: 0 0 8px; }
 .brand-text .muted { margin: 0; font-size: 0.8rem; }
 /* Every tab stays visible: the row wraps onto a 2nd line on wider screens, and scrolls with arrows on phones */
 .tabs-row { position: relative; max-width: 1180px; margin: 0 auto; }
-.tabs { padding: 0 10px; display: flex; flex-wrap: wrap; gap: 0 4px; }
+.tabs { padding: 0 10px; display: flex; flex-wrap: wrap; gap: 0 22px; }
+.tab-group { display: flex; flex-direction: column; flex: none; }
+.tab-group-label { padding: 8px 10px 0; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+.tab-group-buttons { display: flex; gap: 0 4px; }
 .tabs-arrow { position: absolute; top: 0; bottom: 0; z-index: 2; width: 32px; border: 0; padding: 0; cursor: pointer;
   font: inherit; font-size: 1.4rem; line-height: 1; color: var(--ink); }
 .tabs-arrow.left { left: 0; background: linear-gradient(to right, var(--surface) 60%, transparent); }
@@ -86,7 +89,7 @@ p { margin: 0 0 8px; }
 .tabs::-webkit-scrollbar { display: none; }
 .tabs button {
   background: none; border: 0; border-bottom: 2px solid transparent; color: var(--muted);
-  padding: 10px 10px 11px; font: inherit; font-size: 0.9rem; white-space: nowrap; cursor: pointer;
+  padding: 4px 10px 9px; font: inherit; font-size: 0.9rem; white-space: nowrap; cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
 .tabs button:hover { color: var(--ink); }

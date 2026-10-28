@@ -521,8 +521,6 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 How marketing turns website visits into demo requests, meetings and deals. The funnel has 6 steps. Google Analytics counts visits, demo page views and demo form fills. HubSpot counts new contacts, meetings and deals. A contact is someone who first filled in the demo form. Meetings and deals count only after sign-up, never with existing customers. A later step can be bigger than the step before because the 2 tools count differently. For Google search, every step ends on Search Console's last day, and the first 2 columns are Search Console. "All channels" visits match the Website visits tab.
 
 {listing('customer_journey')}
-{listing('deals_one_line_each')}
-{listing('google_ads')}
 
 ## Website visits tab
 
@@ -534,8 +532,19 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 Demo requests are form fills on /demo. Contact forms are on /contact. The Gartner offer is /gartner-symposium/free-modernization. Event sign-ups are /events/ pages, /gartner-symposium and /github-universe-happy-hour. Everything else is other forms. Before October, the old site sent some homepage and contact form fills only to Google, so earlier months look low. Luma event sign-ups don't show here.
 
 {listing('leads')}
-{listing('hubspot_event_lists')}
+
+## Events tab
+
+Each webinar, roundtable and event since 1 Apr, and the HubSpot sign-up lists, each on its own.
+
 {listing('events_one_row_each')}
+{listing('hubspot_event_lists')}
+
+## Campaigns tab
+
+Each campaign's link-tag visits and HubSpot emails and deals (the campaigns file below the Look up section), and Google Ads by campaign.
+
+{listing('google_ads')}
 
 ## Pages, campaigns and assets (the Look up tab)
 
@@ -589,6 +598,7 @@ We never add Shorts and long videos together.
 Marketing pipeline: open and won deals since 1 Apr from marketing Lead Sources. Marketing sourced and influenced fill in once the Salesforce campaign fields reach HubSpot deals.
 
 {listing('marketing_pipeline')}
+{listing('deals_one_line_each')}
 
 ## Team metrics tab
 
