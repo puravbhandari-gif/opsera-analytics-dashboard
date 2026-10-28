@@ -522,7 +522,6 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 
 {listing('customer_journey')}
 {listing('deals_one_line_each')}
-{listing('marketing_pipeline')}
 {listing('google_ads')}
 
 ## Website visits tab
@@ -584,6 +583,12 @@ Company page means links tagged utm_campaign=brand-page. Kumar means utm_source=
 We never add Shorts and long videos together.
 
 {listing('youtube')}
+
+## Pipeline tab
+
+Marketing pipeline: open and won deals since 1 Apr from marketing Lead Sources. Marketing sourced and influenced fill in once the Salesforce campaign fields reach HubSpot deals.
+
+{listing('marketing_pipeline')}
 
 ## Team metrics tab
 

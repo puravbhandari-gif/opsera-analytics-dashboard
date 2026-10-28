@@ -118,6 +118,7 @@ function table(el, { columns, rows, search, sortKey, sortDir = -1, pageSize = 25
 const charts = [];
 const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
 Chart.defaults.font.family = '"DM Sans", ui-sans-serif, system-ui, sans-serif';
+Chart.defaults.font.size = 10.8;   // 10% smaller than Chart.js's 12, like the rest of the page
 
 function chart(id, build) {
   charts.push({ id, build });
@@ -133,7 +134,7 @@ function draw(c) {
     interaction: { mode: "index", intersect: false },
     plugins: {
       legend: { display: cfg.data.datasets.length > 1, position: "top", align: "start",
-        labels: { color: t.ink, boxWidth: 12, boxHeight: 12, useBorderRadius: true, borderRadius: 2, font: { size: 12 } } },
+        labels: { color: t.ink, boxWidth: 12, boxHeight: 12, useBorderRadius: true, borderRadius: 2, font: { size: 10.8 } } },
       tooltip: { backgroundColor: t.surface, titleColor: t.ink, bodyColor: t.ink, borderColor: t.axis, borderWidth: 1, padding: 10,
         callbacks: cfg.tooltip || {} },
     },
@@ -224,7 +225,7 @@ const gtmMarkers = {
       ctx.fillStyle = o.color;
       ctx.beginPath(); ctx.moveTo(s.x, s.y - r); ctx.lineTo(s.x + r, s.y); ctx.lineTo(s.x, s.y + r); ctx.lineTo(s.x - r, s.y); ctx.closePath(); ctx.fill();
       if (s.items.length > 1) {
-        ctx.fillStyle = o.line; ctx.font = '600 10px "DM Sans", sans-serif'; ctx.textBaseline = "middle";
+        ctx.fillStyle = o.line; ctx.font = '600 9px "DM Sans", sans-serif'; ctx.textBaseline = "middle";
         ctx.fillText(String(s.items.length), s.x + r + 3, s.y);
       }
     }
@@ -2206,6 +2207,8 @@ function showTab(name) {
   view.tab = name; saveView();
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
+  const on = document.querySelector(`.tabs button[data-tab="${name}"]`);   // on phones, slide the row so the open tab shows
+  if (on && tabRow.scrollWidth > tabRow.clientWidth) { tabRow.scrollLeft = on.offsetLeft - (tabRow.clientWidth - on.offsetWidth) / 2; tabArrows(); }
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "lookup") openLookup();
@@ -2217,6 +2220,19 @@ function showTab(name) {
   // the footer views have no tab in the row, so start them at the top of the page
   if (!document.querySelector(`.tabs button[data-tab="${name}"]`)) window.scrollTo(0, 0);
 }
+// Phones scroll the tab row; the arrows show only when there are tabs out of sight on that side
+const tabRow = document.querySelector(".tabs");
+function tabArrows() {
+  const scrollable = tabRow.scrollWidth > tabRow.clientWidth + 1;
+  document.querySelector(".tabs-arrow.left").hidden = !scrollable || tabRow.scrollLeft <= 2;
+  document.querySelector(".tabs-arrow.right").hidden = !scrollable || tabRow.scrollLeft + tabRow.clientWidth >= tabRow.scrollWidth - 2;
+}
+document.querySelectorAll(".tabs-arrow").forEach((b) => b.addEventListener("click", () => {
+  tabRow.scrollBy({ left: (b.classList.contains("left") ? -1 : 1) * tabRow.clientWidth * 0.7, behavior: calm.matches ? "auto" : "smooth" });
+}));
+tabRow.addEventListener("scroll", tabArrows, { passive: true });
+addEventListener("resize", tabArrows);
+tabArrows();
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {
   const b = e.target.closest("button"); if (!b) return;
