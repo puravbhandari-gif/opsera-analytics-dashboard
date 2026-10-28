@@ -1662,16 +1662,45 @@ function renderTeam(t) {
   draw();
 }
 
+// ---------- To do: the list in TODO.md, shown as it is (the file is the only copy) ----------
+
+let todoLoad = null;
+function openTodo() {
+  if (!todoLoad) todoLoad = fetch("TODO.md", { cache: "no-cache" }).then(async (r) => {
+    if (!r.ok) throw new Error(`TODO.md (${r.status})`);
+    const text = await r.text();
+    let html = "", open = false;
+    const close = () => { if (open) { html += "</ul>"; open = false; } };
+    for (const line of text.split("\n")) {
+      const head = line.match(/^##\s+(.+)/), item = line.match(/^- \[( |x|X)\]\s+(.+)/);
+      if (head) { close(); html += `<h3>${esc(head[1])}</h3>`; }
+      else if (item) {
+        if (!open) { html += `<ul class="todo">`; open = true; }
+        const done = item[1].toLowerCase() === "x";
+        html += `<li class="${done ? "done" : ""}">${done ? "Done: " : ""}${esc(item[2])}</li>`;
+      }
+    }
+    close();
+    $("todo").innerHTML = html || `<p class="muted">Nothing on the list.</p>`;
+    const items = (text.match(/^- \[[ xX]\]/gm) || []).length, done = (text.match(/^- \[[xX]\]/gm) || []).length;
+    $("todo-source").textContent = `Source: TODO.md in the dashboard's repo. ${num(items - done)} to do, ${num(done)} done.`;
+  }).catch((err) => { $("todo").innerHTML = `<p class="error">Couldn't load the list: ${esc(err.message)}</p>`; });
+  return todoLoad;
+}
+
 // ---------- tabs and theme ----------
 
 function showTab(name) {
-  if (!$(`tab-${name}`)) name = "journey";   // the dashboard opens on the Customer journey
+  if (!$(`tab-${name}`)) name = "team";   // the dashboard opens on Team metrics, the first tab (agreed 28 Oct 2026)
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "lookup") openLookup();
   if (name === "team") openTeam();
+  if (name === "todo") openTodo();
+  // the footer views have no tab in the row, so start them at the top of the page
+  if (!document.querySelector(`.tabs button[data-tab="${name}"]`)) window.scrollTo(0, 0);
 }
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {

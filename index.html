@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=21">
+<link rel="stylesheet" href="styles.css?v=22">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -38,6 +38,7 @@
     </div>
   </div>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+    <button role="tab" data-tab="team">Team metrics</button>
     <button role="tab" data-tab="journey">Customer journey</button>
     <button role="tab" data-tab="search">Google search</button>
     <button role="tab" data-tab="visits">Website visits</button>
@@ -46,10 +47,7 @@
     <button role="tab" data-tab="linkedin">LinkedIn brand</button>
     <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
     <button role="tab" data-tab="youtube">YouTube</button>
-    <button role="tab" data-tab="kahoots">Before: Kahoots</button>
-    <button role="tab" data-tab="infrasity">Before: Infrasity</button>
     <button role="tab" data-tab="lookup">Look up</button>
-    <button role="tab" data-tab="team">Team metrics</button>
   </nav>
 </header>
 
@@ -716,14 +714,26 @@
     </details>
   </section>
 
+  <section id="tab-todo" class="tab" role="tabpanel" hidden>
+    <h2>To do</h2>
+    <p class="lead">Next steps for the website, marketing and this dashboard.</p>
+    <div id="todo"><p class="muted">Loading...</p></div>
+    <p class="source" id="todo-source"></p>
+  </section>
+
   <p class="error" id="error" hidden></p>
 </main>
 
 <footer>
+  <nav class="footer-links" aria-label="More pages">
+    <a href="#kahoots">Before: Kahoots</a>
+    <a href="#infrasity">Before: Infrasity</a>
+    <a href="#todo">To do</a>
+  </nav>
   <p class="muted">Google, YouTube and HubSpot numbers update every Monday morning, India time. Google Analytics means the opsera.ai 2026 property.</p>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=50"></script>
+<script src="app.js?v=52"></script>
 </body>
 </html>

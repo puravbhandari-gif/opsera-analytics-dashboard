@@ -205,3 +205,13 @@ details.more > summary:hover { color: var(--ink); }
 .goal-bar { height: 6px; background: var(--sunk); border-radius: 999px; margin: 10px 0 4px; overflow: hidden; }
 .goal-bar span { display: block; height: 100%; background: var(--s1); border-radius: 999px; animation: grow 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; transform-origin: left; }
 .person-name { margin: 28px 0 0; }
+
+/* Footer links to the views kept out of the tab row */
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 12px; padding-top: 16px; border-top: 1px solid var(--border); }
+.footer-links a { font-size: 0.9rem; }
+
+/* To do, read from TODO.md */
+.todo { list-style: none; padding: 0; margin: 8px 0 20px; }
+.todo li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin: 8px 0; padding: 14px 18px; box-shadow: var(--shadow); }
+.todo li.done { color: var(--muted); text-decoration: line-through; }
+#todo h3 { margin-top: 24px; }
