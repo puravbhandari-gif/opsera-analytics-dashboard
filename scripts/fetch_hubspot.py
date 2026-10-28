@@ -66,7 +66,8 @@ AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perple
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
 CONTACT_PROPS = ["createdate", "hs_object_source", "hs_analytics_source", "hs_analytics_source_data_1", "hs_analytics_source_data_2",
                  "hs_analytics_first_referrer", "utm_source", "utm_source_fc", "utm_source_rc", "luma_referrer",
-                 "first_conversion_event_name", "recent_conversion_event_name", "hs_analytics_first_url"]
+                 "first_conversion_event_name", "recent_conversion_event_name", "hs_analytics_first_url",
+                 "utm_campaign_fc", "hs_analytics_first_touch_converting_campaign"]
 
 # How each deal came in (agreed 27 Oct 2026): one line per marketing deal, open or won, with no company,
 # person or job title. HubSpot has no product field, so the product comes from words in the deal name;
@@ -157,7 +158,7 @@ def marketing_emails(s, since):
             if EMAIL_ADDRESS.search(name) or EMAIL_ADDRESS.search(subject):
                 continue   # never publish an email address
             delivered = counters.get("delivered") or counters.get("sent")
-            rows.append({"sent_on": sent_on, "name": name, "subject": subject, "kind": e.get("type") or "",
+            rows.append({"sent_on": sent_on, "name": name, "subject": subject, "kind": e.get("type") or "", "campaign_id": e.get("campaign") or "",
                          "sends": counters.get("sent", 0), "opens": counters.get("open", 0), "clicks": counters.get("click", 0),
                          "open_rate_pct": round(counters.get("open", 0) / delivered * 100, 1) if delivered else None,
                          "click_rate_pct": round(counters.get("click", 0) / delivered * 100, 1) if delivered else None})
@@ -190,7 +191,7 @@ def word_index(text):
 def public_emails(found):
     if found["error"]:
         return found
-    rows = [{k: v for k, v in e.items() if k != "name"} | {"words": word_index(f"{e['name']} {e['subject']}")}
+    rows = [{k: v for k, v in e.items() if k not in ("name", "campaign_id")} | {"words": word_index(f"{e['name']} {e['subject']}")}
             for e in found["rows"] if not TARGET_ACCOUNTS.search(e["name"]) and not e["subject"].startswith("Built for ")]
     return {"error": None, "left_out_target_accounts": len(found["rows"]) - len(rows), "rows": rows}
 
@@ -355,7 +356,8 @@ def main():
         contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p),
                              "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)",
                              "tool": ai_tool(p), "came_from": first_came_from(p), "first_page": first_page(p.get("hs_analytics_first_url")),
-                             "first_form_short": (p.get("first_conversion_event_name") or "Not recorded").split(" — ")[0].split(" - Opsera")[0].strip()}
+                             "first_form_short": (p.get("first_conversion_event_name") or "Not recorded").split(" — ")[0].split(" - Opsera")[0].strip(),
+                             "campaign": p.get("utm_campaign_fc") or "", "campaign_id": p.get("hs_analytics_first_touch_converting_campaign") or ""}
 
     # Event lists, each its own line. Luma-imported guests also count as marketing contacts (line "luma").
     found = {l["name"]: l for l in call(s, "POST", "/crm/v3/lists/search", json={"query": "", "count": 500}).get("lists", [])}
@@ -418,7 +420,8 @@ def main():
                                   "amount": float(p.get("amount") or 0), "pipeline": pipeline, "stage": stage,
                                   "won": closed and prob >= 1, "lost": closed and prob == 0,
                                   "came_from": first["came_from"], "first_page": first["first_page"], "first_form": first["first_form_short"],
-                                  "product": products_in(p.get("dealname"))})   # the deal name itself is never kept
+                                  "product": products_in(p.get("dealname")),   # the deal name itself is never kept
+                                  "campaign": first.get("campaign", ""), "campaign_id": first.get("campaign_id", "")})
 
     # Meetings linked to a marketing contact, dated by when they take place. Each meeting is put in one line:
     # after sign-up (counted), upcoming, existing customer, or before sign-up. Only the first is a meeting booked.
@@ -510,6 +513,17 @@ def main():
     else:
         campaigns = f"{r.status_code}: {r.text[:200]}"
 
+    # Campaigns tab: each email's HubSpot campaign, and the campaign each marketing deal's person first came in on
+    # (their first link tag in HubSpot, else HubSpot's first-touch campaign). Target-account campaigns are left out.
+    campaign_names = {c["id"]: (c.get("properties") or {}).get("hs_name") or "" for c in all_campaigns}
+    public = lambda n: n if n and not TARGET_ACCOUNTS.search(n) else ""
+    emails = marketing_emails(s, START_DATE)
+    for e in emails["rows"]:
+        e["campaign"] = public(campaign_names.get(e["campaign_id"], ""))
+    campaign_deals = [{"date": d["date"], "campaign": public(d["campaign"] or campaign_names.get(d["campaign_id"], "")),
+                       "status": "Won" if d["won"] else "Open", "amount": round(d["amount"])}
+                      for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]]
+
     daily = collections.Counter((c["date"], c["line"], c["channel"], c["demo"]) for c in contacts.values())
     out = {
         "source": "HubSpot", "start_date": START_DATE, "end_date": end,
@@ -533,7 +547,8 @@ def main():
         "event_rows": event_rows,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
-        "emails": public_emails(marketing_emails(s, START_DATE)),
+        "emails": public_emails(emails),
+        "campaign_deals": campaign_deals,
         "lists": public_lists(all_lists(s), START_DATE),
     }
     OUT.write_text(json.dumps(out, indent=1))
@@ -551,6 +566,8 @@ def main():
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
+    print("  campaign deals:", [(d["date"], d["campaign"], d["status"]) for d in campaign_deals])
+    print("  emails with a campaign:", sum(1 for e in emails["rows"] if e.get("campaign")), "of", len(emails["rows"]))
     print("  campaigns:", campaigns)
     print("  first forms of form contacts:", out["first_forms"][:12])
     print(f"  demo-form contacts: {sum(1 for c in contacts.values() if c['demo'])}")
