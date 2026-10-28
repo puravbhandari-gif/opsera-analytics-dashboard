@@ -45,4 +45,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Campaigns tab: visits, engaged visits, form fills, email sends, opens and clicks, and deals, 1 row per campaign.
 - [x] Content scorecard tab.
 - [x] Download button on every table.
-- [ ] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.
+- [x] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.

@@ -123,3 +123,12 @@ jobs:
       - id: deploy
         if: steps.newest.outputs.publish == 'true'
         uses: actions/deploy-pages@v4
+
+      # Optional, Monday runs only: once the page is live, post the top numbers to #core-marketing-team.
+      # If SLACK_WEBHOOK_URL is missing, or a number doesn't add up, nothing is posted and the page is unaffected.
+      - name: Post the top numbers to Slack (optional)
+        if: github.event_name == 'schedule' && steps.newest.outputs.publish == 'true'
+        continue-on-error: true
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: python scripts/post_slack.py
