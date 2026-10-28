@@ -236,3 +236,6 @@ details.more > summary:hover { color: var(--ink); }
 
 /* Google rankings */
 .panel h3.sub-title { margin-top: 24px; }
+
+/* All pipeline: a card waiting on data shows words, not a number */
+.card .value.wait { font-size: 17px; line-height: 1.35; font-weight: 500; color: var(--muted); }

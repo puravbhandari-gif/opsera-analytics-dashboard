@@ -398,6 +398,16 @@ def main():
                                         "email_clicks", "deals_hubspot", "deal_amount_usd"],
               [[k, *x] for k, x in sorted(camp.items(), key=lambda kv: -kv[1][0]) if x[0] or x[2] or x[4] or x[7]],
               f"Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to {ga_last}), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out")
+    ap = hub.get("all_pipeline")
+    if ap and ap.get("rows"):
+        fq = lambda d: f"FY{(int(d[:4]) + (1 if int(d[5:7]) >= 2 else 0)) % 100} Q{((int(d[5:7]) + 10) % 12) // 3 + 1}"
+        ready = all(ap["salesforce_fields"].values())
+        wait = lambda v: v if ready else "Not in HubSpot yet"
+        write("marketing_pipeline_deals", ["created_on", "fiscal_quarter", "status", "stage", "pipeline", "product", "lead_source", "amount_usd",
+                                     "primary_campaign_source", "attrib_first_campaign", "attrib_last_campaign", "counts_as"],
+              [[r["date"], fq(r["date"]), r["status"], r["stage"], r["pipeline"], r["product"], r["lead_source"], r["amount"],
+                wait(r["primary_campaign"] or ""), wait(r["first_campaign"] or ""), wait(r["last_campaign"] or ""), wait(r["bucket"] or "")] for r in ap["rows"]],
+              "Open and won marketing deals created since 1 Apr 2026 (a marketing Lead Source, or marketing sourced or influenced once the Salesforce campaign fields arrive), 1 line each, with no company or person. Existing Customer, AE and SDR outreach, partners, vendors, bought lists, Direct and blank Lead Sources are left out. The 3 Salesforce campaign fields fill in once they reach HubSpot deals. Fiscal quarters: FY27 Q2 is May to July 2026. Source: HubSpot deals, synced from Salesforce")
     if hub.get("event_rows"):
         fills = collections.Counter()
         for line in leads["lines"].values():
@@ -512,6 +522,7 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 
 {listing('customer_journey')}
 {listing('deals_one_line_each')}
+{listing('marketing_pipeline')}
 {listing('google_ads')}
 
 ## Website visits tab

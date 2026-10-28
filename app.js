@@ -1952,6 +1952,86 @@ function renderCampaigns(d, hub) {
   draw();
 }
 
+// ---------- Marketing pipeline (Customer journey): open and won marketing deals since 1 Apr, from HubSpot ----------
+// The Salesforce campaign fields are found by name on each Monday pull; until they reach HubSpot the cards and the
+// campaign table say so instead of showing a number. Deal, company and person names are never in the data.
+
+const fiscalQuarter = (d) => {   // Opsera's fiscal year starts in February: FY27 Q2 is May to July 2026
+  const m = Number(d.slice(5, 7)), y = Number(d.slice(0, 4)), q = Math.floor(((m + 10) % 12) / 3) + 1, fy = (m >= 2 ? y + 1 : y) % 100;
+  const first = ((q - 1) * 3 + 1) % 12 + 1, names = [0, 1, 2].map((i) => MONTHS[(first - 1 + i) % 12]);
+  return { key: `FY${fy}-Q${q}`, label: `FY${fy} Q${q} (${names[0]} to ${names[2]})` };
+};
+function renderPipeline(hub) {
+  const p = hub.all_pipeline;
+  if (!p || !p.rows) { $("pipe-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; return; }
+  // only marketing: a marketing Lead Source, or marketing sourced or influenced once the Salesforce fields arrive (the file holds only these)
+  const MARKETING_LEAD = /event|webinar|contact us|demo request|website|marketing|paid|organic|social|content|seo/i, SALES = /sdr|\bae\b|lantern/i;
+  const marketingLead = (r) => MARKETING_LEAD.test(r.lead_source) && !SALES.test(r.lead_source);
+  const rows = p.rows.filter((r) => marketingLead(r) || r.bucket === "Marketing sourced" || r.bucket === "Marketing influenced"), ready = Object.values(p.salesforce_fields).every(Boolean);
+  const pulledOn = (hub.all_pipeline_pulled_at || hub.pulled_at).slice(0, 10), pulled = dayYear(pulledOn);
+  const when = range(hub.start_date, pulledOn);
+  const total = (list) => list.reduce((t, r) => t + r.amount, 0);
+  const BUCKETS = ["Marketing sourced", "Marketing influenced"];
+  $("pipe-cards").innerHTML = BUCKETS.map((b) => {
+    if (!ready) return `<div class="card"><div class="label">${b}</div><div class="value wait">Waiting on Salesforce campaign fields</div><div class="sub">Count and value fill in once the fields reach HubSpot deals</div></div>`;
+    const list = rows.filter((r) => r.bucket === b);
+    return card(b, `${num(list.length)} deals`, `${money(total(list))} pipeline`);
+  }).join("");
+  $("pipe-cards-source").textContent = `Source: HubSpot deals (synced from Salesforce), created ${when}, updated ${pulled}.`;
+
+  let group = "month";
+  const periodOf = (d) => (group === "month" ? { key: d.slice(0, 7), label: month(d.slice(0, 7)) } : fiscalQuarter(d));
+  const drawLead = () => {
+    const by = {};
+    for (const r of rows.filter(marketingLead)) {
+      const per = periodOf(r.date), k = `${per.key}|${r.lead_source}|${r.product}`;
+      const x = by[k] || (by[k] = { periodKey: per.key, period: per.label, lead: r.lead_source, product: r.product, deals: 0, won: 0, value: 0 });
+      x.deals += 1; x.won += r.status === "Won" ? 1 : 0; x.value += r.amount;
+    }
+    table($("pipe-lead"), { rows: Object.values(by), search: "lead sources or products", sortKey: "periodKey", columns: [
+      { key: "periodKey", label: group === "month" ? "Month" : "Quarter", fmt: (v, r) => esc(r.period), csv: (r) => r.period },
+      { key: "lead", label: "Lead Source", search: true },
+      { key: "product", label: "Product", search: true },
+      { key: "deals", label: "Deals", num: true, fmt: num },
+      { key: "won", label: "Won", num: true, fmt: num },
+      { key: "value", label: "Value", num: true, fmt: money },
+    ] });
+  };
+  $("pipe-period").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    group = b.dataset.g;
+    $("pipe-period").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    drawLead();
+  });
+  drawLead();
+  $("pipe-lead-source").textContent = `Source: HubSpot's Lead Source field on each deal, created ${when}. Products come from words in the deal name.`;
+  $("pipe-lead-note").textContent = "Only marketing Lead Sources show, such as Events, Contact Us / Demo Request and Paid Social. Existing Customer, AE and SDR outreach, partners, vendors, bought lists, Direct and deals with no Lead Source are left out.";
+
+  const WAIT = "Not in HubSpot yet";
+  let camp;
+  if (!ready) {
+    camp = [{ bucket: WAIT, primary: WAIT, first: WAIT, last: WAIT, deals: null, value: null }];
+  } else {
+    const by = {};
+    for (const r of rows.filter((x) => x.bucket !== "Sales only")) {
+      const k = [r.bucket, r.primary_campaign, r.first_campaign, r.last_campaign].join("|");
+      const x = by[k] || (by[k] = { bucket: r.bucket, primary: r.primary_campaign || "None", first: r.first_campaign || "None", last: r.last_campaign || "None", deals: 0, value: 0 });
+      x.deals += 1; x.value += r.amount;
+    }
+    camp = Object.values(by);
+  }
+  table($("pipe-campaigns"), { rows: camp, search: ready ? "campaigns" : undefined, sortKey: "value", columns: [
+    { key: "bucket", label: "Counts as", search: true },
+    { key: "primary", label: "Primary Campaign Source", search: true },
+    { key: "first", label: "Attrib First Campaign", search: true },
+    { key: "last", label: "Attrib Last Campaign", search: true },
+    { key: "deals", label: "Deals", num: true, fmt: (v) => (v == null ? "-" : num(v)) },
+    { key: "value", label: "Value", num: true, fmt: (v) => (v == null ? "-" : money(v)) },
+  ] });
+  $("pipe-campaigns-source").textContent = ready ? `Source: Salesforce campaign fields on HubSpot deals, created ${when}.` :
+    `Source: HubSpot deals, checked ${pulled}. The Salesforce fields Primary Campaign Source, Attrib First Campaign and Attrib Last Campaign aren't on HubSpot deals yet. The Monday update looks for them each week and fills this in once they arrive.`;
+}
+
 function openContent() {
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
     .catch((err) => { $("content-status").textContent = `Couldn't load the content numbers: ${err.message}`; });
@@ -2189,6 +2269,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderAeo(ga, hub);
     renderLeadsHubspot(hub);
     renderEvents(hub, leads);
+    renderPipeline(hub);
     renderYouTube(yt, ga);
     renderKahoots(km, kq);
     renderInfrasity(inf);

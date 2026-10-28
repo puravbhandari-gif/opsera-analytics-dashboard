@@ -34,6 +34,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 - [ ] Influenced vs sourced pipeline, after syncing with David.
 - [ ] All pipeline: sourced, influenced and sales only.
+- [ ] Confirm with David: SDR outreach campaigns count as marketing or sales.
 - [ ] Decide the website visits goal: all visits or without robots.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.

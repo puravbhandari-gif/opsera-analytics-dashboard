@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=26">
+<link rel="stylesheet" href="styles.css?v=27">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -313,6 +313,31 @@
       <p class="source" id="journey-ads-source"></p>
       <p class="note-inline" id="journey-ads-brand" hidden>Brand search ("Brand - Search - M+D"): visits and demo requests from 16 Jun are too low because of a tracking problem.</p>
       <p class="note">Ad clicks come from Google Ads and visits from Google Analytics, so visits are lower: some people leave before the page loads or block tracking. Cost per demo request is a campaign's spend divided by its demo requests. The Paid ads funnel above also counts LinkedIn ads and other paid visits, so its numbers are higher.</p>
+    </div>
+
+    <h3 class="section-title">Marketing pipeline</h3>
+    <p class="muted">Open and won deals created since 1 Apr that came from marketing. Closed lost deals are left out.</p>
+    <div class="cards" id="pipe-cards"></div>
+    <p class="source" id="pipe-cards-source"></p>
+    <div class="panel">
+      <div class="panel-head">
+        <h3>Deals by Lead Source</h3>
+        <div class="seg" id="pipe-period" role="group" aria-label="Group by month or quarter">
+          <button data-g="month" class="on">By month</button>
+          <button data-g="quarter">By quarter</button>
+        </div>
+      </div>
+      <p class="muted">From HubSpot's Lead Source field.</p>
+      <div id="pipe-lead"></div>
+      <p class="source" id="pipe-lead-source"></p>
+      <p class="note" id="pipe-lead-note"></p>
+    </div>
+    <div class="panel">
+      <h3>Campaigns behind the pipeline</h3>
+      <p class="muted">From Salesforce's campaign fields on each deal, once they reach HubSpot.</p>
+      <div id="pipe-campaigns"></div>
+      <p class="source" id="pipe-campaigns-source"></p>
+      <p class="note">Marketing sourced: the Primary Campaign Source is a marketing campaign. Marketing influenced: not sourced, but the Attrib First or Attrib Last Campaign is a marketing campaign. SDR and AE outreach count as sales for now. Quarters follow Opsera's fiscal year, so Q2 is May to July.</p>
     </div>
 
     <details class="more">
@@ -815,6 +840,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=67"></script>
+<script src="app.js?v=70"></script>
 </body>
 </html>

@@ -307,6 +307,11 @@ def add_months(d, n):
 SALESFORCE_FIELDS = {"primary": re.compile(r"primary\s*campaign\s*source", re.I),
                      "first": re.compile(r"attrib\w*\s*first\s*campaign", re.I),
                      "last": re.compile(r"attrib\w*\s*last\s*campaign", re.I)}
+# Marketing pipeline (agreed 28 Oct 2026): only marketing deals are kept, so the public file never holds the whole
+# pipeline. A deal is kept when its Lead Source is a marketing one, or, once the Salesforce fields arrive, when it
+# counts as marketing sourced or influenced. Existing Customer, AE and SDR outreach, partners, vendors, bought lists,
+# Direct and blank Lead Sources aren't marketing.
+MARKETING_LEAD_SOURCES = re.compile(r"event|webinar|contact us|demo request|website|marketing|paid|organic|social|content|seo", re.I)
 SALES_MOTIONS = re.compile(r"sdr|\bae\b|lantern", re.I)   # SDR-Meeting-Set, DG-SDR Outreach (Cold), AE Prospecting, AE Internal Referral, DG-2025-Lantern_Records
 
 
@@ -341,9 +346,12 @@ def all_pipeline(s):
         if have_fields:
             bucket = ("Marketing sourced" if marketing(camp["primary"]) else
                       "Marketing influenced" if marketing(camp["first"]) or marketing(camp["last"]) else "Sales only")
+        lead_source = public(lead_labels.get(p.get("lead_source"), p.get("lead_source"))) or "Not set"
+        if not (MARKETING_LEAD_SOURCES.search(lead_source) and not SALES_MOTIONS.search(lead_source)) and bucket not in ("Marketing sourced", "Marketing influenced"):
+            continue
         rows.append({"date": pacific_day(p["createdate"]), "status": "Won" if closed and prob >= 1 else "Open", "stage": stage, "pipeline": pipeline,
                      "amount": round(float(p.get("amount") or 0)), "product": products_in(p.get("dealname")),
-                     "lead_source": public(lead_labels.get(p.get("lead_source"), p.get("lead_source"))) or "Not set",
+                     "lead_source": lead_source,
                      "primary_campaign": camp["primary"], "first_campaign": camp["first"], "last_campaign": camp["last"], "bucket": bucket})
     return {"salesforce_fields": {k: bool(f) for k, f in fields.items()}, "rows": sorted(rows, key=lambda r: r["date"])}
 
@@ -621,7 +629,7 @@ def main():
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
-    print("  all pipeline:", len(pipeline["rows"]), "open and won deals; Salesforce fields found:", pipeline["salesforce_fields"],
+    print("  marketing pipeline:", len(pipeline["rows"]), "open and won marketing deals; Salesforce fields found:", pipeline["salesforce_fields"],
           "| lead sources:", dict(collections.Counter(r["lead_source"] for r in pipeline["rows"])))
     print("  campaign deals:", [(d["date"], d["campaign"], d["status"]) for d in campaign_deals])
     print("  emails with a campaign:", sum(1 for e in emails["rows"] if e.get("campaign")), "of", len(emails["rows"]))
