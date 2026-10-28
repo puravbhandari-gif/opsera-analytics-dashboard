@@ -147,9 +147,11 @@ def main():
 
         # Website visits
         email = [{"date": r["date"], "v": r["sessions"]} for r in ga["channel_daily"] if r["sessionDefaultChannelGroup"] == "Email"]
-        write(f"website_visits_by_{kind}", PERIOD_HEAD + ["visits", "engaged_visits", "visits_from_email"],
-              [period_cols(p) + [total(ga["daily"], "sessions", p["start"], p["end"]), total(ga["daily"], "engagedSessions", p["start"], p["end"]),
-                                 total(email, "v", p["start"], p["end"])] for p in ps],
+        robots = ga.get("email_robots_daily", [])
+        write(f"website_visits_by_{kind}", PERIOD_HEAD + ["visits", "visits_without_email_robots", "engaged_visits", "visits_from_email"],
+              [period_cols(p) + [total(ga["daily"], "sessions", p["start"], p["end"]),
+                                 total(ga["daily"], "sessions", p["start"], p["end"]) - total(robots, "robots", p["start"], p["end"]),
+                                 total(ga["daily"], "engagedSessions", p["start"], p["end"]), total(email, "v", p["start"], p["end"])] for p in ps],
               f"Website visits tab, by {kind}. Source: Google Analytics")
         groups = sorted({r["sessionDefaultChannelGroup"] for r in ga["channel_daily"]})
         write(f"visit_sources_by_{kind}", PERIOD_HEAD + ["came_from", "visits", "engaged_visits"],
@@ -367,6 +369,9 @@ def main():
           [[p["name"], sec["title"], m["label"], m["baseline"], "" if m["so_far"] is None else m["so_far"], m["so_far_start"], m["so_far_end"] or "",
             m["goal"] if m["goal"] else "To set", "" if m["goal_share_pct"] is None else m["goal_share_pct"], m["source"]]
            for p in team["people"] for sec in p["sections"] for m in sec["metrics"]]
+          + [[p["name"], sec["title"], "Website visits, without email robots", m["without_email_robots"]["baseline"],
+              "" if m["without_email_robots"]["so_far"] is None else m["without_email_robots"]["so_far"], m["so_far_start"], m["so_far_end"] or "",
+              "", "", m["source"]] for p in team["people"] for sec in p["sections"] for m in sec["metrics"] if m.get("without_email_robots")]
           + [[p["name"], "", "Metrics coming", "", "", "", "", "", "", ""] for p in team["people"] if not p["sections"]],
           f"Team metrics tab: each person's metrics, with the baseline ({team['baseline']['label']}), this month so far and the goal")
     write_guide(ga_last, gsc_last, hub, li, kp, yt, est)
@@ -403,6 +408,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - Weeks run Monday to Sunday. Months are calendar months. `period_not_finished` is "yes" for a week or month still under way.
 - Google Analytics and HubSpot dates follow US Pacific time. LinkedIn exports use UTC.
 - Never add numbers from different sources together (for example Google Analytics visits and Search Console clicks). Each file and column says its source.
+- "Without email robots" leaves out visits by email link checkers: visits with no engagement landing on email subscription pages (/hs/preferences-center), from Cupertino, Palo Alto, Garner or Sunnyvale, or from Safari on a Mac desktop. All visits stays as Google Analytics counts it.
 - "Visits" are Google Analytics sessions. "Engaged visits" are visits where someone stayed 10+ seconds, saw 2+ pages or filled a form. They leave out most email robots.
 - Form fills count the HubSpot form event in Google Analytics. We leave out job application forms everywhere.
 - Asset downloads are form fills on pages under /resources/report/, /resources/white-papers/, /resources/ebooks/ or /resources/comparison-guides/. They're part of "other forms".

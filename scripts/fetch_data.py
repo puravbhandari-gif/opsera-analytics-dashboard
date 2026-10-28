@@ -254,6 +254,26 @@ EVENT_WORDS = ("flutter", "tokenomics", "gartner", "summit", "webinar", "event",
 PAID_GROUPS = {"Paid Search", "Paid Social", "Display", "Cross-network", "Paid Other", "Paid Video", "Paid Shopping"}
 
 
+# Email robots: link checkers that open every link in an email. Found on 8, 22 and 26 Oct 2026 (agreed 28 Oct 2026):
+# visits landing on the email subscription pages, from 4 Apple-area cities, or from Safari on a Mac desktop.
+# Only the visits in that group that weren't engaged count as robots, so engaged people stay in.
+ROBOT_PAGES = "/hs/preferences-center"
+ROBOT_CITIES = ["Cupertino", "Palo Alto", "Garner", "Sunnyvale"]
+
+
+def email_robots(s, end):
+    """Visits by day matching any robot sign, each visit once, with how many of them were engaged."""
+    exact = lambda field, value: {"filter": {"fieldName": field, "stringFilter": {"matchType": "EXACT", "value": value}}}
+    signs = {"orGroup": {"expressions": [
+        {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "BEGINS_WITH", "value": ROBOT_PAGES}}},
+        {"andGroup": {"expressions": [{"filter": {"fieldName": "city", "inListFilter": {"values": ROBOT_CITIES}}}, exact("country", "United States")]}},
+        {"andGroup": {"expressions": [exact("browser", "Safari"), exact("operatingSystem", "Macintosh"), exact("deviceCategory", "desktop")]}},
+    ]}}
+    rows = ga_report(s, end, ["date"], ["sessions", "engagedSessions"], flt=signs)
+    return [{"date": r["date"], "visits": r["sessions"], "engaged": r["engagedSessions"], "robots": r["sessions"] - r["engagedSessions"]}
+            for r in sorted(rows, key=lambda r: r["date"])]
+
+
 def journey_channels(group, source, campaign):
     out = {"all"}
     if group == "Organic Search" and source.lower() == "google":
@@ -449,6 +469,7 @@ def fetch_ga(s, end):
         "journey": journey(s, end),
         "ai": ai_visits(s, end),
         "google_search_visits": google_search_visits(s, end),
+        "email_robots_daily": email_robots(s, end),
     }, leads(form_rows)
 
 

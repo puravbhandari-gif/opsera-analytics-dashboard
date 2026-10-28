@@ -62,6 +62,7 @@ def metrics():
 def main():
     team = json.loads((ROOT / "team.json").read_text())
     known, ga_last = metrics()
+    ga = load("analytics.json")
     base = team["baseline"]
     months = []
     m = dt.date.fromisoformat(base["start"])
@@ -90,6 +91,14 @@ def main():
                              "so_far": so_far, "so_far_start": month_start, "so_far_end": last if last >= month_start else None,
                              "days_counted": int(last[8:]) if last >= month_start else 0,
                              "goal": goal, "goal_share_pct": round(so_far / goal * 100, 1) if goal and so_far is not None else None})
+                if item["metric"] == "website_visits":
+                    # the same visits without email robots: non-engaged visits with a robot sign (see fetch_data.py)
+                    robots = [(r["date"], r["robots"]) for r in ga.get("email_robots_daily", [])]
+                    if robots:
+                        free = lambda a, b: sum(v for d, v in daily if a <= d <= b) - sum(v for d, v in robots if a <= d <= b)
+                        rows[-1]["without_email_robots"] = {
+                            "baseline": round(free(base["start"], base["end"]) / len(months), 1),
+                            "so_far": free(month_start, last) if last >= month_start else None}
             sections.append({"title": sec["title"], "metrics": rows})
         out["people"].append({"name": person["name"], "sections": sections})
     (DATA / "team_metrics.json").write_text(json.dumps(out, indent=1))

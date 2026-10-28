@@ -48426,5 +48426,1255 @@
    "visits": 37,
    "engaged": 0
   }
+ ],
+ "email_robots_daily": [
+  {
+   "date": "2026-04-01",
+   "visits": 65,
+   "engaged": 24,
+   "robots": 41
+  },
+  {
+   "date": "2026-04-02",
+   "visits": 78,
+   "engaged": 19,
+   "robots": 59
+  },
+  {
+   "date": "2026-04-03",
+   "visits": 24,
+   "engaged": 10,
+   "robots": 14
+  },
+  {
+   "date": "2026-04-04",
+   "visits": 6,
+   "engaged": 1,
+   "robots": 5
+  },
+  {
+   "date": "2026-04-05",
+   "visits": 8,
+   "engaged": 4,
+   "robots": 4
+  },
+  {
+   "date": "2026-04-06",
+   "visits": 20,
+   "engaged": 10,
+   "robots": 10
+  },
+  {
+   "date": "2026-04-07",
+   "visits": 150,
+   "engaged": 20,
+   "robots": 130
+  },
+  {
+   "date": "2026-04-08",
+   "visits": 15,
+   "engaged": 8,
+   "robots": 7
+  },
+  {
+   "date": "2026-04-09",
+   "visits": 20,
+   "engaged": 8,
+   "robots": 12
+  },
+  {
+   "date": "2026-04-10",
+   "visits": 6,
+   "engaged": 3,
+   "robots": 3
+  },
+  {
+   "date": "2026-04-11",
+   "visits": 6,
+   "engaged": 4,
+   "robots": 2
+  },
+  {
+   "date": "2026-04-12",
+   "visits": 11,
+   "engaged": 6,
+   "robots": 5
+  },
+  {
+   "date": "2026-04-13",
+   "visits": 22,
+   "engaged": 9,
+   "robots": 13
+  },
+  {
+   "date": "2026-04-14",
+   "visits": 21,
+   "engaged": 9,
+   "robots": 12
+  },
+  {
+   "date": "2026-04-15",
+   "visits": 74,
+   "engaged": 40,
+   "robots": 34
+  },
+  {
+   "date": "2026-04-16",
+   "visits": 21,
+   "engaged": 13,
+   "robots": 8
+  },
+  {
+   "date": "2026-04-17",
+   "visits": 11,
+   "engaged": 6,
+   "robots": 5
+  },
+  {
+   "date": "2026-04-18",
+   "visits": 6,
+   "engaged": 2,
+   "robots": 4
+  },
+  {
+   "date": "2026-04-19",
+   "visits": 4,
+   "engaged": 3,
+   "robots": 1
+  },
+  {
+   "date": "2026-04-20",
+   "visits": 30,
+   "engaged": 11,
+   "robots": 19
+  },
+  {
+   "date": "2026-04-21",
+   "visits": 264,
+   "engaged": 82,
+   "robots": 182
+  },
+  {
+   "date": "2026-04-22",
+   "visits": 114,
+   "engaged": 46,
+   "robots": 68
+  },
+  {
+   "date": "2026-04-23",
+   "visits": 37,
+   "engaged": 14,
+   "robots": 23
+  },
+  {
+   "date": "2026-04-24",
+   "visits": 9,
+   "engaged": 6,
+   "robots": 3
+  },
+  {
+   "date": "2026-04-25",
+   "visits": 7,
+   "engaged": 5,
+   "robots": 2
+  },
+  {
+   "date": "2026-04-26",
+   "visits": 2,
+   "engaged": 1,
+   "robots": 1
+  },
+  {
+   "date": "2026-04-27",
+   "visits": 11,
+   "engaged": 9,
+   "robots": 2
+  },
+  {
+   "date": "2026-04-28",
+   "visits": 279,
+   "engaged": 157,
+   "robots": 122
+  },
+  {
+   "date": "2026-04-29",
+   "visits": 34,
+   "engaged": 16,
+   "robots": 18
+  },
+  {
+   "date": "2026-04-30",
+   "visits": 27,
+   "engaged": 12,
+   "robots": 15
+  },
+  {
+   "date": "2026-05-01",
+   "visits": 15,
+   "engaged": 6,
+   "robots": 9
+  },
+  {
+   "date": "2026-05-02",
+   "visits": 3,
+   "engaged": 1,
+   "robots": 2
+  },
+  {
+   "date": "2026-05-03",
+   "visits": 5,
+   "engaged": 2,
+   "robots": 3
+  },
+  {
+   "date": "2026-05-04",
+   "visits": 22,
+   "engaged": 10,
+   "robots": 12
+  },
+  {
+   "date": "2026-05-05",
+   "visits": 138,
+   "engaged": 64,
+   "robots": 74
+  },
+  {
+   "date": "2026-05-06",
+   "visits": 54,
+   "engaged": 21,
+   "robots": 33
+  },
+  {
+   "date": "2026-05-07",
+   "visits": 14,
+   "engaged": 9,
+   "robots": 5
+  },
+  {
+   "date": "2026-05-08",
+   "visits": 8,
+   "engaged": 5,
+   "robots": 3
+  },
+  {
+   "date": "2026-05-09",
+   "visits": 4,
+   "engaged": 2,
+   "robots": 2
+  },
+  {
+   "date": "2026-05-10",
+   "visits": 10,
+   "engaged": 5,
+   "robots": 5
+  },
+  {
+   "date": "2026-05-11",
+   "visits": 19,
+   "engaged": 9,
+   "robots": 10
+  },
+  {
+   "date": "2026-05-12",
+   "visits": 134,
+   "engaged": 27,
+   "robots": 107
+  },
+  {
+   "date": "2026-05-13",
+   "visits": 25,
+   "engaged": 7,
+   "robots": 18
+  },
+  {
+   "date": "2026-05-14",
+   "visits": 10,
+   "engaged": 4,
+   "robots": 6
+  },
+  {
+   "date": "2026-05-15",
+   "visits": 19,
+   "engaged": 9,
+   "robots": 10
+  },
+  {
+   "date": "2026-05-16",
+   "visits": 7,
+   "engaged": 5,
+   "robots": 2
+  },
+  {
+   "date": "2026-05-17",
+   "visits": 16,
+   "engaged": 6,
+   "robots": 10
+  },
+  {
+   "date": "2026-05-18",
+   "visits": 21,
+   "engaged": 9,
+   "robots": 12
+  },
+  {
+   "date": "2026-05-19",
+   "visits": 30,
+   "engaged": 13,
+   "robots": 17
+  },
+  {
+   "date": "2026-05-20",
+   "visits": 6,
+   "engaged": 6,
+   "robots": 0
+  },
+  {
+   "date": "2026-05-21",
+   "visits": 18,
+   "engaged": 10,
+   "robots": 8
+  },
+  {
+   "date": "2026-05-22",
+   "visits": 10,
+   "engaged": 4,
+   "robots": 6
+  },
+  {
+   "date": "2026-05-23",
+   "visits": 6,
+   "engaged": 1,
+   "robots": 5
+  },
+  {
+   "date": "2026-05-24",
+   "visits": 6,
+   "engaged": 3,
+   "robots": 3
+  },
+  {
+   "date": "2026-05-25",
+   "visits": 6,
+   "engaged": 2,
+   "robots": 4
+  },
+  {
+   "date": "2026-05-26",
+   "visits": 15,
+   "engaged": 10,
+   "robots": 5
+  },
+  {
+   "date": "2026-05-27",
+   "visits": 24,
+   "engaged": 13,
+   "robots": 11
+  },
+  {
+   "date": "2026-05-28",
+   "visits": 12,
+   "engaged": 7,
+   "robots": 5
+  },
+  {
+   "date": "2026-05-29",
+   "visits": 11,
+   "engaged": 4,
+   "robots": 7
+  },
+  {
+   "date": "2026-05-30",
+   "visits": 3,
+   "engaged": 1,
+   "robots": 2
+  },
+  {
+   "date": "2026-05-31",
+   "visits": 21,
+   "engaged": 7,
+   "robots": 14
+  },
+  {
+   "date": "2026-06-01",
+   "visits": 33,
+   "engaged": 7,
+   "robots": 26
+  },
+  {
+   "date": "2026-06-02",
+   "visits": 215,
+   "engaged": 68,
+   "robots": 147
+  },
+  {
+   "date": "2026-06-03",
+   "visits": 36,
+   "engaged": 18,
+   "robots": 18
+  },
+  {
+   "date": "2026-06-04",
+   "visits": 15,
+   "engaged": 8,
+   "robots": 7
+  },
+  {
+   "date": "2026-06-05",
+   "visits": 15,
+   "engaged": 6,
+   "robots": 9
+  },
+  {
+   "date": "2026-06-06",
+   "visits": 5,
+   "engaged": 3,
+   "robots": 2
+  },
+  {
+   "date": "2026-06-07",
+   "visits": 4,
+   "engaged": 3,
+   "robots": 1
+  },
+  {
+   "date": "2026-06-08",
+   "visits": 28,
+   "engaged": 20,
+   "robots": 8
+  },
+  {
+   "date": "2026-06-09",
+   "visits": 20,
+   "engaged": 9,
+   "robots": 11
+  },
+  {
+   "date": "2026-06-10",
+   "visits": 14,
+   "engaged": 10,
+   "robots": 4
+  },
+  {
+   "date": "2026-06-11",
+   "visits": 14,
+   "engaged": 4,
+   "robots": 10
+  },
+  {
+   "date": "2026-06-12",
+   "visits": 8,
+   "engaged": 5,
+   "robots": 3
+  },
+  {
+   "date": "2026-06-14",
+   "visits": 6,
+   "engaged": 4,
+   "robots": 2
+  },
+  {
+   "date": "2026-06-15",
+   "visits": 19,
+   "engaged": 12,
+   "robots": 7
+  },
+  {
+   "date": "2026-06-16",
+   "visits": 13,
+   "engaged": 6,
+   "robots": 7
+  },
+  {
+   "date": "2026-06-17",
+   "visits": 8,
+   "engaged": 6,
+   "robots": 2
+  },
+  {
+   "date": "2026-06-18",
+   "visits": 12,
+   "engaged": 7,
+   "robots": 5
+  },
+  {
+   "date": "2026-06-19",
+   "visits": 9,
+   "engaged": 4,
+   "robots": 5
+  },
+  {
+   "date": "2026-06-20",
+   "visits": 3,
+   "engaged": 1,
+   "robots": 2
+  },
+  {
+   "date": "2026-06-21",
+   "visits": 5,
+   "engaged": 3,
+   "robots": 2
+  },
+  {
+   "date": "2026-06-22",
+   "visits": 11,
+   "engaged": 6,
+   "robots": 5
+  },
+  {
+   "date": "2026-06-23",
+   "visits": 9,
+   "engaged": 6,
+   "robots": 3
+  },
+  {
+   "date": "2026-06-24",
+   "visits": 20,
+   "engaged": 9,
+   "robots": 11
+  },
+  {
+   "date": "2026-06-25",
+   "visits": 76,
+   "engaged": 35,
+   "robots": 41
+  },
+  {
+   "date": "2026-06-26",
+   "visits": 11,
+   "engaged": 4,
+   "robots": 7
+  },
+  {
+   "date": "2026-06-27",
+   "visits": 4,
+   "engaged": 3,
+   "robots": 1
+  },
+  {
+   "date": "2026-06-28",
+   "visits": 1,
+   "engaged": 0,
+   "robots": 1
+  },
+  {
+   "date": "2026-06-29",
+   "visits": 32,
+   "engaged": 18,
+   "robots": 14
+  },
+  {
+   "date": "2026-06-30",
+   "visits": 15,
+   "engaged": 10,
+   "robots": 5
+  },
+  {
+   "date": "2026-07-01",
+   "visits": 10,
+   "engaged": 3,
+   "robots": 7
+  },
+  {
+   "date": "2026-07-02",
+   "visits": 7,
+   "engaged": 5,
+   "robots": 2
+  },
+  {
+   "date": "2026-07-03",
+   "visits": 4,
+   "engaged": 1,
+   "robots": 3
+  },
+  {
+   "date": "2026-07-04",
+   "visits": 2,
+   "engaged": 0,
+   "robots": 2
+  },
+  {
+   "date": "2026-07-05",
+   "visits": 7,
+   "engaged": 4,
+   "robots": 3
+  },
+  {
+   "date": "2026-07-06",
+   "visits": 11,
+   "engaged": 8,
+   "robots": 3
+  },
+  {
+   "date": "2026-07-07",
+   "visits": 16,
+   "engaged": 9,
+   "robots": 7
+  },
+  {
+   "date": "2026-07-08",
+   "visits": 16,
+   "engaged": 4,
+   "robots": 12
+  },
+  {
+   "date": "2026-07-09",
+   "visits": 21,
+   "engaged": 9,
+   "robots": 12
+  },
+  {
+   "date": "2026-07-10",
+   "visits": 17,
+   "engaged": 9,
+   "robots": 8
+  },
+  {
+   "date": "2026-07-11",
+   "visits": 3,
+   "engaged": 1,
+   "robots": 2
+  },
+  {
+   "date": "2026-07-12",
+   "visits": 1,
+   "engaged": 1,
+   "robots": 0
+  },
+  {
+   "date": "2026-07-13",
+   "visits": 22,
+   "engaged": 14,
+   "robots": 8
+  },
+  {
+   "date": "2026-07-14",
+   "visits": 16,
+   "engaged": 8,
+   "robots": 8
+  },
+  {
+   "date": "2026-07-15",
+   "visits": 12,
+   "engaged": 9,
+   "robots": 3
+  },
+  {
+   "date": "2026-07-16",
+   "visits": 23,
+   "engaged": 13,
+   "robots": 10
+  },
+  {
+   "date": "2026-07-17",
+   "visits": 8,
+   "engaged": 3,
+   "robots": 5
+  },
+  {
+   "date": "2026-07-18",
+   "visits": 2,
+   "engaged": 0,
+   "robots": 2
+  },
+  {
+   "date": "2026-07-19",
+   "visits": 4,
+   "engaged": 2,
+   "robots": 2
+  },
+  {
+   "date": "2026-07-20",
+   "visits": 15,
+   "engaged": 8,
+   "robots": 7
+  },
+  {
+   "date": "2026-07-21",
+   "visits": 18,
+   "engaged": 10,
+   "robots": 8
+  },
+  {
+   "date": "2026-07-22",
+   "visits": 15,
+   "engaged": 9,
+   "robots": 6
+  },
+  {
+   "date": "2026-07-23",
+   "visits": 27,
+   "engaged": 16,
+   "robots": 11
+  },
+  {
+   "date": "2026-07-24",
+   "visits": 10,
+   "engaged": 4,
+   "robots": 6
+  },
+  {
+   "date": "2026-07-25",
+   "visits": 1,
+   "engaged": 1,
+   "robots": 0
+  },
+  {
+   "date": "2026-07-26",
+   "visits": 5,
+   "engaged": 2,
+   "robots": 3
+  },
+  {
+   "date": "2026-07-27",
+   "visits": 19,
+   "engaged": 10,
+   "robots": 9
+  },
+  {
+   "date": "2026-07-28",
+   "visits": 32,
+   "engaged": 13,
+   "robots": 19
+  },
+  {
+   "date": "2026-07-29",
+   "visits": 16,
+   "engaged": 9,
+   "robots": 7
+  },
+  {
+   "date": "2026-07-30",
+   "visits": 17,
+   "engaged": 7,
+   "robots": 10
+  },
+  {
+   "date": "2026-07-31",
+   "visits": 18,
+   "engaged": 8,
+   "robots": 10
+  },
+  {
+   "date": "2026-08-01",
+   "visits": 7,
+   "engaged": 2,
+   "robots": 5
+  },
+  {
+   "date": "2026-08-02",
+   "visits": 6,
+   "engaged": 3,
+   "robots": 3
+  },
+  {
+   "date": "2026-08-03",
+   "visits": 29,
+   "engaged": 16,
+   "robots": 13
+  },
+  {
+   "date": "2026-08-04",
+   "visits": 35,
+   "engaged": 23,
+   "robots": 12
+  },
+  {
+   "date": "2026-08-05",
+   "visits": 24,
+   "engaged": 17,
+   "robots": 7
+  },
+  {
+   "date": "2026-08-06",
+   "visits": 10,
+   "engaged": 6,
+   "robots": 4
+  },
+  {
+   "date": "2026-08-07",
+   "visits": 20,
+   "engaged": 12,
+   "robots": 8
+  },
+  {
+   "date": "2026-08-08",
+   "visits": 2,
+   "engaged": 2,
+   "robots": 0
+  },
+  {
+   "date": "2026-08-09",
+   "visits": 14,
+   "engaged": 6,
+   "robots": 8
+  },
+  {
+   "date": "2026-08-10",
+   "visits": 14,
+   "engaged": 8,
+   "robots": 6
+  },
+  {
+   "date": "2026-08-11",
+   "visits": 7,
+   "engaged": 4,
+   "robots": 3
+  },
+  {
+   "date": "2026-08-12",
+   "visits": 19,
+   "engaged": 11,
+   "robots": 8
+  },
+  {
+   "date": "2026-08-13",
+   "visits": 7,
+   "engaged": 3,
+   "robots": 4
+  },
+  {
+   "date": "2026-08-14",
+   "visits": 15,
+   "engaged": 10,
+   "robots": 5
+  },
+  {
+   "date": "2026-08-15",
+   "visits": 2,
+   "engaged": 1,
+   "robots": 1
+  },
+  {
+   "date": "2026-08-16",
+   "visits": 8,
+   "engaged": 6,
+   "robots": 2
+  },
+  {
+   "date": "2026-08-17",
+   "visits": 13,
+   "engaged": 8,
+   "robots": 5
+  },
+  {
+   "date": "2026-08-18",
+   "visits": 68,
+   "engaged": 43,
+   "robots": 25
+  },
+  {
+   "date": "2026-08-19",
+   "visits": 29,
+   "engaged": 15,
+   "robots": 14
+  },
+  {
+   "date": "2026-08-20",
+   "visits": 132,
+   "engaged": 71,
+   "robots": 61
+  },
+  {
+   "date": "2026-08-21",
+   "visits": 60,
+   "engaged": 26,
+   "robots": 34
+  },
+  {
+   "date": "2026-08-22",
+   "visits": 5,
+   "engaged": 0,
+   "robots": 5
+  },
+  {
+   "date": "2026-08-23",
+   "visits": 30,
+   "engaged": 9,
+   "robots": 21
+  },
+  {
+   "date": "2026-08-24",
+   "visits": 80,
+   "engaged": 26,
+   "robots": 54
+  },
+  {
+   "date": "2026-08-25",
+   "visits": 34,
+   "engaged": 16,
+   "robots": 18
+  },
+  {
+   "date": "2026-08-26",
+   "visits": 51,
+   "engaged": 15,
+   "robots": 36
+  },
+  {
+   "date": "2026-08-27",
+   "visits": 50,
+   "engaged": 15,
+   "robots": 35
+  },
+  {
+   "date": "2026-08-28",
+   "visits": 1530,
+   "engaged": 102,
+   "robots": 1428
+  },
+  {
+   "date": "2026-08-29",
+   "visits": 11,
+   "engaged": 6,
+   "robots": 5
+  },
+  {
+   "date": "2026-08-30",
+   "visits": 27,
+   "engaged": 19,
+   "robots": 8
+  },
+  {
+   "date": "2026-08-31",
+   "visits": 39,
+   "engaged": 17,
+   "robots": 22
+  },
+  {
+   "date": "2026-09-01",
+   "visits": 445,
+   "engaged": 86,
+   "robots": 359
+  },
+  {
+   "date": "2026-09-02",
+   "visits": 47,
+   "engaged": 19,
+   "robots": 28
+  },
+  {
+   "date": "2026-09-03",
+   "visits": 223,
+   "engaged": 12,
+   "robots": 211
+  },
+  {
+   "date": "2026-09-04",
+   "visits": 130,
+   "engaged": 7,
+   "robots": 123
+  },
+  {
+   "date": "2026-09-05",
+   "visits": 14,
+   "engaged": 1,
+   "robots": 13
+  },
+  {
+   "date": "2026-09-06",
+   "visits": 8,
+   "engaged": 1,
+   "robots": 7
+  },
+  {
+   "date": "2026-09-07",
+   "visits": 21,
+   "engaged": 10,
+   "robots": 11
+  },
+  {
+   "date": "2026-09-08",
+   "visits": 941,
+   "engaged": 86,
+   "robots": 855
+  },
+  {
+   "date": "2026-09-09",
+   "visits": 44,
+   "engaged": 18,
+   "robots": 26
+  },
+  {
+   "date": "2026-09-10",
+   "visits": 38,
+   "engaged": 8,
+   "robots": 30
+  },
+  {
+   "date": "2026-09-11",
+   "visits": 113,
+   "engaged": 8,
+   "robots": 105
+  },
+  {
+   "date": "2026-09-12",
+   "visits": 4,
+   "engaged": 3,
+   "robots": 1
+  },
+  {
+   "date": "2026-09-13",
+   "visits": 7,
+   "engaged": 0,
+   "robots": 7
+  },
+  {
+   "date": "2026-09-14",
+   "visits": 14,
+   "engaged": 11,
+   "robots": 3
+  },
+  {
+   "date": "2026-09-15",
+   "visits": 144,
+   "engaged": 12,
+   "robots": 132
+  },
+  {
+   "date": "2026-09-16",
+   "visits": 51,
+   "engaged": 5,
+   "robots": 46
+  },
+  {
+   "date": "2026-09-17",
+   "visits": 90,
+   "engaged": 21,
+   "robots": 69
+  },
+  {
+   "date": "2026-09-18",
+   "visits": 39,
+   "engaged": 7,
+   "robots": 32
+  },
+  {
+   "date": "2026-09-19",
+   "visits": 6,
+   "engaged": 4,
+   "robots": 2
+  },
+  {
+   "date": "2026-09-20",
+   "visits": 7,
+   "engaged": 1,
+   "robots": 6
+  },
+  {
+   "date": "2026-09-21",
+   "visits": 23,
+   "engaged": 15,
+   "robots": 8
+  },
+  {
+   "date": "2026-09-22",
+   "visits": 512,
+   "engaged": 3,
+   "robots": 509
+  },
+  {
+   "date": "2026-09-23",
+   "visits": 11,
+   "engaged": 7,
+   "robots": 4
+  },
+  {
+   "date": "2026-09-24",
+   "visits": 12,
+   "engaged": 5,
+   "robots": 7
+  },
+  {
+   "date": "2026-09-25",
+   "visits": 7,
+   "engaged": 3,
+   "robots": 4
+  },
+  {
+   "date": "2026-09-26",
+   "visits": 2,
+   "engaged": 1,
+   "robots": 1
+  },
+  {
+   "date": "2026-09-27",
+   "visits": 7,
+   "engaged": 1,
+   "robots": 6
+  },
+  {
+   "date": "2026-09-28",
+   "visits": 15,
+   "engaged": 7,
+   "robots": 8
+  },
+  {
+   "date": "2026-09-29",
+   "visits": 21,
+   "engaged": 10,
+   "robots": 11
+  },
+  {
+   "date": "2026-09-30",
+   "visits": 17,
+   "engaged": 10,
+   "robots": 7
+  },
+  {
+   "date": "2026-10-01",
+   "visits": 26,
+   "engaged": 11,
+   "robots": 15
+  },
+  {
+   "date": "2026-10-02",
+   "visits": 11,
+   "engaged": 8,
+   "robots": 3
+  },
+  {
+   "date": "2026-10-03",
+   "visits": 10,
+   "engaged": 5,
+   "robots": 5
+  },
+  {
+   "date": "2026-10-04",
+   "visits": 6,
+   "engaged": 4,
+   "robots": 2
+  },
+  {
+   "date": "2026-10-05",
+   "visits": 25,
+   "engaged": 15,
+   "robots": 10
+  },
+  {
+   "date": "2026-10-06",
+   "visits": 9,
+   "engaged": 3,
+   "robots": 6
+  },
+  {
+   "date": "2026-10-07",
+   "visits": 15,
+   "engaged": 10,
+   "robots": 5
+  },
+  {
+   "date": "2026-10-08",
+   "visits": 1958,
+   "engaged": 62,
+   "robots": 1896
+  },
+  {
+   "date": "2026-10-09",
+   "visits": 24,
+   "engaged": 15,
+   "robots": 9
+  },
+  {
+   "date": "2026-10-10",
+   "visits": 9,
+   "engaged": 3,
+   "robots": 6
+  },
+  {
+   "date": "2026-10-11",
+   "visits": 23,
+   "engaged": 4,
+   "robots": 19
+  },
+  {
+   "date": "2026-10-12",
+   "visits": 10,
+   "engaged": 5,
+   "robots": 5
+  },
+  {
+   "date": "2026-10-13",
+   "visits": 17,
+   "engaged": 9,
+   "robots": 8
+  },
+  {
+   "date": "2026-10-14",
+   "visits": 89,
+   "engaged": 20,
+   "robots": 69
+  },
+  {
+   "date": "2026-10-15",
+   "visits": 43,
+   "engaged": 7,
+   "robots": 36
+  },
+  {
+   "date": "2026-10-16",
+   "visits": 71,
+   "engaged": 39,
+   "robots": 32
+  },
+  {
+   "date": "2026-10-17",
+   "visits": 4,
+   "engaged": 2,
+   "robots": 2
+  },
+  {
+   "date": "2026-10-18",
+   "visits": 16,
+   "engaged": 10,
+   "robots": 6
+  },
+  {
+   "date": "2026-10-19",
+   "visits": 53,
+   "engaged": 23,
+   "robots": 30
+  },
+  {
+   "date": "2026-10-20",
+   "visits": 18,
+   "engaged": 11,
+   "robots": 7
+  },
+  {
+   "date": "2026-10-21",
+   "visits": 18,
+   "engaged": 9,
+   "robots": 9
+  },
+  {
+   "date": "2026-10-22",
+   "visits": 549,
+   "engaged": 20,
+   "robots": 529
+  },
+  {
+   "date": "2026-10-23",
+   "visits": 25,
+   "engaged": 8,
+   "robots": 17
+  },
+  {
+   "date": "2026-10-24",
+   "visits": 10,
+   "engaged": 4,
+   "robots": 6
+  },
+  {
+   "date": "2026-10-25",
+   "visits": 20,
+   "engaged": 4,
+   "robots": 16
+  },
+  {
+   "date": "2026-10-26",
+   "visits": 891,
+   "engaged": 25,
+   "robots": 866
+  }
  ]
 }

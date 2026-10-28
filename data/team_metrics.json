@@ -33,7 +33,11 @@
        "so_far_end": "2026-10-26",
        "days_counted": 26,
        "goal": 15000,
-       "goal_share_pct": 110.0
+       "goal_share_pct": 110.0,
+       "without_email_robots": {
+        "baseline": 9580.0,
+        "so_far": 12879
+       }
       },
       {
        "metric": "search_and_ai_visits",

@@ -250,7 +250,8 @@ function fillCompare(spec) {
     $(`${spec.id}-cmp-cards`).innerHTML = spec.metrics.map((m) => {
       const cur = m.value(p.cur.start, p.cur.end), prev = p.prev ? m.value(p.prev.start, p.prev.end) : null;
       const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}` : p.none;
-      return card(m.label, m.fmt(cur), [sub, m.sub].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
+      const note = typeof m.sub === "function" ? m.sub(p.cur.start, p.cur.end) : m.sub;   // a note can depend on the period
+      return card(m.label, m.fmt(cur), [sub, note].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
     }).join("");
     $(`${spec.id}-cmp-source`).textContent = spec.source(p.cur.start, p.cur.end) +
       (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
@@ -441,11 +442,12 @@ function renderVisits(d) {
   ] });
 
   const all = rangeSum(d.daily, "sessions"), engaged = rangeSum(d.daily, "engagedSessions");
+  const robots = rangeSum(d.email_robots_daily || [], "robots");   // non-engaged visits with an email-robot sign (see fetch_data.py)
   const emailRows = d.daily.map((r) => ({ date: r.date, visits: emailByDay[r.date] || 0 }));
   compare({ id: "visits", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
     source: (a, b) => `${src}, ${range(a, b)} (Pacific time).`, metrics: [
       { label: "Engaged visits", value: engaged, fmt: num },
-      { label: "All visits", value: all, fmt: num, sub: "Includes robots" },
+      { label: "All visits", value: all, fmt: num, sub: (a, b) => `Includes robots. Without email robots: ${num(all(a, b) - robots(a, b))}` },
       { label: "Visits from email", value: rangeSum(emailRows, "visits"), fmt: num },
       { label: "Share who engaged", value: (a, b) => (all(a, b) ? (engaged(a, b) / all(a, b)) * 100 : null), fmt: (v) => pct(v, 1), whole: false, yfmt: (v) => `${v}%` },
     ] });
@@ -1567,7 +1569,8 @@ function renderTeam(t) {
     return `<div class="card"><div class="label">${esc(m.label)}</div>
       <div class="value">${m.so_far == null ? "-" : num(m.so_far)}</div>
       <div class="sub">This month so far. Baseline: ${num(m.baseline)} a month (${baseLabel})</div>
-      <div class="sub">Goal: ${m.goal ? `${num(m.goal)} a month` : "To set"}</div>${along}</div>`;
+      <div class="sub">Goal: ${m.goal ? `${num(m.goal)} a month` : "To set"}</div>${along}${m.without_email_robots
+        ? `<div class="sub">Without email robots: ${num(m.without_email_robots.so_far)} so far. Baseline: ${num(m.without_email_robots.baseline)} a month</div>` : ""}</div>`;
   };
   const sources = (metrics) => {
     const seen = new Map();
