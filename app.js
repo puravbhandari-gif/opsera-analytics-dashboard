@@ -60,14 +60,15 @@ function card(label, value, sub = "", extra = "") {
 
 function table(el, { columns, rows, search, sortKey, sortDir = -1, pageSize = 25 }) {
   let q = "", key = sortKey, dir = sortDir, shown = pageSize;
-  el.innerHTML = `${search ? `<div class="table-tools"><input type="search" placeholder="Search ${search}" aria-label="Search ${search}"><span class="muted"></span></div>` : ""}
+  el.innerHTML = `<div class="table-tools">${search ? `<input type="search" placeholder="Search ${search}" aria-label="Search ${search}"><span class="muted"></span>` : ""}<button class="ghost csv" type="button">Download CSV</button></div>
     <div class="table-wrap"><table><thead><tr>${columns.map((c) =>
       `<th class="${c.num ? "num " : ""}${c.sort === false ? "" : "sortable"}" data-k="${c.key}" scope="col">${c.label}</th>`).join("")}</tr></thead><tbody></tbody></table></div>
     <button class="more" type="button" hidden>Show more</button>`;
   const body = el.querySelector("tbody"), more = el.querySelector(".more"), count = el.querySelector(".table-tools .muted");
 
+  let list = rows;
   function render() {
-    let list = rows.filter((r) => !q || columns.some((c) => c.search && String(r[c.key]).toLowerCase().includes(q)));
+    list = rows.filter((r) => !q || columns.some((c) => c.search && String(r[c.key]).toLowerCase().includes(q)));
     if (key) list = [...list].sort((a, b) => {
       const x = a[key], y = b[key];
       if (x == null) return 1; if (y == null) return -1;
@@ -91,6 +92,24 @@ function table(el, { columns, rows, search, sortKey, sortDir = -1, pageSize = 25
   const input = el.querySelector("input");
   if (input) input.addEventListener("input", () => { q = input.value.trim().toLowerCase(); shown = pageSize; render(); });
   more.addEventListener("click", () => { shown += pageSize * 4; render(); });
+  // the rows as the table has them (search and sort applied), every row, not just the ones on screen
+  el.querySelector(".csv").addEventListener("click", () => {
+    const text = (h) => { const div = document.createElement("div"); div.innerHTML = String(h ?? "").replace(/<br\s*\/?>/gi, " | "); return div.textContent.trim(); };
+    const cell = (c, r) => {
+      if (c.csv) return c.csv(r);
+      const v = r[c.key];
+      if (c.num && typeof v === "number") return Number.isInteger(v) ? v : Math.round(v * 100) / 100;
+      return text(c.fmt ? c.fmt(v, r) : v);
+    };
+    const quote = (v) => (/[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
+    const csv = [columns.map((c) => quote(text(c.label) || "Measure")), ...list.map((r) => columns.map((c) => quote(cell(c, r))))].map((l) => l.join(",")).join("\n");
+    const heading = el.closest(".panel, section")?.querySelector("h3, h2")?.textContent || el.id;
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob(["\ufeff" + csv], { type: "text/csv;charset=utf-8" }));
+    a.download = `opsera-${heading.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "table"}.csv`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
   render();
 }
 
@@ -139,6 +158,28 @@ const bar = (label, data, color) => ({ label, data, backgroundColor: color, bord
 
 let periodMode = "week";
 try { const saved = localStorage.getItem("period"); if (["day", "month", "quarter"].includes(saved)) periodMode = saved; } catch (e) {}
+
+// The view lives in the address after "#", so a link opens the same view:
+// #journey?period=month&channel=linkedin&funnelmonth=2026-08&person=…&type=blog&q=gartner
+const PERIOD_IN_ADDRESS = { day: "day", week: "week", month: "month", quarter: "3months" };
+const view = (() => {
+  const [tab, query] = location.hash.slice(1).split("?");
+  const a = new URLSearchParams(query || "");
+  const period = Object.keys(PERIOD_IN_ADDRESS).find((k) => PERIOD_IN_ADDRESS[k] === a.get("period"));
+  if (period) periodMode = period;   // a link's period wins over the one this browser last used
+  return { tab: tab || "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
+    type: a.get("type") || "all", q: a.get("q") || "" };
+})();
+function viewAddress() {
+  const a = new URLSearchParams({ period: PERIOD_IN_ADDRESS[periodMode] });
+  if (view.channel !== "all") a.set("channel", view.channel);
+  if (view.funnelmonth) a.set("funnelmonth", view.funnelmonth);
+  if (view.person) a.set("person", view.person);
+  if (view.type !== "all") a.set("type", view.type);
+  if (view.q) a.set("q", view.q);
+  return `#${view.tab || "team"}?${a.toString()}`;
+}
+function saveView() { history.replaceState(null, "", viewAddress()); }
 const addMonths = (d, n) => { const x = toDate(d); const day0 = x.getUTCDate(); x.setUTCDate(1); x.setUTCMonth(x.getUTCMonth() + n);
   x.setUTCDate(Math.min(day0, toDate(monthEnd(iso(x))).getUTCDate())); return iso(x); };
 // Last 3 months: the 3 months up to the last full day, against the 3 months before
@@ -269,6 +310,7 @@ function setPeriodMode(mode) {
   $("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
   comparisons.forEach((spec) => { fillCompare(spec); const c = charts.find((x) => x.id === `${spec.id}-cmp-chart`); if (c) draw(c); });
   monthlyTabs.forEach((fn) => fn());
+  saveView();   // last, after the funnel has let go of a picked month
 }
 const monthlyTabs = [];
 $("period-mode").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) setPeriodMode(b.dataset.mode); });
@@ -866,7 +908,7 @@ function renderJourney(ga, leads, hub, gsc) {
     }
     return steps;
   };
-  let channel = "all";
+  let channel = JOURNEY_CHANNELS[view.channel] ? view.channel : "all";   // from the address, if it names one
   let month = "";   // a picked month ("2026-06-01"), or "" to follow the period switch
   // Google search ends every step on the last day Search Console covers, so all steps use the same dates
   const lastFor = (ch) => (ch === "search" && gsc.last_day_with_data < gaLast ? gsc.last_day_with_data : gaLast);
@@ -894,13 +936,16 @@ function renderJourney(ga, leads, hub, gsc) {
       paid: "Google and HubSpot mark \"paid\" differently, so the steps don't line up." }[channel] || "";
     if (channel === "linkedin") charts.forEach((c) => c.instance && c.instance.resize());
   };
+  if ([...monthPick.options].some((o) => o.value && o.value === view.funnelmonth)) { month = view.funnelmonth; monthPick.value = month; }
+  $("journey-channel").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x.dataset.ch === channel));
   drawFunnel();
   // the period switch above takes over again from a picked month
-  monthlyTabs.push(() => { month = ""; monthPick.value = ""; drawFunnel(); });
-  monthPick.addEventListener("change", () => { month = monthPick.value; drawFunnel(); });
+  monthlyTabs.push(() => { month = ""; monthPick.value = ""; view.funnelmonth = ""; drawFunnel(); });
+  monthPick.addEventListener("change", () => { month = monthPick.value; view.funnelmonth = month; saveView(); drawFunnel(); });
   $("journey-channel").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     channel = b.dataset.ch;
+    view.channel = channel; saveView();
     $("journey-channel").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
     drawFunnel();
   });
@@ -1333,56 +1378,62 @@ function wordCode(w) {
 }
 
 // Emails, lists and LinkedIn posts for a search, each its own section, never added into the website numbers
-function lookupExtras(q, hub, li, kp) {
+function lookupExtras(el, q, hub, li, kp) {
+  el.innerHTML = "";
   const words = [...new Set(q.toLowerCase().replace(/^https?:\/\//, "").split(/[^a-z0-9]+/).filter((w) => w.length >= 3))];
-  if (!words.length) return "";
+  if (!words.length) return;
   const codes = words.map(wordCode);
   const hit = (list) => codes.every((c) => list.includes(c));
   const pct = (v) => (v == null ? "-" : `${v.toFixed(1)}%`);
   // HubSpot's personal placeholders, shown as plain words: "{{ contact.firstname }}" becomes [first name]
   const readable = (subject) => subject.replace(/\{\{\s*contact\.firstname\s*\}\}/g, "[first name]")
     .replace(/\{\{\s*personalization_token\('[^']*',\s*'([^']*)'\)\s*\}\}/g, "[$1]").replace(/\{\{[^}]*\}\}/g, "[personal detail]");
-  const section = (title, body, source) => `<div class="panel"><h3>${title}</h3>${body}<p class="source">${source}</p></div>`;
-  const tableHtml = (head, rows, numCols) => `<div class="table-wrap"><table><thead><tr>${head.map((h, i) =>
-    `<th class="${numCols.includes(i) ? "num" : ""}">${h}</th>`).join("")}</tr></thead><tbody>${rows.map((r) =>
-    `<tr>${r.map((c, i) => `<td class="${numCols.includes(i) ? "num" : "wrap"}">${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
-  const more = (n) => (n > 15 ? `<p class="muted">The 15 newest of ${num(n)}.</p>` : "");
   const said = `"${esc(q.trim())}"`;
-  const out = [];
-
-  const emails = (hub.emails && hub.emails.rows || []).filter((e) => hit(e.words)).sort((a, b) => (a.sent_on < b.sent_on ? 1 : -1));
-  out.push(section(`HubSpot marketing emails matching ${said}`, emails.length
-    ? tableHtml(["Sent", "Subject", "Sends", "Opens", "Clicks", "Open rate", "Click rate"],
-      emails.slice(0, 15).map((e) => [dayYear(e.sent_on), esc(readable(e.subject)), num(e.sends), num(e.opens), num(e.clicks), pct(e.open_rate_pct), pct(e.click_rate_pct)]), [2, 3, 4, 5, 6]) + more(emails.length)
-    : `<p class="muted">No marketing emails match.</p>`,
-    `Source: HubSpot, emails sent since ${dayYear(hub.start_date)}, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Rates are opens and clicks out of emails delivered. The subject line shows, never who it went to. Emails aimed at named target accounts are left out.`));
-
-  const lists = (hub.lists && hub.lists.rows || []).filter((l) => hit(l.words));
-  out.push(section(`HubSpot lists matching ${said}`, lists.length
-    ? tableHtml(["List", "Kind", "People", "Last updated"],
-      lists.slice(0, 15).map((l, i) => [`List ${i + 1}`, esc(l.kind), num(l.people), dayYear(l.updated_on)]), [2]) + (lists.length > 15 ? `<p class="muted">The 15 biggest of ${num(lists.length)}.</p>` : "")
-    : `<p class="muted">No lists match.</p>`,
-    `Source: HubSpot lists updated since ${dayYear(hub.start_date)}, counted ${dayYear(hub.pulled_at.slice(0, 10))}. List names often hold people's and companies' names, so they don't show. Target-account and automatic lists are left out.`));
-
+  const sections = [];
+  const section = (id, title, rows, empty, source, spec) => {
+    sections.push(`<div class="panel"><h3>${title}</h3><div id="${id}">${rows.length ? "" : `<p class="muted">${empty}</p>`}</div><p class="source">${source}</p></div>`);
+    return () => { if (rows.length) table($(id), { rows, pageSize: 15, ...spec }); };
+  };
+  const emails = (hub.emails && hub.emails.rows || []).filter((e) => hit(e.words)).map((e) => ({ ...e, subject: readable(e.subject) }));
+  const lists = (hub.lists && hub.lists.rows || []).filter((l) => hit(l.words)).map((l, i) => ({ ...l, label: `List ${i + 1}` }));
   // Kumar's times seen comes from the LinkedIn exports' top posts, matched by the post's address
   const slug = (url) => (url || "").replace(/[?#].*$/, "").replace(/-(share|activity|ugcPost)-.*$/, "");
   const seenBy = {};
   [["Jul to Sep", li.kumar.top_by_seen], ...li.kumar_october.periods.map((p) => [p.label, p.top_by_seen])].forEach(([label, rows]) =>
     (rows || []).forEach((r) => { const k = slug(r.link); if (!seenBy[k] || r.seen > seenBy[k].seen) seenBy[k] = { seen: r.seen, label }; }));
-  const link = (url, text) => `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text)}</a>`;
   const posts = [
-    ...(li.company.posts || []).filter((p) => hit(p.words || [])).map((p) => ({ date: p.created, from: "Company page", post: link(p.link, p.title),
-      seen: num(p.seen), clicks: num(p.clicks), reactions: num(p.likes), comments: num(p.comments) })),
+    ...(li.company.posts || []).filter((p) => hit(p.words || [])).map((p) => ({ date: p.created, from: "Company page", title: p.title, link: p.link,
+      seen: p.seen, seenText: num(p.seen), clicks: p.clicks, reactions: p.likes, comments: p.comments })),
     ...(kp.posts || []).filter((p) => hit(p.words || [])).map((p) => { const s2 = seenBy[slug(p.link)];
-      return { date: p.date, from: "Kumar", post: link(p.link, p.title), seen: s2 ? `${num(s2.seen)} (${esc(s2.label)})` : "-", clicks: "-",
-        reactions: p.reactions == null ? "-" : num(p.reactions), comments: p.comments == null ? "-" : num(p.comments) }; }),
-  ].sort((a, b) => (a.date < b.date ? 1 : -1));
-  out.push(section(`LinkedIn posts mentioning ${said}`, posts.length
-    ? tableHtml(["Posted", "From", "Post", "Times seen", "Clicks", "Reactions", "Comments"],
-      posts.slice(0, 15).map((p) => [dayYear(p.date), p.from, p.post, p.seen, p.clicks, p.reactions, p.comments]), [3, 4, 5, 6]) + more(posts.length)
-    : `<p class="muted">No company page or Kumar posts mention it.</p>`,
-    `Sources: company page posts from LinkedIn exports, ${range(li.company.start_date, li.company.end_date)}. Kumar's posts from his public profile, read with Apify on ${dayYear(kp.as_of)}. His times seen comes from LinkedIn exports, only for posts in their top posts, for the period named.`));
-  return out.join("");
+      return { date: p.date, from: "Kumar", title: p.title, link: p.link, seen: s2 ? s2.seen : null, seenText: s2 ? `${num(s2.seen)} (${s2.label})` : "-",
+        clicks: null, reactions: p.reactions, comments: p.comments }; }),
+  ];
+  const n0 = (v) => (v == null ? "-" : num(v));
+  const draws = [
+    section("lookup-emails", `HubSpot marketing emails matching ${said}`, emails, "No marketing emails match.",
+      `Source: HubSpot, emails sent since ${dayYear(hub.start_date)}, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Rates are opens and clicks out of emails delivered. The subject line shows, never who it went to. Emails aimed at named target accounts are left out.`,
+      { search: "subjects", sortKey: "sent_on", columns: [
+        { key: "sent_on", label: "Sent", fmt: (v) => dayYear(v), csv: (r) => r.sent_on },
+        { key: "subject", label: "Subject", search: true },
+        { key: "sends", label: "Sends", num: true, fmt: num }, { key: "opens", label: "Opens", num: true, fmt: num }, { key: "clicks", label: "Clicks", num: true, fmt: num },
+        { key: "open_rate_pct", label: "Open rate", num: true, fmt: pct }, { key: "click_rate_pct", label: "Click rate", num: true, fmt: pct } ] }),
+    section("lookup-lists", `HubSpot lists matching ${said}`, lists, "No lists match.",
+      `Source: HubSpot lists updated since ${dayYear(hub.start_date)}, counted ${dayYear(hub.pulled_at.slice(0, 10))}. List names often hold people's and companies' names, so they don't show. Target-account and automatic lists are left out.`,
+      { sortKey: "people", columns: [
+        { key: "label", label: "List", sort: false }, { key: "kind", label: "Kind" }, { key: "people", label: "People", num: true, fmt: n0 },
+        { key: "updated_on", label: "Last updated", fmt: (v) => dayYear(v), csv: (r) => r.updated_on } ] }),
+    section("lookup-posts", `LinkedIn posts mentioning ${said}`, posts, "No company page or Kumar posts mention it.",
+      `Sources: company page posts from LinkedIn exports, ${range(li.company.start_date, li.company.end_date)}. Kumar's posts from his public profile, read with Apify on ${dayYear(kp.as_of)}. His times seen comes from LinkedIn exports, only for posts in their top posts, for the period named.`,
+      { search: "posts", sortKey: "date", columns: [
+        { key: "date", label: "Posted", fmt: (v) => dayYear(v), csv: (r) => r.date },
+        { key: "from", label: "From", search: true },
+        { key: "title", label: "Post", search: true, fmt: (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(v)}</a>`, csv: (r) => `${r.title} (${r.link})` },
+        { key: "seen", label: "Times seen", num: true, fmt: (v, r) => esc(r.seenText), csv: (r) => r.seenText },
+        { key: "clicks", label: "Clicks", num: true, fmt: n0 }, { key: "reactions", label: "Reactions", num: true, fmt: n0 },
+        { key: "comments", label: "Comments", num: true, fmt: n0 } ] }),
+  ];
+  el.innerHTML = sections.join("");
+  draws.forEach((f) => f());
 }
 
 function openLookup() {
@@ -1572,6 +1623,7 @@ function renderLookup(d, extra) {
 
   const search = (keep) => {
     const q = $("lookup-q").value;
+    if (view.q !== q.trim()) { view.q = q.trim(); saveView(); }
     const t = period();
     const found = find(q);
     const busy = (m) => { const s = of(m, t); return s.visits + s.forms + s.clicks > 0; };
@@ -1593,7 +1645,7 @@ function renderLookup(d, extra) {
       : !found.length ? `No data for "${q.trim()}".`
       : !live.length ? `No data for "${q.trim()}" in this period.`
       : left ? `Not showing ${num(left)} match${left === 1 ? "" : "es"} with no visits, form fills or Google clicks in this period.` : "";
-    $("lookup-extras").innerHTML = extra ? lookupExtras(q, extra.hub, extra.li, extra.kp) : "";
+    if (extra) lookupExtras($("lookup-extras"), q, extra.hub, extra.li, extra.kp); else $("lookup-extras").innerHTML = "";
     show();
   };
 
@@ -1611,6 +1663,7 @@ function renderLookup(d, extra) {
     show();
   });
   monthlyTabs.push(() => search(true));
+  if (view.q) $("lookup-q").value = view.q;   // a search from the address
   search();
 }
 
@@ -1649,7 +1702,8 @@ function renderTeam(t) {
     <h4>${esc(sec.title)}</h4>
     <div class="cards">${sec.metrics.map(tile).join("")}</div>
     <p class="source">${sec.metrics.length > 1 && new Set(sec.metrics.map((m) => m.source)).size > 1 ? "Sources" : "Source"}: ${esc(sources(sec.metrics))}. Baseline: ${monthName(t.baseline.months[0])} to ${monthName(t.baseline.months[t.baseline.months.length - 1])} ${t.baseline.months[0].slice(0, 4)}.</p>`).join("");
-  let who = t.people[0] ? t.people[0].name : "";   // the first person in team.json shows first
+  // the person in the address, or the first person in team.json
+  let who = [...t.people.map((p) => p.name), "Everyone"].includes(view.person) ? view.person : (t.people[0] ? t.people[0].name : "");
   const draw = () => {
     $("team-body").innerHTML = t.people.filter((p) => who === "Everyone" || p.name === who).map(person).join("");
   };
@@ -1658,6 +1712,7 @@ function renderTeam(t) {
   $("team-people").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     who = b.dataset.who;
+    view.person = who; saveView();
     $("team-people").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
     draw();
   });
@@ -1690,7 +1745,7 @@ function renderContent(d, hub) {
   const pieces = d.pages.map((path, i) => ({ i, path, type: typeOf(path) })).filter((x) => x.type);
   const asset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
   const bare = (title) => (title || "").replace(/\s*[-—|]\s*Opsera\s*$/i, "").trim().toLowerCase();
-  let type = "all";
+  let type = CONTENT_TYPES.some(([k]) => k === view.type) ? view.type : "all";   // from the address, if it names one
 
   const draw = () => {
     const p = periodsFor(periodMode, d.start_date, gaLast), g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
@@ -1730,7 +1785,7 @@ function renderContent(d, hub) {
       { key: "clicks", label: "Google clicks", num: true, fmt: num },
       { key: "from", label: "Where visits came from", sort: false },
       { key: "forms", label: "Downloads or form fills", num: true, fmt: num },
-      { key: "dealSort", label: "Deals it led to", num: true, fmt: (v, r) => esc(r.dealText) },
+      { key: "dealSort", label: "Deals it led to", num: true, fmt: (v, r) => esc(r.dealText), csv: (r) => r.dealText },
     ] });
     const left = rows.length - shown.length;
     $("content-status").textContent = left ? `Not showing ${num(left)} piece${left === 1 ? "" : "s"} with no visits, form fills, Google clicks or deals in this period.` : "";
@@ -1744,6 +1799,7 @@ function renderContent(d, hub) {
   $("content-type").addEventListener("click", (e) => {
     const bt = e.target.closest("button"); if (!bt) return;
     type = bt.dataset.type;
+    view.type = type; saveView();
     $("content-type").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === bt));
     draw();
   });
@@ -1781,6 +1837,7 @@ function openTodo() {
 
 function showTab(name) {
   if (!$(`tab-${name}`)) name = "team";   // the dashboard opens on Team metrics, the first tab (agreed 28 Oct 2026)
+  view.tab = name; saveView();
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
   charts.forEach((c) => c.instance && c.instance.resize());
@@ -1795,9 +1852,20 @@ function showTab(name) {
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {
   const b = e.target.closest("button"); if (!b) return;
-  history.replaceState(null, "", `#${b.dataset.tab}`); showTab(b.dataset.tab);
+  showTab(b.dataset.tab);
 });
-addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+// A link with only a tab (the footer links, or an older link) keeps the rest of the view.
+// A full link pasted into this page reloads it, so every setting is applied from the start.
+addEventListener("hashchange", () => {
+  const [tab, query] = location.hash.slice(1).split("?");
+  if (query !== undefined && location.hash !== viewAddress()) location.reload();
+  else showTab(tab);
+});
+$("copy-link").addEventListener("click", () => {
+  saveView();
+  const done = (t) => { $("copy-link").textContent = t; setTimeout(() => { $("copy-link").textContent = "Copy link to this view"; }, 2000); };
+  navigator.clipboard.writeText(location.href).then(() => done("Link copied"), () => { window.prompt("Copy this link:", location.href); });
+});
 
 const THEMES = ["auto", "light", "dark"];
 function applyTheme(t) {
@@ -1819,7 +1887,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
   try {
     const [gsc, ga, leads, li, yt, kp, est, hub, km, kq, inf] = await Promise.all(
       ["search_console.json", "analytics.json", "leads.json", "linkedin.json", "youtube.json", "kumar_posts.json", "linkedin_estimate.json", "hubspot.json", "kahoots_monthly.json", "kahoots_quarter.json", "infrasity_monthly.json"].map(load));
-    showTab(location.hash.slice(1));
+    showTab(view.tab);
     $("pulled").textContent = `Google numbers updated ${dayYear(gsc.pulled_at.slice(0, 10))} at ${gsc.pulled_at.slice(11, 16)} IST.`;
     renderSearch(gsc);
     renderVisits(ga);

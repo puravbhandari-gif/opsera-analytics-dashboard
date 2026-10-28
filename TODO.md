@@ -36,8 +36,8 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Decide the website visits goal: all visits or without robots.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
-- [ ] Personal views: saved links per person.
+- [x] Personal views: saved links per person.
 - [ ] Campaigns tab.
 - [x] Content scorecard tab.
-- [ ] Download button on every table.
+- [x] Download button on every table.
 - [ ] Monday Slack post with the top numbers.

@@ -220,3 +220,6 @@ details.more > summary:hover { color: var(--ink); }
 #content-table td:first-child { min-width: 260px; }
 #content-table td:nth-child(5) { min-width: 200px; }
 #content-table small { word-break: break-all; }
+
+/* Download CSV sits at the right of each table's tools */
+.table-tools .csv { margin-left: auto; }
