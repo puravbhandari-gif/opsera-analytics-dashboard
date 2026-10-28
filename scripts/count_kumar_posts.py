@@ -14,6 +14,7 @@ Months follow UTC, the same as LinkedIn's own exports. A post he reposted twice 
 import datetime as dt
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -24,11 +25,26 @@ PROFILE = "https://www.linkedin.com/in/kumar-chivukula/"
 HANDLE = "kumar-chivukula"
 MAX_CHARGE_USD = 1
 OUT = Path(__file__).resolve().parent.parent / "data" / "kumar_posts.json"
+POSTS = Path(__file__).resolve().parent.parent / "data" / "kumar_post_list.json"
 
 
 def stop(msg):
     print(f"\nSTOPPED: {msg}", file=sys.stderr)
     sys.exit(1)
+
+
+def word_index(text):
+    """A post's words as short scrambled codes (FNV-1a, 32 bits), so Look up can tell whether a post mentions
+    a word without the file holding the post's text, which often names people. Words of 3+ letters, each once."""
+    out = []
+    for w in dict.fromkeys(re.findall(r"[a-z0-9]+", (text or "").lower())):
+        if len(w) < 3:
+            continue
+        h = 0x811C9DC5
+        for b in w.encode():
+            h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+        out.append(f"{h:08x}")
+    return out
 
 
 def fetch(token):
@@ -60,6 +76,7 @@ def main():
         months[m.isoformat()[:7]] = {"own_posts": 0, "reposts": 0}
         m = (m.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
 
+    posts = []   # Kumar's own posts for Look up: date, opening words, reactions and comments, words scrambled
     seen = set()
     for item in items:
         reposter = (item.get("repostedBy") or {}).get("publicIdentifier")
@@ -82,6 +99,11 @@ def main():
         month = when[:7]
         if month in months:
             months[month][kind] += 1
+        if kind == "own_posts":
+            text = " ".join((item.get("content") or "").split())
+            eng = item.get("engagement") or {}
+            posts.append({"date": when[:10], "link": item.get("linkedinUrl"), "title": text[:100] + ("..." if len(text) > 100 else ""),
+                          "reactions": eng.get("likes"), "comments": eng.get("comments"), "words": word_index(text)})
 
     if not any(v["own_posts"] for v in months.values()):
         stop(f"No posts by Kumar came back since {START_MONTH}. Check the Apify run before guessing.")
@@ -91,6 +113,8 @@ def main():
         "as_of": now.date().isoformat(),
         "months": [{"month": k, **v, **({"so_far": True} if k == this_month else {})} for k, v in months.items()],
     }, indent=1))
+    POSTS.write_text(json.dumps({"source": "Kumar's public LinkedIn profile, read with Apify", "as_of": now.date().isoformat(),
+                                 "posts": sorted(posts, key=lambda x: x["date"])}, indent=1))
     for k, v in months.items():
         print(f"{k}: own posts {v['own_posts']}, reposts {v['reposts']}")
 

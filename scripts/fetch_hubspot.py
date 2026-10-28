@@ -110,6 +110,58 @@ def call(s, method, path, partial_ok=False, **kw):
     return r.json()
 
 
+EMAIL_ADDRESS = re.compile(r"[\w.+-]+@[\w-]+\.[\w.]+")
+
+
+def marketing_emails(s, since):
+    """Marketing emails sent since `since`, with HubSpot's own send, open and click counts (for Look up).
+    Only the email's name and subject are kept, never who it went to. Optional: a problem here is reported
+    in the file instead of stopping the whole HubSpot update (added 28 Oct 2026)."""
+    rows, after = [], None
+    while True:
+        r = s.get(f"{API}/marketing/v3/emails", params={"limit": 100, "includeStats": "true", **({"after": after} if after else {})}, timeout=60)
+        if r.status_code != 200:
+            return {"error": f"HubSpot marketing emails returned {r.status_code}: {r.text[:200]}", "rows": []}
+        j = r.json()
+        for e in j.get("results", []):
+            sent_on = (e.get("publishDate") or "")[:10]
+            counters = (e.get("stats") or {}).get("counters") or {}
+            if not sent_on or sent_on < since or not counters.get("sent"):
+                continue   # drafts and emails never sent have no numbers
+            name, subject = e.get("name") or "", e.get("subject") or ""
+            if EMAIL_ADDRESS.search(name) or EMAIL_ADDRESS.search(subject):
+                continue   # never publish an email address
+            delivered = counters.get("delivered") or counters.get("sent")
+            rows.append({"sent_on": sent_on, "name": name, "subject": subject, "kind": e.get("type") or "",
+                         "sends": counters.get("sent", 0), "opens": counters.get("open", 0), "clicks": counters.get("click", 0),
+                         "open_rate_pct": round(counters.get("open", 0) / delivered * 100, 1) if delivered else None,
+                         "click_rate_pct": round(counters.get("click", 0) / delivered * 100, 1) if delivered else None})
+        after = (j.get("paging") or {}).get("next", {}).get("after")
+        if not after:
+            return {"error": None, "rows": sorted(rows, key=lambda x: x["sent_on"])}
+
+
+def all_lists(s):
+    """Every HubSpot list's name and how many people are on it (for Look up). No members are read."""
+    rows, offset = [], 0
+    while True:
+        r = s.post(f"{API}/crm/v3/lists/search", json={"query": "", "count": 500, "offset": offset, "additionalProperties": ["hs_list_size"]}, timeout=60)
+        if r.status_code != 200:
+            return {"error": f"HubSpot lists returned {r.status_code}: {r.text[:200]}", "rows": []}
+        j = r.json()
+        for l in j.get("lists", []):
+            name = l.get("name") or ""
+            if EMAIL_ADDRESS.search(name):
+                continue
+            size = (l.get("additionalProperties") or {}).get("hs_list_size")
+            rows.append({"name": name, "people": int(size) if size not in (None, "") else None,
+                         "kind": {"DYNAMIC": "Active", "MANUAL": "Static", "SNAPSHOT": "Static"}.get(l.get("processingType"), l.get("processingType") or ""),
+                         "updated_on": (l.get("updatedAt") or "")[:10]})
+        if not j.get("hasMore"):
+            return {"error": None, "rows": sorted(rows, key=lambda x: x["name"].lower())}
+        offset = j.get("offset", offset + 500)
+
+
 def search(s, obj, filters, props):
     rows, after = [], None
     while True:
@@ -385,6 +437,8 @@ def main():
         "events": events,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
+        "emails": marketing_emails(s, START_DATE),
+        "lists": all_lists(s),
     }
     OUT.write_text(json.dumps(out, indent=1))
     by = lambda rows, key: dict(collections.Counter(r[key] for r in rows))
@@ -393,6 +447,8 @@ def main():
     print("  contacts by channel:", by(contacts.values(), "channel"))
     print("  LinkedIn fields matched:", out["linkedin_fields"])
     print(f"  meetings linked to marketing contacts: {len(meeting_rows)} of {len(meetings)}; by kind {by(meeting_rows, 'kind')}")
+    for key in ("emails", "lists"):
+        print(f"  {key}: {len(out[key]['rows'])}" + (f" (problem: {out[key]['error']})" if out[key]["error"] else ""))
     print("  deal lines:", [(d["month"], d["came_from"], d["product"]) for d in out["deal_lines"]])
     t = out["deals_total"]
     print(f"  deals: open {t['open_count']} (${t['open_amount']:,.0f}), won {t['won_count']} (${t['won_amount']:,.0f}), "

@@ -17,8 +17,16 @@ jobs:
         run: |
           python -m pip install -q -r requirements.txt
           python scripts/fetch_hubspot.py
+      - name: Count Kumar's posts with Apify (doesn't change the page)
+        continue-on-error: true
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python scripts/count_kumar_posts.py
       - uses: actions/upload-artifact@v4
         with:
           name: hubspot-check
-          path: data/hubspot.json
+          path: |
+            data/hubspot.json
+            data/kumar_post_list.json
+            data/kumar_posts.json
           retention-days: 1

@@ -90,6 +90,20 @@ def join(label, older, newer, key, unsure):
     return [r for r in older if r[key] not in new] + newer
 
 
+def word_index(text):
+    """A post's words as short scrambled codes (FNV-1a, 32 bits), so Look up can tell whether a post mentions
+    a word without the file holding the post's text, which often names people. Words of 3+ letters, each once."""
+    out = []
+    for w in dict.fromkeys(re.findall(r"[a-z0-9]+", (text or "").lower())):
+        if len(w) < 3:
+            continue
+        h = 0x811C9DC5
+        for b in w.encode():
+            h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+        out.append(f"{h:08x}")
+    return out
+
+
 def check_days(label, dates, start=START, end=END):
     first, last = dt.date.fromisoformat(start), dt.date.fromisoformat(end)
     want = [(first + dt.timedelta(days=i)).isoformat() for i in range((last - first).days + 1)]
@@ -119,6 +133,7 @@ def company(files=COMPANY, start=START, end=END):
             "paid": r["Post type"] != "Organic", "video": r["Content Type"] == "Video",
             "seen": int(r["Impressions"]), "clicks": int(r["Clicks"]),
             "likes": int(r["Likes"]), "comments": int(r["Comments"]),
+            "words": word_index(r["Post title"]),   # for Look up: whole post, scrambled
         })
 
     followers = by_header(xls_sheet(files["followers"], "New followers"), 0)
