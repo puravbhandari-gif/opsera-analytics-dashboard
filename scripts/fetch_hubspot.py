@@ -19,6 +19,7 @@ import os
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 import requests
@@ -40,7 +41,46 @@ AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perple
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
 CONTACT_PROPS = ["createdate", "hs_object_source", "hs_analytics_source", "hs_analytics_source_data_1", "hs_analytics_source_data_2",
                  "hs_analytics_first_referrer", "utm_source", "utm_source_fc", "utm_source_rc", "luma_referrer",
-                 "first_conversion_event_name", "recent_conversion_event_name"]
+                 "first_conversion_event_name", "recent_conversion_event_name", "hs_analytics_first_url"]
+
+# How each deal came in (agreed 27 Oct 2026): one line per marketing deal, open or won, with no company,
+# person or job title. HubSpot has no product field, so the product comes from words in the deal name;
+# only the product is kept, never the name. Checked in order; a deal can name more than 1 product.
+PRODUCTS = [(r"sfdc|salesforce|agentforce|agentforge", "Salesforce DevOps"), (r"brickforge", "BrickForge"),
+            (r"(?<!brick)(?<!agent)forge", "Forge"), (r"unified insights|dora", "Unified Insights"),
+            (r"copilot", "Copilot"), (r"platform|sdlc", "Platform"), (r"\bagents?\b", "Agents"), (r"pipeline", "Pipelines")]
+SOURCE_NAMES = {"ORGANIC_SEARCH": "Search engines", "DIRECT_TRAFFIC": "Direct", "PAID_SEARCH": "Paid search", "PAID_SOCIAL": "Paid social",
+                "SOCIAL_MEDIA": "Social media", "EMAIL_MARKETING": "Email", "REFERRALS": "Other websites", "AI_REFERRALS": "AI tools",
+                "OTHER_CAMPAIGNS": "Other campaigns", "OFFLINE": "Offline (import, event or sales tool)"}
+
+
+def first_came_from(p):
+    """Where the person first came from, in plain words."""
+    src = p.get("hs_analytics_source") or ""
+    detail = f"{p.get('hs_analytics_source_data_1') or ''} {p.get('hs_analytics_first_referrer') or ''}".lower()
+    if linkedin_fields(p):
+        return "LinkedIn"
+    if src == "ORGANIC_SEARCH" and "google" in detail:
+        return "Google search"
+    if src == "AI_REFERRALS":
+        return f"AI tools ({ai_tool(p)})" if ai_tool(p) not in (None, "other") else "AI tools"
+    return SOURCE_NAMES.get(src, "Not recorded")
+
+
+def first_page(url):
+    """The first page as an opsera.ai address, cut at "?" (no tracking codes)."""
+    if not url:
+        return "Not recorded"
+    u = urlparse(url)
+    path = (u.path.split("@")[0].rstrip("/") or "/")
+    return path if u.netloc in ("opsera.ai", "www.opsera.ai") else f"{u.netloc}{path}"
+
+
+def products_in(name):
+    found = [label for pattern, label in PRODUCTS if re.search(pattern, (name or "").lower())]
+    if "Salesforce DevOps" in found and "Pipelines" in found:
+        found.remove("Pipelines")   # Salesforce pipelines are part of Salesforce DevOps
+    return ", ".join(dict.fromkeys(found)) or "Not named in the deal"
 
 
 def stop(msg):
@@ -200,7 +240,8 @@ def main():
             continue
         contacts[c["id"]] = {"line": "form", "date": pacific_day(p["createdate"]), "channel": channel(p), "linkedin_fields": linkedin_fields(p),
                              "demo": "demo" in (p.get("first_conversion_event_name") or "").lower(), "first_form": p.get("first_conversion_event_name") or "(none)",
-                             "tool": ai_tool(p)}
+                             "tool": ai_tool(p), "came_from": first_came_from(p), "first_page": first_page(p.get("hs_analytics_first_url")),
+                             "first_form_short": (p.get("first_conversion_event_name") or "Not recorded").split(" — ")[0].split(" - Opsera")[0].strip()}
 
     # Event lists, each its own line. Luma-imported guests also count as marketing contacts (line "luma").
     found = {l["name"]: l for l in call(s, "POST", "/crm/v3/lists/search", json={"query": "", "count": 500}).get("lists", [])}
@@ -233,7 +274,9 @@ def main():
                         joined_on = next((pacific_day(m["membershipTimestamp"]) for m in members if str(m["recordId"]) == c["id"] and m.get("membershipTimestamp")),
                                          pacific_day(p["createdate"]))
                         contacts[c["id"]] = {"line": "luma", "date": joined_on, "channel": "linkedin" if linkedin_fields(p) else "events",
-                                             "linkedin_fields": linkedin_fields(p), "demo": False, "first_form": "(Luma import)"}
+                                             "linkedin_fields": linkedin_fields(p), "demo": False, "first_form": "(Luma import)",
+                                             "came_from": first_came_from(p), "first_page": first_page(p.get("hs_analytics_first_url")),
+                                             "first_form_short": "Luma event sign-up"}
 
     # Deals linked to a marketing contact. Only deals created on or after the day the person became a
     # marketing contact count as pipeline; older deals mark the person as an existing customer (agreed 22 Oct 2026).
@@ -246,7 +289,7 @@ def main():
                   for pl in call(s, "GET", "/crm/v3/pipelines/deals")["results"] for st in pl["stages"]}
         for i in range(0, len(ids), 100):
             j = call(s, "POST", "/crm/v3/objects/deals/batch/read", json={"inputs": [{"id": x} for x in ids[i:i + 100]],
-                                                                          "properties": ["createdate", "amount", "dealstage", "pipeline"]})
+                                                                          "properties": ["createdate", "amount", "dealstage", "pipeline", "dealname"]})
             for d in j.get("results", []):
                 p = d["properties"]
                 owner_ids = [c for c, ds in c_deals.items() if d["id"] in ds]
@@ -259,7 +302,9 @@ def main():
                 deal_rows.append({"date": created, "channel": first["channel"], "line": first["line"], "demo": first["demo"], "tool": first.get("tool"),
                                   "counts": "marketing" if created >= first["date"] else "existing",
                                   "amount": float(p.get("amount") or 0), "pipeline": pipeline, "stage": stage,
-                                  "won": closed and prob >= 1, "lost": closed and prob == 0})
+                                  "won": closed and prob >= 1, "lost": closed and prob == 0,
+                                  "came_from": first["came_from"], "first_page": first["first_page"], "first_form": first["first_form_short"],
+                                  "product": products_in(p.get("dealname"))})   # the deal name itself is never kept
 
     # Meetings linked to a marketing contact, dated by when they take place. Each meeting is put in one line:
     # after sign-up (counted), upcoming, existing customer, or before sign-up. Only the first is a meeting booked.
@@ -334,6 +379,9 @@ def main():
                            for (d, l, ch, k, dm), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"], m["demo"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
         **summarise_deals(deal_rows, end),
+        "deal_lines": [{"month": d["date"][:7], "amount": round(d["amount"]), "status": "Won" if d["won"] else "Open", "stage": d["stage"],
+                        "came_from": d["came_from"], "first_page": d["first_page"], "first_form": d["first_form"], "product": d["product"]}
+                       for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]],
         "events": events,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
@@ -345,6 +393,7 @@ def main():
     print("  contacts by channel:", by(contacts.values(), "channel"))
     print("  LinkedIn fields matched:", out["linkedin_fields"])
     print(f"  meetings linked to marketing contacts: {len(meeting_rows)} of {len(meetings)}; by kind {by(meeting_rows, 'kind')}")
+    print("  deal lines:", [(d["month"], d["came_from"], d["product"]) for d in out["deal_lines"]])
     t = out["deals_total"]
     print(f"  deals: open {t['open_count']} (${t['open_amount']:,.0f}), won {t['won_count']} (${t['won_amount']:,.0f}), "
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
