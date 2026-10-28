@@ -1,0 +1,81 @@
+{
+  "about": "Who is on the Team metrics tab and what each person tracks, in the order the tab shows them. Someone with no sections shows \"Metrics coming\". To add metrics, give the person sections like Purav's, picking metrics from the list in scripts/build_team_metrics.py. A goal of null shows as \"To set\". Goals are per month.",
+  "baseline": {
+    "start": "2026-07-01",
+    "end": "2026-09-30",
+    "label": "July to September 2026 monthly average"
+  },
+  "people": [
+    {
+      "name": "Purav Bhandari",
+      "sections": [
+        {
+          "title": "Website",
+          "metrics": [
+            {
+              "metric": "website_visits",
+              "goal": 15000
+            },
+            {
+              "metric": "search_and_ai_visits",
+              "goal": null
+            },
+            {
+              "metric": "asset_downloads",
+              "goal": null
+            },
+            {
+              "metric": "demo_requests",
+              "goal": null
+            }
+          ]
+        },
+        {
+          "title": "LinkedIn (company page)",
+          "metrics": [
+            {
+              "metric": "linkedin_unpaid_impressions",
+              "goal": 35000
+            },
+            {
+              "metric": "linkedin_visits",
+              "goal": null
+            },
+            {
+              "metric": "linkedin_asset_downloads",
+              "goal": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nassir",
+      "sections": []
+    },
+    {
+      "name": "Yusra Syed",
+      "sections": []
+    },
+    {
+      "name": "David Howard",
+      "sections": []
+    },
+    {
+      "name": "Sudeepa Prakash",
+      "sections": []
+    },
+    {
+      "name": "Anand D",
+      "sections": []
+    },
+    {
+      "name": "Aarushi",
+      "sections": []
+    },
+    {
+      "name": "Valentina Seveke",
+      "sections": []
+    }
+  ]
+}

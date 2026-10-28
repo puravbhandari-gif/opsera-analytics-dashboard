@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=20">
+<link rel="stylesheet" href="styles.css?v=21">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -49,6 +49,7 @@
     <button role="tab" data-tab="kahoots">Before: Kahoots</button>
     <button role="tab" data-tab="infrasity">Before: Infrasity</button>
     <button role="tab" data-tab="lookup">Look up</button>
+    <button role="tab" data-tab="team">Team metrics</button>
   </nav>
 </header>
 
@@ -690,6 +691,21 @@
     </details>
   </section>
 
+  <section id="tab-team" class="tab" role="tabpanel" hidden>
+    <h2>Team metrics</h2>
+    <p class="lead">Each person's monthly metrics, against their baseline and goal.</p>
+    <p class="note-inline">This tab always shows this month so far, whatever the period above.</p>
+    <div class="seg" id="team-people" role="group" aria-label="Choose a person"></div>
+    <p class="muted" id="team-status">Loading...</p>
+    <div id="team-body"></div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">The baseline is the July to September 2026 monthly average. This month counts from the 1st to each source's last full day. Goals are per month, and "To set" means nobody has set one yet.</p>
+      <p class="note">Search engines means Google Analytics' Organic Search group. AI tools follow the AEO tab, which counts them by source. Asset downloads are form fills on report, white paper, ebook and comparison guide pages.</p>
+      <p class="note">LinkedIn impressions come from LinkedIn exports, so they move on when someone adds a new export. Everything else updates every Monday.</p>
+    </details>
+  </section>
+
   <p class="error" id="error" hidden></p>
 </main>
 
@@ -698,6 +714,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=43"></script>
+<script src="app.js?v=45"></script>
 </body>
 </html>

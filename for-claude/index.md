@@ -117,6 +117,12 @@ We never add Shorts and long videos together.
 - [youtube_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_by_week.csv): YouTube tab, by week. Source: YouTube Analytics. 30 rows.
 - [youtube_videos.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_videos.csv): Each video's views and watch time, 2026-04-01 to 2026-10-24. Source: YouTube Analytics. 199 rows.
 
+## Team metrics tab
+
+Each person's metrics. The baseline is the July to September 2026 monthly average. "To set" means nobody has set a goal yet, so don't invent one. "Metrics coming" means the person hasn't sent their metrics yet.
+
+- [team_metrics.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/team_metrics.csv): Team metrics tab: each person's metrics, with the baseline (July to September 2026 monthly average), this month so far and the goal. 14 rows.
+
 ## Before: Kahoots and Before: Infrasity tabs
 
 These match the agencies' own reports exactly.

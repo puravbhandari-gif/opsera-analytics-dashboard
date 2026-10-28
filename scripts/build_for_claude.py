@@ -358,6 +358,14 @@ def main():
             (r.get("reported") or {}).get("click_rate_pct_change", ""), r["avg_spot"], r["forge_page_clicks"]] for r in inf],
           "What Infrasity reported by month, July to September 2026")
 
+    team = load("team_metrics.json")
+    write("team_metrics", ["person", "section", "metric", "baseline_monthly_average", "this_month_so_far", "counted_from", "counted_to",
+                           "goal_per_month", "share_of_goal_pct", "source"],
+          [[p["name"], sec["title"], m["label"], m["baseline"], "" if m["so_far"] is None else m["so_far"], m["so_far_start"], m["so_far_end"] or "",
+            m["goal"] if m["goal"] else "To set", "" if m["goal_share_pct"] is None else m["goal_share_pct"], m["source"]]
+           for p in team["people"] for sec in p["sections"] for m in sec["metrics"]]
+          + [[p["name"], "", "Metrics coming", "", "", "", "", "", "", ""] for p in team["people"] if not p["sections"]],
+          f"Team metrics tab: each person's metrics, with the baseline ({team['baseline']['label']}), this month so far and the goal")
     write_guide(ga_last, gsc_last, hub, li, kp, yt, est)
     for name, n, size, *_ in files:
         print(f"{name:52} {n:6} rows {size / 1000:6.1f} KB")
@@ -468,6 +476,12 @@ Company page means links tagged utm_campaign=brand-page. Kumar means utm_source=
 We never add Shorts and long videos together.
 
 {listing('youtube')}
+
+## Team metrics tab
+
+Each person's metrics. The baseline is the July to September 2026 monthly average. "To set" means nobody has set a goal yet, so don't invent one. "Metrics coming" means the person hasn't sent their metrics yet.
+
+{listing('team_metrics')}
 
 ## Before: Kahoots and Before: Infrasity tabs
 

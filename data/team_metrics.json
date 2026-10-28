@@ -1,0 +1,178 @@
+{
+ "baseline": {
+  "start": "2026-07-01",
+  "end": "2026-09-30",
+  "label": "July to September 2026 monthly average",
+  "months": [
+   "2026-07",
+   "2026-08",
+   "2026-09"
+  ]
+ },
+ "month": "2026-10",
+ "month_days": 31,
+ "people": [
+  {
+   "name": "Purav Bhandari",
+   "sections": [
+    {
+     "title": "Website",
+     "metrics": [
+      {
+       "metric": "website_visits",
+       "label": "Website visits, overall",
+       "source": "Google Analytics",
+       "baseline": 11142.0,
+       "baseline_by_month": {
+        "2026-07": 9464,
+        "2026-08": 12145,
+        "2026-09": 11817
+       },
+       "so_far": 16493,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": 15000,
+       "goal_share_pct": 110.0
+      },
+      {
+       "metric": "search_and_ai_visits",
+       "label": "Visits from search engines and AI tools",
+       "source": "Google Analytics",
+       "baseline": 3749.3,
+       "baseline_by_month": {
+        "2026-07": 3847,
+        "2026-08": 3583,
+        "2026-09": 3818
+       },
+       "so_far": 3492,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": null,
+       "goal_share_pct": null
+      },
+      {
+       "metric": "asset_downloads",
+       "label": "Asset downloads (reports, white papers, ebooks, comparison guides)",
+       "source": "Google Analytics",
+       "baseline": 41.3,
+       "baseline_by_month": {
+        "2026-07": 65,
+        "2026-08": 38,
+        "2026-09": 21
+       },
+       "so_far": 7,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": null,
+       "goal_share_pct": null
+      },
+      {
+       "metric": "demo_requests",
+       "label": "Demo requests",
+       "source": "Google Analytics",
+       "baseline": 8.0,
+       "baseline_by_month": {
+        "2026-07": 10,
+        "2026-08": 8,
+        "2026-09": 6
+       },
+       "so_far": 20,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": null,
+       "goal_share_pct": null
+      }
+     ]
+    },
+    {
+     "title": "LinkedIn (company page)",
+     "metrics": [
+      {
+       "metric": "linkedin_unpaid_impressions",
+       "label": "Impressions, unpaid",
+       "source": "LinkedIn exports",
+       "baseline": 22861.7,
+       "baseline_by_month": {
+        "2026-07": 23526,
+        "2026-08": 27490,
+        "2026-09": 17569
+       },
+       "so_far": 33198,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-25",
+       "days_counted": 25,
+       "goal": 35000,
+       "goal_share_pct": 94.9
+      },
+      {
+       "metric": "linkedin_visits",
+       "label": "Visits to opsera.ai from LinkedIn",
+       "source": "Google Analytics",
+       "baseline": 449.3,
+       "baseline_by_month": {
+        "2026-07": 629,
+        "2026-08": 458,
+        "2026-09": 261
+       },
+       "so_far": 211,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": null,
+       "goal_share_pct": null
+      },
+      {
+       "metric": "linkedin_asset_downloads",
+       "label": "Asset downloads from LinkedIn visits",
+       "source": "Google Analytics",
+       "baseline": 3.0,
+       "baseline_by_month": {
+        "2026-07": 6,
+        "2026-08": 0,
+        "2026-09": 3
+       },
+       "so_far": 0,
+       "so_far_start": "2026-10-01",
+       "so_far_end": "2026-10-26",
+       "days_counted": 26,
+       "goal": null,
+       "goal_share_pct": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Nassir",
+   "sections": []
+  },
+  {
+   "name": "Yusra Syed",
+   "sections": []
+  },
+  {
+   "name": "David Howard",
+   "sections": []
+  },
+  {
+   "name": "Sudeepa Prakash",
+   "sections": []
+  },
+  {
+   "name": "Anand D",
+   "sections": []
+  },
+  {
+   "name": "Aarushi",
+   "sections": []
+  },
+  {
+   "name": "Valentina Seveke",
+   "sections": []
+  }
+ ]
+}

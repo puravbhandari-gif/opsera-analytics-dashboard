@@ -380,7 +380,8 @@ def linkedin_visits(s, end):
             continue
         line = next((k for k, _, match in LEAD_LINES if match(page)), "other")
         g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
-        row = forms.setdefault((r["date"], g, line), {"date": r["date"], "group": g, "line": line, "count": 0})
+        asset = (page + "/").startswith(ASSET_PAGES)   # a report, white paper, ebook or comparison guide download
+        row = forms.setdefault((r["date"], g, line, asset), {"date": r["date"], "group": g, "line": line, "asset": asset, "count": 0})
         row["count"] += r["eventCount"]
     # The path homepage -> /demo -> demo form, per visit, for each LinkedIn line
     path = {}

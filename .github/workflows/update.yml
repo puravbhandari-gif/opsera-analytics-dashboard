@@ -72,6 +72,12 @@ jobs:
         continue-on-error: true
         run: python scripts/estimate_linkedin.py
 
+      # Optional: if this fails, the Team metrics tab keeps last week's numbers and everything else still updates.
+      - name: Work out the team metrics (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/build_team_metrics.py
+
       # Optional: if this fails, the plain-text files keep last week's numbers and everything else still updates.
       - name: Write the plain-text files for AI assistants (optional)
         if: github.event_name != 'push'

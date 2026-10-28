@@ -1527,6 +1527,56 @@ function renderLookup(d) {
   search();
 }
 
+// ---------- Team metrics: each person's metrics against their baseline and goal ----------
+
+let teamLoad = null;   // data/team_metrics.json is loaded the first time the tab is opened
+function openTeam() {
+  if (!teamLoad) teamLoad = load("team_metrics.json").then(renderTeam)
+    .catch((err) => { $("team-status").textContent = `Couldn't load the team metrics: ${err.message}`; });
+  return teamLoad;
+}
+
+function renderTeam(t) {
+  const monthName = (m) => MONTH_NAMES[toDate(`${m}-01`).getUTCMonth()];
+  const baseLabel = `${monthName(t.baseline.months[0]).slice(0, 3)} to ${monthName(t.baseline.months[t.baseline.months.length - 1]).slice(0, 3)} average`;
+  const zone = { "Google Analytics": "Pacific time", "LinkedIn exports": "UTC" };
+  const tile = (m) => {
+    const along = m.goal && m.so_far != null
+      ? `<div class="goal-bar" aria-hidden="true"><span style="width:${Math.min(100, m.goal_share_pct)}%"></span></div>
+         <div class="sub">${m.goal_share_pct.toFixed(0)}% of goal, with ${m.days_counted} of ${t.month_days} days counted</div>`
+      : "";
+    return `<div class="card"><div class="label">${esc(m.label)}</div>
+      <div class="value">${m.so_far == null ? "-" : num(m.so_far)}</div>
+      <div class="sub">This month so far. Baseline: ${num(m.baseline)} a month (${baseLabel})</div>
+      <div class="sub">Goal: ${m.goal ? `${num(m.goal)} a month` : "To set"}</div>${along}</div>`;
+  };
+  const sources = (metrics) => {
+    const seen = new Map();
+    metrics.forEach((m) => seen.set(m.source, m));
+    return [...seen.values()].map((m) => (m.so_far_end
+      ? `${m.source}, ${range(m.so_far_start, m.so_far_end)} (${zone[m.source] || "Pacific time"})`
+      : `${m.source}, no data for ${monthName(t.month)} yet`)).join(". ");
+  };
+  const person = (p) => `<h3 class="section-title person-name">${esc(p.name)}</h3>` + (p.sections.length ? "" : `<p class="muted">Metrics coming</p>`) + p.sections.map((sec) => `
+    <h4>${esc(sec.title)}</h4>
+    <div class="cards">${sec.metrics.map(tile).join("")}</div>
+    <p class="source">${sec.metrics.length > 1 && new Set(sec.metrics.map((m) => m.source)).size > 1 ? "Sources" : "Source"}: ${esc(sources(sec.metrics))}. Baseline: ${monthName(t.baseline.months[0])} to ${monthName(t.baseline.months[t.baseline.months.length - 1])} ${t.baseline.months[0].slice(0, 4)}.</p>`).join("");
+  let who = t.people[0] ? t.people[0].name : "";   // the first person in team.json shows first
+  const draw = () => {
+    $("team-body").innerHTML = t.people.filter((p) => who === "Everyone" || p.name === who).map(person).join("");
+  };
+  $("team-people").innerHTML = [...t.people.map((p) => p.name), "Everyone"].map((n) =>
+    `<button data-who="${esc(n)}" class="${n === who ? "on" : ""}">${esc(n)}</button>`).join("");
+  $("team-people").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    who = b.dataset.who;
+    $("team-people").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b));
+    draw();
+  });
+  $("team-status").textContent = "";
+  draw();
+}
+
 // ---------- tabs and theme ----------
 
 function showTab(name) {
@@ -1536,6 +1586,7 @@ function showTab(name) {
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "lookup") openLookup();
+  if (name === "team") openTeam();
 }
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 document.querySelector(".tabs").addEventListener("click", (e) => {

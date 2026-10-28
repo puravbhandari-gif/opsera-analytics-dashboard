@@ -33898,138 +33898,161 @@
     "date": "2026-04-08",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-04-09",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-04-21",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-04-27",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 2
    },
    {
     "date": "2026-04-29",
     "group": "untagged",
     "line": "demo",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-05-14",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 2
    },
    {
     "date": "2026-05-15",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-06-08",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-06-09",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-06-25",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-07-08",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-07-24",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-07-27",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 4
    },
    {
     "date": "2026-08-26",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 4
    },
    {
     "date": "2026-08-29",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-09-01",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 1
    },
    {
     "date": "2026-09-11",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-09-13",
     "group": "untagged",
     "line": "events",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-09-15",
     "group": "untagged",
     "line": "other",
+    "asset": true,
     "count": 2
    },
    {
     "date": "2026-09-19",
     "group": "untagged",
     "line": "other",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-10-04",
     "group": "untagged",
     "line": "demo",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-10-13",
     "group": "company",
     "line": "demo",
+    "asset": false,
     "count": 1
    },
    {
     "date": "2026-10-15",
     "group": "untagged",
     "line": "gartner_offer",
+    "asset": false,
     "count": 1
    }
   ]
