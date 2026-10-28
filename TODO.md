@@ -15,6 +15,19 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform), which both Opsera and Kumar posted. It needs a redirect on the website.
 - [ ] Tag Kumar's "Visit my website" button.
 - [ ] Add "How did you hear about us" to the demo form (David).
+- [ ] Add redirects for old links now showing Page not found. Each address, then the live page it should go to (checked 28 Oct 2026):
+  - /resources/whitepapers to /resources
+  - /resources/guides to /resources
+  - /resources/blog to /blog
+  - /resources/reports to /resources
+  - /resources/customer-stories to /customer-stories
+  - /blog/what-is-deployment-frequency to /knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine
+  - /blog/ai-coding-impact-2026-benchmark-report to /resources/report/ai-coding-impact-2026-benchmark-report
+  - /resources/report/ai-coding-impact-2025-benchmark-report to /resources/report/ai-coding-impact-2026-benchmark-report (the newest edition)
+  - /resources/ai-coding-impact-benchmark-2026 to /resources/report/ai-coding-impact-2026-benchmark-report
+  - /resources/state-of-ai-in-software-delivery-2025 to /resources/report/ai-coding-impact-2026-benchmark-report (the current AI report; or /newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes, the 2025 report's announcement)
+  - /blog/dora-vs-space-metrics to /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework
+  - /knowledge-base/quality-risk/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders to /knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders
 
 ## Dashboard
 
