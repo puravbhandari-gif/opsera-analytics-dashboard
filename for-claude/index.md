@@ -88,6 +88,8 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 - [google_search_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_month.csv): Google search tab, by month. Source: Search Console. A lower average spot is better. 7 rows.
 - [google_search_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_week.csv): Google search tab, by week. Source: Search Console. A lower average spot is better. 30 rows.
 - [google_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_top_searches.csv): The searches bringing the most Google clicks, 2026-04-01 to 2026-10-25. Source: Search Console. Google hides rare searches. 600 rows.
+- [google_rankings_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_by_week.csv): Average spot on Google, Monday-to-Sunday weeks, for the homepage, the 8 product pages and the top 20 blogs and resources by visits since 2026-09-30. 1 is the top. Source: Google Search Console, up to 2026-10-25. 458 rows.
+- [google_rankings_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_top_searches.csv): The top 10 searches for each key page, 2026-07-29 to 2026-10-25. Source: Google Search Console. 286 rows.
 
 ## AEO tab: visits from AI tools
 

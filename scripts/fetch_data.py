@@ -545,6 +545,65 @@ def fix_titles(pages, titles):
     return titles
 
 
+# The product pages in the site's own menu (checked 28 Oct 2026), plus the homepage
+KEY_PAGES = [("/", "Homepage"), ("/software-factory", "Product"), ("/forge", "Product"), ("/forge/modernization", "Product"),
+             ("/unified-insights", "Product"), ("/agents", "Product"), ("/agentic-devops", "Product"),
+             ("/salesforce-devops", "Product"), ("/brickforge", "Product")]
+TOP_CONTENT = 20
+
+
+def rankings(s, end, gsc_site):
+    """Average Google spot week by week for the key pages and the top 20 blogs and resources, with each page's
+    top searches. Blogs and resources are picked by visits (landing page) since the new site went live."""
+    def is_content(p):
+        parts = p.strip("/").split("/")
+        return (parts[0] == "blog" and len(parts) >= 2) or (parts[0] == "resources" and len(parts) >= 3)
+    visits = {}
+    for r in ga_report(s, end, ["landingPage"], ["sessions"], start=NEW_SITE_LIVE):
+        p = page_key(r["landingPage"])
+        if is_content(p):
+            visits[p] = visits.get(p, 0) + r["sessions"]
+    top = sorted(visits, key=lambda p: -visits[p])[:TOP_CONTENT]
+    pages = KEY_PAGES + [(p, "Blog" if p.startswith("/blog/") else "Resource") for p in top]
+    keys = {p for p, _ in pages}
+
+    weekly = {}
+    last = START_DATE
+    for r in gsc_query(s, gsc_site, START_DATE, end, ["date", "page"]):
+        p = page_key(urlparse(r["keys"][1]).path or "/")
+        if p not in keys:
+            continue
+        d = dt.date.fromisoformat(r["keys"][0])
+        last = max(last, r["keys"][0])
+        wk = (d - dt.timedelta(days=d.weekday())).isoformat()
+        w = weekly.setdefault((p, wk), [0, 0, 0.0])
+        w[0] += r["clicks"]; w[1] += r["impressions"]; w[2] += r["position"] * r["impressions"]
+    q_start = (dt.date.fromisoformat(end) - dt.timedelta(days=89)).isoformat()
+    searches = {}
+    for r in gsc_query(s, gsc_site, q_start, end, ["page", "query"]):
+        p = page_key(urlparse(r["keys"][0]).path or "/")
+        if p in keys:
+            x = searches.setdefault(p, {}).setdefault(r["keys"][1], [0, 0, 0.0])
+            x[0] += r["clicks"]; x[1] += r["impressions"]; x[2] += r["position"] * r["impressions"]
+    titles = {}
+    for r in ga_report(s, end, ["pagePath", "pageTitle"], ["screenPageViews"], start=NEW_SITE_LIVE):
+        p = page_key(r["pagePath"])
+        if p in keys and r["screenPageViews"] > titles.get(p, ("", -1))[1]:
+            titles[p] = (r["pageTitle"], r["screenPageViews"])
+    order = [p for p, _ in pages]
+    fixed = fix_titles(order, [titles.get(p, ("", 0))[0] for p in order])
+    titles = {p: (t, 0) for p, t in zip(order, fixed)}
+    out = []
+    for p, group in pages:
+        weeks = [{"week": wk, "clicks": c, "times_shown": n, "avg_spot": round(pos / n, 1)}
+                 for (pp, wk), (c, n, pos) in sorted(weekly.items()) if pp == p and n]
+        top_q = sorted(searches.get(p, {}).items(), key=lambda kv: (-kv[1][0], -kv[1][1]))[:10]
+        out.append({"page": p, "group": group, "title": titles.get(p, ("", 0))[0], "visits_since_new_site": visits.get(p),
+                    "weeks": weeks,
+                    "searches": [{"search": q, "clicks": c, "times_shown": n, "avg_spot": round(pos / n, 1)} for q, (c, n, pos) in top_q if n]})
+    return {"pages": out, "last_day_with_data": last, "searches_from": q_start, "new_site_live": NEW_SITE_LIVE}
+
+
 def lookup(s, end, gsc_site):
     """Daily numbers by page and by campaign, packed small (the tab loads them only when opened).
     Each row starts with the day number counted from START_DATE. Sources are never added together."""
@@ -626,6 +685,8 @@ def main():
     write("analytics.json", ga, meta)
     write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data},
           {**meta, "start_date": LEADS_START})
+    write("rankings.json", {"source": f"Google Search Console, {gsc['source'].split(', ', 1)[1]}, and Google Analytics 4, {GA_PROPERTY_NAME}",
+                            **rankings(s, end, gsc["source"].split(", ", 1)[1])}, meta)
     look = lookup(s, end, gsc["source"].split(", ", 1)[1])
     write("lookup.json", {**look, "gsc_last_day": gsc["last_day_with_data"]}, meta, compact=True)
 

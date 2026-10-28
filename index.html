@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=25">
+<link rel="stylesheet" href="styles.css?v=26">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -93,6 +93,22 @@
       </div>
       <div class="chart-box short"><canvas id="search-cmp-chart" aria-label="Google search by week or month"></canvas></div>
       <p class="source" id="search-cmp-chart-source"></p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-head">
+        <h3 id="rank-title">Google rankings for key pages</h3>
+        <label class="pick">Page <select id="rank-page" aria-label="Choose a page"></select></label>
+      </div>
+      <div class="chart-box short"><canvas id="rank-chart" aria-label="Average spot on Google week by week for one page"></canvas></div>
+      <p class="source" id="rank-chart-source"></p>
+      <h3 class="sub-title" id="rank-searches-title">Top searches</h3>
+      <div id="rank-searches"></div>
+      <p class="source" id="rank-searches-source"></p>
+      <h3 class="sub-title">All key pages</h3>
+      <div id="rank-table"></div>
+      <p class="source" id="rank-table-source"></p>
+      <p class="note">The spot is a page's average position on Google, weighted by how often Google showed it. 1 is the top, and 11 or more is page 2. Key pages are the homepage, the 8 product pages in the site's menu, and the 20 blogs and resources with the most visits since the new site went live on 30 Sep 2026.</p>
     </div>
 
     <details class="more">
@@ -769,6 +785,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=62"></script>
+<script src="app.js?v=63"></script>
 </body>
 </html>

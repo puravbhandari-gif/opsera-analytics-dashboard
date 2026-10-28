@@ -1966,6 +1966,72 @@ function openTodo() {
 
 // ---------- tabs and theme ----------
 
+// ---------- Google rankings for key pages (Google search tab), loaded when the tab opens ----------
+
+let rankingsOpened = false;
+function openRankings() {
+  if (rankingsOpened) return;
+  rankingsOpened = true;
+  load("rankings.json").then(renderRankings).catch((e) => { $("rank-chart-source").textContent = e.message; });
+}
+function renderRankings(d) {
+  const last = d.last_day_with_data;
+  const weeks = [];
+  for (let w = weekStart(d.start_date); w <= last; w = addDays(w, 7)) weeks.push(w);
+  const latest = weeks[weeks.length - 1], before = weeks[weeks.length - 5];
+  const latestFull = addDays(latest, 6) <= last;
+  const wkLabel = (w) => `${day(w < d.start_date ? d.start_date : w)} to ${day(addDays(w, 6) > last ? last : addDays(w, 6))}`;
+  const name = (p) => p.title.replace(/\s*[|—–-]\s*Opsera\s*$/i, "").replace(/^Opsera\s*[—–-]\s*/i, "") || p.page;
+  const spotOf = (p, w) => p.weeks.find((x) => x.week === w)?.avg_spot ?? null;
+  const pageLink = (p) => `<a href="https://opsera.ai${encodeURI(p.page)}" target="_blank" rel="noopener">${esc(name(p))}</a><br><span class="muted">${esc(p.page)}</span>`;
+  const src = `Source: Google Search Console, ${range(d.start_date, last)}. Weeks run Monday to Sunday.`;
+
+  const pick = $("rank-page");
+  pick.innerHTML = ["Homepage", "Product", "Blog", "Resource"].map((g) => {
+    const list = d.pages.filter((p) => p.group === g);
+    return list.length ? `<optgroup label="${g === "Homepage" ? "Homepage" : `${g}s`}">${list.map((p) => `<option value="${esc(p.page)}">${esc(name(p))}</option>`).join("")}</optgroup>` : "";
+  }).join("");
+  let cur = d.pages[0];
+  chart("rank-chart", (th) => ({
+    type: "line", reverse: true, ytitle: "Higher on the chart is a better spot", yfmt: (v) => v,
+    dates: weeks.map((w) => [w, addDays(w, 6)]),
+    data: { labels: weeks.map(wkLabel), datasets: [{ ...line("Average spot on Google", weeks.map((w) => spotOf(cur, w)), th.s[0]), pointRadius: 3, spanGaps: false }] },
+    tooltip: { label: (c) => ` Average spot: ${spot(c.parsed.y)}`,
+      afterLabel: (c) => { const x = cur.weeks.find((w) => w.week === weeks[c.dataIndex]); return x ? ` Shown ${num(x.times_shown)} times, ${num(x.clicks)} clicks` : ""; } },
+  }));
+  const fillPage = () => {
+    $("rank-title").textContent = `Google rankings: ${name(cur)}`;
+    $("rank-chart-source").textContent = `${src} A gap means Google didn't show the page that week.`;
+    $("rank-searches-title").textContent = `Top searches for ${name(cur)}, last 3 months`;
+    table($("rank-searches"), { rows: cur.searches, sortKey: "clicks", columns: [
+      { key: "search", label: "Search" },
+      { key: "clicks", label: "Clicks", num: true, fmt: num },
+      { key: "times_shown", label: "Times Google showed it", num: true, fmt: num },
+      { key: "avg_spot", label: "Average spot", num: true, fmt: spot },
+    ] });
+    $("rank-searches-source").textContent = `Source: Google Search Console, ${range(d.searches_from, last)}. The 10 searches with the most clicks, then the most times shown. Google hides rare searches.`;
+    draw(charts.find((c) => c.id === "rank-chart"));
+  };
+  pick.addEventListener("change", () => { cur = d.pages.find((p) => p.page === pick.value); fillPage(); });
+  fillPage();
+
+  const rows = d.pages.map((p) => {
+    const now = spotOf(p, latest), then = spotOf(p, before);
+    return { p, page: name(p), group: p.group, now, then, change: now != null && then != null ? Math.round((then - now) * 10) / 10 : null,
+      clicks: p.weeks.find((x) => x.week === latest)?.clicks ?? 0, visits: p.visits_since_new_site };
+  });
+  table($("rank-table"), { rows, search: "pages", sortKey: null, columns: [
+    { key: "page", label: "Page", search: true, fmt: (v, r) => pageLink(r.p), csv: (r) => `${r.page} | ${r.p.page}` },
+    { key: "group", label: "Kind", search: true },
+    { key: "now", label: `Spot, ${wkLabel(latest)}`, num: true, fmt: spot },
+    { key: "then", label: `Spot, ${wkLabel(before)}`, num: true, fmt: spot },
+    { key: "change", label: "Change", num: true, fmt: (v) => (v == null ? "-" : v > 0 ? `Up ${v.toFixed(1)}` : v < 0 ? `Down ${(-v).toFixed(1)}` : "No change"), csv: (r) => r.change ?? "" },
+    { key: "clicks", label: `Clicks, ${wkLabel(latest)}`, num: true, fmt: num },
+    { key: "visits", label: "Visits since 30 Sep", num: true, fmt: num },
+  ] });
+  $("rank-table-source").textContent = `Source: Google Search Console for spots and clicks, ${range(d.start_date, last)}${latestFull ? "" : " (the last week isn't finished)"}. Visits since 30 Sep are from Google Analytics, for blogs and resources only. Up means a better spot.`;
+}
+
 function showTab(name) {
   if (!$(`tab-${name}`)) name = "team";   // the dashboard opens on Team metrics, the first tab (agreed 28 Oct 2026)
   view.tab = name; saveView();
@@ -1977,6 +2043,7 @@ function showTab(name) {
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
   if (name === "content") openContent();
+  if (name === "search") openRankings();
   // the footer views have no tab in the row, so start them at the top of the page
   if (!document.querySelector(`.tabs button[data-tab="${name}"]`)) window.scrollTo(0, 0);
 }

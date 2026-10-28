@@ -233,3 +233,6 @@ details.more > summary:hover { color: var(--ink); }
 .gtm-tip strong { display: block; font-weight: 600; color: var(--ink); }
 .gtm-tip span { color: var(--muted); }
 .gtm-tip p { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
+/* Google rankings */
+.panel h3.sub-title { margin-top: 24px; }

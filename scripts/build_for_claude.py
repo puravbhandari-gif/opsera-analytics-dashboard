@@ -358,6 +358,14 @@ def main():
         write("google_ads_by_campaign", ["month", "campaign", "spend_usd", "ad_clicks", "visits", "demo_requests"],
               [[m, c, round(x[0], 2), x[1], x[2], x[3]] for (m, c), x in sorted(ads.items())],
               "Google Ads spend and ad clicks (counted by Google Ads) with visits and demo requests (counted by Google Analytics), per campaign per month. Brand search visits and demo requests from 16 Jun 2026 are too low because of a tracking problem. Source: Google Analytics, opsera.ai 2026, linked to Google Ads")
+    if (DATA / "rankings.json").exists():
+        rk = json.loads((DATA / "rankings.json").read_text())
+        write("google_rankings_by_week", ["week_starting", "page", "kind", "avg_spot", "clicks", "times_shown"],
+              [[w["week"], p["page"], p["group"], w["avg_spot"], w["clicks"], w["times_shown"]] for p in rk["pages"] for w in p["weeks"]],
+              f"Average spot on Google, Monday-to-Sunday weeks, for the homepage, the 8 product pages and the top 20 blogs and resources by visits since {rk['new_site_live']}. 1 is the top. Source: Google Search Console, up to {rk['last_day_with_data']}")
+        write("google_rankings_top_searches", ["page", "kind", "search", "clicks", "times_shown", "avg_spot"],
+              [[p["page"], p["group"], q["search"], q["clicks"], q["times_shown"], q["avg_spot"]] for p in rk["pages"] for q in p["searches"]],
+              f"The top 10 searches for each key page, {rk['searches_from']} to {rk['last_day_with_data']}. Source: Google Search Console")
     if (DATA / "gtm_calendar.json").exists():
         gtm = json.loads((DATA / "gtm_calendar.json").read_text())
         write("gtm_calendar", ["ship_date", "end_date", "item", "types"],
@@ -497,6 +505,7 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 
 {listing('google_search')}
 {listing('google_top_searches')}
+{listing('google_rankings')}
 
 ## AEO tab: visits from AI tools
 
