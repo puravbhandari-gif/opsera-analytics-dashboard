@@ -322,6 +322,14 @@ def main():
               f"YouTube tab, by {kind}. Source: YouTube Analytics")
 
     # Lists without dates
+    # the Content tab's pieces: each blog post, report, white paper, eBook, guide and comparison page, with its type
+    kinds = [(r"^/blog/[a-z0-9-]+$", "Blog"), (r"^/resources/report/[a-z0-9-]+$", "Report"), (r"^/resources/white-papers/[a-z0-9-]+$", "White paper"),
+             (r"^/resources/ebooks/[a-z0-9-]+$", "eBook"), (r"^/knowledge-base/(?!category/)[a-z0-9-]+/[a-z0-9-]+$", "Guide (knowledge base)"),
+             (r"^/(resources/comparison-guides|comparison-guides|comparison)/[a-z0-9-]+$", "Comparison")]
+    import re as _re
+    write("content_pieces", ["page", "type", "page_title"],
+          [[p, k, t] for p, t in sorted(zip(look["pages"], look["titles"])) for pat, k in kinds if _re.match(pat, p)],
+          "Content tab: each blog post, report, white paper, eBook, guide and comparison page with its type. Their numbers are in the page files")
     titled = sorted((p, t) for p, t in zip(look["pages"], look["titles"]) if t)
     for section, label in PAGE_SECTIONS:
         write(f"page_titles_{section}", ["page", "page_title"], [[p, t] for p, t in titled if section_of(p) == section],
@@ -463,6 +471,12 @@ Visits count people who landed on the page from outside the site. Page files lis
 {listing('pages')}
 {listing('page_titles')}
 {listing('campaigns')}
+
+## Content tab
+
+One row per blog post, report, white paper, eBook, guide (knowledge base article) and comparison page. content_pieces lists each piece with its type; its visits, form fills and Google clicks are in the page files above. A deal counts for a piece when the contact's first page or first form was that piece (see deals_one_line_each.csv).
+
+{listing('content_pieces')}
 
 ## Google search tab
 

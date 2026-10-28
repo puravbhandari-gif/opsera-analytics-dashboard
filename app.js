@@ -18,10 +18,13 @@ const month = (m) => toDate(`${m}-01`).toLocaleDateString("en-GB", { month: "lon
 const shortPage = (p) => p.replace(/^https?:\/\/(www\.)?opsera\.ai/, "") || "/";
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
-async function load(name) {
-  const r = await fetch(`data/${name}`, { cache: "no-cache" });
-  if (!r.ok) throw new Error(`Couldn't load data/${name} (${r.status})`);
-  return r.json();
+const loaded = {};   // each data file is fetched once, even when 2 tabs use it
+function load(name) {
+  if (!loaded[name]) loaded[name] = fetch(`data/${name}`, { cache: "no-cache" }).then((r) => {
+    if (!r.ok) throw new Error(`Couldn't load data/${name} (${r.status})`);
+    return r.json();
+  });
+  return loaded[name];
 }
 
 // Key numbers count up to their value when shown. Off for anyone who has asked their device for less motion.
@@ -1662,6 +1665,92 @@ function renderTeam(t) {
   draw();
 }
 
+// ---------- Content: one row per blog post, report, white paper, eBook, guide and comparison page ----------
+
+const CONTENT_TYPES = [
+  ["blog", "Blog", /^\/blog\/[a-z0-9-]+$/],
+  ["report", "Report", /^\/resources\/report\/[a-z0-9-]+$/],
+  ["white_paper", "White paper", /^\/resources\/white-papers\/[a-z0-9-]+$/],
+  ["ebook", "eBook", /^\/resources\/ebooks\/[a-z0-9-]+$/],
+  ["guide", "Guide (knowledge base)", /^\/knowledge-base\/(?!category\/)[a-z0-9-]+\/[a-z0-9-]+$/],
+  ["comparison", "Comparison", /^\/(resources\/comparison-guides|comparison-guides|comparison)\/[a-z0-9-]+$/],
+];
+
+let contentLoad = null;   // loads the page and deal data the first time the tab is opened
+function openContent() {
+  if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
+    .catch((err) => { $("content-status").textContent = `Couldn't load the content numbers: ${err.message}`; });
+  return contentLoad;
+}
+
+function renderContent(d, hub) {
+  const gaLast = lastFullDayPacific(d.end_date, d.pulled_at);
+  const idx = (date) => Math.round((toDate(date) - toDate(d.start_date)) / 864e5);
+  const typeOf = (path) => CONTENT_TYPES.find(([, , re]) => re.test(path));
+  const pieces = d.pages.map((path, i) => ({ i, path, type: typeOf(path) })).filter((x) => x.type);
+  const asset = (path) => d.asset_pages.some((a) => `${path}/`.startsWith(a));
+  const bare = (title) => (title || "").replace(/\s*[-—|]\s*Opsera\s*$/i, "").trim().toLowerCase();
+  let type = "all";
+
+  const draw = () => {
+    const p = periodsFor(periodMode, d.start_date, gaLast), g = periodsFor(periodMode, d.start_date, d.gsc_last_day);
+    const cur = p.cur || { start: d.start_date, end: gaLast }, gcur = g.cur || { start: d.start_date, end: d.gsc_last_day };
+    const [a, b, ga, gb] = [idx(cur.start), idx(cur.end), idx(gcur.start), idx(gcur.end)];
+    const stats = {};
+    const row = (i) => stats[i] || (stats[i] = { visits: 0, engaged: 0, forms: 0, clicks: 0, from: {} });
+    d.visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { const s2 = row(r[1]); s2.visits += r[3]; s2.engaged += r[4];
+      const ch = channelName(d.channels[r[2]]); s2.from[ch] = (s2.from[ch] || 0) + r[3]; } });
+    d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) row(r[1]).forms += r[3]; });
+    d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) row(r[1]).clicks += r[2]; });
+    // deals by the month they were created: every month the period touches
+    const months = new Set();
+    for (let m = cur.start.slice(0, 7); m <= cur.end.slice(0, 7); m = addDays(monthEnd(`${m}-01`), 1).slice(0, 7)) months.add(m);
+    const deals = (hub.deal_lines || []).filter((x) => months.has(x.month));
+    const dealsFor = (piece, all) => (all ? hub.deal_lines || [] : deals)
+      .filter((x) => x.first_page === piece.path || (x.first_form && bare(x.first_form) === bare(d.titles[piece.i])));
+    const dealWords = (list) => (list.length ? `${list.length} (${money(list.reduce((t2, z) => t2 + z.amount, 0))})` : "0");
+    const rows = pieces.filter((x) => type === "all" || x.type[0] === type).map((x) => {
+      const s2 = stats[x.i] || { visits: 0, engaged: 0, forms: 0, clicks: 0, from: {} };
+      const dl = dealsFor(x), dlAll = dealsFor(x, true);
+      const top = Object.entries(s2.from).sort((u, v) => v[1] - u[1]).slice(0, 3)
+        .map(([name, n]) => `${name.replace(/ \(.*\)$/, "")} ${Math.round((n / s2.visits) * 100)}%`).join(", ");
+      const title = d.titles[x.i] && !/^page not found/i.test(d.titles[x.i]) ? d.titles[x.i].replace(/\s*[-—|]\s*Opsera\s*$/i, "") : x.path;
+      return { kind: x.type[1], title, path: x.path, find: `${title} ${x.path}`, visits: s2.visits, engaged: s2.engaged, clicks: s2.clicks, from: top || "-",
+        forms: s2.forms, formsLabel: asset(x.path) ? "downloads" : "form fills", deals: dl.length, dealsAll: dlAll.length,
+        dealSort: dlAll.reduce((t2, z) => t2 + z.amount, 0) * 1000 + dl.length,   // sorts by deals since 1 Apr, then this period
+        dealText: `This period: ${dealWords(dl)}. Since ${day(hub.start_date)}: ${dealWords(dlAll)}` };
+    });
+    const shown = rows.filter((r) => r.visits || r.forms || r.clicks || r.deals || r.dealsAll);
+    const typeName = type === "all" ? "Every piece" : CONTENT_TYPES.find(([k]) => k === type)[1];
+    $("content-title").textContent = `${typeName}, ${range(cur.start, cur.end)}`;
+    table($("content-table"), { rows: shown, search: "titles and addresses", sortKey: "visits", pageSize: 25, columns: [
+      { key: "find", label: "Piece", search: true, fmt: (v, r) => `<a href="https://opsera.ai${encodeURI(r.path)}" target="_blank" rel="noopener">${esc(r.title)}</a><br><small class="muted">${esc(r.kind)}: ${esc(r.path)}</small>` },
+      { key: "visits", label: "Visits", num: true, fmt: num },
+      { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "clicks", label: "Google clicks", num: true, fmt: num },
+      { key: "from", label: "Where visits came from", sort: false },
+      { key: "forms", label: "Downloads or form fills", num: true, fmt: num },
+      { key: "dealSort", label: "Deals it led to", num: true, fmt: (v, r) => esc(r.dealText) },
+    ] });
+    const left = rows.length - shown.length;
+    $("content-status").textContent = left ? `Not showing ${num(left)} piece${left === 1 ? "" : "s"} with no visits, form fills, Google clicks or deals in this period.` : "";
+    $("content-source").textContent = `Source: Google Analytics for visits, where they came from and form fills, ${range(cur.start, cur.end)} (Pacific time).`;
+    $("content-gsc-source").textContent = `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.`;
+    $("content-deals-source").textContent = `Deals: HubSpot marketing deals created in ${[...months].map((m) => month(m)).join(", ")}, updated ${dayYear(hub.pulled_at.slice(0, 10))}. ${num(deals.length)} deal${deals.length === 1 ? "" : "s"} in those months, ${num(shown.reduce((t2, r) => t2 + r.deals, 0))} of them traced to a piece here. Since ${dayYear(hub.start_date)}: ${num((hub.deal_lines || []).length)} deals, ${num(shown.reduce((t2, r) => t2 + r.dealsAll, 0))} traced to a piece.`;
+  };
+
+  $("content-type").innerHTML = [["all", "All"], ...CONTENT_TYPES.map(([k, label]) => [k, label])].map(([k, label]) =>
+    `<button data-type="${k}" class="${k === type ? "on" : ""}">${esc(label)}</button>`).join("");
+  $("content-type").addEventListener("click", (e) => {
+    const bt = e.target.closest("button"); if (!bt) return;
+    type = bt.dataset.type;
+    $("content-type").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === bt));
+    draw();
+  });
+  monthlyTabs.push(draw);
+  draw();
+}
+
 // ---------- To do: the list in TODO.md, shown as it is (the file is the only copy) ----------
 
 let todoLoad = null;
@@ -1699,6 +1788,7 @@ function showTab(name) {
   if (name === "lookup") openLookup();
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
+  if (name === "content") openContent();
   // the footer views have no tab in the row, so start them at the top of the page
   if (!document.querySelector(`.tabs button[data-tab="${name}"]`)) window.scrollTo(0, 0);
 }

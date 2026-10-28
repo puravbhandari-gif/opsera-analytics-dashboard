@@ -215,3 +215,8 @@ details.more > summary:hover { color: var(--ink); }
 .todo li { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; margin: 8px 0; padding: 14px 18px; box-shadow: var(--shadow); }
 .todo li.done { color: var(--muted); text-decoration: line-through; }
 #todo h3 { margin-top: 24px; }
+
+/* Content tab: room for each piece's title and where its visits came from */
+#content-table td:first-child { min-width: 260px; }
+#content-table td:nth-child(5) { min-width: 200px; }
+#content-table small { word-break: break-all; }

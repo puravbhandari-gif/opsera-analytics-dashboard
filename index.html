@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Space+Grotesk:wght@500;600&display=swap">
-<link rel="stylesheet" href="styles.css?v=22">
+<link rel="stylesheet" href="styles.css?v=23">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -40,6 +40,7 @@
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
     <button role="tab" data-tab="team">Team metrics</button>
     <button role="tab" data-tab="journey">Customer journey</button>
+    <button role="tab" data-tab="content">Content</button>
     <button role="tab" data-tab="search">Google search</button>
     <button role="tab" data-tab="visits">Website visits</button>
     <button role="tab" data-tab="leads">Leads</button>
@@ -53,6 +54,26 @@
 
 <main>
   <!-- Google Search -->
+  <section id="tab-content" class="tab" role="tabpanel" hidden>
+    <h2>Content</h2>
+    <p class="lead">How each blog post, report, white paper, eBook, guide and comparison page did in the period above.</p>
+    <div class="seg" id="content-type" role="group" aria-label="Choose a type of content"></div>
+    <p class="muted" id="content-status">Loading...</p>
+    <div class="panel">
+      <h3 id="content-title">Every piece</h3>
+      <div id="content-table"></div>
+      <p class="source" id="content-source"></p>
+      <p class="source" id="content-gsc-source"></p>
+      <p class="source" id="content-deals-source"></p>
+    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Types follow the page address: blog posts are under /blog/, reports, white papers and eBooks under /resources/, guides are knowledge base articles, and comparisons are under /comparison/, /comparison-guides/ or /resources/comparison-guides/.</p>
+      <p class="note">Visits count people who arrived on the piece from outside the site. A deal counts for a piece when the contact's first page was that piece, or their first form was its download form. Deals count in the month they were created, with no company or person.</p>
+      <p class="note">Pieces with no visits, form fills, Google clicks or deals don't show. Addresses with stray characters at the end are left out.</p>
+    </details>
+  </section>
+
   <section id="tab-search" class="tab" role="tabpanel" hidden>
     <h2>Google search</h2>
     <p class="lead">How often opsera.ai shows up on Google, and how many people click.</p>
@@ -734,6 +755,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=52"></script>
+<script src="app.js?v=56"></script>
 </body>
 </html>

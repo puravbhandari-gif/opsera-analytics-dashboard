@@ -485,6 +485,35 @@ def not_campaign(name):
     return name in NOT_CAMPAIGNS or (name.startswith("(") and name.endswith(")")) or "@" in name
 
 
+def live_title(path):
+    """The <title> of a page on opsera.ai as it loads today, or None."""
+    import html
+    import requests
+    try:
+        r = requests.get(f"https://opsera.ai{path}", headers={"User-Agent": "Mozilla/5.0 (opsera-analytics-dashboard)"}, timeout=15)
+    except requests.RequestException:
+        return None
+    m = re.search(r"<title[^>]*>(.*?)</title>", r.text, re.S | re.I) if r.status_code == 200 else None
+    return " ".join(html.unescape(m.group(1)).split()) if m else None
+
+
+def fix_titles(pages, titles):
+    """Google Analytics sometimes gives a page the homepage's title, or none. For those pages, use the title
+    the live page shows (agreed 28 Oct 2026). A page that really shows the homepage, or is gone, keeps Google's."""
+    home = {titles[pages.index("/")]} if "/" in pages else set()
+    home.add(live_title("/") or "")
+    fixed = 0
+    for i, (path, title) in enumerate(zip(pages, titles)):
+        if path == "/" or not re.fullmatch(r"(/[a-z0-9-]+)+", path) or (title and title not in home and title != "(not set)"):
+            continue
+        live = live_title(path)
+        if live and live not in home and not live.lower().startswith("page not found"):
+            titles[i] = live
+            fixed += 1
+    print(f"Page titles taken from the live page: {fixed}")
+    return titles
+
+
 def lookup(s, end, gsc_site):
     """Daily numbers by page and by campaign, packed small (the tab loads them only when opened).
     Each row starts with the day number counted from START_DATE. Sources are never added together."""
@@ -539,7 +568,7 @@ def lookup(s, end, gsc_site):
     order = lambda t: [k for k, _ in sorted(t.items(), key=lambda x: x[1])]
     return {
         "source": f"Google Analytics 4, {GA_PROPERTY_NAME}, and Google Search Console, {gsc_site}",
-        "pages": order(pages), "titles": [best.get(p, ("", 0))[0] for p in order(pages)],
+        "pages": order(pages), "titles": fix_titles(order(pages), [best.get(p, ("", 0))[0] for p in order(pages)]),
         "channels": order(channels), "campaigns": order(campaigns), "sources": order(sources),
         "asset_pages": list(ASSET_PAGES),
         "visits": [[*k, *v] for k, v in sorted(visits.items())],
