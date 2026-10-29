@@ -1871,14 +1871,15 @@ const CONTENT_TYPES = [
 let contentLoad = null;   // loads the page and deal data the first time the tab is opened
 // ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------
 
-function renderEvents(hub, leads) {
+function renderEvents(hub, leads, sf) {
   const rows = hub.event_rows || [];
   if (!rows.length) { $("events-table").innerHTML = `<p class="muted">No data</p>`; return; }
   const fills = {};
   Object.values(leads.lines).forEach((l) => l.pages.forEach((p) => { fills[p.page] = (fills[p.page] || 0) + p.count; }));
   const list = rows.map((e) => ({ ...e,
     when: e.first_day ? (e.first_day === e.last_day ? dayYear(e.first_day) : range(e.first_day, e.last_day)) : "Date not known",
-    form_fills: e.pages.length ? e.pages.reduce((t, p) => t + (fills[p] || 0), 0) : null }));
+    form_fills: e.pages.length ? e.pages.reduce((t, p) => t + (fills[p] || 0), 0) : null,
+    sf_meetings: sf?.event_meetings?.find((x) => x.key === e.key)?.people ?? null }));
   const dash = (v) => (v == null ? "-" : num(v));
   table($("events-table"), { rows: list, search: "events", sortKey: "first_day", columns: [
     { key: "name", label: "Event", search: true, fmt: (v, r) => `${esc(v)}<br><span class="muted">${esc(r.kind)}. ${r.when}</span>`, csv: (r) => `${r.name} | ${r.kind} | ${r.first_day || "Date not known"}${r.last_day && r.last_day !== r.first_day ? ` to ${r.last_day}` : ""}` },
@@ -1888,6 +1889,7 @@ function renderEvents(hub, leads) {
     { key: "meetings_after", label: "Meetings afterwards", num: true, fmt: dash },
     { key: "people_with_meeting", label: "People with a meeting", num: true, fmt: dash },
     { key: "meetings_upcoming", label: "Meetings booked for later", num: true, fmt: dash },
+    { key: "sf_meetings", label: "Meetings from this event (Salesforce)", num: true, fmt: dash },
     { key: "note", label: "Note", search: true, sort: false },
   ] });
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
@@ -1974,8 +1976,12 @@ function renderPipeline(sf) {
     sub: (a, b) => `${money(rangeSum(sf.days, `${k}_value`)(a, b))} pipeline` });
   compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast,
     source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open and won, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
-    metrics: [bucketMetric("Marketing sourced", "sourced"), bucketMetric("Marketing influenced", "influenced")] });
-  $("pipe-undercount").textContent = `These numbers are undercounted: ${sf.share_without_contact_pct}% of open and won opportunities have no contact attached in Salesforce, so their campaigns can't be seen.`;
+    metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
+      { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
+  $("pipe-undercount").textContent = "Marketing sourced is an estimate: it rests on Salesforce's Primary Campaign Source, a starting point that isn't reliable on its own. " +
+    `Marketing numbers are undercounted: ${sf.share_without_contact_pct}% of open and won opportunities have no contact attached in Salesforce, so their campaigns can't be seen. ` +
+    `A campaign counts only if the person joined it within ${sf.window_days} days before the deal was created; ${num(sf.deals_left_out_by_window)} deal${sf.deals_left_out_by_window === 1 ? " was" : "s were"} left out by this rule. ` +
+    `For ${num(sf.deals_join_date_unknown)} deals the exports don't show when the person joined, so those still count.`;
 
   let group = "month";
   const drawTime = () => {
@@ -1983,15 +1989,18 @@ function renderPipeline(sf) {
     for (const m of months) {
       const key = group === "month" ? m.month : m.quarter;
       const x = by[key] || (by[key] = { key, label: group === "month" ? month(m.month) : m.quarter.replace(/ Q(\d)/, (q, n) => ` Q${n} (${["Feb to Apr", "May to Jul", "Aug to Oct", "Nov to Jan"][n - 1]})`),
-        sourced_deals: 0, sourced_value: 0, influenced_deals: 0, influenced_value: 0 });
-      ["sourced_deals", "sourced_value", "influenced_deals", "influenced_value"].forEach((k) => { x[k] += m[k]; });
+        sourced_deals: 0, sourced_value: 0, influenced_deals: 0, influenced_value: 0, agency_deals: 0, agency_value: 0, nocontact_deals: 0 });
+      ["sourced_deals", "sourced_value", "influenced_deals", "influenced_value", "agency_deals", "agency_value", "nocontact_deals"].forEach((k) => { x[k] += m[k] || 0; });
     }
     table($("pipe-time"), { rows: Object.values(by), sortKey: "key", columns: [
       { key: "key", label: group === "month" ? "Month" : "Quarter", fmt: (v, r) => esc(r.label), csv: (r) => r.label },
-      { key: "sourced_deals", label: "Sourced deals", num: true, fmt: num },
-      { key: "sourced_value", label: "Sourced value", num: true, fmt: money },
+      { key: "sourced_deals", label: "Sourced deals (estimate)", num: true, fmt: num },
+      { key: "sourced_value", label: "Sourced value (estimate)", num: true, fmt: money },
       { key: "influenced_deals", label: "Influenced deals", num: true, fmt: num },
       { key: "influenced_value", label: "Influenced value", num: true, fmt: money },
+      { key: "agency_deals", label: "Booking agency deals", num: true, fmt: num },
+      { key: "agency_value", label: "Booking agency value", num: true, fmt: money },
+      { key: "nocontact_deals", label: "No contact linked deals", num: true, fmt: num },
     ] });
   };
   $("pipe-period").addEventListener("click", (e) => {
@@ -2003,7 +2012,7 @@ function renderPipeline(sf) {
   drawTime();
   $("pipe-time-source").textContent = `Source: Salesforce opportunities created ${when}, exported ${exports}. Sourced and influenced are never added together.`;
 
-  table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: c.bucket === "sourced" ? "Marketing sourced" : "Marketing influenced" })),
+  table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: { sourced: "Marketing sourced (estimate)", influenced: "Marketing influenced", agency: "Booking agency" }[c.bucket] })),
     search: "campaigns", sortKey: "value", columns: [
       { key: "bucket", label: "Counts as", search: true },
       { key: "campaign", label: "Campaign", search: true, fmt: (v, r) => esc(v) + (r.flag ? `<br><span class="muted">Counted as marketing for now, ${esc(r.flag)}</span>` : "") },
@@ -2011,6 +2020,17 @@ function renderPipeline(sf) {
       { key: "value", label: "Value", num: true, fmt: money },
     ] });
   $("pipe-campaigns-source").textContent = `Source: Salesforce Primary Campaign Source, Attrib First and Last Campaign, and campaign touches on each opportunity, created ${when}. Target-account campaign names are hidden.`;
+
+  // Deals a person still needs to check: a campaign joined just outside the 90 days, or more than 1 source
+  table($("pipe-review"), { rows: sf.to_review || [], sortKey: "date", columns: [
+    { key: "date", label: "Created", fmt: (v) => dayYear(v), csv: (r) => r.date },
+    { key: "amount", label: "Amount", num: true, fmt: money },
+    { key: "stage", label: "Stage", search: true },
+    { key: "counted_as", label: "Counted as now", search: true },
+    { key: "campaigns", label: "Campaigns", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.campaigns.join(" | ") },
+    { key: "reasons", label: "Why it needs a check", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.reasons.join(" | ") },
+  ] });
+  $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open and won. ${num((sf.to_review || []).length)} deals. No company or person names.`;
 
   const mt = sf.meetings, OUT = ["Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded"];
   const outcome = (k) => rangeSum(mt.days, (r) => r.outcomes[k] || 0);
@@ -2287,7 +2307,7 @@ $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.them
     renderJourney(ga, leads, hub, gsc);
     renderAeo(ga, hub);
     renderLeadsHubspot(hub);
-    renderEvents(hub, leads);
+    load("salesforce_pipeline.json").catch(() => null).then((sf) => renderEvents(hub, leads, sf));
     load("salesforce_pipeline.json").then(renderPipeline)
       .catch(() => { $("pipe-cmp-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; });
     renderYouTube(yt, ga);

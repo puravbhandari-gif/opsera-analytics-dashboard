@@ -1,7 +1,7 @@
-month,fiscal_quarter,sourced_deals,sourced_value_usd,influenced_deals,influenced_value_usd
-2026-05,FY27 Q2,5,498375,0,0
-2026-06,FY27 Q2,1,150000,1,150000
-2026-07,FY27 Q2,4,400000,6,600000
-2026-08,FY27 Q3,1,268000,2,350000
-2026-09,FY27 Q3,2,738000,2,600000
-2026-10,FY27 Q3,3,350000,2,150000
+month,fiscal_quarter,sourced_deals,sourced_value_usd,influenced_deals,influenced_value_usd,booking_agency_deals,booking_agency_value_usd,no_contact_linked_deals
+2026-05,FY27 Q2,5,498375,0,0,0,0,2
+2026-06,FY27 Q2,1,150000,1,150000,0,0,11
+2026-07,FY27 Q2,3,300000,6,600000,0,0,9
+2026-08,FY27 Q3,1,268000,1,150000,0,0,17
+2026-09,FY27 Q3,1,588000,1,500000,0,0,18
+2026-10,FY27 Q3,2,200000,2,150000,0,0,20

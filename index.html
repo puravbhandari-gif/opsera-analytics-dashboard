@@ -98,7 +98,7 @@
       <h3>Every event</h3>
       <div id="events-table"></div>
       <p class="source" id="events-source"></p>
-      <p class="note">Signed up and attended come from the event's HubSpot lists. Event page form fills come from Google Analytics, so they're never added to the HubSpot numbers. Meetings afterwards are calendar meetings with anyone on the event's lists, held after its last day and up to yesterday; existing customers are included. Meetings booked for a later date show on their own.</p>
+      <p class="note">Signed up and attended come from the event's HubSpot lists. Event page form fills come from Google Analytics, so they're never added to the HubSpot numbers. Meetings afterwards are calendar meetings with anyone on the event's lists, held after its last day and up to yesterday; existing customers are included. Meetings booked for a later date show on their own. Meetings from this event (Salesforce): people in the event's Salesforce campaign who then had a meeting set, from the Salesforce meetings export; counts only.</p>
     </div>
 
     <div class="panel">
@@ -340,7 +340,13 @@
       <h3>Campaigns behind the pipeline</h3>
       <div id="pipe-campaigns"></div>
       <p class="source" id="pipe-campaigns-source"></p>
-      <p class="note">Marketing sourced: the Primary Campaign Source is a marketing campaign. Marketing influenced: not sourced, but the Attrib First or Attrib Last Campaign, or another campaign touch on the deal, is a marketing campaign. Each deal shows under 1 campaign. SDR and AE outreach count as sales. Quarters follow Opsera's fiscal year, so Q2 is May to July.</p>
+      <p class="note">Marketing sourced (an estimate): the Primary Campaign Source is a marketing campaign. Marketing influenced: not sourced, but the Attrib First or Attrib Last Campaign, or another campaign touch on the deal, is a marketing campaign. A campaign counts only if the person joined it within 90 days before the deal was created. Booking agency: DoGood and CrestingWave, an outside agency that books meetings, shown on its own and not counted as marketing. No contact linked: deals with no contact in Salesforce, so nothing shows where they came from; they aren't counted as sales. Each deal shows under 1 campaign. SDR and AE outreach count as sales. Quarters follow Opsera's fiscal year, so Q2 is May to July.</p>
+    </div>
+    <div class="panel">
+      <h3>To review</h3>
+      <p class="muted">Deals a person needs to check: a campaign joined just outside the 90 days (91 to 120 days before the deal), or campaigns from more than 1 source.</p>
+      <div id="pipe-review"></div>
+      <p class="source" id="pipe-review-source"></p>
     </div>
     <div class="panel">
       <h3>Campaign-influenced meetings</h3>
@@ -882,6 +888,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=78"></script>
+<script src="app.js?v=82"></script>
 </body>
 </html>

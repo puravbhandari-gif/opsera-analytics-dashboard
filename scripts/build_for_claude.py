@@ -401,9 +401,10 @@ def main():
     if (DATA / "salesforce_pipeline.json").exists():
         sf = json.loads((DATA / "salesforce_pipeline.json").read_text())
         made = f"Salesforce opportunities created {sf['opportunities_from']} to {sf['opportunities_to']}, exported {', '.join(sorted(set(sf['exports'].values())))}"
-        write("marketing_pipeline_by_month", ["month", "fiscal_quarter", "sourced_deals", "sourced_value_usd", "influenced_deals", "influenced_value_usd"],
-              [[m["month"], m["quarter"], m["sourced_deals"], m["sourced_value"], m["influenced_deals"], m["influenced_value"]] for m in sf["months"]],
-              f"Marketing sourced and influenced pipeline (open and won) by month. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. SDR and AE outreach count as sales. Undercounted: {sf['share_without_contact_pct']}% of opportunities have no contact attached. Source: {made}")
+        write("marketing_pipeline_by_month", ["month", "fiscal_quarter", "sourced_deals", "sourced_value_usd", "influenced_deals", "influenced_value_usd", "booking_agency_deals", "booking_agency_value_usd", "no_contact_linked_deals"],
+              [[m["month"], m["quarter"], m["sourced_deals"], m["sourced_value"], m["influenced_deals"], m["influenced_value"], m.get("agency_deals", 0), m.get("agency_value", 0),
+                m.get("nocontact_deals", 0)] for m in sf["months"]],
+              f"Marketing sourced (an estimate: it rests on Primary Campaign Source) and influenced pipeline, and deals with no contact linked as their own group (not sales), (open and won) by month, and the outside booking agency (DoGood, CrestingWave) on its own. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. A campaign counts only if the person joined it within {sf.get('window_days', 90)} days before the deal; {sf.get('deals_join_date_unknown', 0)} deals have no known join date and still count. SDR and AE outreach count as sales. Undercounted: {sf['share_without_contact_pct']}% of opportunities have no contact attached. Source: {made}")
         write("marketing_pipeline_campaigns", ["counts_as", "campaign", "deals", "value_usd"],
               [[c["bucket"], c["campaign"], c["deals"], c["value"]] for c in sf["campaigns"]],
               f"The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: {made}")

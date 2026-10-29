@@ -35,6 +35,8 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Influenced vs sourced pipeline, after syncing with David.
 - [ ] All pipeline: sourced, influenced and sales only.
 - [ ] Confirm with David: SDR outreach campaigns count as marketing or sales.
+- [ ] Ask David for event campaign members with meeting set dates, and campaign members with first associated dates.
+- [ ] Talk to Grover about fixing the Salesforce rule for Primary Campaign Source.
 - [ ] Decide the website visits goal: all visits or without robots.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
