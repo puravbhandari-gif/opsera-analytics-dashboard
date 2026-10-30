@@ -253,3 +253,10 @@ details.more > summary:hover { color: var(--ink); }
 
 /* All pipeline: a card waiting on data shows words, not a number */
 .card .value.wait { font-size: 15.3px; line-height: 1.35; font-weight: 500; color: var(--muted); }
+
+/* Events table: compact rows, number headers may wrap, the table scrolls sideways when it doesn't fit */
+.events-table td, .events-table th { padding: 8px 10px; }
+.events-table th.num { white-space: normal; min-width: 64px; max-width: 110px; }
+.events-table td.wrap:first-child { min-width: 200px; max-width: 280px; }
+.table-notes { margin: 6px 0 12px; padding-left: 18px; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
+.table-notes strong { color: var(--ink-2); font-weight: 500; }

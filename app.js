@@ -1891,8 +1891,9 @@ function renderEvents(hub, leads, sf) {
     { key: "meetings_upcoming", label: "Meetings booked for later", num: true, fmt: dash },
     { key: "sf_members", label: "In the Salesforce campaign", num: true, fmt: dash },
     { key: "sf_meetings", label: "Meetings from this event", num: true, fmt: dash },
-    { key: "note", label: "Note", search: true, sort: false },
   ] });
+  // Each event's note sits under the table, so the rows stay short
+  $("events-notes").innerHTML = list.filter((e) => e.note).map((e) => `<li><strong>${esc(e.name)}:</strong> ${esc(e.note)}</li>`).join("");
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
 }
 
