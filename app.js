@@ -1879,7 +1879,7 @@ function renderEvents(hub, leads, sf) {
   const list = rows.map((e) => ({ ...e,
     when: e.first_day ? (e.first_day === e.last_day ? dayYear(e.first_day) : range(e.first_day, e.last_day)) : "Date not known",
     form_fills: e.pages.length ? e.pages.reduce((t, p) => t + (fills[p] || 0), 0) : null,
-    sf_meetings: sf?.event_meetings?.find((x) => x.key === e.key)?.people ?? null }));
+    sf_meetings: e.sf_people_with_meeting ?? null }));   // from HubSpot contacts' Salesforce Campaign IDs and calendar meetings
   const dash = (v) => (v == null ? "-" : num(v));
   table($("events-table"), { rows: list, search: "events", sortKey: "first_day", columns: [
     { key: "name", label: "Event", search: true, fmt: (v, r) => `${esc(v)}<br><span class="muted">${esc(r.kind)}. ${r.when}</span>`, csv: (r) => `${r.name} | ${r.kind} | ${r.first_day || "Date not known"}${r.last_day && r.last_day !== r.first_day ? ` to ${r.last_day}` : ""}` },
@@ -1889,7 +1889,8 @@ function renderEvents(hub, leads, sf) {
     { key: "meetings_after", label: "Meetings afterwards", num: true, fmt: dash },
     { key: "people_with_meeting", label: "People with a meeting", num: true, fmt: dash },
     { key: "meetings_upcoming", label: "Meetings booked for later", num: true, fmt: dash },
-    { key: "sf_meetings", label: "Meetings from this event (Salesforce)", num: true, fmt: dash },
+    { key: "sf_members", label: "In the Salesforce campaign", num: true, fmt: dash },
+    { key: "sf_meetings", label: "Meetings from this event", num: true, fmt: dash },
     { key: "note", label: "Note", search: true, sort: false },
   ] });
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;

@@ -13239,7 +13239,11 @@
    "attended": null,
    "meetings_after": 0,
    "people_with_meeting": 0,
-   "meetings_upcoming": 0
+   "meetings_upcoming": 0,
+   "sf_campaign": "DG-FY27-Q1-Meet-the-Agents-Webinar",
+   "sf_members": 16,
+   "sf_meetings": 0,
+   "sf_people_with_meeting": 0
   },
   {
    "key": "ai_benchmark",
@@ -13253,7 +13257,11 @@
    "attended": null,
    "meetings_after": null,
    "people_with_meeting": null,
-   "meetings_upcoming": null
+   "meetings_upcoming": null,
+   "sf_campaign": "DG-FY27-Q1-AI-BM-Report-Webinar",
+   "sf_members": 39,
+   "sf_meetings": null,
+   "sf_people_with_meeting": null
   },
   {
    "key": "ai_adoption",
@@ -13269,7 +13277,11 @@
    "attended": null,
    "meetings_after": 22,
    "people_with_meeting": 8,
-   "meetings_upcoming": 5
+   "meetings_upcoming": 5,
+   "sf_campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
+   "sf_members": 451,
+   "sf_meetings": 21,
+   "sf_people_with_meeting": 7
   },
   {
    "key": "mq_roundtable",
@@ -13286,7 +13298,11 @@
    "attended": null,
    "meetings_after": 1,
    "people_with_meeting": 1,
-   "meetings_upcoming": 0
+   "meetings_upcoming": 0,
+   "sf_campaign": "DG-FY27-Q2-MQ-Roundtable",
+   "sf_members": 54,
+   "sf_meetings": 0,
+   "sf_people_with_meeting": 0
   },
   {
    "key": "tokenomics",
@@ -13302,7 +13318,11 @@
    "attended": null,
    "meetings_after": 1,
    "people_with_meeting": 1,
-   "meetings_upcoming": 1
+   "meetings_upcoming": 1,
+   "sf_campaign": "DG-FY27-Q3-Tokenomics-Webinar",
+   "sf_members": 75,
+   "sf_meetings": 1,
+   "sf_people_with_meeting": 1
   },
   {
    "key": "flutter",
@@ -13318,7 +13338,11 @@
    "attended": 87,
    "meetings_after": 5,
    "people_with_meeting": 4,
-   "meetings_upcoming": 6
+   "meetings_upcoming": 6,
+   "sf_campaign": "DG-FY27-Q3-SC-Flutter-Summit",
+   "sf_members": 86,
+   "sf_meetings": 4,
+   "sf_people_with_meeting": 3
   },
   {
    "key": "gartner",
@@ -13335,7 +13359,11 @@
    "attended": 267,
    "meetings_after": 0,
    "people_with_meeting": 0,
-   "meetings_upcoming": 0
+   "meetings_upcoming": 0,
+   "sf_campaign": "DG-FY27-Q3-Gartner-Xpo",
+   "sf_members": 269,
+   "sf_meetings": 0,
+   "sf_people_with_meeting": 0
   },
   {
    "key": "github_universe",
@@ -13352,7 +13380,11 @@
    "attended": null,
    "meetings_after": null,
    "people_with_meeting": null,
-   "meetings_upcoming": null
+   "meetings_upcoming": null,
+   "sf_campaign": "DG-FY27-Q3-GitHub-Universe-2026",
+   "sf_members": 240,
+   "sf_meetings": 0,
+   "sf_people_with_meeting": 0
   }
  ],
  "event_rows_pulled_at": "2026-10-28T14:25+05:30",
@@ -13605,5 +13637,6 @@
    }
   ]
  },
- "all_pipeline_pulled_at": "2026-10-28T19:37+05:30"
+ "all_pipeline_pulled_at": "2026-10-28T19:37+05:30",
+ "event_sf_pulled_at": "2026-10-30T09:34+05:30"
 }
