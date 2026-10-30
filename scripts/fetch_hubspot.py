@@ -62,6 +62,18 @@ EVENT_ROWS = [
     ("github_universe", "GitHub Universe", "Event", "2026-10-28", "2026-10-29", [], [],
      ["/events/github-universe", "/github-universe-happy-hour"], "No HubSpot list yet"),
 ]
+# Each 2026 event's Salesforce campaign, as HubSpot stores it on contacts in "Salesforce Campaign IDs"
+# (salesforcecampaignids, 18-character IDs). Names come from Salesforce's "All Campaigns with Campaign ID" list (29 Oct 2026).
+EVENT_SF_CAMPAIGNS = {
+    "appsec_agents": ("DG-FY27-Q1-Meet-the-Agents-Webinar", "701UR00000nYKL4YAO"),
+    "ai_benchmark": ("DG-FY27-Q1-AI-BM-Report-Webinar", "701UR00000oazZlYAI"),
+    "ai_adoption": ("DG-FY27-Q1-AI-Adoption-Webinar", "701UR00000m5YjoYAE"),
+    "mq_roundtable": ("DG-FY27-Q2-MQ-Roundtable", "701UR00000qFOGzYAO"),
+    "tokenomics": ("DG-FY27-Q3-Tokenomics-Webinar", "701UR00000tWqi9YAC"),
+    "flutter": ("DG-FY27-Q3-SC-Flutter-Summit", "701UR00000vIfboYAC"),
+    "gartner": ("DG-FY27-Q3-Gartner-Xpo", "701UR00000vaGzyYAE"),
+    "github_universe": ("DG-FY27-Q3-GitHub-Universe-2026", "701UR00000vvO3BYAU"),
+}
 AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perplexity", r"perplexity"),
             ("claude", r"claude|anthropic"), ("copilot", r"copilot")]   # same as scripts/fetch_data.py
 EVENT_WORDS = ("event", "webinar", "summit", "flutter", "gartner", "tokenomics", "dreamforce")
@@ -537,6 +549,16 @@ def main():
             row["meetings_after"] = len(done)
             row["meetings_upcoming"] = len(after_ids) - len(done)
             row["people_with_meeting"] = len({c for m in done for c in m_contacts[m] if c in people})
+        # Meetings from the event's Salesforce campaign: its members (from the contact field) with a meeting after the event
+        sf_name, sf_id = EVENT_SF_CAMPAIGNS.get(key, (None, None))
+        if sf_id:
+            members = {c["id"] for c in search(s, "contacts", [{"propertyName": "salesforcecampaignids", "operator": "CONTAINS_TOKEN", "value": sf_id}],
+                                                ["salesforcecampaignids"])}
+            row.update({"sf_campaign": sf_name, "sf_members": len(members), "sf_meetings": None, "sf_people_with_meeting": None})
+            if last_day:
+                after = [m for m, cs in m_contacts.items() if last_day < meeting_day.get(m, "") <= end and members & set(cs)]
+                row["sf_meetings"] = len(after)
+                row["sf_people_with_meeting"] = len({c for m in after for c in m_contacts[m] if c in members})
         event_rows.append(row)
 
     # HubSpot campaigns named after the events, and how many contacts each is tagged with
@@ -629,6 +651,8 @@ def main():
           f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
+    print("  event Salesforce campaigns (members, meetings after, people with a meeting):",
+          [(e["key"], e.get("sf_members"), e.get("sf_meetings"), e.get("sf_people_with_meeting")) for e in event_rows])
     print("  marketing pipeline:", len(pipeline["rows"]), "open and won marketing deals; Salesforce fields found:", pipeline["salesforce_fields"],
           "| lead sources:", dict(collections.Counter(r["lead_source"] for r in pipeline["rows"])))
     print("  campaign deals:", [(d["date"], d["campaign"], d["status"]) for d in campaign_deals])
