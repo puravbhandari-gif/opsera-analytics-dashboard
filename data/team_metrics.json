@@ -28,15 +28,15 @@
         "2026-08": 12145,
         "2026-09": 11817
        },
-       "so_far": 16493,
+       "so_far": 20194,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": 15000,
-       "goal_share_pct": 110.0,
+       "goal_share_pct": 134.6,
        "without_email_robots": {
         "baseline": 9580.0,
-        "so_far": 12879
+        "so_far": 15240
        }
       },
       {
@@ -49,10 +49,10 @@
         "2026-08": 3583,
         "2026-09": 3818
        },
-       "so_far": 3492,
+       "so_far": 4161,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": null,
        "goal_share_pct": null
       },
@@ -68,8 +68,8 @@
        },
        "so_far": 7,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": null,
        "goal_share_pct": null
       },
@@ -83,10 +83,10 @@
         "2026-08": 8,
         "2026-09": 6
        },
-       "so_far": 20,
+       "so_far": 22,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": null,
        "goal_share_pct": null
       }
@@ -122,10 +122,10 @@
         "2026-08": 458,
         "2026-09": 261
        },
-       "so_far": 211,
+       "so_far": 260,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": null,
        "goal_share_pct": null
       },
@@ -141,8 +141,8 @@
        },
        "so_far": 0,
        "so_far_start": "2026-10-01",
-       "so_far_end": "2026-10-26",
-       "days_counted": 26,
+       "so_far_end": "2026-10-31",
+       "days_counted": 31,
        "goal": null,
        "goal_share_pct": null
       }
