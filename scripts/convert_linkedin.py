@@ -14,6 +14,9 @@ summary matches its daily rows.
 27 Oct 2026: exports that overlap are joined with the newer one winning. An older
 export may differ only on days LinkedIn was still counting when it was exported
 (the company page's last 2 days, Kumar's export day). Anything else stops the update.
+3 Nov 2026: the newest export always wins on overlapping days, also when LinkedIn revised a day it had finished
+counting. The update stops only if a number changes by more than 5%, measured on each number's total over the
+overlapping days (a single day's small count, like 9 to 10 job page views, would swing far more than 5%).
 """
 import datetime as dt
 import json
@@ -44,8 +47,14 @@ COMPANY_LATE = {   # 11 to 25 Oct 2026, exported 27 Oct
     "visitors": "opsera_visitors_1793093889013.xls",
 }
 COMPANY_LATE_RANGE = ("2026-10-11", "2026-10-25")
+COMPANY_NOV = {   # 18 Oct to 1 Nov 2026, exported 3 Nov (2 visitor files came down with the same daily numbers; this one is kept)
+    "content": "opsera_content_1793692739089.xls",
+    "followers": "opsera_followers_1793692771464.xls",
+    "visitors": "opsera_visitors_1793692764754.xls",
+}
+COMPANY_NOV_RANGE = ("2026-10-18", "2026-11-01")
 COMPANY_DELAY_DAYS = 2   # LinkedIn: "Data is delayed by up to 2 days"
-EXPORTED_ON = {"company": "2026-10-27"}
+EXPORTED_ON = {"company": "2026-11-03"}
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
 KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
@@ -80,13 +89,24 @@ def exported_on(name):
     return dt.datetime.fromtimestamp(os.path.getmtime(SRC / name), dt.timezone.utc).date().isoformat()
 
 
+MAX_REVISION = 0.05   # agreed 3 Nov 2026
+
+
 def join(label, older, newer, key, unsure):
-    """One run of days from two exports. The newer one wins where they overlap; the older one may
-    only differ on the days in `unsure` (still being counted when it was exported)."""
+    """One run of days from two exports. The newer one wins where they overlap. Days LinkedIn was still counting
+    (`unsure`) may change freely; on the other overlapping days each number's total may change by up to 5%."""
     new = {r[key]: r for r in newer}
-    for r in older:
-        if r[key] in new and r != new[r[key]] and r[key] not in unsure:
-            stop(f"{label}: the two exports disagree on {r[key]}, which wasn't still being counted.")
+    settled = [r for r in older if r[key] in new and r[key] not in unsure]
+    for field in (settled[0].keys() if settled else []):
+        if field == key or not isinstance(settled[0][field], (int, float)):
+            continue
+        was, now = sum(r[field] for r in settled), sum(new[r[key]][field] for r in settled)
+        if was and abs(now - was) / was > MAX_REVISION:
+            stop(f"{label}: LinkedIn changed {field} by {abs(now - was) / was:.1%} over {settled[0][key]} to {settled[-1][key]} "
+                 f"({was} to {now}), more than {MAX_REVISION:.0%}.")
+    revised = [r[key] for r in settled if r != new[r[key]]]
+    if revised:
+        print(f"  {label}: LinkedIn revised {len(revised)} counted day(s) ({revised[0]} to {revised[-1]}); the newer export is used.")
     return [r for r in older if r[key] not in new] + newer
 
 
@@ -220,7 +240,7 @@ def kumar(name=KUMAR, start=START, end=END):
 
 def main():
     oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
-    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), KUMAR, *oct_files.values()]
+    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), *COMPANY_NOV.values(), KUMAR, *oct_files.values()]
                if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
@@ -230,16 +250,25 @@ def main():
         period["still_counting"] = [b] if exported_on(oct_files[key]) <= b else []
         october.append(period)
 
-    # The company page: July to September, 1 to 20 Oct and 11 to 25 Oct joined into one run of days
-    q3, octo, late = company(), company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE)
-    octo_end = dt.date.fromisoformat(octo["end_date"])
-    unsure = {(octo_end - dt.timedelta(days=i)).isoformat() for i in range(COMPANY_DELAY_DAYS)}
-    co = {**q3, "end_date": late["end_date"], "breakdowns": late["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
+    # The company page: July to September, then 1 to 20 Oct, 11 to 25 Oct and 18 Oct to 1 Nov joined into one run of
+    # days, each newer export winning where they overlap
+    q3 = company()
+    exports = [company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE), company(COMPANY_NOV, *COMPANY_NOV_RANGE)]
+    latest_co = exports[-1]
+    co = {**q3, "end_date": latest_co["end_date"], "breakdowns": latest_co["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
     for key in ("daily", "followers_daily", "visitors_daily"):
-        co[key] = q3[key] + join(f"Company {key}", octo[key], late[key], "date", unsure)
-        check_days(f"Company joined {key}", [r["date"] for r in co[key]], START, late["end_date"])
-    newer_posts = {p["link"] for p in late["posts"]}   # the newer export has the up-to-date counts for posts in both
-    co["posts"] = [p for p in q3["posts"] + octo["posts"] if p["link"] not in newer_posts] + late["posts"]
+        run = exports[0][key]
+        for older, newer in zip(exports, exports[1:]):
+            older_end = dt.date.fromisoformat(older["end_date"])
+            unsure = {(older_end - dt.timedelta(days=i)).isoformat() for i in range(COMPANY_DELAY_DAYS)}
+            run = join(f"Company {key}", run, newer[key], "date", unsure)
+        co[key] = q3[key] + run
+        check_days(f"Company joined {key}", [r["date"] for r in co[key]], START, latest_co["end_date"])
+    posts = q3["posts"]
+    for e in exports:   # a newer export has the up-to-date counts for posts in both
+        newer_posts = {p["link"] for p in e["posts"]}
+        posts = [p for p in posts if p["link"] not in newer_posts] + e["posts"]
+    co["posts"] = posts
 
     # Kumar: July to September, then 1 to 22 Oct and 21 to 27 Oct joined into one run of days
     since = next(p for p in october if p["key"] == "oct")

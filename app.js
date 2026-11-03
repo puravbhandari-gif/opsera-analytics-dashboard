@@ -33,7 +33,8 @@ let countRun = 0;
 function countUp(root) {
   if (calm.matches || !root) return;
   root.querySelectorAll(".value").forEach((el) => {
-    const final = el.textContent;
+    // a number still counting up keeps its real value, so starting again (switching tabs fast) can't lock in a halfway one
+    const final = el.dataset.final ?? el.textContent;
     const m = final.match(/^([^\d]*?)(\d[\d,]*(?:\.\d+)?)(.*)$/);
     if (!m) return;
     const target = Number(m[2].replace(/,/g, ""));
@@ -41,12 +42,12 @@ function countUp(root) {
     const dec = (m[2].split(".")[1] || "").length;
     const show = (v) => m[1] + (m[2].includes(",") ? v.toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec }) : v.toFixed(dec)) + m[3];
     const run = String(++countRun), t0 = performance.now();
-    el.dataset.run = run; el.setAttribute("aria-label", final);
+    el.dataset.run = run; el.dataset.final = final; el.setAttribute("aria-label", final);
     const tick = (now) => {
       if (!el.isConnected || el.dataset.run !== run) return;
-      const k = Math.min(1, (now - t0) / 700);
+      const k = Math.min(1, Math.max(0, (now - t0) / 700));   // a frame can be stamped just before t0
       el.textContent = k < 1 ? show(target * (1 - (1 - k) ** 3)) : final;
-      if (k < 1) requestAnimationFrame(tick);
+      if (k < 1) requestAnimationFrame(tick); else delete el.dataset.final;
     };
     requestAnimationFrame(tick);
   });
