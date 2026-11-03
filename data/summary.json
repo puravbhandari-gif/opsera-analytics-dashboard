@@ -1,0 +1,1061 @@
+{
+ "written_on": "2026-11-03",
+ "by_claude": false,
+ "model": null,
+ "problem": "no key",
+ "views": {
+  "week": [
+   {
+    "key": "pipeline",
+    "title": "Pipeline",
+    "tab": "pipeline",
+    "source": "Salesforce exports, marketing deals",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "no_contact_deals": 0,
+     "share_of_all_deals_without_contact_pct": 79,
+     "sourced_deals": 1,
+     "sourced_deals_before": 0,
+     "sourced_value": 200000,
+     "sourced_value_before": 0,
+     "influenced_deals": 0,
+     "influenced_deals_before": 1,
+     "influenced_deals_change_pct": -100.0,
+     "influenced_value": 0,
+     "influenced_value_before": 0
+    },
+    "note": null
+   },
+   {
+    "key": "leads",
+    "title": "Leads",
+    "tab": "leads",
+    "source": "Google Analytics, form fills",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Event sign-ups: 12, up from 2 the week before.",
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "demo_requests": 3,
+     "demo_requests_before": 3,
+     "demo_requests_change_pct": 0.0,
+     "events_form_fills": 12,
+     "events_form_fills_before": 2,
+     "events_form_fills_change_pct": 500.0,
+     "contact_form_fills": 0,
+     "contact_form_fills_before": 0,
+     "gartner_offer_form_fills": 0,
+     "gartner_offer_form_fills_before": 61,
+     "gartner_offer_form_fills_change_pct": -100.0
+    },
+    "note": null
+   },
+   {
+    "key": "journey",
+    "title": "Customer journey",
+    "tab": "journey",
+    "source": "HubSpot, marketing contacts and meetings",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "New marketing contacts: 12, down from 51 the week before.",
+    "t2": "The most new contacts came from direct visits: 8 of 12.",
+    "t3": null,
+    "facts": {
+     "new_contacts_by_channel": {
+      "direct visits": 8,
+      "Google search": 3,
+      "other sources": 1
+     },
+     "meetings_booked": 1,
+     "meetings_booked_before": 0,
+     "new_marketing_contacts": 12,
+     "new_marketing_contacts_before": 51,
+     "new_marketing_contacts_change_pct": -76.5
+    },
+    "note": null
+   },
+   {
+    "key": "visits",
+    "title": "Website visits",
+    "tab": "visits",
+    "source": "Google Analytics",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Unlabelled visits jumped to 1,336, up from 47. These are likely robots, not real growth.",
+    "t2": "The biggest change was Email: 658 visits, up from 323. Visits by source still include robots.",
+    "t3": null,
+    "facts": {
+     "all_visits_including_robots": 5411,
+     "all_visits_including_robots_before": 4289,
+     "unlabelled_visits": 1336,
+     "unlabelled_visits_before": 47,
+     "unlabelled_jump_is_likely_robots": true,
+     "visits_by_channel": {
+      "Direct (typed in, or unknown)": 2266,
+      "Unlabelled": 1336,
+      "Search engines (mostly Google)": 877,
+      "Email": 658,
+      "Other websites": 161,
+      "Social media (LinkedIn and others)": 69
+     },
+     "visits_by_channel_before": {
+      "Direct (typed in, or unknown)": 2637,
+      "Unlabelled": 47,
+      "Search engines (mostly Google)": 810,
+      "Email": 323,
+      "Other websites": 98,
+      "Social media (LinkedIn and others)": 56
+     },
+     "visits_without_email_robots": 3199,
+     "visits_without_email_robots_before": 3675,
+     "visits_without_email_robots_change_pct": -13.0,
+     "engaged_visits": 933,
+     "engaged_visits_before": 994,
+     "engaged_visits_change_pct": -6.1
+    },
+    "note": null
+   },
+   {
+    "key": "search",
+    "title": "Google search",
+    "tab": "search",
+    "source": "Search Console",
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "average_spot": 12.6,
+     "average_spot_before": 12.7,
+     "clicks": 466,
+     "clicks_before": 431,
+     "clicks_change_pct": 8.1,
+     "times_shown": 81434,
+     "times_shown_before": 75691,
+     "times_shown_change_pct": 7.6
+    },
+    "note": null
+   },
+   {
+    "key": "aeo",
+    "title": "AEO",
+    "tab": "aeo",
+    "source": "Google Analytics, visits from AI tools",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Visits from AI tools: 39, up from 23 the week before.",
+    "t2": "ChatGPT sent the most: 20 of 39.",
+    "t3": null,
+    "facts": {
+     "ai_visits_by_tool": {
+      "ChatGPT": 20,
+      "Gemini": 18,
+      "Perplexity": 1
+     },
+     "ai_demo_form_fills": 0,
+     "ai_visits": 39,
+     "ai_visits_before": 23,
+     "ai_visits_change_pct": 69.6
+    },
+    "note": null
+   },
+   {
+    "key": "campaigns",
+    "title": "Campaigns",
+    "tab": "campaigns",
+    "source": "Google Analytics, tagged campaign links",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Visits from tagged campaigns: 87, down from 335 the week before.",
+    "t2": "DG-FY27-Gartner-MQ brought the most: 22 visits, 17 of them engaged.",
+    "t3": null,
+    "facts": {
+     "top_campaigns": [
+      {
+       "campaign": "DG-FY27-Gartner-MQ",
+       "visits": 22,
+       "engaged_visits": 17,
+       "visits_before": 19
+      },
+      {
+       "campaign": "php2shell",
+       "visits": 11,
+       "engaged_visits": 6,
+       "visits_before": 0
+      },
+      {
+       "campaign": "github-universe-2026",
+       "visits": 8,
+       "engaged_visits": 6,
+       "visits_before": 0
+      }
+     ],
+     "campaign_visits": 87,
+     "campaign_visits_before": 335,
+     "campaign_visits_change_pct": -74.0
+    },
+    "note": null
+   },
+   {
+    "key": "events",
+    "title": "Events",
+    "tab": "events",
+    "source": "HubSpot and Salesforce event campaigns",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "events_ended": [
+      "GitHub Universe"
+     ]
+    },
+    "note": null
+   },
+   {
+    "key": "content",
+    "title": "Content",
+    "tab": "content",
+    "source": "Google Analytics, landing pages",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Visits landing on a blog, report, guide or comparison page: 1,324, up from 799 the week before.",
+    "t2": "The top piece was \"PHP2Shell: Invisible Threats and What to Do Next\": 359 visits, 21 of them engaged.",
+    "t3": null,
+    "facts": {
+     "top_pieces": [
+      {
+       "title": "PHP2Shell: Invisible Threats and What to Do Next",
+       "visits": 359,
+       "engaged_visits": 21,
+       "visits_before": 0
+      },
+      {
+       "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026",
+       "visits": 61,
+       "engaged_visits": 25,
+       "visits_before": 29
+      },
+      {
+       "title": "Factory.ai Alternatives: 5 AI Software Development Platforms",
+       "visits": 39,
+       "engaged_visits": 20,
+       "visits_before": 30
+      }
+     ],
+     "content_visits": 1324,
+     "content_visits_before": 799,
+     "content_visits_change_pct": 65.7
+    },
+    "note": null
+   },
+   {
+    "key": "linkedin",
+    "title": "LinkedIn brand",
+    "tab": "linkedin",
+    "source": "LinkedIn company page exports",
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "t1": "Times the company page's posts were seen: 4,805, down from 9,112 the week before.",
+    "t2": "The most seen was the post from 26 Oct: 1,108 times, with 315 clicks.",
+    "t3": null,
+    "facts": {
+     "new_posts": 5,
+     "top_posts": [
+      {
+       "posted": "26 Oct",
+       "seen": 1108,
+       "clicks": 315,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "29 Oct",
+       "seen": 588,
+       "clicks": 232,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "29 Oct",
+       "seen": 455,
+       "clicks": 662,
+       "video": false,
+       "paid": false
+      }
+     ],
+     "times_seen": 4805,
+     "times_seen_before": 9112,
+     "times_seen_change_pct": -47.3,
+     "clicks": 2345,
+     "clicks_before": 2778,
+     "clicks_change_pct": -15.6,
+     "followers_gained": 8,
+     "followers_gained_before": 32,
+     "followers_gained_change_pct": -75.0
+    },
+    "note": null
+   },
+   {
+    "key": "linkedin-exec",
+    "title": "LinkedIn exec",
+    "tab": "linkedin-exec",
+    "source": "Kumar's LinkedIn exports",
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "t1": "Engagements on Kumar's posts: 125, down from 151 the week before.",
+    "t2": "Followers Kumar gained: 37, down from 51.",
+    "t3": null,
+    "facts": {
+     "times_seen": 4071,
+     "times_seen_before": 4381,
+     "times_seen_change_pct": -7.1,
+     "engagements": 125,
+     "engagements_before": 151,
+     "engagements_change_pct": -17.2,
+     "followers_gained": 37,
+     "followers_gained_before": 51,
+     "followers_gained_change_pct": -27.5
+    },
+    "note": null
+   },
+   {
+    "key": "youtube",
+    "title": "YouTube",
+    "tab": "youtube",
+    "source": "YouTube Analytics",
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "t1": "Long video views: 116, up from 52 the week before.",
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "long_video_watch_minutes": 68,
+     "long_video_views": 116,
+     "long_video_views_before": 52,
+     "long_video_views_change_pct": 123.1,
+     "shorts_views": 5,
+     "shorts_views_before": 0,
+     "subscribers_gained": 3,
+     "subscribers_gained_before": 1,
+     "subscribers_gained_change_pct": 200.0
+    },
+    "note": null
+   }
+  ],
+  "month": [
+   {
+    "key": "pipeline",
+    "title": "Pipeline",
+    "tab": "pipeline",
+    "source": "Salesforce exports, marketing deals",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Marketing sourced deals (estimate): 3, up from 1 in September.",
+    "t2": "Marketing sourced pipeline (estimate): $400,000, down from $588,000.",
+    "t3": null,
+    "facts": {
+     "no_contact_deals": 19,
+     "share_of_all_deals_without_contact_pct": 79,
+     "sourced_deals": 3,
+     "sourced_deals_before": 1,
+     "sourced_deals_change_pct": 200.0,
+     "sourced_value": 400000,
+     "sourced_value_before": 588000,
+     "sourced_value_change_pct": -32.0,
+     "influenced_deals": 2,
+     "influenced_deals_before": 1,
+     "influenced_deals_change_pct": 100.0,
+     "influenced_value": 150000,
+     "influenced_value_before": 500000,
+     "influenced_value_change_pct": -70.0
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "leads",
+    "title": "Leads",
+    "tab": "leads",
+    "source": "Google Analytics, form fills",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Demo requests: 22, up from 6 in September.",
+    "t2": "Event sign-ups: 29, down from 65.",
+    "t3": null,
+    "facts": {
+     "demo_requests": 22,
+     "demo_requests_before": 6,
+     "demo_requests_change_pct": 266.7,
+     "events_form_fills": 29,
+     "events_form_fills_before": 65,
+     "events_form_fills_change_pct": -55.4,
+     "contact_form_fills": 1,
+     "contact_form_fills_before": 12,
+     "contact_form_fills_change_pct": -91.7,
+     "gartner_offer_form_fills": 67,
+     "gartner_offer_form_fills_before": 0
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "journey",
+    "title": "Customer journey",
+    "tab": "journey",
+    "source": "HubSpot, marketing contacts and meetings",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Meetings booked with marketing contacts: 4, down from 11 in September.",
+    "t2": "The most new contacts came from direct visits: 65 of 82.",
+    "t3": null,
+    "facts": {
+     "new_contacts_by_channel": {
+      "direct visits": 65,
+      "Google search": 14,
+      "paid ads": 1,
+      "LinkedIn": 1,
+      "other sources": 1
+     },
+     "meetings_booked": 4,
+     "meetings_booked_before": 11,
+     "meetings_booked_change_pct": -63.6,
+     "new_marketing_contacts": 82,
+     "new_marketing_contacts_before": 244,
+     "new_marketing_contacts_change_pct": -66.4
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "visits",
+    "title": "Website visits",
+    "tab": "visits",
+    "source": "Google Analytics",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Visits without email robots: 15,240, up from 9,186 in September.",
+    "t2": "Unlabelled visits jumped to 1,458, up from 247. These are likely robots, not real growth.",
+    "t3": null,
+    "facts": {
+     "all_visits_including_robots": 20194,
+     "all_visits_including_robots_before": 11817,
+     "unlabelled_visits": 1458,
+     "unlabelled_visits_before": 247,
+     "unlabelled_jump_is_likely_robots": true,
+     "visits_by_channel": {
+      "Direct (typed in, or unknown)": 11478,
+      "Search engines (mostly Google)": 4050,
+      "Email": 2067,
+      "Unlabelled": 1458,
+      "Other websites": 462,
+      "Video sites": 294
+     },
+     "visits_by_channel_before": {
+      "Direct (typed in, or unknown)": 4880,
+      "Search engines (mostly Google)": 3747,
+      "Email": 2213,
+      "Unlabelled": 247,
+      "Other websites": 330,
+      "Video sites": 6
+     },
+     "visits_without_email_robots": 15240,
+     "visits_without_email_robots_before": 9186,
+     "visits_without_email_robots_change_pct": 65.9,
+     "engaged_visits": 4748,
+     "engaged_visits_before": 3806,
+     "engaged_visits_change_pct": 24.8
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "search",
+    "title": "Google search",
+    "tab": "search",
+    "source": "Search Console",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Times Google showed our pages: 418,069, down from 539,902 in September.",
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "average_spot": 10.8,
+     "average_spot_before": 10.6,
+     "clicks": 2247,
+     "clicks_before": 2453,
+     "clicks_change_pct": -8.4,
+     "times_shown": 418069,
+     "times_shown_before": 539902,
+     "times_shown_change_pct": -22.6
+    },
+    "note": null
+   },
+   {
+    "key": "aeo",
+    "title": "AEO",
+    "tab": "aeo",
+    "source": "Google Analytics, visits from AI tools",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Visits from AI tools: 111, up from 71 in September.",
+    "t2": "Visits from AI tools led to 2 demo form fills.",
+    "t3": null,
+    "facts": {
+     "ai_visits_by_tool": {
+      "ChatGPT": 54,
+      "Gemini": 51,
+      "Perplexity": 6
+     },
+     "ai_demo_form_fills": 2,
+     "ai_visits": 111,
+     "ai_visits_before": 71,
+     "ai_visits_change_pct": 56.3
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "campaigns",
+    "title": "Campaigns",
+    "tab": "campaigns",
+    "source": "Google Analytics, tagged campaign links",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Visits from tagged campaigns: 545, down from 2,209 in September.",
+    "t2": "DG-FY27-Gartner-MQ brought the most: 42 visits, 27 of them engaged.",
+    "t3": null,
+    "facts": {
+     "top_campaigns": [
+      {
+       "campaign": "DG-FY27-Gartner-MQ",
+       "visits": 42,
+       "engaged_visits": 27,
+       "visits_before": 1
+      },
+      {
+       "campaign": "brand-page",
+       "visits": 37,
+       "engaged_visits": 25,
+       "visits_before": 0
+      },
+      {
+       "campaign": "DG-FY27-Q3-Event-Gartner-Symposium",
+       "visits": 33,
+       "engaged_visits": 4,
+       "visits_before": 0
+      }
+     ],
+     "campaign_visits": 545,
+     "campaign_visits_before": 2209,
+     "campaign_visits_change_pct": -75.3
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "events",
+    "title": "Events",
+    "tab": "events",
+    "source": "HubSpot and Salesforce event campaigns",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Flutter 2026: the AI-SDLC Summit: 174 signed up and 87 attended.",
+    "t2": "3 people from its Salesforce campaign have had a meeting since.",
+    "t3": null,
+    "facts": {
+     "events_ended": [
+      "Flutter 2026: the AI-SDLC Summit",
+      "Gartner IT Symposium/Xpo, Orlando",
+      "GitHub Universe"
+     ],
+     "event": "Flutter 2026: the AI-SDLC Summit",
+     "signed_up": 174,
+     "attended": 87,
+     "people_with_a_meeting_after": 3,
+     "in_its_salesforce_campaign": 86
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "content",
+    "title": "Content",
+    "tab": "content",
+    "source": "Google Analytics, landing pages",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Visits landing on a blog, report, guide or comparison page: 4,190, up from 2,510 in September.",
+    "t2": "The top piece was \"PHP2Shell: Invisible Threats and What to Do Next\": 358 visits, 21 of them engaged.",
+    "t3": null,
+    "facts": {
+     "top_pieces": [
+      {
+       "title": "PHP2Shell: Invisible Threats and What to Do Next",
+       "visits": 358,
+       "engaged_visits": 21,
+       "visits_before": 0
+      },
+      {
+       "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026",
+       "visits": 189,
+       "engaged_visits": 81,
+       "visits_before": 4
+      },
+      {
+       "title": "Software Factory: Intent-Driven Development at AI Speed",
+       "visits": 183,
+       "engaged_visits": 51,
+       "visits_before": 235
+      }
+     ],
+     "content_visits": 4190,
+     "content_visits_before": 2510,
+     "content_visits_change_pct": 66.9
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "linkedin",
+    "title": "LinkedIn brand",
+    "tab": "linkedin",
+    "source": "LinkedIn company page exports",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": "Times the company page's posts were seen: 37,791, up from 17,569 in September.",
+    "t2": "The most seen was the post from 1 Oct: 5,745 times, with 603 clicks.",
+    "t3": null,
+    "facts": {
+     "new_posts": 25,
+     "top_posts": [
+      {
+       "posted": "1 Oct",
+       "seen": 5745,
+       "clicks": 603,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "1 Oct",
+       "seen": 2653,
+       "clicks": 165,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "22 Oct",
+       "seen": 2171,
+       "clicks": 138,
+       "video": false,
+       "paid": false
+      }
+     ],
+     "times_seen": 37791,
+     "times_seen_before": 17569,
+     "times_seen_change_pct": 115.1,
+     "clicks": 7536,
+     "clicks_before": 1106,
+     "clicks_change_pct": 581.4,
+     "followers_gained": 92,
+     "followers_gained_before": 79,
+     "followers_gained_change_pct": 16.5
+    },
+    "note": "November has only 1 day so far, so this shows the last full month."
+   },
+   {
+    "key": "linkedin-exec",
+    "title": "LinkedIn exec",
+    "tab": "linkedin-exec",
+    "source": "Kumar's LinkedIn exports",
+    "period": null,
+    "period_before": null,
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {},
+    "note": "Kumar's export ends on 27 Oct, so Month shows once it covers the whole month."
+   },
+   {
+    "key": "youtube",
+    "title": "YouTube",
+    "tab": "youtube",
+    "source": "YouTube Analytics",
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "long_video_watch_minutes": 192,
+     "long_video_views": 418,
+     "long_video_views_before": 410,
+     "long_video_views_change_pct": 2.0,
+     "shorts_views": 6,
+     "shorts_views_before": 3,
+     "shorts_views_change_pct": 100.0,
+     "subscribers_gained": 7,
+     "subscribers_gained_before": 7,
+     "subscribers_gained_change_pct": 0.0
+    },
+    "note": null
+   }
+  ],
+  "quarter": [
+   {
+    "key": "pipeline",
+    "title": "Pipeline",
+    "tab": "pipeline",
+    "source": "Salesforce exports, marketing deals",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Marketing sourced deals (estimate): 5, down from 8 the 3 months before.",
+    "t2": "Marketing sourced pipeline (estimate): $1,256,000, up from $798,375.",
+    "t3": null,
+    "facts": {
+     "no_contact_deals": 54,
+     "share_of_all_deals_without_contact_pct": 79,
+     "sourced_deals": 5,
+     "sourced_deals_before": 8,
+     "sourced_deals_change_pct": -37.5,
+     "sourced_value": 1256000,
+     "sourced_value_before": 798375,
+     "sourced_value_change_pct": 57.3,
+     "influenced_deals": 4,
+     "influenced_deals_before": 8,
+     "influenced_deals_change_pct": -50.0,
+     "influenced_value": 800000,
+     "influenced_value_before": 850000,
+     "influenced_value_change_pct": -5.9
+    },
+    "note": null
+   },
+   {
+    "key": "leads",
+    "title": "Leads",
+    "tab": "leads",
+    "source": "Google Analytics, form fills",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Demo requests: 36, up from 28 the 3 months before.",
+    "t2": "Event sign-ups: 110, up from 81.",
+    "t3": null,
+    "facts": {
+     "demo_requests": 36,
+     "demo_requests_before": 28,
+     "demo_requests_change_pct": 28.6,
+     "events_form_fills": 110,
+     "events_form_fills_before": 81,
+     "events_form_fills_change_pct": 35.8,
+     "contact_form_fills": 22,
+     "contact_form_fills_before": 30,
+     "contact_form_fills_change_pct": -26.7,
+     "gartner_offer_form_fills": 67,
+     "gartner_offer_form_fills_before": 0
+    },
+    "note": null
+   },
+   {
+    "key": "journey",
+    "title": "Customer journey",
+    "tab": "journey",
+    "source": "HubSpot, marketing contacts and meetings",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Meetings booked with marketing contacts: 18, up from 6 the 3 months before.",
+    "t2": "The most new contacts came from events: 196 of 377.",
+    "t3": null,
+    "facts": {
+     "new_contacts_by_channel": {
+      "events": 196,
+      "direct visits": 112,
+      "Google search": 36,
+      "LinkedIn": 17,
+      "other sources": 10
+     },
+     "meetings_booked": 18,
+     "meetings_booked_before": 6,
+     "meetings_booked_change_pct": 200.0,
+     "new_marketing_contacts": 377,
+     "new_marketing_contacts_before": 235,
+     "new_marketing_contacts_change_pct": 60.4
+    },
+    "note": null
+   },
+   {
+    "key": "visits",
+    "title": "Website visits",
+    "tab": "visits",
+    "source": "Google Analytics",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Unlabelled visits jumped to 1,817, up from 1,136. These are likely robots, not real growth.",
+    "t2": "The biggest change was Direct (typed in, or unknown): 21,378 visits, up from 13,081. Visits by source still include robots.",
+    "t3": null,
+    "facts": {
+     "all_visits_including_robots": 44278,
+     "all_visits_including_robots_before": 32820,
+     "unlabelled_visits": 1817,
+     "unlabelled_visits_before": 1136,
+     "unlabelled_jump_is_likely_robots": true,
+     "visits_by_channel": {
+      "Direct (typed in, or unknown)": 21378,
+      "Search engines (mostly Google)": 11343,
+      "Email": 6524,
+      "Unlabelled": 1817,
+      "Other websites": 1391,
+      "Social media (LinkedIn and others)": 1004
+     },
+     "visits_by_channel_before": {
+      "Direct (typed in, or unknown)": 13081,
+      "Search engines (mostly Google)": 9440,
+      "Email": 3315,
+      "Unlabelled": 1136,
+      "Other websites": 2426,
+      "Social media (LinkedIn and others)": 2063
+     },
+     "visits_without_email_robots": 34832,
+     "visits_without_email_robots_before": 31853,
+     "visits_without_email_robots_change_pct": 9.4,
+     "engaged_visits": 13095,
+     "engaged_visits_before": 13101,
+     "engaged_visits_change_pct": -0.0
+    },
+    "note": null
+   },
+   {
+    "key": "search",
+    "title": "Google search",
+    "tab": "search",
+    "source": "Search Console",
+    "period": "1 Aug to 31 Oct 2026",
+    "period_before": "1 May to 31 Jul 2026",
+    "t1": "Times Google showed our pages: 1,946,966, down from 2,837,558 the 3 months before.",
+    "t2": "The average spot on Google moved from 9.9 to 10.6 (lower is better).",
+    "t3": null,
+    "facts": {
+     "average_spot": 10.6,
+     "average_spot_before": 9.9,
+     "clicks": 7015,
+     "clicks_before": 6221,
+     "clicks_change_pct": 12.8,
+     "times_shown": 1946966,
+     "times_shown_before": 2837558,
+     "times_shown_change_pct": -31.4
+    },
+    "note": null
+   },
+   {
+    "key": "aeo",
+    "title": "AEO",
+    "tab": "aeo",
+    "source": "Google Analytics, visits from AI tools",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "ai_visits_by_tool": {
+      "ChatGPT": 124,
+      "Gemini": 102,
+      "Perplexity": 12,
+      "Claude": 10,
+      "Copilot": 2
+     },
+     "ai_demo_form_fills": 2,
+     "ai_visits": 250,
+     "ai_visits_before": 250,
+     "ai_visits_change_pct": 0.0
+    },
+    "note": null
+   },
+   {
+    "key": "campaigns",
+    "title": "Campaigns",
+    "tab": "campaigns",
+    "source": "Google Analytics, tagged campaign links",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "top_campaigns": [
+      {
+       "campaign": "DG-FY27-Q3-Tokenomics-Webinar",
+       "visits": 2754,
+       "engaged_visits": 412,
+       "visits_before": 0
+      },
+      {
+       "campaign": "DG-FY27-Q3-Flutter-AISDLC-Sumit",
+       "visits": 1038,
+       "engaged_visits": 303,
+       "visits_before": 0
+      },
+      {
+       "campaign": "DG-2025-Q2-Whitepaper-Databricks",
+       "visits": 225,
+       "engaged_visits": 14,
+       "visits_before": 7
+      }
+     ],
+     "campaign_visits": 5083,
+     "campaign_visits_before": 4571,
+     "campaign_visits_change_pct": 11.2
+    },
+    "note": null
+   },
+   {
+    "key": "events",
+    "title": "Events",
+    "tab": "events",
+    "source": "HubSpot and Salesforce event campaigns",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Flutter 2026: the AI-SDLC Summit: 174 signed up and 87 attended.",
+    "t2": "3 people from its Salesforce campaign have had a meeting since.",
+    "t3": null,
+    "facts": {
+     "events_ended": [
+      "Tokenomics: the currency of enterprise AI",
+      "Flutter 2026: the AI-SDLC Summit",
+      "Gartner IT Symposium/Xpo, Orlando",
+      "GitHub Universe"
+     ],
+     "event": "Flutter 2026: the AI-SDLC Summit",
+     "signed_up": 174,
+     "attended": 87,
+     "people_with_a_meeting_after": 3,
+     "in_its_salesforce_campaign": 86
+    },
+    "note": null
+   },
+   {
+    "key": "content",
+    "title": "Content",
+    "tab": "content",
+    "source": "Google Analytics, landing pages",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "t1": "Visits landing on a blog, report, guide or comparison page: 9,051, up from 7,590 the 3 months before.",
+    "t2": "The top piece was \"Cursor AI Explained: An Overview of the AI Coding Assistant\": 797 visits, 351 of them engaged.",
+    "t3": null,
+    "facts": {
+     "top_pieces": [
+      {
+       "title": "Cursor AI Explained: An Overview of the AI Coding Assistant",
+       "visits": 797,
+       "engaged_visits": 351,
+       "visits_before": 705
+      },
+      {
+       "title": "Software Factory: Intent-Driven Development at AI Speed",
+       "visits": 423,
+       "engaged_visits": 150,
+       "visits_before": 0
+      },
+      {
+       "title": "PHP2Shell: Invisible Threats and What to Do Next",
+       "visits": 359,
+       "engaged_visits": 21,
+       "visits_before": 0
+      }
+     ],
+     "content_visits": 9051,
+     "content_visits_before": 7590,
+     "content_visits_change_pct": 19.2
+    },
+    "note": null
+   },
+   {
+    "key": "linkedin",
+    "title": "LinkedIn brand",
+    "tab": "linkedin",
+    "source": "LinkedIn company page exports",
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": null,
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "new_posts": 48,
+     "top_posts": [
+      {
+       "posted": "1 Oct",
+       "seen": 5745,
+       "clicks": 603,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "27 Aug",
+       "seen": 3237,
+       "clicks": 80,
+       "video": false,
+       "paid": false
+      },
+      {
+       "posted": "25 Aug",
+       "seen": 2678,
+       "clicks": 156,
+       "video": false,
+       "paid": false
+      }
+     ],
+     "times_seen": 117299,
+     "times_seen_before": null,
+     "clicks": 10755,
+     "clicks_before": null,
+     "followers_gained": 288,
+     "followers_gained_before": null
+    },
+    "note": null
+   },
+   {
+    "key": "linkedin-exec",
+    "title": "LinkedIn exec",
+    "tab": "linkedin-exec",
+    "source": "Kumar's LinkedIn exports",
+    "period": "28 Jul to 27 Oct 2026",
+    "period_before": null,
+    "t1": null,
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "times_seen": 47727,
+     "times_seen_before": null,
+     "engagements": 1307,
+     "engagements_before": null,
+     "followers_gained": 574,
+     "followers_gained_before": null
+    },
+    "note": null
+   },
+   {
+    "key": "youtube",
+    "title": "YouTube",
+    "tab": "youtube",
+    "source": "YouTube Analytics",
+    "period": "1 Aug to 31 Oct 2026",
+    "period_before": "1 May to 31 Jul 2026",
+    "t1": "Subscribers gained: 17, up from 11 the 3 months before.",
+    "t2": null,
+    "t3": null,
+    "facts": {
+     "long_video_watch_minutes": 1056,
+     "long_video_views": 1082,
+     "long_video_views_before": 1106,
+     "long_video_views_change_pct": -2.2,
+     "shorts_views": 9,
+     "shorts_views_before": 3,
+     "shorts_views_change_pct": 200.0,
+     "subscribers_gained": 17,
+     "subscribers_gained_before": 11,
+     "subscribers_gained_change_pct": 54.5
+    },
+    "note": null
+   }
+  ]
+ }
+}

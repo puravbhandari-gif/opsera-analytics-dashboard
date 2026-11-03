@@ -186,7 +186,7 @@ function viewAddress() {
   if (view.q) a.set("q", view.q);
   if (!gtm.on) a.set("markers", "off");
   if (gtm.type !== "all") a.set("mtype", gtm.type);
-  return `#${view.tab || "team"}?${a.toString()}`;
+  return `#${view.tab || "summary"}?${a.toString()}`;
 }
 function saveView() { history.replaceState(null, "", viewAddress()); }
 
@@ -2246,7 +2246,7 @@ function renderRankings(d) {
 }
 
 function showTab(name) {
-  if (!$(`tab-${name}`)) name = "team";   // the dashboard opens on Team metrics, the first tab (agreed 28 Oct 2026)
+  if (!$(`tab-${name}`)) name = "summary";   // the dashboard opens on the Summary, the first tab (agreed 3 Nov 2026)
   view.tab = name; saveView();
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === name));
@@ -2255,6 +2255,7 @@ function showTab(name) {
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "lookup") openLookup();
+  if (name === "summary") openSummary();
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
   if (name === "content") openContent();
@@ -2307,6 +2308,35 @@ $("theme-toggle").addEventListener("click", () => {
 });
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => charts.forEach(draw));
 $("theme-toggle").textContent = `Theme: ${(document.documentElement.dataset.theme || "auto").replace(/^./, (c) => c.toUpperCase())}`;
+
+// ---------- Summary tab: 3 takeaways per area, written every Monday by scripts/build_summary.py ----------
+
+let summaryLoad = null;
+function openSummary() {
+  if (!summaryLoad) summaryLoad = load("summary.json").then((d) => { const fill = () => renderSummary(d); fill(); monthlyTabs.push(fill); })
+    .catch(() => { $("summary-status").textContent = "The Summary isn't available right now."; });
+}
+function renderSummary(d) {
+  const day = periodMode === "day";   // the Summary has no Day view: one day is too small to say anything about (agreed 3 Nov 2026)
+  const all = d.views[day ? "week" : periodMode] || [];
+  const rows = d.by_claude ? all : all.filter((s) => s.t1);   // without Claude, only areas with a real change
+  $("summary-status").textContent = [day ? "The Summary has no Day view, so this shows Week." : "", `Written ${dayYear(d.written_on)}.`,
+    d.by_claude ? "" : "Full takeaways start once the key is added."].filter(Boolean).join(" ");
+  if (!rows.length) { $("summary-body").innerHTML = `<p class="muted">Nothing notable this period.</p>`; return; }
+  $("summary-body").innerHTML = rows.map((s) => {
+    const items = [["What happened", s.t1], ["What stands out", s.t2], ["What it means and what to do", s.t3]].filter(([, t]) => s.t1 && t);
+    const when = s.period ? `${s.source}, ${s.period}` + (s.period_before ? `, against ${s.period_before}.` : ".") : s.source + ".";
+    return `<article class="summary-card"><h3>${esc(s.title)}</h3>
+      <p class="source">${esc(when)}${s.note ? ` ${esc(s.note)}` : ""}</p>
+      ${items.length ? `<ol>${items.map(([k, t]) => `<li><span class="tk">${k}</span>${esc(t)}</li>`).join("")}</ol>` : `<p class="muted">Nothing notable this period.</p>`}
+      <a class="see-more" href="#${s.tab}" data-goto="${s.tab}">See more in ${esc(s.title)} &rsaquo;</a></article>`;
+  }).join("");
+}
+$("summary-body").addEventListener("click", (e) => {
+  const a = e.target.closest("[data-goto]");
+  if (!a) return;
+  e.preventDefault(); showTab(a.dataset.goto); window.scrollTo(0, 0);
+});
 
 // ---------- start ----------
 

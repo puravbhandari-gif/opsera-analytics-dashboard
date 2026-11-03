@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=31">
+<link rel="stylesheet" href="styles.css?v=32">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -45,6 +45,12 @@
   <div class="tabs-row">
   <button class="tabs-arrow left" type="button" aria-label="Show earlier tabs" hidden>&lsaquo;</button>
   <nav class="tabs" role="tablist" aria-label="Dashboard sections">
+    <div class="tab-group" role="presentation">
+      <span class="tab-group-label" aria-hidden="true">Overview</span>
+      <div class="tab-group-buttons" role="presentation">
+        <button role="tab" data-tab="summary">Summary</button>
+      </div>
+    </div>
     <div class="tab-group" role="presentation">
       <span class="tab-group-label" aria-hidden="true">Results</span>
       <div class="tab-group-buttons" role="presentation">
@@ -90,6 +96,19 @@
 </header>
 
 <main>
+  <section id="tab-summary" class="tab" role="tabpanel" hidden>
+    <h2>Summary</h2>
+    <p class="lead">The main takeaways for each area: what happened, what stands out, and what it means. Each area uses its own source's last full period.</p>
+    <p class="muted" id="summary-status">Loading...</p>
+    <div class="summary-grid" id="summary-body"></div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Claude writes the takeaways every Monday from the numbers on this dashboard. A takeaway is left out if it uses a number not in the data, is about a 0, or breaks the dashboard's writing rules. Takeaways never cover a 0, an unchanged number or a change under 15%.</p>
+      <p class="note">The Summary has no Day view. On Day, it shows Week.</p>
+      <p class="note">On Month, a month with less than half its days so far shows the last full month instead, so 1 day isn't set against a whole month.</p>
+    </details>
+  </section>
+
   <!-- Google Search -->
   <section id="tab-events" class="tab" role="tabpanel" hidden>
     <h2>Events</h2>
@@ -896,6 +915,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=88"></script>
+<script src="app.js?v=90"></script>
 </body>
 </html>

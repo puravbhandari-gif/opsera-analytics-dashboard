@@ -260,3 +260,15 @@ details.more > summary:hover { color: var(--ink); }
 .events-table td.wrap:first-child { min-width: 200px; max-width: 280px; }
 .table-notes { margin: 6px 0 12px; padding-left: 18px; color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
 .table-notes strong { color: var(--ink-2); font-weight: 500; }
+
+/* Summary tab */
+.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin: 8px 0 24px; }
+.summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.summary-card h3 { margin: 0 0 2px; font-size: 1.05rem; }
+.summary-card .source { margin: 0 0 12px; }
+.summary-card ol { margin: 0 0 12px; padding-left: 1.3em; display: grid; gap: 8px; }
+.summary-card li { color: var(--ink-2); line-height: 1.45; }
+.summary-card li::marker { color: var(--muted); }
+.summary-card .tk { display: block; font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+.summary-card .see-more { margin-top: auto; font-size: 0.9rem; }
+@media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } .summary-card { padding: 14px; } }
