@@ -1,18 +1,18 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-01",
- "pulled_at": "2026-11-02T08:46+05:30",
+ "end_date": "2026-11-02",
+ "pulled_at": "2026-11-03T12:54+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
  "lines": {
   "demo": {
    "label": "Demo requests",
-   "count": 72,
+   "count": 73,
    "pages": [
     {
      "page": "/demo",
-     "count": 72
+     "count": 73
     }
    ]
   },
@@ -38,7 +38,7 @@
   },
   "events": {
    "label": "Event sign-ups",
-   "count": 263,
+   "count": 264,
    "pages": [
     {
      "page": "/events/tokenomics-the-currency-of-enterprise-ai",
@@ -78,6 +78,10 @@
     },
     {
      "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "count": 1
+    },
+    {
+     "page": "/events/roundtable-webinar",
      "count": 1
     }
    ]
@@ -1616,6 +1620,14 @@
    "contact": 0,
    "gartner_offer": 0,
    "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-11-02",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 1,
    "other": 0
   }
  ],
