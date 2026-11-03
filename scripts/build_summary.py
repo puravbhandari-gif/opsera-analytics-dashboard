@@ -434,6 +434,8 @@ ZERO = re.compile(r"(?<![\d.,])\$?0(?![\d.,]*\d)")   # a standalone 0, like "0 d
 RULES = """Write the Summary lines for each period view (week, month, quarter) from these numbers only.
 - 3 boxes across all areas, 3 lines each, most important first: "well" (going well), "attention" (needs attention), "do" (do this week).
 - For each area: "main", the key of the number to show large (one of its mains, or "" if the area has nothing notable), "why" (why it matters) and "do" (what to do).
+- A suggestion ("do", and the "do" box) must come from our own numbers and name them, for example "Kumar's 3 video posts got 2x the comments of his text posts".
+  Never give best-practice advice or a generic tip. If the data doesn't support a specific suggestion, leave "do" empty. The "do" box can have fewer than 3 lines.
 - Every line is under 12 words. Plain English, sentence case, numerals, active voice, at most 2 commas.
 - Use only numbers given for that view. A *_change_pct can be written without its minus sign ("fell 76.5%").
 - Never write about a 0, an unchanged number or anything tiny (under 15%, or 10% for website visits). Unlabelled visit jumps are likely robots, never growth.
@@ -464,10 +466,13 @@ def numbers_in(obj):
     return out
 
 
-def check(text, facts):
-    """A line is kept only if it's under 12 words, follows the copy rules, never leans on a 0, and every number in it was given."""
+def check(text, facts, suggestion=False):
+    """A line is kept only if it's under 12 words, follows the copy rules, never leans on a 0, and every number in it was given.
+    A suggestion must also name a number from our data: no best-practice tips (agreed 3 Nov 2026)."""
     if not text:
         return None, "empty"
+    if suggestion and not NUMBER.search(text):
+        return None, "is a suggestion with no number from our data"
     if len(text.split()) >= 12:
         return None, "is 12 words or more"
     if BANNED.search(text) or ";" in text or "!" in text:
@@ -535,7 +540,7 @@ def main():
                 if w:
                     row["notable"] = bool(w.get("main")) and bool(main_)
                     for k in ("why", "do"):
-                        text, why_not = check((w.get(k) or "").strip(), a["facts"])
+                        text, why_not = check((w.get(k) or "").strip(), a["facts"], suggestion=k == "do")
                         row[k] = text
                         kept += bool(text)
                         if why_not and why_not != "empty":
@@ -559,7 +564,7 @@ def main():
             for b in ("well", "attention", "do"):
                 good = []
                 for text in (boxes.get(b) or [])[:3]:
-                    t, why_not = check(text.strip(), all_facts)
+                    t, why_not = check(text.strip(), all_facts, suggestion=b == "do")
                     if t:
                         good.append(t); kept += 1
                     else:

@@ -16,9 +16,9 @@
     "Campaign visits fell 74% to 87."
    ],
    "do": [
-    "Add a robot filter for unlabelled visits.",
-    "Restart campaigns with engaged visits.",
-    "Add a demo button to the PHP2Shell post."
+    "Filter out unlabelled visits, up from 47 to 1,336.",
+    "Find which forms brought the 51 contacts the week before.",
+    "Write more like Claude Code Alternatives: 25 of 61 engaged."
    ]
   },
   "areas": {
@@ -34,21 +34,21 @@
     "period_before": "19 to 25 Oct 2026",
     "main": "demo_requests",
     "why": "Event sign-ups rose to 12, up from 2.",
-    "do": "Put the next event's sign-up link in every email."
+    "do": ""
    },
    "journey": {
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
     "main": "new_marketing_contacts",
     "why": "Direct visits brought 8 of the 12 new contacts.",
-    "do": "Check which forms brought in the 51 last week."
+    "do": "Find which forms brought the 51 contacts the week before."
    },
    "visits": {
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
     "main": "visits_without_email_robots",
     "why": "Unlabelled visits jumped to 1,336, likely robots, not growth.",
-    "do": "Add a robot filter for unlabelled visits."
+    "do": "Filter out unlabelled visits, up from 47 to 1,336."
    },
    "search": {
     "period": "19 to 25 Oct 2026",
@@ -62,14 +62,14 @@
     "period_before": "19 to 25 Oct 2026",
     "main": "ai_visits",
     "why": "ChatGPT sent 20 and Gemini sent 18.",
-    "do": "Add a demo button to pages AI tools send people to."
+    "do": ""
    },
    "campaigns": {
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
     "main": "campaign_visits",
     "why": "DG-FY27-Gartner-MQ led with 22 visits, 17 engaged.",
-    "do": "Restart campaigns with engaged visits."
+    "do": ""
    },
    "events": {
     "period": "26 Oct to 1 Nov 2026",
@@ -83,28 +83,28 @@
     "period_before": "19 to 25 Oct 2026",
     "main": "content_visits",
     "why": "PHP2Shell brought 359 visits, but only 21 were engaged.",
-    "do": "Add a next step and demo button to PHP2Shell."
+    "do": "Write more like Claude Code Alternatives: 25 of 61 engaged."
    },
    "linkedin": {
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
     "main": "times_seen",
     "why": "The 26 Oct post was seen most: 1,108 times.",
-    "do": "Post more like the 26 Oct launch partner post."
+    "do": "Post more like 26 Oct: 1,108 views, next best 588."
    },
    "linkedin-exec": {
     "period": "19 to 25 Oct 2026",
     "period_before": "12 to 18 Oct 2026",
     "main": "engagements",
     "why": "Kumar gained 37 followers, down from 51.",
-    "do": "Ask a question in each post to get replies."
+    "do": ""
    },
    "youtube": {
     "period": "19 to 25 Oct 2026",
     "period_before": "12 to 18 Oct 2026",
     "main": "long_video_views",
     "why": "Long videos got 68 minutes of watch time.",
-    "do": "Share the newest long video on LinkedIn."
+    "do": ""
    }
   }
  },
@@ -123,9 +123,9 @@
     "Google showed our pages 22.6% less often."
    ],
    "do": [
-    "Follow up with every Flutter attendee this week.",
-    "Update the pages on page 2 of Google.",
-    "Link a contact to every new Salesforce deal."
+    "Link contacts to deals: 19 had no contact this month.",
+    "Write more like Claude Code Alternatives: 81 of 189 engaged.",
+    "Find what drove direct visits from 4,880 to 11,478."
    ]
   },
   "areas": {
@@ -134,70 +134,70 @@
     "period_before": "1 to 30 Sep 2026",
     "main": "sourced_deals",
     "why": "Their pipeline came to $400,000, down from $588,000.",
-    "do": "Link a contact to every new Salesforce deal."
+    "do": "Link contacts to deals: 19 had no contact this month."
    },
    "leads": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "demo_requests",
     "why": "The Gartner offer also brought 67 form fills.",
-    "do": "Keep the demo button on every Gartner offer page."
+    "do": ""
    },
    "journey": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "meetings_booked",
     "why": "New contacts fell to 82, down from 244.",
-    "do": "Add sign-up forms to more event and campaign pages."
+    "do": ""
    },
    "visits": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "visits_without_email_robots",
     "why": "Unlabelled visits jumped to 1,458, likely robots.",
-    "do": "Find which pages drew the new direct visits."
+    "do": "Find what drove direct visits from 4,880 to 11,478."
    },
    "search": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "times_shown",
     "why": "Fewer people saw our pages in Google search.",
-    "do": "Update the pages on page 2 of Google."
+    "do": ""
    },
    "aeo": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "ai_visits",
     "why": "AI tool visits led to 2 demo form fills.",
-    "do": "Write short answer pages for common AI questions."
+    "do": ""
    },
    "campaigns": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "campaign_visits",
     "why": "DG-FY27-Gartner-MQ led with 42 visits, 27 engaged.",
-    "do": "Line up the next campaign before this one ends."
+    "do": ""
    },
    "events": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "attended",
     "why": "174 signed up, and 3 had a meeting since.",
-    "do": "Follow up with every attendee within a week."
+    "do": ""
    },
    "content": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "content_visits",
     "why": "Claude Code Alternatives kept 81 of 189 visitors engaged.",
-    "do": "Write more comparison posts like it."
+    "do": "Write more like Claude Code Alternatives: 81 of 189 engaged."
    },
    "linkedin": {
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
     "main": "times_seen",
     "why": "Clicks grew 581.4% to 7,536.",
-    "do": "Keep a website link in every post."
+    "do": ""
    },
    "youtube": {
     "period": "1 to 31 Oct 2026",
@@ -223,9 +223,8 @@
     "Social media visits fell to 1,004, from 2,063."
    ],
    "do": [
-    "Book follow-ups with event contacts within a week.",
-    "Update the pages on page 2 of Google.",
-    "Add a demo button to the Cursor explainer."
+    "Link contacts to deals: 54 had no contact in 3 months.",
+    "Filter out unlabelled visits, up from 1,136 to 1,817."
    ]
   },
   "areas": {
@@ -234,35 +233,35 @@
     "period_before": "2 May to 1 Aug 2026",
     "main": "sourced_value",
     "why": "It came from 5 deals, down from 8.",
-    "do": "Link a contact to every new Salesforce deal."
+    "do": "Link contacts to deals: 54 had no contact in 3 months."
    },
    "leads": {
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
     "main": "demo_requests",
     "why": "Event sign-ups rose to 110, up from 81.",
-    "do": "Keep a webinar or event running every month."
+    "do": ""
    },
    "journey": {
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
     "main": "meetings_booked",
     "why": "Events brought 196 of the 377 new contacts.",
-    "do": "Book follow-ups with event contacts within a week."
+    "do": ""
    },
    "visits": {
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
     "main": "visits_without_email_robots",
     "why": "Unlabelled visits jumped to 1,817, likely robots.",
-    "do": "Add a robot filter for unlabelled visits."
+    "do": "Filter out unlabelled visits, up from 1,136 to 1,817."
    },
    "search": {
     "period": "1 Aug to 31 Oct 2026",
     "period_before": "1 May to 31 Jul 2026",
     "main": "times_shown",
     "why": "The average spot moved from 9.9 to 10.6.",
-    "do": "Update the pages on page 2 of Google."
+    "do": ""
    },
    "aeo": {
     "period": "2 Aug to 1 Nov 2026",
@@ -283,14 +282,14 @@
     "period_before": "2 May to 1 Aug 2026",
     "main": "attended",
     "why": "86 people are in its campaign, and 3 had a meeting.",
-    "do": "Ask sales to follow up with the other attendees."
+    "do": ""
    },
    "content": {
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
     "main": "content_visits",
     "why": "The Cursor explainer kept 351 of 797 visitors engaged.",
-    "do": "Add a demo button to the Cursor explainer."
+    "do": ""
    },
    "linkedin": {
     "period": "2 Aug to 1 Nov 2026",

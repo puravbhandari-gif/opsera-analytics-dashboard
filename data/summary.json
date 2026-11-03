@@ -40,7 +40,7 @@
       "min_change_pct": 15
      },
      "why": "Event sign-ups rose to 12, up from 2.",
-     "do": "Put the next event's sign-up link in every email.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -89,7 +89,7 @@
       "min_change_pct": 15
      },
      "why": "Direct visits brought 8 of the 12 new contacts.",
-     "do": "Check which forms brought in the 51 last week.",
+     "do": "Find which forms brought the 51 contacts the week before.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -138,7 +138,7 @@
       "min_change_pct": 10
      },
      "why": "Unlabelled visits jumped to 1,336, likely robots, not growth.",
-     "do": "Add a robot filter for unlabelled visits.",
+     "do": "Filter out unlabelled visits, up from 47 to 1,336.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -201,7 +201,7 @@
       "min_change_pct": 15
      },
      "why": "ChatGPT sent 20 and Gemini sent 18.",
-     "do": "Add a demo button to pages AI tools send people to.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -250,7 +250,7 @@
       "min_change_pct": 15
      },
      "why": "DG-FY27-Gartner-MQ led with 22 visits, 17 engaged.",
-     "do": "Restart campaigns with engaged visits.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -313,7 +313,7 @@
       "min_change_pct": 15
      },
      "why": "PHP2Shell brought 359 visits, but only 21 were engaged.",
-     "do": "Add a next step and demo button to PHP2Shell.",
+     "do": "Write more like Claude Code Alternatives: 25 of 61 engaged.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -362,7 +362,7 @@
       "min_change_pct": 15
      },
      "why": "The 26 Oct post was seen most: 1,108 times.",
-     "do": "Post more like the 26 Oct launch partner post.",
+     "do": "Post more like 26 Oct: 1,108 views, next best 588.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -411,7 +411,7 @@
       "min_change_pct": 15
      },
      "why": "Kumar gained 37 followers, down from 51.",
-     "do": "Ask a question in each post to get replies.",
+     "do": null,
      "trend": [
       {
        "week": "14 to 20 Sep 2026",
@@ -460,7 +460,7 @@
       "min_change_pct": 15
      },
      "why": "Long videos got 68 minutes of watch time.",
-     "do": "Share the newest long video on LinkedIn.",
+     "do": null,
      "trend": [
       {
        "week": "14 to 20 Sep 2026",
@@ -502,9 +502,9 @@
      "Campaign visits fell 74% to 87."
     ],
     "do": [
-     "Add a robot filter for unlabelled visits.",
-     "Restart campaigns with engaged visits.",
-     "Add a demo button to the PHP2Shell post."
+     "Filter out unlabelled visits, up from 47 to 1,336.",
+     "Find which forms brought the 51 contacts the week before.",
+     "Write more like Claude Code Alternatives: 25 of 61 engaged."
     ]
    }
   },
@@ -533,7 +533,7 @@
       "min_change_pct": 15
      },
      "why": "Their pipeline came to $400,000, down from $588,000.",
-     "do": "Link a contact to every new Salesforce deal.",
+     "do": "Link contacts to deals: 19 had no contact this month.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -582,7 +582,7 @@
       "min_change_pct": 15
      },
      "why": "The Gartner offer also brought 67 form fills.",
-     "do": "Keep the demo button on every Gartner offer page.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -631,7 +631,7 @@
       "min_change_pct": 15
      },
      "why": "New contacts fell to 82, down from 244.",
-     "do": "Add sign-up forms to more event and campaign pages.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -680,7 +680,7 @@
       "min_change_pct": 10
      },
      "why": "Unlabelled visits jumped to 1,458, likely robots.",
-     "do": "Find which pages drew the new direct visits.",
+     "do": "Find what drove direct visits from 4,880 to 11,478.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -729,7 +729,7 @@
       "min_change_pct": 15
      },
      "why": "Fewer people saw our pages in Google search.",
-     "do": "Update the pages on page 2 of Google.",
+     "do": null,
      "trend": [
       {
        "week": "14 to 20 Sep 2026",
@@ -778,7 +778,7 @@
       "min_change_pct": 15
      },
      "why": "AI tool visits led to 2 demo form fills.",
-     "do": "Write short answer pages for common AI questions.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -827,7 +827,7 @@
       "min_change_pct": 15
      },
      "why": "DG-FY27-Gartner-MQ led with 42 visits, 27 engaged.",
-     "do": "Line up the next campaign before this one ends.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -875,7 +875,7 @@
       "good": null
      },
      "why": "174 signed up, and 3 had a meeting since.",
-     "do": "Follow up with every attendee within a week.",
+     "do": null,
      "trend": []
     },
     {
@@ -899,7 +899,7 @@
       "min_change_pct": 15
      },
      "why": "Claude Code Alternatives kept 81 of 189 visitors engaged.",
-     "do": "Write more comparison posts like it.",
+     "do": "Write more like Claude Code Alternatives: 81 of 189 engaged.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -948,7 +948,7 @@
       "min_change_pct": 15
      },
      "why": "Clicks grew 581.4% to 7,536.",
-     "do": "Keep a website link in every post.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1018,9 +1018,9 @@
      "Google showed our pages 22.6% less often."
     ],
     "do": [
-     "Follow up with every Flutter attendee this week.",
-     "Update the pages on page 2 of Google.",
-     "Link a contact to every new Salesforce deal."
+     "Link contacts to deals: 19 had no contact this month.",
+     "Write more like Claude Code Alternatives: 81 of 189 engaged.",
+     "Find what drove direct visits from 4,880 to 11,478."
     ]
    }
   },
@@ -1049,7 +1049,7 @@
       "min_change_pct": 15
      },
      "why": "It came from 5 deals, down from 8.",
-     "do": "Link a contact to every new Salesforce deal.",
+     "do": "Link contacts to deals: 54 had no contact in 3 months.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1098,7 +1098,7 @@
       "min_change_pct": 15
      },
      "why": "Event sign-ups rose to 110, up from 81.",
-     "do": "Keep a webinar or event running every month.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1147,7 +1147,7 @@
       "min_change_pct": 15
      },
      "why": "Events brought 196 of the 377 new contacts.",
-     "do": "Book follow-ups with event contacts within a week.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1196,7 +1196,7 @@
       "min_change_pct": 10
      },
      "why": "Unlabelled visits jumped to 1,817, likely robots.",
-     "do": "Add a robot filter for unlabelled visits.",
+     "do": "Filter out unlabelled visits, up from 1,136 to 1,817.",
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1245,7 +1245,7 @@
       "min_change_pct": 15
      },
      "why": "The average spot moved from 9.9 to 10.6.",
-     "do": "Update the pages on page 2 of Google.",
+     "do": null,
      "trend": [
       {
        "week": "14 to 20 Sep 2026",
@@ -1321,7 +1321,7 @@
       "good": null
      },
      "why": "86 people are in its campaign, and 3 had a meeting.",
-     "do": "Ask sales to follow up with the other attendees.",
+     "do": null,
      "trend": []
     },
     {
@@ -1345,7 +1345,7 @@
       "min_change_pct": 15
      },
      "why": "The Cursor explainer kept 351 of 797 visitors engaged.",
-     "do": "Add a demo button to the Cursor explainer.",
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -1429,9 +1429,8 @@
      "Social media visits fell to 1,004, from 2,063."
     ],
     "do": [
-     "Book follow-ups with event contacts within a week.",
-     "Update the pages on page 2 of Google.",
-     "Add a demo button to the Cursor explainer."
+     "Link contacts to deals: 54 had no contact in 3 months.",
+     "Filter out unlabelled visits, up from 1,136 to 1,817."
     ]
    }
   }
