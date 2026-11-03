@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-02",
- "pulled_at": "2026-11-03T12:54+05:30",
+ "pulled_at": "2026-11-03T13:15+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai, and Google Analytics 4, opsera.ai 2026",
  "pages": [
   {
@@ -1836,7 +1836,7 @@
    "page": "/blog/spec-driven-development",
    "group": "Blog",
    "title": "Spec-Driven Development: Specs Beat Prompts \u2014 Opsera",
-   "visits_since_new_site": 130,
+   "visits_since_new_site": 132,
    "weeks": [
     {
      "week": "2026-09-28",
@@ -4145,128 +4145,10 @@
    ]
   },
   {
-   "page": "/blog/software-factory-model",
-   "group": "Blog",
-   "title": "Software Factory Model: Reducing Architecture Drift \u2014 Opsera",
-   "visits_since_new_site": 63,
-   "weeks": [
-    {
-     "week": "2026-09-07",
-     "clicks": 9,
-     "times_shown": 455,
-     "avg_spot": 11.0
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 9,
-     "times_shown": 576,
-     "avg_spot": 13.1
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 5,
-     "times_shown": 264,
-     "avg_spot": 10.1
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 1,
-     "times_shown": 162,
-     "avg_spot": 13.5
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 10,
-     "times_shown": 670,
-     "avg_spot": 11.6
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 2,
-     "times_shown": 60,
-     "avg_spot": 8.1
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 1,
-     "times_shown": 161,
-     "avg_spot": 7.7
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 3,
-     "times_shown": 226,
-     "avg_spot": 9.8
-    }
-   ],
-   "searches": [
-    {
-     "search": "software factory model",
-     "clicks": 4,
-     "times_shown": 98,
-     "avg_spot": 9.9
-    },
-    {
-     "search": "software factory",
-     "clicks": 2,
-     "times_shown": 132,
-     "avg_spot": 18.5
-    },
-    {
-     "search": "factory model in software development",
-     "clicks": 2,
-     "times_shown": 16,
-     "avg_spot": 5.1
-    },
-    {
-     "search": "software factory framework",
-     "clicks": 2,
-     "times_shown": 14,
-     "avg_spot": 6.1
-    },
-    {
-     "search": "software factory pattern",
-     "clicks": 1,
-     "times_shown": 47,
-     "avg_spot": 17.8
-    },
-    {
-     "search": "\"software factory\"",
-     "clicks": 1,
-     "times_shown": 2,
-     "avg_spot": 25.5
-    },
-    {
-     "search": "software factory ai",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 50.0
-    },
-    {
-     "search": "software factory setup",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 19.0
-    },
-    {
-     "search": "what is a software factory",
-     "clicks": 0,
-     "times_shown": 74,
-     "avg_spot": 34.6
-    },
-    {
-     "search": "software factory vs devops",
-     "clicks": 0,
-     "times_shown": 52,
-     "avg_spot": 10.9
-    }
-   ]
-  },
-  {
    "page": "/blog/sast-tools",
    "group": "Blog",
    "title": "Best SAST Tools in 2026: Complete Comparison Guide \u2014 Opsera",
-   "visits_since_new_site": 62,
+   "visits_since_new_site": 63,
    "weeks": [
     {
      "week": "2026-07-06",
@@ -4431,6 +4313,124 @@
      "clicks": 0,
      "times_shown": 399,
      "avg_spot": 14.2
+    }
+   ]
+  },
+  {
+   "page": "/blog/software-factory-model",
+   "group": "Blog",
+   "title": "Software Factory Model: Reducing Architecture Drift \u2014 Opsera",
+   "visits_since_new_site": 63,
+   "weeks": [
+    {
+     "week": "2026-09-07",
+     "clicks": 9,
+     "times_shown": 455,
+     "avg_spot": 11.0
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 9,
+     "times_shown": 576,
+     "avg_spot": 13.1
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 5,
+     "times_shown": 264,
+     "avg_spot": 10.1
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 1,
+     "times_shown": 162,
+     "avg_spot": 13.5
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 10,
+     "times_shown": 670,
+     "avg_spot": 11.6
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 2,
+     "times_shown": 60,
+     "avg_spot": 8.1
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 1,
+     "times_shown": 161,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 3,
+     "times_shown": 226,
+     "avg_spot": 9.8
+    }
+   ],
+   "searches": [
+    {
+     "search": "software factory model",
+     "clicks": 4,
+     "times_shown": 98,
+     "avg_spot": 9.9
+    },
+    {
+     "search": "software factory",
+     "clicks": 2,
+     "times_shown": 132,
+     "avg_spot": 18.5
+    },
+    {
+     "search": "factory model in software development",
+     "clicks": 2,
+     "times_shown": 16,
+     "avg_spot": 5.1
+    },
+    {
+     "search": "software factory framework",
+     "clicks": 2,
+     "times_shown": 14,
+     "avg_spot": 6.1
+    },
+    {
+     "search": "software factory pattern",
+     "clicks": 1,
+     "times_shown": 47,
+     "avg_spot": 17.8
+    },
+    {
+     "search": "\"software factory\"",
+     "clicks": 1,
+     "times_shown": 2,
+     "avg_spot": 25.5
+    },
+    {
+     "search": "software factory ai",
+     "clicks": 1,
+     "times_shown": 1,
+     "avg_spot": 50.0
+    },
+    {
+     "search": "software factory setup",
+     "clicks": 1,
+     "times_shown": 1,
+     "avg_spot": 19.0
+    },
+    {
+     "search": "what is a software factory",
+     "clicks": 0,
+     "times_shown": 74,
+     "avg_spot": 34.6
+    },
+    {
+     "search": "software factory vs devops",
+     "clicks": 0,
+     "times_shown": 52,
+     "avg_spot": 10.9
     }
    ]
   },

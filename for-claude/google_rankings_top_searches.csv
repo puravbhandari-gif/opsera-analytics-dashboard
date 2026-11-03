@@ -236,16 +236,6 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/devsecops-tools,Blog,kubernetes devsecops tools,1,17,21.8
 /blog/devsecops-tools,Blog,devsecops ci/cd pipeline,1,15,11.7
 /blog/devsecops-tools,Blog,devsecops tool,0,1428,14.3
-/blog/software-factory-model,Blog,software factory model,4,98,9.9
-/blog/software-factory-model,Blog,software factory,2,132,18.5
-/blog/software-factory-model,Blog,factory model in software development,2,16,5.1
-/blog/software-factory-model,Blog,software factory framework,2,14,6.1
-/blog/software-factory-model,Blog,software factory pattern,1,47,17.8
-/blog/software-factory-model,Blog,"""software factory""",1,2,25.5
-/blog/software-factory-model,Blog,software factory ai,1,1,50.0
-/blog/software-factory-model,Blog,software factory setup,1,1,19.0
-/blog/software-factory-model,Blog,what is a software factory,0,74,34.6
-/blog/software-factory-model,Blog,software factory vs devops,0,52,10.9
 /blog/sast-tools,Blog,sast tools,3,2501,15.4
 /blog/sast-tools,Blog,best sast tools,3,1179,15.6
 /blog/sast-tools,Blog,sast scanning tools,1,428,19.3
@@ -256,6 +246,16 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/sast-tools,Blog,sast tool,0,718,17.6
 /blog/sast-tools,Blog,open source sast tools,0,436,14.1
 /blog/sast-tools,Blog,sast tools list,0,399,14.2
+/blog/software-factory-model,Blog,software factory model,4,98,9.9
+/blog/software-factory-model,Blog,software factory,2,132,18.5
+/blog/software-factory-model,Blog,factory model in software development,2,16,5.1
+/blog/software-factory-model,Blog,software factory framework,2,14,6.1
+/blog/software-factory-model,Blog,software factory pattern,1,47,17.8
+/blog/software-factory-model,Blog,"""software factory""",1,2,25.5
+/blog/software-factory-model,Blog,software factory ai,1,1,50.0
+/blog/software-factory-model,Blog,software factory setup,1,1,19.0
+/blog/software-factory-model,Blog,what is a software factory,0,74,34.6
+/blog/software-factory-model,Blog,software factory vs devops,0,52,10.9
 /blog/legacy-code-modernization,Blog,legacy code modernization,3,549,7.3
 /blog/legacy-code-modernization,Blog,code modernization,2,874,8.4
 /blog/legacy-code-modernization,Blog,ai legacy code modernization,1,72,10.1

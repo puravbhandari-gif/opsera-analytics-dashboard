@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-02",
- "pulled_at": "2026-11-03T12:54+05:30",
+ "pulled_at": "2026-11-03T13:15+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -10,8 +10,8 @@
   "engagedSessions": 31075
  },
  "split_sums": {
-  "daily": 86837,
-  "channels": 86854
+  "daily": 86845,
+  "channels": 86877
  },
  "daily": [
   {
@@ -1306,18 +1306,18 @@
   },
   {
    "date": "2026-11-02",
-   "sessions": 410,
-   "totalUsers": 374,
+   "sessions": 418,
+   "totalUsers": 382,
    "engagedSessions": 125
   }
  ],
  "channels": [
   {
    "sessionDefaultChannelGroup": "Direct",
-   "sessions": 38115,
-   "totalUsers": 35257,
+   "sessions": 38138,
+   "totalUsers": 35264,
    "engagedSessions": 9718,
-   "averageSessionDuration": 52.0996561430408
+   "averageSessionDuration": 52.068236244480566
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -1331,14 +1331,14 @@
    "sessions": 10657,
    "totalUsers": 10441,
    "engagedSessions": 1947,
-   "averageSessionDuration": 17.079329139438865
+   "averageSessionDuration": 17.07932913943887
   },
   {
    "sessionDefaultChannelGroup": "Referral",
    "sessions": 4408,
    "totalUsers": 2999,
    "engagedSessions": 2555,
-   "averageSessionDuration": 141.00966587182396
+   "averageSessionDuration": 141.00966587182393
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
@@ -1766,6 +1766,12 @@
    "engagedSessions": 61
   },
   {
+   "date": "2026-11-02",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 220,
+   "engagedSessions": 41
+  },
+  {
    "date": "2026-10-04",
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 215,
@@ -1776,12 +1782,6 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 214,
    "engagedSessions": 34
-  },
-  {
-   "date": "2026-11-02",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 213,
-   "engagedSessions": 41
   },
   {
    "date": "2026-10-10",
@@ -2636,6 +2636,12 @@
    "engagedSessions": 47
   },
   {
+   "date": "2026-11-02",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 134,
+   "engagedSessions": 71
+  },
+  {
    "date": "2026-05-21",
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 133,
@@ -2670,12 +2676,6 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 133,
    "engagedSessions": 65
-  },
-  {
-   "date": "2026-11-02",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 133,
-   "engagedSessions": 71
   },
   {
    "date": "2026-05-07",
@@ -10897,10 +10897,10 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
-   "sessions": 38115,
-   "totalUsers": 35257,
+   "sessions": 38138,
+   "totalUsers": 35264,
    "engagedSessions": 9718,
-   "averageSessionDuration": 52.0996561430408
+   "averageSessionDuration": 52.068236244480566
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -16519,7 +16519,7 @@
   },
   {
    "page": "/blog/sast-tools",
-   "views": 195
+   "views": 196
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
@@ -16546,16 +16546,16 @@
    "views": 170
   },
   {
+   "page": "/blog/spec-driven-development",
+   "views": 164
+  },
+  {
    "page": "/interactive-demo",
    "views": 164
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer",
    "views": 164
-  },
-  {
-   "page": "/blog/spec-driven-development",
-   "views": 162
   },
   {
    "page": "/blog/8090-ai-alternatives",
@@ -16630,15 +16630,15 @@
    "views": 122
   },
   {
+   "page": "/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins",
+   "views": 118
+  },
+  {
    "page": "/ecosystem/git",
    "views": 117
   },
   {
    "page": "/ecosystem/gitlab-scm",
-   "views": 117
-  },
-  {
-   "page": "/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins",
    "views": 117
   },
   {
@@ -16978,15 +16978,15 @@
    "views": 55
   },
   {
+   "page": "/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption",
+   "views": 55
+  },
+  {
    "page": "/ecosystem/docker-hub",
    "views": 54
   },
   {
    "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
-   "views": 54
-  },
-  {
-   "page": "/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption",
    "views": 54
   },
   {
@@ -17398,6 +17398,10 @@
    "views": 35
   },
   {
+   "page": "/customer-stories/reflektion",
+   "views": 35
+  },
+  {
    "page": "/newsroom/opsera-unveils-next-generation-ai-powered-devops-platform-with-hummingbird-ai-reasoning-agents-insights-in-a-box-and-github-mcp-integration",
    "views": 35
   },
@@ -17431,10 +17435,6 @@
   },
   {
    "page": "/blog/provar-vs-selenium-which-tool-should-you-use-for-salesforce-devops",
-   "views": 34
-  },
-  {
-   "page": "/customer-stories/reflektion",
    "views": 34
   },
   {
@@ -18146,6 +18146,10 @@
    "views": 19
   },
   {
+   "page": "/blog/migrate-dotnet-framework-to-dotnet-10",
+   "views": 19
+  },
+  {
    "page": "/diagram-test",
    "views": 19
   },
@@ -18207,10 +18211,6 @@
   },
   {
    "page": "/__trashed",
-   "views": 18
-  },
-  {
-   "page": "/blog/migrate-dotnet-framework-to-dotnet-10",
    "views": 18
   },
   {
@@ -46385,14 +46385,14 @@
   {
    "date": "2026-11-02",
    "channel": "all",
-   "visits": 410,
+   "visits": 418,
    "demo_page": 14,
    "demo_form": 1
   },
   {
    "date": "2026-11-02",
    "channel": "direct",
-   "visits": 213,
+   "visits": 220,
    "demo_page": 9,
    "demo_form": 1
   },
@@ -46420,7 +46420,7 @@
   {
    "date": "2026-11-02",
    "channel": "search",
-   "visits": 124,
+   "visits": 125,
    "demo_page": 4,
    "demo_form": 0
   }
@@ -50081,7 +50081,7 @@
   },
   {
    "kind": "",
-   "visits": 26,
+   "visits": 27,
    "engaged": 0
   }
  ],
