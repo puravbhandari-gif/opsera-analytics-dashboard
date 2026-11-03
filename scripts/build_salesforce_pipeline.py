@@ -23,6 +23,8 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
 - Events: people in each event's Salesforce campaign who then had a meeting set.
 - Anything based on Primary Campaign Source is an estimate (David: a starting point, not reliable on its own).
 - Deals with no contact linked are their own group, "No contact linked", not sales.
+- Events with their own Salesforce member export (Flutter, Gartner Xpo, GitHub Universe; agreed 3 Nov 2026): members
+  are matched by email to the meetings export, and count when a meeting was set on or after the event's first day.
 - A "To review" list: deals with a campaign joined just outside the 90-day window (91 to 120 days), or whose campaigns
   match more than one source (marketing, booking agency, SDR or AE outreach).
 """
@@ -53,7 +55,10 @@ EVENT_CAMPAIGNS = {"appsec_agents": "DG-FY27-Q1-Meet-the-Agents-Webinar", "ai_be
                    "gartner": "DG-FY27-Q3-Gartner-Xpo", "github_universe": "DG-FY27-Q3-GitHub-Universe-2026"}
 TARGET_ACCOUNTS = re.compile(r"\b(abm|abx|microsite)\b", re.I)
 FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 Multi-Attrib Opportunities-*.xls",
-         "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls"}
+         "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
+         "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
+         "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls"}
+EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28)}
 
 
 class _Tables(HTMLParser):
@@ -126,9 +131,33 @@ def fiscal_quarter(d):
     return f"FY{(d.year + (1 if d.month >= 2 else 0)) % 100} Q{q}"
 
 
+def event_members(meets):
+    """Members of each event's own Salesforce export, and how many had a meeting set on or after the event's first day.
+    Matched by email in memory; only counts are written."""
+    set_on = collections.defaultdict(list)   # email -> (meeting set date, outcome)
+    for m in meets:
+        e, when = (m.get("Email") or "").lower(), day(m.get("Date 3 - Meeting Set") or "")
+        if e and when:
+            set_on[e].append((when, m.get("Meeting Outcome") or "Not recorded"))
+    out = []
+    for key, first in EVENT_FIRST_DAY.items():
+        try:
+            rows, stamp = read(f"event_{key}")
+        except SystemExit:
+            continue   # no export for this event yet
+        emails = {(r.get("Email") or "").lower() for r in rows if r.get("Email")}
+        met = {e: [o for d, o in set_on[e] if d >= first] for e in emails}
+        met = {e: o for e, o in met.items() if o}
+        out.append({"key": key, "campaign": EVENT_CAMPAIGNS[key], "export": stamp, "members": len(rows),
+                    "statuses": dict(collections.Counter(r.get("Member Status") or "Not recorded" for r in rows)),
+                    "people_with_meeting": len(met), "held": sum(1 for o in met.values() if "Meeting Held" in o)})
+    return out
+
+
 def main():
     opps, opps_on = read("opportunities")
-    opps_cover_from = read.covers_from
+    # the report's start, from "…-05-01-2026.xls" in the file name; newer exports drop it, so use the 1st of the earliest month
+    opps_cover_from = read.covers_from or min(day(o["Created Date"]) for o in opps if o["Created Date"]).replace(day=1).isoformat()
     touches, touches_on = read("touches")
     meets, meets_on = read("meetings")
     ids, _ = read("campaign_ids")
@@ -255,6 +284,7 @@ def main():
         "to_review": sorted(review, key=lambda r: r["date"]),
         "event_meetings": [{"key": k, "campaign": c, "people": len(event_people[c]),
                             "held": sum(1 for o in event_people[c].values() if o == "Meeting Held")} for k, c in EVENT_CAMPAIGNS.items()],
+        "event_members": event_members(meets),
         "meetings": {"since": START.isoformat(),
                      "days": [{"date": k, "people": sum(v.values()), "outcomes": dict(v)} for k, v in sorted(meet_days.items())],
                      "months": [{"month": k, "people": sum(v.values()), "outcomes": dict(v)} for k, v in sorted(meet_months.items())],
@@ -267,7 +297,8 @@ def main():
           f"{n} no contact linked, {len(review)} to review, "
           f"{out['share_without_contact_pct']}% with no contact, {unknown_join} counted without a known join date, {dropped_by_window} left out by the "
           f"{WINDOW_DAYS}-day rule; {len(people)} people with a campaign-influenced meeting; event meetings "
-          + ", ".join(f"{e['key']} {e['people']}" for e in out["event_meetings"]))
+          + ", ".join(f"{e['key']} {e['people']}" for e in out["event_meetings"])
+          + "; event exports " + ", ".join(f"{e['key']} {e['members']} members, {e['people_with_meeting']} with a meeting" for e in out["event_members"]))
 
 
 if __name__ == "__main__":

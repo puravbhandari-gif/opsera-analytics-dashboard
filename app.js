@@ -1969,7 +1969,7 @@ function renderCampaigns(d, hub) {
 function renderPipeline(sf) {
   // Counts and totals only, built from Salesforce exports kept outside the repo (scripts/build_salesforce_pipeline.py)
   const months = sf.months, sum = (list, k) => list.reduce((t, r) => t + r[k], 0);
-  const days = [...new Set(Object.values(sf.exports))].sort();
+  const days = [...new Set([sf.exports.opportunities, sf.exports.campaign_touches])].sort();   // the deal exports (meetings have their own line)
   const exports = days.length === 2 && days[0].slice(0, 7) === days[1].slice(0, 7) ? `${Number(days[0].slice(8))} and ${dayYear(days[1])}` : days.map(dayYear).join(" and ");
   const when = range(sf.opportunities_from, sf.opportunities_to);
   // The cards follow the period switch, by the day each deal was created, against the period before

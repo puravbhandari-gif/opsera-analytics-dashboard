@@ -1,16 +1,16 @@
 {
  "source": "Salesforce reports",
  "exports": {
-  "opportunities": "2026-10-28",
-  "campaign_touches": "2026-10-27",
+  "opportunities": "2026-11-02",
+  "campaign_touches": "2026-11-02",
   "meetings": "2026-10-27"
  },
  "opportunities_cover_from": "2026-05-01",
  "opportunities_from": "2026-05-08",
- "opportunities_to": "2026-10-23",
- "share_without_contact_pct": 80,
+ "opportunities_to": "2026-10-30",
+ "share_without_contact_pct": 79,
  "window_days": 90,
- "deals_join_date_unknown": 15,
+ "deals_join_date_unknown": 14,
  "deals_left_out_by_window": 2,
  "months": [
   {
@@ -28,7 +28,7 @@
    "month": "2026-06",
    "quarter": "FY27 Q2",
    "sourced_deals": 1,
-   "sourced_value": 150000,
+   "sourced_value": 100000,
    "influenced_deals": 1,
    "influenced_value": 150000,
    "agency_deals": 0,
@@ -38,10 +38,10 @@
   {
    "month": "2026-07",
    "quarter": "FY27 Q2",
-   "sourced_deals": 3,
-   "sourced_value": 300000,
-   "influenced_deals": 6,
-   "influenced_value": 600000,
+   "sourced_deals": 2,
+   "sourced_value": 200000,
+   "influenced_deals": 7,
+   "influenced_value": 700000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 9
@@ -71,13 +71,13 @@
   {
    "month": "2026-10",
    "quarter": "FY27 Q3",
-   "sourced_deals": 2,
-   "sourced_value": 200000,
+   "sourced_deals": 3,
+   "sourced_value": 400000,
    "influenced_deals": 2,
    "influenced_value": 150000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 20
+   "nocontact_deals": 19
   }
  ],
  "days": [
@@ -144,7 +144,7 @@
   {
    "date": "2026-06-08",
    "sourced_deals": 1,
-   "sourced_value": 150000,
+   "sourced_value": 100000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
@@ -233,10 +233,10 @@
   },
   {
    "date": "2026-07-10",
-   "sourced_deals": 1,
-   "sourced_value": 100000,
-   "influenced_deals": 0,
-   "influenced_value": 0,
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 100000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 2
@@ -509,7 +509,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 8
+   "nocontact_deals": 7
   },
   {
    "date": "2026-10-22",
@@ -520,14 +520,24 @@
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 0
+  },
+  {
+   "date": "2026-10-30",
+   "sourced_deals": 1,
+   "sourced_value": 200000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
   }
  ],
  "campaigns": [
   {
    "bucket": "influenced",
    "campaign": "DG-FY27-Databricks-AI-Summit-2026",
-   "deals": 6,
-   "value": 600000
+   "deals": 7,
+   "value": 700000
   },
   {
    "bucket": "sourced",
@@ -549,12 +559,6 @@
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-FY27-Insights-Nurture",
-   "deals": 2,
-   "value": 300000
-  },
-  {
-   "bucket": "sourced",
    "campaign": "DG-FY27-AWT Mumbai",
    "deals": 1,
    "value": 268000
@@ -567,9 +571,15 @@
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-FY27-Q2-CXO-Dinner",
+   "campaign": "DG-FY27-Q3-GitHub-Universe-2026",
    "deals": 1,
-   "value": 150000
+   "value": 200000
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Insights-Nurture",
+   "deals": 1,
+   "value": 200000
   },
   {
    "bucket": "sourced",
@@ -586,6 +596,12 @@
   {
    "bucket": "sourced",
    "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "deals": 1,
+   "value": 100000
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Q2-CXO-Dinner",
    "deals": 1,
    "value": 100000
   },
@@ -629,6 +645,7 @@
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-FY27-Databricks-AI-Summit-2026",
+    "DG-FY27-Insights-Nurture",
     "SDR-Meeting-Set"
    ],
    "reasons": [
@@ -654,8 +671,12 @@
    "stage": "1 Meeting",
    "counted_as": "Marketing influenced",
    "campaigns": [
+    "DG-2025-Lantern_Records",
     "DG-FY27-Databricks-AI-Summit-2026",
-    "SDR-Meeting-Set"
+    "DG-FY27-Insights-Nurture",
+    "Nurture 1 - General Nurture",
+    "SDR-Meeting-Set",
+    "Target-account campaign"
    ],
    "reasons": [
     "Matches more than 1 source: SDR or AE outreach, marketing"
@@ -668,6 +689,7 @@
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-FY27-Databricks-AI-Summit-2026",
+    "DG-FY27-Insights-Nurture",
     "SDR-Meeting-Set"
    ],
    "reasons": [
@@ -750,6 +772,42 @@
    "key": "github_universe",
    "campaign": "DG-FY27-Q3-GitHub-Universe-2026",
    "people": 0,
+   "held": 0
+  }
+ ],
+ "event_members": [
+  {
+   "key": "flutter",
+   "campaign": "DG-FY27-Q3-SC-Flutter-Summit",
+   "export": "2026-11-02",
+   "members": 86,
+   "statuses": {
+    "Attended": 86
+   },
+   "people_with_meeting": 1,
+   "held": 0
+  },
+  {
+   "key": "gartner",
+   "campaign": "DG-FY27-Q3-Gartner-Xpo",
+   "export": "2026-11-02",
+   "members": 267,
+   "statuses": {
+    "Booth Scan": 267
+   },
+   "people_with_meeting": 1,
+   "held": 0
+  },
+  {
+   "key": "github_universe",
+   "campaign": "DG-FY27-Q3-GitHub-Universe-2026",
+   "export": "2026-11-02",
+   "members": 240,
+   "statuses": {
+    "Booth Scan": 133,
+    "Invited": 107
+   },
+   "people_with_meeting": 0,
    "held": 0
   }
  ],
@@ -1431,7 +1489,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
     "people": 1
    },
    {
@@ -1439,7 +1497,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
    {
@@ -1447,11 +1505,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
+    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
+    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
     "people": 1
    },
    {
@@ -1463,11 +1521,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022",
     "people": 1
    },
    {
