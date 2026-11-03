@@ -91,12 +91,10 @@ jobs:
         continue-on-error: true
         run: python scripts/build_team_metrics.py
 
-      # Optional: without the Anthropic key, or if Claude can't be reached, the Summary shows takeaways 1 and 2 only.
+      # Optional: the Summary from the numbers. Claude Code adds its lines when asked; last week's lines are left out.
       - name: Write the Summary (optional)
         if: github.event_name != 'push'
         continue-on-error: true
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/build_summary.py
 
       # Optional: if this fails, the plain-text files keep last week's numbers and everything else still updates.

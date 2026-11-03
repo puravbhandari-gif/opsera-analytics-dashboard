@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=32">
+<link rel="stylesheet" href="styles.css?v=33">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -98,14 +98,15 @@
 <main>
   <section id="tab-summary" class="tab" role="tabpanel" hidden>
     <h2>Summary</h2>
-    <p class="lead">The main takeaways for each area: what happened, what stands out, and what it means. Each area uses its own source's last full period.</p>
-    <p class="muted" id="summary-status">Loading...</p>
-    <div class="summary-grid" id="summary-body"></div>
+    <p class="lead" id="summary-period">Loading...</p>
+    <div class="sum-boxes" id="summary-boxes"></div>
+    <div class="sum-cards" id="summary-body"></div>
+    <p class="muted sum-quiet" id="summary-quiet"></p>
     <details class="more">
       <summary>More detail</summary>
-      <p class="note">Claude writes the takeaways after each Monday update, from the numbers on this dashboard. Until then, each area shows only a real change, written from the numbers. A takeaway is left out if it uses a number not in the data, is about a 0, or breaks the dashboard's writing rules. Takeaways never cover a 0, an unchanged number or a change under 15%.</p>
-      <p class="note">The Summary has no Day view. On Day, it shows Week.</p>
-      <p class="note">On Month, a month with less than half its days so far shows the last full month instead, so 1 day isn't set against a whole month.</p>
+      <p class="note">Claude Code writes the lines after each Monday update, from the numbers on this dashboard. Until then, the cards and boxes come from the numbers, for real changes only. A line is left out if it uses a number not in the data, is about a 0, or breaks the dashboard's writing rules.</p>
+      <p class="note">Each card's trend line shows its main number for the last 6 full weeks. The i on each card gives its source and dates, since some sources end earlier than others.</p>
+      <p class="note">The Summary has no Day view. On Day, it shows Week. On Month, a month with less than half its days so far shows the last full month instead.</p>
     </details>
   </section>
 
@@ -915,6 +916,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=91"></script>
+<script src="app.js?v=93"></script>
 </body>
 </html>

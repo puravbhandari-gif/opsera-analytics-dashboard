@@ -262,13 +262,31 @@ details.more > summary:hover { color: var(--ink); }
 .table-notes strong { color: var(--ink-2); font-weight: 500; }
 
 /* Summary tab */
-.summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; margin: 8px 0 24px; }
-.summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
-.summary-card h3 { margin: 0 0 2px; font-size: 1.05rem; }
-.summary-card .source { margin: 0 0 12px; }
-.summary-card ol { margin: 0 0 12px; padding-left: 1.3em; display: grid; gap: 8px; }
-.summary-card li { color: var(--ink-2); line-height: 1.45; }
-.summary-card li::marker { color: var(--muted); }
-.summary-card .tk { display: block; font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.summary-card .see-more { margin-top: auto; font-size: 0.9rem; }
-@media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } .summary-card { padding: 14px; } }
+.sum-boxes { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin: 8px 0 20px; }
+.sum-box { background: var(--surface); border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 12px; padding: 14px 18px; box-shadow: var(--shadow); }
+.sum-box.well { border-top-color: var(--good); }
+.sum-box.attention { border-top-color: var(--bad); }
+.sum-box h3 { margin: 0 0 8px; font-size: 1rem; }
+.sum-box ol { margin: 0; padding-left: 1.2em; display: grid; gap: 6px; color: var(--ink-2); }
+.sum-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.sum-card { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 6px; }
+.sum-card-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.sum-card h3 { margin: 0; font-size: 0.95rem; }
+.sum-info { position: relative; }
+.sum-info button { width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--border); background: var(--sunk); color: var(--muted); font: italic 600 0.75rem/1 Georgia, serif; cursor: pointer; padding: 0; }
+.sum-info .tip { display: none; position: absolute; right: 0; top: 28px; z-index: 5; width: 240px; background: var(--surface); color: var(--ink-2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); font-size: 0.8rem; }
+.sum-info:hover .tip, .sum-info.open .tip, .sum-info button:focus-visible + .tip { display: block; }
+.sum-figure { display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
+.sum-big { font-family: var(--display); font-size: 1.9rem; font-weight: 600; line-height: 1.1; color: var(--ink); }
+.sum-change { font-size: 0.85rem; color: var(--muted); display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.sum-change .up { color: var(--good); } .sum-change .down { color: var(--bad); }
+.sum-change svg { width: 11px; height: 11px; fill: currentColor; }
+.sum-label { font-size: 0.8rem; color: var(--muted); }
+.sum-spark { width: 88px; height: 30px; flex: none; }
+.sum-spark polyline { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.sum-spark circle { fill: var(--accent); }
+.sum-why { margin: 0; color: var(--ink-2); }
+.sum-do { margin: 0; color: var(--ink); padding-left: 8px; border-left: 3px solid var(--accent); }
+.sum-card .see-more { margin-top: auto; font-size: 0.85rem; }
+.sum-quiet { margin: 0 0 16px; }
+@media (max-width: 600px) { .sum-cards { grid-template-columns: 1fr; } .sum-big { font-size: 1.6rem; } }

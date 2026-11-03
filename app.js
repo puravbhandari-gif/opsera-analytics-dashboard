@@ -2318,22 +2318,44 @@ function openSummary() {
 }
 function renderSummary(d) {
   const day = periodMode === "day";   // the Summary has no Day view: one day is too small to say anything about (agreed 3 Nov 2026)
-  const all = d.views[day ? "week" : periodMode] || [];
-  const byClaude = (d.claude_views || {})[day ? "week" : periodMode] ?? d.by_claude;
-  const rows = byClaude ? all : all.filter((s) => s.t1);   // without Claude's takeaways, only areas with a real change
-  $("summary-status").textContent = [day ? "The Summary has no Day view, so this shows Week." : "", `Updated ${dayYear(d.written_on)}.`,
-    byClaude ? "" : "Full takeaways are added after the Monday update."].filter(Boolean).join(" ");
-  if (!rows.length) { $("summary-body").innerHTML = `<p class="muted">Nothing notable this period.</p>`; return; }
-  $("summary-body").innerHTML = rows.map((s) => {
-    const items = [["What happened", s.t1], ["What stands out", s.t2], ["What it means and what to do", s.t3]].filter(([, t]) => s.t1 && t);
-    const when = s.period ? `${s.source}, ${s.period}` + (s.period_before ? `, against ${s.period_before}.` : ".") : s.source + ".";
-    return `<article class="summary-card"><h3>${esc(s.title)}</h3>
-      <p class="source">${esc(when)}${s.note ? ` ${esc(s.note)}` : ""}</p>
-      ${items.length ? `<ol>${items.map(([k, t]) => `<li><span class="tk">${k}</span>${esc(t)}</li>`).join("")}</ol>` : `<p class="muted">Nothing notable this period.</p>`}
-      <a class="see-more" href="#${s.tab}" data-goto="${s.tab}">See more in ${esc(s.title)} &rsaquo;</a></article>`;
-  }).join("");
+  const v = d.views[day ? "week" : periodMode];
+  if (!v) return;
+  $("summary-period").textContent = [day ? "The Summary has no Day view, so this shows Week." : "",
+    `${v.period}` + (v.period_before ? `, against ${v.period_before}.` : "."),
+    v.by_claude ? "" : "Full lines are added after the Monday update."].filter(Boolean).join(" ");
+  const boxes = [["well", "Going well"], ["attention", "Needs attention"], ["do", "Do this week"]].filter(([k]) => (v.boxes[k] || []).length);
+  $("summary-boxes").innerHTML = boxes.map(([k, name]) =>
+    `<div class="sum-box ${k}"><h3>${name}</h3><ol>${v.boxes[k].map((t) => `<li>${esc(t)}</li>`).join("")}</ol></div>`).join("");
+  const arrow = (up) => `<svg viewBox="0 0 10 10" aria-hidden="true"><path d="${up ? "M5 1 9 8H1z" : "M5 9 1 2h8z"}"/></svg>`;
+  const spark = (pts) => {
+    const vals = pts.map((p) => p.value).filter((x) => x != null);
+    if (vals.length < 2) return "";
+    const lo = Math.min(...vals), hi = Math.max(...vals), w = 88, h = 30, pad = 3;
+    const xy = pts.map((p, i) => p.value == null ? null : [pad + i * (w - 2 * pad) / (pts.length - 1), h - pad - (hi === lo ? 0.5 : (p.value - lo) / (hi - lo)) * (h - 2 * pad)]);
+    const line = xy.filter(Boolean).map((q) => q.map((x) => x.toFixed(1)).join(",")).join(" "), last = xy.filter(Boolean).pop();
+    const label = pts.filter((p) => p.value != null).map((p) => `${p.week}: ${num(p.value)}`).join(". ");
+    return `<svg class="sum-spark" viewBox="0 0 ${w} ${h}" role="img" aria-label="Last 6 weeks. ${esc(label)}"><title>Last 6 weeks. ${esc(label)}</title>
+      <polyline points="${line}"/><circle cx="${last[0].toFixed(1)}" cy="${last[1].toFixed(1)}" r="2.5"/></svg>`;
+  };
+  const shown = v.areas.filter((s) => s.notable && s.main);
+  $("summary-body").innerHTML = shown.map((s) => {
+    const m = s.main;
+    const change = m.good == null ? (m.prev != null && m.cur === m.prev ? `<span>No change from ${esc(m.before)}</span>` : "") : `<span class="${m.good ? "up" : "down"}">${arrow(m.cur > m.prev)}${m.change_pct > 0 ? "+" : ""}${m.change_pct}%</span><span>from ${esc(m.before)}</span>`;
+    const tip = `${s.source}. ${s.period}` + (s.period_before ? `, against ${s.period_before}.` : ".") + (s.note ? ` ${s.note}` : "");
+    return `<article class="sum-card"><div class="sum-card-head"><h3>${esc(s.title)}</h3>
+        <span class="sum-info"><button type="button" aria-label="Source and dates">i</button><span class="tip" role="tooltip">${esc(tip)}</span></span></div>
+      <div class="sum-figure"><div><div class="sum-big">${esc(m.value)}</div><div class="sum-change">${change}</div></div>${spark(s.trend)}</div>
+      <div class="sum-label">${esc(m.label)}</div>
+      ${s.why ? `<p class="sum-why">${esc(s.why)}</p>` : ""}${s.do ? `<p class="sum-do">${esc(s.do)}</p>` : ""}
+      <a class="see-more" href="#${s.tab}" data-goto="${s.tab}">See more &rsaquo;</a></article>`;
+  }).join("") || `<p class="muted">Nothing notable this period.</p>`;
+  const quiet = v.areas.filter((s) => !(s.notable && s.main)).map((s) => s.title);
+  $("summary-quiet").textContent = quiet.length ? `No big changes: ${quiet.join(", ")}` : "";
 }
 $("summary-body").addEventListener("click", (e) => {
+  const info = e.target.closest(".sum-info");   // tap the i to show or hide the source and dates
+  document.querySelectorAll(".sum-info.open").forEach((x) => { if (x !== info) x.classList.remove("open"); });
+  if (info) { info.classList.toggle("open"); return; }
   const a = e.target.closest("[data-goto]");
   if (!a) return;
   e.preventDefault(); showTab(a.dataset.goto); window.scrollTo(0, 0);

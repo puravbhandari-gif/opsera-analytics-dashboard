@@ -1,19 +1,17 @@
-"""Write data/summary.json for the Summary tab: up to 3 takeaways per area, for Week, Month and 3 months.
+"""Write data/summary.json for the Summary tab, for Week, Month and 3 months (Day shows Week).
 
-1. What happened: the most important change against the period before.
-2. What stands out: the most interesting detail behind it.
-3. What it means and what to do: one insight with its number, and one action.
-Claude writes all 3 from the numbers: through the API if ANTHROPIC_API_KEY is set, or by Claude Code into data/summary_takeaways.json
-when Purav asks "write this week's Summary takeaways" (run with --facts to get the numbers first). Every number Claude uses must be one it was given, never a 0,
-and its text must follow the dashboard's copy rules; a takeaway that breaks a rule is dropped.
-Without the key, takeaways 1 and 2 are written here, and only for areas with a real change.
-Never a takeaway about a 0, an unchanged number or anything tiny. Agreed with Purav on 3 Nov 2026.
+At the top: 3 boxes across all areas, "Going well", "Needs attention" and "Do this week", 3 short lines each.
+Below: one card per area with a main number and its change, why it matters, what to do, and a 6-week trend line.
+Areas with nothing notable go in one line at the bottom.
+Claude Code writes the lines into data/summary_takeaways.json when Purav asks "write this week's Summary takeaways"
+(run with --facts first for the numbers). They're checked here: under 12 words, only numbers from the data, never a 0
+or an unchanged number, and the copy rules. Without them, the cards and boxes come from the numbers, and only for real changes.
+Agreed with Purav on 3 Nov 2026.
 Run: .venv/bin/python scripts/build_summary.py
 """
 import collections
 import datetime as dt
 import json
-import os
 import re
 import sys
 from pathlib import Path
@@ -26,7 +24,6 @@ FACTS = Path(__file__).resolve().parent.parent.parent / "summary_facts.json"   #
 MODES = ("week", "month", "quarter")   # the Summary has no Day view: the page shows Week instead
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-MODEL = "claude-opus-5-5"
 NOTES = []   # why a period isn't the one asked for, filled in by periods_for
 TOOLS = {"chatgpt": "ChatGPT", "gemini": "Gemini", "perplexity": "Perplexity", "claude": "Claude", "copilot": "Copilot"}
 CHANNELS = {"search": "Google search", "linkedin": "LinkedIn", "email": "email", "events": "events", "paid": "paid ads", "ai": "AI tools",
@@ -82,7 +79,10 @@ def last_full_day_pacific(end, pulled_at):
 
 
 def periods_for(mode, start, last, full_month=True):
-    """The dashboard's periods (periodsFor in app.js): this period and the one before, or None."""
+    """The dashboard's periods (periodsFor in app.js): this period and the one before, or None.
+    mode can also be ("span", first, last): one fixed range with nothing before it, for the trend lines."""
+    if isinstance(mode, tuple):
+        return ((mode[1], mode[2]) if mode[1] >= start and mode[2] <= last else None), None, ""
     if mode == "quarter":
         q = lambda e: (add_days(add_months(e, -3), 1), e)
         cur, prev = q(last), q(add_days(q(last)[0], -1))
@@ -137,7 +137,7 @@ def notable(cur, prev, floor, rel=0.15):
     return bool(cur) and bool(prev) and cur != prev and max(cur, prev) >= floor and abs(cur - prev) / prev >= rel
 
 
-def area(cur, prev, before, facts, mains=(), details=()):
+def area(cur, prev, before, facts, mains=(), details=(), rel=0.15, lead_with=None):
     """mains: (key, label, cur, prev, floor[, fmt]), most important first. details: (key, text) worth saying; "after:" keys go last."""
     mains = [m if len(m) == 6 else (*m, n) for m in mains]
     for key, _, c, p, _, _ in mains:
@@ -145,29 +145,33 @@ def area(cur, prev, before, facts, mains=(), details=()):
         facts.setdefault(key + "_before", p)
         if p:
             facts.setdefault(key + "_change_pct", pct(c, p))
-    return {"cur": cur, "prev": prev, "before": before, "facts": facts, "mains": mains, "details": list(details)}
+    return {"cur": cur, "prev": prev, "before": before, "facts": facts, "mains": mains, "details": list(details), "rel": rel, "lead_with": lead_with}
 
 
-def written(a):
-    """Takeaways 1 and 2 from the numbers: the most important real change, then the best detail behind it. None if nothing is worth saying."""
-    real = [m for m in a["mains"] if a["prev"] and notable(m[2], m[3], m[4])]
-    if real:
-        key, label, c, p, _, fmt = real[0]   # mains are listed most important first
-        t1 = f"{label}: {fmt(c)}, {'up' if c > p else 'down'} from {fmt(p)} {a['before']}."
-    elif a.get("lead"):
-        key, t1 = a["lead"]
-    else:
-        return None, None
-    extra = [t for k, t in a["details"] if k != key and not k.startswith("after:")]
-    extra += [f"{l}: {f(c2)}, {'up' if c2 > p2 else 'down'} from {f(p2)}." for k, l, c2, p2, fl, f in real if k != key]
-    extra += [t for k, t in a["details"] if k.startswith("after:")]   # caveats come after any other real change
-    return t1, (extra[0] if extra else None)
+def headline(a, key=None):
+    """The card's main number: the given main, else the most important real change, else the first main if the area has a lead."""
+    mains = {m[0]: m for m in a["mains"]}
+    real = [m for m in a["mains"] if a["prev"] and notable(m[2], m[3], m[4], a["rel"])]
+    if a.get("lead_with") and (real or a.get("lead") or mains[a["lead_with"]][2]):
+        key = a["lead_with"]   # Leads always leads with demo requests (agreed 3 Nov 2026)
+    m = mains.get(key) if key else (real[0] if real else (a["mains"][0] if a.get("lead") and a["mains"] else None))
+    if not m:
+        return None
+    k, label, c, p, _, fmt = m
+    return {"key": k, "label": label, "value": fmt(c), "cur": c, "prev": p, "before": fmt(p) if p is not None else None,
+            "change_pct": pct(c, p), "good": None if not p or c == p else c > p, "min_change_pct": round(a["rel"] * 100)}   # every main is better when it goes up
+
+
+def short_line(text):
+    return text if text and len(text.split()) < 12 else None
 
 
 def pipeline(mode):
     sf = load("salesforce_pipeline.json")
     last = add_days(sf["exports"]["opportunities"], -1)
     cur, prev, before = periods_for(mode, sf["opportunities_cover_from"], last)
+    if not cur:
+        return None
     t = lambda k, p: total(sf["days"], k, *p) if p else None
     nc = t("nocontact_deals", cur)
     return area(cur, prev, before, {"no_contact_deals": nc, "share_of_all_deals_without_contact_pct": sf.get("share_without_contact_pct")},
@@ -181,14 +185,21 @@ def pipeline(mode):
 def leads(mode):
     l = load("leads.json")
     cur, prev, before = periods_for(mode, l["start_date"], last_full_day_pacific(l["end_date"], l["pulled_at"]))
+    if not cur:
+        return None
     t = lambda k, p: total(l["daily"], k, *p) if p else None
+    ev, evp = t("events", cur), t("events", prev)
+    details = [("events_form_fills", f"Event sign-ups: {n(ev)}, {'up' if ev > evp else 'down'} from {n(evp)}.")] if prev and notable(ev, evp, 5) else []
     return area(cur, prev, before, {}, [("demo_requests", "Demo requests", t("demo", cur), t("demo", prev), 5)] +
-                [(f"{k}_form_fills", l["lines"][k]["label"], t(k, cur), t(k, prev), 5) for k in ("events", "contact", "gartner_offer")])
+                [(f"{k}_form_fills", l["lines"][k]["label"], t(k, cur), t(k, prev), 5) for k in ("events", "contact", "gartner_offer")],
+                details, lead_with="demo_requests")
 
 
 def journey(mode):
     hub = load("hubspot.json")
     cur, prev, before = periods_for(mode, hub["start_date"], hub["end_date"])
+    if not cur:
+        return None
     booked = lambda p: total(hub["meetings_daily"], "count", *p, keep=lambda r: r["kind"] == "booked") if p else None
     contacts = lambda p: total(hub["contacts_daily"], "count", *p) if p else None
     by = collections.Counter()
@@ -206,6 +217,8 @@ def journey(mode):
 def visits(mode):
     ga = load("analytics.json")
     cur, prev, before = periods_for(mode, ga["start_date"], last_full_day_pacific(ga["end_date"], ga["pulled_at"]))
+    if not cur:
+        return None
     t = lambda k, p, rows=ga["daily"]: total(rows, k, *p) if p else None
     ch = collections.defaultdict(lambda: [0, 0])
     for r in ga["channel_daily"]:
@@ -224,15 +237,18 @@ def visits(mode):
                                     "visits_by_channel": {k: x[0] for k, x in sorted(ch.items(), key=lambda kv: -kv[1][0])[:6]},
                                     "visits_by_channel_before": {k: x[1] for k, x in sorted(ch.items(), key=lambda kv: -kv[1][0])[:6]}},
                 [("visits_without_email_robots", "Visits without email robots", clean(cur), clean(prev), 200), ("engaged_visits", "Engaged visits", t("engagedSessions", cur), t("engagedSessions", prev), 100)],
-                details)
+                details, rel=0.10)   # website visits move less, so 10% counts (agreed 3 Nov 2026)
     if jump:
         a["lead"] = details[0]   # worth saying even when real visits barely moved
+        a["short"] = f"Unlabelled visits jumped to {n(un[0])}, likely robots."
     return a
 
 
 def search(mode):
     g = load("search_console.json")
     cur, prev, before = periods_for(mode, g["start_date"], g["last_day_with_data"])
+    if not cur:
+        return None
     t = lambda k, p: total(g["daily"], k, *p) if p else None
     spot = lambda p: (round(total(g["daily"], lambda r: r["avg_spot"] * r["times_shown"], *p) / t("times_shown", p), 1)
                       if p and t("times_shown", p) else None)
@@ -246,6 +262,8 @@ def search(mode):
 def aeo(mode):
     ga = load("analytics.json")
     cur, prev, before = periods_for(mode, ga["start_date"], last_full_day_pacific(ga["end_date"], ga["pulled_at"]))
+    if not cur:
+        return None
     rows = ga["ai"]["daily"]
     v = total(rows, "visits", *cur)
     by = collections.Counter()
@@ -269,6 +287,8 @@ def campaign_key(name):
 def campaigns(mode):
     lk = load("lookup.json")
     cur, prev, before = periods_for(mode, lk["start_date"], last_full_day_pacific(lk["end_date"], lk["pulled_at"]))
+    if not cur:
+        return None
     by = collections.defaultdict(lambda: [0, 0, 0])
     for day, c, _, v, e in lk["campaign_visits"]:
         k = campaign_key(lk["campaigns"][c])
@@ -291,6 +311,8 @@ def events(mode):
     hub, ga = load("hubspot.json"), load("analytics.json")
     rows = [e for e in hub.get("event_rows", []) if e.get("last_day")]
     cur, prev, before = periods_for(mode, hub["start_date"], last_full_day_pacific(ga["end_date"], ga["pulled_at"]))
+    if not cur:
+        return None
     inside = [e for e in rows if cur[0] <= e["last_day"] <= cur[1]]
     size = lambda e: (e.get("sf_people_with_meeting") or 0, e.get("attended") or e.get("signed_up") or 0)
     a = area(cur, prev, before, {"events_ended": [e["name"] for e in inside]})
@@ -304,6 +326,12 @@ def events(mode):
     a["facts"].update({"event": e["name"], "signed_up": e.get("signed_up"), "attended": e.get("attended"),
                        "people_with_a_meeting_after": met, "in_its_salesforce_campaign": e.get("sf_members")})
     a["lead"] = ("event", f"{e['name']}: {' and '.join(bits)}." if bits else f"{e['name']} ended in this period.")
+    big = "attended" if e.get("attended") else "signed_up"
+    if e.get(big):
+        a["headline"] = {"key": big, "label": f"{e['name']}: {'attended' if big == 'attended' else 'signed up'}", "value": n(e[big]),
+                         "cur": e[big], "prev": None, "before": None, "change_pct": None, "good": None}
+        a["short"] = (f"{n(e['signed_up'])} signed up. " if big == "attended" and e.get("signed_up") else "") + \
+                     (f"{n(met)} had a meeting since." if met else "")
     if met:
         a["details"].append(("met", f"{n(met)} people from its Salesforce campaign have had a meeting since."))
     if len(inside) > 1:
@@ -314,6 +342,8 @@ def events(mode):
 def content(mode):
     lk = load("lookup.json")
     cur, prev, before = periods_for(mode, lk["start_date"], last_full_day_pacific(lk["end_date"], lk["pulled_at"]))
+    if not cur:
+        return None
     is_content = [any(rx.match(p) for rx in CONTENT) for p in lk["pages"]]
     by = collections.defaultdict(lambda: [0, 0, 0])
     for day, pg, _, v, e in lk["visits"]:
@@ -336,6 +366,8 @@ def content(mode):
 def linkedin_brand(mode):
     co = load("linkedin.json")["company"]
     cur, prev, before = periods_for(mode, co["daily"][0]["date"], co["end_date"])
+    if not cur:
+        return None
     t = lambda k, p, rows=co["daily"]: total(rows, k, *p) if p else None
     posts = sorted((p for p in co["posts"] if cur[0] <= p["created"] <= cur[1]), key=lambda p: -p["seen"])
     details = [("post", f"The most seen was the {'video ' if p['video'] else ''}post from {day_name(p['created'])}: "
@@ -351,6 +383,8 @@ def linkedin_brand(mode):
 def linkedin_exec(mode):
     k = load("linkedin.json")["kumar_all"]
     cur, prev, before = periods_for(mode, k["start_date"], k["end_date"])
+    if not cur:
+        return None
     if mode == "month" and cur[1] != month_end(cur[0]):
         NOTES.append(f"Kumar's export ends on {day_name(k['end_date'])}, so Month shows once it covers the whole month.")
         return None
@@ -364,6 +398,8 @@ def linkedin_exec(mode):
 def youtube(mode):
     y = load("youtube.json")
     cur, prev, before = periods_for(mode, y["start_date"], y.get("last_day_with_data") or y["end_date"])
+    if not cur:
+        return None
     t = lambda kind, key, p: total(y["types"][kind]["daily"], key, *p) if p else None   # long videos and Shorts kept apart, like the tab
     subs = lambda p: total(y["channel"]["subs_daily"], "gained", *p) if p else None
     return area(cur, prev, before, {"long_video_watch_minutes": t("long", "minutes", cur)},
@@ -386,24 +422,25 @@ AREAS = [("pipeline", "Pipeline", pipeline, "Salesforce exports, marketing deals
          ("youtube", "YouTube", youtube, "YouTube Analytics")]
 
 
-# ---------- all 3 takeaways, written by Claude ----------
+
+
+# ---------- the lines: written by Claude Code when asked, or from the numbers ----------
 
 BANNED = re.compile(r"\bthat\b|—|–|\bjourney\b|\bleverage\b|\bsynergy\b|\bunlock\b|\bdelve\b", re.I)
 NUMBER = re.compile(r"\d[\d,]*(?:\.\d+)?")
 FLAT = re.compile(r"\b(stayed|unchanged|the same|flat|held steady|no change|steady)\b", re.I)
 ZERO = re.compile(r"(?<![\d.,])\$?0(?![\d.,]*\d)")   # a standalone 0, like "0 deals" or "$0"
 
-SYSTEM = """You write the Summary of a marketing dashboard for Opsera, a software company. For each area and each period view you get the numbers for one period and the period before. Write 3 takeaways:
-1. What happened: the most important change, with its number against the period before. Example: "Demo requests: 20, up from 6."
-2. What stands out: the most interesting detail behind it, such as the top page, campaign, source or biggest drop.
-3. What it means and what to do: one insight with the number behind it, then one suggested action. Example: "LinkedIn posts with a link drove 3x the visits. Add a link to every post."
-
-Rules:
-- Use only facts and numbers given for that area and view. Never invent, estimate or add numbers, causes, names or events. Use a number exactly as given, or a percentage given in a *_change_pct field.
-- If unlabelled_jump_is_likely_robots is true, say the unlabelled visits are likely robots. Never call them growth.
-- Never write about a 0, a number with no change, or anything tiny (a move under 15%, or a handful of visits). If an area has nothing worth saying in a view, return empty strings for all 3. If only takeaway 2 or 3 has nothing worth saying, return an empty string for it.
-- Each takeaway is 1 or 2 short sentences. Plain, everyday English. Sentence case. Numbers as numerals. Active voice. At most 2 commas a sentence.
-- Never use the word "that", em dashes, en dashes, semicolons, "journey", "leverage", "unlock" or exclamation marks."""
+RULES = """Write the Summary lines for each period view (week, month, quarter) from these numbers only.
+- 3 boxes across all areas, 3 lines each, most important first: "well" (going well), "attention" (needs attention), "do" (do this week).
+- For each area: "main", the key of the number to show large (one of its mains, or "" if the area has nothing notable), "why" (why it matters) and "do" (what to do).
+- Every line is under 12 words. Plain English, sentence case, numerals, active voice, at most 2 commas.
+- Use only numbers given for that view. A *_change_pct can be written without its minus sign ("fell 76.5%").
+- Never write about a 0, an unchanged number or anything tiny (under 15%, or 10% for website visits). Unlabelled visit jumps are likely robots, never growth.
+- Leads always has "demo_requests" as its main, with event sign-ups as the second line if they moved.
+- LinkedIn counts every click on a post, so a post's clicks can be higher than its views. Never set a post's clicks against its views.
+- Never use "that", dashes, semicolons, "journey", "leverage", "unlock" or exclamation marks.
+- Copy each view's and each area's period and period_before exactly, or the lines are ignored."""
 
 
 def numbers_in(obj):
@@ -428,10 +465,12 @@ def numbers_in(obj):
 
 
 def check(text, facts):
-    """A takeaway is kept only if it follows the copy rules, never leans on a 0, and every number in it was given."""
+    """A line is kept only if it's under 12 words, follows the copy rules, never leans on a 0, and every number in it was given."""
     if not text:
         return None, "empty"
-    if BANNED.search(text) or ";" in text or "!" in text or len(text) > 320:
+    if len(text.split()) >= 12:
+        return None, "is 12 words or more"
+    if BANNED.search(text) or ";" in text or "!" in text:
         return None, "breaks a copy rule"
     if ZERO.search(text):
         return None, "is about a 0"
@@ -445,108 +484,101 @@ def check(text, facts):
     return text, None
 
 
-def numbers_for_claude(sections):
-    return {mode: {s["key"]: {"area": s["title"], "period": s["period"], "period_before": s["period_before"], "numbers": s["facts"],
-                              "changes_worth_noting": [x for x in (s["t1"], s["t2"]) if x]}
-                   for s in sections[mode] if s["period"]} for mode in MODES}
-
-
-def from_file(sections):
-    """Takeaways Claude Code wrote into data/summary_takeaways.json. Each area view is used only while its period is still the one shown,
-    so last week's takeaways never sit on this week's numbers."""
-    if not WRITTEN.exists():
-        return {}
-    saved = json.loads(WRITTEN.read_text())
-    out = {}
-    for mode in MODES:
-        for s in sections[mode]:
-            got = (saved.get(mode) or {}).get(s["key"])
-            if got and s["period"] and got.get("period") == s["period"] and got.get("period_before") == s["period_before"]:
-                out.setdefault(mode, {})[s["key"]] = got
+def trend(fn, key, week_cur):
+    """The headline number for each of the last 6 full weeks, oldest first."""
+    if not week_cur or not key:
+        return []
+    out = []
+    for i in range(5, -1, -1):
+        a, b = add_days(week_cur[0], -7 * i), add_days(week_cur[1], -7 * i)
+        got = fn(("span", a, b))
+        m = next((m for m in (got or {}).get("mains", []) if m[0] == key), None)
+        out.append({"week": span(a, b), "value": m[2] if m else None})
     return out
 
 
-def ask_claude(sections):
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        return {}, "no key"
-    import anthropic
-    client = anthropic.Anthropic()
-    ask = numbers_for_claude(sections)
-    takeaways = {"type": "object", "additionalProperties": False, "required": ["t1", "t2", "t3"],
-                 "properties": {k: {"type": "string"} for k in ("t1", "t2", "t3")}}
-    schema = {"type": "object", "additionalProperties": False, "required": list(MODES),
-              "properties": {mode: {"type": "object", "additionalProperties": False, "required": [a[0] for a in AREAS],
-                                    "properties": {a[0]: takeaways for a in AREAS}} for mode in MODES}}
-    try:
-        response = client.beta.messages.create(
-            model=MODEL, max_tokens=20000, betas=["server-side-fallback-2026-07-01"], fallbacks="default",
-            system=SYSTEM, output_config={"effort": "medium", "format": {"type": "json_schema", "schema": schema}},
-            messages=[{"role": "user", "content": "Write the 3 takeaways for every area and every period view. The numbers:\n" + json.dumps(ask, indent=1)}])
-    except anthropic.APIStatusError as e:
-        print(f"Claude returned {e.status_code}, so the Summary is written from the numbers.")
-        return {}, f"Claude returned {e.status_code}"
-    except anthropic.APIConnectionError:
-        print("Couldn't reach Claude, so the Summary is written from the numbers.")
-        return {}, "couldn't reach Claude"
-    if response.stop_reason == "refusal":
-        print("Claude declined, so the Summary is written from the numbers.")
-        return {}, "Claude declined"
-    try:
-        return json.loads(next((b.text for b in response.content if b.type == "text"), "")), None
-    except json.JSONDecodeError:
-        print("Claude's answer wasn't valid JSON, so the Summary is written from the numbers.")
-        return {}, "answer wasn't valid JSON"
+def from_numbers(view):
+    """The boxes without Claude Code: the biggest real moves up and down. No "Do this week" without Claude Code."""
+    moves = [(s["title"], s["main"]) for s in view["areas"]
+             if s["notable"] and s["main"] and s["main"]["good"] is not None and abs(s["main"]["change_pct"]) >= s["main"].get("min_change_pct", 15)]
+    up = sorted((m for m in moves if m[1]["good"]), key=lambda m: -abs(m[1]["change_pct"]))
+    down = sorted((m for m in moves if not m[1]["good"]), key=lambda m: -abs(m[1]["change_pct"]))
+    line = lambda m, w: short_line(f"{m[1]['label']} {w} {abs(m[1]['change_pct']):g}%")
+    return {"well": [x for x in (line(m, "up") for m in up) if x][:3], "attention": [x for x in (line(m, "down") for m in down) if x][:3], "do": []}
 
 
 def main():
-    sections = {}
+    saved = json.loads(WRITTEN.read_text()) if WRITTEN.exists() else {}
+    week_runs = {}
+    views, facts_out, kept, dropped = {}, {}, 0, 0   # mains is taken off each row once it's in the facts
     for mode in MODES:
-        sections[mode] = []
+        areas, all_facts = [], {}
+        written = saved.get(mode) or {}
         for key, title, fn, source in AREAS:
-            row = {"key": key, "title": title, "tab": key, "source": source, "period": None, "period_before": None,
-                   "t1": None, "t2": None, "t3": None, "facts": {}, "note": None}
             NOTES.clear()
             try:
                 a = fn(mode)
+                if mode == "week":
+                    week_runs[key] = a
             except (KeyError, TypeError, ValueError, ZeroDivisionError, AttributeError) as e:
                 print(f"  {title} ({mode}): skipped, {type(e).__name__}: {e}")
                 a = None
-            if a and a["cur"]:
-                t1, t2 = written(a)
-                row.update({"period": span(*a["cur"]), "period_before": span(*a["prev"]) if a["prev"] else None,
-                            "t1": t1, "t2": t2, "facts": a["facts"]})
-            row["note"] = NOTES[0] if NOTES else None
-            sections[mode].append(row)
-    claude, problem = ask_claude(sections)
-    if not claude:
-        claude = from_file(sections)
-        print(f"Takeaways from {WRITTEN.name}: " + (", ".join(f"{m} ({len(v)} areas)" for m, v in claude.items()) or "none for these periods") + ".")
+            row = {"key": key, "title": title, "tab": key, "source": source, "note": NOTES[0] if NOTES else None,
+                   "period": span(*a["cur"]) if a else None, "period_before": span(*a["prev"]) if a and a["prev"] else None,
+                   "notable": False, "main": None, "why": None, "do": None, "trend": []}
+            if a:
+                all_facts[key] = a["facts"]
+                w = (written.get("areas") or {}).get(key)
+                if w and (w.get("period"), w.get("period_before")) != (row["period"], row["period_before"]):
+                    w = None   # written for another period, so last week's lines never sit on this week's numbers
+                main_ = a.get("headline") or headline(a, w.get("main") if w and w.get("main") else None)
+                if w:
+                    row["notable"] = bool(w.get("main")) and bool(main_)
+                    for k in ("why", "do"):
+                        text, why_not = check((w.get(k) or "").strip(), a["facts"])
+                        row[k] = text
+                        kept += bool(text)
+                        if why_not and why_not != "empty":
+                            dropped += 1
+                            print(f"  {title} ({mode}) {k} dropped: {why_not}")
+                else:
+                    row["notable"] = bool(main_)   # headline() only gives a number for a real change, a lead or an event
+                    row["why"] = short_line(a.get("short")) or next((x for x in (short_line(t) for _, t in a["details"]) if x), None)
+                row["main"] = main_ if row["notable"] else None
+                if row["main"] and any(m[0] == row["main"]["key"] for m in a["mains"]):
+                    row["trend"] = trend(fn, row["main"]["key"], (week_runs.get(key) or {}).get("cur"))
+                row["mains"] = [m[0] for m in a["mains"]]
+            areas.append(row)
+        periods = collections.Counter((s["period"], s["period_before"]) for s in areas if s["period"])
+        top = periods.most_common(1)[0][0] if periods else (None, None)
+        view = {"period": top[0], "period_before": top[1], "areas": areas}
+        boxes = written.get("boxes") if (written.get("period"), written.get("period_before")) == top else None
+        view["by_claude"] = bool(boxes)
+        if boxes:
+            view["boxes"] = {}
+            for b in ("well", "attention", "do"):
+                good = []
+                for text in (boxes.get(b) or [])[:3]:
+                    t, why_not = check(text.strip(), all_facts)
+                    if t:
+                        good.append(t); kept += 1
+                    else:
+                        dropped += 1
+                        print(f"  box {b} ({mode}) dropped: {why_not}: {text}")
+                view["boxes"][b] = good
+        else:
+            view["boxes"] = from_numbers(view)
+        views[mode] = view
+        facts_out[mode] = {"period": top[0], "period_before": top[1],
+                           "areas": {s["key"]: {"area": s["title"], "period": s["period"], "period_before": s["period_before"],
+                                                "mains": s.pop("mains", []),
+                                                "numbers": all_facts.get(s["key"])} for s in areas if s["period"]}}
     if "--facts" in sys.argv:   # for Claude Code: the numbers to write from, saved next to the repo, not in it
-        FACTS.write_text(json.dumps({"rules": SYSTEM, "views": numbers_for_claude(sections)}, indent=1) + "\n")
+        FACTS.write_text(json.dumps({"rules": RULES, "views": facts_out}, indent=1) + "\n")
         print(f"Wrote the numbers for Claude Code to {FACTS}")
-    kept = dropped = 0
-    for mode in MODES:
-        for s in sections[mode]:
-            got = (claude.get(mode) or {}).get(s["key"]) if claude else None
-            if not got or not s["period"]:
-                continue
-            checked = {k: check((got.get(k) or "").strip(), s["facts"]) for k in ("t1", "t2", "t3")}
-            for k, (text, why) in checked.items():
-                if why and why != "empty":
-                    dropped += 1
-                    print(f"  {s['title']} ({mode}) takeaway {k[1]} dropped: {why}")
-            if not (got.get("t1") or "").strip():
-                s["t1"] = s["t2"] = None   # Claude found nothing notable
-            elif checked["t1"][0]:
-                s["t1"], s["t2"], s["t3"] = checked["t1"][0], checked["t2"][0], checked["t3"][0]
-                kept += sum(1 for k in checked if checked[k][0])
-            # if Claude's takeaway 1 failed a check, the takeaways written from the numbers stay
-    out = {"written_on": dt.date.today().isoformat(), "by_claude": bool(claude), "claude_views": {m: m in claude for m in MODES},
-           "model": MODEL if claude else None,
-           "problem": problem, "views": sections}
-    OUT.write_text(json.dumps(out, indent=1) + "\n")
-    shown = sum(1 for m in MODES for s in sections[m] if s["t1"])
-    print(f"Wrote {OUT.name}: {shown} of {len(MODES) * len(AREAS)} area views have something notable; Claude takeaways kept {kept}, dropped {dropped}")
+    OUT.write_text(json.dumps({"written_on": dt.date.today().isoformat(), "views": views}, indent=1) + "\n")
+    print(f"Wrote {OUT.name}: " + ", ".join(f"{m} {sum(s['notable'] for s in v['areas'])} notable areas" + (" (Claude Code's lines)" if v["by_claude"] else "")
+                                            for m, v in views.items()) + f"; lines kept {kept}, dropped {dropped}")
 
 
 if __name__ == "__main__":

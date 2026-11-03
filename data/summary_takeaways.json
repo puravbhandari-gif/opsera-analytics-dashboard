@@ -2,254 +2,317 @@
  "written_by": "Claude Code",
  "written_on": "2026-11-03",
  "week": {
-  "pipeline": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
+  "period": "26 Oct to 1 Nov 2026",
+  "period_before": "19 to 25 Oct 2026",
+  "boxes": {
+   "well": [
+    "Event sign-ups rose to 12, up from 2.",
+    "AI tool visits grew 69.6% to 39.",
+    "Content page visits rose to 1,324, up from 799."
+   ],
+   "attention": [
+    "New marketing contacts fell to 12, down from 51.",
+    "Visits without email robots fell 13% to 3,199.",
+    "Campaign visits fell 74% to 87."
+   ],
+   "do": [
+    "Add a robot filter for unlabelled visits.",
+    "Restart campaigns with engaged visits.",
+    "Add a demo button to the PHP2Shell post."
+   ]
   },
-  "leads": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Event sign-ups: 12, up from 2.",
-   "t2": "",
-   "t3": "Event sign-ups grew 500% on the week before. Put the next event's sign-up link in every email."
-  },
-  "journey": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "New marketing contacts: 12, down from 51.",
-   "t2": "Direct visits brought 8 of the 12.",
-   "t3": "New contacts fell 76.5% in a week. Check which forms and lists brought in the 51 the week before."
-  },
-  "visits": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Unlabelled visits jumped to 1,336, up from 47. These are likely robots, not real growth.",
-   "t2": "All visits rose to 5,411 from 4,289, but visits without email robots came to 3,199.",
-   "t3": "The rise in all visits likely came from robots, not people. Add a robot filter for unlabelled visits in Google Analytics."
-  },
-  "search": {
-   "period": "19 to 25 Oct 2026",
-   "period_before": "12 to 18 Oct 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
-  },
-  "aeo": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Visits from AI tools: 39, up from 23.",
-   "t2": "ChatGPT sent 20 and Gemini sent 18.",
-   "t3": "AI tool visits grew 69.6% in a week. Check which pages AI tools send people to, and add a demo button there."
-  },
-  "campaigns": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Visits from tagged campaigns: 87, down from 335.",
-   "t2": "DG-FY27-Gartner-MQ brought the most: 22 visits, 17 of them engaged.",
-   "t3": "Campaign visits fell 74% in a week. Check which campaigns stopped running, and restart the ones with engaged visits."
-  },
-  "events": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
-  },
-  "content": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Content page visits: 1,324, up from 799.",
-   "t2": "The PHP2Shell post brought 359 visits, but only 21 were engaged.",
-   "t3": "Most PHP2Shell visitors left quickly. Add a clear next step and a demo button to the post."
-  },
-  "linkedin": {
-   "period": "26 Oct to 1 Nov 2026",
-   "period_before": "19 to 25 Oct 2026",
-   "t1": "Times the company page's posts were seen: 4,805, down from 9,112.",
-   "t2": "A 29 Oct post drew 662 clicks from 455 views.",
-   "t3": "Views fell 47.3% with 5 new posts. Find what the 29 Oct post linked to, and add a similar link to the next posts."
-  },
-  "linkedin-exec": {
-   "period": "19 to 25 Oct 2026",
-   "period_before": "12 to 18 Oct 2026",
-   "t1": "Engagements on Kumar's posts: 125, down from 151.",
-   "t2": "Kumar gained 37 followers, down from 51.",
-   "t3": "Engagements fell 17.2% in a week. Ask a question in each post to get more replies."
-  },
-  "youtube": {
-   "period": "19 to 25 Oct 2026",
-   "period_before": "12 to 18 Oct 2026",
-   "t1": "Long video views: 116, up from 52.",
-   "t2": "Long videos got 68 minutes of watch time.",
-   "t3": "Long video views grew 123.1%. Share the newest long video on LinkedIn to keep views coming."
+  "areas": {
+   "pipeline": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "leads": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "demo_requests",
+    "why": "Event sign-ups rose to 12, up from 2.",
+    "do": "Put the next event's sign-up link in every email."
+   },
+   "journey": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "new_marketing_contacts",
+    "why": "Direct visits brought 8 of the 12 new contacts.",
+    "do": "Check which forms brought in the 51 last week."
+   },
+   "visits": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "visits_without_email_robots",
+    "why": "Unlabelled visits jumped to 1,336, likely robots, not growth.",
+    "do": "Add a robot filter for unlabelled visits."
+   },
+   "search": {
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "aeo": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "ai_visits",
+    "why": "ChatGPT sent 20 and Gemini sent 18.",
+    "do": "Add a demo button to pages AI tools send people to."
+   },
+   "campaigns": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "campaign_visits",
+    "why": "DG-FY27-Gartner-MQ led with 22 visits, 17 engaged.",
+    "do": "Restart campaigns with engaged visits."
+   },
+   "events": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "content": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "content_visits",
+    "why": "PHP2Shell brought 359 visits, but only 21 were engaged.",
+    "do": "Add a next step and demo button to PHP2Shell."
+   },
+   "linkedin": {
+    "period": "26 Oct to 1 Nov 2026",
+    "period_before": "19 to 25 Oct 2026",
+    "main": "times_seen",
+    "why": "The 26 Oct post was seen most: 1,108 times.",
+    "do": "Post more like the 26 Oct launch partner post."
+   },
+   "linkedin-exec": {
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "main": "engagements",
+    "why": "Kumar gained 37 followers, down from 51.",
+    "do": "Ask a question in each post to get replies."
+   },
+   "youtube": {
+    "period": "19 to 25 Oct 2026",
+    "period_before": "12 to 18 Oct 2026",
+    "main": "long_video_views",
+    "why": "Long videos got 68 minutes of watch time.",
+    "do": "Share the newest long video on LinkedIn."
+   }
   }
  },
  "month": {
-  "pipeline": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Marketing sourced deals (estimate): 3, up from 1.",
-   "t2": "Their pipeline came to $400,000, down from $588,000, so each deal was smaller.",
-   "t3": "19 more deals had no contact linked, so we can't see where they came from. Link a contact to every new deal in Salesforce."
+  "period": "1 to 31 Oct 2026",
+  "period_before": "1 to 30 Sep 2026",
+  "boxes": {
+   "well": [
+    "Demo requests rose to 22, up from 6.",
+    "Visits without email robots grew 65.9%.",
+    "LinkedIn post clicks grew 581.4% to 7,536."
+   ],
+   "attention": [
+    "Meetings booked fell to 4, down from 11.",
+    "Campaign visits fell 75.3% to 545.",
+    "Google showed our pages 22.6% less often."
+   ],
+   "do": [
+    "Follow up with every Flutter attendee this week.",
+    "Update the pages on page 2 of Google.",
+    "Link a contact to every new Salesforce deal."
+   ]
   },
-  "leads": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Demo requests: 22, up from 6.",
-   "t2": "The Gartner free modernization offer brought 67 form fills.",
-   "t3": "Demo requests grew 266.7%. Keep the demo button on every Gartner offer page."
-  },
-  "journey": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Meetings booked with marketing contacts: 4, down from 11.",
-   "t2": "New marketing contacts fell to 82, from 244.",
-   "t3": "New contacts fell 66.4%, and direct visits brought 65 of the 82. Add sign-up forms to more event and campaign pages."
-  },
-  "visits": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Visits without email robots: 15,240, up from 9,186.",
-   "t2": "Unlabelled visits jumped to 1,458, up from 247. These are likely robots, not real growth.",
-   "t3": "Visits without robots grew 65.9%, and direct visits rose to 11,478. Find which pages drew the new direct visits."
-  },
-  "search": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Times Google showed our pages: 418,069, down from 539,902.",
-   "t2": "",
-   "t3": "Google showed our pages 22.6% less often. Update the pages on page 2 of Google, starting with the CI/CD blog."
-  },
-  "aeo": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Visits from AI tools: 111, up from 71.",
-   "t2": "AI tool visits led to 2 demo form fills.",
-   "t3": "ChatGPT sent 54 and Gemini sent 51, close to even. Write short answer pages for common AI questions."
-  },
-  "campaigns": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Visits from tagged campaigns: 545, down from 2,209.",
-   "t2": "DG-FY27-Gartner-MQ brought the most: 42 visits, 27 of them engaged.",
-   "t3": "Campaign visits fell 75.3%. Line up the next campaign before the current one ends."
-  },
-  "events": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Flutter 2026: the AI-SDLC Summit: 174 signed up and 87 attended.",
-   "t2": "3 people from its Salesforce campaign have had a meeting since.",
-   "t3": "Half of the 174 sign-ups attended, but only 3 people have had a meeting. Follow up with every attendee within a week."
-  },
-  "content": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Content page visits: 4,190, up from 2,510.",
-   "t2": "The PHP2Shell post brought 358 visits, but only 21 were engaged.",
-   "t3": "The Claude Code Alternatives post kept 81 of 189 visitors engaged. Write more comparison posts like it."
-  },
-  "linkedin": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "Times the company page's posts were seen: 37,791, up from 17,569.",
-   "t2": "The 1 Oct post was seen most: 5,745 times, with 603 clicks.",
-   "t3": "Clicks grew 581.4% to 7,536. Keep a website link in every post."
-  },
-  "youtube": {
-   "period": "1 to 31 Oct 2026",
-   "period_before": "1 to 30 Sep 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
+  "areas": {
+   "pipeline": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "sourced_deals",
+    "why": "Their pipeline came to $400,000, down from $588,000.",
+    "do": "Link a contact to every new Salesforce deal."
+   },
+   "leads": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "demo_requests",
+    "why": "The Gartner offer also brought 67 form fills.",
+    "do": "Keep the demo button on every Gartner offer page."
+   },
+   "journey": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "meetings_booked",
+    "why": "New contacts fell to 82, down from 244.",
+    "do": "Add sign-up forms to more event and campaign pages."
+   },
+   "visits": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "visits_without_email_robots",
+    "why": "Unlabelled visits jumped to 1,458, likely robots.",
+    "do": "Find which pages drew the new direct visits."
+   },
+   "search": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "times_shown",
+    "why": "Fewer people saw our pages in Google search.",
+    "do": "Update the pages on page 2 of Google."
+   },
+   "aeo": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "ai_visits",
+    "why": "AI tool visits led to 2 demo form fills.",
+    "do": "Write short answer pages for common AI questions."
+   },
+   "campaigns": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "campaign_visits",
+    "why": "DG-FY27-Gartner-MQ led with 42 visits, 27 engaged.",
+    "do": "Line up the next campaign before this one ends."
+   },
+   "events": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "attended",
+    "why": "174 signed up, and 3 had a meeting since.",
+    "do": "Follow up with every attendee within a week."
+   },
+   "content": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "content_visits",
+    "why": "Claude Code Alternatives kept 81 of 189 visitors engaged.",
+    "do": "Write more comparison posts like it."
+   },
+   "linkedin": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "times_seen",
+    "why": "Clicks grew 581.4% to 7,536.",
+    "do": "Keep a website link in every post."
+   },
+   "youtube": {
+    "period": "1 to 31 Oct 2026",
+    "period_before": "1 to 30 Sep 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   }
   }
  },
  "quarter": {
-  "pipeline": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Marketing sourced pipeline (estimate): $1,256,000, up from $798,375.",
-   "t2": "It came from 5 deals, down from 8, so each deal was bigger.",
-   "t3": "54 more deals had no contact linked, so we can't credit them. Link a contact to every new deal in Salesforce."
+  "period": "2 Aug to 1 Nov 2026",
+  "period_before": "2 May to 1 Aug 2026",
+  "boxes": {
+   "well": [
+    "Meetings booked rose to 18, up from 6.",
+    "Sourced pipeline grew 57.3% to $1,256,000.",
+    "Demo requests rose to 36, up from 28."
+   ],
+   "attention": [
+    "Google showed our pages 31.4% less often.",
+    "Unlabelled visits jumped to 1,817, likely robots.",
+    "Social media visits fell to 1,004, from 2,063."
+   ],
+   "do": [
+    "Book follow-ups with event contacts within a week.",
+    "Update the pages on page 2 of Google.",
+    "Add a demo button to the Cursor explainer."
+   ]
   },
-  "leads": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Demo requests: 36, up from 28.",
-   "t2": "Event sign-ups rose to 110, from 81.",
-   "t3": "Demo requests grew 28.6% and event sign-ups grew 35.8%. Keep running a webinar or event every month."
-  },
-  "journey": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Meetings booked with marketing contacts: 18, up from 6.",
-   "t2": "Events brought 196 of the 377 new marketing contacts.",
-   "t3": "Meetings grew 200% while events brought most new contacts. Book a follow-up meeting with event contacts within a week."
-  },
-  "visits": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Unlabelled visits jumped to 1,817, up from 1,136. These are likely robots, not real growth.",
-   "t2": "Social media visits fell to 1,004, from 2,063.",
-   "t3": "Social media visits fell by about half. Add a website link to more LinkedIn posts."
-  },
-  "search": {
-   "period": "1 Aug to 31 Oct 2026",
-   "period_before": "1 May to 31 Jul 2026",
-   "t1": "Times Google showed our pages: 1,946,966, down from 2,837,558.",
-   "t2": "The average spot moved from 9.9 to 10.6 (lower is better).",
-   "t3": "Google showed our pages 31.4% less often. Update the pages on page 2 of Google first."
-  },
-  "aeo": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
-  },
-  "campaigns": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "DG-FY27-Q3-Tokenomics-Webinar brought 2,754 campaign visits, more than half of the 5,083.",
-   "t2": "Only 412 of its visits were engaged, against 303 of 1,038 for the Flutter summit campaign.",
-   "t3": "The Flutter campaign drew fewer visits but a bigger share of engaged ones. Use its landing page as the model for the next event."
-  },
-  "events": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Flutter 2026: the AI-SDLC Summit led with 174 sign-ups and 87 attended.",
-   "t2": "3 people from its Salesforce campaign have had a meeting since.",
-   "t3": "86 people are in its Salesforce campaign, and 3 have had a meeting. Ask sales to follow up with the other attendees."
-  },
-  "content": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": "2 May to 1 Aug 2026",
-   "t1": "Content page visits: 9,051, up from 7,590.",
-   "t2": "The Cursor AI explainer led with 797 visits, 351 of them engaged.",
-   "t3": "Content visits grew 19.2%, and the Cursor explainer kept 351 visitors engaged. Add a demo button to the Cursor explainer."
-  },
-  "linkedin": {
-   "period": "2 Aug to 1 Nov 2026",
-   "period_before": null,
-   "t1": "",
-   "t2": "",
-   "t3": ""
-  },
-  "linkedin-exec": {
-   "period": "28 Jul to 27 Oct 2026",
-   "period_before": null,
-   "t1": "",
-   "t2": "",
-   "t3": ""
-  },
-  "youtube": {
-   "period": "1 Aug to 31 Oct 2026",
-   "period_before": "1 May to 31 Jul 2026",
-   "t1": "",
-   "t2": "",
-   "t3": ""
+  "areas": {
+   "pipeline": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "sourced_value",
+    "why": "It came from 5 deals, down from 8.",
+    "do": "Link a contact to every new Salesforce deal."
+   },
+   "leads": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "demo_requests",
+    "why": "Event sign-ups rose to 110, up from 81.",
+    "do": "Keep a webinar or event running every month."
+   },
+   "journey": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "meetings_booked",
+    "why": "Events brought 196 of the 377 new contacts.",
+    "do": "Book follow-ups with event contacts within a week."
+   },
+   "visits": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "visits_without_email_robots",
+    "why": "Unlabelled visits jumped to 1,817, likely robots.",
+    "do": "Add a robot filter for unlabelled visits."
+   },
+   "search": {
+    "period": "1 Aug to 31 Oct 2026",
+    "period_before": "1 May to 31 Jul 2026",
+    "main": "times_shown",
+    "why": "The average spot moved from 9.9 to 10.6.",
+    "do": "Update the pages on page 2 of Google."
+   },
+   "aeo": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "campaigns": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "events": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "attended",
+    "why": "86 people are in its campaign, and 3 had a meeting.",
+    "do": "Ask sales to follow up with the other attendees."
+   },
+   "content": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": "2 May to 1 Aug 2026",
+    "main": "content_visits",
+    "why": "The Cursor explainer kept 351 of 797 visitors engaged.",
+    "do": "Add a demo button to the Cursor explainer."
+   },
+   "linkedin": {
+    "period": "2 Aug to 1 Nov 2026",
+    "period_before": null,
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "linkedin-exec": {
+    "period": "28 Jul to 27 Oct 2026",
+    "period_before": null,
+    "main": "",
+    "why": "",
+    "do": ""
+   },
+   "youtube": {
+    "period": "1 Aug to 31 Oct 2026",
+    "period_before": "1 May to 31 Jul 2026",
+    "main": "",
+    "why": "",
+    "do": ""
+   }
   }
  }
 }
