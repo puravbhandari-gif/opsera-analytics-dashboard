@@ -112,7 +112,18 @@ def write(name, header, rows, about):
               ("week", lambda d: (d - dt.timedelta(days=d.weekday())).isoformat())]
     def split(rs, level, label):
         if level == len(levels):
-            stop(f"{name} for {label} is still too big. Split it further before publishing.")
+            # still too big within 1 week (rows share the same date): numbered parts, in the rows' own order
+            part_rows, parts = [], []
+            for r in rs:
+                if part_rows and len(render(part_rows + [r]).encode()) > MAX_BYTES:
+                    parts.append(part_rows); part_rows = []
+                part_rows.append(r)
+            parts.append(part_rows)
+            for n, pr in enumerate(parts, 1):
+                text = render(pr)
+                (OUT / f"{name}_{label}_part{n}.csv").write_text(text)
+                files.append((f"{name}_{label}_part{n}.csv", len(pr), len(text.encode()), about, name, f"{label}, part {n}"))
+            return
         parts = {}
         for r in rs:
             parts.setdefault(levels[level][1](day(r[0])), []).append(r)

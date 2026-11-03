@@ -9,6 +9,7 @@ Agreed with Purav on 28 Oct 2026:
 """
 import json
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -93,12 +94,20 @@ def main():
     if "--dry-run" in sys.argv:
         print(text)
         return
-    url = os.environ.get("SLACK_WEBHOOK_URL")
-    if not url:
+    secret = os.environ.get("SLACK_WEBHOOK_URL") or ""
+    if not secret:
         sys.exit("SLACK_WEBHOOK_URL is not set, so nothing was posted to Slack.")
-    r = requests.post(url, json={"text": text}, timeout=30)
+    # The secret should be just the address; take it out of anything pasted around it (like Slack's sample curl
+    # command). The address is never printed: the run log is public and it would let anyone post to the channel.
+    found = re.search(r"https://hooks\.slack\.com/services/[A-Za-z0-9/_-]+", secret)
+    if not found:
+        sys.exit("SLACK_WEBHOOK_URL doesn't contain a Slack webhook address (https://hooks.slack.com/services/...), so nothing was posted.")
+    try:
+        r = requests.post(found.group(0), json={"text": text}, timeout=30)
+    except requests.RequestException as e:
+        sys.exit(f"Couldn't reach Slack ({type(e).__name__}), so nothing was posted.")
     if r.status_code != 200:
-        sys.exit(f"Slack returned {r.status_code}: {r.text[:200]}")
+        sys.exit(f"Slack returned {r.status_code}, so nothing was posted.")
     print("Posted to Slack:\n" + text)
 
 
