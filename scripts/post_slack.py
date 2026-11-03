@@ -56,6 +56,12 @@ def message():
     if len(full) < 2:
         stop("there aren't 2 full weeks of Google Analytics numbers yet.")
     cur, prev = full[-1], full[-2]
+    ending = os.environ.get("WEEK_ENDING")   # optional, to send a given Monday-to-Sunday week, e.g. a post that was missed
+    if ending:
+        i = next((n for n, w in enumerate(full) if w["end"] == ending), None)
+        if not i:
+            stop(f"{ending} isn't the Sunday of a full week with a week before it in the data.")
+        cur, prev = full[i], full[i - 1]
     if gsc["last_day_with_data"] < cur["end"]:
         stop(f"Search Console only goes to {gsc['last_day_with_data']}, before the week ends on {cur['end']}.")
 
