@@ -1,6 +1,11 @@
 {
  "written_on": "2026-11-03",
  "by_claude": false,
+ "claude_views": {
+  "week": false,
+  "month": false,
+  "quarter": false
+ },
  "model": null,
  "problem": "no key",
  "views": {

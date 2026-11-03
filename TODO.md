@@ -12,7 +12,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Fix blogs showing up twice on Google, with and without "/" at the end.
 - [ ] Waiting on David and Yusra: HubSpot bot filtering, and connecting Luma.
 - [ ] Fix Notion permission so I can create the read-only connection.
-- [ ] Add the Anthropic API key as a GitHub secret named ANTHROPIC_API_KEY, so Claude writes takeaway 3 on the Summary every Monday.
+- [ ] Every Monday: ask Claude Code to write the Summary takeaways.
 - [ ] Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot.
 - [ ] Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform), which both Opsera and Kumar posted. It needs a redirect on the website.
 - [ ] Tag Kumar's "Visit my website" button.

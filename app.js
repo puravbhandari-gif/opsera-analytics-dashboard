@@ -2319,9 +2319,10 @@ function openSummary() {
 function renderSummary(d) {
   const day = periodMode === "day";   // the Summary has no Day view: one day is too small to say anything about (agreed 3 Nov 2026)
   const all = d.views[day ? "week" : periodMode] || [];
-  const rows = d.by_claude ? all : all.filter((s) => s.t1);   // without Claude, only areas with a real change
-  $("summary-status").textContent = [day ? "The Summary has no Day view, so this shows Week." : "", `Written ${dayYear(d.written_on)}.`,
-    d.by_claude ? "" : "Full takeaways start once the key is added."].filter(Boolean).join(" ");
+  const byClaude = (d.claude_views || {})[day ? "week" : periodMode] ?? d.by_claude;
+  const rows = byClaude ? all : all.filter((s) => s.t1);   // without Claude's takeaways, only areas with a real change
+  $("summary-status").textContent = [day ? "The Summary has no Day view, so this shows Week." : "", `Updated ${dayYear(d.written_on)}.`,
+    byClaude ? "" : "Full takeaways are added after the Monday update."].filter(Boolean).join(" ");
   if (!rows.length) { $("summary-body").innerHTML = `<p class="muted">Nothing notable this period.</p>`; return; }
   $("summary-body").innerHTML = rows.map((s) => {
     const items = [["What happened", s.t1], ["What stands out", s.t2], ["What it means and what to do", s.t3]].filter(([, t]) => s.t1 && t);

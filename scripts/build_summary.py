@@ -3,7 +3,8 @@
 1. What happened: the most important change against the period before.
 2. What stands out: the most interesting detail behind it.
 3. What it means and what to do: one insight with its number, and one action.
-If ANTHROPIC_API_KEY is set, Claude writes all 3 from the numbers. Every number Claude uses must be one it was given, never a 0,
+Claude writes all 3 from the numbers: through the API if ANTHROPIC_API_KEY is set, or by Claude Code into data/summary_takeaways.json
+when Purav asks "write this week's Summary takeaways" (run with --facts to get the numbers first). Every number Claude uses must be one it was given, never a 0,
 and its text must follow the dashboard's copy rules; a takeaway that breaks a rule is dropped.
 Without the key, takeaways 1 and 2 are written here, and only for areas with a real change.
 Never a takeaway about a 0, an unchanged number or anything tiny. Agreed with Purav on 3 Nov 2026.
@@ -20,6 +21,8 @@ from zoneinfo import ZoneInfo
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 OUT = DATA / "summary.json"
+WRITTEN = DATA / "summary_takeaways.json"   # takeaways Claude Code writes when asked, checked here like the API's
+FACTS = Path(__file__).resolve().parent.parent.parent / "summary_facts.json"   # the numbers for Claude Code, outside the repo
 MODES = ("week", "month", "quarter")   # the Summary has no Day view: the page shows Week instead
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -441,15 +444,33 @@ def check(text, facts):
     return text, None
 
 
+def numbers_for_claude(sections):
+    return {mode: {s["key"]: {"area": s["title"], "period": s["period"], "period_before": s["period_before"], "numbers": s["facts"],
+                              "changes_worth_noting": [x for x in (s["t1"], s["t2"]) if x]}
+                   for s in sections[mode] if s["period"]} for mode in MODES}
+
+
+def from_file(sections):
+    """Takeaways Claude Code wrote into data/summary_takeaways.json. Each area view is used only while its period is still the one shown,
+    so last week's takeaways never sit on this week's numbers."""
+    if not WRITTEN.exists():
+        return {}
+    saved = json.loads(WRITTEN.read_text())
+    out = {}
+    for mode in MODES:
+        for s in sections[mode]:
+            got = (saved.get(mode) or {}).get(s["key"])
+            if got and s["period"] and got.get("period") == s["period"] and got.get("period_before") == s["period_before"]:
+                out.setdefault(mode, {})[s["key"]] = got
+    return out
+
+
 def ask_claude(sections):
     if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("ANTHROPIC_API_KEY is not set, so the Summary shows only areas with a real change, written from the numbers.")
         return {}, "no key"
     import anthropic
     client = anthropic.Anthropic()
-    ask = {mode: {s["key"]: {"area": s["title"], "period": s["period"], "period_before": s["period_before"], "numbers": s["facts"],
-                             "changes_worth_noting": [x for x in (s["t1"], s["t2"]) if x]}
-                  for s in sections[mode] if s["period"]} for mode in MODES}
+    ask = numbers_for_claude(sections)
     takeaways = {"type": "object", "additionalProperties": False, "required": ["t1", "t2", "t3"],
                  "properties": {k: {"type": "string"} for k in ("t1", "t2", "t3")}}
     schema = {"type": "object", "additionalProperties": False, "required": list(MODES),
@@ -496,6 +517,12 @@ def main():
             row["note"] = NOTES[0] if NOTES else None
             sections[mode].append(row)
     claude, problem = ask_claude(sections)
+    if not claude:
+        claude = from_file(sections)
+        print(f"Takeaways from {WRITTEN.name}: " + (", ".join(f"{m} ({len(v)} areas)" for m, v in claude.items()) or "none for these periods") + ".")
+    if "--facts" in sys.argv:   # for Claude Code: the numbers to write from, saved next to the repo, not in it
+        FACTS.write_text(json.dumps({"rules": SYSTEM, "views": numbers_for_claude(sections)}, indent=1) + "\n")
+        print(f"Wrote the numbers for Claude Code to {FACTS}")
     kept = dropped = 0
     for mode in MODES:
         for s in sections[mode]:
@@ -513,7 +540,8 @@ def main():
                 s["t1"], s["t2"], s["t3"] = checked["t1"][0], checked["t2"][0], checked["t3"][0]
                 kept += sum(1 for k in checked if checked[k][0])
             # if Claude's takeaway 1 failed a check, the takeaways written from the numbers stay
-    out = {"written_on": dt.date.today().isoformat(), "by_claude": bool(claude), "model": MODEL if claude else None,
+    out = {"written_on": dt.date.today().isoformat(), "by_claude": bool(claude), "claude_views": {m: m in claude for m in MODES},
+           "model": MODEL if claude else None,
            "problem": problem, "views": sections}
     OUT.write_text(json.dumps(out, indent=1) + "\n")
     shown = sum(1 for m in MODES for s in sections[m] if s["t1"])
