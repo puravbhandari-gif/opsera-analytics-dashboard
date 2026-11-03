@@ -371,8 +371,22 @@ function compare(spec) {
   fillCompare(spec);
 }
 
+// For data that arrives in exports (Salesforce): when the export covers less than half of this month so far,
+// show the last full month against the month before, and say why (agreed 3 Nov 2026).
+function fullPeriodsOnly(p, spec) {
+  if (periodMode !== "month" || !p.cur) return p;
+  const days = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5) + 1;
+  const monthDays = days(p.cur.start, monthEnd(p.cur.start));
+  if (days(p.cur.start, p.cur.end) * 2 >= monthDays) return p;
+  const cur = p.prev, before = monthStart(addDays(cur.start, -1));
+  return { cur, prev: before >= monthStart(spec.start) ? { start: before, end: monthEnd(before) } : null,
+    prevName: `${monthName(before)}, full month`, none: "No earlier full month in the export",
+    why: `The export only covers ${range(p.cur.start, p.cur.end)} of ${monthName(p.cur.start)}, so this shows ${monthName(cur.start)}, the last full month.` };
+}
+
 function fillCompare(spec) {
-  const p = periodsFor(periodMode, spec.start, spec.last);
+  let p = periodsFor(periodMode, spec.start, spec.last);
+  if (spec.fullPeriods) p = fullPeriodsOnly(p, spec);
   const title = $(`${spec.id}-cmp-chart`)?.closest(".panel").querySelector(".period-title");
   if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month", quarter: "3 months at a time" }[periodMode];
   if (!p.cur) {
@@ -381,11 +395,12 @@ function fillCompare(spec) {
   } else {
     $(`${spec.id}-cmp-cards`).innerHTML = spec.metrics.map((m) => {
       const cur = m.value(p.cur.start, p.cur.end), prev = p.prev ? m.value(p.prev.start, p.prev.end) : null;
-      const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}` : p.none;
+      // `extra` adds a second number for each period (the pipeline value next to the deal count), so each stays with its period
+      const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}${m.extra ? `, ${m.extra(p.prev.start, p.prev.end)}` : ""}` : p.none;
       const note = typeof m.sub === "function" ? m.sub(p.cur.start, p.cur.end) : m.sub;   // a note can depend on the period
-      return card(m.label, m.fmt(cur), [sub, note].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
+      return card(m.label, m.fmt(cur), [m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
     }).join("");
-    $(`${spec.id}-cmp-source`).textContent = spec.source(p.cur.start, p.cur.end) +
+    $(`${spec.id}-cmp-source`).textContent = (p.why ? `${p.why} ` : "") + spec.source(p.cur.start, p.cur.end) +
       (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
   }
   if ($(`${spec.id}-cmp-chart-source`)) $(`${spec.id}-cmp-chart-source`).textContent = spec.source(spec.start, spec.last);
@@ -1975,9 +1990,11 @@ function renderPipeline(sf) {
   const when = range(sf.opportunities_from, sf.opportunities_to);
   // The cards follow the period switch, by the day each deal was created, against the period before
   const dealsLast = addDays(sf.exports.opportunities, -1), deals = (n) => `${num(n)} deal${n === 1 ? "" : "s"}`;
-  const bucketMetric = (label, k) => ({ label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals,
-    sub: (a, b) => `${money(rangeSum(sf.days, `${k}_value`)(a, b))} pipeline` });
-  compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast,
+  const bucketMetric = (label, k) => {
+    const value = rangeSum(sf.days, `${k}_value`);
+    return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline` };
+  };
+  compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast, fullPeriods: true,
     source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open and won, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
     metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
       { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
@@ -2037,7 +2054,7 @@ function renderPipeline(sf) {
 
   const mt = sf.meetings, OUT = ["Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded"];
   const outcome = (k) => rangeSum(mt.days, (r) => r.outcomes[k] || 0);
-  compare({ id: "pipe-meet", start: mt.since, last: addDays(sf.exports.meetings, -1),
+  compare({ id: "pipe-meet", start: mt.since, last: addDays(sf.exports.meetings, -1), fullPeriods: true,
     source: (a, b) => `Source: Salesforce campaign members with a meeting on ${range(a, b)}, exported ${dayYear(sf.exports.meetings)}.`,
     metrics: [{ label: "People with a meeting", value: rangeSum(mt.days, "people"), fmt: num, sub: "After joining a marketing campaign" },
       { label: "Held", value: outcome("Meeting Held"), fmt: num }, { label: "Cancelled", value: outcome("Meeting Cancelled"), fmt: num, lowerIsBetter: true },
