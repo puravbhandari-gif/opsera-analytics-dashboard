@@ -1,12 +1,12 @@
 {
  "written_on": "2026-11-03",
- "by_claude": false,
+ "by_claude": true,
  "claude_views": {
-  "week": false,
-  "month": false,
-  "quarter": false
+  "week": true,
+  "month": true,
+  "quarter": true
  },
- "model": null,
+ "model": "claude-opus-5-5",
  "problem": "no key",
  "views": {
   "week": [
@@ -42,9 +42,9 @@
     "source": "Google Analytics, form fills",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "Event sign-ups: 12, up from 2 the week before.",
+    "t1": "Event sign-ups: 12, up from 2.",
     "t2": null,
-    "t3": null,
+    "t3": "Event sign-ups grew 500% on the week before. Put the next event's sign-up link in every email.",
     "facts": {
      "demo_requests": 3,
      "demo_requests_before": 3,
@@ -67,9 +67,9 @@
     "source": "HubSpot, marketing contacts and meetings",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "New marketing contacts: 12, down from 51 the week before.",
-    "t2": "The most new contacts came from direct visits: 8 of 12.",
-    "t3": null,
+    "t1": "New marketing contacts: 12, down from 51.",
+    "t2": "Direct visits brought 8 of the 12.",
+    "t3": "New contacts fell 76.5% in a week. Check which forms and lists brought in the 51 the week before.",
     "facts": {
      "new_contacts_by_channel": {
       "direct visits": 8,
@@ -92,8 +92,8 @@
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
     "t1": "Unlabelled visits jumped to 1,336, up from 47. These are likely robots, not real growth.",
-    "t2": "The biggest change was Email: 658 visits, up from 323. Visits by source still include robots.",
-    "t3": null,
+    "t2": "All visits rose to 5,411 from 4,289, but visits without email robots came to 3,199.",
+    "t3": "The rise in all visits likely came from robots, not people. Add a robot filter for unlabelled visits in Google Analytics.",
     "facts": {
      "all_visits_including_robots": 5411,
      "all_visits_including_robots_before": 4289,
@@ -154,9 +154,9 @@
     "source": "Google Analytics, visits from AI tools",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "Visits from AI tools: 39, up from 23 the week before.",
-    "t2": "ChatGPT sent the most: 20 of 39.",
-    "t3": null,
+    "t1": "Visits from AI tools: 39, up from 23.",
+    "t2": "ChatGPT sent 20 and Gemini sent 18.",
+    "t3": "AI tool visits grew 69.6% in a week. Check which pages AI tools send people to, and add a demo button there.",
     "facts": {
      "ai_visits_by_tool": {
       "ChatGPT": 20,
@@ -177,9 +177,9 @@
     "source": "Google Analytics, tagged campaign links",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "Visits from tagged campaigns: 87, down from 335 the week before.",
+    "t1": "Visits from tagged campaigns: 87, down from 335.",
     "t2": "DG-FY27-Gartner-MQ brought the most: 22 visits, 17 of them engaged.",
-    "t3": null,
+    "t3": "Campaign visits fell 74% in a week. Check which campaigns stopped running, and restart the ones with engaged visits.",
     "facts": {
      "top_campaigns": [
       {
@@ -231,9 +231,9 @@
     "source": "Google Analytics, landing pages",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "Visits landing on a blog, report, guide or comparison page: 1,324, up from 799 the week before.",
-    "t2": "The top piece was \"PHP2Shell: Invisible Threats and What to Do Next\": 359 visits, 21 of them engaged.",
-    "t3": null,
+    "t1": "Content page visits: 1,324, up from 799.",
+    "t2": "The PHP2Shell post brought 359 visits, but only 21 were engaged.",
+    "t3": "Most PHP2Shell visitors left quickly. Add a clear next step and a demo button to the post.",
     "facts": {
      "top_pieces": [
       {
@@ -268,9 +268,9 @@
     "source": "LinkedIn company page exports",
     "period": "26 Oct to 1 Nov 2026",
     "period_before": "19 to 25 Oct 2026",
-    "t1": "Times the company page's posts were seen: 4,805, down from 9,112 the week before.",
-    "t2": "The most seen was the post from 26 Oct: 1,108 times, with 315 clicks.",
-    "t3": null,
+    "t1": "Times the company page's posts were seen: 4,805, down from 9,112.",
+    "t2": "A 29 Oct post drew 662 clicks from 455 views.",
+    "t3": "Views fell 47.3% with 5 new posts. Find what the 29 Oct post linked to, and add a similar link to the next posts.",
     "facts": {
      "new_posts": 5,
      "top_posts": [
@@ -315,9 +315,9 @@
     "source": "Kumar's LinkedIn exports",
     "period": "19 to 25 Oct 2026",
     "period_before": "12 to 18 Oct 2026",
-    "t1": "Engagements on Kumar's posts: 125, down from 151 the week before.",
-    "t2": "Followers Kumar gained: 37, down from 51.",
-    "t3": null,
+    "t1": "Engagements on Kumar's posts: 125, down from 151.",
+    "t2": "Kumar gained 37 followers, down from 51.",
+    "t3": "Engagements fell 17.2% in a week. Ask a question in each post to get more replies.",
     "facts": {
      "times_seen": 4071,
      "times_seen_before": 4381,
@@ -338,9 +338,9 @@
     "source": "YouTube Analytics",
     "period": "19 to 25 Oct 2026",
     "period_before": "12 to 18 Oct 2026",
-    "t1": "Long video views: 116, up from 52 the week before.",
-    "t2": null,
-    "t3": null,
+    "t1": "Long video views: 116, up from 52.",
+    "t2": "Long videos got 68 minutes of watch time.",
+    "t3": "Long video views grew 123.1%. Share the newest long video on LinkedIn to keep views coming.",
     "facts": {
      "long_video_watch_minutes": 68,
      "long_video_views": 116,
@@ -363,9 +363,9 @@
     "source": "Salesforce exports, marketing deals",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Marketing sourced deals (estimate): 3, up from 1 in September.",
-    "t2": "Marketing sourced pipeline (estimate): $400,000, down from $588,000.",
-    "t3": null,
+    "t1": "Marketing sourced deals (estimate): 3, up from 1.",
+    "t2": "Their pipeline came to $400,000, down from $588,000, so each deal was smaller.",
+    "t3": "19 more deals had no contact linked, so we can't see where they came from. Link a contact to every new deal in Salesforce.",
     "facts": {
      "no_contact_deals": 19,
      "share_of_all_deals_without_contact_pct": 79,
@@ -391,9 +391,9 @@
     "source": "Google Analytics, form fills",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Demo requests: 22, up from 6 in September.",
-    "t2": "Event sign-ups: 29, down from 65.",
-    "t3": null,
+    "t1": "Demo requests: 22, up from 6.",
+    "t2": "The Gartner free modernization offer brought 67 form fills.",
+    "t3": "Demo requests grew 266.7%. Keep the demo button on every Gartner offer page.",
     "facts": {
      "demo_requests": 22,
      "demo_requests_before": 6,
@@ -416,9 +416,9 @@
     "source": "HubSpot, marketing contacts and meetings",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Meetings booked with marketing contacts: 4, down from 11 in September.",
-    "t2": "The most new contacts came from direct visits: 65 of 82.",
-    "t3": null,
+    "t1": "Meetings booked with marketing contacts: 4, down from 11.",
+    "t2": "New marketing contacts fell to 82, from 244.",
+    "t3": "New contacts fell 66.4%, and direct visits brought 65 of the 82. Add sign-up forms to more event and campaign pages.",
     "facts": {
      "new_contacts_by_channel": {
       "direct visits": 65,
@@ -443,9 +443,9 @@
     "source": "Google Analytics",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Visits without email robots: 15,240, up from 9,186 in September.",
+    "t1": "Visits without email robots: 15,240, up from 9,186.",
     "t2": "Unlabelled visits jumped to 1,458, up from 247. These are likely robots, not real growth.",
-    "t3": null,
+    "t3": "Visits without robots grew 65.9%, and direct visits rose to 11,478. Find which pages drew the new direct visits.",
     "facts": {
      "all_visits_including_robots": 20194,
      "all_visits_including_robots_before": 11817,
@@ -484,9 +484,9 @@
     "source": "Search Console",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Times Google showed our pages: 418,069, down from 539,902 in September.",
+    "t1": "Times Google showed our pages: 418,069, down from 539,902.",
     "t2": null,
-    "t3": null,
+    "t3": "Google showed our pages 22.6% less often. Update the pages on page 2 of Google, starting with the CI/CD blog.",
     "facts": {
      "average_spot": 10.8,
      "average_spot_before": 10.6,
@@ -506,9 +506,9 @@
     "source": "Google Analytics, visits from AI tools",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Visits from AI tools: 111, up from 71 in September.",
-    "t2": "Visits from AI tools led to 2 demo form fills.",
-    "t3": null,
+    "t1": "Visits from AI tools: 111, up from 71.",
+    "t2": "AI tool visits led to 2 demo form fills.",
+    "t3": "ChatGPT sent 54 and Gemini sent 51, close to even. Write short answer pages for common AI questions.",
     "facts": {
      "ai_visits_by_tool": {
       "ChatGPT": 54,
@@ -529,9 +529,9 @@
     "source": "Google Analytics, tagged campaign links",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Visits from tagged campaigns: 545, down from 2,209 in September.",
+    "t1": "Visits from tagged campaigns: 545, down from 2,209.",
     "t2": "DG-FY27-Gartner-MQ brought the most: 42 visits, 27 of them engaged.",
-    "t3": null,
+    "t3": "Campaign visits fell 75.3%. Line up the next campaign before the current one ends.",
     "facts": {
      "top_campaigns": [
       {
@@ -568,7 +568,7 @@
     "period_before": "1 to 30 Sep 2026",
     "t1": "Flutter 2026: the AI-SDLC Summit: 174 signed up and 87 attended.",
     "t2": "3 people from its Salesforce campaign have had a meeting since.",
-    "t3": null,
+    "t3": "Half of the 174 sign-ups attended, but only 3 people have had a meeting. Follow up with every attendee within a week.",
     "facts": {
      "events_ended": [
       "Flutter 2026: the AI-SDLC Summit",
@@ -590,9 +590,9 @@
     "source": "Google Analytics, landing pages",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Visits landing on a blog, report, guide or comparison page: 4,190, up from 2,510 in September.",
-    "t2": "The top piece was \"PHP2Shell: Invisible Threats and What to Do Next\": 358 visits, 21 of them engaged.",
-    "t3": null,
+    "t1": "Content page visits: 4,190, up from 2,510.",
+    "t2": "The PHP2Shell post brought 358 visits, but only 21 were engaged.",
+    "t3": "The Claude Code Alternatives post kept 81 of 189 visitors engaged. Write more comparison posts like it.",
     "facts": {
      "top_pieces": [
       {
@@ -627,9 +627,9 @@
     "source": "LinkedIn company page exports",
     "period": "1 to 31 Oct 2026",
     "period_before": "1 to 30 Sep 2026",
-    "t1": "Times the company page's posts were seen: 37,791, up from 17,569 in September.",
-    "t2": "The most seen was the post from 1 Oct: 5,745 times, with 603 clicks.",
-    "t3": null,
+    "t1": "Times the company page's posts were seen: 37,791, up from 17,569.",
+    "t2": "The 1 Oct post was seen most: 5,745 times, with 603 clicks.",
+    "t3": "Clicks grew 581.4% to 7,536. Keep a website link in every post.",
     "facts": {
      "new_posts": 25,
      "top_posts": [
@@ -713,9 +713,9 @@
     "source": "Salesforce exports, marketing deals",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": "Marketing sourced deals (estimate): 5, down from 8 the 3 months before.",
-    "t2": "Marketing sourced pipeline (estimate): $1,256,000, up from $798,375.",
-    "t3": null,
+    "t1": "Marketing sourced pipeline (estimate): $1,256,000, up from $798,375.",
+    "t2": "It came from 5 deals, down from 8, so each deal was bigger.",
+    "t3": "54 more deals had no contact linked, so we can't credit them. Link a contact to every new deal in Salesforce.",
     "facts": {
      "no_contact_deals": 54,
      "share_of_all_deals_without_contact_pct": 79,
@@ -741,9 +741,9 @@
     "source": "Google Analytics, form fills",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": "Demo requests: 36, up from 28 the 3 months before.",
-    "t2": "Event sign-ups: 110, up from 81.",
-    "t3": null,
+    "t1": "Demo requests: 36, up from 28.",
+    "t2": "Event sign-ups rose to 110, from 81.",
+    "t3": "Demo requests grew 28.6% and event sign-ups grew 35.8%. Keep running a webinar or event every month.",
     "facts": {
      "demo_requests": 36,
      "demo_requests_before": 28,
@@ -766,9 +766,9 @@
     "source": "HubSpot, marketing contacts and meetings",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": "Meetings booked with marketing contacts: 18, up from 6 the 3 months before.",
-    "t2": "The most new contacts came from events: 196 of 377.",
-    "t3": null,
+    "t1": "Meetings booked with marketing contacts: 18, up from 6.",
+    "t2": "Events brought 196 of the 377 new marketing contacts.",
+    "t3": "Meetings grew 200% while events brought most new contacts. Book a follow-up meeting with event contacts within a week.",
     "facts": {
      "new_contacts_by_channel": {
       "events": 196,
@@ -794,8 +794,8 @@
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
     "t1": "Unlabelled visits jumped to 1,817, up from 1,136. These are likely robots, not real growth.",
-    "t2": "The biggest change was Direct (typed in, or unknown): 21,378 visits, up from 13,081. Visits by source still include robots.",
-    "t3": null,
+    "t2": "Social media visits fell to 1,004, from 2,063.",
+    "t3": "Social media visits fell by about half. Add a website link to more LinkedIn posts.",
     "facts": {
      "all_visits_including_robots": 44278,
      "all_visits_including_robots_before": 32820,
@@ -834,9 +834,9 @@
     "source": "Search Console",
     "period": "1 Aug to 31 Oct 2026",
     "period_before": "1 May to 31 Jul 2026",
-    "t1": "Times Google showed our pages: 1,946,966, down from 2,837,558 the 3 months before.",
-    "t2": "The average spot on Google moved from 9.9 to 10.6 (lower is better).",
-    "t3": null,
+    "t1": "Times Google showed our pages: 1,946,966, down from 2,837,558.",
+    "t2": "The average spot moved from 9.9 to 10.6 (lower is better).",
+    "t3": "Google showed our pages 31.4% less often. Update the pages on page 2 of Google first.",
     "facts": {
      "average_spot": 10.6,
      "average_spot_before": 9.9,
@@ -881,9 +881,9 @@
     "source": "Google Analytics, tagged campaign links",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": null,
-    "t2": null,
-    "t3": null,
+    "t1": "DG-FY27-Q3-Tokenomics-Webinar brought 2,754 campaign visits, more than half of the 5,083.",
+    "t2": "Only 412 of its visits were engaged, against 303 of 1,038 for the Flutter summit campaign.",
+    "t3": "The Flutter campaign drew fewer visits but a bigger share of engaged ones. Use its landing page as the model for the next event.",
     "facts": {
      "top_campaigns": [
       {
@@ -918,9 +918,9 @@
     "source": "HubSpot and Salesforce event campaigns",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": "Flutter 2026: the AI-SDLC Summit: 174 signed up and 87 attended.",
+    "t1": "Flutter 2026: the AI-SDLC Summit led with 174 sign-ups and 87 attended.",
     "t2": "3 people from its Salesforce campaign have had a meeting since.",
-    "t3": null,
+    "t3": "86 people are in its Salesforce campaign, and 3 have had a meeting. Ask sales to follow up with the other attendees.",
     "facts": {
      "events_ended": [
       "Tokenomics: the currency of enterprise AI",
@@ -943,9 +943,9 @@
     "source": "Google Analytics, landing pages",
     "period": "2 Aug to 1 Nov 2026",
     "period_before": "2 May to 1 Aug 2026",
-    "t1": "Visits landing on a blog, report, guide or comparison page: 9,051, up from 7,590 the 3 months before.",
-    "t2": "The top piece was \"Cursor AI Explained: An Overview of the AI Coding Assistant\": 797 visits, 351 of them engaged.",
-    "t3": null,
+    "t1": "Content page visits: 9,051, up from 7,590.",
+    "t2": "The Cursor AI explainer led with 797 visits, 351 of them engaged.",
+    "t3": "Content visits grew 19.2%, and the Cursor explainer kept 351 visitors engaged. Add a demo button to the Cursor explainer.",
     "facts": {
      "top_pieces": [
       {
@@ -1044,7 +1044,7 @@
     "source": "YouTube Analytics",
     "period": "1 Aug to 31 Oct 2026",
     "period_before": "1 May to 31 Jul 2026",
-    "t1": "Subscribers gained: 17, up from 11 the 3 months before.",
+    "t1": null,
     "t2": null,
     "t3": null,
     "facts": {

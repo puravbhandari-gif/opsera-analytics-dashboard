@@ -329,7 +329,7 @@ def content(mode):
     details = [("top", f"The top piece was \"{title(k)}\": {n(x[0])} visits" + (f", {n(x[1])} of them engaged." if x[1] else "."))
                for k, x in top[:1] if x[0] >= 50]
     return area(cur, prev, before, {"top_pieces": [{"title": title(k), "visits": x[0], "engaged_visits": x[1], "visits_before": x[2]} for k, x in top]},
-                [("content_visits", "Visits landing on a blog, report, guide or comparison page", sum(x[0] for x in by.values()),
+                [("content_visits", "Content page visits", sum(x[0] for x in by.values()),
                   sum(x[2] for x in by.values()) if prev else None, 200)], details)
 
 
@@ -413,6 +413,7 @@ def numbers_in(obj):
             return
         if isinstance(x, (int, float)):
             out.add(round(float(x), 1))
+            out.add(round(abs(float(x)), 1))   # "fell 76.5%" for a change of -76.5
         elif isinstance(x, dict):
             for v in x.values():
                 walk(v)
