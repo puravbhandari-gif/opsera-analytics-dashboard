@@ -2056,7 +2056,7 @@ function renderPrMedia(d, ga, ah, sov) {
 
   // Share of voice: headlines naming each company, per quarter
   if (sov) {
-    const cos = ["Opsera", "Harness", "GitLab", "Copado"];
+    const cos = ["Opsera", "Harness", "CloudBees", "Copado", "Gearset", "LinearB"];
     $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Quarter</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
       sov.quarters.map((r) => { const tot = cos.reduce((t, c) => t + r.counts[c], 0);
         return `<tr><td>${esc(r.quarter)}${r.quarter === `${calQuarterName(sov.checked)} ${sov.checked.slice(0, 4)}` ? " (so far)" : ""}</td>${cos.map((c) => `<td class="num">${num(r.counts[c])}</td>`).join("")}<td class="num">${tot ? pct((r.counts.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;

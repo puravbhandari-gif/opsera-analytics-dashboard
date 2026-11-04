@@ -1,0 +1,29 @@
+{
+ "source": "Google News search feed, US English, headlines naming each company",
+ "start_date": "2026-07-01",
+ "checked": "2026-11-04",
+ "quarters": [
+  {
+   "quarter": "Q3 2026",
+   "counts": {
+    "Opsera": 2,
+    "Harness": 20,
+    "CloudBees": 1,
+    "Copado": 2,
+    "Gearset": 1,
+    "LinearB": 0
+   }
+  },
+  {
+   "quarter": "Q4 2026",
+   "counts": {
+    "Opsera": 2,
+    "Harness": 11,
+    "CloudBees": 4,
+    "Copado": 7,
+    "Gearset": 1,
+    "LinearB": 9
+   }
+  }
+ ]
+}

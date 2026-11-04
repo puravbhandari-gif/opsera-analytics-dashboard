@@ -101,6 +101,12 @@ jobs:
           GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
         run: python scripts/fetch_pr_ga.py
 
+      # Optional: if Google News doesn't answer, last week's share of voice stays.
+      - name: Count share of voice in Google News (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/fetch_share_of_voice.py
+
       # Optional: if this fails, the Content tab's "Published this quarter" keeps last week's list.
       - name: List what we published this quarter (optional)
         if: github.event_name != 'push'
