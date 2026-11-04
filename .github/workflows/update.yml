@@ -85,6 +85,28 @@ jobs:
         continue-on-error: true
         run: python scripts/estimate_linkedin.py
 
+      # Optional: if this fails, the PR and media tab keeps last week's rows and everything else still updates.
+      - name: Find new press and media mentions (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+        run: python scripts/fetch_pr_media.py
+
+      # Optional: visits to opsera.ai from each PR piece. If this fails, last week's numbers stay.
+      - name: Count visits from press and media pieces (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: python scripts/fetch_pr_ga.py
+
+      # Optional: if this fails, the Content tab's "Published this quarter" keeps last week's list.
+      - name: List what we published this quarter (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/fetch_published.py
+
       # Optional: if this fails, the Team metrics tab keeps last week's numbers and everything else still updates.
       - name: Work out the team metrics (optional)
         if: github.event_name != 'push'

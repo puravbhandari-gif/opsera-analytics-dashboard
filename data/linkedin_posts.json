@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-10-27T09:50+00:00",
+ "pulled_at": "2026-11-04T07:53+00:00",
  "posts": [
   {
    "account": "company",
@@ -355,6 +355,94 @@
    "posted_utc": "2026-10-26T15:30:07.068Z",
    "date_pacific": "2026-10-26",
    "opsera_pages": []
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_were-heading-to-san-francisco-for-github-activity-7520877218051588097-cK_y",
+   "posted_utc": "2026-10-27T16:00:59.925Z",
+   "date_pacific": "2026-10-27",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dUZSwChK",
+     "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "kumar",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-activity-7520896293410562048-Vpio",
+   "posted_utc": "2026-10-27T17:16:47.845Z",
+   "date_pacific": "2026-10-27",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dZf4R4Ny",
+     "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_meet-the-team-github-universe-activity-7521012908663652352-h1l6",
+   "posted_utc": "2026-10-28T01:00:11.088Z",
+   "date_pacific": "2026-10-27",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dUZSwChK",
+     "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "kumar",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_php2shell-invisible-threats-and-what-to-activity-7521012966645923840-Xx-G",
+   "posted_utc": "2026-10-28T01:00:24.912Z",
+   "date_pacific": "2026-10-27",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dyk86gvb",
+     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
+    },
+    {
+     "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_day-1-github-universe-activity-7521398315762991104-NuiH",
+   "posted_utc": "2026-10-29T02:31:39.301Z",
+   "date_pacific": "2026-10-28",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dUZSwChK",
+     "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_more-from-day-1-github-universe-activity-7521587082440433664-oDDr",
+   "posted_utc": "2026-10-29T15:01:44.784Z",
+   "date_pacific": "2026-10-29",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dUZSwChK",
+     "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-github-universe-activity-7523428976573493251-J0z3",
+   "posted_utc": "2026-11-03T17:00:46.566Z",
+   "date_pacific": "2026-11-03",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/d6wtyHFC",
+     "lands_on": "/events/github-universe"
+    }
+   ]
   }
  ]
 }

@@ -1,0 +1,301 @@
+"""Keep data/pr_media.json, the PR and media tab: every article, interview, byline, podcast and press
+mention of Opsera from 1 Jul 2026, plus every byline, interview and podcast by Kumar or anyone else at
+Opsera from any time. One row each, with the date, outlet, title, link, type, topic, the Opsera people
+named, and the PR agency that placed it. Agreed with Purav on 4 Nov 2026.
+
+Rows already in the file stay. Each run adds new ones from:
+- Google News and Google web search, read with Apify (needs APIFY_TOKEN, a GitHub secret)
+- our newsroom (opsera.ai/newsroom): its press releases from 1 Jul 2026
+- a PR agency's list, if one is dropped into ~/Desktop/Data/pr-agency as .csv or .xlsx
+  with the columns Date, Outlet, Title, Link, Type and Quoted (Quoted can be blank); the file's name,
+  or an Agency column, fills "Placed by". A row already found gets its "Placed by" from the list.
+
+A found page counts only if its own text says Opsera. Job posts, directory and review listings,
+company profiles, social media and our own sites are left out. Before 1 Jul 2026 only bylines, interviews
+and podcasts with an Opsera person count. A press release that runs on several sites is one row per site,
+each typed "Press release"; the page shows it once with the sites it ran on.
+
+    python3 scripts/fetch_pr_media.py                   # Apify and the newsroom (the Monday run)
+    python3 scripts/fetch_pr_media.py --agency          # also adds the PR agency lists (run on this Mac)
+    python3 scripts/fetch_pr_media.py --from found.json # checks results saved from Apify instead of running it
+"""
+import csv
+import datetime as dt
+import html
+import json
+import os
+import re
+import sys
+import time
+from pathlib import Path
+from urllib.parse import urlparse
+
+import requests
+
+START = "2026-07-01"
+OUT = Path(__file__).resolve().parent.parent / "data" / "pr_media.json"
+AGENCY = Path.home() / "Desktop" / "Data" / "pr-agency"
+HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
+MAX_CHARGE_USD = 1   # each weekly run costs a few cents; this caps a run that goes wrong
+TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention")
+# Opsera people: named in the "Opsera people" column when a piece is by them or quotes them (shown by name, agreed 4 Nov 2026)
+PEOPLE = ["Kumar Chivukula", "Patty Hatter", "Chandra Ranganathan", "Gilbert Martin", "Vishnu Vasudevan", "Ryan Cartwright"]
+NAMES = {"Patricia Hatter": "Patty Hatter"}
+NEWS_QUERIES = ["Opsera", '"Kumar Chivukula"', '"Patty Hatter" Opsera']
+WEB_QUERIES = ['"Opsera" -site:opsera.ai -site:linkedin.com -site:indeed.com -site:glassdoor.com',
+               '"Kumar Chivukula" Opsera -site:opsera.ai -site:linkedin.com', '"Opsera" podcast', '"Opsera" interview']
+PEOPLE_QUERIES = ['"by Kumar Chivukula"', '"Kumar Chivukula" interview OR podcast', '"Patty Hatter" Opsera interview OR podcast',
+                  'site:forbes.com/councils "Kumar Chivukula"']   # all time, for bylines, interviews and podcasts
+INTERVIEW_SITES = ("techstrong.tv",)   # video interview shows
+TOPICS = [   # first match wins, from the headline; an agency list's Topic column wins over this
+    ("Salesforce", r"salesforce|agentforce"),
+    ("Forge", r"\bforge\b|software factory"),
+    ("Modernization", r"moderni[sz]|legacy|migration|cobol|mainframe"),
+    ("Security", r"secur|vulnerab|appsec|devsecops|log4j|secrets"),
+    ("Unified Insights", r"unified insights|\bdora\b|developer productivity|engineering metrics|measur|engineering intelligence"),
+    ("AI-SDLC", r"ai-sdlc|ai sdlc|ai coding|ai-generated|agentic|ai agents?\b|generative ai|\bai\b"),
+]
+WIRES = ("prnewswire.com", "globenewswire.com", "businesswire.com", "accesswire.com", "einpresswire.com")
+LEFT_OUT = ("opsera.ai", "opsera.io", "linkedin.com", "facebook.com", "x.com", "twitter.com", "instagram.com", "reddit.com",
+            "youtube.com", "indeed.com", "glassdoor.", "tracxn.com", "rocketreach.co", "dealroom.co", "crunchbase.com", "zoominfo.com",
+            "f6s.com", "g2.com", "capterra.com", "trustradius.com", "itechguides.com", "sourceforge.net", "github.com",
+            "marketplace.microsoft.com", "aws.amazon.com", "appexchange.salesforce.com", "bizups.info", "wellfound.com", "builtin.com",
+            "pitchbook.com", "cbinsights.com", "owler.com", "apollo.io", "signalhire.com", "lusha.com", "theorg.com",
+            "opseragovernance.com")   # opseragovernance.com is another company's site
+# Checked by hand and left out, so the weekly run doesn't add them again: a podcast's list of episodes (the episode itself is a row)
+STRAIGHT = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'})   # straight quotes, as on the rest of the page
+NOT_A_PIECE = {"https://firehorse.ai/podcast"}
+SIDE_PARTS = re.compile(r"<(aside|nav|footer)\b.*?</\1>|<(ul|ol|div|section)\b[^>]*class=\"[^\"]*(related|sidebar|widget)[^\"]*\".*?</\2>", re.S | re.I)
+JOB_WORDS = re.compile(r"\b(job|jobs|careers?|hiring|salary|salaries|vacanc|openings?)\b", re.I)
+OUTLETS = {"prnewswire.com": "PR Newswire", "globenewswire.com": "GlobeNewswire", "finance.yahoo.com": "Yahoo Finance",
+           "markets.businessinsider.com": "Business Insider", "morningstar.com": "Morningstar", "sdtimes.com": "SD Times",
+           "devopsdigest.com": "DEVOPSdigest", "aithority.com": "AiThority", "informationweek.com": "InformationWeek",
+           "leaddev.com": "LeadDev", "news.aakashg.com": "Product Growth", "cognitiveworld.com": "Cognitive World", "manilatimes.net": "The Manila Times", "devops.com": "DevOps.com"}
+
+
+def stop(msg):
+    print(f"\nSTOPPED: {msg}", file=sys.stderr)
+    sys.exit(1)
+
+
+def site(url):
+    return urlparse(url).netloc.lower().removeprefix("www.")
+
+
+def outlet_for(url, given=""):
+    s = site(url)
+    return next((v for k, v in OUTLETS.items() if s == k or s.endswith("." + k)), None) or given or s
+
+
+def left_out(url, title):
+    s = site(url)
+    return any(s == d or s.endswith("." + d) or d.endswith(".") and s.startswith(d) for d in LEFT_OUT) or bool(JOB_WORDS.search(title or ""))
+
+
+def read_page(url):
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=30)
+        if r.status_code in (202, 429, 503):   # a busy or checking site: one more try after a pause
+            time.sleep(10)
+            r = requests.get(url, headers=HEADERS, timeout=30)
+    except requests.RequestException:
+        return None, None, None, {}
+    if r.status_code != 200:
+        return None, None, None, {}
+    m = re.search(r'"datePublished"\s*:\s*"(\d{4}-\d{2}-\d{2})', r.text) or \
+        re.search(r'(?:article:published_time|pubdate|publish-date)"\s+content="(\d{4}-\d{2}-\d{2})', r.text)
+    t = re.search(r'<meta property="og:title" content="([^"]*)"', r.text)
+    d = re.search(r'<meta (?:property="og:description"|name="description") content="([^"]*)"', r.text)
+    authors = re.findall(r'"author"\s*:\s*(?:\[\s*)?\{[^}]*?"name"\s*:\s*"([^"]+)"', r.text)
+    # related-links lists, sidebars and footers are left out, so a link to an old piece doesn't count as a mention
+    text = SIDE_PARTS.sub(" ", re.sub(r"<script.*?</script>|<style.*?</style>", " ", r.text, flags=re.S))
+    text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text)))
+    return text, (m.group(1) if m else None), (html.unescape(t.group(1)).strip() if t else None), \
+        {"summary": html.unescape(d.group(1)) if d else "", "authors": " ".join(authors)}
+
+
+def words(title):
+    return " ".join(re.findall(r"[a-z0-9]+", (title or "").lower()))
+
+
+def same_release(title, release_titles):
+    """The same press release on another site: the same title, word for word. A news story with its own headline stays a mention."""
+    return bool(words(title)) and words(title) in release_titles
+
+
+def kind(url, title, text, release_titles, authors=""):
+    t = (title or "").lower()
+    if site(url).endswith(WIRES) or same_release(title, release_titles) or re.search(r"/PRNewswire/|GLOBE NEWSWIRE|Business Wire\)", text or ""):
+        return "Press release"
+    if "podcast" in t or "podcast" in url.lower():
+        return "Podcast"
+    if re.search(r"\binterview\b|\bq&a\b", t) or site(url).endswith(INTERVIEW_SITES):
+        return "Interview"
+    by = "|".join(PEOPLE)
+    if any(p in authors for p in PEOPLE) or re.search(rf"\bBy\s?({by})\b|Written by\s?({by})", text or ""):
+        return "Byline"
+    return "Mention"
+
+
+def topic(title):
+    return next((name for name, rule in TOPICS if re.search(rule, (title or "").lower())), "Other")
+
+
+def quoted(text):
+    found = [p for p in PEOPLE if p in (text or "")] + [v for k, v in NAMES.items() if k in (text or "")]
+    return ", ".join(dict.fromkeys(found))
+
+
+def run_apify(actor, payload, token):
+    r = requests.post(f"https://api.apify.com/v2/acts/{actor}/run-sync-get-dataset-items",
+                      params={"token": token, "maxTotalChargeUsd": MAX_CHARGE_USD, "clean": "true"}, json=payload, timeout=600)
+    if r.status_code not in (200, 201):
+        stop(f"Apify {actor} returned {r.status_code}.")
+    return r.json()
+
+
+def found_by_apify(token):
+    """Google News and Google web search results as {title, link, outlet, date}."""
+    out = []
+    for q in NEWS_QUERIES:
+        for it in run_apify("lhotanova~google-news-scraper", {"query": q, "language": "US:en", "dateFrom": START, "maxItems": 200,
+                                                              "fetchArticleDetails": True, "fetchArticlePage": False}, token):
+            out.append({"title": it.get("title"), "link": it.get("loadedUrl") or it.get("link"), "outlet": it.get("source"),
+                        "date": (it.get("publishedAt") or "")[:10]})
+    for queries, after in ((WEB_QUERIES, START), (PEOPLE_QUERIES, None)):
+        payload = {"queries": "\n".join(queries), "maxPagesPerQuery": 3 if after else 1, "countryCode": "us", "saveHtmlToKeyValueStore": False}
+        if after:
+            payload["afterDate"] = after
+        for page in run_apify("apify~google-search-scraper", payload, token):
+            for it in page.get("organicResults") or []:
+                out.append({"title": it.get("title"), "link": it.get("url"), "outlet": it.get("websiteTitle"), "date": (it.get("date") or "")[:10]})
+    return out
+
+
+def found_in_newsroom():
+    """Our own press releases from 1 Jul 2026: newsroom items marked "Press release"."""
+    try:
+        r = requests.get("https://opsera.ai/newsroom", headers=HEADERS, timeout=60)
+    except requests.RequestException:
+        return []
+    text = html.unescape(re.sub(r"<script.*?</script>|<style.*?</style>", " ", r.text, flags=re.S))
+    lines = [l.strip() for l in re.sub(r"<[^>]+>", "\n", text).split("\n") if l.strip()]
+    links = {html.unescape(t).strip(): u for u, t in re.findall(r'href="(/newsroom/[^"]+)"[^>]*>\s*(?:<[^>]+>\s*)*([^<]{10,})', r.text)}
+    out = []
+    for i, l in enumerate(lines):
+        m = re.fullmatch(r"(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})", l)
+        if m and i >= 2 and lines[i - 1] == "Press release":
+            date = dt.datetime.strptime(l, "%d %B %Y").date().isoformat()
+            title = next((lines[j] for j in range(i - 2, max(i - 5, -1), -1) if lines[j] in links), None)
+            if title and date >= START:
+                out.append({"title": title, "link": "https://opsera.ai" + links[title], "outlet": "Opsera newsroom", "date": date,
+                            "type": "Press release", "own": True})
+    return out
+
+
+def agency_rows():
+    """Rows from the PR agency lists, each with "Placed by": the Agency column, or the file's name."""
+    rows = []
+    for f in sorted(AGENCY.glob("*")) if AGENCY.exists() else []:
+        if f.suffix.lower() == ".csv":
+            with f.open(newline="", encoding="utf-8-sig") as fh:
+                recs = list(csv.DictReader(fh))
+        elif f.suffix.lower() == ".xlsx":
+            import openpyxl
+            ws = openpyxl.load_workbook(f, read_only=True, data_only=True).active
+            vals = list(ws.values)
+            recs = [dict(zip([str(h or "").strip() for h in vals[0]], r)) for r in vals[1:]]
+        else:
+            continue
+        for r in recs:
+            r = {k.strip().lower(): v for k, v in r.items() if k}
+            date = r.get("date")
+            date = date.date().isoformat() if hasattr(date, "date") else str(date or "").strip()[:10]
+            if not (r.get("link") and r.get("title") and re.fullmatch(r"\d{4}-\d{2}-\d{2}", date)):
+                print(f"  {f.name}: skipped a row without a date (YYYY-MM-DD), title and link: {r}")
+                continue
+            t = str(r.get("type") or "").strip().capitalize()
+            agency = str(r.get("agency") or re.sub(r"[-_]+", " ", f.stem)).strip()
+            rows.append({"date": date, "outlet": str(r.get("outlet") or site(r["link"])).strip(), "title": str(r["title"]).strip(),
+                         "link": str(r["link"]).strip(), "type": t if t in TYPES else "Mention", "topic": str(r.get("topic") or "").strip()
+                         or topic(str(r["title"])), "quoted": str(r.get("quoted") or "").strip(), "placed_by": agency,
+                         "found_by": f"PR agency list ({f.name})"})
+    return rows
+
+
+def main():
+    have = json.loads(OUT.read_text()) if OUT.exists() else {"items": []}
+    items = {x["link"]: x for x in have["items"]}
+    release_titles = {words(x["title"]) for x in items.values() if x["type"] == "Press release"}
+
+    if "--from" in sys.argv:
+        found = json.loads(Path(sys.argv[sys.argv.index("--from") + 1]).read_text())
+        how = "Apify (saved results)"
+    else:
+        token = os.environ.get("APIFY_TOKEN")
+        if not token:
+            stop("The APIFY_TOKEN secret is missing. Add it in GitHub under Settings > Secrets and variables > Actions.")
+        found = found_by_apify(token)
+        how = "Apify, Google News and Google search"
+    found += found_in_newsroom()
+    found.sort(key=lambda c: not (c.get("own") or site(c.get("link") or "").endswith(WIRES)))   # press releases first, so their pickups match them
+
+    added, skipped = 0, {"left out": 0, "no Opsera on the page": 0, "before 1 Jul 2026 and not by an Opsera person": 0, "page wouldn't open": 0}
+    for c in found:
+        link = (c.get("link") or "").split("#")[0]
+        if not link or link in items or link in NOT_A_PIECE:
+            continue
+        if not (c.get("own") or c.get("checked_by_hand")) and left_out(link, c.get("title")):
+            skipped["left out"] += 1
+            continue
+        text, page_date, page_title, extra = read_page(link)
+        if text is None and c.get("checked_by_hand"):   # opened by hand in a browser: the site blocks scripts
+            text, extra = "", {}
+        elif text is None:
+            skipped["page wouldn't open"] += 1
+            continue
+        if not c.get("checked_by_hand") and "Opsera" not in text:
+            skipped["no Opsera on the page"] += 1
+            continue
+        date = c.get("date") if c.get("checked_by_hand") and c.get("date") else page_date or c.get("date") or ""
+        title = c.get("title") or ""
+        if (not title or title.endswith(("...", "\u2026"))) and page_title:   # search results cut long titles short
+            title = re.sub(r"\s+[|\-\u2013\u2014]\s+[^|\u2013\u2014]{2,40}$", "", page_title)   # drop " | Outlet" at the end
+        title = title.translate(STRAIGHT)
+        t = c.get("type") or kind(link, title, text, release_titles, extra.get("authors", ""))
+        people = c.get("quoted") or quoted(f"{text} {extra.get('authors', '')}")
+        if not date or (date < START and not (t in ("Byline", "Interview", "Podcast") and people)):
+            skipped["before 1 Jul 2026 and not by an Opsera person"] += 1
+            continue
+        items[link] = {"date": date, "outlet": outlet_for(link, c.get("outlet") or ""), "title": title or link, "link": link,
+                       "type": t, "topic": c.get("topic") or topic(title), "quoted": people, "placed_by": "",
+                       "found_by": "Opsera newsroom" if c.get("own") else c.get("found_by") or how}
+        if t == "Press release":
+            release_titles.add(words(title))
+        added += 1
+        print(f"  added {date} {t}: {items[link]['outlet']}, {items[link]['title'][:70]}")
+
+    if "--agency" in sys.argv:
+        for r in agency_rows():
+            if r["link"] in items:   # already found: the list only says who placed it
+                items[r["link"]]["placed_by"] = r["placed_by"]
+            elif r["date"] >= START or (r["type"] in ("Byline", "Interview", "Podcast") and r["quoted"]):
+                items[r["link"]] = r
+                added += 1
+                print(f"  added from the PR agency list: {r['date']} {r['type']}: {r['outlet']}, {r['title'][:70]}")
+
+    for x in items.values():   # rows from before these columns existed
+        x.setdefault("placed_by", "")
+        if not x["found_by"].startswith("PR agency"):
+            x["topic"] = topic(x["title"])
+    for x in items.values():   # a pickup found before its press release
+        if x["type"] == "Mention" and x["found_by"] != "Checked by hand" and same_release(x["title"], release_titles):
+            x["type"] = "Press release"
+    rows = sorted(items.values(), key=lambda x: (x["date"], x["outlet"]), reverse=True)
+    OUT.write_text(json.dumps({"source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
+                               "start_date": START, "checked": dt.date.today().isoformat(), "items": rows}, indent=1) + "\n")
+    print(f"PR and media: {len(rows)} rows, {added} new. Not added: " + ", ".join(f"{v} {k}" for k, v in skipped.items()))
+
+
+if __name__ == "__main__":
+    main()

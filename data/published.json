@@ -1,0 +1,328 @@
+{
+ "source": "opsera.ai sitemap, with each page's own publish date, and YouTube Analytics for public videos",
+ "start_date": "2026-07-01",
+ "checked": "2026-11-04",
+ "youtube_pulled_at": "2026-11-03T13:18+05:30",
+ "pages_checked": 314,
+ "pages_without_date": 33,
+ "items": [
+  {
+   "date": "2026-11-02",
+   "type": "Blog",
+   "title": "Cursor Alternatives for Teams Using Many AI Tools",
+   "link": "https://opsera.ai/blog/cursor-alternatives"
+  },
+  {
+   "date": "2026-10-31",
+   "type": "Blog",
+   "title": "How Forge Uses an Ontology to Guide AI Agents",
+   "link": "https://opsera.ai/blog/forge-ontology-ai-agents"
+  },
+  {
+   "date": "2026-10-30",
+   "type": "Blog",
+   "title": "Software Factory as a Service for Enterprise Teams",
+   "link": "https://opsera.ai/blog/software-factory-as-a-service"
+  },
+  {
+   "date": "2026-10-30",
+   "type": "Blog",
+   "title": "Software Factory Benefits Leaders Can Measure",
+   "link": "https://opsera.ai/blog/software-factory-benefits"
+  },
+  {
+   "date": "2026-10-30",
+   "type": "Blog",
+   "title": "ColdFusion to Java Spring Boot Migration Steps",
+   "link": "https://opsera.ai/blog/migrate-coldfusion-to-java-spring-boot"
+  },
+  {
+   "date": "2026-10-30",
+   "type": "Blog",
+   "title": "AI Agent Guardrails: Why Agents Need Ontologies",
+   "link": "https://opsera.ai/blog/ai-agent-guardrails-ontologies"
+  },
+  {
+   "date": "2026-10-30",
+   "type": "Blog",
+   "title": "A Step-by-Step .NET Framework Migration to .NET 10",
+   "link": "https://opsera.ai/blog/migrate-dotnet-framework-to-dotnet-10"
+  },
+  {
+   "date": "2026-10-29",
+   "type": "Blog",
+   "title": "The Hidden Cost of Missing Context in AI Coding",
+   "link": "https://opsera.ai/blog/context-engineering-ai-coding"
+  },
+  {
+   "date": "2026-10-29",
+   "type": "Blog",
+   "title": "How the Software Factory Pattern Works at Scale",
+   "link": "https://opsera.ai/blog/software-factory-pattern"
+  },
+  {
+   "date": "2026-10-29",
+   "type": "Blog",
+   "title": "GitHub Copilot Alternatives for Governance in 2026",
+   "link": "https://opsera.ai/blog/github-copilot-alternatives"
+  },
+  {
+   "date": "2026-10-28",
+   "type": "Blog",
+   "title": "Meta: 220% More Code, Only 36% Became Features",
+   "link": "https://opsera.ai/blog/measure-ai-roi-software-development"
+  },
+  {
+   "date": "2026-10-26",
+   "type": "Blog",
+   "title": "PHP2Shell: Invisible Threats and What to Do Next",
+   "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps"
+  },
+  {
+   "date": "2026-10-16",
+   "type": "Blog",
+   "title": "What Is Harness Engineering? Enterprise AI Guide",
+   "link": "https://opsera.ai/blog/harness-engineering"
+  },
+  {
+   "date": "2026-10-16",
+   "type": "Blog",
+   "title": "Factory.ai Alternatives: 5 AI Development Platforms",
+   "link": "https://opsera.ai/blog/factory-ai-alternatives"
+  },
+  {
+   "date": "2026-10-14",
+   "type": "Blog",
+   "title": "8090 AI Alternatives: 5 Software Factory Platforms",
+   "link": "https://opsera.ai/blog/8090-ai-alternatives"
+  },
+  {
+   "date": "2026-10-06",
+   "type": "YouTube video",
+   "title": "Terraform AI: Getting Started with Cloud Forge Infrastructure Provisioning",
+   "link": "https://www.youtube.com/watch?v=AyzfYJfCwTY"
+  },
+  {
+   "date": "2026-09-24",
+   "type": "Blog",
+   "title": "AI Software Factory: Specs, Work Orders, Governance",
+   "link": "https://opsera.ai/blog/ai-software-factory"
+  },
+  {
+   "date": "2026-09-22",
+   "type": "Blog",
+   "title": "Software Factory Compliance Tools & Audit Evidence",
+   "link": "https://opsera.ai/blog/software-factory-compliance-tools"
+  },
+  {
+   "date": "2026-09-22",
+   "type": "Blog",
+   "title": "Claude Mythos Vulnerability: How AI Finds Flaws",
+   "link": "https://opsera.ai/blog/claude-mythos-vulnerability"
+  },
+  {
+   "date": "2026-09-11",
+   "type": "Blog",
+   "title": "Spec-Driven Development: Specs Beat Prompts",
+   "link": "https://opsera.ai/blog/spec-driven-development"
+  },
+  {
+   "date": "2026-09-11",
+   "type": "Blog",
+   "title": "8 Claude Code Alternatives Compared for 2026",
+   "link": "https://opsera.ai/blog/claude-code-alternative"
+  },
+  {
+   "date": "2026-09-10",
+   "type": "YouTube video",
+   "title": "Self-Service Actions in Opsera IDP",
+   "link": "https://www.youtube.com/watch?v=CSw1h9y1OcQ"
+  },
+  {
+   "date": "2026-09-08",
+   "type": "Blog",
+   "title": "Healthcare IT Modernization: A Practical Guide",
+   "link": "https://opsera.ai/blog/healthcare-it-modernization"
+  },
+  {
+   "date": "2026-09-08",
+   "type": "Blog",
+   "title": "Healthcare Data Modernization: SQL to Cloud",
+   "link": "https://opsera.ai/blog/healthcare-data-modernization"
+  },
+  {
+   "date": "2026-09-07",
+   "type": "Blog",
+   "title": "MCP Security for Enterprise AI Coding Agents",
+   "link": "https://opsera.ai/blog/mcp-security"
+  },
+  {
+   "date": "2026-09-07",
+   "type": "Blog",
+   "title": "Application Modernization Strategy for SaaS Teams",
+   "link": "https://opsera.ai/blog/application-modernization-strategy"
+  },
+  {
+   "date": "2026-09-06",
+   "type": "Blog",
+   "title": "Generative AI Security in Development Workflows",
+   "link": "https://opsera.ai/blog/generative-ai-security"
+  },
+  {
+   "date": "2026-09-06",
+   "type": "Blog",
+   "title": "Blitzy Alternatives for Enterprise Modernization",
+   "link": "https://opsera.ai/blog/blitzy-alternatives"
+  },
+  {
+   "date": "2026-09-04",
+   "type": "Blog",
+   "title": "Software Factory Model: Reducing Architecture Drift",
+   "link": "https://opsera.ai/blog/software-factory-model"
+  },
+  {
+   "date": "2026-09-04",
+   "type": "Blog",
+   "title": "Java Modernization Decisions That Prevent Rewrites",
+   "link": "https://opsera.ai/blog/java-modernization-architecture"
+  },
+  {
+   "date": "2026-09-04",
+   "type": "Blog",
+   "title": "App Modernization Without Architectural Drift",
+   "link": "https://opsera.ai/blog/application-modernization"
+  },
+  {
+   "date": "2026-09-03",
+   "type": "Blog",
+   "title": "Snowflake to Databricks Migration: Complete Guide",
+   "link": "https://opsera.ai/blog/snowflake-to-databricks-migration"
+  },
+  {
+   "date": "2026-09-03",
+   "type": "Blog",
+   "title": "Legacy Code Modernization: AI-Powered Migration",
+   "link": "https://opsera.ai/blog/legacy-code-modernization"
+  },
+  {
+   "date": "2026-09-03",
+   "type": "Blog",
+   "title": "COBOL Modernization: AI-Powered Legacy Migration",
+   "link": "https://opsera.ai/blog/cobol-modernization"
+  },
+  {
+   "date": "2026-09-02",
+   "type": "Blog",
+   "title": "The Anchor Problem: Modernizing Legacy Systems",
+   "link": "https://opsera.ai/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era"
+  },
+  {
+   "date": "2026-09-02",
+   "type": "Blog",
+   "title": "Technical Depth In AI-SDLC: Beyond Code Generation",
+   "link": "https://opsera.ai/blog/technical-depth-in-ai-sdlc"
+  },
+  {
+   "date": "2026-09-02",
+   "type": "Blog",
+   "title": "Software Factory: Intent-Driven AI Development",
+   "link": "https://opsera.ai/blog/software-factory"
+  },
+  {
+   "date": "2026-09-02",
+   "type": "Blog",
+   "title": "AI-SDLC Benchmark: Why Spec and Context Matter Most",
+   "link": "https://opsera.ai/blog/enterprise-benchmark"
+  },
+  {
+   "date": "2026-09-01",
+   "type": "Blog",
+   "title": "Frontier AI Labs: Speed Is Not Software Readiness",
+   "link": "https://opsera.ai/blog/frontier-ai-software-readiness-benchmark"
+  },
+  {
+   "date": "2026-08-24",
+   "type": "YouTube video",
+   "title": "SRE Tools in One Place: PagerDuty and New Relic with IDP Agents | Opsera",
+   "link": "https://www.youtube.com/watch?v=w4YUB63VXaQ"
+  },
+  {
+   "date": "2026-08-18",
+   "type": "White paper",
+   "title": "Enterprise Intent to Governed Autonomous Change",
+   "link": "https://opsera.ai/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change"
+  },
+  {
+   "date": "2026-08-03",
+   "type": "Blog",
+   "title": "Agentic AI Security: Scanning and Remediation",
+   "link": "https://opsera.ai/blog/agentic-ai-security"
+  },
+  {
+   "date": "2026-07-31",
+   "type": "YouTube video",
+   "title": "CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",
+   "link": "https://www.youtube.com/watch?v=qLjkP1puaP4"
+  },
+  {
+   "date": "2026-07-29",
+   "type": "Blog",
+   "title": "Is Your Enterprise Ready for Smart Agents?",
+   "link": "https://opsera.ai/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents"
+  },
+  {
+   "date": "2026-07-28",
+   "type": "Blog",
+   "title": "Forge + Cursor: AI Speed Meets Enterprise Control",
+   "link": "https://opsera.ai/blog/forge-cursor-ai-speed-meets-enterprise-control"
+  },
+  {
+   "date": "2026-07-27",
+   "type": "Blog",
+   "title": "Opsera a G2 High Performer Again in Summer 2026",
+   "link": "https://opsera.ai/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026"
+  },
+  {
+   "date": "2026-07-20",
+   "type": "White paper",
+   "title": "From Velocity to Durable Value",
+   "link": "https://opsera.ai/resources/white-papers/from-velocity-to-durable-value"
+  },
+  {
+   "date": "2026-07-14",
+   "type": "Webinar",
+   "title": "AI Budget Burning? Convert AI Spend Into Results",
+   "link": "https://opsera.ai/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results"
+  },
+  {
+   "date": "2026-07-10",
+   "type": "YouTube video",
+   "title": "Bulk Pipeline Automation: Insert, Remove & Update Steps",
+   "link": "https://www.youtube.com/watch?v=7UYqC_t1dOw"
+  },
+  {
+   "date": "2026-07-08",
+   "type": "Blog",
+   "title": "The Developer Productivity World Cup",
+   "link": "https://opsera.ai/blog/the-developer-productivity-world-cup"
+  },
+  {
+   "date": "2026-07-08",
+   "type": "Blog",
+   "title": "91% Have Adopted AI. Why Only 6% Can Show ROI",
+   "link": "https://opsera.ai/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi"
+  },
+  {
+   "date": "2026-07-07",
+   "type": "Blog",
+   "title": "Best SAST Tools in 2026: Complete Comparison Guide",
+   "link": "https://opsera.ai/blog/sast-tools"
+  },
+  {
+   "date": "2026-07-02",
+   "type": "Blog",
+   "title": "DORA vs SPACE Metrics: Differences and Use Cases",
+   "link": "https://opsera.ai/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework"
+  }
+ ]
+}

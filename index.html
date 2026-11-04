@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=33">
+<link rel="stylesheet" href="styles.css?v=34">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -32,6 +32,7 @@
         <button data-mode="day">Day by day</button>
         <button data-mode="week" class="on">Week by week</button>
         <button data-mode="month">Month by month</button>
+        <button data-mode="cq">Quarter by quarter</button>
         <button data-mode="quarter">Last 3 months</button>
       </div>
       <div class="gtm-controls" id="gtm-controls" hidden>
@@ -74,6 +75,7 @@
         <button role="tab" data-tab="campaigns">Campaigns</button>
         <button role="tab" data-tab="events">Events</button>
         <button role="tab" data-tab="content">Content</button>
+        <button role="tab" data-tab="pr">PR and media</button>
       </div>
     </div>
     <div class="tab-group" role="presentation">
@@ -175,11 +177,56 @@
       <p class="source" id="content-gsc-source"></p>
       <p class="source" id="content-deals-source"></p>
     </div>
+    <div class="panel">
+      <h3>Published this quarter</h3>
+      <p class="muted">Every blog post, report, white paper, eBook, guide, webinar and YouTube video we published from 1 Jul 2026, newest first.</p>
+      <div id="content-published"><p class="muted">Loading...</p></div>
+      <p class="source" id="content-published-source"></p>
+    </div>
     <details class="more">
       <summary>More detail</summary>
       <p class="note">Types follow the page address: blog posts are under /blog/, reports, white papers and eBooks under /resources/, guides are knowledge base articles, and comparisons are under /comparison/, /comparison-guides/ or /resources/comparison-guides/.</p>
       <p class="note">Visits count people who arrived on the piece from outside the site. A deal counts for a piece when the contact's first page was that piece, or their first form was its download form. Deals count in the month they were created, with no company or person.</p>
       <p class="note">Pieces with no visits, form fills, Google clicks or deals don't show. Addresses with stray characters at the end are left out.</p>
+      <p class="note">Published this quarter lists each page in the opsera.ai sitemap under /blog/, /resources/ or /knowledge-base/, dated by the publish date on the page itself, plus each public YouTube video. Guide pages carry no publish date, so they can't be listed by date. Quarters are calendar quarters: Q3 is Jul to Sep and Q4 is Oct to Dec. Updated every Monday.</p>
+    </details>
+  </section>
+
+  <section id="tab-pr" class="tab" role="tabpanel" hidden>
+    <h2>PR and media</h2>
+    <p class="lead">Every article, interview, byline, podcast and press mention of Opsera from 1 Jul 2026, by quarter.</p>
+    <p class="muted" id="pr-status">Loading...</p>
+    <div class="cards compact" id="pr-cards"></div>
+    <p class="source" id="pr-cards-source"></p>
+    <div class="pr-filters" id="pr-filters" role="group" aria-label="Filter the pieces"></div>
+    <div class="panel">
+      <h3>Best performing</h3>
+      <p class="muted">The 5 pieces that drove the most demo requests, then the most visits to opsera.ai.</p>
+      <div id="pr-best"></div>
+      <p class="source" id="pr-best-source"></p>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h3>Every piece</h3><span class="muted" id="pr-count"></span></div>
+      <div id="pr-list"></div>
+      <p class="source" id="pr-list-source"></p>
+    </div>
+    <div class="panel" id="pr-sov-panel" hidden>
+      <h3>Share of voice</h3>
+      <p class="muted">Google News headlines naming Opsera, Harness, GitLab or Copado, per quarter.</p>
+      <div id="pr-sov"></div>
+      <p class="source" id="pr-sov-source"></p>
+    </div>
+    <details class="more">
+      <summary>More detail</summary>
+      <p class="note">Pieces are found each Monday with Apify, which searches Google News and Google, and in our newsroom. A page counts only when its own text names Opsera, leaving out its sidebar and related links. From 1 Jul 2026 every mention counts. Before then only bylines, interviews and podcasts with an Opsera person count.</p>
+      <p class="note">Left out: job posts, directory and review listings, company profiles, social media posts and our own sites.</p>
+      <p class="note">A press release shows once, with every site it ran on. A news story with its own headline is a mention. Opsera people names Kumar or another Opsera person who wrote the piece or is quoted in it.</p>
+      <p class="note">Topic comes from the headline: Forge, AI-SDLC, modernization, security, Unified Insights, Salesforce or other. Outlet tier comes from the outlet's Ahrefs Domain Rating: top tier 85 and up, trade press 70 to 84, other below 70.</p>
+      <p class="note">Visits, engaged visits and demo requests come from Google Analytics, which starts on 1 Apr 2026. Most sites only pass on their own name, so a visit counts for the newest piece on that site from its publish date. Pieces on YouTube or Spotify get no numbers, since those visits can't be told apart from our own channels.</p>
+      <p class="note">Ahrefs estimates: Google visits a month, top searches, Domain Rating and links to opsera.ai. Claude Code refreshes them from Ahrefs once a month.</p>
+      <p class="note" id="pr-sov-note" hidden>Share of voice reads Google News one week at a time and counts headlines naming each company, leaving out the company's own site and look-alikes such as football's Copa do Brasil or AI "harnesses". Google News shows only some copies of a press release, so these counts are lower than the rows above.</p>
+      <p class="note">To add a PR agency's list, save it as a .csv or .xlsx file in Desktop/Data/pr-agency with the columns Date (YYYY-MM-DD), Outlet, Title, Link, Type and Quoted, and optionally Topic and Agency. The file name or the Agency column fills Placed by. Then ask Claude Code to add the PR agency list.</p>
+      <p class="note">The top numbers compare this quarter so far with the same days of the quarter before. Quarters are calendar quarters: Q3 is Jul to Sep and Q4 is Oct to Dec.</p>
     </details>
   </section>
 
@@ -916,6 +963,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=93"></script>
+<script src="app.js?v=96"></script>
 </body>
 </html>

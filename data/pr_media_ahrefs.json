@@ -1,0 +1,360 @@
+{
+ "source": "Ahrefs estimates",
+ "checked": "2026-11-04",
+ "by_domain": {
+  "aithority.com": {
+   "domain_rating": 78,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "clearhavenpartners.com": {
+   "domain_rating": 43,
+   "tier": "Other",
+   "checked": "2026-11-04"
+  },
+  "cognitiveworld.com": {
+   "domain_rating": 32,
+   "tier": "Other",
+   "checked": "2026-11-04"
+  },
+  "devops.com": {
+   "domain_rating": 80,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "devopsdigest.com": {
+   "domain_rating": 73,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "finance.yahoo.com": {
+   "domain_rating": 94,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "forbes.com": {
+   "domain_rating": 94,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "informationweek.com": {
+   "domain_rating": 85,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "leaddev.com": {
+   "domain_rating": 76,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "manilatimes.net": {
+   "domain_rating": 80,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "markets.businessinsider.com": {
+   "domain_rating": 92,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "morningstar.com": {
+   "domain_rating": 89,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "news.aakashg.com": {
+   "domain_rating": 65,
+   "tier": "Other",
+   "checked": "2026-11-04"
+  },
+  "open.spotify.com": {
+   "domain_rating": 96,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "prnewswire.com": {
+   "domain_rating": 92,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "salesforcedevops.net": {
+   "domain_rating": 49,
+   "tier": "Other",
+   "checked": "2026-11-04"
+  },
+  "sdtimes.com": {
+   "domain_rating": 78,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "techstrong.tv": {
+   "domain_rating": 74,
+   "tier": "Trade press",
+   "checked": "2026-11-04"
+  },
+  "thenewstack.io": {
+   "domain_rating": 85,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  },
+  "yespress.io": {
+   "domain_rating": 43,
+   "tier": "Other",
+   "checked": "2026-11-04"
+  },
+  "youtube.com": {
+   "domain_rating": 99,
+   "tier": "Top tier",
+   "checked": "2026-11-04"
+  }
+ },
+ "by_link": {
+  "https://sdtimes.com/ai/opsera-relaunches-as-an-ai-native-software-factory/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://www.devopsdigest.com/opsera-relaunches-ai-native-software-factory": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://finance.yahoo.com/technology/ai/articles/opsera-relaunches-ai-native-software-130000553.html": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/2456240": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://markets.businessinsider.com/news/stocks/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise-1036676803": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://leaddev.com/reporting/whats-next-for-dora": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://yespress.io/kumar-chivukula": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://finance.yahoo.com/technology/ai/articles/opsera-launches-industrys-first-headless-130200820.html": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.prnewswire.com/news-releases/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce-302878470.html": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.morningstar.com/news/pr-newswire/20260915la47972/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://aithority.com/machine-learning/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/09/08/why-faster-software-creation-requires-a-new-operating-model/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://cognitiveworld.com/articles/2026/9/1/sounds-right-points-wrong-what-expert-judgment-is-actually-worth-when-ai-makes-everything-seem-easy": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.prnewswire.com/news-releases/opsera-extends-forge-to-cursor-marketplace-bringing-enterprise-context-and-governance-to-ai-assisted-development-302836102.html": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/07/27/the-hidden-cost-of-ai-coding-why-context-matters-more-than-tokens/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.youtube.com/watch?v=vrjqrcTZRlo": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem": {
+   "org_traffic": 0,
+   "top_keywords": [
+    "millions coders change are now ai"
+   ],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/06/24/avoiding-the-ai-automation-trap-lessons-from-the-1980s-and-the-path-to-ai-sdlc/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://sdtimes.com/ai/ai-coding-assistants-in-2026-avoiding-pitfalls-and-maximizing-value/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/interviews/how-ai-is-reshaping-devops-and-enterprise-software-delivery": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://open.spotify.com/episode/2glnDyc6R223rZurMVTQo2": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/interviews/unlocking-the-future-of-devops-with-codeglide-ais-kumar-chivukula": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://devops.com/how-to-measure-the-impact-of-generative-ai-tools-in-software-development": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2024/05/22/how-to-solve-tool-sprawl-through-technology-and-cross-team-collaboration/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/interviews/unlocking-the-potential-of-ai-in-devops-kumar-chivukula-opsera": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/kubecon-cloudnativecon-north-america-2021/ryan-cartwright-opsera-kubecon-cloudnativecon-na-2021": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://devops.com/the-secret-to-secrets-management-reduce-source-code-vulnerabilities": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://devops.com/case-study-transforming-health-care-with-devops": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  },
+  "https://sdtimes.com/security/log4j-is-just-the-beginning-secure-your-software-with-no-code-devops-orchestration/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://salesforcedevops.net/index.php/2022/02/18/do-more-with-less-kumar-chivukula-of-opsera-keenan-vision-podcast-episode-5-feb-18-2022/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://thenewstack.io/devops-at-the-crossroads-the-future-of-software-delivery/": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/interviews/software-delivery-opsera": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": true,
+   "followed_link": true,
+   "checked": "2026-11-04"
+  },
+  "https://techstrong.tv/videos/interviews/chandra-ranganathan-and-kumar-chivukula-techstrong-tv": {
+   "org_traffic": 0,
+   "top_keywords": [],
+   "links_to_opsera": false,
+   "followed_link": false,
+   "checked": "2026-11-04"
+  }
+ }
+}

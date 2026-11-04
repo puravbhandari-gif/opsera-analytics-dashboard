@@ -164,11 +164,11 @@ const bar = (label, data, color) => ({ label, data, backgroundColor: color, bord
 // ---------- Week by week / month by month, one switch for every tab ----------
 
 let periodMode = "week";
-try { const saved = localStorage.getItem("period"); if (["day", "month", "quarter"].includes(saved)) periodMode = saved; } catch (e) {}
+try { const saved = localStorage.getItem("period"); if (["day", "month", "cq", "quarter"].includes(saved)) periodMode = saved; } catch (e) {}
 
 // The view lives in the address after "#", so a link opens the same view:
 // #journey?period=month&channel=linkedin&funnelmonth=2026-08&person=…&type=blog&q=gartner
-const PERIOD_IN_ADDRESS = { day: "day", week: "week", month: "month", quarter: "3months" };
+const PERIOD_IN_ADDRESS = { day: "day", week: "week", month: "month", cq: "quarter", quarter: "3months" };
 const view = (() => {
   const [tab, query] = location.hash.slice(1).split("?");
   const a = new URLSearchParams(query || "");
@@ -197,6 +197,9 @@ const gtmTip = document.createElement("div");
 gtmTip.className = "gtm-tip"; gtmTip.hidden = true; gtmTip.setAttribute("role", "tooltip");
 document.body.appendChild(gtmTip);
 const gtmShown = () => (gtm.on ? gtm.items.filter((i) => gtm.type === "all" || i.types.includes(gtm.type)) : []);
+// PR and media pieces, as round markers on the Traffic charts only (Website visits, Google search, AEO), added 4 Nov 2026
+const prMarks = { items: [], source: "" };
+const prShown = (chart) => (gtm.on && (gtm.type === "all" || gtm.type === "PR and media") && chart.canvas.closest("#tab-visits, #tab-search, #tab-aeo") ? prMarks.items : []);
 const gtmWhen = (i) => (i.end ? range(i.date, i.end) : dayYear(i.date));
 // Markers for one chart: one spot per label that has items, with every item that falls in it
 function gtmSpots(chart) {
@@ -204,7 +207,7 @@ function gtmSpots(chart) {
   if (!o || !o.dates) return [];
   const x = chart.scales.x, y = chart.chartArea.bottom + (x.height || 0) + 9, spots = [];
   o.dates.forEach(([a, b], i) => {
-    const items = gtmShown().filter((it) => it.date >= a && it.date <= b);
+    const items = [...gtmShown(), ...prShown(chart)].filter((it) => it.date >= a && it.date <= b);
     if (items.length) spots.push({ x: x.getPixelForValue(i), y, items });
   });
   return spots;
@@ -224,7 +227,10 @@ const gtmMarkers = {
       }
       const r = s.items.length > 1 ? 5.5 : 4.5;
       ctx.fillStyle = o.color;
-      ctx.beginPath(); ctx.moveTo(s.x, s.y - r); ctx.lineTo(s.x + r, s.y); ctx.lineTo(s.x, s.y + r); ctx.lineTo(s.x - r, s.y); ctx.closePath(); ctx.fill();
+      ctx.beginPath();
+      if (s.items.every((i) => i.pr)) ctx.arc(s.x, s.y, r - 0.5, 0, 2 * Math.PI);   // a circle when every item here is a PR piece
+      else { ctx.moveTo(s.x, s.y - r); ctx.lineTo(s.x + r, s.y); ctx.lineTo(s.x, s.y + r); ctx.lineTo(s.x - r, s.y); }
+      ctx.closePath(); ctx.fill();
       if (s.items.length > 1) {
         ctx.fillStyle = o.line; ctx.font = '600 9px "DM Sans", sans-serif'; ctx.textBaseline = "middle";
         ctx.fillText(String(s.items.length), s.x + r + 3, s.y);
@@ -241,7 +247,7 @@ const gtmMarkers = {
     if (was !== chart.$gtmHover) args.changed = true;
     if (!hit) { if (was != null) gtmTip.hidden = true; return; }
     gtmTip.innerHTML = hit.items.map((i) => `<div><strong>${esc(i.name)}</strong><span>${esc(i.types.join(", "))}. ${gtmWhen(i)}</span></div>`).join("") +
-      `<p>Source: ${esc(gtm.source)}</p>`;
+      `<p>Source: ${esc([hit.items.some((i) => !i.pr) ? gtm.source : "", hit.items.some((i) => i.pr) ? prMarks.source : ""].filter(Boolean).join(". "))}</p>`;
     gtmTip.hidden = false;
     const box = chart.canvas.getBoundingClientRect(), w = gtmTip.offsetWidth, h = gtmTip.offsetHeight;
     const left = Math.min(Math.max(8, box.left + hit.x - w / 2), document.documentElement.clientWidth - w - 8);
@@ -252,7 +258,7 @@ const gtmMarkers = {
 };
 function redrawDated() { charts.forEach((c) => { if (c.instance?.options.plugins.gtm) c.instance.update("none"); }); }
 function fillGtmControls() {
-  const types = [...new Set(gtm.items.flatMap((i) => i.types))].sort();
+  const types = [...new Set([...gtm.items, ...prMarks.items].flatMap((i) => i.types))].sort();
   if (gtm.type !== "all" && !types.includes(gtm.type)) gtm.type = "all";
   $("gtm-type").innerHTML = `<option value="all">All types</option>` + types.map((t) => `<option${t === gtm.type ? " selected" : ""}>${esc(t)}</option>`).join("");
   $("gtm-type").disabled = !gtm.on;
@@ -265,6 +271,16 @@ load("gtm_calendar.json").then((d) => {
   $("gtm-controls").hidden = false;
   fillGtmControls(); redrawDated();
 }).catch(() => {});   // no calendar file yet: the charts show no markers
+load("pr_media.json").then((d) => {
+  const seen = new Set();
+  prMarks.items = d.items.filter((x) => x.date >= "2026-04-01").filter((x) => {   // a press release once, however many sites ran it
+    const k = x.type === "Press release" ? x.title.toLowerCase().replace(/[^a-z0-9]+/g, " ") : x.link;
+    return !seen.has(k) && seen.add(k);
+  }).map((x) => ({ name: `${x.outlet}: ${x.title}`, types: ["PR and media"], date: x.date, pr: true }));
+  prMarks.source = `PR and media tab, checked ${dayYear(d.checked)}`;
+  $("gtm-controls").hidden = false;
+  fillGtmControls(); redrawDated();
+}).catch(() => {});
 addEventListener("scroll", () => { gtmTip.hidden = true; }, { passive: true });
 $("gtm-toggle").addEventListener("click", () => { gtm.on = !gtm.on; gtmTip.hidden = true; fillGtmControls(); redrawDated(); saveView(); });
 $("gtm-type").addEventListener("change", () => { gtm.type = $("gtm-type").value; fillGtmControls(); redrawDated(); saveView(); });
@@ -272,6 +288,10 @@ const addMonths = (d, n) => { const x = toDate(d); const day0 = x.getUTCDate(); 
   x.setUTCDate(Math.min(day0, toDate(monthEnd(iso(x))).getUTCDate())); return iso(x); };
 // Last 3 months: the 3 months up to the last full day, against the 3 months before
 const quarterOf = (last) => ({ start: addDays(addMonths(last, -3), 1), end: last });
+// Quarter: calendar quarters (Q3 is Jul to Sep, Q4 is Oct to Dec), added 4 Nov 2026
+const calQuarterStart = (d) => `${d.slice(0, 4)}-${String(Math.floor((Number(d.slice(5, 7)) - 1) / 3) * 3 + 1).padStart(2, "0")}-01`;
+const calQuarterEnd = (d) => monthEnd(addMonths(calQuarterStart(d), 2));
+const calQuarterName = (d) => `Q${Math.floor((Number(d.slice(5, 7)) - 1) / 3) + 1}`;
 const comparisons = [];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const weekStart = (d) => addDays(d, -((toDate(d).getUTCDay() + 6) % 7));
@@ -286,6 +306,14 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
 // or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
+  if (mode === "cq") {   // this quarter so far against the same number of days of the quarter before (agreed 4 Nov 2026)
+    const qs = calQuarterStart(last), ps = calQuarterStart(addDays(qs, -1));
+    const days = Math.round((toDate(last) - toDate(qs)) / 864e5);
+    const pe = addDays(ps, days) < calQuarterEnd(ps) ? addDays(ps, days) : calQuarterEnd(ps);
+    const prev = ps >= start ? { start: ps, end: pe } : null;
+    return { cur: { start: qs < start ? start : qs, end: last }, prev,
+      prevName: `${calQuarterName(ps)}, ${prev ? range(prev.start, prev.end) : "same days"}`, none: `Comparison starts in ${calQuarterName(addDays(calQuarterEnd(qs), 1))}` };
+  }
   if (mode === "quarter") {
     const cur = quarterOf(last);
     const prev = quarterOf(addDays(cur.start, -1));
@@ -319,6 +347,13 @@ function periodBuckets(mode, start, last) {
     for (let q = quarterOf(last); q.end >= start; q = quarterOf(addDays(q.start, -1))) {
       const a = q.start < start ? start : q.start;
       out.unshift({ start: a, end: q.end, label: `${day(a)} to ${day(q.end)}${q.start < start ? " (part)" : ""}` });
+    }
+    return out;
+  }
+  if (mode === "cq") {
+    for (let s = calQuarterStart(start); s <= last; s = addDays(calQuarterEnd(s), 1)) {
+      const e = calQuarterEnd(s), a = s < start ? start : s, b = e > last ? last : e;
+      out.push({ start: a, end: b, label: `${calQuarterName(s)} ${s.slice(0, 4)}${e > last ? " (so far)" : s < start ? " (part)" : ""}` });
     }
     return out;
   }
@@ -388,7 +423,7 @@ function fillCompare(spec) {
   let p = periodsFor(periodMode, spec.start, spec.last);
   if (spec.fullPeriods) p = fullPeriodsOnly(p, spec);
   const title = $(`${spec.id}-cmp-chart`)?.closest(".panel").querySelector(".period-title");
-  if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month", quarter: "3 months at a time" }[periodMode];
+  if (title) title.textContent = { day: "Day by day", week: "Week by week", month: "Month by month", cq: "Quarter by quarter", quarter: "3 months at a time" }[periodMode];
   if (!p.cur) {
     $(`${spec.id}-cmp-cards`).innerHTML = `<div class="card"><div class="label">Not enough days yet</div><div class="sub">${p.none}</div></div>`;
     $(`${spec.id}-cmp-source`).textContent = spec.source(spec.start, spec.last);
@@ -940,9 +975,17 @@ function funnelHtml(steps) {
 
 // Deals are stored only as totals per week, month and 3 months (the page is public). Closed Lost is left out.
 // mode "all" adds up every month. Returns null when the period isn't one that's stored, such as a single day.
-function dealsIn(hub, mode, a, keep = () => true) {
-  const rows = { week: hub.deals_weekly, month: hub.deals_monthly, quarter: hub.deals_quarters, all: hub.deals_monthly }[mode];
+function dealsIn(hub, mode, a, keep = () => true, b = null) {
+  const rows = { week: hub.deals_weekly, month: hub.deals_monthly, cq: hub.deals_monthly, quarter: hub.deals_quarters, all: hub.deals_monthly }[mode];
   if (!rows) return null;
+  if (mode === "cq") {   // a calendar quarter is its 3 stored months added up
+    if (a !== calQuarterStart(a)) return null;
+    if (b && b < calQuarterEnd(a) && b < hub.end_date && b !== monthEnd(b)) return null;   // part of a past month: deals are stored by month
+    const end = calQuarterEnd(a) < hub.end_date ? calQuarterEnd(a) : hub.end_date;
+    const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, start: a, end };
+    rows.filter((r) => r.start >= a && r.start <= end && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount"].forEach((k) => { out[k] += r[k]; }));
+    return out;
+  }
   if (mode === "week" && a !== weekStart(a)) return null;
   if (mode === "month" && a !== monthStart(a)) return null;
   let start = a;
@@ -962,7 +1005,8 @@ function dealsIn(hub, mode, a, keep = () => true) {
 }
 
 // the deal step's note when the stored totals cover other dates than the rest of the funnel
-const dealNote = (d, a, b) => (!d ? "We store deals as weekly and monthly totals, so there's no figure for a single day."
+const dealNote = (d, a, b) => (!d ? (periodMode === "cq" ? "We store deals as monthly totals, so there's no figure for part of a month."
+  : "We store deals as weekly and monthly totals, so there's no figure for a single day.")
   : d.start !== a || d.end !== b ? `We store deals as weekly and monthly totals, so this step covers ${range(d.start, d.end)}.` : "");
 
 // The Google Ads panel lives on the Campaigns tab and is drawn for that tab's dates
@@ -981,8 +1025,8 @@ function renderJourney(ga, leads, hub, gsc) {
     metrics: [
       { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
       { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
-      { label: "Open pipeline", value: (a) => dealsIn(hub, periodMode, a)?.open_amount ?? null, fmt: money },
-      { label: "Won", value: (a) => dealsIn(hub, periodMode, a)?.won_amount ?? null, fmt: money },
+      { label: "Open pipeline", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.open_amount ?? null, fmt: money },
+      { label: "Won", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.won_amount ?? null, fmt: money },
     ] });
 
   // One funnel, for the chosen channel and the period the switch at the top is set to
@@ -994,7 +1038,7 @@ function renderJourney(ga, leads, hub, gsc) {
     // AI tools in HubSpot use the same source match as the AEO tab
     const aiSum = (rows, k, demoOnly) => rows.filter((r) => inRange(r) && (!demoOnly || r.demo)).reduce((t2, r) => t2 + r[k], 0);
     const contacts = ch === "ai" ? aiSum(hub.ai_contacts_daily, "count", true) : hubSum(hub.contacts_daily.filter((r) => r.line === "form"), "count");
-    const d = dealsIn(hub, mode, a, (r) => r.demo && (ch === "all" || (ch === "ai" ? !!r.tool : r.channel === ch)));
+    const d = dealsIn(hub, mode, a, (r) => r.demo && (ch === "all" || (ch === "ai" ? !!r.tool : r.channel === ch)), b);
     // the All funnel starts from the same visits total as the Website visits tab
     const visits = ch === "all" ? ga.daily.filter(inRange).reduce((t2, r) => t2 + r.sessions, 0) : gaSum("visits");
     const steps = [
@@ -1277,7 +1321,7 @@ function renderLinkedInPath(ga) {
   const fill = () => {
     const p = periodsFor(periodMode, start, last);
     const cur = p.cur || { start, end: last };
-    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far", quarter: "Last 3 months" }[periodMode];
+    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far", cq: "This quarter so far", quarter: "Last 3 months" }[periodMode];
     build("li-path", cur.start, cur.end);
     $("li-path-source").textContent = `${src}, ${range(cur.start, cur.end)} (Pacific time).`;
   };
@@ -1458,7 +1502,7 @@ function renderKahoots(monthly, quarter) {
   const m = (key, month) => monthly.find((r) => r.month === month)[key];
   const q = (metric) => quarter.find((r) => r.metric === metric);
   const fillKahoots = () => {
-    if (periodMode === "quarter") {
+    if (periodMode === "quarter" || periodMode === "cq") {
       const qCard = (label, metric) => card(label, num(q(metric).q3), `Q2: ${num(q(metric).q2)}`, cmpDelta(q(metric).q3, q(metric).q2));
       $("kahoots-cards").innerHTML = qCard("Website visits", "Website visits") + qCard("Visits from people", "Visits from people, no robots") +
         qCard("Form fills", "All form fills");
@@ -1885,6 +1929,140 @@ const CONTENT_TYPES = [
 ];
 
 let contentLoad = null;   // loads the page and deal data the first time the tab is opened
+let publishedLoad = null, prLoad = null;
+
+// Rows grouped by calendar quarter, newest quarter first and newest first inside each (agreed 4 Nov 2026)
+function byQuarter(items, columns, today) {
+  const groups = new Map();
+  items.forEach((r) => { const q = calQuarterStart(r.date); (groups.get(q) || groups.set(q, []).get(q)).push(r); });
+  return [...groups.keys()].sort().reverse().map((q) => {
+    const rows = groups.get(q).sort((a, b) => b.date.localeCompare(a.date));
+    const soFar = calQuarterEnd(q) > today ? ", so far" : "";
+    return `<h3 class="sub-title">${calQuarterName(q)} ${q.slice(0, 4)} (${range(q, calQuarterEnd(q))}${soFar}): ${num(rows.length)}</h3>
+      <div class="table-wrap"><table><thead><tr>${columns.map((c) => `<th scope="col">${c.label}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map((r) => `<tr>${columns.map((c) => `<td class="wrap">${c.fmt ? c.fmt(r[c.key], r) : esc(r[c.key])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  }).join("") || `<p class="muted">Nothing yet.</p>`;
+}
+const linked = (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(v)}</a>`;
+
+// Content tab: everything we published from 1 Jul 2026, by quarter
+function renderPublished(p) {
+  $("content-published").innerHTML = byQuarter(p.items, [
+    { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)) },
+    { key: "type", label: "Type" },
+    { key: "title", label: "Title", fmt: linked },
+  ], p.checked);
+  $("content-published-source").textContent = `Source: opsera.ai sitemap with each page's own publish date, checked ${dayYear(p.checked)}, and YouTube Analytics for public videos. ` +
+    `${num(p.pages_without_date)} of ${num(p.pages_checked)} pages show no publish date, so they aren't listed.`;
+}
+
+// ---------- PR and media: every article, interview, byline, podcast and press mention, by quarter ----------
+
+const PR_TYPES = ["Press release", "Byline", "Interview", "Podcast", "Mention"];
+const PR_TOPICS = ["Forge", "AI-SDLC", "Modernization", "Security", "Unified Insights", "Salesforce", "Other"];
+const PR_TIERS = ["Top tier", "Trade press", "Other"];
+const prSite = (u) => new URL(u).hostname.replace(/^www\./, "");
+const prWords = (t) => (t.toLowerCase().match(/[a-z0-9]+/g) || []).join(" ");
+function openPrMedia() {
+  if (!prLoad) prLoad = Promise.all(["pr_media.json", "pr_media_ga.json", "pr_media_ahrefs.json", "share_of_voice.json"]
+    .map((f) => load(f).catch(() => null))).then(([d, ga, ah, sov]) => {
+      if (!d) throw new Error("the list is missing");
+      renderPrMedia(d, ga || { by_link: {} }, ah || { by_domain: {}, by_link: {} }, sov);
+    })
+    .catch((err) => { $("pr-status").textContent = `Couldn't load the PR and media list: ${err.message}`; });
+}
+
+// One row per piece, and one row per press release with every site it ran on (agreed 4 Nov 2026)
+function prRows(d, ga, ah) {
+  const rows = [], releases = new Map();
+  d.items.forEach((x) => {
+    const site = prSite(x.link), dom = ah.by_domain[site] || {}, a = ah.by_link[x.link], g = ga.by_link[x.link];
+    const one = { ...x, sites: [{ outlet: x.outlet, link: x.link }], dr: dom.domain_rating ?? null, tier: dom.tier || "",
+      ga: g || null, ah: a || null, people: x.quoted ? x.quoted.split(", ") : [] };
+    if (x.type !== "Press release") { rows.push(one); return; }
+    const key = prWords(x.title), have = releases.get(key);
+    if (!have) { releases.set(key, one); rows.push(one); return; }
+    have.sites.push({ outlet: x.outlet, link: x.link });
+    if (x.date < have.date) have.date = x.date;
+    if (/newswire/i.test(x.outlet)) { have.outlet = x.outlet; have.link = x.link; }   // the wire is the release's own page
+    if ((one.dr ?? -1) > (have.dr ?? -1)) { have.dr = one.dr; have.tier = one.tier; }
+    if (g) have.ga = have.ga ? { visits: have.ga.visits + g.visits, engaged: have.ga.engaged + g.engaged, demos: have.ga.demos + g.demos } : { ...g };
+    if (a) have.ah = have.ah ? { org_traffic: (have.ah.org_traffic || 0) + (a.org_traffic || 0), top_keywords: [...have.ah.top_keywords, ...a.top_keywords],
+      links_to_opsera: have.ah.links_to_opsera || a.links_to_opsera } : { ...a };
+    have.placed_by = [...new Set([have.placed_by, x.placed_by].filter(Boolean))].join(", ");
+  });
+  rows.forEach((r) => { r.quarter = `${calQuarterName(r.date)} ${r.date.slice(0, 4)}`; r.year = r.date.slice(0, 4); });
+  return rows;
+}
+
+function renderPrMedia(d, ga, ah, sov) {
+  $("pr-status").textContent = "";
+  const all = prRows(d, ga, ah);
+  // Top numbers: this quarter so far against the same days of the quarter before (agreed 4 Nov 2026)
+  const q = calQuarterStart(d.checked), pq = calQuarterStart(addDays(q, -1));
+  const days = Math.round((toDate(d.checked) - toDate(q)) / 864e5), pEnd = addDays(pq, days) < calQuarterEnd(pq) ? addDays(pq, days) : calQuarterEnd(pq);
+  const count = (a, b, type) => all.filter((r) => r.date >= a && r.date <= b && (!type || r.type === type)).length;
+  $("pr-cards").innerHTML = [["All mentions", null], ...PR_TYPES.map((t) => [t === "Mention" ? "Other mentions" : `${t}s`, t])].map(([label, type]) => {
+    const cur = count(q, d.checked, type), prev = count(pq, pEnd, type);
+    return card(`${label}, ${calQuarterName(q)} so far`, num(cur), `${calQuarterName(pq)}, ${range(pq, pEnd)}: ${num(prev)}`, cmpDelta(cur, prev));
+  }).join("");
+  $("pr-cards-source").textContent = `Source: ${d.source}, checked ${dayYear(d.checked)}. ${calQuarterName(q)} (${range(q, d.checked)}) compared with the same days of ${calQuarterName(pq)} (${range(pq, pEnd)}). A press release counts once, however many sites ran it.`;
+
+  // Filters: outlet, type, year, quarter, person, topic and outlet tier
+  const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };
+  const opts = {
+    outlet: [...new Set(all.flatMap((r) => r.sites.map((s) => s.outlet)))].sort((a, b) => a.localeCompare(b)),
+    type: PR_TYPES, year: [...new Set(all.map((r) => r.year))].sort().reverse(), quarter: ["Q1", "Q2", "Q3", "Q4"],
+    person: [...new Set(all.flatMap((r) => r.people))].sort(), topic: PR_TOPICS, tier: PR_TIERS,
+  };
+  const names = { outlet: "Outlet", type: "Type", year: "Year", quarter: "Quarter", person: "Opsera person", topic: "Topic", tier: "Outlet tier" };
+  $("pr-filters").innerHTML = Object.keys(f).map((k) => `<label class="pick">${names[k]} <select data-f="${k}"><option value="">All</option>${
+    opts[k].map((o) => `<option>${esc(o)}</option>`).join("")}</select></label>`).join("");
+  const keep = (r) => (!f.outlet || r.sites.some((s) => s.outlet === f.outlet)) && (!f.type || r.type === f.type) && (!f.year || r.year === f.year)
+    && (!f.quarter || r.quarter.startsWith(f.quarter)) && (!f.person || r.people.includes(f.person)) && (!f.topic || r.topic === f.topic) && (!f.tier || r.tier === f.tier);
+
+  const n0 = (v) => (v == null ? "-" : num(v));
+  const outletCell = (v, r) => r.sites.length > 1
+    ? `${esc(v)}<div class="muted small">Ran on ${r.sites.length} sites: ${r.sites.map((s) => `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.outlet)}</a>`).join(", ")}</div>`
+    : esc(v);
+  const cols = [
+    { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)) },
+    { key: "outlet", label: "Outlet", fmt: outletCell },
+    { key: "title", label: "Title", fmt: linked },
+    { key: "type", label: "Type" }, { key: "topic", label: "Topic" }, { key: "tier", label: "Outlet tier" },
+    { key: "quoted", label: "Opsera people" }, { key: "placed_by", label: "Placed by" },
+    { key: "ga", label: "Visits to opsera.ai", fmt: (v) => n0(v?.visits) }, { key: "ga", label: "Engaged visits", fmt: (v) => n0(v?.engaged) },
+    { key: "ga", label: "Demo requests", fmt: (v) => n0(v?.demos) },
+    { key: "ah", label: "Google visits a month (Ahrefs estimate)", fmt: (v) => n0(v?.org_traffic) },
+    { key: "ah", label: "Top searches (Ahrefs estimate)", fmt: (v) => (v?.top_keywords?.length ? esc(v.top_keywords.slice(0, 3).join(", ")) : "-") },
+    { key: "dr", label: "Domain Rating (Ahrefs estimate)", fmt: n0 },
+    { key: "ah", label: "Links to opsera.ai (Ahrefs estimate)", fmt: (v) => (v ? (v.links_to_opsera ? "Yes" : "No") : "-") },
+  ];
+  const draw = () => {
+    const rows = all.filter(keep);
+    // Best performing: the most demo requests, then the most visits, from pieces that sent any visits
+    const best = rows.filter((r) => r.ga && r.ga.visits > 0).sort((a, b) => b.ga.demos - a.ga.demos || b.ga.visits - a.ga.visits).slice(0, 5);
+    $("pr-best").innerHTML = best.length ? `<ol class="pr-best">${best.map((r) => `<li><a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.title)}</a>
+      <span class="muted">${esc(r.outlet)}, ${esc(dayYear(r.date))}: ${num(r.ga.visits)} visit${r.ga.visits === 1 ? "" : "s"}, ${num(r.ga.engaged)} engaged, ${num(r.ga.demos)} demo request${r.ga.demos === 1 ? "" : "s"}</span></li>`).join("")}</ol>
+      ${best.length < 5 ? `<p class="muted">Only ${num(best.length)} of these pieces sent any visits to opsera.ai.</p>` : ""}`
+      : `<p class="muted">None of these pieces sent visits to opsera.ai.</p>`;
+    $("pr-count").textContent = `${num(rows.length)} of ${num(all.length)} pieces`;
+    $("pr-list").innerHTML = byQuarter(rows, cols, d.checked);
+  };
+  $("pr-filters").addEventListener("change", (e) => { const k = e.target.dataset.f; if (k) { f[k] = e.target.value; draw(); } });
+  draw();
+  $("pr-best-source").textContent = `Source: Google Analytics, visits by referring site, ${range(ga.ga_start || "2026-04-01", ga.ga_end || d.checked)}. Most sites only pass on their own name, so a visit counts for the newest piece on that site.`;
+  $("pr-list-source").textContent = `Sources: ${d.source}, checked ${dayYear(d.checked)}. Google Analytics for visits. Ahrefs estimates checked ${ah.checked ? dayYear(ah.checked) : "-"}. Outlet tier from Domain Rating: top tier 85 and up, trade press 70 to 84, other below 70.`;
+
+  // Share of voice: headlines naming each company, per quarter
+  if (sov) {
+    const cos = ["Opsera", "Harness", "GitLab", "Copado"];
+    $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Quarter</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
+      sov.quarters.map((r) => { const tot = cos.reduce((t, c) => t + r.counts[c], 0);
+        return `<tr><td>${esc(r.quarter)}${r.quarter === `${calQuarterName(sov.checked)} ${sov.checked.slice(0, 4)}` ? " (so far)" : ""}</td>${cos.map((c) => `<td class="num">${num(r.counts[c])}</td>`).join("")}<td class="num">${tot ? pct((r.counts.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;
+    $("pr-sov-source").textContent = `Source: ${sov.source}, ${range(sov.start_date, sov.checked)}. Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
+  }
+}
 // ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------
 
 function renderEvents(hub, leads, sf) {
@@ -2077,6 +2255,8 @@ function renderPipeline(sf) {
 }
 
 function openContent() {
+  if (!publishedLoad) publishedLoad = load("published.json").then(renderPublished)
+    .catch(() => { $("content-published").innerHTML = `<p class="muted">The list of what we published isn't available right now.</p>`; });
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
     .catch((err) => { $("content-status").textContent = `Couldn't load the content numbers: ${err.message}`; });
   return contentLoad;
@@ -2259,6 +2439,7 @@ function showTab(name) {
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
   if (name === "content") openContent();
+  if (name === "pr") openPrMedia();
   if (name === "search") openRankings();
   if (name === "campaigns") openCampaigns();
   // the footer views have no tab in the row, so start them at the top of the page

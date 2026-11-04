@@ -42,6 +42,11 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Decide the website visits goal: all visits or without robots.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
+- [ ] Ask our PR agencies for their coverage lists since 1 Jul 2026, save them in Desktop/Data/pr-agency, then ask Claude Code to add the PR agency list.
+- [ ] Add publish dates to the guide pages (knowledge base and comparison guides), so they show in "Published this quarter".
+- [ ] When Kumar's newsletter launches, add subscribers, opens and clicks per issue to the dashboard.
+- [ ] Newsroom has no press release since 5 May; add the newer ones, including the 10 Jun 2026 VIBEshift release ("Opsera Launches VIBEshift" on PR Newswire).
+- [ ] Every month: ask Claude Code to refresh Ahrefs for PR.
 - [x] Personal views: saved links per person.
 - [x] GTM calendar markers on every dated chart, from Notion, with an on/off switch and a filter by type.
 - [x] Google Ads on Customer journey, under the Paid ads funnel: spend, clicks, visits and cost per demo request by campaign.

@@ -1,4 +1,4 @@
-"""Write data/summary.json for the Summary tab, for Week, Month and 3 months (Day shows Week).
+"""Write data/summary.json for the Summary tab, for Week, Month, Quarter and 3 months (Day shows Week).
 
 At the top: 3 boxes across all areas, "Going well", "Needs attention" and "Do this week", 3 short lines each.
 Below: one card per area with a main number and its change, why it matters, what to do, and a 6-week trend line.
@@ -21,7 +21,7 @@ DATA = Path(__file__).resolve().parent.parent / "data"
 OUT = DATA / "summary.json"
 WRITTEN = DATA / "summary_takeaways.json"   # takeaways Claude Code writes when asked, checked here like the API's
 FACTS = Path(__file__).resolve().parent.parent.parent / "summary_facts.json"   # the numbers for Claude Code, outside the repo
-MODES = ("week", "month", "quarter")   # the Summary has no Day view: the page shows Week instead
+MODES = ("week", "month", "cq", "quarter")   # the Summary has no Day view: the page shows Week instead. cq is the calendar quarter
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 NOTES = []   # why a period isn't the one asked for, filled in by periods_for
@@ -78,11 +78,30 @@ def last_full_day_pacific(end, pulled_at):
     return end if iso(pt) > end else add_days(end, -1)
 
 
+def quarter_start(s):
+    return f"{s[:4]}-{(int(s[5:7]) - 1) // 3 * 3 + 1:02d}-01"
+
+
+def quarter_end(s):
+    return month_end(add_months(quarter_start(s), 2))
+
+
+def quarter_name(s):
+    return f"Q{(int(s[5:7]) - 1) // 3 + 1}"
+
+
 def periods_for(mode, start, last, full_month=True):
     """The dashboard's periods (periodsFor in app.js): this period and the one before, or None.
     mode can also be ("span", first, last): one fixed range with nothing before it, for the trend lines."""
     if isinstance(mode, tuple):
         return ((mode[1], mode[2]) if mode[1] >= start and mode[2] <= last else None), None, ""
+    if mode == "cq":   # calendar quarters (Q3 is Jul to Sep): this quarter so far against the same days of the quarter before
+        cur = (quarter_start(last), last)
+        if cur[0] < start:
+            return None, None, ""
+        p = quarter_start(add_days(cur[0], -1))
+        pe = min(add_days(p, (d(last) - d(cur[0])).days), quarter_end(p))
+        return cur, ((p, pe) if p >= start else None), f"in the same days of {quarter_name(p)}"
     if mode == "quarter":
         q = lambda e: (add_days(add_months(e, -3), 1), e)
         cur, prev = q(last), q(add_days(q(last)[0], -1))

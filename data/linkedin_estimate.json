@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-10-27T09:50+00:00",
+ "posts_pulled_at": "2026-11-04T07:53+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -372,6 +372,66 @@
   {
    "date": "2026-10-26",
    "group": "cant_tell",
+   "visits": 4,
+   "engaged": 3
+  },
+  {
+   "date": "2026-10-27",
+   "group": "cant_tell",
+   "visits": 7,
+   "engaged": 5
+  },
+  {
+   "date": "2026-10-27",
+   "group": "estimated_kumar",
+   "visits": 13,
+   "engaged": 6
+  },
+  {
+   "date": "2026-10-28",
+   "group": "cant_tell",
+   "visits": 5,
+   "engaged": 4
+  },
+  {
+   "date": "2026-10-28",
+   "group": "estimated_kumar",
+   "visits": 2,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-29",
+   "group": "cant_tell",
+   "visits": 9,
+   "engaged": 7
+  },
+  {
+   "date": "2026-10-29",
+   "group": "estimated_kumar",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-10-30",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 6
+  },
+  {
+   "date": "2026-10-31",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 0
+  },
+  {
+   "date": "2026-11-01",
+   "group": "cant_tell",
+   "visits": 12,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-02",
+   "group": "cant_tell",
    "visits": 3,
    "engaged": 2
   }
@@ -389,6 +449,20 @@
    "dates": [
     "2026-09-03",
     "2026-09-04"
+   ]
+  },
+  {
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "group": "estimated_kumar",
+   "visits": 16,
+   "engaged": 8,
+   "accounts": [
+    "kumar"
+   ],
+   "dates": [
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29"
    ]
   },
   {
@@ -458,6 +532,20 @@
    ],
    "dates": [
     "2026-09-15"
+   ]
+  },
+  {
+   "page": "/events/github-universe",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 1,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-10-27",
+    "2026-10-28"
    ]
   },
   {
@@ -551,10 +639,58 @@
    "date": "2026-10-20",
    "page": "/gartner-symposium/free-modernization",
    "post": "https://www.linkedin.com/posts/opsera_gartnersym-activity-7518389925608833024-wjQa"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-27",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/opsera_were-heading-to-san-francisco-for-github-activity-7520877218051588097-cK_y"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-10-27",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-activity-7520896293410562048-Vpio"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-27",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/opsera_meet-the-team-github-universe-activity-7521012908663652352-h1l6"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-10-27",
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_php2shell-invisible-threats-and-what-to-activity-7521012966645923840-Xx-G"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-10-27",
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_php2shell-invisible-threats-and-what-to-activity-7521012966645923840-Xx-G"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-28",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/opsera_day-1-github-universe-activity-7521398315762991104-NuiH"
+  },
+  {
+   "account": "company",
+   "date": "2026-10-29",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/opsera_more-from-day-1-github-universe-activity-7521587082440433664-oDDr"
+  },
+  {
+   "account": "company",
+   "date": "2026-11-03",
+   "page": "/events/github-universe",
+   "post": "https://www.linkedin.com/posts/opsera_opsera-github-universe-activity-7523428976573493251-J0z3"
   }
  ],
- "untagged_total": 436,
+ "untagged_total": 498,
  "start_date": "2026-09-01",
- "end_date": "2026-10-26",
- "pulled_at": "2026-10-27T15:16+05:30"
+ "end_date": "2026-11-02",
+ "pulled_at": "2026-11-03T13:15+05:30"
 }

@@ -1,0 +1,190 @@
+{
+ "source": "Google Analytics, visits by referring site",
+ "ga_start": "2026-04-01",
+ "ga_end": "2026-11-02",
+ "checked": "2026-11-04",
+ "by_link": {
+  "https://aithority.com/machine-learning/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce/": {
+   "visits": 1,
+   "engaged": 1,
+   "demos": 0,
+   "from": "2026-09-15",
+   "to": "2026-11-02"
+  },
+  "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-24",
+   "to": "2026-11-02"
+  },
+  "https://cognitiveworld.com/articles/2026/9/1/sounds-right-points-wrong-what-expert-judgment-is-actually-worth-when-ai-makes-everything-seem-easy": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-09-01",
+   "to": "2026-11-02"
+  },
+  "https://devops.com/how-to-measure-the-impact-of-generative-ai-tools-in-software-development": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-11-02"
+  },
+  "https://www.devopsdigest.com/opsera-relaunches-ai-native-software-factory": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-29",
+   "to": "2026-11-02"
+  },
+  "https://finance.yahoo.com/technology/ai/articles/opsera-launches-industrys-first-headless-130200820.html": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-09-15",
+   "to": "2026-10-28"
+  },
+  "https://finance.yahoo.com/technology/ai/articles/opsera-relaunches-ai-native-software-130000553.html": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-28",
+   "to": "2026-11-02"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2024/05/22/how-to-solve-tool-sprawl-through-technology-and-cross-team-collaboration/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-06-24"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/06/24/avoiding-the-ai-automation-trap-lessons-from-the-1980s-and-the-path-to-ai-sdlc/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-06-24",
+   "to": "2026-07-27"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/07/27/the-hidden-cost-of-ai-coding-why-context-matters-more-than-tokens/": {
+   "visits": 1,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-07-27",
+   "to": "2026-09-08"
+  },
+  "https://www.forbes.com/councils/forbestechcouncil/2026/09/08/why-faster-software-creation-requires-a-new-operating-model/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-09-08",
+   "to": "2026-11-02"
+  },
+  "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-07-17",
+   "to": "2026-11-02"
+  },
+  "https://leaddev.com/reporting/whats-next-for-dora": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-26",
+   "to": "2026-11-02"
+  },
+  "https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/2456240": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-28",
+   "to": "2026-11-02"
+  },
+  "https://markets.businessinsider.com/news/stocks/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise-1036676803": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-28",
+   "to": "2026-11-02"
+  },
+  "https://www.morningstar.com/news/pr-newswire/20260915la47972/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-09-15",
+   "to": "2026-11-02"
+  },
+  "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-08",
+   "to": "2026-11-02"
+  },
+  "https://www.prnewswire.com/news-releases/opsera-extends-forge-to-cursor-marketplace-bringing-enterprise-context-and-governance-to-ai-assisted-development-302836102.html": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-07-28",
+   "to": "2026-09-15"
+  },
+  "https://www.prnewswire.com/news-releases/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce-302878470.html": {
+   "visits": 3,
+   "engaged": 2,
+   "demos": 0,
+   "from": "2026-09-15",
+   "to": "2026-11-02"
+  },
+  "https://salesforcedevops.net/index.php/2022/02/18/do-more-with-less-kumar-chivukula-of-opsera-keenan-vision-podcast-episode-5-feb-18-2022/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-11-02"
+  },
+  "https://sdtimes.com/security/log4j-is-just-the-beginning-secure-your-software-with-no-code-devops-orchestration/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-05-22"
+  },
+  "https://sdtimes.com/ai/ai-coding-assistants-in-2026-avoiding-pitfalls-and-maximizing-value/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-05-22",
+   "to": "2026-10-29"
+  },
+  "https://sdtimes.com/ai/opsera-relaunches-as-an-ai-native-software-factory/": {
+   "visits": 6,
+   "engaged": 4,
+   "demos": 0,
+   "from": "2026-10-29",
+   "to": "2026-11-02"
+  },
+  "https://techstrong.tv/videos/interviews/how-ai-is-reshaping-devops-and-enterprise-software-delivery": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-11-02"
+  },
+  "https://thenewstack.io/devops-at-the-crossroads-the-future-of-software-delivery/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-04-01",
+   "to": "2026-11-02"
+  },
+  "https://yespress.io/kumar-chivukula": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-22",
+   "to": "2026-11-02"
+  }
+ }
+}
