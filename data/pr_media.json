@@ -4,6 +4,17 @@
  "checked": "2026-11-04",
  "items": [
   {
+   "date": "2026-11-03",
+   "outlet": "Voltage Control",
+   "title": "AI Review Gate Redesign: Fix the Reason, Not the Speed",
+   "link": "https://voltagecontrol.com/blog/your-processes-are-human-shaped/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-10-29",
    "outlet": "SD Times",
    "title": "Opsera Relaunches as an AI-Native Software Factory",
@@ -82,6 +93,17 @@
   },
   {
    "date": "2026-10-22",
+   "outlet": "xAI",
+   "title": "Introducing the SpaceX Super Intelligence Partner Network",
+   "link": "https://x.ai/news/partnernetworkannouncement",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-22",
    "outlet": "YesPress",
    "title": "Kumar Chivukula and the Work After the Code",
    "link": "https://yespress.io/kumar-chivukula",
@@ -90,6 +112,28 @@
    "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google search (page checked by hand in a browser)"
+  },
+  {
+   "date": "2026-10-19",
+   "outlet": "xAI",
+   "title": "Marketplace Partner Program | SpaceXSI",
+   "link": "https://x.ai/partners/marketplace",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-08",
+   "outlet": "rfp.wiki",
+   "title": "Puppet vs Opsera (2026): We tried both - see who wins",
+   "link": "https://www.rfp.wiki/it-security/service-orchestration-and-automation-platforms/puppet/opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-10-08",
@@ -145,6 +189,17 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Salesforce"
+  },
+  {
+   "date": "2026-09-10",
+   "outlet": "Our Code World",
+   "title": "6 Best Tools for Building an AI Software Factory",
+   "link": "https://ourcodeworld.com/articles/read/4820/6-best-tools-for-building-an-ai-software-factory",
+   "type": "Mention",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-09-08",
@@ -211,6 +266,17 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "AI-SDLC"
+  },
+  {
+   "date": "2026-07-13",
+   "outlet": "Startup Intros",
+   "title": "Opsera: Funding, Team & Investors",
+   "link": "https://startupintros.com/orgs/opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula, Chandra Ranganathan",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-06-24",
@@ -299,6 +365,17 @@
    "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google search (all-time search for Opsera people)"
+  },
+  {
+   "date": "2023-05-17",
+   "outlet": "Poddtoppen",
+   "title": "S4 Ep102: No-Code Into the Future",
+   "link": "https://poddtoppen.se/podcast/1478025522/the-humans-of-devops-podcast-series/s4-ep102-no-code-into-the-future",
+   "type": "Podcast",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2023-03-08",

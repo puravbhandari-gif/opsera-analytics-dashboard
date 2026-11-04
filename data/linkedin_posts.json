@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-11-04T07:53+00:00",
+ "pulled_at": "2026-11-04T13:15+00:00",
  "posts": [
   {
    "account": "company",

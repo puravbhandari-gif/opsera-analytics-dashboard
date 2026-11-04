@@ -90,6 +90,7 @@ page,type,page_title
 /blog/cursor-ai-review,Blog,Page not found - Opsera
 /blog/cursor-alternatives,Blog,Cursor Alternatives for Teams Running Multiple AI Assistants - Opsera
 /blog/cursor-security-agents,Blog,Page not found - Opsera
+/blog/dark-software-factory,Blog,Opsera - The context-aware software factory
 /blog/data-validation-testing-techniques-examples-tools,Blog,Page not found - Opsera
 /blog/defect-escape-rate-der-a-comprehensive-guide,Blog,Page not found - Opsera
 /blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accelerate-2023-state-of-devops-report,Blog,Human-centric Insights from Google and DORA’s 2023 State Report - Opsera
@@ -149,7 +150,7 @@ page,type,page_title
 /blog/generative-ai-security,Blog,Generative AI Security in Development Workflows - Opsera
 /blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership,Blog,"Get to GitHub, Get Working, and Get Insights | Opsera - Opsera"
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,Github Copilot Adoption Trends: Insights from Real Data - Opsera
-/blog/github-copilot-alternatives,Blog,5 Best GitHub Copilot Alternatives in 2026 — Opsera
+/blog/github-copilot-alternatives,Blog,Best GitHub Copilot Alternatives for Enterprise Governance - Opsera
 /blog/github-copilot-enterprise-impact-on-developer-productivity,Blog,Page not found - Opsera
 /blog/github-copilot-trends-and-measuring-impact,Blog,GitHub Copilot Trends and Measuring Impact | Opsera - Opsera
 /blog/harness-engineering,Blog,What Is Harness Engineering? Enterprise AI Delivery Guide — Opsera
@@ -224,6 +225,7 @@ page,type,page_title
 /blog/reducing-mean-time-to-recovery-mttr,Blog,Best way to reduce Mean-time-to-Recovery (MTTR) - Opsera
 /blog/reflektion-reduced-build-issue-diagnostic-time-by-20,Blog,Reflektion reduced build issue diagnostic time - Opsera
 /blog/release-roundup---august-2024,Blog,
+/blog/release-roundup---june-2024,Blog,Opsera - The context-aware software factory
 /blog/release-roundup---may,Blog,Opsera - The context-aware software factory
 /blog/release-roundup-august-2024,Blog,Release Roundup - August 2024 | Opsera - Opsera
 /blog/release-roundup-june-2024,Blog,Release Roundup - June 2024 | Opsera - Opsera
@@ -321,6 +323,7 @@ page,type,page_title
 /comparison-guides/opsera-vs-gearset,Comparison,Page not found - Opsera
 /comparison-guides/opsera-vs-jellyfish,Comparison,Page not found - Opsera
 /comparison/opsera-vs-copado,Comparison,
+/comparison/opsera-vs-flosum,Comparison,Page not found - Opsera
 /comparison/opsera-vs-gearset,Comparison,Page not found - Opsera
 /comparison/opsera-vs-harness,Comparison,Page not found - Opsera
 /comparison/opsera-vs-jenkins,Comparison,Page not found - Opsera
@@ -382,4 +385,3 @@ page,type,page_title
 /knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),Understanding System Hardening Timelines in DevSecOps Environments — Opsera
 /knowledge-base/tool-specific-analysis/amazon-q-developer,Guide (knowledge base),Amazon Q Developer: An Overview of the AI Coding Assistant — Opsera
 /knowledge-base/tool-specific-analysis/cursor-ai-explained,Guide (knowledge base),Cursor AI Explained: An Overview of the AI Coding Assistant — Opsera
-/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide,Guide (knowledge base),Gemini Code Assist: A Complete Developer’s Guide — Opsera

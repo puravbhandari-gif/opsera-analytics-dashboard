@@ -20,6 +20,6 @@ period_start,period_end,period_not_finished,from,visits,engaged_visits
 2026-10-01,2026-10-31,no,Company page,37,25
 2026-10-01,2026-10-31,no,Kumar,1,1
 2026-10-01,2026-10-31,no,Untagged,222,131
-2026-11-01,2026-11-01,yes,Company page,0,0
-2026-11-01,2026-11-01,yes,Kumar,0,0
-2026-11-01,2026-11-01,yes,Untagged,12,1
+2026-11-01,2026-11-03,yes,Company page,0,0
+2026-11-01,2026-11-03,yes,Kumar,1,1
+2026-11-01,2026-11-03,yes,Untagged,24,10

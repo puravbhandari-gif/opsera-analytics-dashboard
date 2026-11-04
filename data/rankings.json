@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-02",
- "pulled_at": "2026-11-03T13:15+05:30",
+ "end_date": "2026-11-03",
+ "pulled_at": "2026-11-04T18:40+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai, and Google Analytics 4, opsera.ai 2026",
  "pages": [
   {
@@ -192,35 +192,47 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 133,
-     "times_shown": 1815,
-     "avg_spot": 4.2
+     "clicks": 142,
+     "times_shown": 2037,
+     "avg_spot": 4.5
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 29,
+     "times_shown": 370,
+     "avg_spot": 4.3
     }
    ],
    "searches": [
     {
      "search": "opsera",
-     "clicks": 1393,
-     "times_shown": 3744,
-     "avg_spot": 1.1
+     "clicks": 1408,
+     "times_shown": 3888,
+     "avg_spot": 1.2
     },
     {
      "search": "opsera ai",
-     "clicks": 79,
-     "times_shown": 158,
+     "clicks": 78,
+     "times_shown": 159,
      "avg_spot": 1.0
     },
     {
      "search": "ospera",
-     "clicks": 68,
-     "times_shown": 795,
+     "clicks": 67,
+     "times_shown": 792,
      "avg_spot": 4.1
     },
     {
      "search": "opsera forge",
      "clicks": 20,
-     "times_shown": 220,
+     "times_shown": 229,
      "avg_spot": 3.3
+    },
+    {
+     "search": "opsera inc",
+     "clicks": 9,
+     "times_shown": 39,
+     "avg_spot": 1.0
     },
     {
      "search": "opsera logo",
@@ -229,15 +241,15 @@
      "avg_spot": 1.6
     },
     {
-     "search": "opsera inc",
-     "clicks": 8,
-     "times_shown": 37,
+     "search": "opsera.io",
+     "clicks": 7,
+     "times_shown": 194,
      "avg_spot": 1.0
     },
     {
      "search": "opsera company",
      "clicks": 7,
-     "times_shown": 124,
+     "times_shown": 123,
      "avg_spot": 2.1
     },
     {
@@ -247,16 +259,10 @@
      "avg_spot": 2.2
     },
     {
-     "search": "opsera.io",
-     "clicks": 6,
-     "times_shown": 195,
-     "avg_spot": 1.0
-    },
-    {
      "search": "opsera chennai",
      "clicks": 5,
-     "times_shown": 48,
-     "avg_spot": 1.5
+     "times_shown": 49,
+     "avg_spot": 1.4
     }
    ]
   },
@@ -293,8 +299,14 @@
     {
      "week": "2026-10-26",
      "clicks": 1,
-     "times_shown": 27,
-     "avg_spot": 9.9
+     "times_shown": 29,
+     "avg_spot": 12.1
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 3,
+     "avg_spot": 8.3
     }
    ],
    "searches": [
@@ -392,64 +404,70 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 14,
-     "times_shown": 583,
+     "clicks": 18,
+     "times_shown": 650,
      "avg_spot": 5.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 5,
+     "times_shown": 73,
+     "avg_spot": 5.3
     }
    ],
    "searches": [
     {
      "search": "opsera forge",
-     "clicks": 25,
-     "times_shown": 89,
-     "avg_spot": 2.3
+     "clicks": 29,
+     "times_shown": 98,
+     "avg_spot": 2.2
     },
     {
      "search": "forge opsera",
-     "clicks": 6,
-     "times_shown": 20,
-     "avg_spot": 1.9
+     "clicks": 7,
+     "times_shown": 21,
+     "avg_spot": 1.8
     },
     {
      "search": "forge ai",
-     "clicks": 2,
-     "times_shown": 453,
+     "clicks": 3,
+     "times_shown": 462,
      "avg_spot": 6.1
+    },
+    {
+     "search": "forge software factory",
+     "clicks": 3,
+     "times_shown": 11,
+     "avg_spot": 1.5
     },
     {
      "search": "software forge",
      "clicks": 2,
-     "times_shown": 84,
+     "times_shown": 98,
      "avg_spot": 4.8
-    },
-    {
-     "search": "forge software factory",
-     "clicks": 2,
-     "times_shown": 10,
-     "avg_spot": 1.5
     },
     {
      "search": "forge software",
      "clicks": 1,
-     "times_shown": 239,
-     "avg_spot": 4.0
+     "times_shown": 255,
+     "avg_spot": 3.9
     },
     {
      "search": "softwareforge",
      "clicks": 1,
-     "times_shown": 14,
-     "avg_spot": 3.8
+     "times_shown": 17,
+     "avg_spot": 3.7
     },
     {
      "search": "vague forge",
      "clicks": 0,
-     "times_shown": 86,
+     "times_shown": 97,
      "avg_spot": 6.9
     },
     {
      "search": "ospera",
      "clicks": 0,
-     "times_shown": 80,
+     "times_shown": 81,
      "avg_spot": 2.0
     },
     {
@@ -493,8 +511,14 @@
     {
      "week": "2026-10-26",
      "clicks": 4,
-     "times_shown": 65,
+     "times_shown": 73,
      "avg_spot": 7.2
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 10,
+     "avg_spot": 6.9
     }
    ],
    "searches": [
@@ -507,13 +531,13 @@
     {
      "search": "opsera forge",
      "clicks": 0,
-     "times_shown": 53,
-     "avg_spot": 7.9
+     "times_shown": 55,
+     "avg_spot": 8.0
     },
     {
      "search": "does opsera handle legacy application modernization",
      "clicks": 0,
-     "times_shown": 27,
+     "times_shown": 28,
      "avg_spot": 1.4
     },
     {
@@ -646,65 +670,71 @@
     },
     {
      "week": "2026-10-26",
+     "clicks": 2,
+     "times_shown": 225,
+     "avg_spot": 5.0
+    },
+    {
+     "week": "2026-11-02",
      "clicks": 1,
-     "times_shown": 195,
-     "avg_spot": 4.9
+     "times_shown": 30,
+     "avg_spot": 4.1
     }
    ],
    "searches": [
     {
      "search": "unified insights",
-     "clicks": 0,
-     "times_shown": 133,
+     "clicks": 1,
+     "times_shown": 139,
      "avg_spot": 3.9
     },
     {
      "search": "opsera unified insights",
-     "clicks": 0,
-     "times_shown": 84,
-     "avg_spot": 16.3
+     "clicks": 1,
+     "times_shown": 90,
+     "avg_spot": 15.2
     },
     {
      "search": "what do opsera unified insights for github reviews say about performance?",
      "clicks": 0,
-     "times_shown": 58,
-     "avg_spot": 3.6
+     "times_shown": 61,
+     "avg_spot": 3.5
     },
     {
      "search": "what size of company uses opsera unified insights for github for development analytics?",
      "clicks": 0,
-     "times_shown": 51,
-     "avg_spot": 2.7
+     "times_shown": 55,
+     "avg_spot": 2.8
     },
     {
      "search": "does opsera track ai token spend and ai coding roi",
      "clicks": 0,
-     "times_shown": 34,
+     "times_shown": 36,
      "avg_spot": 1.2
     },
     {
      "search": "does opsera unified insights for github track dora and space metrics?",
      "clicks": 0,
-     "times_shown": 30,
+     "times_shown": 31,
      "avg_spot": 2.8
-    },
-    {
-     "search": "plandek vs opsera unified insights for github for delivery analytics",
-     "clicks": 0,
-     "times_shown": 21,
-     "avg_spot": 5.4
     },
     {
      "search": "opsera",
      "clicks": 0,
-     "times_shown": 20,
-     "avg_spot": 19.6
+     "times_shown": 25,
+     "avg_spot": 17.9
     },
     {
      "search": "unified engineering insights platform vs point productivity tools",
      "clicks": 0,
-     "times_shown": 20,
-     "avg_spot": 6.3
+     "times_shown": 25,
+     "avg_spot": 5.8
+    },
+    {
+     "search": "plandek vs opsera unified insights for github for delivery analytics",
+     "clicks": 0,
+     "times_shown": 24,
+     "avg_spot": 4.8
     },
     {
      "search": "opsera unified devops platform",
@@ -903,7 +933,13 @@
     {
      "week": "2026-10-26",
      "clicks": 7,
-     "times_shown": 172,
+     "times_shown": 195,
+     "avg_spot": 3.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 32,
      "avg_spot": 3.7
     }
    ],
@@ -917,13 +953,13 @@
     {
      "search": "opsera",
      "clicks": 1,
-     "times_shown": 141,
-     "avg_spot": 2.0
+     "times_shown": 175,
+     "avg_spot": 2.1
     },
     {
      "search": "devsecops agents",
      "clicks": 1,
-     "times_shown": 80,
+     "times_shown": 79,
      "avg_spot": 1.8
     },
     {
@@ -941,13 +977,13 @@
     {
      "search": "ospera",
      "clicks": 0,
-     "times_shown": 79,
+     "times_shown": 80,
      "avg_spot": 2.0
     },
     {
      "search": "agentsecops",
      "clicks": 0,
-     "times_shown": 56,
+     "times_shown": 55,
      "avg_spot": 5.7
     },
     {
@@ -959,7 +995,7 @@
     {
      "search": "appsec agents",
      "clicks": 0,
-     "times_shown": 31,
+     "times_shown": 30,
      "avg_spot": 13.6
     },
     {
@@ -997,22 +1033,28 @@
     {
      "week": "2026-10-26",
      "clicks": 0,
-     "times_shown": 59,
-     "avg_spot": 6.5
+     "times_shown": 72,
+     "avg_spot": 8.3
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 12,
+     "avg_spot": 5.3
     }
    ],
    "searches": [
     {
      "search": "opsera",
      "clicks": 0,
-     "times_shown": 45,
-     "avg_spot": 7.1
+     "times_shown": 63,
+     "avg_spot": 6.9
     },
     {
      "search": "opsera unified devops platform",
      "clicks": 0,
-     "times_shown": 7,
-     "avg_spot": 10.7
+     "times_shown": 9,
+     "avg_spot": 12.4
     },
     {
      "search": "agentic devops platform",
@@ -1039,6 +1081,18 @@
      "avg_spot": 9.0
     },
     {
+     "search": "opsera salesforce devops",
+     "clicks": 0,
+     "times_shown": 1,
+     "avg_spot": 67.0
+    },
+    {
+     "search": "opsera unified insights",
+     "clicks": 0,
+     "times_shown": 1,
+     "avg_spot": 23.0
+    },
+    {
      "search": "opsera vs linearb for engineering intelligence, which fits an enterprise better",
      "clicks": 0,
      "times_shown": 1,
@@ -1049,18 +1103,6 @@
      "clicks": 0,
      "times_shown": 1,
      "avg_spot": 29.0
-    },
-    {
-     "search": "what is agentic devops and which vendors are leading it?",
-     "clicks": 0,
-     "times_shown": 1,
-     "avg_spot": 8.0
-    },
-    {
-     "search": "what kind of teams use opsera for devops?",
-     "clicks": 0,
-     "times_shown": 1,
-     "avg_spot": 1.0
     }
    ]
   },
@@ -1163,8 +1205,14 @@
     {
      "week": "2026-10-26",
      "clicks": 0,
-     "times_shown": 80,
-     "avg_spot": 10.1
+     "times_shown": 90,
+     "avg_spot": 12.2
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 10,
+     "avg_spot": 16.3
     }
    ],
    "searches": [
@@ -1177,7 +1225,7 @@
     {
      "search": "ospera",
      "clicks": 0,
-     "times_shown": 79,
+     "times_shown": 80,
      "avg_spot": 2.0
     },
     {
@@ -1199,10 +1247,22 @@
      "avg_spot": 17.4
     },
     {
+     "search": "opsera unified devops platform",
+     "clicks": 0,
+     "times_shown": 6,
+     "avg_spot": 64.0
+    },
+    {
      "search": "site:opsera.ai",
      "clicks": 0,
      "times_shown": 6,
      "avg_spot": 78.3
+    },
+    {
+     "search": "can salesforce devops tools help with soc 2 compliance?",
+     "clicks": 0,
+     "times_shown": 6,
+     "avg_spot": 5.8
     },
     {
      "search": "opsera official website",
@@ -1215,18 +1275,6 @@
      "clicks": 0,
      "times_shown": 6,
      "avg_spot": 72.3
-    },
-    {
-     "search": "opsera unified devops platform",
-     "clicks": 0,
-     "times_shown": 5,
-     "avg_spot": 64.4
-    },
-    {
-     "search": "can salesforce devops tools help with soc 2 compliance?",
-     "clicks": 0,
-     "times_shown": 5,
-     "avg_spot": 6.8
     }
    ]
   },
@@ -1353,52 +1401,58 @@
     {
      "week": "2026-10-26",
      "clicks": 1,
-     "times_shown": 116,
+     "times_shown": 120,
      "avg_spot": 5.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 16,
+     "avg_spot": 6.4
     }
    ],
    "searches": [
     {
      "search": "opsera forge",
      "clicks": 2,
-     "times_shown": 124,
+     "times_shown": 122,
      "avg_spot": 6.0
     },
     {
      "search": "brickforge",
      "clicks": 0,
-     "times_shown": 113,
+     "times_shown": 111,
      "avg_spot": 5.8
     },
     {
      "search": "databricks forge",
      "clicks": 0,
-     "times_shown": 82,
+     "times_shown": 87,
      "avg_spot": 6.7
     },
     {
      "search": "ospera",
      "clicks": 0,
-     "times_shown": 79,
+     "times_shown": 80,
      "avg_spot": 2.0
     },
     {
      "search": "forge databricks",
      "clicks": 0,
-     "times_shown": 33,
+     "times_shown": 36,
      "avg_spot": 7.2
-    },
-    {
-     "search": "\"octoforge/example-service\"",
-     "clicks": 0,
-     "times_shown": 24,
-     "avg_spot": 3.8
     },
     {
      "search": "opsera",
      "clicks": 0,
      "times_shown": 21,
      "avg_spot": 1.0
+    },
+    {
+     "search": "\"octoforge/example-service\"",
+     "clicks": 0,
+     "times_shown": 21,
+     "avg_spot": 3.8
     },
     {
      "search": "\"brickforge.xyz\" -site:brickforge.xyz",
@@ -1424,13 +1478,19 @@
    "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
    "group": "Blog",
    "title": "PHP2Shell: Invisible Threats and What to Do Next \u2014 Opsera",
-   "visits_since_new_site": 366,
+   "visits_since_new_site": 367,
    "weeks": [
     {
      "week": "2026-10-26",
      "clicks": 4,
-     "times_shown": 145,
-     "avg_spot": 11.8
+     "times_shown": 149,
+     "avg_spot": 12.1
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 5,
+     "avg_spot": 8.8
     }
    ],
    "searches": [
@@ -1443,8 +1503,8 @@
     {
      "search": "salesforce php2shell",
      "clicks": 0,
-     "times_shown": 14,
-     "avg_spot": 6.2
+     "times_shown": 15,
+     "avg_spot": 5.9
     },
     {
      "search": "opsera",
@@ -1455,8 +1515,8 @@
     {
      "search": "php2shell",
      "clicks": 0,
-     "times_shown": 3,
-     "avg_spot": 6.0
+     "times_shown": 4,
+     "avg_spot": 9.2
     },
     {
      "search": "php2shell explained",
@@ -1483,16 +1543,122 @@
      "avg_spot": 7.0
     },
     {
+     "search": "php2shell php 5.6",
+     "clicks": 0,
+     "times_shown": 1,
+     "avg_spot": 10.0
+    },
+    {
      "search": "php2shell salesforce",
      "clicks": 0,
      "times_shown": 1,
      "avg_spot": 8.0
+    }
+   ]
+  },
+  {
+   "page": "/blog/claude-code-alternative",
+   "group": "Blog",
+   "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026 \u2014 Opsera",
+   "visits_since_new_site": 201,
+   "weeks": [
+    {
+     "week": "2026-09-28",
+     "clicks": 16,
+     "times_shown": 1090,
+     "avg_spot": 6.4
     },
     {
-     "search": "poc php2shell",
-     "clicks": 0,
+     "week": "2026-10-05",
+     "clicks": 48,
+     "times_shown": 4469,
+     "avg_spot": 6.0
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 17,
+     "times_shown": 4421,
+     "avg_spot": 5.8
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 19,
+     "times_shown": 4244,
+     "avg_spot": 6.0
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 30,
+     "times_shown": 4261,
+     "avg_spot": 6.1
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 3,
+     "times_shown": 764,
+     "avg_spot": 5.1
+    }
+   ],
+   "searches": [
+    {
+     "search": "claude code alternative",
+     "clicks": 1,
+     "times_shown": 222,
+     "avg_spot": 14.3
+    },
+    {
+     "search": "claude code gemini alternative",
+     "clicks": 1,
+     "times_shown": 15,
+     "avg_spot": 6.0
+    },
+    {
+     "search": "claude alternatives for coding",
+     "clicks": 1,
+     "times_shown": 12,
+     "avg_spot": 19.4
+    },
+    {
+     "search": "gemini alternative to claude code",
+     "clicks": 1,
+     "times_shown": 12,
+     "avg_spot": 12.8
+    },
+    {
+     "search": "claude code cli alternatives",
+     "clicks": 1,
+     "times_shown": 9,
+     "avg_spot": 7.6
+    },
+    {
+     "search": "best claude alternative for coding",
+     "clicks": 1,
+     "times_shown": 6,
+     "avg_spot": 10.8
+    },
+    {
+     "search": "ccswitch \u66ff\u4ee3",
+     "clicks": 1,
+     "times_shown": 5,
+     "avg_spot": 1.0
+    },
+    {
+     "search": "ai for code free",
+     "clicks": 1,
      "times_shown": 1,
      "avg_spot": 9.0
+    },
+    {
+     "search": "best free claude code alternative",
+     "clicks": 1,
+     "times_shown": 1,
+     "avg_spot": 2.0
+    },
+    {
+     "search": "claude code alternatives",
+     "clicks": 0,
+     "times_shown": 162,
+     "avg_spot": 13.9
     }
    ]
   },
@@ -1500,7 +1666,7 @@
    "page": "/blog/software-factory",
    "group": "Blog",
    "title": "Software Factory: Intent-Driven Development at AI Speed \u2014 Opsera",
-   "visits_since_new_site": 198,
+   "visits_since_new_site": 201,
    "weeks": [
     {
      "week": "2026-08-31",
@@ -1552,35 +1718,53 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 4,
-     "times_shown": 3097,
-     "avg_spot": 10.2
+     "clicks": 7,
+     "times_shown": 3524,
+     "avg_spot": 10.3
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 1,
+     "times_shown": 415,
+     "avg_spot": 10.8
     }
    ],
    "searches": [
     {
      "search": "software factory",
      "clicks": 62,
-     "times_shown": 14820,
-     "avg_spot": 9.3
+     "times_shown": 15388,
+     "avg_spot": 9.4
     },
     {
      "search": "ai software factory",
      "clicks": 22,
-     "times_shown": 1852,
+     "times_shown": 1871,
      "avg_spot": 7.6
     },
     {
      "search": "software factory ai",
      "clicks": 9,
-     "times_shown": 1014,
+     "times_shown": 1017,
      "avg_spot": 6.6
     },
     {
      "search": "software factories",
      "clicks": 6,
-     "times_shown": 712,
-     "avg_spot": 8.4
+     "times_shown": 751,
+     "avg_spot": 8.5
+    },
+    {
+     "search": "what is a software factory",
+     "clicks": 3,
+     "times_shown": 588,
+     "avg_spot": 9.2
+    },
+    {
+     "search": "software factory architecture",
+     "clicks": 3,
+     "times_shown": 55,
+     "avg_spot": 6.5
     },
     {
      "search": "open source ai software factory",
@@ -1589,22 +1773,10 @@
      "avg_spot": 11.6
     },
     {
-     "search": "what is a software factory",
-     "clicks": 2,
-     "times_shown": 578,
-     "avg_spot": 9.2
-    },
-    {
      "search": "ai sdlc factory",
      "clicks": 2,
      "times_shown": 53,
      "avg_spot": 3.6
-    },
-    {
-     "search": "software factory architecture",
-     "clicks": 2,
-     "times_shown": 52,
-     "avg_spot": 6.4
     },
     {
      "search": "open source software factory",
@@ -1621,110 +1793,10 @@
    ]
   },
   {
-   "page": "/blog/claude-code-alternative",
-   "group": "Blog",
-   "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026 \u2014 Opsera",
-   "visits_since_new_site": 195,
-   "weeks": [
-    {
-     "week": "2026-09-28",
-     "clicks": 16,
-     "times_shown": 1090,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 48,
-     "times_shown": 4469,
-     "avg_spot": 6.0
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 17,
-     "times_shown": 4421,
-     "avg_spot": 5.8
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 19,
-     "times_shown": 4244,
-     "avg_spot": 6.0
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 25,
-     "times_shown": 3561,
-     "avg_spot": 6.2
-    }
-   ],
-   "searches": [
-    {
-     "search": "claude code alternative",
-     "clicks": 1,
-     "times_shown": 214,
-     "avg_spot": 14.4
-    },
-    {
-     "search": "claude code gemini alternative",
-     "clicks": 1,
-     "times_shown": 14,
-     "avg_spot": 5.7
-    },
-    {
-     "search": "claude alternatives for coding",
-     "clicks": 1,
-     "times_shown": 11,
-     "avg_spot": 12.8
-    },
-    {
-     "search": "gemini alternative to claude code",
-     "clicks": 1,
-     "times_shown": 11,
-     "avg_spot": 12.9
-    },
-    {
-     "search": "best claude alternative for coding",
-     "clicks": 1,
-     "times_shown": 6,
-     "avg_spot": 10.8
-    },
-    {
-     "search": "claude code cli alternatives",
-     "clicks": 1,
-     "times_shown": 6,
-     "avg_spot": 8.5
-    },
-    {
-     "search": "ccswitch \u66ff\u4ee3",
-     "clicks": 1,
-     "times_shown": 5,
-     "avg_spot": 1.0
-    },
-    {
-     "search": "ai for code free",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 9.0
-    },
-    {
-     "search": "best free claude code alternative",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 2.0
-    },
-    {
-     "search": "claude code alternatives",
-     "clicks": 0,
-     "times_shown": 156,
-     "avg_spot": 13.8
-    }
-   ]
-  },
-  {
    "page": "/blog/factory-ai-alternatives",
    "group": "Blog",
    "title": "Factory.ai Alternatives: 5 AI Software Development Platforms \u2014 Opsera",
-   "visits_since_new_site": 141,
+   "visits_since_new_site": 145,
    "weeks": [
     {
      "week": "2026-09-14",
@@ -1764,29 +1836,41 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 18,
-     "times_shown": 5397,
+     "clicks": 23,
+     "times_shown": 6311,
      "avg_spot": 3.1
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 2,
+     "times_shown": 1201,
+     "avg_spot": 2.8
     }
    ],
    "searches": [
     {
      "search": "factory ai alternatives",
      "clicks": 4,
-     "times_shown": 114,
-     "avg_spot": 1.7
+     "times_shown": 137,
+     "avg_spot": 1.6
     },
     {
      "search": "factory.ai alternatives",
      "clicks": 2,
-     "times_shown": 33,
-     "avg_spot": 2.9
+     "times_shown": 44,
+     "avg_spot": 2.5
+    },
+    {
+     "search": "factory competitors",
+     "clicks": 2,
+     "times_shown": 21,
+     "avg_spot": 2.1
     },
     {
      "search": "factory ai competitors",
      "clicks": 1,
-     "times_shown": 77,
-     "avg_spot": 2.3
+     "times_shown": 83,
+     "avg_spot": 2.2
     },
     {
      "search": "factory ai vs claude code",
@@ -1801,34 +1885,28 @@
      "avg_spot": 4.7
     },
     {
-     "search": "factory competitors",
-     "clicks": 1,
-     "times_shown": 18,
-     "avg_spot": 1.8
-    },
-    {
      "search": "factory ai vs cursor",
      "clicks": 1,
-     "times_shown": 8,
-     "avg_spot": 6.1
+     "times_shown": 9,
+     "avg_spot": 5.9
     },
     {
      "search": "ifactory ai alternatives",
      "clicks": 0,
-     "times_shown": 2676,
+     "times_shown": 3790,
      "avg_spot": 1.2
-    },
-    {
-     "search": "how does factory.ai's approach to sdlc automation compare to alternatives?",
-     "clicks": 0,
-     "times_shown": 352,
-     "avg_spot": 2.9
     },
     {
      "search": "f7i.ai alternatives",
      "clicks": 0,
-     "times_shown": 306,
-     "avg_spot": 3.5
+     "times_shown": 414,
+     "avg_spot": 3.2
+    },
+    {
+     "search": "how does factory.ai's approach to sdlc automation compare to alternatives?",
+     "clicks": 0,
+     "times_shown": 354,
+     "avg_spot": 2.9
     }
    ]
   },
@@ -1836,7 +1914,7 @@
    "page": "/blog/spec-driven-development",
    "group": "Blog",
    "title": "Spec-Driven Development: Specs Beat Prompts \u2014 Opsera",
-   "visits_since_new_site": 132,
+   "visits_since_new_site": 143,
    "weeks": [
     {
      "week": "2026-09-28",
@@ -1864,17 +1942,29 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 15,
-     "times_shown": 1627,
+     "clicks": 17,
+     "times_shown": 1870,
      "avg_spot": 9.2
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 6,
+     "times_shown": 366,
+     "avg_spot": 8.8
     }
    ],
    "searches": [
     {
      "search": "spec driven development",
      "clicks": 4,
-     "times_shown": 435,
-     "avg_spot": 14.0
+     "times_shown": 474,
+     "avg_spot": 13.9
+    },
+    {
+     "search": "spec-driven development",
+     "clicks": 1,
+     "times_shown": 127,
+     "avg_spot": 14.6
     },
     {
      "search": "spec based development",
@@ -1885,8 +1975,8 @@
     {
      "search": "specification driven development",
      "clicks": 1,
-     "times_shown": 5,
-     "avg_spot": 13.4
+     "times_shown": 6,
+     "avg_spot": 14.0
     },
     {
      "search": "spec growth engine",
@@ -1897,38 +1987,32 @@
     {
      "search": "spec-driven",
      "clicks": 0,
-     "times_shown": 181,
-     "avg_spot": 15.1
+     "times_shown": 186,
+     "avg_spot": 15.0
     },
     {
      "search": "spec driven",
      "clicks": 0,
-     "times_shown": 129,
-     "avg_spot": 14.6
+     "times_shown": 137,
+     "avg_spot": 14.5
     },
     {
-     "search": "spec-driven development",
+     "search": "what is spec driven development",
      "clicks": 0,
-     "times_shown": 114,
-     "avg_spot": 14.8
+     "times_shown": 48,
+     "avg_spot": 12.3
     },
     {
      "search": "spec driven development ai",
      "clicks": 0,
-     "times_shown": 44,
+     "times_shown": 46,
      "avg_spot": 13.5
     },
     {
      "search": "specification ai",
      "clicks": 0,
-     "times_shown": 44,
-     "avg_spot": 9.9
-    },
-    {
-     "search": "spec development",
-     "clicks": 0,
-     "times_shown": 41,
-     "avg_spot": 13.9
+     "times_shown": 46,
+     "avg_spot": 10.1
     }
    ]
   },
@@ -1936,7 +2020,7 @@
    "page": "/blog/dora-2025-report-ai-software-development",
    "group": "Blog",
    "title": "DORA Report 2025: How AI Adoption Shapes DevOps and Software Teams \u2014 Opsera",
-   "visits_since_new_site": 107,
+   "visits_since_new_site": 112,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -2121,40 +2205,46 @@
     {
      "week": "2026-10-26",
      "clicks": 4,
-     "times_shown": 1673,
-     "avg_spot": 7.3
+     "times_shown": 1872,
+     "avg_spot": 7.4
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 181,
+     "avg_spot": 6.9
     }
    ],
    "searches": [
     {
      "search": "dora 2025 report",
      "clicks": 2,
-     "times_shown": 50,
+     "times_shown": 54,
      "avg_spot": 8.5
     },
     {
      "search": "2025 dora report",
      "clicks": 1,
-     "times_shown": 15,
-     "avg_spot": 11.9
+     "times_shown": 16,
+     "avg_spot": 11.5
     },
     {
      "search": "dora 2025",
      "clicks": 0,
-     "times_shown": 317,
-     "avg_spot": 16.3
+     "times_shown": 322,
+     "avg_spot": 16.2
     },
     {
      "search": "dora report",
      "clicks": 0,
-     "times_shown": 244,
-     "avg_spot": 20.2
+     "times_shown": 252,
+     "avg_spot": 19.5
     },
     {
      "search": "what is dora report",
      "clicks": 0,
-     "times_shown": 98,
-     "avg_spot": 47.2
+     "times_shown": 97,
+     "avg_spot": 46.8
     },
     {
      "search": "site.dora.dev 2025 ai capabilities report software delivery",
@@ -2165,26 +2255,26 @@
     {
      "search": "state of devops report",
      "clicks": 0,
-     "times_shown": 87,
-     "avg_spot": 54.0
+     "times_shown": 85,
+     "avg_spot": 54.1
     },
     {
      "search": "devops report",
      "clicks": 0,
-     "times_shown": 74,
+     "times_shown": 72,
      "avg_spot": 46.8
     },
     {
      "search": "dora 2025 state of ai-assisted software development report findings",
      "clicks": 0,
-     "times_shown": 62,
+     "times_shown": 63,
      "avg_spot": 7.6
     },
     {
-     "search": "dora report 2025",
+     "search": "google dora 2025 report ai software development findings productivity throughput stability",
      "clicks": 0,
-     "times_shown": 50,
-     "avg_spot": 17.2
+     "times_shown": 52,
+     "avg_spot": 5.1
     }
    ]
   },
@@ -2192,7 +2282,7 @@
    "page": "/blog/what-is-agentic-devops",
    "group": "Blog",
    "title": "What is Agentic DevOps? \u2014 Opsera",
-   "visits_since_new_site": 104,
+   "visits_since_new_site": 110,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -2377,58 +2467,64 @@
     {
      "week": "2026-10-26",
      "clicks": 9,
-     "times_shown": 562,
-     "avg_spot": 5.8
+     "times_shown": 639,
+     "avg_spot": 5.9
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 2,
+     "times_shown": 97,
+     "avg_spot": 8.9
     }
    ],
    "searches": [
     {
      "search": "agentic devops",
-     "clicks": 48,
-     "times_shown": 1341,
+     "clicks": 47,
+     "times_shown": 1363,
      "avg_spot": 3.4
-    },
-    {
-     "search": "agentic ai for devops",
-     "clicks": 3,
-     "times_shown": 432,
-     "avg_spot": 7.0
     },
     {
      "search": "agentic ops",
      "clicks": 3,
-     "times_shown": 432,
-     "avg_spot": 7.3
+     "times_shown": 430,
+     "avg_spot": 7.2
     },
     {
      "search": "agentic ai devops",
      "clicks": 3,
-     "times_shown": 125,
+     "times_shown": 131,
      "avg_spot": 5.2
     },
     {
      "search": "what is agentic devops",
      "clicks": 3,
-     "times_shown": 74,
-     "avg_spot": 1.6
+     "times_shown": 75,
+     "avg_spot": 1.7
+    },
+    {
+     "search": "agentic ai for devops",
+     "clicks": 2,
+     "times_shown": 430,
+     "avg_spot": 7.0
     },
     {
      "search": "devops agentic ai",
      "clicks": 2,
-     "times_shown": 268,
+     "times_shown": 269,
      "avg_spot": 5.9
     },
     {
      "search": "agentic ai for devops engineers",
      "clicks": 2,
-     "times_shown": 78,
-     "avg_spot": 5.3
+     "times_shown": 79,
+     "avg_spot": 5.4
     },
     {
      "search": "agentic devops engineer",
      "clicks": 2,
-     "times_shown": 34,
-     "avg_spot": 3.1
+     "times_shown": 35,
+     "avg_spot": 3.0
     },
     {
      "search": "agentic devsecops",
@@ -2439,8 +2535,8 @@
     {
      "search": "agentic ai use cases devops",
      "clicks": 1,
-     "times_shown": 22,
-     "avg_spot": 10.0
+     "times_shown": 24,
+     "avg_spot": 10.4
     }
    ]
   },
@@ -2448,7 +2544,7 @@
    "page": "/blog/ai-sdlc",
    "group": "Blog",
    "title": "What is AI SDLC? How It Transforms Software Delivery \u2014 Opsera",
-   "visits_since_new_site": 99,
+   "visits_since_new_site": 105,
    "weeks": [
     {
      "week": "2026-06-08",
@@ -2572,8 +2668,14 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 11,
-     "times_shown": 1642,
+     "clicks": 13,
+     "times_shown": 1831,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 4,
+     "times_shown": 446,
      "avg_spot": 7.6
     }
    ],
@@ -2581,62 +2683,62 @@
     {
      "search": "ai sdlc",
      "clicks": 30,
-     "times_shown": 3517,
-     "avg_spot": 6.6
+     "times_shown": 3652,
+     "avg_spot": 6.7
     },
     {
      "search": "what is ai sdlc",
      "clicks": 5,
-     "times_shown": 808,
+     "times_shown": 847,
      "avg_spot": 8.4
     },
     {
      "search": "aisdlc",
      "clicks": 4,
-     "times_shown": 698,
-     "avg_spot": 6.5
+     "times_shown": 715,
+     "avg_spot": 6.6
     },
     {
      "search": "ai-sdlc",
      "clicks": 3,
-     "times_shown": 584,
+     "times_shown": 587,
      "avg_spot": 7.7
     },
     {
      "search": "ai sldc",
      "clicks": 2,
-     "times_shown": 150,
+     "times_shown": 152,
      "avg_spot": 6.5
     },
     {
      "search": "ai sdlc workflow",
      "clicks": 2,
-     "times_shown": 100,
-     "avg_spot": 7.7
+     "times_shown": 103,
+     "avg_spot": 7.6
+    },
+    {
+     "search": "ai sdlc framework",
+     "clicks": 2,
+     "times_shown": 75,
+     "avg_spot": 7.2
     },
     {
      "search": "ai sdlc meaning",
      "clicks": 1,
-     "times_shown": 569,
-     "avg_spot": 7.8
+     "times_shown": 582,
+     "avg_spot": 7.7
     },
     {
      "search": "sdlc ai",
      "clicks": 1,
-     "times_shown": 283,
-     "avg_spot": 6.0
+     "times_shown": 300,
+     "avg_spot": 6.1
     },
     {
-     "search": "ai sdlc framework",
+     "search": "ai in sdlc",
      "clicks": 1,
-     "times_shown": 41,
-     "avg_spot": 7.6
-    },
-    {
-     "search": "ai sdlc methodology",
-     "clicks": 1,
-     "times_shown": 16,
-     "avg_spot": 9.6
+     "times_shown": 39,
+     "avg_spot": 10.3
     }
    ]
   },
@@ -2644,7 +2746,7 @@
    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
    "group": "Resource",
    "title": "AI Coding Impact 2026 Benchmark Report \u2014 Opsera",
-   "visits_since_new_site": 89,
+   "visits_since_new_site": 95,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -2828,9 +2930,15 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 4,
-     "times_shown": 187,
-     "avg_spot": 6.1
+     "clicks": 5,
+     "times_shown": 214,
+     "avg_spot": 6.2
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 13,
+     "avg_spot": 5.7
     }
    ],
    "searches": [
@@ -2838,24 +2946,18 @@
      "search": "engineering ai benchmark report",
      "clicks": 2,
      "times_shown": 64,
-     "avg_spot": 6.3
+     "avg_spot": 6.2
     },
     {
      "search": "ai benchmark 2026",
      "clicks": 1,
-     "times_shown": 64,
-     "avg_spot": 7.3
-    },
-    {
-     "search": "ai coding benchmark 2026",
-     "clicks": 1,
-     "times_shown": 7,
-     "avg_spot": 6.9
+     "times_shown": 61,
+     "avg_spot": 7.4
     },
     {
      "search": "ai development speed measurement benchmark 2026",
      "clicks": 0,
-     "times_shown": 1315,
+     "times_shown": 1302,
      "avg_spot": 7.2
     },
     {
@@ -2873,14 +2975,8 @@
     {
      "search": "ai benchmarks 2026",
      "clicks": 0,
-     "times_shown": 31,
+     "times_shown": 30,
      "avg_spot": 8.4
-    },
-    {
-     "search": "benchmark ai 2026",
-     "clicks": 0,
-     "times_shown": 26,
-     "avg_spot": 6.9
     },
     {
      "search": "generative ai benchmark report",
@@ -2889,10 +2985,22 @@
      "avg_spot": 16.9
     },
     {
+     "search": "benchmark ai 2026",
+     "clicks": 0,
+     "times_shown": 23,
+     "avg_spot": 7.0
+    },
+    {
      "search": "ai benchmark report",
      "clicks": 0,
      "times_shown": 21,
      "avg_spot": 17.2
+    },
+    {
+     "search": "ai code generation benchmarks 2026",
+     "clicks": 0,
+     "times_shown": 14,
+     "avg_spot": 16.6
     }
    ]
   },
@@ -2900,7 +3008,7 @@
    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
    "group": "Blog",
    "title": "DORA vs SPACE Metrics: Key Differences, Use Cases, and When to Use Each Framework \u2014 Opsera",
-   "visits_since_new_site": 86,
+   "visits_since_new_site": 94,
    "weeks": [
     {
      "week": "2026-06-29",
@@ -3006,29 +3114,47 @@
     },
     {
      "week": "2026-10-26",
+     "clicks": 5,
+     "times_shown": 911,
+     "avg_spot": 5.3
+    },
+    {
+     "week": "2026-11-02",
      "clicks": 4,
-     "times_shown": 814,
-     "avg_spot": 5.2
+     "times_shown": 135,
+     "avg_spot": 4.6
     }
    ],
    "searches": [
     {
      "search": "dora space",
-     "clicks": 3,
-     "times_shown": 108,
-     "avg_spot": 6.2
+     "clicks": 4,
+     "times_shown": 114,
+     "avg_spot": 6.1
     },
     {
      "search": "dora and space metrics",
      "clicks": 2,
-     "times_shown": 241,
-     "avg_spot": 8.3
+     "times_shown": 249,
+     "avg_spot": 8.1
+    },
+    {
+     "search": "dora vs space",
+     "clicks": 1,
+     "times_shown": 138,
+     "avg_spot": 2.8
+    },
+    {
+     "search": "dora and space",
+     "clicks": 1,
+     "times_shown": 71,
+     "avg_spot": 4.3
     },
     {
      "search": "dora space metrics",
      "clicks": 1,
-     "times_shown": 56,
-     "avg_spot": 3.9
+     "times_shown": 57,
+     "avg_spot": 3.8
     },
     {
      "search": "space dora",
@@ -3045,32 +3171,20 @@
     {
      "search": "space metrics",
      "clicks": 0,
-     "times_shown": 331,
-     "avg_spot": 20.5
-    },
-    {
-     "search": "dora vs space",
-     "clicks": 0,
-     "times_shown": 130,
-     "avg_spot": 2.9
+     "times_shown": 342,
+     "avg_spot": 20.2
     },
     {
      "search": "dora metrics vs flow metrics",
      "clicks": 0,
-     "times_shown": 129,
-     "avg_spot": 26.5
+     "times_shown": 134,
+     "avg_spot": 26.3
     },
     {
      "search": "does opsera unified insights for github track dora and space metrics?",
      "clicks": 0,
-     "times_shown": 109,
-     "avg_spot": 2.8
-    },
-    {
-     "search": "space framework",
-     "clicks": 0,
-     "times_shown": 82,
-     "avg_spot": 59.7
+     "times_shown": 112,
+     "avg_spot": 2.7
     }
    ]
   },
@@ -3078,7 +3192,7 @@
    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
    "group": "Blog",
    "title": "Github Copilot Adoption Trends: Insights from Real Data \u2014 Opsera",
-   "visits_since_new_site": 85,
+   "visits_since_new_site": 89,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -3263,16 +3377,22 @@
     {
      "week": "2026-10-26",
      "clicks": 1,
-     "times_shown": 897,
+     "times_shown": 1017,
      "avg_spot": 6.1
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 123,
+     "avg_spot": 5.4
     }
    ],
    "searches": [
     {
      "search": "github copilot adoption metrics",
      "clicks": 1,
-     "times_shown": 98,
-     "avg_spot": 6.1
+     "times_shown": 100,
+     "avg_spot": 6.2
     },
     {
      "search": "github copilot report 2026 pdf",
@@ -3289,26 +3409,26 @@
     {
      "search": "github copilot roi",
      "clicks": 0,
-     "times_shown": 46,
-     "avg_spot": 31.2
-    },
-    {
-     "search": "github copilot statistics",
-     "clicks": 0,
-     "times_shown": 41,
-     "avg_spot": 23.9
-    },
-    {
-     "search": "github copilot adoption",
-     "clicks": 0,
-     "times_shown": 40,
-     "avg_spot": 34.1
+     "times_shown": 50,
+     "avg_spot": 30.3
     },
     {
      "search": "can leaders measuring copilot impact rely on opsera unified insights for github?",
      "clicks": 0,
-     "times_shown": 38,
-     "avg_spot": 3.1
+     "times_shown": 42,
+     "avg_spot": 3.0
+    },
+    {
+     "search": "github copilot statistics",
+     "clicks": 0,
+     "times_shown": 42,
+     "avg_spot": 23.8
+    },
+    {
+     "search": "github copilot adoption",
+     "clicks": 0,
+     "times_shown": 39,
+     "avg_spot": 36.3
     },
     {
      "search": "insights for github copilot",
@@ -3317,16 +3437,402 @@
      "avg_spot": 17.8
     },
     {
+     "search": "what do opsera unified insights for github reviews say about performance?",
+     "clicks": 0,
+     "times_shown": 30,
+     "avg_spot": 3.7
+    },
+    {
      "search": "evaluate the ai platform company copilot on ai adoption",
      "clicks": 0,
      "times_shown": 29,
      "avg_spot": 22.3
+    }
+   ]
+  },
+  {
+   "page": "/blog/cobol-modernization",
+   "group": "Blog",
+   "title": "COBOL Modernization: AI-Powered Legacy Migration - Opsera",
+   "visits_since_new_site": 84,
+   "weeks": [
+    {
+     "week": "2026-09-07",
+     "clicks": 11,
+     "times_shown": 1061,
+     "avg_spot": 8.8
     },
     {
-     "search": "what do opsera unified insights for github reviews say about performance?",
+     "week": "2026-09-14",
+     "clicks": 3,
+     "times_shown": 1270,
+     "avg_spot": 8.8
+    },
+    {
+     "week": "2026-09-21",
      "clicks": 0,
-     "times_shown": 28,
-     "avg_spot": 3.8
+     "times_shown": 321,
+     "avg_spot": 9.0
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 9,
+     "times_shown": 830,
+     "avg_spot": 8.3
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 9,
+     "times_shown": 885,
+     "avg_spot": 9.5
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 0,
+     "times_shown": 47,
+     "avg_spot": 8.2
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 1,
+     "times_shown": 147,
+     "avg_spot": 8.7
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 4,
+     "times_shown": 1518,
+     "avg_spot": 6.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 3,
+     "times_shown": 284,
+     "avg_spot": 6.4
+    }
+   ],
+   "searches": [
+    {
+     "search": "cobol modernization",
+     "clicks": 3,
+     "times_shown": 427,
+     "avg_spot": 12.8
+    },
+    {
+     "search": "cobol migration",
+     "clicks": 1,
+     "times_shown": 254,
+     "avg_spot": 12.5
+    },
+    {
+     "search": "cobol modernization companies",
+     "clicks": 1,
+     "times_shown": 22,
+     "avg_spot": 11.8
+    },
+    {
+     "search": "cobol conversion",
+     "clicks": 0,
+     "times_shown": 99,
+     "avg_spot": 14.7
+    },
+    {
+     "search": "cobol modernization using ai",
+     "clicks": 0,
+     "times_shown": 95,
+     "avg_spot": 10.5
+    },
+    {
+     "search": "cobol migration services",
+     "clicks": 0,
+     "times_shown": 81,
+     "avg_spot": 12.5
+    },
+    {
+     "search": "how do i evaluate ai tools for cobol modernization?",
+     "clicks": 0,
+     "times_shown": 69,
+     "avg_spot": 4.2
+    },
+    {
+     "search": "can ai help modernize cobol applications?",
+     "clicks": 0,
+     "times_shown": 64,
+     "avg_spot": 4.9
+    },
+    {
+     "search": "best cobol modernization tools",
+     "clicks": 0,
+     "times_shown": 56,
+     "avg_spot": 15.3
+    },
+    {
+     "search": "cobol modernization services",
+     "clicks": 0,
+     "times_shown": 56,
+     "avg_spot": 15.2
+    }
+   ]
+  },
+  {
+   "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+   "group": "Blog",
+   "title": "Cursor AI Adoption Trends: Real Data from the Fastest Growing Coding T \u2014 Opsera",
+   "visits_since_new_site": 75,
+   "weeks": [
+    {
+     "week": "2026-03-30",
+     "clicks": 4,
+     "times_shown": 2919,
+     "avg_spot": 6.8
+    },
+    {
+     "week": "2026-04-06",
+     "clicks": 1,
+     "times_shown": 3063,
+     "avg_spot": 6.5
+    },
+    {
+     "week": "2026-04-13",
+     "clicks": 1,
+     "times_shown": 1623,
+     "avg_spot": 6.9
+    },
+    {
+     "week": "2026-04-20",
+     "clicks": 1,
+     "times_shown": 3408,
+     "avg_spot": 7.5
+    },
+    {
+     "week": "2026-04-27",
+     "clicks": 4,
+     "times_shown": 1858,
+     "avg_spot": 7.3
+    },
+    {
+     "week": "2026-05-04",
+     "clicks": 2,
+     "times_shown": 1215,
+     "avg_spot": 7.6
+    },
+    {
+     "week": "2026-05-11",
+     "clicks": 4,
+     "times_shown": 1716,
+     "avg_spot": 8.0
+    },
+    {
+     "week": "2026-05-18",
+     "clicks": 3,
+     "times_shown": 1895,
+     "avg_spot": 7.5
+    },
+    {
+     "week": "2026-05-25",
+     "clicks": 1,
+     "times_shown": 3496,
+     "avg_spot": 7.3
+    },
+    {
+     "week": "2026-06-01",
+     "clicks": 7,
+     "times_shown": 3118,
+     "avg_spot": 7.1
+    },
+    {
+     "week": "2026-06-08",
+     "clicks": 0,
+     "times_shown": 3582,
+     "avg_spot": 6.7
+    },
+    {
+     "week": "2026-06-15",
+     "clicks": 7,
+     "times_shown": 7088,
+     "avg_spot": 10.3
+    },
+    {
+     "week": "2026-06-22",
+     "clicks": 5,
+     "times_shown": 2958,
+     "avg_spot": 7.0
+    },
+    {
+     "week": "2026-06-29",
+     "clicks": 1,
+     "times_shown": 3119,
+     "avg_spot": 6.4
+    },
+    {
+     "week": "2026-07-06",
+     "clicks": 1,
+     "times_shown": 2383,
+     "avg_spot": 6.9
+    },
+    {
+     "week": "2026-07-13",
+     "clicks": 2,
+     "times_shown": 1227,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-07-20",
+     "clicks": 1,
+     "times_shown": 1030,
+     "avg_spot": 8.0
+    },
+    {
+     "week": "2026-07-27",
+     "clicks": 2,
+     "times_shown": 1211,
+     "avg_spot": 10.0
+    },
+    {
+     "week": "2026-08-03",
+     "clicks": 4,
+     "times_shown": 969,
+     "avg_spot": 9.7
+    },
+    {
+     "week": "2026-08-10",
+     "clicks": 4,
+     "times_shown": 1303,
+     "avg_spot": 9.5
+    },
+    {
+     "week": "2026-08-17",
+     "clicks": 3,
+     "times_shown": 1150,
+     "avg_spot": 8.7
+    },
+    {
+     "week": "2026-08-24",
+     "clicks": 3,
+     "times_shown": 1105,
+     "avg_spot": 8.9
+    },
+    {
+     "week": "2026-08-31",
+     "clicks": 3,
+     "times_shown": 2507,
+     "avg_spot": 6.0
+    },
+    {
+     "week": "2026-09-07",
+     "clicks": 1,
+     "times_shown": 1453,
+     "avg_spot": 6.4
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 1,
+     "times_shown": 1660,
+     "avg_spot": 6.7
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 1,
+     "times_shown": 564,
+     "avg_spot": 6.4
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 2,
+     "times_shown": 519,
+     "avg_spot": 6.4
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 2,
+     "times_shown": 1111,
+     "avg_spot": 6.8
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 0,
+     "times_shown": 761,
+     "avg_spot": 6.7
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 2,
+     "times_shown": 730,
+     "avg_spot": 7.2
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 3,
+     "times_shown": 630,
+     "avg_spot": 6.2
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 78,
+     "avg_spot": 6.5
+    }
+   ],
+   "searches": [
+    {
+     "search": "when did cursor come out",
+     "clicks": 1,
+     "times_shown": 34,
+     "avg_spot": 3.0
+    },
+    {
+     "search": "cursor customers",
+     "clicks": 1,
+     "times_shown": 30,
+     "avg_spot": 8.7
+    },
+    {
+     "search": "who uses cursor",
+     "clicks": 1,
+     "times_shown": 13,
+     "avg_spot": 7.4
+    },
+    {
+     "search": "cursor engineering blog",
+     "clicks": 1,
+     "times_shown": 4,
+     "avg_spot": 10.8
+    },
+    {
+     "search": "cursor number of users",
+     "clicks": 0,
+     "times_shown": 69,
+     "avg_spot": 8.0
+    },
+    {
+     "search": "cursor users",
+     "clicks": 0,
+     "times_shown": 69,
+     "avg_spot": 7.6
+    },
+    {
+     "search": "cursor ai 1 million users word of mouth growth traction customers",
+     "clicks": 0,
+     "times_shown": 68,
+     "avg_spot": 2.0
+    },
+    {
+     "search": "cursor ide arr market share 2024 2025 trends",
+     "clicks": 0,
+     "times_shown": 68,
+     "avg_spot": 10.2
+    },
+    {
+     "search": "cursor data",
+     "clicks": 0,
+     "times_shown": 54,
+     "avg_spot": 10.1
+    },
+    {
+     "search": "cursor user base",
+     "clicks": 0,
+     "times_shown": 50,
+     "avg_spot": 7.1
     }
    ]
   },
@@ -3518,445 +4024,77 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 4,
-     "times_shown": 7155,
+     "clicks": 7,
+     "times_shown": 8049,
      "avg_spot": 16.7
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 1,
+     "times_shown": 837,
+     "avg_spot": 18.0
     }
    ],
    "searches": [
     {
      "search": "cicd pipeline",
-     "clicks": 2,
-     "times_shown": 990,
-     "avg_spot": 27.8
+     "clicks": 3,
+     "times_shown": 1014,
+     "avg_spot": 27.4
     },
     {
      "search": "ci cd pipeline",
      "clicks": 1,
-     "times_shown": 1655,
-     "avg_spot": 30.9
+     "times_shown": 1696,
+     "avg_spot": 30.3
     },
     {
      "search": "ci/cd pipelines",
      "clicks": 1,
-     "times_shown": 1635,
-     "avg_spot": 20.3
+     "times_shown": 1643,
+     "avg_spot": 20.2
     },
     {
      "search": "ci/cd practices",
      "clicks": 1,
-     "times_shown": 504,
-     "avg_spot": 21.6
+     "times_shown": 506,
+     "avg_spot": 21.5
+    },
+    {
+     "search": "what is cicd pipeline",
+     "clicks": 1,
+     "times_shown": 391,
+     "avg_spot": 30.7
     },
     {
      "search": "ci/cd workflow",
      "clicks": 1,
-     "times_shown": 316,
-     "avg_spot": 23.5
+     "times_shown": 322,
+     "avg_spot": 23.4
     },
     {
      "search": "ci/cd pipeline implementation",
      "clicks": 1,
-     "times_shown": 193,
+     "times_shown": 194,
      "avg_spot": 16.4
     },
     {
      "search": "ci cd pipeline explained",
      "clicks": 1,
-     "times_shown": 23,
-     "avg_spot": 14.8
+     "times_shown": 24,
+     "avg_spot": 14.2
+    },
+    {
+     "search": "cicd pipeline full form",
+     "clicks": 1,
+     "times_shown": 10,
+     "avg_spot": 16.7
     },
     {
      "search": "pipeline integration",
      "clicks": 1,
      "times_shown": 9,
      "avg_spot": 11.7
-    },
-    {
-     "search": "coding ci",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 20.0
-    },
-    {
-     "search": "ci/cd",
-     "clicks": 0,
-     "times_shown": 2232,
-     "avg_spot": 23.1
-    }
-   ]
-  },
-  {
-   "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
-   "group": "Blog",
-   "title": "Cursor AI Adoption Trends: Real Data from the Fastest Growing Coding T \u2014 Opsera",
-   "visits_since_new_site": 72,
-   "weeks": [
-    {
-     "week": "2026-03-30",
-     "clicks": 4,
-     "times_shown": 2919,
-     "avg_spot": 6.8
-    },
-    {
-     "week": "2026-04-06",
-     "clicks": 1,
-     "times_shown": 3063,
-     "avg_spot": 6.5
-    },
-    {
-     "week": "2026-04-13",
-     "clicks": 1,
-     "times_shown": 1623,
-     "avg_spot": 6.9
-    },
-    {
-     "week": "2026-04-20",
-     "clicks": 1,
-     "times_shown": 3408,
-     "avg_spot": 7.5
-    },
-    {
-     "week": "2026-04-27",
-     "clicks": 4,
-     "times_shown": 1858,
-     "avg_spot": 7.3
-    },
-    {
-     "week": "2026-05-04",
-     "clicks": 2,
-     "times_shown": 1215,
-     "avg_spot": 7.6
-    },
-    {
-     "week": "2026-05-11",
-     "clicks": 4,
-     "times_shown": 1716,
-     "avg_spot": 8.0
-    },
-    {
-     "week": "2026-05-18",
-     "clicks": 3,
-     "times_shown": 1895,
-     "avg_spot": 7.5
-    },
-    {
-     "week": "2026-05-25",
-     "clicks": 1,
-     "times_shown": 3496,
-     "avg_spot": 7.3
-    },
-    {
-     "week": "2026-06-01",
-     "clicks": 7,
-     "times_shown": 3118,
-     "avg_spot": 7.1
-    },
-    {
-     "week": "2026-06-08",
-     "clicks": 0,
-     "times_shown": 3582,
-     "avg_spot": 6.7
-    },
-    {
-     "week": "2026-06-15",
-     "clicks": 7,
-     "times_shown": 7088,
-     "avg_spot": 10.3
-    },
-    {
-     "week": "2026-06-22",
-     "clicks": 5,
-     "times_shown": 2958,
-     "avg_spot": 7.0
-    },
-    {
-     "week": "2026-06-29",
-     "clicks": 1,
-     "times_shown": 3119,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-07-06",
-     "clicks": 1,
-     "times_shown": 2383,
-     "avg_spot": 6.9
-    },
-    {
-     "week": "2026-07-13",
-     "clicks": 2,
-     "times_shown": 1227,
-     "avg_spot": 7.7
-    },
-    {
-     "week": "2026-07-20",
-     "clicks": 1,
-     "times_shown": 1030,
-     "avg_spot": 8.0
-    },
-    {
-     "week": "2026-07-27",
-     "clicks": 2,
-     "times_shown": 1211,
-     "avg_spot": 10.0
-    },
-    {
-     "week": "2026-08-03",
-     "clicks": 4,
-     "times_shown": 969,
-     "avg_spot": 9.7
-    },
-    {
-     "week": "2026-08-10",
-     "clicks": 4,
-     "times_shown": 1303,
-     "avg_spot": 9.5
-    },
-    {
-     "week": "2026-08-17",
-     "clicks": 3,
-     "times_shown": 1150,
-     "avg_spot": 8.7
-    },
-    {
-     "week": "2026-08-24",
-     "clicks": 3,
-     "times_shown": 1105,
-     "avg_spot": 8.9
-    },
-    {
-     "week": "2026-08-31",
-     "clicks": 3,
-     "times_shown": 2507,
-     "avg_spot": 6.0
-    },
-    {
-     "week": "2026-09-07",
-     "clicks": 1,
-     "times_shown": 1453,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 1,
-     "times_shown": 1660,
-     "avg_spot": 6.7
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 1,
-     "times_shown": 564,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 2,
-     "times_shown": 519,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 2,
-     "times_shown": 1111,
-     "avg_spot": 6.8
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 0,
-     "times_shown": 761,
-     "avg_spot": 6.7
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 2,
-     "times_shown": 730,
-     "avg_spot": 7.2
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 3,
-     "times_shown": 553,
-     "avg_spot": 6.2
-    }
-   ],
-   "searches": [
-    {
-     "search": "when did cursor come out",
-     "clicks": 1,
-     "times_shown": 35,
-     "avg_spot": 3.7
-    },
-    {
-     "search": "cursor customers",
-     "clicks": 1,
-     "times_shown": 30,
-     "avg_spot": 8.7
-    },
-    {
-     "search": "who uses cursor",
-     "clicks": 1,
-     "times_shown": 13,
-     "avg_spot": 7.4
-    },
-    {
-     "search": "cursor adoption",
-     "clicks": 1,
-     "times_shown": 8,
-     "avg_spot": 3.1
-    },
-    {
-     "search": "cursor engineering blog",
-     "clicks": 1,
-     "times_shown": 4,
-     "avg_spot": 10.8
-    },
-    {
-     "search": "cursor ai 1 million users word of mouth growth traction customers",
-     "clicks": 0,
-     "times_shown": 68,
-     "avg_spot": 2.0
-    },
-    {
-     "search": "cursor ide arr market share 2024 2025 trends",
-     "clicks": 0,
-     "times_shown": 68,
-     "avg_spot": 10.2
-    },
-    {
-     "search": "cursor number of users",
-     "clicks": 0,
-     "times_shown": 68,
-     "avg_spot": 8.0
-    },
-    {
-     "search": "cursor users",
-     "clicks": 0,
-     "times_shown": 66,
-     "avg_spot": 7.7
-    },
-    {
-     "search": "cursor data",
-     "clicks": 0,
-     "times_shown": 54,
-     "avg_spot": 10.1
-    }
-   ]
-  },
-  {
-   "page": "/blog/cobol-modernization",
-   "group": "Blog",
-   "title": "COBOL Modernization: AI-Powered Legacy Migration \u2014 Opsera",
-   "visits_since_new_site": 70,
-   "weeks": [
-    {
-     "week": "2026-09-07",
-     "clicks": 11,
-     "times_shown": 1061,
-     "avg_spot": 8.8
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 3,
-     "times_shown": 1270,
-     "avg_spot": 8.8
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 0,
-     "times_shown": 321,
-     "avg_spot": 9.0
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 9,
-     "times_shown": 830,
-     "avg_spot": 8.3
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 9,
-     "times_shown": 885,
-     "avg_spot": 9.5
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 0,
-     "times_shown": 47,
-     "avg_spot": 8.2
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 1,
-     "times_shown": 147,
-     "avg_spot": 8.7
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 4,
-     "times_shown": 1252,
-     "avg_spot": 6.5
-    }
-   ],
-   "searches": [
-    {
-     "search": "cobol modernization",
-     "clicks": 3,
-     "times_shown": 402,
-     "avg_spot": 12.9
-    },
-    {
-     "search": "cobol modernization companies",
-     "clicks": 1,
-     "times_shown": 22,
-     "avg_spot": 11.8
-    },
-    {
-     "search": "cobol migration",
-     "clicks": 0,
-     "times_shown": 230,
-     "avg_spot": 12.9
-    },
-    {
-     "search": "cobol conversion",
-     "clicks": 0,
-     "times_shown": 92,
-     "avg_spot": 15.1
-    },
-    {
-     "search": "cobol modernization using ai",
-     "clicks": 0,
-     "times_shown": 85,
-     "avg_spot": 11.1
-    },
-    {
-     "search": "cobol migration services",
-     "clicks": 0,
-     "times_shown": 75,
-     "avg_spot": 12.8
-    },
-    {
-     "search": "how do i evaluate ai tools for cobol modernization?",
-     "clicks": 0,
-     "times_shown": 63,
-     "avg_spot": 4.5
-    },
-    {
-     "search": "best cobol modernization tools",
-     "clicks": 0,
-     "times_shown": 54,
-     "avg_spot": 15.6
-    },
-    {
-     "search": "can ai help modernize cobol applications?",
-     "clicks": 0,
-     "times_shown": 50,
-     "avg_spot": 5.0
-    },
-    {
-     "search": "cobol modernization services",
-     "clicks": 0,
-     "times_shown": 49,
-     "avg_spot": 16.3
     }
    ]
   },
@@ -3964,7 +4102,7 @@
    "page": "/blog/devsecops-tools",
    "group": "Blog",
    "title": "5 DevSecOps Tools for Securing CI/CD Pipelines in 2026 \u2014 Opsera",
-   "visits_since_new_site": 64,
+   "visits_since_new_site": 66,
    "weeks": [
     {
      "week": "2026-06-22",
@@ -4076,41 +4214,47 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 8,
-     "times_shown": 5639,
-     "avg_spot": 8.9
+     "clicks": 9,
+     "times_shown": 6498,
+     "avg_spot": 8.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 1,
+     "times_shown": 1056,
+     "avg_spot": 8.5
     }
    ],
    "searches": [
     {
      "search": "devsecops tools",
      "clicks": 10,
-     "times_shown": 5462,
+     "times_shown": 5502,
      "avg_spot": 11.7
     },
     {
      "search": "tools for devsecops",
      "clicks": 2,
-     "times_shown": 376,
-     "avg_spot": 13.0
+     "times_shown": 371,
+     "avg_spot": 12.8
     },
     {
      "search": "best devsecops tools",
      "clicks": 1,
-     "times_shown": 544,
-     "avg_spot": 20.6
+     "times_shown": 545,
+     "avg_spot": 20.9
     },
     {
      "search": "open source devsecops tools",
      "clicks": 1,
-     "times_shown": 474,
-     "avg_spot": 23.2
+     "times_shown": 477,
+     "avg_spot": 22.7
     },
     {
      "search": "devsecops pipelines",
      "clicks": 1,
-     "times_shown": 146,
-     "avg_spot": 16.3
+     "times_shown": 153,
+     "avg_spot": 16.2
     },
     {
      "search": "devsecops ai tools",
@@ -4127,20 +4271,150 @@
     {
      "search": "kubernetes devsecops tools",
      "clicks": 1,
-     "times_shown": 17,
-     "avg_spot": 21.8
+     "times_shown": 16,
+     "avg_spot": 20.2
     },
     {
      "search": "devsecops ci/cd pipeline",
      "clicks": 1,
-     "times_shown": 15,
-     "avg_spot": 11.7
+     "times_shown": 13,
+     "avg_spot": 10.4
     },
     {
      "search": "devsecops tool",
      "clicks": 0,
-     "times_shown": 1428,
-     "avg_spot": 14.3
+     "times_shown": 1420,
+     "avg_spot": 14.2
+    }
+   ]
+  },
+  {
+   "page": "/blog/legacy-code-modernization",
+   "group": "Blog",
+   "title": "Legacy Code Modernization: AI-Powered Migration \u2014 Opsera",
+   "visits_since_new_site": 65,
+   "weeks": [
+    {
+     "week": "2026-08-31",
+     "clicks": 1,
+     "times_shown": 89,
+     "avg_spot": 6.8
+    },
+    {
+     "week": "2026-09-07",
+     "clicks": 6,
+     "times_shown": 1963,
+     "avg_spot": 6.4
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 7,
+     "times_shown": 1699,
+     "avg_spot": 6.9
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 5,
+     "times_shown": 812,
+     "avg_spot": 7.6
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 4,
+     "times_shown": 749,
+     "avg_spot": 8.4
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 6,
+     "times_shown": 767,
+     "avg_spot": 7.3
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 4,
+     "times_shown": 949,
+     "avg_spot": 7.6
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 11,
+     "times_shown": 1437,
+     "avg_spot": 8.1
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 1,
+     "times_shown": 1475,
+     "avg_spot": 7.5
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 204,
+     "avg_spot": 6.0
+    }
+   ],
+   "searches": [
+    {
+     "search": "legacy code modernization",
+     "clicks": 3,
+     "times_shown": 553,
+     "avg_spot": 7.2
+    },
+    {
+     "search": "code modernization",
+     "clicks": 2,
+     "times_shown": 890,
+     "avg_spot": 8.5
+    },
+    {
+     "search": "ai legacy code modernization",
+     "clicks": 1,
+     "times_shown": 74,
+     "avg_spot": 10.1
+    },
+    {
+     "search": "legacy code modernization ai",
+     "clicks": 1,
+     "times_shown": 65,
+     "avg_spot": 11.8
+    },
+    {
+     "search": "ai code modernization",
+     "clicks": 1,
+     "times_shown": 31,
+     "avg_spot": 14.5
+    },
+    {
+     "search": "legacy code conversion",
+     "clicks": 1,
+     "times_shown": 30,
+     "avg_spot": 5.6
+    },
+    {
+     "search": "legacy code migration",
+     "clicks": 0,
+     "times_shown": 675,
+     "avg_spot": 7.9
+    },
+    {
+     "search": "code-modernization",
+     "clicks": 0,
+     "times_shown": 285,
+     "avg_spot": 6.6
+    },
+    {
+     "search": "ai-powered legacy code modernization service",
+     "clicks": 0,
+     "times_shown": 128,
+     "avg_spot": 3.6
+    },
+    {
+     "search": "legacy code modernization services",
+     "clicks": 0,
+     "times_shown": 89,
+     "avg_spot": 14.7
     }
    ]
   },
@@ -4148,7 +4422,7 @@
    "page": "/blog/sast-tools",
    "group": "Blog",
    "title": "Best SAST Tools in 2026: Complete Comparison Guide \u2014 Opsera",
-   "visits_since_new_site": 63,
+   "visits_since_new_site": 65,
    "weeks": [
     {
      "week": "2026-07-06",
@@ -4249,34 +4523,40 @@
     {
      "week": "2026-10-26",
      "clicks": 5,
-     "times_shown": 3200,
-     "avg_spot": 8.4
+     "times_shown": 3712,
+     "avg_spot": 8.3
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 622,
+     "avg_spot": 7.8
     }
    ],
    "searches": [
     {
      "search": "sast tools",
      "clicks": 3,
-     "times_shown": 2501,
+     "times_shown": 2528,
      "avg_spot": 15.4
     },
     {
      "search": "best sast tools",
      "clicks": 3,
-     "times_shown": 1179,
-     "avg_spot": 15.6
+     "times_shown": 1192,
+     "avg_spot": 15.8
     },
     {
      "search": "sast scanning tools",
      "clicks": 1,
-     "times_shown": 428,
-     "avg_spot": 19.3
+     "times_shown": 438,
+     "avg_spot": 19.2
     },
     {
      "search": "ai sast tools",
      "clicks": 1,
-     "times_shown": 73,
-     "avg_spot": 11.0
+     "times_shown": 72,
+     "avg_spot": 10.9
     },
     {
      "search": "sast tools open source",
@@ -4293,25 +4573,25 @@
     {
      "search": "top ai sast tools",
      "clicks": 1,
-     "times_shown": 14,
-     "avg_spot": 11.2
+     "times_shown": 15,
+     "avg_spot": 11.9
     },
     {
      "search": "sast tool",
      "clicks": 0,
-     "times_shown": 718,
+     "times_shown": 716,
      "avg_spot": 17.6
     },
     {
      "search": "open source sast tools",
      "clicks": 0,
-     "times_shown": 436,
-     "avg_spot": 14.1
+     "times_shown": 439,
+     "avg_spot": 14.0
     },
     {
      "search": "sast tools list",
      "clicks": 0,
-     "times_shown": 399,
+     "times_shown": 402,
      "avg_spot": 14.2
     }
    ]
@@ -4320,7 +4600,7 @@
    "page": "/blog/software-factory-model",
    "group": "Blog",
    "title": "Software Factory Model: Reducing Architecture Drift \u2014 Opsera",
-   "visits_since_new_site": 63,
+   "visits_since_new_site": 64,
    "weeks": [
     {
      "week": "2026-09-07",
@@ -4366,23 +4646,29 @@
     },
     {
      "week": "2026-10-26",
-     "clicks": 3,
-     "times_shown": 226,
-     "avg_spot": 9.8
+     "clicks": 4,
+     "times_shown": 300,
+     "avg_spot": 10.6
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 1,
+     "times_shown": 98,
+     "avg_spot": 8.7
     }
    ],
    "searches": [
     {
      "search": "software factory model",
      "clicks": 4,
-     "times_shown": 98,
-     "avg_spot": 9.9
+     "times_shown": 105,
+     "avg_spot": 9.4
     },
     {
      "search": "software factory",
      "clicks": 2,
-     "times_shown": 132,
-     "avg_spot": 18.5
+     "times_shown": 141,
+     "avg_spot": 18.0
     },
     {
      "search": "factory model in software development",
@@ -4403,16 +4689,16 @@
      "avg_spot": 17.8
     },
     {
+     "search": "software factory ai",
+     "clicks": 1,
+     "times_shown": 2,
+     "avg_spot": 29.5
+    },
+    {
      "search": "\"software factory\"",
      "clicks": 1,
      "times_shown": 2,
      "avg_spot": 25.5
-    },
-    {
-     "search": "software factory ai",
-     "clicks": 1,
-     "times_shown": 1,
-     "avg_spot": 50.0
     },
     {
      "search": "software factory setup",
@@ -4421,140 +4707,16 @@
      "avg_spot": 19.0
     },
     {
+     "search": "tiny software factory",
+     "clicks": 1,
+     "times_shown": 1,
+     "avg_spot": 8.0
+    },
+    {
      "search": "what is a software factory",
      "clicks": 0,
-     "times_shown": 74,
-     "avg_spot": 34.6
-    },
-    {
-     "search": "software factory vs devops",
-     "clicks": 0,
-     "times_shown": 52,
-     "avg_spot": 10.9
-    }
-   ]
-  },
-  {
-   "page": "/blog/legacy-code-modernization",
-   "group": "Blog",
-   "title": "Legacy Code Modernization: AI-Powered Migration \u2014 Opsera",
-   "visits_since_new_site": 61,
-   "weeks": [
-    {
-     "week": "2026-08-31",
-     "clicks": 1,
-     "times_shown": 89,
-     "avg_spot": 6.8
-    },
-    {
-     "week": "2026-09-07",
-     "clicks": 6,
-     "times_shown": 1963,
-     "avg_spot": 6.4
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 7,
-     "times_shown": 1699,
-     "avg_spot": 6.9
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 5,
-     "times_shown": 812,
-     "avg_spot": 7.6
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 4,
-     "times_shown": 749,
-     "avg_spot": 8.4
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 6,
-     "times_shown": 767,
-     "avg_spot": 7.3
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 4,
-     "times_shown": 949,
-     "avg_spot": 7.6
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 11,
-     "times_shown": 1437,
-     "avg_spot": 8.1
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 1,
-     "times_shown": 1299,
-     "avg_spot": 7.2
-    }
-   ],
-   "searches": [
-    {
-     "search": "legacy code modernization",
-     "clicks": 3,
-     "times_shown": 549,
-     "avg_spot": 7.3
-    },
-    {
-     "search": "code modernization",
-     "clicks": 2,
-     "times_shown": 874,
-     "avg_spot": 8.4
-    },
-    {
-     "search": "ai legacy code modernization",
-     "clicks": 1,
-     "times_shown": 72,
-     "avg_spot": 10.1
-    },
-    {
-     "search": "legacy code modernization ai",
-     "clicks": 1,
-     "times_shown": 61,
-     "avg_spot": 11.9
-    },
-    {
-     "search": "ai code modernization",
-     "clicks": 1,
-     "times_shown": 30,
-     "avg_spot": 14.4
-    },
-    {
-     "search": "legacy code conversion",
-     "clicks": 1,
-     "times_shown": 30,
-     "avg_spot": 5.6
-    },
-    {
-     "search": "legacy code migration",
-     "clicks": 0,
-     "times_shown": 652,
-     "avg_spot": 7.9
-    },
-    {
-     "search": "code-modernization",
-     "clicks": 0,
-     "times_shown": 278,
-     "avg_spot": 6.6
-    },
-    {
-     "search": "ai-powered legacy code modernization service",
-     "clicks": 0,
-     "times_shown": 117,
-     "avg_spot": 3.8
-    },
-    {
-     "search": "legacy code modernization services",
-     "clicks": 0,
-     "times_shown": 87,
-     "avg_spot": 14.7
+     "times_shown": 81,
+     "avg_spot": 32.8
     }
    ]
   },
@@ -4603,8 +4765,14 @@
     {
      "week": "2026-10-26",
      "clicks": 1,
-     "times_shown": 167,
+     "times_shown": 175,
      "avg_spot": 6.4
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 0,
+     "times_shown": 19,
+     "avg_spot": 4.7
     }
    ],
    "searches": [
@@ -4665,101 +4833,275 @@
     {
      "search": "8090 software factory",
      "clicks": 0,
-     "times_shown": 21,
+     "times_shown": 23,
      "avg_spot": 8.0
     }
    ]
   },
   {
-   "page": "/blog/harness-engineering",
+   "page": "/blog/13-code-quality-metrics-that-you-must-track",
    "group": "Blog",
-   "title": "What Is Harness Engineering? Enterprise AI Delivery Guide \u2014 Opsera",
-   "visits_since_new_site": 53,
+   "title": "13 Code Quality Metrics That You Must Track | Opsera",
+   "visits_since_new_site": 55,
    "weeks": [
     {
-     "week": "2026-10-12",
+     "week": "2026-03-30",
      "clicks": 1,
-     "times_shown": 392,
-     "avg_spot": 7.0
+     "times_shown": 2010,
+     "avg_spot": 18.8
+    },
+    {
+     "week": "2026-04-06",
+     "clicks": 10,
+     "times_shown": 3181,
+     "avg_spot": 15.7
+    },
+    {
+     "week": "2026-04-13",
+     "clicks": 7,
+     "times_shown": 3477,
+     "avg_spot": 17.2
+    },
+    {
+     "week": "2026-04-20",
+     "clicks": 16,
+     "times_shown": 3236,
+     "avg_spot": 17.7
+    },
+    {
+     "week": "2026-04-27",
+     "clicks": 9,
+     "times_shown": 3718,
+     "avg_spot": 21.0
+    },
+    {
+     "week": "2026-05-04",
+     "clicks": 3,
+     "times_shown": 2320,
+     "avg_spot": 20.6
+    },
+    {
+     "week": "2026-05-11",
+     "clicks": 1,
+     "times_shown": 1285,
+     "avg_spot": 29.8
+    },
+    {
+     "week": "2026-05-18",
+     "clicks": 2,
+     "times_shown": 3302,
+     "avg_spot": 22.7
+    },
+    {
+     "week": "2026-05-25",
+     "clicks": 1,
+     "times_shown": 3570,
+     "avg_spot": 18.0
+    },
+    {
+     "week": "2026-06-01",
+     "clicks": 4,
+     "times_shown": 4019,
+     "avg_spot": 17.7
+    },
+    {
+     "week": "2026-06-08",
+     "clicks": 5,
+     "times_shown": 3998,
+     "avg_spot": 16.0
+    },
+    {
+     "week": "2026-06-15",
+     "clicks": 1,
+     "times_shown": 4151,
+     "avg_spot": 16.0
+    },
+    {
+     "week": "2026-06-22",
+     "clicks": 4,
+     "times_shown": 3532,
+     "avg_spot": 14.7
+    },
+    {
+     "week": "2026-06-29",
+     "clicks": 6,
+     "times_shown": 3530,
+     "avg_spot": 15.0
+    },
+    {
+     "week": "2026-07-06",
+     "clicks": 4,
+     "times_shown": 3173,
+     "avg_spot": 14.1
+    },
+    {
+     "week": "2026-07-13",
+     "clicks": 5,
+     "times_shown": 2835,
+     "avg_spot": 14.6
+    },
+    {
+     "week": "2026-07-20",
+     "clicks": 4,
+     "times_shown": 2958,
+     "avg_spot": 14.5
+    },
+    {
+     "week": "2026-07-27",
+     "clicks": 8,
+     "times_shown": 3315,
+     "avg_spot": 17.6
+    },
+    {
+     "week": "2026-08-03",
+     "clicks": 2,
+     "times_shown": 3357,
+     "avg_spot": 15.5
+    },
+    {
+     "week": "2026-08-10",
+     "clicks": 2,
+     "times_shown": 3871,
+     "avg_spot": 12.8
+    },
+    {
+     "week": "2026-08-17",
+     "clicks": 2,
+     "times_shown": 3841,
+     "avg_spot": 11.7
+    },
+    {
+     "week": "2026-08-24",
+     "clicks": 1,
+     "times_shown": 3882,
+     "avg_spot": 13.0
+    },
+    {
+     "week": "2026-08-31",
+     "clicks": 6,
+     "times_shown": 3117,
+     "avg_spot": 13.5
+    },
+    {
+     "week": "2026-09-07",
+     "clicks": 2,
+     "times_shown": 3101,
+     "avg_spot": 13.2
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 6,
+     "times_shown": 3036,
+     "avg_spot": 11.9
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 6,
+     "times_shown": 2323,
+     "avg_spot": 11.2
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 6,
+     "times_shown": 1916,
+     "avg_spot": 12.3
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 12,
+     "times_shown": 2186,
+     "avg_spot": 12.5
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 6,
+     "times_shown": 2195,
+     "avg_spot": 12.7
     },
     {
      "week": "2026-10-19",
      "clicks": 5,
-     "times_shown": 1178,
-     "avg_spot": 7.3
+     "times_shown": 2431,
+     "avg_spot": 13.4
     },
     {
      "week": "2026-10-26",
      "clicks": 1,
-     "times_shown": 791,
-     "avg_spot": 7.3
+     "times_shown": 1863,
+     "avg_spot": 11.8
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 2,
+     "times_shown": 198,
+     "avg_spot": 11.8
     }
    ],
    "searches": [
     {
-     "search": "site.openai.com \"harness engineering\"",
-     "clicks": 0,
-     "times_shown": 110,
-     "avg_spot": 8.8
+     "search": "code quality metrics",
+     "clicks": 13,
+     "times_shown": 1939,
+     "avg_spot": 6.0
     },
     {
-     "search": "harness engineering",
-     "clicks": 0,
-     "times_shown": 72,
-     "avg_spot": 10.9
+     "search": "code quality",
+     "clicks": 2,
+     "times_shown": 4790,
+     "avg_spot": 11.1
     },
     {
-     "search": "mitchell hashimoto harness engineering",
-     "clicks": 0,
-     "times_shown": 21,
-     "avg_spot": 4.7
+     "search": "metrics of code quality",
+     "clicks": 2,
+     "times_shown": 136,
+     "avg_spot": 5.3
     },
     {
-     "search": "openai harness engineering",
-     "clicks": 0,
-     "times_shown": 20,
-     "avg_spot": 4.9
+     "search": "metrics for code quality",
+     "clicks": 1,
+     "times_shown": 136,
+     "avg_spot": 3.3
     },
     {
-     "search": "harness engineering openai",
+     "search": "how to measure code quality",
      "clicks": 0,
-     "times_shown": 16,
-     "avg_spot": 8.8
-    },
-    {
-     "search": "open ai harness engineering",
-     "clicks": 0,
-     "times_shown": 11,
-     "avg_spot": 7.3
-    },
-    {
-     "search": "harness platform engineering",
-     "clicks": 0,
-     "times_shown": 9,
-     "avg_spot": 14.8
-    },
-    {
-     "search": "is harness secure enough for a regulated enterprise?",
-     "clicks": 0,
-     "times_shown": 9,
-     "avg_spot": 5.9
-    },
-    {
-     "search": "harness meaning in engineering",
-     "clicks": 0,
-     "times_shown": 7,
+     "times_shown": 1227,
      "avg_spot": 9.4
     },
     {
-     "search": "harness technology",
+     "search": "code reliability",
      "clicks": 0,
-     "times_shown": 7,
-     "avg_spot": 21.3
+     "times_shown": 945,
+     "avg_spot": 10.6
+    },
+    {
+     "search": "software code quality metrics",
+     "clicks": 0,
+     "times_shown": 937,
+     "avg_spot": 4.5
+    },
+    {
+     "search": "which three of the following are code quality metrics",
+     "clicks": 0,
+     "times_shown": 907,
+     "avg_spot": 5.2
+    },
+    {
+     "search": "code quality measurement",
+     "clicks": 0,
+     "times_shown": 901,
+     "avg_spot": 12.3
+    },
+    {
+     "search": "what is code quality",
+     "clicks": 0,
+     "times_shown": 815,
+     "avg_spot": 10.6
     }
    ]
   }
  ],
- "last_day_with_data": "2026-10-31",
- "searches_from": "2026-08-05",
+ "last_day_with_data": "2026-11-02",
+ "searches_from": "2026-08-06",
  "new_site_live": "2026-09-30"
 }

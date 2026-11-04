@@ -7,7 +7,7 @@
    "quarter": "Q3 2026",
    "counts": {
     "Opsera": 2,
-    "Harness": 21,
+    "Harness": 18,
     "CloudBees": 1,
     "Copado": 2,
     "Gearset": 1,
@@ -18,7 +18,7 @@
    "quarter": "Q4 2026",
    "counts": {
     "Opsera": 2,
-    "Harness": 7,
+    "Harness": 11,
     "CloudBees": 4,
     "Copado": 7,
     "Gearset": 1,
@@ -66,7 +66,7 @@
   {
    "date": "2026-08-20",
    "counts": {
-    "Harness": 2
+    "Harness": 1
    }
   },
   {
@@ -78,12 +78,6 @@
   {
    "date": "2026-08-28",
    "counts": {
-    "Harness": 2
-   }
-  },
-  {
-   "date": "2026-08-31",
-   "counts": {
     "Harness": 1
    }
   },
@@ -94,7 +88,7 @@
    }
   },
   {
-   "date": "2026-09-03",
+   "date": "2026-09-04",
    "counts": {
     "Gearset": 1
    }
@@ -162,14 +156,26 @@
   {
    "date": "2026-10-08",
    "counts": {
-    "Harness": 6,
+    "Harness": 7,
     "CloudBees": 1
+   }
+  },
+  {
+   "date": "2026-10-09",
+   "counts": {
+    "Harness": 1
    }
   },
   {
    "date": "2026-10-10",
    "counts": {
     "Copado": 1
+   }
+  },
+  {
+   "date": "2026-10-12",
+   "counts": {
+    "Harness": 2
    }
   },
   {

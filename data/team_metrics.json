@@ -28,15 +28,15 @@
         "2026-08": 12145,
         "2026-09": 11817
        },
-       "so_far": 313,
+       "so_far": 1900,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": 15000,
-       "goal_share_pct": 2.1,
+       "goal_share_pct": 12.7,
        "without_email_robots": {
         "baseline": 9580.0,
-        "so_far": 307
+        "so_far": 1384
        }
       },
       {
@@ -49,10 +49,10 @@
         "2026-08": 3583,
         "2026-09": 3818
        },
-       "so_far": 71,
+       "so_far": 405,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": null,
        "goal_share_pct": null
       },
@@ -66,10 +66,10 @@
         "2026-08": 38,
         "2026-09": 21
        },
-       "so_far": 0,
+       "so_far": 2,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": null,
        "goal_share_pct": null
       },
@@ -83,10 +83,10 @@
         "2026-08": 8,
         "2026-09": 6
        },
-       "so_far": 0,
+       "so_far": 1,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": null,
        "goal_share_pct": null
       }
@@ -105,12 +105,12 @@
         "2026-08": 27490,
         "2026-09": 17569
        },
-       "so_far": null,
+       "so_far": 221,
        "so_far_start": "2026-11-01",
-       "so_far_end": null,
-       "days_counted": 0,
+       "so_far_end": "2026-11-01",
+       "days_counted": 1,
        "goal": 35000,
-       "goal_share_pct": null
+       "goal_share_pct": 0.6
       },
       {
        "metric": "linkedin_visits",
@@ -122,10 +122,10 @@
         "2026-08": 458,
         "2026-09": 261
        },
-       "so_far": 12,
+       "so_far": 25,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": null,
        "goal_share_pct": null
       },
@@ -141,8 +141,8 @@
        },
        "so_far": 0,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-01",
-       "days_counted": 1,
+       "so_far_end": "2026-11-03",
+       "days_counted": 3,
        "goal": null,
        "goal_share_pct": null
       }

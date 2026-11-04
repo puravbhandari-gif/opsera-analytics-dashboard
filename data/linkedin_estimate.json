@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-04T07:53+00:00",
+ "posts_pulled_at": "2026-11-04T13:15+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -434,6 +434,12 @@
    "group": "cant_tell",
    "visits": 3,
    "engaged": 2
+  },
+  {
+   "date": "2026-11-03",
+   "group": "cant_tell",
+   "visits": 9,
+   "engaged": 7
   }
  ],
  "matches": [
@@ -689,8 +695,8 @@
    "post": "https://www.linkedin.com/posts/opsera_opsera-github-universe-activity-7523428976573493251-J0z3"
   }
  ],
- "untagged_total": 498,
+ "untagged_total": 507,
  "start_date": "2026-09-01",
- "end_date": "2026-11-02",
- "pulled_at": "2026-11-03T13:15+05:30"
+ "end_date": "2026-11-03",
+ "pulled_at": "2026-11-04T18:40+05:30"
 }

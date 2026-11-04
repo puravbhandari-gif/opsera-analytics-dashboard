@@ -41,6 +41,7 @@ page,page_title
 /careers/pre-sales-solution-engineer,Pre-Sales Solution Engineer - Opsera
 /careers/salesforce-devops-sales-engineer,Salesforce DevOps Sales Engineer - Opsera
 /careers/senior-customer-success-engineer-devops,Page not found - Opsera
+/case-study/city-of-hope,Page not found - Opsera
 /case-study/keywest-networks,Page not found - Opsera
 /case-study/log4j-cybersecurity-vulnerability-solved,Page not found — Opsera
 /case-study/nortonlifelock,Page not found - Opsera
@@ -54,6 +55,7 @@ page,page_title
 /comparison-guides/opsera-vs-flosum,Page not found - Opsera
 /comparison-guides/opsera-vs-gearset,Page not found - Opsera
 /comparison-guides/opsera-vs-jellyfish,Page not found - Opsera
+/comparison/opsera-vs-flosum,Page not found - Opsera
 /comparison/opsera-vs-gearset,Page not found - Opsera
 /comparison/opsera-vs-harness,Page not found - Opsera
 /comparison/opsera-vs-jenkins,Page not found - Opsera
@@ -207,7 +209,7 @@ page,page_title
 /events/meet-the-opsera-appsec-agents-for-ai-builders,Meet the Opsera AppSec Agents for AI Builders - Opsera
 /events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera,Operationalized Productivity: Scaling and Governing the AI-DLC with Amazon Q and Opsera - Opsera
 /events/opsera-and-octopus-integration,Page not found - Opsera
-/events/roundtable-webinar,Virtual Executive Roundtable: Modernization in the AI Era — Opsera
+/events/roundtable-webinar,Executive Roundtable: Modernization in the AI Era - Opsera
 /events/salesforce-devops-automation-productivity-compliance,Page not found - Opsera
 /events/speed-up-salesforce-application-delivery-with-devops-automation,Page not found - Opsera
 /events/the-agentic-future-preparing-your-delivery-pipeline-for-2026,"The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026 - Opsera"
@@ -249,7 +251,7 @@ page,page_title
 /forge/modernization/cobol-to-go,COBOL to Go — Opsera Forge
 /forge/modernization/cobol-to-java,COBOL to Java — Opsera Forge
 /forge/modernization/cobol-to-python,COBOL to Python — Opsera Forge
-/forge/modernization/coldfusion-to-dotnet,ColdFusion to .NET — Opsera Forge
+/forge/modernization/coldfusion-to-dotnet,ColdFusion to .NET - Opsera Forge
 /forge/modernization/coldfusion-to-java,ColdFusion to Java — Opsera Forge
 /forge/modernization/fortran-to-python,Fortran to Python — Opsera Forge
 /forge/modernization/framework-upgrades,Framework and runtime upgrades — Opsera Forge
@@ -273,6 +275,7 @@ page,page_title
 /hs/preferences-center/en/page,Subscription preferences
 /https:/opsera.ai/,Page not found — Opsera
 /https:/opsera.ai/privacy,Page not found - Opsera
+/huddle/episode-16-source-code-migration-made-easy,Page not found - Opsera
 /huddle/episode-19-measuring-downstream-impact-with-dora,Page not found — Opsera
 /huddle/toolchain-automation-and-standardization,Page not found - Opsera
 /huddletq/automate-salesforce-releases-with-devops-crawl-walk-run,Page not found - Opsera
@@ -287,6 +290,7 @@ page,page_title
 /jobs/senior-customer-success-engineer-devops,Page not found - Opsera
 /learn/ZGV2c2Vjb3,Page not found - Opsera
 /learn/agile-devops-cicd-difference,Page not found - Opsera
+/learn/continuous-testing-devops,Page not found - Opsera
 /learn/devops-observability-what-is-it-and-how-to-implement-it,Page not found - Opsera
 /learn/integrate-security-to-devops-toolchain,Page not found — Opsera
 /learn/salesforce-devops-keys-to-productivity-compliancehttp,Page not found - Opsera
@@ -452,11 +456,13 @@ page,page_title
 /wp-content/uploads/2025/07/5f3a4cc9b3a3c780263afb1f_Instana_logo.png,Page not found — Opsera
 /wp-content/uploads/2025/07/6250593797074e7e37c8db9e_OctopusDeploy-logo-RGB.png,Page not found — Opsera
 /wp-content/uploads/2025/07/6837416771b377f26f759584_opsera-delivery-with-databricks-tile.png,Page not found — Opsera
+/wp-content/uploads/2025/07/accelerate-github.webp,Page not found - Opsera
 /wp-content/uploads/2025/07/illustration-get-to-work.webp,Page not found — Opsera
 /wp-content/uploads/2025/07/measure-dora-dashboards-1.webp,Page not found — Opsera
 /wp-content/uploads/2025/07/mindtree-logo.png,Page not found — Opsera
 /wp-content/uploads/2025/07/opsera-generic-social.jpg,Page not found — Opsera
 /wp-content/uploads/2025/07/screen-deployment-frequency.webp,Page not found — Opsera
+/wp-content/uploads/2025/07/support-existing-toolchain.webp,Page not found - Opsera
 /wp-content/uploads/2025/08/68755331e299b265711d28c7_blog_secret-life-of-build-1024x536.png,Page not found — Opsera
 /wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,Page not found - Opsera
 /wp-content/uploads/2026/01/customer-stories-network-1024x538.png,Page not found — Opsera
@@ -578,10 +584,3 @@ page,page_title
 /wp-json/wp/v2/posts/588,Page not found — Opsera
 /wp-json/wp/v2/posts/590,Page not found — Opsera
 /wp-json/wp/v2/posts/592,Page not found — Opsera
-/wp-json/wp/v2/posts/600,Page not found — Opsera
-/wp-json/wp/v2/posts/602,Page not found — Opsera
-/wp-json/wp/v2/posts/606,Page not found — Opsera
-/wp-json/wp/v2/posts/618,Page not found — Opsera
-/wp-json/wp/v2/posts/624,Page not found — Opsera
-/wp-json/wp/v2/posts/626,Page not found — Opsera
-/wp-json/wp/v2/posts/6272,Page not found — Opsera
