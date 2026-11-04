@@ -1,5 +1,6 @@
 """Share of voice for the PR and media tab: Google News articles naming Opsera, Harness, CloudBees,
-Copado, Gearset or LinearB in the headline, per calendar quarter from 1 Jul 2026. Writes data/share_of_voice.json. Runs every Monday.
+Copado, Gearset or LinearB in the headline, per calendar quarter from 1 Jul 2026, and per day so the page can compare
+the same days of each quarter. Writes data/share_of_voice.json. Runs every Monday.
 
 Reads Google News' public search feed one week at a time (no key needed), so each week can return up to 100
 articles. An article counts when its headline names the company, it isn't on the company's own site, and it
@@ -64,7 +65,7 @@ def week_items(search, a, b):
 
 def main():
     today = dt.date.today().isoformat()
-    counts, kept_total = {}, {}
+    counts, kept_total, by_day = {}, {}, {}
     for name, (search, must, own, lookalike) in COMPANIES.items():
         seen, kept = set(), []
         a = dt.date.fromisoformat(START)
@@ -85,6 +86,8 @@ def main():
         for it in kept:
             counts.setdefault(quarter(it["date"]), {}).setdefault(name, 0)
             counts[quarter(it["date"])][name] += 1
+            by_day.setdefault(it["date"], {}).setdefault(name, 0)
+            by_day[it["date"]][name] += 1
         kept_total[name] = len(kept)
         print(f"{name}: {len(kept)} articles since {START}")
     for q in counts.values():
@@ -94,6 +97,7 @@ def main():
         "source": "Google News search feed, US English, headlines naming each company",
         "start_date": START, "checked": today,
         "quarters": [{"quarter": q, "counts": counts[q]} for q in sorted(counts, key=lambda s: (s[3:], s[:2]))],
+        "days": [{"date": d, "counts": by_day[d]} for d in sorted(by_day)],   # the page compares the same days of each quarter
     }, indent=1) + "\n")
 
 

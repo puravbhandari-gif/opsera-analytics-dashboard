@@ -2054,13 +2054,19 @@ function renderPrMedia(d, ga, ah, sov) {
   $("pr-best-source").textContent = `Source: Google Analytics, visits by referring site, ${range(ga.ga_start || "2026-04-01", ga.ga_end || d.checked)}. Most sites only pass on their own name, so a visit counts for the newest piece on that site.`;
   $("pr-list-source").textContent = `Sources: ${d.source}, checked ${dayYear(d.checked)}. Google Analytics for visits. Ahrefs estimates checked ${ah.checked ? dayYear(ah.checked) : "-"}. Outlet tier from Domain Rating: top tier 85 and up, trade press 70 to 84, other below 70.`;
 
-  // Share of voice: headlines naming each company, per quarter
+  // Share of voice: headlines naming each company, this quarter so far against the same days of the quarter before
   if (sov) {
     const cos = ["Opsera", "Harness", "CloudBees", "Copado", "Gearset", "LinearB"];
-    $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Quarter</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
-      sov.quarters.map((r) => { const tot = cos.reduce((t, c) => t + r.counts[c], 0);
-        return `<tr><td>${esc(r.quarter)}${r.quarter === `${calQuarterName(sov.checked)} ${sov.checked.slice(0, 4)}` ? " (so far)" : ""}</td>${cos.map((c) => `<td class="num">${num(r.counts[c])}</td>`).join("")}<td class="num">${tot ? pct((r.counts.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;
-    $("pr-sov-source").textContent = `Source: ${sov.source}, ${range(sov.start_date, sov.checked)}. Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
+    const p = periodsFor("cq", sov.start_date, sov.checked);
+    const sum = (w) => { const c = Object.fromEntries(cos.map((k) => [k, 0]));
+      (sov.days || []).filter((d) => d.date >= w.start && d.date <= w.end).forEach((d) => cos.forEach((k) => { c[k] += d.counts[k] || 0; }));
+      return c; };
+    const rows = [[`${calQuarterName(p.cur.start)} ${p.cur.start.slice(0, 4)} so far, ${range(p.cur.start, p.cur.end)}`, sum(p.cur)]];
+    if (p.prev) rows.push([`${p.prevName.replace(",", ` ${p.prev.start.slice(0, 4)}, same days:`)}`, sum(p.prev)]);
+    $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Days</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
+      rows.map(([name, c]) => { const tot = cos.reduce((t, k) => t + c[k], 0);
+        return `<tr><td>${esc(name)}</td>${cos.map((k) => `<td class="num">${num(c[k])}</td>`).join("")}<td class="num">${tot ? pct((c.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;
+    $("pr-sov-source").textContent = `Source: ${sov.source}, checked ${dayYear(sov.checked)}. Compares this quarter so far with the same number of days of the quarter before. Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
   }
 }
 // ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------

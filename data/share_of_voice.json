@@ -7,7 +7,7 @@
    "quarter": "Q3 2026",
    "counts": {
     "Opsera": 2,
-    "Harness": 20,
+    "Harness": 21,
     "CloudBees": 1,
     "Copado": 2,
     "Gearset": 1,
@@ -18,11 +18,202 @@
    "quarter": "Q4 2026",
    "counts": {
     "Opsera": 2,
-    "Harness": 11,
+    "Harness": 7,
     "CloudBees": 4,
     "Copado": 7,
     "Gearset": 1,
     "LinearB": 9
+   }
+  }
+ ],
+ "days": [
+  {
+   "date": "2026-07-01",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-07-15",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-07-21",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-07-22",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-07-25",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-08-19",
+   "counts": {
+    "Harness": 3
+   }
+  },
+  {
+   "date": "2026-08-20",
+   "counts": {
+    "Harness": 2
+   }
+  },
+  {
+   "date": "2026-08-27",
+   "counts": {
+    "Harness": 2
+   }
+  },
+  {
+   "date": "2026-08-28",
+   "counts": {
+    "Harness": 2
+   }
+  },
+  {
+   "date": "2026-08-31",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-02",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-03",
+   "counts": {
+    "Gearset": 1
+   }
+  },
+  {
+   "date": "2026-09-09",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-10",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-11",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-14",
+   "counts": {
+    "Copado": 2
+   }
+  },
+  {
+   "date": "2026-09-15",
+   "counts": {
+    "Opsera": 2
+   }
+  },
+  {
+   "date": "2026-09-17",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-18",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-30",
+   "counts": {
+    "CloudBees": 1
+   }
+  },
+  {
+   "date": "2026-10-01",
+   "counts": {
+    "CloudBees": 1
+   }
+  },
+  {
+   "date": "2026-10-06",
+   "counts": {
+    "CloudBees": 2
+   }
+  },
+  {
+   "date": "2026-10-08",
+   "counts": {
+    "Harness": 6,
+    "CloudBees": 1
+   }
+  },
+  {
+   "date": "2026-10-10",
+   "counts": {
+    "Copado": 1
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "counts": {
+    "Copado": 3
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "counts": {
+    "Copado": 2
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "counts": {
+    "Harness": 1,
+    "Gearset": 1
+   }
+  },
+  {
+   "date": "2026-10-28",
+   "counts": {
+    "Opsera": 1
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "counts": {
+    "Opsera": 1
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "counts": {
+    "LinearB": 6
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "counts": {
+    "Copado": 1,
+    "LinearB": 3
    }
   }
  ]
