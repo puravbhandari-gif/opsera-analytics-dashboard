@@ -1932,16 +1932,25 @@ let contentLoad = null;   // loads the page and deal data the first time the tab
 let publishedLoad = null, prLoad = null;
 
 // Rows grouped by calendar quarter, newest quarter first and newest first inside each (agreed 4 Nov 2026)
-function byQuarter(items, columns, today) {
+function byQuarter(items, columns, today, detail) {   // detail(row): extra facts shown under a row when it's clicked
   const groups = new Map();
   items.forEach((r) => { const q = calQuarterStart(r.date); (groups.get(q) || groups.set(q, []).get(q)).push(r); });
   return [...groups.keys()].sort().reverse().map((q) => {
     const rows = groups.get(q).sort((a, b) => b.date.localeCompare(a.date));
     const soFar = calQuarterEnd(q) > today ? ", so far" : "";
     return `<h3 class="sub-title">${calQuarterName(q)} ${q.slice(0, 4)} (${range(q, calQuarterEnd(q))}${soFar}): ${num(rows.length)}</h3>
-      <div class="table-wrap"><table><thead><tr>${columns.map((c) => `<th scope="col">${c.label}</th>`).join("")}</tr></thead>
-      <tbody>${rows.map((r) => `<tr>${columns.map((c) => `<td class="wrap">${c.fmt ? c.fmt(r[c.key], r) : esc(r[c.key])}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+      <div class="table-wrap"><table${detail ? ' class="has-detail"' : ""}><thead><tr>${columns.map((c) => `<th scope="col"${c.cls ? ` class="${c.cls}"` : ""}>${c.label}</th>`).join("")}</tr></thead>
+      <tbody>${rows.map((r) => `<tr${detail ? ' class="row-open" tabindex="0" aria-expanded="false"' : ""}>${columns.map((c) => `<td class="wrap${c.cls ? ` ${c.cls}` : ""}">${c.fmt ? c.fmt(r[c.key], r) : esc(r[c.key])}</td>`).join("")}</tr>${
+        detail ? `<tr class="row-detail" hidden><td colspan="${columns.length}">${detail(r)}</td></tr>` : ""}`).join("")}</tbody></table></div>`;
   }).join("") || `<p class="muted">Nothing yet.</p>`;
+}
+function toggleDetail(e) {
+  const tr = e.target.closest("tr.row-open");
+  if (!tr || e.target.closest("a") || (e.type === "keydown" && e.key !== "Enter" && e.key !== " ")) return;
+  e.preventDefault();
+  const open = tr.getAttribute("aria-expanded") !== "true";
+  tr.setAttribute("aria-expanded", String(open));
+  tr.nextElementSibling.hidden = !open;
 }
 const linked = (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(v)}</a>`;
 
@@ -2025,19 +2034,23 @@ function renderPrMedia(d, ga, ah, sov) {
   const outletCell = (v, r) => r.sites.length > 1
     ? `${esc(v)}<div class="muted small">Ran on ${r.sites.length} sites: ${r.sites.map((s) => `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.outlet)}</a>`).join(", ")}</div>`
     : esc(v);
+  // The table shows 5 columns; clicking a row opens the rest underneath it (agreed 4 Nov 2026)
   const cols = [
-    { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)) },
-    { key: "outlet", label: "Outlet", fmt: outletCell },
-    { key: "title", label: "Title", fmt: linked },
-    { key: "type", label: "Type" }, { key: "topic", label: "Topic" }, { key: "tier", label: "Outlet tier" },
-    { key: "quoted", label: "Opsera people" }, { key: "placed_by", label: "Placed by" },
-    { key: "ga", label: "Visits to opsera.ai", fmt: (v) => n0(v?.visits) }, { key: "ga", label: "Engaged visits", fmt: (v) => n0(v?.engaged) },
-    { key: "ga", label: "Demo requests", fmt: (v) => n0(v?.demos) },
-    { key: "ah", label: "Google visits a month (Ahrefs estimate)", fmt: (v) => n0(v?.org_traffic) },
-    { key: "ah", label: "Top searches (Ahrefs estimate)", fmt: (v) => (v?.top_keywords?.length ? esc(v.top_keywords.slice(0, 3).join(", ")) : "-") },
-    { key: "dr", label: "Domain Rating (Ahrefs estimate)", fmt: n0 },
-    { key: "ah", label: "Links to opsera.ai (Ahrefs estimate)", fmt: (v) => (v ? (v.links_to_opsera ? "Yes" : "No") : "-") },
+    { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)), cls: "pr-date" },
+    { key: "outlet", label: "Outlet", fmt: outletCell, cls: "pr-outlet" },
+    { key: "title", label: "Title", fmt: linked, cls: "pr-title" },
+    { key: "type", label: "Type", cls: "pr-type" },
+    { key: "quoted", label: "Opsera people", cls: "pr-people" },
   ];
+  const facts = (r) => [
+    ["Topic", esc(r.topic || "-")], ["Outlet tier", esc(r.tier || "-")], ["Placed by", esc(r.placed_by || "-")],
+    ["Visits to opsera.ai", n0(r.ga?.visits)], ["Engaged visits", n0(r.ga?.engaged)], ["Demo requests", n0(r.ga?.demos)],
+    ["Google visits a month (Ahrefs estimate)", n0(r.ah?.org_traffic)],
+    ["Top searches (Ahrefs estimate)", r.ah?.top_keywords?.length ? esc(r.ah.top_keywords.slice(0, 3).join(", ")) : "-"],
+    ["Domain Rating (Ahrefs estimate)", n0(r.dr)],
+    ["Links to opsera.ai (Ahrefs estimate)", r.ah ? (r.ah.links_to_opsera ? "Yes" : "No") : "-"],
+  ];
+  const detail = (r) => `<dl class="row-facts">${facts(r).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
   const draw = () => {
     const rows = all.filter(keep);
     // Best performing: the most demo requests, then the most visits, from pieces that sent any visits
@@ -2047,8 +2060,10 @@ function renderPrMedia(d, ga, ah, sov) {
       ${best.length < 5 ? `<p class="muted">Only ${num(best.length)} of these pieces sent any visits to opsera.ai.</p>` : ""}`
       : `<p class="muted">None of these pieces sent visits to opsera.ai.</p>`;
     $("pr-count").textContent = `${num(rows.length)} of ${num(all.length)} pieces`;
-    $("pr-list").innerHTML = byQuarter(rows, cols, d.checked);
+    $("pr-list").innerHTML = byQuarter(rows, cols, d.checked, detail);
   };
+  $("pr-list").addEventListener("click", toggleDetail);
+  $("pr-list").addEventListener("keydown", toggleDetail);
   $("pr-filters").addEventListener("change", (e) => { const k = e.target.dataset.f; if (k) { f[k] = e.target.value; draw(); } });
   draw();
   $("pr-best-source").textContent = `Source: Google Analytics, visits by referring site, ${range(ga.ga_start || "2026-04-01", ga.ga_end || d.checked)}. Most sites only pass on their own name, so a visit counts for the newest piece on that site.`;
