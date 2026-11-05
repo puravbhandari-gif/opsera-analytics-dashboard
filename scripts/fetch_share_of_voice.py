@@ -1,5 +1,5 @@
 """Share of voice for the PR and media tab: Google News articles naming Opsera, Harness, CloudBees,
-Copado, Gearset or LinearB in the headline, per calendar quarter from 1 Jul 2026, and per day so the page can compare
+Copado, Gearset or LinearB in the headline, per Opsera fiscal quarter (Q3 is Aug to Oct) from 1 Jul 2026, and per day so the page can compare
 the same days of each quarter. Writes data/share_of_voice.json. Runs every Monday.
 
 Reads Google News' public search feed one week at a time (no key needed), so each week can return up to 100
@@ -37,8 +37,8 @@ COMPANIES = {   # name: (search, headline must match, own sites, look-alikes lef
 }
 
 
-def quarter(d):
-    return f"Q{(int(d[5:7]) - 1) // 3 + 1} {d[:4]}"
+def quarter(d):   # Opsera's fiscal quarters (agreed 5 Nov 2026): FY27 Q3 is Aug to Oct 2026
+    return f"FY{(int(d[:4]) + (1 if int(d[5:7]) >= 2 else 0)) % 100:02d} Q{(int(d[5:7]) + 10) % 12 // 3 + 1}"
 
 
 def week_items(search, a, b):
@@ -96,7 +96,7 @@ def main():
     OUT.write_text(json.dumps({
         "source": "Google News search feed, US English, headlines naming each company",
         "start_date": START, "checked": today,
-        "quarters": [{"quarter": q, "counts": counts[q]} for q in sorted(counts, key=lambda s: (s[3:], s[:2]))],
+        "quarters": [{"quarter": q, "counts": counts[q]} for q in sorted(counts, key=lambda s: s)],
         "days": [{"date": d, "counts": by_day[d]} for d in sorted(by_day)],   # the page compares the same days of each quarter
     }, indent=1) + "\n")
 

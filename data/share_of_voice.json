@@ -4,25 +4,36 @@
  "checked": "2026-11-04",
  "quarters": [
   {
-   "quarter": "Q3 2026",
+   "quarter": "FY27 Q2",
    "counts": {
-    "Opsera": 2,
-    "Harness": 18,
-    "CloudBees": 1,
-    "Copado": 2,
-    "Gearset": 1,
+    "Harness": 5,
+    "Opsera": 0,
+    "CloudBees": 0,
+    "Copado": 0,
+    "Gearset": 0,
     "LinearB": 0
    }
   },
   {
-   "quarter": "Q4 2026",
+   "quarter": "FY27 Q3",
    "counts": {
-    "Opsera": 2,
-    "Harness": 11,
-    "CloudBees": 4,
-    "Copado": 7,
-    "Gearset": 1,
-    "LinearB": 9
+    "Harness": 24,
+    "Gearset": 2,
+    "Copado": 8,
+    "Opsera": 4,
+    "CloudBees": 5,
+    "LinearB": 0
+   }
+  },
+  {
+   "quarter": "FY27 Q4",
+   "counts": {
+    "LinearB": 9,
+    "Copado": 1,
+    "Opsera": 0,
+    "Harness": 0,
+    "CloudBees": 0,
+    "Gearset": 0
    }
   }
  ],

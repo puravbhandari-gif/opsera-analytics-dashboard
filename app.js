@@ -288,10 +288,12 @@ const addMonths = (d, n) => { const x = toDate(d); const day0 = x.getUTCDate(); 
   x.setUTCDate(Math.min(day0, toDate(monthEnd(iso(x))).getUTCDate())); return iso(x); };
 // Last 3 months: the 3 months up to the last full day, against the 3 months before
 const quarterOf = (last) => ({ start: addDays(addMonths(last, -3), 1), end: last });
-// Quarter: calendar quarters (Q3 is Jul to Sep, Q4 is Oct to Dec), added 4 Nov 2026
-const calQuarterStart = (d) => `${d.slice(0, 4)}-${String(Math.floor((Number(d.slice(5, 7)) - 1) / 3) * 3 + 1).padStart(2, "0")}-01`;
-const calQuarterEnd = (d) => monthEnd(addMonths(calQuarterStart(d), 2));
-const calQuarterName = (d) => `Q${Math.floor((Number(d.slice(5, 7)) - 1) / 3) + 1}`;
+// Quarter: Opsera's fiscal quarters (agreed 5 Nov 2026). The fiscal year starts in February:
+// FY27 Q2 is May to Jul 2026, Q3 is Aug to Oct, Q4 is Nov 2026 to Jan 2027.
+const fiscalOffset = (d) => (Number(d.slice(5, 7)) + 10) % 12;   // months since 1 Feb
+const quarterStart = (d) => addMonths(monthStart(d), -(fiscalOffset(d) % 3));
+const quarterEnd = (d) => monthEnd(addMonths(quarterStart(d), 2));
+const quarterName = (d) => `FY${String((Number(d.slice(0, 4)) + (Number(d.slice(5, 7)) >= 2 ? 1 : 0)) % 100).padStart(2, "0")} Q${Math.floor(fiscalOffset(d) / 3) + 1}`;
 const comparisons = [];
 const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 const weekStart = (d) => addDays(d, -((toDate(d).getUTCDay() + 6) % 7));
@@ -307,12 +309,12 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 // or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
   if (mode === "cq") {   // this quarter so far against the same number of days of the quarter before (agreed 4 Nov 2026)
-    const qs = calQuarterStart(last), ps = calQuarterStart(addDays(qs, -1));
+    const qs = quarterStart(last), ps = quarterStart(addDays(qs, -1));
     const days = Math.round((toDate(last) - toDate(qs)) / 864e5);
-    const pe = addDays(ps, days) < calQuarterEnd(ps) ? addDays(ps, days) : calQuarterEnd(ps);
+    const pe = addDays(ps, days) < quarterEnd(ps) ? addDays(ps, days) : quarterEnd(ps);
     const prev = ps >= start ? { start: ps, end: pe } : null;
     return { cur: { start: qs < start ? start : qs, end: last }, prev,
-      prevName: `${calQuarterName(ps)}, ${prev ? range(prev.start, prev.end) : "same days"}`, none: `Comparison starts in ${calQuarterName(addDays(calQuarterEnd(qs), 1))}` };
+      prevName: `${quarterName(ps)}, ${prev ? range(prev.start, prev.end) : "same days"}`, none: `Comparison starts in ${quarterName(addDays(quarterEnd(qs), 1))}` };
   }
   if (mode === "quarter") {
     const cur = quarterOf(last);
@@ -351,9 +353,9 @@ function periodBuckets(mode, start, last) {
     return out;
   }
   if (mode === "cq") {
-    for (let s = calQuarterStart(start); s <= last; s = addDays(calQuarterEnd(s), 1)) {
-      const e = calQuarterEnd(s), a = s < start ? start : s, b = e > last ? last : e;
-      out.push({ start: a, end: b, label: `${calQuarterName(s)} ${s.slice(0, 4)}${e > last ? " (so far)" : s < start ? " (part)" : ""}` });
+    for (let s = quarterStart(start); s <= last; s = addDays(quarterEnd(s), 1)) {
+      const e = quarterEnd(s), a = s < start ? start : s, b = e > last ? last : e;
+      out.push({ start: a, end: b, label: `${quarterName(s)}${e > last ? " (so far)" : s < start ? " (part)" : ""}` });
     }
     return out;
   }
@@ -999,10 +1001,10 @@ function funnelHtml(steps) {
 function dealsIn(hub, mode, a, keep = () => true, b = null) {
   const rows = { week: hub.deals_weekly, month: hub.deals_monthly, cq: hub.deals_monthly, quarter: hub.deals_quarters, all: hub.deals_monthly }[mode];
   if (!rows) return null;
-  if (mode === "cq") {   // a calendar quarter is its 3 stored months added up
-    if (a !== calQuarterStart(a)) return null;
-    if (b && b < calQuarterEnd(a) && b < hub.end_date && b !== monthEnd(b)) return null;   // part of a past month: deals are stored by month
-    const end = calQuarterEnd(a) < hub.end_date ? calQuarterEnd(a) : hub.end_date;
+  if (mode === "cq") {   // a fiscal quarter is its 3 stored months added up
+    if (a !== quarterStart(a)) return null;
+    if (b && b < quarterEnd(a) && b < hub.end_date && b !== monthEnd(b)) return null;   // part of a past month: deals are stored by month
+    const end = quarterEnd(a) < hub.end_date ? quarterEnd(a) : hub.end_date;
     const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, start: a, end };
     rows.filter((r) => r.start >= a && r.start <= end && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount"].forEach((k) => { out[k] += r[k]; }));
     return out;
@@ -1952,14 +1954,15 @@ const CONTENT_TYPES = [
 let contentLoad = null;   // loads the page and deal data the first time the tab is opened
 let publishedLoad = null, prLoad = null;
 
-// Rows grouped by calendar quarter, newest quarter first and newest first inside each (agreed 4 Nov 2026)
-function byQuarter(items, columns, today, detail) {   // detail(row): extra facts shown under a row when it's clicked
+// Rows grouped by fiscal quarter, newest quarter first and newest first inside each (agreed 4 Nov 2026)
+function byQuarter(items, columns, today, detail, from) {   // detail(row): extra facts shown under a row when it's clicked; from: the day the list starts
   const groups = new Map();
-  items.forEach((r) => { const q = calQuarterStart(r.date); (groups.get(q) || groups.set(q, []).get(q)).push(r); });
+  items.forEach((r) => { const q = quarterStart(r.date); (groups.get(q) || groups.set(q, []).get(q)).push(r); });
   return [...groups.keys()].sort().reverse().map((q) => {
     const rows = groups.get(q).sort((a, b) => b.date.localeCompare(a.date));
-    const soFar = calQuarterEnd(q) > today ? ", so far" : "";
-    return `<h3 class="sub-title">${calQuarterName(q)} ${q.slice(0, 4)} (${range(q, calQuarterEnd(q))}${soFar}): ${num(rows.length)}</h3>
+    const soFar = quarterEnd(q) > today ? ", so far" : "";
+    const part = from && q < from && quarterEnd(q) >= from ? `, the list starts ${day(from)}` : "";
+    return `<h3 class="sub-title">${quarterName(q)} (${range(q, quarterEnd(q))}${soFar}${part}): ${num(rows.length)}</h3>
       <div class="table-wrap"><table${detail ? ' class="has-detail"' : ""}><thead><tr>${columns.map((c) => `<th scope="col"${c.cls ? ` class="${c.cls}"` : ""}>${c.label}</th>`).join("")}</tr></thead>
       <tbody>${rows.map((r) => `<tr${detail ? ' class="row-open" tabindex="0" aria-expanded="false"' : ""}>${columns.map((c) => `<td class="wrap${c.cls ? ` ${c.cls}` : ""}">${c.fmt ? c.fmt(r[c.key], r) : esc(r[c.key])}</td>`).join("")}</tr>${
         detail ? `<tr class="row-detail" hidden><td colspan="${columns.length}">${detail(r)}</td></tr>` : ""}`).join("")}</tbody></table></div>`;
@@ -1981,7 +1984,7 @@ function renderPublished(p) {
     { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)) },
     { key: "type", label: "Type" },
     { key: "title", label: "Title", fmt: linked },
-  ], p.checked);
+  ], p.checked, null, p.start_date);
   $("content-published-source").textContent = `Source: opsera.ai sitemap with each page's own publish date, checked ${dayYear(p.checked)}, and YouTube Analytics for public videos. ` +
     `${num(p.pages_without_date)} of ${num(p.pages_checked)} pages show no publish date, so they aren't listed.`;
 }
@@ -2021,7 +2024,7 @@ function prRows(d, ga, ah) {
       links_to_opsera: have.ah.links_to_opsera || a.links_to_opsera } : { ...a };
     have.placed_by = [...new Set([have.placed_by, x.placed_by].filter(Boolean))].join(", ");
   });
-  rows.forEach((r) => { r.quarter = `${calQuarterName(r.date)} ${r.date.slice(0, 4)}`; r.year = r.date.slice(0, 4); });
+  rows.forEach((r) => { r.quarter = quarterName(r.date); r.year = r.date.slice(0, 4); });
   return rows;
 }
 
@@ -2029,14 +2032,14 @@ function renderPrMedia(d, ga, ah, sov) {
   $("pr-status").textContent = "";
   const all = prRows(d, ga, ah);
   // Top numbers: this quarter so far against the same days of the quarter before (agreed 4 Nov 2026)
-  const q = calQuarterStart(d.checked), pq = calQuarterStart(addDays(q, -1));
-  const days = Math.round((toDate(d.checked) - toDate(q)) / 864e5), pEnd = addDays(pq, days) < calQuarterEnd(pq) ? addDays(pq, days) : calQuarterEnd(pq);
+  const q = quarterStart(d.checked), pq = quarterStart(addDays(q, -1));
+  const days = Math.round((toDate(d.checked) - toDate(q)) / 864e5), pEnd = addDays(pq, days) < quarterEnd(pq) ? addDays(pq, days) : quarterEnd(pq);
   const count = (a, b, type) => all.filter((r) => r.date >= a && r.date <= b && (!type || r.type === type)).length;
   $("pr-cards").innerHTML = [["All mentions", null], ...PR_TYPES.map((t) => [t === "Mention" ? "Other mentions" : `${t}s`, t])].map(([label, type]) => {
     const cur = count(q, d.checked, type), prev = count(pq, pEnd, type);
-    return card(`${label}, ${calQuarterName(q)} so far`, num(cur), `${calQuarterName(pq)}, ${range(pq, pEnd)}: ${num(prev)}`, cmpDelta(cur, prev));
+    return card(`${label}, ${quarterName(q)} so far`, num(cur), `${quarterName(pq)}, ${range(pq, pEnd)}: ${num(prev)}`, cmpDelta(cur, prev));
   }).join("");
-  $("pr-cards-source").textContent = `Source: ${d.source}, checked ${dayYear(d.checked)}. ${calQuarterName(q)} (${range(q, d.checked)}) compared with the same days of ${calQuarterName(pq)} (${range(pq, pEnd)}). A press release counts once, however many sites ran it.`;
+  $("pr-cards-source").textContent = `Source: ${d.source}, checked ${dayYear(d.checked)}. ${quarterName(q)} (${range(q, d.checked)}) compared with the same days of ${quarterName(pq)} (${range(pq, pEnd)}). A press release counts once, however many sites ran it.`;
 
   // Filters: outlet, type, year, quarter, person, topic and outlet tier
   const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };
@@ -2081,7 +2084,7 @@ function renderPrMedia(d, ga, ah, sov) {
       ${best.length < 5 ? `<p class="muted">Only ${num(best.length)} of these pieces sent any visits to opsera.ai.</p>` : ""}`
       : `<p class="muted">None of these pieces sent visits to opsera.ai.</p>`;
     $("pr-count").textContent = `${num(rows.length)} of ${num(all.length)} pieces`;
-    $("pr-list").innerHTML = byQuarter(rows, cols, d.checked, detail);
+    $("pr-list").innerHTML = byQuarter(rows, cols, d.checked, detail, d.start_date);
   };
   $("pr-list").addEventListener("click", toggleDetail);
   $("pr-list").addEventListener("keydown", toggleDetail);
@@ -2097,8 +2100,8 @@ function renderPrMedia(d, ga, ah, sov) {
     const sum = (w) => { const c = Object.fromEntries(cos.map((k) => [k, 0]));
       (sov.days || []).filter((d) => d.date >= w.start && d.date <= w.end).forEach((d) => cos.forEach((k) => { c[k] += d.counts[k] || 0; }));
       return c; };
-    const rows = [[`${calQuarterName(p.cur.start)} ${p.cur.start.slice(0, 4)} so far, ${range(p.cur.start, p.cur.end)}`, sum(p.cur)]];
-    if (p.prev) rows.push([`${p.prevName.replace(",", ` ${p.prev.start.slice(0, 4)}, same days:`)}`, sum(p.prev)]);
+    const rows = [[`${quarterName(p.cur.start)} so far, ${range(p.cur.start, p.cur.end)}`, sum(p.cur)]];
+    if (p.prev) rows.push([`${p.prevName.replace(",", ", same days:")}`, sum(p.prev)]);
     $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Days</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
       rows.map(([name, c]) => { const tot = cos.reduce((t, k) => t + c[k], 0);
         return `<tr><td>${esc(name)}</td>${cos.map((k) => `<td class="num">${num(c[k])}</td>`).join("")}<td class="num">${tot ? pct((c.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;
