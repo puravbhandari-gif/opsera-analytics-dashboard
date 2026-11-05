@@ -433,7 +433,7 @@ function fillCompare(spec) {
       // `extra` adds a second number for each period (the pipeline value next to the deal count), so each stays with its period
       const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}${m.extra ? `, ${m.extra(p.prev.start, p.prev.end)}` : ""}` : p.none;
       const note = typeof m.sub === "function" ? m.sub(p.cur.start, p.cur.end) : m.sub;   // a note can depend on the period
-      return card(m.label, m.fmt(cur), [m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), cmpDelta(cur, prev, m.lowerIsBetter));
+      return card(m.label, m.fmt(cur), [m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), m.noDelta ? "" : cmpDelta(cur, prev, m.lowerIsBetter));
     }).join("");
     $(`${spec.id}-cmp-source`).textContent = (p.why ? `${p.why} ` : "") + spec.source(p.cur.start, p.cur.end) +
       (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
@@ -700,6 +700,27 @@ function renderLeads(d) {
   compare({ id: "leads", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
     source: (a, b) => `${src}, ${range(a, b)} (Pacific time).`,
     metrics: ["demo", "events", "gartner_offer", "contact"].map((k) => ({ label: d.lines[k].label, value: rangeSum(d.daily, k), fmt: num })) });
+}
+
+// What happened to demo requests: David's Salesforce export, by Lead Status (agreed 5 Nov 2026).
+// The Google Analytics form count sits beside it, never added to it.
+function renderDemoOutcomes(sf, leads) {
+  const last = [sf.end_date, lastFullDayPacific(leads.end_date, leads.pulled_at)].sort()[0];
+  const groups = [["qualified", "Qualified"], ["open", "Not reviewed yet"], ["contact", "Already a contact"], ["not_now", "Not now (nurture)"], ["disqualified", "Disqualified"]];
+  const all = rangeSum(sf.daily, (r) => groups.reduce((t, [k]) => t + r[k], 0));
+  const dq = rangeSum(sf.daily, "disqualified"), ga = rangeSum(leads.daily, "demo");
+  compare({ id: "leads-demo", start: sf.start_date, last, fullPeriods: true,
+    source: (a, b) => `Sources: Salesforce campaign DG-Demo Requests, exported ${dayYear(sf.exported)}, and Google Analytics, ${range(a, b)}.`,
+    metrics: [
+      { label: "Demo requests in Salesforce", value: all, fmt: num },
+      // no better or worse here: newer requests are often still open
+      ...groups.map(([k, label]) => ({ label, value: rangeSum(sf.daily, k), fmt: num, noDelta: true })),
+      { label: "Share disqualified", value: (a, b) => (all(a, b) ? (dq(a, b) / all(a, b)) * 100 : null), fmt: (v) => pct(v, 1), noDelta: true },
+      { label: "Demo form fills in Google Analytics", value: ga, fmt: num,
+        sub: "Counts every fill. Salesforce lists each person once, so repeat fills and fills that never reached Salesforce don't show there" },
+    ] });
+  $("leads-demo-note").textContent = "Qualified means a meeting is set or sales is engaging. Not reviewed yet means open or assigned. Already a contact means the person was in Salesforce before. " +
+    "X-Factor isn't in the export yet, so some disqualified ones may still count elsewhere.";
 }
 
 // ---------- LinkedIn: company page and Kumar, never mixed ----------
@@ -2574,6 +2595,7 @@ $("summary-body").addEventListener("click", (e) => {
     renderSearch(gsc);
     renderVisits(ga);
     renderLeads(leads);
+    load("demo_requests.json").then((sf) => renderDemoOutcomes(sf, leads)).catch(() => { $("leads-demo-panel").hidden = true; });
     renderLinkedIn(li);
     renderKumarPosts(kp);
     renderLinkedInVisits(ga);

@@ -1,0 +1,377 @@
+{
+ "source": "Salesforce campaign DG-Demo Requests, Lead Status",
+ "exported": "2026-11-04",
+ "start_date": "2026-04-01",
+ "end_date": "2026-11-03",
+ "statuses": {
+  "Nurture": 37,
+  "Open": 9,
+  "Contact": 4,
+  "Assigned": 2,
+  "Disqualified": 2,
+  "Meeting Set": 1,
+  "Engaging": 1
+ },
+ "daily": [
+  {
+   "date": "2026-04-01",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-04-13",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-04-15",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-04-21",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-04-27",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-04-29",
+   "qualified": 0,
+   "open": 0,
+   "contact": 1,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-05-08",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-05-10",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-05-21",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-05-29",
+   "qualified": 0,
+   "open": 0,
+   "contact": 1,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-06-08",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 2,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-06-10",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-06-12",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 1
+  },
+  {
+   "date": "2026-06-17",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-06-25",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 1
+  },
+  {
+   "date": "2026-07-08",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-09",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-13",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-17",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-22",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-27",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-30",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-07-31",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-04",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-06",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-12",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-17",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-25",
+   "qualified": 1,
+   "open": 0,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-08-26",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-09-04",
+   "qualified": 0,
+   "open": 0,
+   "contact": 1,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-09-10",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-09-16",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-09-23",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-09-28",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 2,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-01",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 4,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-02",
+   "qualified": 0,
+   "open": 0,
+   "contact": 0,
+   "not_now": 1,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-04",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-06",
+   "qualified": 0,
+   "open": 1,
+   "contact": 1,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-13",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-14",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-19",
+   "qualified": 1,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-26",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-29",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-10-31",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  },
+  {
+   "date": "2026-11-02",
+   "qualified": 0,
+   "open": 1,
+   "contact": 0,
+   "not_now": 0,
+   "disqualified": 0
+  }
+ ]
+}
