@@ -10,6 +10,8 @@ Made stricter the same day: 5 groups.
 - Already a contact: the person is already a Salesforce contact
 - Not now: Nurture
 - Disqualified: Disqualified
+From the 5 Nov export, which has X-Factor: an X4 Basic Lead counts as Disqualified, whatever its Lead Status. Each request
+counts once. Every demo request gets X1 automatically, so X1 isn't a quality signal; X-Factor is also shown on its own.
 Each request counts on the day the person joined the campaign (Member First Associated Date). Each person counts once.
 """
 import collections
@@ -27,6 +29,7 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "demo_requests.json"
 GROUPS = {"Meeting Set": "qualified", "Engaging": "qualified", "Open": "open", "Assigned": "open", "Contact": "contact",
           "Nurture": "not_now", "Disqualified": "disqualified"}
 ORDER = ("qualified", "open", "contact", "not_now", "disqualified")
+X_FACTORS = {"x1": "X1", "x2": "X2", "x3": "X3", "x4": "X4"}   # X1 Sales Ready, X2 Hot Lead, X3 Mid-Quality, X4 Basic Lead
 
 
 def main():
@@ -42,17 +45,22 @@ def main():
     unknown = {status(r) for r in rows} - set(GROUPS)
     if unknown:   # a new Lead Status needs a group before the page can show it
         sys.exit(f"Lead Status not in any group yet: {', '.join(sorted(unknown))}. Nothing was written.")
+    xf = lambda r: (r.get("X-Factor") or "")[:2].lower()   # "X4 Basic Lead" -> "x4"
     days, statuses = collections.defaultdict(collections.Counter), collections.Counter()
     for r in rows:
         d = dt.datetime.strptime(r["Member First Associated Date"], "%m/%d/%Y").date().isoformat()
-        days[d][GROUPS[status(r)]] += 1
+        days[d]["disqualified" if xf(r) == "x4" else GROUPS[status(r)]] += 1
+        if xf(r) in X_FACTORS:
+            days[d][xf(r)] += 1
         statuses[status(r)] += 1
     exported = re.search(r"(\d{4}-\d{2}-\d{2})-\d{2}-\d{2}-\d{2}\.xls$", path).group(1)
     OUT.write_text(json.dumps({
         "source": "Salesforce campaign DG-Demo Requests, Lead Status",
         "exported": exported, "start_date": min(days), "end_date": (dt.date.fromisoformat(exported) - dt.timedelta(days=1)).isoformat(),
         "statuses": dict(statuses.most_common()),
-        "daily": [{"date": d, **{g: days[d][g] for g in ORDER}} for d in sorted(days)],
+        "has_x_factor": "X-Factor" in head,
+        "x4_by_status": dict(collections.Counter(status(r) for r in rows if xf(r) == "x4").most_common()),
+        "daily": [{"date": d, **{g: days[d][g] for g in ORDER + tuple(X_FACTORS)}} for d in sorted(days)],
     }, indent=1) + "\n")
     print(f"Demo requests: {len(rows)} people, {dict(statuses.most_common())}")
 

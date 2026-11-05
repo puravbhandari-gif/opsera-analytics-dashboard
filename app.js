@@ -729,8 +729,15 @@ function renderDemoOutcomes(sf, leads) {
       { label: "Demo form fills in Google Analytics", value: ga, fmt: num,
         sub: "Counts every fill. Salesforce lists each person once, so repeat fills and fills that never reached Salesforce don't show there" },
     ] });
+  // X-Factor on its own (from the 5 Nov 2026 export). Every demo request gets X1 automatically, so X1 isn't a quality signal.
+  $("leads-demo-x").hidden = !sf.has_x_factor;
+  if (sf.has_x_factor) compare({ id: "leads-demo-x", start: sf.start_date, last, fullPeriods: true,
+    source: (a, b) => `Source: Salesforce campaign DG-Demo Requests, X-Factor, exported ${dayYear(sf.exported)}, ${range(a, b)}.`,
+    metrics: [["x1", "X1 Sales Ready", "Given to every demo request automatically, so not a sign of quality"], ["x2", "X2 Hot Lead"], ["x3", "X3 Mid-Quality"], ["x4", "X4 Basic Lead", "Counted as disqualified above"]]
+      .map(([k, label, sub]) => ({ label, value: rangeSum(sf.daily, k), fmt: num, noDelta: true, sub })) });
   $("leads-demo-note").textContent = "Qualified means a meeting is set or sales is engaging. Not reviewed yet means open or assigned. Already a contact means the person was in Salesforce before. " +
-    "X-Factor isn't in the export yet, so some disqualified ones may still count elsewhere.";
+    (sf.has_x_factor ? "Disqualified means Lead Status Disqualified or X-Factor X4 Basic Lead, whatever the Lead Status. Each request counts once."
+      : "X-Factor isn't in the export yet, so some disqualified ones may still count elsewhere.");
 }
 
 // ---------- LinkedIn: company page and Kumar, never mixed ----------

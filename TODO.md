@@ -56,4 +56,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Content scorecard tab.
 - [x] Download button on every table.
 - [x] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.
-- [ ] When David sends a new "DG-Demo Requests" export: save it to Desktop/Data/salesforce-exports and run `.venv/bin/python scripts/build_demo_requests.py`. Ask him to add X-Factor to it.
+- [ ] When David sends a new "DG-Demo Requests" export: save it to Desktop/Data/salesforce-exports and run `.venv/bin/python scripts/build_demo_requests.py`. It has X-Factor since the 5 Nov export.
