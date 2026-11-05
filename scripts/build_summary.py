@@ -100,6 +100,10 @@ def periods_for(mode, start, last, full_month=True):
         if cur[0] < start:
             return None, None, ""
         p = quarter_start(add_days(cur[0], -1))
+        if 2 * ((d(last) - d(cur[0])).days + 1) < (d(quarter_end(cur[0])) - d(cur[0])).days + 1 and p >= start:
+            # under half done: the last full quarter against the whole quarter before, like the Month view (agreed 5 Nov 2026)
+            b = quarter_start(add_days(p, -1))
+            return (p, quarter_end(p)), ((b, quarter_end(b)) if b >= start else None), f"in {quarter_name(b)}"
         pe = min(add_days(p, (d(last) - d(cur[0])).days), quarter_end(p))
         return cur, ((p, pe) if p >= start else None), f"in the same days of {quarter_name(p)}"
     if mode == "quarter":

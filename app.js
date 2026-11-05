@@ -310,6 +310,14 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 function periodsFor(mode, start, last) {
   if (mode === "cq") {   // this quarter so far against the same number of days of the quarter before (agreed 4 Nov 2026)
     const qs = quarterStart(last), ps = quarterStart(addDays(qs, -1));
+    const daysIn = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5) + 1;
+    // Under half done: the last full quarter against the whole quarter before, like the Month view (agreed 5 Nov 2026)
+    if (daysIn(qs, last) * 2 < daysIn(qs, quarterEnd(qs)) && ps >= start) {
+      const bs = quarterStart(addDays(ps, -1));
+      return { cur: { start: ps, end: quarterEnd(ps) }, prev: bs >= start ? { start: bs, end: quarterEnd(bs) } : null,
+        prevName: `${quarterName(bs)}, full quarter`, none: `No full ${quarterName(bs)} before it: the data starts ${dayYear(start)}`,
+        why: `${quarterName(qs)} has only ${range(qs, last)} so far, so this shows ${quarterName(ps)}, the last full quarter.` };
+    }
     const days = Math.round((toDate(last) - toDate(qs)) / 864e5);
     const pe = addDays(ps, days) < quarterEnd(ps) ? addDays(ps, days) : quarterEnd(ps);
     const prev = ps >= start ? { start: ps, end: pe } : null;
@@ -1344,7 +1352,7 @@ function renderLinkedInPath(ga) {
   const fill = () => {
     const p = periodsFor(periodMode, start, last);
     const cur = p.cur || { start, end: last };
-    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far", cq: "This quarter so far", quarter: "Last 3 months" }[periodMode];
+    $("li-path-title").textContent = { day: "Last full day", week: "Last full week", month: "This month so far", cq: p.why ? quarterName(cur.start) : "This quarter so far", quarter: "Last 3 months" }[periodMode];
     build("li-path", cur.start, cur.end);
     $("li-path-source").textContent = `${src}, ${range(cur.start, cur.end)} (Pacific time).`;
   };
@@ -2032,14 +2040,14 @@ function renderPrMedia(d, ga, ah, sov) {
   $("pr-status").textContent = "";
   const all = prRows(d, ga, ah);
   // Top numbers: this quarter so far against the same days of the quarter before (agreed 4 Nov 2026)
-  const q = quarterStart(d.checked), pq = quarterStart(addDays(q, -1));
-  const days = Math.round((toDate(d.checked) - toDate(q)) / 864e5), pEnd = addDays(pq, days) < quarterEnd(pq) ? addDays(pq, days) : quarterEnd(pq);
-  const count = (a, b, type) => all.filter((r) => r.date >= a && r.date <= b && (!type || r.type === type)).length;
+  const pp = periodsFor("cq", d.start_date, d.checked), qName = `${quarterName(pp.cur.start)}${pp.why ? "" : " so far"}`;
+  const count = (w, type) => all.filter((r) => r.date >= w.start && r.date <= w.end && (!type || r.type === type)).length;
   $("pr-cards").innerHTML = [["All mentions", null], ...PR_TYPES.map((t) => [t === "Mention" ? "Other mentions" : `${t}s`, t])].map(([label, type]) => {
-    const cur = count(q, d.checked, type), prev = count(pq, pEnd, type);
-    return card(`${label}, ${quarterName(q)} so far`, num(cur), `${quarterName(pq)}, ${range(pq, pEnd)}: ${num(prev)}`, cmpDelta(cur, prev));
+    const cur = count(pp.cur, type), prev = pp.prev ? count(pp.prev, type) : null;
+    return card(`${label}, ${qName}`, num(cur), pp.prev ? `${pp.prevName}: ${num(prev)}` : pp.none, cmpDelta(cur, prev));
   }).join("");
-  $("pr-cards-source").textContent = `Source: ${d.source}, checked ${dayYear(d.checked)}. ${quarterName(q)} (${range(q, d.checked)}) compared with the same days of ${quarterName(pq)} (${range(pq, pEnd)}). A press release counts once, however many sites ran it.`;
+  $("pr-cards-source").textContent = `${pp.why ? `${pp.why} ` : ""}Source: ${d.source}, checked ${dayYear(d.checked)}. ${qName}, ${range(pp.cur.start, pp.cur.end)}` +
+    `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it.`;
 
   // Filters: outlet, type, year, quarter, person, topic and outlet tier
   const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };
@@ -2100,12 +2108,12 @@ function renderPrMedia(d, ga, ah, sov) {
     const sum = (w) => { const c = Object.fromEntries(cos.map((k) => [k, 0]));
       (sov.days || []).filter((d) => d.date >= w.start && d.date <= w.end).forEach((d) => cos.forEach((k) => { c[k] += d.counts[k] || 0; }));
       return c; };
-    const rows = [[`${quarterName(p.cur.start)} so far, ${range(p.cur.start, p.cur.end)}`, sum(p.cur)]];
-    if (p.prev) rows.push([`${p.prevName.replace(",", ", same days:")}`, sum(p.prev)]);
+    const rows = [[`${quarterName(p.cur.start)}${p.why ? "" : " so far"}, ${range(p.cur.start, p.cur.end)}`, sum(p.cur)]];
+    if (p.prev) rows.push([p.why ? `${quarterName(p.prev.start)}, ${range(p.prev.start, p.prev.end)}` : `${p.prevName.replace(",", ", same days:")}`, sum(p.prev)]);
     $("pr-sov").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Days</th>${cos.map((c) => `<th class="num" scope="col">${c}</th>`).join("")}<th class="num" scope="col">Opsera's share</th></tr></thead><tbody>${
       rows.map(([name, c]) => { const tot = cos.reduce((t, k) => t + c[k], 0);
         return `<tr><td>${esc(name)}</td>${cos.map((k) => `<td class="num">${num(c[k])}</td>`).join("")}<td class="num">${tot ? pct((c.Opsera / tot) * 100) : "-"}</td></tr>`; }).join("")}</tbody></table></div>`;
-    $("pr-sov-source").textContent = `Source: ${sov.source}, checked ${dayYear(sov.checked)}. Compares this quarter so far with the same number of days of the quarter before. Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
+    $("pr-sov-source").textContent = `Source: ${sov.source}, checked ${dayYear(sov.checked)}. ${p.why ? `${p.why} ${p.prev ? "" : `${p.none}. `}` : "Compares this quarter so far with the same number of days of the quarter before. "}Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
   }
 }
 // ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------
