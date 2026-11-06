@@ -2572,6 +2572,7 @@ function showTab(name) {
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
   document.body.classList.toggle("exec-mode", name === "exec");   // the exec view's only control is its quarter picker
+  $("to-exec").classList.toggle("on", name === "exec"); $("to-team").classList.toggle("on", name !== "exec");
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   const pick = $("tab-pick"), listed = [...pick.options].some((o) => o.value === name);
   if (listed) pick.value = name; else pick.selectedIndex = -1;
@@ -2591,8 +2592,9 @@ function showTab(name) {
 }
 // The full dashboard: one list of sections, grouped as Results, Traffic, What we ran, Social and Tool (agreed 6 Nov 2026)
 $("tab-pick").addEventListener("change", (e) => { showTab(e.target.value); window.scrollTo(0, 0); });
-$("exec-back").addEventListener("click", () => showTab("exec"));
-$("exec-details").addEventListener("click", () => { showTab("summary"); window.scrollTo(0, 0); });
+// Exec view and Team view (the full dashboard), both always at the top (agreed 6 Nov 2026)
+$("to-exec").addEventListener("click", () => showTab("exec"));
+$("to-team").addEventListener("click", () => { if (view.tab === "exec") { showTab("summary"); window.scrollTo(0, 0); } });
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 // A link with only a tab (the footer links, or an older link) keeps the rest of the view.
 // A full link pasted into this page reloads it, so every setting is applied from the start.
@@ -2635,26 +2637,31 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
   const booked = hub.meetings_daily.filter((r) => r.kind === "booked");
   const robots = rangeSum(ga.email_robots_daily || [], "robots"), sessions = rangeSum(ga.daily, "sessions");
   const sourced = rangeSum(sf.days, "sourced_value"), influenced = rangeSum(sf.days, "influenced_value");
-  const dealCount = rangeSum(sf.days, (r) => r.sourced_deals + r.influenced_deals);
   const placed = prRows(pr, { by_link: {} }, { by_domain: {}, by_link: {} }).filter(prPlacement);
   const metrics = [
     { label: "Marketing pipeline", start: sf.opportunities_cover_from, last: addDays(sf.exports.opportunities, -1), fmt: moneyShort,
       value: (a, b) => sourced(a, b) + influenced(a, b),
-      line: (a, b) => `${moneyShort(sourced(a, b))} sourced (an estimate) and ${moneyShort(influenced(a, b))} influenced, across ${num(dealCount(a, b))} deals`,
+      line: (a, b) => `${moneyShort(sourced(a, b))} sourced, ${moneyShort(influenced(a, b))} influenced`,
       src: `Salesforce opportunities, exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
-      line: () => "Demo forms filled in on opsera.ai", src: "Google Analytics" },
+      line: () => "Demo form fills on opsera.ai", src: "Google Analytics" },
     { label: "Meetings with marketing contacts", start: hub.start_date, last: hub.end_date, fmt: num, value: rangeSum(booked, "count"),
-      line: () => "Meetings booked by people who came in through marketing", src: `HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}` },
+      line: () => "Booked by people from marketing", src: `HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}` },
     { label: "Website visitors", start: ga.start_date, last: gaLast, fmt: num, value: (a, b) => sessions(a, b) - robots(a, b),
-      line: () => "Visits to opsera.ai, leaving out email robots", src: "Google Analytics" },
+      line: () => "Visits, without email robots", src: "Google Analytics" },
   ];
-  // Quarters with data, newest first. The default follows the Quarter view: under half a quarter shows the last full one.
+  // Full quarters with data first, newest first, then the one under way (agreed 6 Nov 2026)
   const quarters = [];
   for (let q = quarterStart(gaLast); q >= quarterStart(ga.start_date); q = quarterStart(addDays(q, -1))) if (quarterEnd(q) >= "2026-05-01") quarters.push(q);
+  const full = quarters.filter((q) => quarterEnd(q) <= gaLast), open = quarters.filter((q) => quarterEnd(q) > gaLast);
   const pick = $("exec-quarter");
-  pick.innerHTML = quarters.map((q) => `<option value="${q}">${quarterName(q)}${quarterEnd(q) > gaLast ? " so far" : ""} (${["Feb to Apr", "May to Jul", "Aug to Oct", "Nov to Jan"][Math.floor(fiscalOffset(q) / 3)]})</option>`).join("");
-  pick.value = quarterStart(periodsFor("cq", ga.start_date, gaLast).cur.start);
+  pick.innerHTML = [...full.map((q) => `<option value="${q}">${quarterName(q)} (${["Feb to Apr", "May to Jul", "Aug to Oct", "Nov to Jan"][Math.floor(fiscalOffset(q) / 3)]})</option>`),
+    ...open.map((q) => `<option value="${q}">${quarterName(q)} so far</option>`)].join("");
+  // Opens on the last full quarter until the one under way is more than half done, like the Quarter view (agreed 5 Nov 2026).
+  // Set on every load, and again when a browser brings the page back from its cache with an older pick.
+  const firstPick = quarterStart(periodsFor("cq", ga.start_date, gaLast).cur.start);
+  pick.value = firstPick;
+  addEventListener("pageshow", (e) => { if (e.persisted && pick.value !== firstPick) { pick.value = firstPick; draw(); } });
   const daysIn = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5);
   // This quarter up to each source's last day, against the quarter before: all of it, or the same days when this one isn't over
   const periods = (q, m) => {
@@ -2672,8 +2679,7 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       const ch = prev ? ((cur - prev) / prev) * 100 : null;
       const prevLabel = `${quarterName(p.ps)}${p.prev && p.prev.end < quarterEnd(p.ps) ? `, ${range(p.prev.start, p.prev.end)}` : ""}`;
       return `<article class="exec-card"><h3>${esc(m.label)}</h3><div class="exec-big value">${esc(m.fmt(cur))}</div>
-        ${ch == null ? `<div class="exec-change muted">No full ${esc(quarterName(p.ps))} to compare: the data starts ${esc(dayYear(m.start))}</div>`
-          : `<div class="exec-change ${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}% vs ${esc(prevLabel)}</div>`}
+        ${ch == null ? "" : `<div class="exec-change ${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}% vs ${esc(quarterName(p.ps))}</div>`}
         <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}</p>
         ${barsFor([...(p.prev ? [{ label: prevLabel, v: prev, fmt: m.fmt }] : []), { label: `${quarterName(q)}${p.cur.end < quarterEnd(q) ? ` to ${day(p.cur.end)}` : ""}`, v: cur, fmt: m.fmt, now: true }])}</article>`;
     });
@@ -2681,20 +2687,19 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
     const qEnd = quarterEnd(q), months = [0, 1, 2].map((i) => addMonths(q, i)).filter((m) => m <= pub.checked);
     const inQ = pub.items.filter((i) => i.date >= q && i.date <= qEnd);
     cards.push(`<article class="exec-card"><h3>Content published</h3><div class="exec-big value">${num(inQ.length)}</div>
-      <p class="exec-line">Blogs, reports, white papers, webinars and YouTube videos</p>
+      <p class="exec-line">Blogs, papers, webinars and videos</p>
       ${barsFor(months.map((m) => ({ label: `${monthName(m)}${monthEnd(m) > pub.checked ? " so far" : ""}`, v: inQ.filter((i) => i.date.slice(0, 7) === m.slice(0, 7)).length, fmt: num })))}</article>`);
     // PR placements: the number and how many outlets ran them
     const pq = placed.filter((r) => r.date >= q && r.date <= qEnd), outlets = prOutlets(pq);
     cards.push(`<article class="exec-card"><h3>PR placements</h3><div class="exec-big value">${num(pq.length)}</div>
-      <div class="exec-change muted">Across ${num(outlets.length)} outlet${outlets.length === 1 ? "" : "s"}</div>
-      <p class="exec-line">Articles, bylines, interviews, podcasts and press releases. A press release counts once, however many sites ran it</p></article>`);
+      <p class="exec-line">Across ${num(outlets.length)} outlet${outlets.length === 1 ? "" : "s"}</p></article>`);
     $("exec-cards").innerHTML = cards.join("");
     countUp($("exec-cards"));
-    $("exec-period").textContent = `${quarterName(q)}, ${range(q, over ? qEnd : gaLast)}${over ? "" : ", so far"}. Each card compares with the quarter before.`;
+    $("exec-period").textContent = `${quarterName(q)}, ${range(q, over ? qEnd : gaLast)}${over ? "" : ", so far"}`;
     $("exec-logos-title").textContent = `Where we were covered in ${quarterName(q)}`;
     logoWall($("exec-logos"), outlets, null);
     $("exec-source").textContent = `Sources: ${metrics.map((m) => `${m.label.toLowerCase()} from ${m.src}`).join("; ")}; content from the opsera.ai sitemap and YouTube, checked ${dayYear(pub.checked)}; PR from the PR and media list, checked ${dayYear(pr.checked)}. ` +
-      "Pipeline adds sourced and influenced deals, both from Salesforce. A quarter not yet over is compared with the same days of the quarter before.";
+      "Pipeline adds sourced and influenced deals, both from Salesforce. Each card compares with the quarter before; a quarter not yet over is compared with the same days of it.";
   };
   pick.addEventListener("change", draw);
   $("exec-logos").addEventListener("click", (e) => {   // an outlet opens the PR and media list, showing only its pieces

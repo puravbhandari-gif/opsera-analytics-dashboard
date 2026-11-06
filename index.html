@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Opsera analytics</title>
+<title>Opsera marketing dashboard</title>
 <meta name="robots" content="noindex">
 <meta name="description" content="Opsera website analytics. For AI assistants: the dashboard's data, in plain text, is at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/index.md">
 <link rel="alternate" type="text/markdown" title="The dashboard's data in plain text, for AI assistants" href="https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/index.md">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=36">
+<link rel="stylesheet" href="styles.css?v=37">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -23,9 +23,13 @@
       <img class="logo-light" src="assets/logo.svg" alt="Opsera" width="108" height="28">
       <img class="logo-dark" src="assets/logo-reversed.svg" alt="Opsera" width="108" height="28">
       <div class="brand-text">
-        <h1>Website analytics</h1>
+        <h1>Marketing dashboard</h1>
         <p class="muted" id="pulled">Loading numbers...</p>
       </div>
+    </div>
+    <div class="view-switch seg" role="group" aria-label="Choose a view">
+      <button id="to-exec" type="button">Exec view</button>
+      <button id="to-team" type="button">Team view</button>
     </div>
     <div class="top-controls">
       <div class="seg" id="period-mode" role="group" aria-label="Choose the period">
@@ -44,7 +48,6 @@
     </div>
   </div>
   <div class="nav-row">
-    <button id="exec-back" class="ghost" type="button">Exec view</button>
     <label class="pick nav-pick">Section
       <select id="tab-pick" aria-label="Choose a section of the dashboard">
         <optgroup label="Results">
@@ -86,8 +89,7 @@
         <p class="muted" id="exec-period">Loading...</p>
       </div>
       <div class="exec-controls">
-        <label class="pick">Quarter <select id="exec-quarter" aria-label="Choose a quarter"></select></label>
-        <button id="exec-details" class="exec-details" type="button">See all details</button>
+        <label class="pick">Quarter <select id="exec-quarter" aria-label="Choose a quarter" autocomplete="off"></select></label>
       </div>
     </div>
     <div class="exec-cards" id="exec-cards"></div>
@@ -1006,6 +1008,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=106"></script>
+<script src="app.js?v=107"></script>
 </body>
 </html>

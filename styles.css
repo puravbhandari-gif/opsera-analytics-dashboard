@@ -327,10 +327,8 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 .exec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin: 8px 0 28px; }
 .exec-head h2 { font-size: 2.1rem; margin-bottom: 4px; }
 .exec-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
-.exec-details { font: inherit; font-size: 0.95rem; font-weight: 500; color: #fff; background: var(--accent); border: 0; border-radius: 999px; padding: 9px 20px; cursor: pointer; }
-.exec-details:hover { background: var(--accent-deep); }
-:root[data-theme="dark"] .exec-details { color: var(--page); }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .exec-details { color: var(--page); } }
+.view-switch { flex: none; }
+.view-switch button { font-weight: 500; }
 .exec-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .exec-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
 .exec-card h3 { font-family: var(--font); font-size: 0.95rem; font-weight: 500; color: var(--muted); margin: 0; }
