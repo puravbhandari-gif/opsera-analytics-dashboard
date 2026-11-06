@@ -16,12 +16,28 @@
   }
  },
  "infrasity_claims": {
-  "source": "Infrasity's October 2026 growth report",
+  "source": "Infrasity's July, August and October 2026 growth reports",
   "items": [
    "Google AI Overviews name Opsera as a source for all 6 blogs they checked.",
    "Perplexity lists Opsera as a source for the same 6 blogs.",
    "ChatGPT cites 2 blogs: Factory.ai alternatives and Software factory as a service.",
    "Claude cites opsera.ai for 11 of 35 tracked prompts. ChatGPT cites it for 7, Gemini for 5 and Perplexity for none."
+  ],
+  "softwareforge": [
+   {
+    "month": "2026-07",
+    "clicks": 50,
+    "times_shown": 4324,
+    "visits": 1452,
+    "note": "Google data from 15 Jul"
+   },
+   {
+    "month": "2026-08",
+    "clicks": 106,
+    "times_shown": 7921,
+    "visits": 1801,
+    "note": ""
+   }
   ]
  }
 }
