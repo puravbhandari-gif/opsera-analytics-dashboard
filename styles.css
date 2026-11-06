@@ -317,3 +317,54 @@ tr.row-detail td { background: var(--sunk); padding-top: 4px; }
   position: sticky; left: 12px; width: min(100%, calc(100vw - 90px)); }   /* stays in view on a phone while the table scrolls sideways */
 .row-facts dt { color: var(--muted); font-size: 0.78rem; }
 .row-facts dd { margin: 2px 0 0; }
+
+/* Full dashboard: one list of sections instead of the row of tabs (agreed 6 Nov 2026) */
+.nav-row { max-width: 1180px; margin: 0 auto; padding: 2px 16px 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+.nav-pick select { min-width: 220px; font-weight: 500; }
+body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { display: none; }
+
+/* Exec view: one screen, large type, lots of room */
+.exec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px; margin: 8px 0 28px; }
+.exec-head h2 { font-size: 2.1rem; margin-bottom: 4px; }
+.exec-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.exec-details { font: inherit; font-size: 0.95rem; font-weight: 500; color: #fff; background: var(--accent); border: 0; border-radius: 999px; padding: 9px 20px; cursor: pointer; }
+.exec-details:hover { background: var(--accent-deep); }
+:root[data-theme="dark"] .exec-details { color: var(--page); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .exec-details { color: var(--page); } }
+.exec-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.exec-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px 26px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.exec-card h3 { font-family: var(--font); font-size: 0.95rem; font-weight: 500; color: var(--muted); margin: 0; }
+.exec-big { font-family: var(--display); font-size: 2.9rem; font-weight: 600; line-height: 1.1; margin: 10px 0 6px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.exec-change { font-size: 0.95rem; font-weight: 500; }
+.exec-change.up { color: var(--good); }
+.exec-change.down { color: var(--bad); }
+.exec-line { color: var(--ink-2); font-size: 0.92rem; margin: 10px 0 16px; }
+.exec-bars { margin-top: auto; display: grid; gap: 8px; }
+.exec-bar { display: grid; grid-template-columns: 7.5rem 1fr auto; align-items: center; gap: 10px; font-size: 0.82rem; color: var(--muted); }
+.exec-bar-track { height: 10px; background: var(--sunk); border-radius: 999px; overflow: hidden; }
+.exec-bar-track span { display: block; height: 100%; background: var(--axis); border-radius: 999px; }
+.exec-bar.now .exec-bar-track span { background: var(--accent); }
+.exec-bar.now { color: var(--ink); font-weight: 500; }
+.exec-bar-num { font-variant-numeric: tabular-nums; min-width: 3.5rem; text-align: right; }
+.exec-logos-wrap { margin: 36px 0 12px; }
+.exec-logos-wrap h3 { margin-bottom: 14px; }
+@media (max-width: 900px) { .exec-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) {
+  .exec-cards { grid-template-columns: 1fr; gap: 14px; }
+  .exec-card { padding: 20px; }
+  .exec-big { font-size: 2.3rem; }
+  .exec-head h2 { font-size: 1.7rem; }
+  .exec-controls { width: 100%; }
+  .exec-controls .pick, .exec-controls .pick select { flex: 1; }
+}
+
+/* Logo wall: each outlet's site icon and name. A click filters the PR list */
+.logo-wall { display: flex; flex-wrap: wrap; gap: 10px; }
+.logo { display: inline-flex; align-items: center; gap: 10px; font: inherit; font-size: 0.88rem; color: var(--ink-2); background: var(--surface);
+  border: 1px solid var(--border); border-radius: 12px; padding: 8px 14px 8px 10px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.logo:hover { background: var(--wash); }
+.logo.on { border-color: var(--accent); background: var(--wash); color: var(--accent-deep); font-weight: 500; }
+.logo img { width: 28px; height: 28px; border-radius: 6px; background: #fff; }
+.logo-blank { width: 28px; height: 28px; border-radius: 6px; display: grid; place-items: center; background: var(--sunk); font-weight: 600; color: var(--ink-2); }
+
+.hub h4 { font-family: var(--display); font-size: 1rem; margin: 4px 0 8px; }

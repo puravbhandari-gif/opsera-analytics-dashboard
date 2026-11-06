@@ -43,6 +43,8 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
 - [ ] Ask our PR agencies for their coverage lists since 1 Jul 2026, save them in Desktop/Data/pr-agency, then ask Claude Code to add the PR agency list.
+- [ ] When SamsonPR updates their tracker: ask Claude Code to "read SamsonPR's tracker". It saves it to Desktop/Data/pr-agency as SamsonPR-tracker-<date>.xlsx and runs `.venv/bin/python scripts/fetch_pr_media.py --agency`, which refreshes Placed by, Readership and the open and missed opportunities.
+- [ ] When new blogs go up: ask Claude Code to tag each one with a type in data/blog_types.json. Untagged blogs show as "Not tagged yet" on the Content tab.
 - [ ] Add publish dates to the guide pages (knowledge base and comparison guides), so they show in "Published this quarter".
 - [ ] When Kumar's newsletter launches, add subscribers, opens and clicks per issue to the dashboard.
 - [ ] Newsroom has no press release since 5 May; add the newer ones, including the 10 Jun 2026 VIBEshift release ("Opsera Launches VIBEshift" on PR Newswire).

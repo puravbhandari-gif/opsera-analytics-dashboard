@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=35">
+<link rel="stylesheet" href="styles.css?v=36">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -43,63 +43,63 @@
       <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
     </div>
   </div>
-  <div class="tabs-row">
-  <button class="tabs-arrow left" type="button" aria-label="Show earlier tabs" hidden>&lsaquo;</button>
-  <nav class="tabs" role="tablist" aria-label="Dashboard sections">
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">Overview</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="summary">Summary</button>
-      </div>
-    </div>
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">Results</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="team">Team metrics</button>
-        <button role="tab" data-tab="pipeline">Pipeline</button>
-        <button role="tab" data-tab="leads">Leads</button>
-        <button role="tab" data-tab="journey">Customer journey</button>
-      </div>
-    </div>
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">Traffic</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="visits">Website visits</button>
-        <button role="tab" data-tab="search">Google search</button>
-        <button role="tab" data-tab="aeo">AEO</button>
-      </div>
-    </div>
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">What we ran</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="campaigns">Campaigns</button>
-        <button role="tab" data-tab="events">Events</button>
-        <button role="tab" data-tab="content">Content</button>
-        <button role="tab" data-tab="pr">PR and media</button>
-      </div>
-    </div>
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">Social</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="linkedin">LinkedIn brand</button>
-        <button role="tab" data-tab="linkedin-exec">LinkedIn exec</button>
-        <button role="tab" data-tab="youtube">YouTube</button>
-      </div>
-    </div>
-    <div class="tab-group" role="presentation">
-      <span class="tab-group-label" aria-hidden="true">Tool</span>
-      <div class="tab-group-buttons" role="presentation">
-        <button role="tab" data-tab="lookup">Look up</button>
-      </div>
-    </div>
-  </nav>
-  <button class="tabs-arrow right" type="button" aria-label="Show more tabs" hidden>&rsaquo;</button>
+  <div class="nav-row">
+    <button id="exec-back" class="ghost" type="button">Exec view</button>
+    <label class="pick nav-pick">Section
+      <select id="tab-pick" aria-label="Choose a section of the dashboard">
+        <optgroup label="Results">
+          <option value="summary">Takeaways</option>
+          <option value="team">Team metrics</option>
+          <option value="pipeline">Pipeline</option>
+          <option value="leads">Leads</option>
+          <option value="journey">Customer journey</option>
+        </optgroup>
+        <optgroup label="Traffic">
+          <option value="visits">Website visits</option>
+          <option value="search">Google search</option>
+          <option value="aeo">AEO</option>
+        </optgroup>
+        <optgroup label="What we ran">
+          <option value="campaigns">Campaigns</option>
+          <option value="events">Events</option>
+          <option value="content">Content</option>
+          <option value="pr">PR and media</option>
+        </optgroup>
+        <optgroup label="Social">
+          <option value="linkedin">LinkedIn brand</option>
+          <option value="linkedin-exec">LinkedIn exec</option>
+          <option value="youtube">YouTube</option>
+        </optgroup>
+        <optgroup label="Tool">
+          <option value="lookup">Look up</option>
+        </optgroup>
+      </select>
+    </label>
   </div>
 </header>
 
 <main>
+  <section id="tab-exec" class="tab exec" role="tabpanel" hidden>
+    <div class="exec-head">
+      <div>
+        <h2>Marketing at a glance</h2>
+        <p class="muted" id="exec-period">Loading...</p>
+      </div>
+      <div class="exec-controls">
+        <label class="pick">Quarter <select id="exec-quarter" aria-label="Choose a quarter"></select></label>
+        <button id="exec-details" class="exec-details" type="button">See all details</button>
+      </div>
+    </div>
+    <div class="exec-cards" id="exec-cards"></div>
+    <div class="exec-logos-wrap">
+      <h3 id="exec-logos-title">Where we were covered</h3>
+      <div class="logo-wall" id="exec-logos"></div>
+    </div>
+    <p class="source" id="exec-source"></p>
+  </section>
+
   <section id="tab-summary" class="tab" role="tabpanel" hidden>
-    <h2>Summary</h2>
+    <h2>Takeaways</h2>
     <p class="lead" id="summary-period">Loading...</p>
     <div class="sum-boxes" id="summary-boxes"></div>
     <div class="sum-cards" id="summary-body"></div>
@@ -178,6 +178,18 @@
       <p class="source" id="content-deals-source"></p>
     </div>
     <div class="panel">
+      <h3>Blogs by type</h3>
+      <p class="muted">Every blog has one type. Counts follow the period above.</p>
+      <div class="cards compact" id="content-btype-cmp-cards"></div>
+      <p class="source" id="content-btype-cmp-source"></p>
+    </div>
+    <div class="panel">
+      <h3>Campaign hubs</h3>
+      <p class="muted">A hub blog, the formats built from it and where it was shared.</p>
+      <div id="content-hubs"></div>
+      <p class="source" id="content-hubs-source"></p>
+    </div>
+    <div class="panel">
       <h3>Published this quarter</h3>
       <p class="muted">Every blog post, report, white paper, eBook, guide, webinar and YouTube video we published from 1 Jul 2026, newest first.</p>
       <div id="content-published"><p class="muted">Loading...</p></div>
@@ -196,6 +208,10 @@
     <h2>PR and media</h2>
     <p class="lead">Every article, interview, byline, podcast and press mention of Opsera from 1 Jul 2026, by quarter.</p>
     <p class="muted" id="pr-status">Loading...</p>
+    <div class="panel">
+      <div class="panel-head"><h3 id="pr-logos-title">Where we were covered</h3><span class="muted">Click an outlet to show only its pieces</span></div>
+      <div class="logo-wall" id="pr-logos"></div>
+    </div>
     <div class="cards compact" id="pr-cards"></div>
     <p class="source" id="pr-cards-source"></p>
     <div class="pr-filters" id="pr-filters" role="group" aria-label="Filter the pieces"></div>
@@ -210,6 +226,12 @@
       <p class="muted">Click a row to see its topic, outlet tier, who placed it, visits and Ahrefs estimates.</p>
       <div id="pr-list"></div>
       <p class="source" id="pr-list-source"></p>
+    </div>
+    <div class="panel" id="pr-ops-panel">
+      <h3>Open and missed opportunities</h3>
+      <p class="muted">Media asks SamsonPR is working on, with no reporter or customer names.</p>
+      <div id="pr-ops"></div>
+      <p class="source" id="pr-ops-source"></p>
     </div>
     <div class="panel" id="pr-sov-panel">
       <h3>Share of voice</h3>
@@ -226,6 +248,7 @@
       <p class="note">Visits, engaged visits and demo requests come from Google Analytics, which starts on 1 Apr 2026. Most sites only pass on their own name, so a visit counts for the newest piece on that site from its publish date. Pieces on YouTube or Spotify get no numbers, since those visits can't be told apart from our own channels.</p>
       <p class="note">Ahrefs estimates: Google visits a month, top searches, Domain Rating and links to opsera.ai. Claude Code refreshes them from Ahrefs once a month.</p>
       <p class="note" id="pr-sov-note">Share of voice reads Google News one week at a time and counts headlines naming each company, leaving out the company's own site and look-alikes such as football's Copa do Brasil or AI "harnesses". Google News shows only some copies of a press release, so these counts are lower than the rows above.</p>
+      <p class="note">Placements leave out briefings, partnership pages and pieces still in draft; those show in the list with their type. Placed by SamsonPR and Readership come from SamsonPR's tracker, whose Readership is the outlet's circulation or unique visitors a month. Ask Claude Code to "read SamsonPR's tracker" to refresh them.</p>
       <p class="note">To add a PR agency's list, save it as a .csv or .xlsx file in Desktop/Data/pr-agency with the columns Date (YYYY-MM-DD), Outlet, Title, Link, Type and Quoted, and optionally Topic and Agency. The file name or the Agency column fills Placed by. Then ask Claude Code to add the PR agency list.</p>
       <p class="note">The top numbers compare this quarter so far with the same days of the quarter before. Quarters are Opsera's fiscal quarters: Q2 is May to Jul, Q3 is Aug to Oct and Q4 is Nov to Jan. Mentions start 1 Jul 2026; bylines, interviews and podcasts go back further.</p>
     </details>
@@ -658,6 +681,12 @@
     <p class="source" id="li-co-cmp-source"></p>
 
     <div class="panel">
+      <h3>Month on month, unpaid</h3>
+      <div id="li-co-mom"></div>
+      <p class="source" id="li-co-mom-source"></p>
+    </div>
+
+    <div class="panel">
       <div class="panel-head">
         <h3 class="period-title">Week by week</h3>
         <div class="seg" id="li-co-cmp-metric" role="group" aria-label="Choose what the chart shows"></div>
@@ -977,6 +1006,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=105"></script>
+<script src="app.js?v=106"></script>
 </body>
 </html>

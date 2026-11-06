@@ -1,0 +1,34 @@
+{
+ "source": "Campaign hubs, written by hand from Purav's list (6 Nov 2026)",
+ "hubs": [
+  {
+   "name": "PHP2Shell",
+   "hub": {
+    "title": "PHP2Shell: Invisible Threats and What to Do Next",
+    "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+    "date": "2026-10-26"
+   },
+   "formats": [
+    {
+     "name": "Campaign page",
+     "link": "https://opsera.ai/php2shell"
+    },
+    {
+     "name": "Video with Vishnu and Nassir"
+    },
+    {
+     "name": "One-pager"
+    }
+   ],
+   "shared_via": [
+    "Kumar's LinkedIn post",
+    "Brand LinkedIn post",
+    "Team LinkedIn posts",
+    "GitHub Universe email: 10,276 delivered, 15 clicks",
+    "GitHub Universe booth",
+    "Catapult pitch",
+    "Forbes byline, in draft"
+   ]
+  }
+ ]
+}

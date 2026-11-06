@@ -1,0 +1,55 @@
+{
+ "source": "SamsonPR tracker, Account Activities (SamsonPR-tracker-2026-11-06.xlsx)",
+ "read": "2026-11-06",
+ "items": [
+  {
+   "outlet": "CIO News/TechTarget",
+   "ask": "Follow-up questions on a customer's modernization story, with Kumar's view first",
+   "status": "Under Opsera Review",
+   "follow_up": "Under Opsera Review",
+   "deadline": "Open"
+  },
+  {
+   "outlet": "CIO",
+   "ask": "Story on whether faster AI development brings business value, with a customer engineering leader",
+   "status": "Under Opsera Review",
+   "follow_up": "Under Opsera Review",
+   "deadline": "11 Nov"
+  },
+  {
+   "outlet": "Morning Brew",
+   "ask": "Missed an earlier story on deadline; the reporter wants to talk with Kumar for a later one",
+   "status": "Missed",
+   "follow_up": "Following Up",
+   "deadline": "None given"
+  },
+  {
+   "outlet": "Reuters",
+   "ask": "Follow-up quotes from Kumar after the 16 Oct briefing, sent in a doc",
+   "status": "In Progress",
+   "follow_up": "In Progress",
+   "deadline": "2026-10-20"
+  },
+  {
+   "outlet": "TFiR",
+   "ask": "Video for The Agentic Enterprise series on running AI agents in production",
+   "status": "Under Opsera Review",
+   "follow_up": "Under Opsera Review",
+   "deadline": "TBC"
+  },
+  {
+   "outlet": "AITech365",
+   "ask": "Written Q&A with Kumar, draft ready for review",
+   "status": "Under Opsera Review",
+   "follow_up": "Under Opsera Review",
+   "deadline": "16 Nov"
+  },
+  {
+   "outlet": "The Information",
+   "ask": "The reporter wants to speak with Kumar",
+   "status": "Following Up",
+   "follow_up": "Following Up",
+   "deadline": "None given"
+  }
+ ]
+}

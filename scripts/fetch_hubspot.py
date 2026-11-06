@@ -56,7 +56,7 @@ EVENT_ROWS = [
      ["DG-FY27-Q3-Tokenomics-Webinar"], [], ["/events/tokenomics-the-currency-of-enterprise-ai"], "Sign-ups may overlap with the event page form"),
     ("flutter", "Flutter 2026: the AI-SDLC Summit", "Event", "2026-10-01", "2026-10-01",
      ["Opsera Flutter 2026_ The AI-SDLC Summit - Guests - 2026-09-02-20-27-29.csv"], ["Flutter 2026 Attendees"], ["/flutter-2026-ai-sdlc-summit"],
-     "Sign-ups are the Luma guest list"),
+     "Sign-ups are the Luma guest list. Includes the fireside chat with Sheila Jordan"),   # the fireside chat was part of Flutter 2026 (Purav, 6 Nov 2026)
     ("gartner", "Gartner IT Symposium/Xpo, Orlando", "Event", "2026-10-19", "2026-10-22",
      [], ["Gartner IT Symposium 2026 booth scans"], ["/gartner-symposium", "/events/gartner-summit-2026"], "Attended means booth scans"),
     ("github_universe", "GitHub Universe", "Event", "2026-10-28", "2026-10-29", [], [],

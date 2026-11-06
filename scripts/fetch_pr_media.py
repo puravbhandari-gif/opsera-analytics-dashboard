@@ -9,6 +9,11 @@ Rows already in the file stay. Each run adds new ones from:
 - a PR agency's list, if one is dropped into ~/Desktop/Data/pr-agency as .csv or .xlsx
   with the columns Date, Outlet, Title, Link, Type and Quoted (Quoted can be blank); the file's name,
   or an Agency column, fills "Placed by". A row already found gets its "Placed by" from the list.
+- SamsonPR's own tracker, saved as SamsonPR-tracker-*.xlsx in the same folder (agreed 6 Nov 2026): every piece in its
+  "Coverage Tracker 2026" tab is placed by SamsonPR, with its readership from "Circulation or UVM". Its "Account
+  Activities" tab gives data/pr_opportunities.json: outlet, ask, status and deadline, with no reporter or customer names.
+- A few rows added by hand (MANUAL): briefings, partnerships and pieces still in draft. They show in the list but
+  don't count as placements.
 
 A found page counts only if its own text says Opsera. Job posts, directory and review listings,
 company profiles, social media and our own sites are left out. Before 1 Jul 2026 only bylines, interviews
@@ -37,7 +42,24 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "pr_media.json"
 AGENCY = Path.home() / "Desktop" / "Data" / "pr-agency"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 MAX_CHARGE_USD = 1   # each weekly run costs a few cents; this caps a run that goes wrong
-TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention")
+TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership")
+OPPORTUNITIES = Path(__file__).resolve().parent.parent / "data" / "pr_opportunities.json"
+# Added by hand (agreed 6 Nov 2026). Not placements: a briefing, a partnership listing and a piece still in draft.
+MANUAL = [
+    {"date": "2026-10-16", "outlet": "Reuters", "title": "Briefing with Kumar Chivukula", "link": "", "type": "Briefing",
+     "topic": "Other", "quoted": "Kumar Chivukula", "placed_by": "SamsonPR", "found_by": "SamsonPR tracker, Account Activities"},
+    {"date": "2026-11-06", "outlet": "Forbes", "title": "PHP2Shell byline", "link": "", "type": "Byline", "status": "In draft",
+     "topic": "Security", "quoted": "", "placed_by": "", "found_by": "Added by hand"},
+]
+PARTNERSHIP = {"https://x.ai/news/partnernetworkannouncement", "https://x.ai/partners/marketplace"}   # the xAI partner network
+# One short ask per outlet in SamsonPR's Account Activities tab, written without reporter or customer names
+ASKS = {"CIO News/TechTarget": ("Follow-up questions on a customer's modernization story, with Kumar's view first", False),
+        "CIO": ("Story on whether faster AI development brings business value, with a customer engineering leader", False),
+        "Morning Brew": ("Missed an earlier story on deadline; the reporter wants to talk with Kumar for a later one", True),
+        "Reuters": ("Follow-up quotes from Kumar after the 16 Oct briefing, sent in a doc", False),
+        "TFiR": ("Video for The Agentic Enterprise series on running AI agents in production", False),
+        "AITech365": ("Written Q&A with Kumar, draft ready for review", False),
+        "The Information": ("The reporter wants to speak with Kumar", False)}
 # Opsera people: named in the "Opsera people" column when a piece is by them or quotes them (shown by name, agreed 4 Nov 2026)
 PEOPLE = ["Kumar Chivukula", "Patty Hatter", "Chandra Ranganathan", "Gilbert Martin", "Vishnu Vasudevan", "Ryan Cartwright"]
 NAMES = {"Patricia Hatter": "Patty Hatter"}
@@ -193,10 +215,65 @@ def found_in_newsroom():
     return out
 
 
+def key(x):
+    """Rows are kept by link; a row with no link (a briefing, a draft) by its date, outlet and title."""
+    return x["link"] or f"{x['date']} {x['outlet']} {x['title']}"
+
+
+def samson_tracker():
+    """SamsonPR's tracker: coverage rows (placed by SamsonPR, with readership) and open and missed opportunities."""
+    found = sorted(AGENCY.glob("SamsonPR-tracker-*.xlsx")) if AGENCY.exists() else []
+    if not found:
+        return [], None
+    import openpyxl
+    wb = openpyxl.load_workbook(found[-1])   # the newest, by the date in its name
+    ws = wb["Coverage Tracker 2026"]
+    rows, head = [], None
+    for r in ws.iter_rows():
+        vals = [c.value for c in r]
+        if head is None:
+            if "Date" in vals and "Publication" in vals:
+                head = [str(v or "").strip() for v in vals]
+            continue
+        rec = dict(zip(head, r))
+        when, pub, cell = rec["Date"].value, rec["Publication"].value, rec["Hyperlinked Headline"]
+        if not (when and pub and cell.value):
+            continue
+        reach = rec["Circulation or UVM"].value
+        rows.append({"date": when.date().isoformat() if hasattr(when, "date") else str(when)[:10], "outlet": str(pub).strip(),
+                     "title": str(cell.value).strip().translate(STRAIGHT), "link": cell.hyperlink.target if cell.hyperlink else "",
+                     "readership": int(reach) if isinstance(reach, (int, float)) else None, "placed_by": "SamsonPR",
+                     "found_by": f"SamsonPR tracker ({found[-1].name})"})
+    ops, part, seen = [], None, 0
+    for r in wb["Account Activities"].iter_rows(values_only=True):   # columns: outlet, details, link, timing, status
+        first = str(r[0] or "").strip()
+        if first == "Media Opportunities":   # the 1st is the tab's title; the outlets follow the 2nd
+            seen += 1
+            part = "media" if seen == 2 else None
+        elif first == "Media Outreach":
+            part = None
+        elif part == "media" and first:
+            outlet = first.split("|")[0].strip().rstrip(".")
+            ask, missed = ASKS.get(outlet, ("New: see SamsonPR's tracker", False))
+            if outlet not in ASKS:
+                print(f"  SamsonPR tracker: no short ask written yet for {outlet}")
+            when = r[3]
+            if hasattr(when, "date"):
+                deadline = when.date().isoformat()
+            else:
+                deadline = re.sub(r"(?i)^(deadline|requested responses before)\s*", "", str(when or "").strip()) or "None given"
+                deadline = re.sub(r"^([A-Z][a-z]{2}) (\d{1,2})$", r"\2 \1", deadline).replace("open", "Open")
+            ops.append({"outlet": outlet, "ask": ask, "status": "Missed" if missed else str(r[4] or "Not given").strip(),
+                        "follow_up": str(r[4] or "").strip(), "deadline": deadline})
+    return rows, {"source": f"SamsonPR tracker, Account Activities ({found[-1].name})", "read": dt.date.today().isoformat(), "items": ops}
+
+
 def agency_rows():
     """Rows from the PR agency lists, each with "Placed by": the Agency column, or the file's name."""
     rows = []
     for f in sorted(AGENCY.glob("*")) if AGENCY.exists() else []:
+        if f.name.startswith("SamsonPR-tracker-"):
+            continue   # read by samson_tracker()
         if f.suffix.lower() == ".csv":
             with f.open(newline="", encoding="utf-8-sig") as fh:
                 recs = list(csv.DictReader(fh))
@@ -225,7 +302,7 @@ def agency_rows():
 
 def main():
     have = json.loads(OUT.read_text()) if OUT.exists() else {"items": []}
-    items = {x["link"]: x for x in have["items"]}
+    items = {key(x): x for x in have["items"]}
     release_titles = {words(x["title"]) for x in items.values() if x["type"] == "Press release"}
 
     if "--from" in sys.argv:
@@ -276,6 +353,24 @@ def main():
         print(f"  added {date} {t}: {items[link]['outlet']}, {items[link]['title'][:70]}")
 
     if "--agency" in sys.argv:
+        coverage, ops = samson_tracker()
+        for r in coverage:
+            have_it = items.get(r["link"])
+            if have_it:   # already found: the tracker says who placed it and its readership
+                have_it["placed_by"], have_it["readership"] = r["placed_by"], r["readership"]
+                continue
+            r["outlet"] = outlet_for(r["link"], r["outlet"]) if r["link"] else r["outlet"]
+            r["type"] = "Press release" if same_release(r["title"], release_titles) else "Mention"
+            r["topic"], r["quoted"] = topic(r["title"]), ""
+            if r["link"]:
+                text, _, _, extra = read_page(r["link"])
+                r["quoted"] = quoted(f"{text or ''} {extra.get('authors', '') if extra else ''}")
+            items[key(r)] = r
+            added += 1
+            print(f"  added from SamsonPR's tracker: {r['date']} {r['type']}: {r['outlet']}, {r['title'][:70]}")
+        if ops:
+            OPPORTUNITIES.write_text(json.dumps(ops, indent=1) + "\n")
+            print(f"  SamsonPR opportunities: {len(ops['items'])}")
         for r in agency_rows():
             if r["link"] in items:   # already found: the list only says who placed it
                 items[r["link"]]["placed_by"] = r["placed_by"]
@@ -284,9 +379,13 @@ def main():
                 added += 1
                 print(f"  added from the PR agency list: {r['date']} {r['type']}: {r['outlet']}, {r['title'][:70]}")
 
+    for m in MANUAL:
+        items.setdefault(key(m), dict(m))
     for x in items.values():   # rows from before these columns existed
         x.setdefault("placed_by", "")
-        if not x["found_by"].startswith("PR agency"):
+        if x["link"] in PARTNERSHIP:
+            x["type"] = "Partnership"
+        if not x["found_by"].startswith(("PR agency", "Added by hand", "SamsonPR")):
             x["topic"] = topic(x["title"])
     for x in items.values():   # a pickup found before its press release
         if x["type"] == "Mention" and x["found_by"] != "Checked by hand" and same_release(x["title"], release_titles):

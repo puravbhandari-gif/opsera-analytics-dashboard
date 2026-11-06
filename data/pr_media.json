@@ -1,8 +1,20 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-04",
+ "checked": "2026-11-06",
  "items": [
+  {
+   "date": "2026-11-06",
+   "outlet": "Forbes",
+   "title": "PHP2Shell byline",
+   "link": "",
+   "type": "Byline",
+   "status": "In draft",
+   "topic": "Security",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand"
+  },
   {
    "date": "2026-11-03",
    "outlet": "Voltage Control",
@@ -15,6 +27,18 @@
    "found_by": "Apify, Google News and Google search"
   },
   {
+   "date": "2026-10-30",
+   "outlet": "CMOtech",
+   "title": "Opsera relaunches as AI-native software factory platform",
+   "link": "https://cmotech.news/story/opsera-relaunches-as-ai-native-software-factory-platform",
+   "readership": 2222,
+   "placed_by": "SamsonPR",
+   "found_by": "SamsonPR tracker (SamsonPR-tracker-2026-11-06.xlsx)",
+   "type": "Mention",
+   "topic": "Forge",
+   "quoted": "Kumar Chivukula"
+  },
+  {
    "date": "2026-10-29",
    "outlet": "SD Times",
    "title": "Opsera Relaunches as an AI-Native Software Factory",
@@ -22,8 +46,9 @@
    "type": "Mention",
    "quoted": "Kumar Chivukula",
    "found_by": "Apify (saved results)",
-   "placed_by": "",
-   "topic": "Forge"
+   "placed_by": "SamsonPR",
+   "topic": "Forge",
+   "readership": 23506
   },
   {
    "date": "2026-10-29",
@@ -33,8 +58,21 @@
    "type": "Mention",
    "quoted": "Kumar Chivukula",
    "found_by": "Apify (saved results)",
-   "placed_by": "",
-   "topic": "Forge"
+   "placed_by": "SamsonPR",
+   "topic": "Forge",
+   "readership": 5773
+  },
+  {
+   "date": "2026-10-29",
+   "outlet": "AiThority",
+   "title": "Opsera Relaunches as an AI-Native Software Factory for the Enterprise",
+   "link": "https://aithority.com/machine-learning/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/",
+   "readership": 29712,
+   "placed_by": "SamsonPR",
+   "found_by": "SamsonPR tracker (SamsonPR-tracker-2026-11-06.xlsx)",
+   "type": "Press release",
+   "topic": "Forge",
+   "quoted": "Kumar Chivukula"
   },
   {
    "date": "2026-10-28",
@@ -57,6 +95,18 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Forge"
+  },
+  {
+   "date": "2026-10-28",
+   "outlet": "GEroundtable",
+   "title": "Opsera Rebuilds Software Delivery As An AI Factory",
+   "link": "https://geroundtable.com/opsera-ai-native-software-factory-forge/",
+   "readership": null,
+   "placed_by": "SamsonPR",
+   "found_by": "SamsonPR tracker (SamsonPR-tracker-2026-11-06.xlsx)",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "Kumar Chivukula"
   },
   {
    "date": "2026-10-28",
@@ -96,7 +146,7 @@
    "outlet": "xAI",
    "title": "Introducing the SpaceX Super Intelligence Partner Network",
    "link": "https://x.ai/news/partnernetworkannouncement",
-   "type": "Mention",
+   "type": "Partnership",
    "topic": "Other",
    "quoted": "Kumar Chivukula",
    "placed_by": "",
@@ -118,11 +168,22 @@
    "outlet": "xAI",
    "title": "Marketplace Partner Program | SpaceXSI",
    "link": "https://x.ai/partners/marketplace",
-   "type": "Mention",
+   "type": "Partnership",
    "topic": "Other",
    "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-16",
+   "outlet": "Reuters",
+   "title": "Briefing with Kumar Chivukula",
+   "link": "",
+   "type": "Briefing",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "SamsonPR",
+   "found_by": "SamsonPR tracker, Account Activities"
   },
   {
    "date": "2026-10-08",

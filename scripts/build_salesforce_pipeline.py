@@ -27,6 +27,9 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
   are matched by email to the meetings export, and count when a meeting was set on or after the event's first day.
 - A "To review" list: deals with a campaign joined just outside the 90-day window (91 to 120 days), or whose campaigns
   match more than one source (marketing, booking agency, SDR or AE outreach).
+Agreed with Purav on 6 Nov 2026: flags on the To review list, with the deals kept in the totals.
+- An existing customer's deal (EXISTING_CUSTOMERS, by account; the account name is never written).
+- A deal credited to an event that started after the deal was created: doubtful.
 """
 import collections
 import datetime as dt
@@ -58,6 +61,7 @@ FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 
          "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
          "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls"}
+EXISTING_CUSTOMERS = {"Honeywell Aerospace"}   # flagged on the To review list (Purav, 6 Nov 2026)
 EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28)}
 
 
@@ -231,7 +235,10 @@ def main():
         sources = {"marketing" for c in [primary, *others] if marketing(c)} | {"booking agency" for c in [primary, *others] if AGENCY.search(c)} | \
                   {"SDR or AE outreach" for c in [primary, *others] if c and SALES.search(c)}
         reasons = ([f"Joined {', '.join(sorted(public(c) for c in near))} 91 to {NEAR_DAYS} days before the deal"] if near else []) + \
-                  ([f"Matches more than 1 source: {', '.join(sorted(sources))}"] if len(sources) > 1 else [])
+                  ([f"Matches more than 1 source: {', '.join(sorted(sources))}"] if len(sources) > 1 else []) + \
+                  (["Existing customer"] if bucket in ("sourced", "influenced") and o["Account Name"].strip() in EXISTING_CUSTOMERS else []) + \
+                  ([f"Doubtful: deal created before the event ({public(campaign)})"] if bucket in ("sourced", "influenced") and any(
+                      EVENT_CAMPAIGNS[k] == campaign and created < first for k, first in EVENT_FIRST_DAY.items()) else [])
         if reasons:
             review.append({"date": created.isoformat(), "amount": amount, "stage": o["Stage"],
                            "counted_as": {"sourced": "Marketing sourced (estimate)", "influenced": "Marketing influenced", "agency": "Booking agency",
