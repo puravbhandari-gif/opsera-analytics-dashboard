@@ -49,7 +49,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] When Kumar's newsletter launches, add subscribers, opens and clicks per issue to the dashboard.
 - [ ] Newsroom has no press release since 5 May; add the newer ones, including the 10 Jun 2026 VIBEshift release ("Opsera Launches VIBEshift" on PR Newswire).
 - [ ] Every month: ask Claude Code to refresh Ahrefs for PR.
-- [ ] When Infrasity sends their results report: ask Claude Code to add it to the SEO and AEO view, where a placeholder waits for it.
+- [ ] When Infrasity sends a new growth report: save it to Desktop/Data/infrasity and ask Claude Code to check its claims and update the Infrasity section of the SEO and AEO view.
 - [ ] SEO and AEO view covers 1 Jan to 31 Oct 2026. To extend it, change END in scripts/fetch_seo_aeo.py, run it on this Mac, and ask Claude Code to rewrite the 3 product lines in data/seo_aeo_lines.json.
 - [x] Personal views: saved links per person.
 - [x] GTM calendar markers on every dated chart, from Notion, with an on/off switch and a filter by type.

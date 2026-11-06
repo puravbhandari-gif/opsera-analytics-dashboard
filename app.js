@@ -2752,7 +2752,15 @@ function renderSeo(d, t) {
   };
   $("seo-product").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) draw(b.dataset.p); });
   draw("overall");
-  $("seo-infrasity").textContent = `Until then: Infrasity has ${num(d.infrasity.pages_on_site)} pages on opsera.ai and ${num(d.infrasity.posts_elsewhere)} posts on Medium, dev.to and daily.dev, from ${d.infrasity.list}. Posts on other sites aren't in these numbers.`;
+  // Infrasity: what they published, what it brought by our numbers, and their AI citation claims (added 6 Nov 2026)
+  const inf = d.infrasity, mon = (m) => monthName(`${m}-01`);
+  $("seo-inf-published").innerHTML = list(inf.published.map((x) => `<tr><td>${mon(x.month)}</td><td class="wrap">${esc(x.what)}<div class="muted small">${num(x.pages)} on ${esc(x.site)}, ${num(x.elsewhere)} on other sites</div></td></tr>`));
+  $("seo-inf-results").innerHTML = `<table class="seo-table"><thead><tr><th></th><th class="num">Google clicks</th><th class="num">AI tool visits</th></tr></thead><tbody>${
+    inf.months.map((x) => `<tr><td>${mon(x.month)}</td><td class="num">${num(x.clicks)}</td><td class="num">${num(x.ai_visits)}</td></tr>`).join("")}</tbody></table>
+    <p class="muted small">On opsera.ai only. July and August pages were on softwareforge.ai until they moved here, so their clicks there aren't counted.</p>`;
+  $("seo-inf-claims").innerHTML = t.infrasity_claims.items.map((c) => `<li>${esc(c)}</li>`).join("");
+  $("seo-infrasity").textContent = `Sources: ${t.infrasity_claims.source} and their July and August SoftwareForge reports for what they published and for the AI citations. ` +
+    `Our numbers count ${num(inf.pages_on_site)} Infrasity pages on opsera.ai, from their content list and reports. Their ${num(inf.posts_elsewhere)} posts on Medium, dev.to and daily.dev aren't in these numbers.`;
   $("seo-source").textContent = `Sources: ${d.source}, ${range(d.start_date, d.end_date)}, pulled ${dayYear(d.pulled)}. Google spots from the Rankings panel, week of ${day(d.rankings_week)}. ` +
     "Forge pages are about Forge, the software factory or code modernization. Insights pages are about Unified Insights, DORA and engineering metrics, or AI code assistant analytics. " +
     `Keywords count when they brought clicks to that product's pages; Google hides rare searches, so they add up to less than page clicks. ${t.source}.`;

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=38">
+<link rel="stylesheet" href="styles.css?v=39">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -121,10 +121,14 @@
       <div class="exec-card"><h3>Google spot, Rankings panel</h3><p class="muted">Tracked pages: first week tracked, then late Oct. Lower is better</p><div id="seo-ranks"></div></div>
       <div class="exec-card"><h3>Pages AI tools send people to</h3><p class="muted">ChatGPT, Gemini, Perplexity, Claude and others</p><div id="seo-ai-pages"></div></div>
     </div>
-    <div class="exec-card seo-placeholder">
-      <h3>Infrasity's results report</h3>
-      <p class="exec-line">Coming later. Their own report will show here next to these numbers.</p>
-      <p class="muted" id="seo-infrasity"></p>
+    <div class="exec-card seo-inf">
+      <h3>Infrasity, July to October</h3>
+      <div class="seo-inf-grid">
+        <div><h4>What they published</h4><div id="seo-inf-published"></div></div>
+        <div><h4>What it brought, by our numbers</h4><div id="seo-inf-results"></div></div>
+        <div><h4>AI citations</h4><p class="seo-unchecked">Infrasity's numbers, not checked by us</p><ul class="seo-claims" id="seo-inf-claims"></ul></div>
+      </div>
+      <p class="muted small" id="seo-infrasity"></p>
     </div>
     <p class="source" id="seo-source"></p>
   </section>
@@ -1037,6 +1041,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=109"></script>
+<script src="app.js?v=110"></script>
 </body>
 </html>

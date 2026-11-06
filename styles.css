@@ -389,3 +389,12 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 .seo-placeholder { border-style: dashed; box-shadow: none; margin-bottom: 12px; }
 @media (max-width: 900px) { .seo-lines { grid-template-columns: 1fr; gap: 12px; } .exec-cards.seo-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 700px) { .seo-grid, .exec-cards.seo-cards { grid-template-columns: 1fr; } }
+.seo-inf { margin-bottom: 12px; }
+.seo-inf-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 24px; margin-top: 10px; }
+.seo-inf-grid h4 { font-family: var(--font); font-size: 0.85rem; font-weight: 500; color: var(--ink-2); margin: 0; }
+.seo-table th { font-weight: 500; font-size: 0.78rem; color: var(--muted); text-align: left; padding: 6px 6px 4px 0; }
+.seo-table th.num { text-align: right; }
+.seo-unchecked { display: inline-block; font-size: 0.75rem; color: var(--bad); border: 1px solid currentColor; border-radius: 999px; padding: 1px 8px; margin: 6px 0 4px; }
+.seo-claims { margin: 6px 0 0; padding-left: 18px; font-size: 0.85rem; color: var(--ink-2); }
+.seo-claims li { margin-bottom: 6px; }
+@media (max-width: 900px) { .seo-inf-grid { grid-template-columns: 1fr; gap: 16px; } }

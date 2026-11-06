@@ -44,8 +44,27 @@ INFRASITY = {"/blog/harness-engineering", "/blog/ai-software-factory", "/blog/so
              "/blog/ai-sdlc", "/blog/technical-depth-in-ai-sdlc", "/blog/cobol-modernization", "/blog/legacy-code-modernization",
              "/blog/snowflake-to-databricks-migration", "/blog/application-modernization", "/blog/software-factory-model",
              "/blog/java-modernization-architecture", "/resources/comparison-guides/blitzy", "/resources/comparison-guides/devin-ai",
-             "/resources/comparison-guides/8090", "/resources/comparison-guides/factory-ai", "/resources/comparison-guides/claude"}
+             "/resources/comparison-guides/8090", "/resources/comparison-guides/factory-ai", "/resources/comparison-guides/claude",
+             # From their growth reports (July, August and October 2026, in ~/Desktop/Data/infrasity): pages made for SoftwareForge
+             # (softwareforge.ai) that moved to opsera.ai, and the September and October sprints. Added 6 Nov 2026.
+             "/software-factory", "/blog/generative-ai-security", "/blog/healthcare-data-modernization", "/blog/healthcare-it-modernization",
+             "/blog/enterprise-benchmark", "/blog/application-modernization-strategy", "/blog/mcp-security", "/blog/claude-mythos-vulnerability",
+             "/blog/software-factory-pattern", "/blog/github-copilot-alternatives", "/blog/migrate-dotnet-framework-to-dotnet-10",
+             "/blog/migrate-coldfusion-to-java-spring-boot", "/blog/software-factory-benefits", "/blog/software-factory-as-a-service",
+             "/blog/cursor-alternatives"}
+INFRASITY_UNDER = ("/forge/modernization/", "/forge/new-apps/")   # their migration and new-app pages, moved onto opsera.ai on 12 Oct
 INFRASITY_OFFSITE = 11   # their Distribution posts on Medium, dev.to and daily.dev
+# What they published each month, from their reports (Jul and Aug on softwareforge.ai, before it moved to opsera.ai)
+INFRASITY_PUBLISHED = [
+    {"month": "2026-07", "site": "softwareforge.ai", "pages": 11, "elsewhere": 7, "what": "4 landing pages and 7 blogs on software factory and modernization"},
+    {"month": "2026-08", "site": "softwareforge.ai", "pages": 21, "elsewhere": 6, "what": "15 migration and healthcare landing pages, 6 blogs on AI-SDLC and security"},
+    {"month": "2026-09", "site": "opsera.ai", "pages": 6, "elsewhere": 4, "what": "Factory.ai and 8090 alternatives, AI software factory and 3 more"},
+    {"month": "2026-10", "site": "opsera.ai", "pages": 25, "elsewhere": 4, "what": "12 Forge migration pages, 5 Forge comparisons and 8 blogs, 3 of them out 2 Nov"},
+]
+
+
+def infrasity(path):
+    return path in INFRASITY or path.startswith(INFRASITY_UNDER)
 
 
 def path_of(url):
@@ -69,6 +88,7 @@ def main():
                "kw_shown": collections.Counter(), "kw_spot": collections.Counter(), "brand_clicks": 0, "keyword_clicks": 0,
                "ai": collections.Counter(), "ai_months": collections.Counter(), "ai_pages": collections.Counter()} for k in ("overall", *PRODUCTS)}
     page_months = collections.defaultdict(collections.Counter)   # page -> month -> clicks
+    inf_ai = collections.Counter()   # month -> AI tool visits to Infrasity's pages
 
     # Google: each month's clicks and times shown, by page
     for a, b in months():
@@ -111,6 +131,8 @@ def main():
             out[k]["ai"][tool] += r["sessions"]
             out[k]["ai_months"][f"{r['yearMonth'][:4]}-{r['yearMonth'][4:]}"] += r["sessions"]
             out[k]["ai_pages"][p] += r["sessions"]
+        if infrasity(p):
+            inf_ai[f"{r['yearMonth'][:4]}-{r['yearMonth'][4:]}"] += r["sessions"]
 
     ranked = json.loads(RANKINGS.read_text())["pages"]
     def spots(pg):
@@ -120,11 +142,14 @@ def main():
     result = {"source": "Google Search Console (sc-domain:opsera.ai) and Google Analytics 4, opsera.ai 2026",
               "start_date": START, "end_date": END, "pulled": dt.date.today().isoformat(), "rankings_week": RANK_WEEK,
               "infrasity": {"list": "Infrasity's content list, Google Sheet opsera_aeo_content, read 6 Nov 2026",
-                            "pages_on_site": len(INFRASITY), "posts_elsewhere": INFRASITY_OFFSITE},
+                            "pages_on_site": len({p for p in page_months if infrasity(p)} | INFRASITY), "posts_elsewhere": INFRASITY_OFFSITE,
+                            "published": INFRASITY_PUBLISHED,
+                            "months": [{"month": a[:7], "clicks": sum(m[a[:7]] for p, m in page_months.items() if infrasity(p)),
+                                        "ai_visits": inf_ai.get(a[:7], 0)} for a, _ in months() if a >= "2026-07"]},
               "products": {}}
     for k, v in out.items():
         def by(page):
-            return "Infrasity" if page in INFRASITY else "Opsera"
+            return "Infrasity" if infrasity(page) else "Opsera"
         pages = sorted(v["pages"].items(), key=lambda x: -x[1]["clicks"])
         inf_clicks = sum(x["clicks"] for p, x in pages if by(p) == "Infrasity")
         top_kw = [q for q, _ in v["keywords"].most_common() if not BRAND.search(q)][:10]

@@ -6,8 +6,60 @@
  "rankings_week": "2026-10-26",
  "infrasity": {
   "list": "Infrasity's content list, Google Sheet opsera_aeo_content, read 6 Nov 2026",
-  "pages_on_site": 22,
-  "posts_elsewhere": 11
+  "pages_on_site": 51,
+  "posts_elsewhere": 11,
+  "published": [
+   {
+    "month": "2026-07",
+    "site": "softwareforge.ai",
+    "pages": 11,
+    "elsewhere": 7,
+    "what": "4 landing pages and 7 blogs on software factory and modernization"
+   },
+   {
+    "month": "2026-08",
+    "site": "softwareforge.ai",
+    "pages": 21,
+    "elsewhere": 6,
+    "what": "15 migration and healthcare landing pages, 6 blogs on AI-SDLC and security"
+   },
+   {
+    "month": "2026-09",
+    "site": "opsera.ai",
+    "pages": 6,
+    "elsewhere": 4,
+    "what": "Factory.ai and 8090 alternatives, AI software factory and 3 more"
+   },
+   {
+    "month": "2026-10",
+    "site": "opsera.ai",
+    "pages": 25,
+    "elsewhere": 4,
+    "what": "12 Forge migration pages, 5 Forge comparisons and 8 blogs, 3 of them out 2 Nov"
+   }
+  ],
+  "months": [
+   {
+    "month": "2026-07",
+    "clicks": 83,
+    "ai_visits": 2
+   },
+   {
+    "month": "2026-08",
+    "clicks": 115,
+    "ai_visits": 0
+   },
+   {
+    "month": "2026-09",
+    "clicks": 451,
+    "ai_visits": 5
+   },
+   {
+    "month": "2026-10",
+    "clicks": 363,
+    "ai_visits": 15
+   }
+  ]
  },
  "products": {
   "overall": {
@@ -129,8 +181,8 @@
     }
    ],
    "pages_with_clicks": 501,
-   "infrasity_clicks": 964,
-   "infrasity_pages_with_clicks": 16,
+   "infrasity_clicks": 1020,
+   "infrasity_pages_with_clicks": 35,
    "top_pages": [
     {
      "page": "/",
@@ -338,7 +390,7 @@
      "first_week": "2026-09-28",
      "first_spot": 6.0,
      "spot": 12.1,
-     "by": "Opsera"
+     "by": "Infrasity"
     },
     {
      "page": "/forge",
@@ -755,8 +807,8 @@
     }
    ],
    "pages_with_clicks": 42,
-   "infrasity_clicks": 547,
-   "infrasity_pages_with_clicks": 11,
+   "infrasity_clicks": 591,
+   "infrasity_pages_with_clicks": 27,
    "top_pages": [
     {
      "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
@@ -956,7 +1008,7 @@
      "first_week": "2026-09-28",
      "first_spot": 6.0,
      "spot": 12.1,
-     "by": "Opsera"
+     "by": "Infrasity"
     },
     {
      "page": "/forge",

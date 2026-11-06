@@ -7,12 +7,21 @@
    "not_working": "62.5% of keyword clicks come from people already searching for Opsera. AI tools sent only 70 to 110 visits a month, with no clear rise."
   },
   "forge": {
-   "working": "Clicks rose from 11 in Jan to 481 in Oct. Infrasity's pages brought 547 of the 1,552 clicks, and AI tool visits jumped to 32 in Oct.",
+   "working": "Clicks rose from 11 in Jan to 481 in Oct. Infrasity's pages brought 591 of the 1,552 clicks, and AI tool visits jumped to 32 in Oct.",
    "not_working": "\"software factory\" was shown 14,992 times but sits at spot 9.5, so it brought just 64 clicks. The /software-factory page slipped from spot 6.0 in late Sep to 12.1 in late Oct."
   },
   "insights": {
    "working": "AI tools sent 290 visits, the most of any product. The AI coding benchmark report and the Cursor adoption blog brought 141 of them.",
    "not_working": "Clicks fell from 828 in Jul to 266 in Oct, as the Cursor explainer dropped from 563 to 78. The term \"unified insights\" brought only 28 clicks."
   }
+ },
+ "infrasity_claims": {
+  "source": "Infrasity's October 2026 growth report",
+  "items": [
+   "Google AI Overviews name Opsera as a source for all 6 blogs they checked.",
+   "Perplexity lists Opsera as a source for the same 6 blogs.",
+   "ChatGPT cites 2 blogs: Factory.ai alternatives and Software factory as a service.",
+   "Claude cites opsera.ai for 11 of 35 tracked prompts. ChatGPT cites it for 7, Gemini for 5 and Perplexity for none."
+  ]
  }
 }
