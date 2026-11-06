@@ -1,0 +1,1570 @@
+{
+ "source": "Google Search Console (sc-domain:opsera.ai) and Google Analytics 4, opsera.ai 2026",
+ "start_date": "2026-01-01",
+ "end_date": "2026-10-31",
+ "pulled": "2026-11-06",
+ "rankings_week": "2026-10-26",
+ "infrasity": {
+  "list": "Infrasity's content list, Google Sheet opsera_aeo_content, read 6 Nov 2026",
+  "pages_on_site": 22,
+  "posts_elsewhere": 11
+ },
+ "products": {
+  "overall": {
+   "months": [
+    {
+     "month": "2026-01",
+     "clicks": 1587,
+     "times_shown": 501799
+    },
+    {
+     "month": "2026-02",
+     "clicks": 1766,
+     "times_shown": 776600
+    },
+    {
+     "month": "2026-03",
+     "clicks": 1659,
+     "times_shown": 900723
+    },
+    {
+     "month": "2026-04",
+     "clicks": 1904,
+     "times_shown": 602290
+    },
+    {
+     "month": "2026-05",
+     "clicks": 1826,
+     "times_shown": 400366
+    },
+    {
+     "month": "2026-06",
+     "clicks": 1959,
+     "times_shown": 1104295
+    },
+    {
+     "month": "2026-07",
+     "clicks": 2436,
+     "times_shown": 1332897
+    },
+    {
+     "month": "2026-08",
+     "clicks": 2315,
+     "times_shown": 988995
+    },
+    {
+     "month": "2026-09",
+     "clicks": 2453,
+     "times_shown": 539902
+    },
+    {
+     "month": "2026-10",
+     "clicks": 2247,
+     "times_shown": 418069
+    }
+   ],
+   "clicks": 20152,
+   "times_shown": 7565936,
+   "brand_share_pct": 64.7,
+   "keywords": [
+    {
+     "keyword": "cursor ai",
+     "clicks": 756,
+     "times_shown": 664000,
+     "avg_spot": 6.4
+    },
+    {
+     "keyword": "what is cursor ai",
+     "clicks": 219,
+     "times_shown": 44614,
+     "avg_spot": 3.7
+    },
+    {
+     "keyword": "twistlock scan",
+     "clicks": 218,
+     "times_shown": 2920,
+     "avg_spot": 3.1
+    },
+    {
+     "keyword": "hummingbird ai",
+     "clicks": 144,
+     "times_shown": 6132,
+     "avg_spot": 4.1
+    },
+    {
+     "keyword": "twistlock",
+     "clicks": 138,
+     "times_shown": 15965,
+     "avg_spot": 7.2
+    },
+    {
+     "keyword": "what is cursor",
+     "clicks": 119,
+     "times_shown": 48055,
+     "avg_spot": 6.1
+    },
+    {
+     "keyword": "agentic devops",
+     "clicks": 83,
+     "times_shown": 2786,
+     "avg_spot": 4.7
+    },
+    {
+     "keyword": "defect escape rate",
+     "clicks": 67,
+     "times_shown": 1881,
+     "avg_spot": 1.7
+    },
+    {
+     "keyword": "code quality metrics",
+     "clicks": 66,
+     "times_shown": 7381,
+     "avg_spot": 7.6
+    },
+    {
+     "keyword": "software factory",
+     "clicks": 64,
+     "times_shown": 14999,
+     "avg_spot": 9.5
+    }
+   ],
+   "pages_with_clicks": 501,
+   "infrasity_clicks": 964,
+   "infrasity_pages_with_clicks": 16,
+   "top_pages": [
+    {
+     "page": "/",
+     "clicks": 6993,
+     "times_shown": 145742,
+     "by": "Opsera",
+     "ai_visits": 87,
+     "months": [
+      656,
+      730,
+      693,
+      895,
+      855,
+      617,
+      600,
+      640,
+      650,
+      657
+     ]
+    },
+    {
+     "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+     "clicks": 1593,
+     "times_shown": 1071882,
+     "by": "Opsera",
+     "ai_visits": 10,
+     "months": [
+      0,
+      0,
+      0,
+      9,
+      2,
+      183,
+      563,
+      514,
+      244,
+      78
+     ]
+    },
+    {
+     "page": "/careers",
+     "clicks": 891,
+     "times_shown": 32162,
+     "by": "Opsera",
+     "ai_visits": 30,
+     "months": [
+      79,
+      90,
+      105,
+      78,
+      74,
+      120,
+      89,
+      85,
+      79,
+      92
+     ]
+    },
+    {
+     "page": "/ecosystem/twistlock",
+     "clicks": 713,
+     "times_shown": 56769,
+     "by": "Opsera",
+     "ai_visits": 0,
+     "months": [
+      53,
+      68,
+      65,
+      105,
+      81,
+      87,
+      83,
+      79,
+      86,
+      6
+     ]
+    },
+    {
+     "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+     "clicks": 463,
+     "times_shown": 8312,
+     "by": "Opsera",
+     "ai_visits": 13,
+     "months": [
+      0,
+      0,
+      0,
+      33,
+      97,
+      59,
+      79,
+      68,
+      76,
+      51
+     ]
+    },
+    {
+     "page": "/about",
+     "clicks": 451,
+     "times_shown": 39194,
+     "by": "Opsera",
+     "ai_visits": 8,
+     "months": [
+      46,
+      58,
+      44,
+      44,
+      63,
+      35,
+      33,
+      31,
+      46,
+      51
+     ]
+    },
+    {
+     "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
+     "clicks": 319,
+     "times_shown": 55777,
+     "by": "Opsera",
+     "ai_visits": 7,
+     "months": [
+      0,
+      0,
+      0,
+      2,
+      15,
+      59,
+      70,
+      55,
+      63,
+      55
+     ]
+    },
+    {
+     "page": "/platform/hummingbird-ai",
+     "clicks": 309,
+     "times_shown": 25944,
+     "by": "Opsera",
+     "ai_visits": 2,
+     "months": [
+      14,
+      25,
+      29,
+      34,
+      24,
+      21,
+      103,
+      22,
+      36,
+      1
+     ]
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "clicks": 303,
+     "times_shown": 66474,
+     "by": "Opsera",
+     "ai_visits": 71,
+     "months": [
+      0,
+      3,
+      34,
+      49,
+      53,
+      72,
+      45,
+      21,
+      13,
+      13
+     ]
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "clicks": 268,
+     "times_shown": 259416,
+     "by": "Opsera",
+     "ai_visits": 70,
+     "months": [
+      90,
+      83,
+      19,
+      11,
+      10,
+      20,
+      6,
+      15,
+      7,
+      7
+     ]
+    }
+   ],
+   "tracked": [
+    {
+     "page": "/",
+     "group": "Homepage",
+     "first_week": "2026-03-30",
+     "first_spot": 6.1,
+     "spot": 4.5,
+     "by": "Opsera"
+    },
+    {
+     "page": "/software-factory",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 6.0,
+     "spot": 12.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/forge",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 4.6,
+     "spot": 5.8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/forge/modernization",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 5.9,
+     "spot": 7.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/unified-insights",
+     "group": "Product",
+     "first_week": "2026-07-06",
+     "first_spot": 90.3,
+     "spot": 5.0,
+     "by": "Opsera"
+    },
+    {
+     "page": "/agents",
+     "group": "Product",
+     "first_week": "2026-03-30",
+     "first_spot": 5.3,
+     "spot": 3.8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/agentic-devops",
+     "group": "Product",
+     "first_week": "2026-10-05",
+     "first_spot": 12.9,
+     "spot": 8.3,
+     "by": "Opsera"
+    },
+    {
+     "page": "/salesforce-devops",
+     "group": "Product",
+     "first_week": "2026-07-06",
+     "first_spot": 99.0,
+     "spot": 12.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/brickforge",
+     "group": "Product",
+     "first_week": "2026-06-15",
+     "first_spot": 3.5,
+     "spot": 5.8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+     "group": "Blog",
+     "first_week": "2026-10-26",
+     "first_spot": 12.1,
+     "spot": 12.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/claude-code-alternative",
+     "group": "Blog",
+     "first_week": "2026-09-28",
+     "first_spot": 6.4,
+     "spot": 6.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/software-factory",
+     "group": "Blog",
+     "first_week": "2026-08-31",
+     "first_spot": 6.2,
+     "spot": 10.3,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/factory-ai-alternatives",
+     "group": "Blog",
+     "first_week": "2026-09-14",
+     "first_spot": 4.3,
+     "spot": 3.1,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/spec-driven-development",
+     "group": "Blog",
+     "first_week": "2026-09-28",
+     "first_spot": 8.5,
+     "spot": 9.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.3,
+     "spot": 7.4,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/what-is-agentic-devops",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 6.7,
+     "spot": 5.9,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/ai-sdlc",
+     "group": "Blog",
+     "first_week": "2026-06-08",
+     "first_spot": 5.8,
+     "spot": 7.7,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "group": "Resource",
+     "first_week": "2026-03-30",
+     "first_spot": 7.0,
+     "spot": 6.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+     "group": "Blog",
+     "first_week": "2026-06-29",
+     "first_spot": 6.5,
+     "spot": 5.3,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.2,
+     "spot": 6.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cobol-modernization",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 8.8,
+     "spot": 6.8,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 6.8,
+     "spot": 6.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 41.8,
+     "spot": 16.7,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/devsecops-tools",
+     "group": "Blog",
+     "first_week": "2026-06-22",
+     "first_spot": 11.7,
+     "spot": 8.8,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/legacy-code-modernization",
+     "group": "Blog",
+     "first_week": "2026-08-31",
+     "first_spot": 6.8,
+     "spot": 7.5,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/sast-tools",
+     "group": "Blog",
+     "first_week": "2026-07-06",
+     "first_spot": 8.7,
+     "spot": 8.3,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/software-factory-model",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 11.0,
+     "spot": 10.6,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/8090-ai-alternatives",
+     "group": "Blog",
+     "first_week": "2026-09-14",
+     "first_spot": 7.0,
+     "spot": 6.4,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 18.8,
+     "spot": 11.8,
+     "by": "Opsera"
+    }
+   ],
+   "ai_visits": 831,
+   "ai_tools": {
+    "chatgpt": 415,
+    "gemini": 220,
+    "perplexity": 105,
+    "claude": 85,
+    "copilot": 6
+   },
+   "ai_months": [
+    {
+     "month": "2026-01",
+     "visits": 79
+    },
+    {
+     "month": "2026-02",
+     "visits": 76
+    },
+    {
+     "month": "2026-03",
+     "visits": 107
+    },
+    {
+     "month": "2026-04",
+     "visits": 71
+    },
+    {
+     "month": "2026-05",
+     "visits": 84
+    },
+    {
+     "month": "2026-06",
+     "visits": 81
+    },
+    {
+     "month": "2026-07",
+     "visits": 86
+    },
+    {
+     "month": "2026-08",
+     "visits": 66
+    },
+    {
+     "month": "2026-09",
+     "visits": 71
+    },
+    {
+     "month": "2026-10",
+     "visits": 110
+    }
+   ],
+   "ai_top_pages": [
+    {
+     "page": "/",
+     "visits": 87,
+     "by": "Opsera"
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "visits": 71,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "visits": 70,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "visits": 35,
+     "by": "Opsera"
+    },
+    {
+     "page": "/careers",
+     "visits": 30,
+     "by": "Opsera"
+    }
+   ],
+   "ai_page_not_recorded": 133
+  },
+  "forge": {
+   "months": [
+    {
+     "month": "2026-01",
+     "clicks": 11,
+     "times_shown": 2726
+    },
+    {
+     "month": "2026-02",
+     "clicks": 16,
+     "times_shown": 2648
+    },
+    {
+     "month": "2026-03",
+     "clicks": 6,
+     "times_shown": 2242
+    },
+    {
+     "month": "2026-04",
+     "clicks": 45,
+     "times_shown": 5468
+    },
+    {
+     "month": "2026-05",
+     "clicks": 118,
+     "times_shown": 7581
+    },
+    {
+     "month": "2026-06",
+     "clicks": 106,
+     "times_shown": 11709
+    },
+    {
+     "month": "2026-07",
+     "clicks": 163,
+     "times_shown": 14081
+    },
+    {
+     "month": "2026-08",
+     "clicks": 141,
+     "times_shown": 13734
+    },
+    {
+     "month": "2026-09",
+     "clicks": 465,
+     "times_shown": 37109
+    },
+    {
+     "month": "2026-10",
+     "clicks": 481,
+     "times_shown": 65277
+    }
+   ],
+   "clicks": 1552,
+   "times_shown": 162575,
+   "brand_share_pct": 60.2,
+   "keywords": [
+    {
+     "keyword": "software factory",
+     "clicks": 64,
+     "times_shown": 14992,
+     "avg_spot": 9.5
+    },
+    {
+     "keyword": "ai software factory",
+     "clicks": 24,
+     "times_shown": 2116,
+     "avg_spot": 7.6
+    },
+    {
+     "keyword": "software factory ai",
+     "clicks": 10,
+     "times_shown": 1055,
+     "avg_spot": 6.6
+    },
+    {
+     "keyword": "software forge",
+     "clicks": 7,
+     "times_shown": 664,
+     "avg_spot": 7.9
+    },
+    {
+     "keyword": "software factories",
+     "clicks": 6,
+     "times_shown": 783,
+     "avg_spot": 12.1
+    },
+    {
+     "keyword": "factory ai alternatives",
+     "clicks": 4,
+     "times_shown": 121,
+     "avg_spot": 1.7
+    },
+    {
+     "keyword": "spec driven development",
+     "clicks": 4,
+     "times_shown": 435,
+     "avg_spot": 14.0
+    },
+    {
+     "keyword": "software factory model",
+     "clicks": 4,
+     "times_shown": 256,
+     "avg_spot": 13.8
+    },
+    {
+     "keyword": "blitzy alternatives",
+     "clicks": 4,
+     "times_shown": 21,
+     "avg_spot": 3.0
+    },
+    {
+     "keyword": "forge ai",
+     "clicks": 4,
+     "times_shown": 1334,
+     "avg_spot": 7.9
+    }
+   ],
+   "pages_with_clicks": 42,
+   "infrasity_clicks": 547,
+   "infrasity_pages_with_clicks": 11,
+   "top_pages": [
+    {
+     "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+     "clicks": 463,
+     "times_shown": 8312,
+     "by": "Opsera",
+     "ai_visits": 13,
+     "months": [
+      0,
+      0,
+      0,
+      33,
+      97,
+      59,
+      79,
+      68,
+      76,
+      51
+     ]
+    },
+    {
+     "page": "/blog/software-factory",
+     "clicks": 249,
+     "times_shown": 32779,
+     "by": "Infrasity",
+     "ai_visits": 3,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      195,
+      54
+     ]
+    },
+    {
+     "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
+     "clicks": 204,
+     "times_shown": 20927,
+     "by": "Opsera",
+     "ai_visits": 8,
+     "months": [
+      0,
+      0,
+      0,
+      9,
+      12,
+      26,
+      57,
+      41,
+      32,
+      27
+     ]
+    },
+    {
+     "page": "/blog/factory-ai-alternatives",
+     "clicks": 106,
+     "times_shown": 10939,
+     "by": "Infrasity",
+     "ai_visits": 2,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      34,
+      72
+     ]
+    },
+    {
+     "page": "/brickforge",
+     "clicks": 67,
+     "times_shown": 3355,
+     "by": "Opsera",
+     "ai_visits": 5,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      11,
+      11,
+      20,
+      21,
+      4
+     ]
+    },
+    {
+     "page": "/forge",
+     "clicks": 67,
+     "times_shown": 2611,
+     "by": "Opsera",
+     "ai_visits": 11,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      67
+     ]
+    },
+    {
+     "page": "/blog/spec-driven-development",
+     "clicks": 48,
+     "times_shown": 5639,
+     "by": "Opsera",
+     "ai_visits": 10,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      48
+     ]
+    },
+    {
+     "page": "/resources/webinars/(a customer's modernization webinar)",
+     "clicks": 46,
+     "times_shown": 2371,
+     "by": "Opsera",
+     "ai_visits": 0,
+     "months": [
+      7,
+      10,
+      3,
+      1,
+      5,
+      1,
+      6,
+      4,
+      3,
+      6
+     ]
+    },
+    {
+     "page": "/blog/legacy-code-modernization",
+     "clicks": 45,
+     "times_shown": 9764,
+     "by": "Infrasity",
+     "ai_visits": 5,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      22,
+      23
+     ]
+    },
+    {
+     "page": "/blog/software-factory-model",
+     "clicks": 40,
+     "times_shown": 2574,
+     "by": "Infrasity",
+     "ai_visits": 0,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      23,
+      17
+     ]
+    }
+   ],
+   "tracked": [
+    {
+     "page": "/software-factory",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 6.0,
+     "spot": 12.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/forge",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 4.6,
+     "spot": 5.8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/forge/modernization",
+     "group": "Product",
+     "first_week": "2026-09-28",
+     "first_spot": 5.9,
+     "spot": 7.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/brickforge",
+     "group": "Product",
+     "first_week": "2026-06-15",
+     "first_spot": 3.5,
+     "spot": 5.8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/software-factory",
+     "group": "Blog",
+     "first_week": "2026-08-31",
+     "first_spot": 6.2,
+     "spot": 10.3,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/factory-ai-alternatives",
+     "group": "Blog",
+     "first_week": "2026-09-14",
+     "first_spot": 4.3,
+     "spot": 3.1,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/spec-driven-development",
+     "group": "Blog",
+     "first_week": "2026-09-28",
+     "first_spot": 8.5,
+     "spot": 9.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cobol-modernization",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 8.8,
+     "spot": 6.8,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/legacy-code-modernization",
+     "group": "Blog",
+     "first_week": "2026-08-31",
+     "first_spot": 6.8,
+     "spot": 7.5,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/software-factory-model",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 11.0,
+     "spot": 10.6,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/8090-ai-alternatives",
+     "group": "Blog",
+     "first_week": "2026-09-14",
+     "first_spot": 7.0,
+     "spot": 6.4,
+     "by": "Infrasity"
+    }
+   ],
+   "ai_visits": 64,
+   "ai_tools": {
+    "chatgpt": 34,
+    "gemini": 26,
+    "perplexity": 4
+   },
+   "ai_months": [
+    {
+     "month": "2026-01",
+     "visits": 1
+    },
+    {
+     "month": "2026-02",
+     "visits": 0
+    },
+    {
+     "month": "2026-03",
+     "visits": 0
+    },
+    {
+     "month": "2026-04",
+     "visits": 1
+    },
+    {
+     "month": "2026-05",
+     "visits": 6
+    },
+    {
+     "month": "2026-06",
+     "visits": 8
+    },
+    {
+     "month": "2026-07",
+     "visits": 6
+    },
+    {
+     "month": "2026-08",
+     "visits": 6
+    },
+    {
+     "month": "2026-09",
+     "visits": 4
+    },
+    {
+     "month": "2026-10",
+     "visits": 32
+    }
+   ],
+   "ai_top_pages": [
+    {
+     "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+     "visits": 13,
+     "by": "Opsera"
+    },
+    {
+     "page": "/forge",
+     "visits": 11,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/spec-driven-development",
+     "visits": 10,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
+     "visits": 8,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/legacy-code-modernization",
+     "visits": 5,
+     "by": "Infrasity"
+    }
+   ],
+   "ai_page_not_recorded": 0
+  },
+  "insights": {
+   "months": [
+    {
+     "month": "2026-01",
+     "clicks": 215,
+     "times_shown": 191760
+    },
+    {
+     "month": "2026-02",
+     "clicks": 222,
+     "times_shown": 127150
+    },
+    {
+     "month": "2026-03",
+     "clicks": 160,
+     "times_shown": 95152
+    },
+    {
+     "month": "2026-04",
+     "clicks": 237,
+     "times_shown": 126393
+    },
+    {
+     "month": "2026-05",
+     "clicks": 179,
+     "times_shown": 110090
+    },
+    {
+     "month": "2026-06",
+     "clicks": 474,
+     "times_shown": 304901
+    },
+    {
+     "month": "2026-07",
+     "clicks": 828,
+     "times_shown": 466016
+    },
+    {
+     "month": "2026-08",
+     "clicks": 733,
+     "times_shown": 460998
+    },
+    {
+     "month": "2026-09",
+     "clicks": 462,
+     "times_shown": 231174
+    },
+    {
+     "month": "2026-10",
+     "clicks": 266,
+     "times_shown": 111524
+    }
+   ],
+   "clicks": 3776,
+   "times_shown": 2225158,
+   "brand_share_pct": 1.3,
+   "keywords": [
+    {
+     "keyword": "cursor ai",
+     "clicks": 756,
+     "times_shown": 663987,
+     "avg_spot": 6.4
+    },
+    {
+     "keyword": "what is cursor ai",
+     "clicks": 219,
+     "times_shown": 44614,
+     "avg_spot": 3.7
+    },
+    {
+     "keyword": "what is cursor",
+     "clicks": 119,
+     "times_shown": 48055,
+     "avg_spot": 6.1
+    },
+    {
+     "keyword": "defect escape rate",
+     "clicks": 67,
+     "times_shown": 1881,
+     "avg_spot": 1.7
+    },
+    {
+     "keyword": "code quality metrics",
+     "clicks": 66,
+     "times_shown": 7381,
+     "avg_spot": 7.6
+    },
+    {
+     "keyword": "what is cursor ai used for",
+     "clicks": 35,
+     "times_shown": 4777,
+     "avg_spot": 3.4
+    },
+    {
+     "keyword": "code churn",
+     "clicks": 28,
+     "times_shown": 6903,
+     "avg_spot": 4.2
+    },
+    {
+     "keyword": "unified insights",
+     "clicks": 28,
+     "times_shown": 1706,
+     "avg_spot": 6.4
+    },
+    {
+     "keyword": "what does cursor do",
+     "clicks": 25,
+     "times_shown": 8303,
+     "avg_spot": 5.2
+    },
+    {
+     "keyword": "ai coding benchmark 2026",
+     "clicks": 21,
+     "times_shown": 150,
+     "avg_spot": 4.2
+    }
+   ],
+   "pages_with_clicks": 46,
+   "infrasity_clicks": 0,
+   "infrasity_pages_with_clicks": 0,
+   "top_pages": [
+    {
+     "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+     "clicks": 1593,
+     "times_shown": 1071882,
+     "by": "Opsera",
+     "ai_visits": 10,
+     "months": [
+      0,
+      0,
+      0,
+      9,
+      2,
+      183,
+      563,
+      514,
+      244,
+      78
+     ]
+    },
+    {
+     "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
+     "clicks": 319,
+     "times_shown": 55777,
+     "by": "Opsera",
+     "ai_visits": 7,
+     "months": [
+      0,
+      0,
+      0,
+      2,
+      15,
+      59,
+      70,
+      55,
+      63,
+      55
+     ]
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "clicks": 303,
+     "times_shown": 66474,
+     "by": "Opsera",
+     "ai_visits": 71,
+     "months": [
+      0,
+      3,
+      34,
+      49,
+      53,
+      72,
+      45,
+      21,
+      13,
+      13
+     ]
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "clicks": 268,
+     "times_shown": 259416,
+     "by": "Opsera",
+     "ai_visits": 70,
+     "months": [
+      90,
+      83,
+      19,
+      11,
+      10,
+      20,
+      6,
+      15,
+      7,
+      7
+     ]
+    },
+    {
+     "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "clicks": 268,
+     "times_shown": 139892,
+     "by": "Opsera",
+     "ai_visits": 2,
+     "months": [
+      46,
+      50,
+      24,
+      40,
+      10,
+      17,
+      24,
+      9,
+      21,
+      27
+     ]
+    },
+    {
+     "page": "/blog/how-to-measure-code-churn",
+     "clicks": 259,
+     "times_shown": 39987,
+     "by": "Opsera",
+     "ai_visits": 7,
+     "months": [
+      33,
+      26,
+      38,
+      25,
+      19,
+      32,
+      31,
+      27,
+      22,
+      6
+     ]
+    },
+    {
+     "page": "/platform/unified-insights",
+     "clicks": 104,
+     "times_shown": 23689,
+     "by": "Opsera",
+     "ai_visits": 5,
+     "months": [
+      12,
+      6,
+      6,
+      12,
+      9,
+      14,
+      13,
+      15,
+      12,
+      5
+     ]
+    },
+    {
+     "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer",
+     "clicks": 84,
+     "times_shown": 34337,
+     "by": "Opsera",
+     "ai_visits": 1,
+     "months": [
+      0,
+      0,
+      0,
+      19,
+      12,
+      23,
+      9,
+      11,
+      8,
+      2
+     ]
+    },
+    {
+     "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+     "clicks": 65,
+     "times_shown": 13499,
+     "by": "Opsera",
+     "ai_visits": 2,
+     "months": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      12,
+      8,
+      29,
+      16
+     ]
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "clicks": 61,
+     "times_shown": 119495,
+     "by": "Opsera",
+     "ai_visits": 35,
+     "months": [
+      14,
+      13,
+      10,
+      5,
+      4,
+      5,
+      3,
+      1,
+      4,
+      2
+     ]
+    }
+   ],
+   "tracked": [
+    {
+     "page": "/unified-insights",
+     "group": "Product",
+     "first_week": "2026-07-06",
+     "first_spot": 90.3,
+     "spot": 5.0,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.3,
+     "spot": 7.4,
+     "by": "Opsera"
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "group": "Resource",
+     "first_week": "2026-03-30",
+     "first_spot": 7.0,
+     "spot": 6.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+     "group": "Blog",
+     "first_week": "2026-06-29",
+     "first_spot": 6.5,
+     "spot": 5.3,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.2,
+     "spot": 6.1,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 6.8,
+     "spot": 6.2,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 18.8,
+     "spot": 11.8,
+     "by": "Opsera"
+    }
+   ],
+   "ai_visits": 290,
+   "ai_tools": {
+    "chatgpt": 109,
+    "gemini": 79,
+    "claude": 52,
+    "perplexity": 46,
+    "copilot": 4
+   },
+   "ai_months": [
+    {
+     "month": "2026-01",
+     "visits": 33
+    },
+    {
+     "month": "2026-02",
+     "visits": 35
+    },
+    {
+     "month": "2026-03",
+     "visits": 49
+    },
+    {
+     "month": "2026-04",
+     "visits": 26
+    },
+    {
+     "month": "2026-05",
+     "visits": 32
+    },
+    {
+     "month": "2026-06",
+     "visits": 28
+    },
+    {
+     "month": "2026-07",
+     "visits": 22
+    },
+    {
+     "month": "2026-08",
+     "visits": 20
+    },
+    {
+     "month": "2026-09",
+     "visits": 20
+    },
+    {
+     "month": "2026-10",
+     "visits": 25
+    }
+   ],
+   "ai_top_pages": [
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "visits": 71,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
+     "visits": 70,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "visits": 35,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "visits": 30,
+     "by": "Opsera"
+    },
+    {
+     "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+     "visits": 12,
+     "by": "Opsera"
+    }
+   ],
+   "ai_page_not_recorded": 0
+  }
+ }
+}

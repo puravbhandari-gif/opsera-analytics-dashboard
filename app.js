@@ -2571,14 +2571,16 @@ function renderRankings(d) {
 function showTab(name) {
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
-  document.body.classList.toggle("exec-mode", name === "exec");   // the exec view's only control is its quarter picker
-  $("to-exec").classList.toggle("on", name === "exec"); $("to-team").classList.toggle("on", name !== "exec");
+  const execish = name === "exec" || name === "seo";   // the exec views have no team controls
+  document.body.classList.toggle("exec-mode", execish);
+  $("to-exec").classList.toggle("on", name === "exec"); $("to-seo").classList.toggle("on", name === "seo"); $("to-team").classList.toggle("on", !execish);
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
   const pick = $("tab-pick"), listed = [...pick.options].some((o) => o.value === name);
   if (listed) pick.value = name; else pick.selectedIndex = -1;
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "exec") openExec();
+  if (name === "seo") openSeo();
   if (name === "lookup") openLookup();
   if (name === "summary") openSummary();
   if (name === "team") openTeam();
@@ -2594,7 +2596,8 @@ function showTab(name) {
 $("tab-pick").addEventListener("change", (e) => { showTab(e.target.value); window.scrollTo(0, 0); });
 // Exec view and Team view (the full dashboard), both always at the top (agreed 6 Nov 2026)
 $("to-exec").addEventListener("click", () => showTab("exec"));
-$("to-team").addEventListener("click", () => { if (view.tab === "exec") { showTab("summary"); window.scrollTo(0, 0); } });
+$("to-seo").addEventListener("click", () => showTab("seo"));
+$("to-team").addEventListener("click", () => { if (view.tab === "exec" || view.tab === "seo") { showTab("summary"); window.scrollTo(0, 0); } });
 document.querySelectorAll("details.more").forEach((el) => el.addEventListener("toggle", () => charts.forEach((c) => c.instance && c.instance.resize())));
 // A link with only a tab (the footer links, or an older link) keeps the rest of the view.
 // A full link pasted into this page reloads it, so every setting is applied from the start.
@@ -2708,6 +2711,51 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
     prLoad.then(() => prPickOutlet && prPickOutlet(b.dataset.outlet));
   });
   draw();
+}
+
+// ---------- SEO and AEO: Google and AI tools, Jan to Oct 2026, for Opsera overall, Forge and Insights (agreed 6 Nov 2026) ----------
+
+let seoLoad = null;
+function openSeo() {
+  if (!seoLoad) seoLoad = Promise.all(["seo_aeo.json", "seo_aeo_lines.json"].map(load)).then(([d, t]) => renderSeo(d, t))
+    .catch((err) => { $("seo-lines").innerHTML = `<p class="muted">Couldn't load the numbers: ${esc(err.message)}</p>`; });
+}
+function renderSeo(d, t) {
+  const NAMES = { overall: "Opsera overall", forge: "Forge", insights: "Insights" };
+  const pathLink = (p) => (p.startsWith("/") && !p.includes("(") ? `<a href="https://opsera.ai${encodeURI(p)}" target="_blank" rel="noopener">${esc(p)}</a>` : esc(p));
+  const by = (x) => `<span class="seo-tag ${x === "Infrasity" ? "inf" : ""}">${x === "Infrasity" ? "Infrasity" : "Us"}</span>`;
+  const list = (rows) => (rows.length ? `<table class="seo-table"><tbody>${rows.join("")}</tbody></table>` : `<p class="muted">None</p>`);
+  // One line per product: what's working and what isn't
+  $("seo-lines").innerHTML = Object.keys(NAMES).map((k) => `<div class="seo-line"><h3>${NAMES[k]}</h3>
+    <p><span class="seo-good">Working:</span> ${esc(t.lines[k].working)}</p><p><span class="seo-bad">Not working:</span> ${esc(t.lines[k].not_working)}</p></div>`).join("");
+  const monthBars = (rows, key) => { const top = Math.max(...rows.map((r) => r[key]), 1);
+    return `<div class="seo-months" role="img" aria-label="${esc(rows.map((r) => `${monthName(`${r.month}-01`).slice(0, 3)} ${num(r[key])}`).join(", "))}">${rows.map((r) =>
+      `<span title="${monthName(`${r.month}-01`).slice(0, 3)}: ${num(r[key])}"><i style="height:${Math.max(3, (r[key] / top) * 100).toFixed(0)}%"></i><b>${monthName(`${r.month}-01`).slice(0, 1)}</b></span>`).join("")}</div>`; };
+  const draw = (k) => {
+    const p = d.products[k], first = p.months[0], last = p.months[p.months.length - 1];
+    const tools = Object.entries(p.ai_tools).map(([tool, n]) => `${{ chatgpt: "ChatGPT", gemini: "Gemini", perplexity: "Perplexity", claude: "Claude", copilot: "Copilot", other: "Others" }[tool] || tool} ${num(n)}`).join(", ");
+    $("seo-cards").innerHTML = [
+      `<article class="exec-card"><h3>Google clicks</h3><div class="exec-big value">${num(p.clicks)}</div><p class="exec-line">${num(first.clicks)} in Jan, ${num(last.clicks)} in Oct</p>${monthBars(p.months, "clicks")}</article>`,
+      `<article class="exec-card"><h3>Times shown on Google</h3><div class="exec-big value">${num(p.times_shown)}</div><p class="exec-line">${pct((p.clicks / p.times_shown) * 100)} clicked</p>${monthBars(p.months, "times_shown")}</article>`,
+      `<article class="exec-card"><h3>Visits from AI tools</h3><div class="exec-big value">${num(p.ai_visits)}</div><p class="exec-line">${esc(tools || "None")}</p>${monthBars(p.ai_months, "visits")}</article>`,
+    ].join("");
+    countUp($("seo-cards"));
+    $("seo-keywords").innerHTML = list(p.keywords.map((x) => `<tr><td>${esc(x.keyword)}</td><td class="num">${num(x.clicks)} clicks</td><td class="num muted">spot ${x.avg_spot}</td></tr>`));
+    $("seo-pages").innerHTML = list(p.top_pages.map((x) => `<tr><td class="wrap">${pathLink(x.page)}</td><td>${by(x.by)}</td><td class="num">${num(x.clicks)}</td></tr>`)) +
+      `<p class="muted small">Infrasity's pages brought ${num(p.infrasity_clicks)} of ${num(p.clicks)} clicks (${pct((p.infrasity_clicks / p.clicks) * 100, 1)}), from ${num(p.infrasity_pages_with_clicks)} pages.</p>`;
+    const ranks = (k === "overall" ? p.tracked.filter((x) => x.group === "Homepage" || x.group === "Product") : p.tracked).slice(0, 10);
+    $("seo-ranks").innerHTML = list(ranks.map((x) => { const better = x.spot < x.first_spot;
+      return `<tr><td class="wrap">${pathLink(x.page)}</td><td>${by(x.by)}</td><td class="num">${x.first_spot} to <strong class="${better ? "seo-good" : x.spot > x.first_spot ? "seo-bad" : ""}">${x.spot}</strong></td></tr>`; }));
+    $("seo-ai-pages").innerHTML = list(p.ai_top_pages.map((x) => `<tr><td class="wrap">${pathLink(x.page)}</td><td>${by(x.by)}</td><td class="num">${num(x.visits)}</td></tr>`)) +
+      (p.ai_page_not_recorded ? `<p class="muted small">${num(p.ai_page_not_recorded)} more visits have no page recorded.</p>` : "");
+    $("seo-product").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.p === k));
+  };
+  $("seo-product").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) draw(b.dataset.p); });
+  draw("overall");
+  $("seo-infrasity").textContent = `Until then: Infrasity has ${num(d.infrasity.pages_on_site)} pages on opsera.ai and ${num(d.infrasity.posts_elsewhere)} posts on Medium, dev.to and daily.dev, from ${d.infrasity.list}. Posts on other sites aren't in these numbers.`;
+  $("seo-source").textContent = `Sources: ${d.source}, ${range(d.start_date, d.end_date)}, pulled ${dayYear(d.pulled)}. Google spots from the Rankings panel, week of ${day(d.rankings_week)}. ` +
+    "Forge pages are about Forge, the software factory or code modernization. Insights pages are about Unified Insights, DORA and engineering metrics, or AI code assistant analytics. " +
+    `Keywords count when they brought clicks to that product's pages; Google hides rare searches, so they add up to less than page clicks. ${t.source}.`;
 }
 
 // ---------- Summary tab: 3 takeaways per area, written every Monday by scripts/build_summary.py ----------

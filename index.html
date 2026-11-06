@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=37">
+<link rel="stylesheet" href="styles.css?v=38">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -29,6 +29,7 @@
     </div>
     <div class="view-switch seg" role="group" aria-label="Choose a view">
       <button id="to-exec" type="button">Exec view</button>
+      <button id="to-seo" type="button">SEO and AEO</button>
       <button id="to-team" type="button">Team view</button>
     </div>
     <div class="top-controls">
@@ -98,6 +99,34 @@
       <div class="logo-wall" id="exec-logos"></div>
     </div>
     <p class="source" id="exec-source"></p>
+  </section>
+
+  <section id="tab-seo" class="tab exec" role="tabpanel" hidden>
+    <div class="exec-head">
+      <div>
+        <h2>SEO and AEO</h2>
+        <p class="muted">Google search and visits from AI tools, 1 Jan to 31 Oct 2026</p>
+      </div>
+      <div class="seg" id="seo-product" role="group" aria-label="Choose a product">
+        <button data-p="overall" class="on">Opsera overall</button>
+        <button data-p="forge">Forge</button>
+        <button data-p="insights">Insights</button>
+      </div>
+    </div>
+    <div class="seo-lines" id="seo-lines"><p class="muted">Loading...</p></div>
+    <div class="exec-cards seo-cards" id="seo-cards"></div>
+    <div class="seo-grid">
+      <div class="exec-card"><h3>Top 10 keywords on Google</h3><p class="muted">Not counting searches for Opsera by name</p><div id="seo-keywords"></div></div>
+      <div class="exec-card"><h3>Pages that bring the clicks</h3><p class="muted">Written by us or by Infrasity</p><div id="seo-pages"></div></div>
+      <div class="exec-card"><h3>Google spot, Rankings panel</h3><p class="muted">Tracked pages: first week tracked, then late Oct. Lower is better</p><div id="seo-ranks"></div></div>
+      <div class="exec-card"><h3>Pages AI tools send people to</h3><p class="muted">ChatGPT, Gemini, Perplexity, Claude and others</p><div id="seo-ai-pages"></div></div>
+    </div>
+    <div class="exec-card seo-placeholder">
+      <h3>Infrasity's results report</h3>
+      <p class="exec-line">Coming later. Their own report will show here next to these numbers.</p>
+      <p class="muted" id="seo-infrasity"></p>
+    </div>
+    <p class="source" id="seo-source"></p>
   </section>
 
   <section id="tab-summary" class="tab" role="tabpanel" hidden>
@@ -1008,6 +1037,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=108"></script>
+<script src="app.js?v=109"></script>
 </body>
 </html>

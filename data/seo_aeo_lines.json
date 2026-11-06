@@ -1,0 +1,18 @@
+{
+ "written": "2026-11-06",
+ "source": "Written by Claude Code from the numbers on this view, 1 Jan to 31 Oct 2026",
+ "lines": {
+  "overall": {
+   "working": "Google clicks grew from 1,587 in Jan to 2,247 in Oct, up 42%.",
+   "not_working": "62.5% of keyword clicks come from people already searching for Opsera. AI tools sent only 70 to 110 visits a month, with no clear rise."
+  },
+  "forge": {
+   "working": "Clicks rose from 11 in Jan to 481 in Oct. Infrasity's pages brought 547 of the 1,552 clicks, and AI tool visits jumped to 32 in Oct.",
+   "not_working": "\"software factory\" was shown 14,992 times but sits at spot 9.5, so it brought just 64 clicks. The /software-factory page slipped from spot 6.0 in late Sep to 12.1 in late Oct."
+  },
+  "insights": {
+   "working": "AI tools sent 290 visits, the most of any product. The AI coding benchmark report and the Cursor adoption blog brought 141 of them.",
+   "not_working": "Clicks fell from 828 in Jul to 266 in Oct, as the Cursor explainer dropped from 563 to 78. The term \"unified insights\" brought only 28 clicks."
+  }
+ }
+}
