@@ -563,7 +563,7 @@ const CHANNELS = {
 const channelName = (c) => CHANNELS[c] || c;
 
 function renderVisits(d) {
-  const src = "Source: Google Analytics";
+  const src = "Source: Google Analytics, visits on opsera.ai only";
   const when = `${range(d.start_date, d.end_date)} (Pacific time)`;
   const t = d.totals;
   const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
@@ -958,7 +958,7 @@ function renderKumarPosts(kp) {
 function renderLinkedInVisits(ga) {
   const li = ga.linkedin;
   const GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["untagged", "Untagged"]];
-  const src = "Source: Google Analytics";
+  const src = "Source: Google Analytics, visits on opsera.ai only";
   const when = (a, b) => `${range(a, b)} (Pacific time)`;
   compare({ id: "li-web", together: true, start: ga.start_date, last: lastFullDayPacific(ga.end_date, ga.pulled_at),
     source: (a, b) => `${src}, ${when(a, b)}.`,
@@ -1281,7 +1281,7 @@ const AI_TOOL_NAMES = { all: "All AI tools", chatgpt: "ChatGPT", gemini: "Gemini
 function renderAeo(ga, hub) {
   const ai = ga.ai;
   const start = ga.start_date, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
-  const src = "Source: Google Analytics";
+  const src = "Source: Google Analytics, visits on opsera.ai only";
   let tool = "all";
   const pick = (rows) => rows.filter((r) => tool === "all" || r.tool === tool);
   const spec = { id: "aeo", start, last, source: (a, b) => `${src}, ${tool === "all" ? "all AI tools" : AI_TOOL_NAMES[tool]}, ${range(a, b)} (Pacific time).`,
@@ -2651,7 +2651,7 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
     { label: "Meetings with marketing contacts", start: hub.start_date, last: hub.end_date, fmt: num, value: rangeSum(booked, "count"),
       line: () => "Booked by people from marketing", src: `HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}` },
     { label: "Website visitors", start: ga.start_date, last: gaLast, fmt: num, value: (a, b) => sessions(a, b) - robots(a, b),
-      line: () => "Visits, without email robots", src: "Google Analytics" },
+      line: () => "Visits, without email robots", note: "opsera.ai only", src: "Google Analytics, opsera.ai only" },
   ];
   // Full quarters with data first, newest first, then the one under way (agreed 6 Nov 2026)
   const quarters = [];
@@ -2683,7 +2683,7 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       const prevLabel = `${quarterName(p.ps)}${p.prev && p.prev.end < quarterEnd(p.ps) ? `, ${range(p.prev.start, p.prev.end)}` : ""}`;
       return `<article class="exec-card"><h3>${esc(m.label)}</h3><div class="exec-big value">${esc(m.fmt(cur))}</div>
         ${ch == null ? "" : `<div class="exec-change ${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}% vs ${esc(quarterName(p.ps))}</div>`}
-        <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}</p>
+        <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}${m.note ? `<span class="exec-note">${esc(m.note)}</span>` : ""}</p>
         ${barsFor([...(p.prev ? [{ label: prevLabel, v: prev, fmt: m.fmt }] : []), { label: `${quarterName(q)}${p.cur.end < quarterEnd(q) ? ` to ${day(p.cur.end)}` : ""}`, v: cur, fmt: m.fmt, now: true }])}</article>`;
     });
     // Content published: the number, and a bar for each month of the quarter

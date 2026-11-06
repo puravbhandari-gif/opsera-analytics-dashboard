@@ -48,7 +48,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-27,2026-05-03,no,/knowledge-base/incident-analysis/incident-frequency,3,1,0,0,2,2959
 2026-04-27,2026-05-03,no,/knowledge-base/quality-risk/understanding-system-hardening-timelines-in-devsecops-environments,3,1,0,0,1,718
 2026-04-27,2026-05-03,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,2,2,0,0,1,517
-2026-04-27,2026-05-03,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,2,0,0,0,0,0
 2026-04-27,2026-05-03,no,/knowledge-base/core-flow-metrics/sdlc-flow-velocity,2,1,0,0,2,1829
 2026-04-27,2026-05-03,no,/knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-delivery-engine,2,0,0,0,0,345
 2026-04-27,2026-05-03,no,/knowledge-base/delivery-flow-performance/value-stream-management-explained-from-idea-to-customer-value,2,0,0,0,0,0
@@ -56,6 +55,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-27,2026-05-03,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,1,0,0,0,0,984
 2026-04-27,2026-05-03,no,/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide,1,0,0,0,0,862
 2026-04-27,2026-05-03,no,/knowledge-base/core-devex-metrics/what-is-developer-experience-devex-a-friendly-guide-for-engineers,1,0,0,0,0,41
+2026-04-27,2026-05-03,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,1,0,0,0,0,0
 2026-04-27,2026-05-03,no,/knowledge-base/core-reliability-metrics/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it,1,0,0,0,0,121
 2026-04-27,2026-05-03,no,/knowledge-base/delivery-flow-performance/lead-time-for-changes-and-mean-lead-time,1,0,0,0,0,64
 2026-04-27,2026-05-03,no,/knowledge-base/incident-analysis/repeat-incident-rate,1,1,0,0,1,1733
@@ -67,7 +67,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-04,2026-05-10,no,/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide,3,0,0,0,1,1604
 2026-05-04,2026-05-10,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,2,0,0,0,0,609
 2026-05-04,2026-05-10,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,2,0,0,0,0,678
-2026-05-04,2026-05-10,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,2,0,0,0,0,0
 2026-05-04,2026-05-10,no,/knowledge-base/core-reliability-metrics/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it,2,1,0,0,0,83
 2026-05-04,2026-05-10,no,/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders,2,0,0,0,0,74
 2026-05-04,2026-05-10,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,1,0,0,0,1,897
@@ -98,7 +97,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-11,2026-05-17,no,/knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,1,1,0,0,1,786
 2026-05-11,2026-05-17,no,/knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-delivery-engine,0,0,0,0,1,262
 2026-05-18,2026-05-24,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,12,4,0,0,4,2245
-2026-05-18,2026-05-24,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,4,3,0,0,0,322
 2026-05-18,2026-05-24,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,3,2,0,0,3,790
 2026-05-18,2026-05-24,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,2,0,0,0,3,739
 2026-05-18,2026-05-24,no,/knowledge-base/category/core-flow-metrics,2,0,0,0,0,0
@@ -108,6 +106,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-18,2026-05-24,no,/knowledge-base/category/ai-code-assistant-analytics,1,0,0,0,0,13
 2026-05-18,2026-05-24,no,/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity,1,0,0,0,1,206
 2026-05-18,2026-05-24,no,/knowledge-base/core-flow-metrics/cycle-time-mastery-from-first-commit-to-production,1,0,0,0,0,0
+2026-05-18,2026-05-24,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,1,1,0,0,0,322
 2026-05-18,2026-05-24,no,/knowledge-base/core-flow-metrics/lead-time-for-changes-and-mean-lead-time,1,1,0,0,1,75
 2026-05-18,2026-05-24,no,/knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,1,0,0,0,0,0
 2026-05-25,2026-05-31,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,8,2,0,0,5,2923
@@ -115,8 +114,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-25,2026-05-31,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,5,1,0,0,3,1155
 2026-05-25,2026-05-31,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,3,0,0,0,2,756
 2026-05-25,2026-05-31,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,3,1,0,0,1,739
-2026-05-25,2026-05-31,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,3,2,0,0,1,762
 2026-05-25,2026-05-31,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,2,1,0,0,1,150
+2026-05-25,2026-05-31,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,2,2,0,0,1,762
 2026-05-25,2026-05-31,no,/knowledge-base/incident-analysis/repeat-incident-rate,2,2,0,0,1,74
 2026-05-25,2026-05-31,no,/knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,2,0,0,0,0,0
 2026-05-25,2026-05-31,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,1,0,0,0,0,2747
@@ -133,7 +132,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-07,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,3,1,0,0,2,956
 2026-06-01,2026-06-07,no,/knowledge-base/incident-analysis/repeat-incident-rate,3,1,0,0,2,140
 2026-06-01,2026-06-07,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,1,0,0,0,0,124
-2026-06-01,2026-06-07,no,/knowledge-base/category/core-flow-metrics,1,0,0,0,0,2
 2026-06-01,2026-06-07,no,/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity,1,1,0,0,0,74
 2026-06-08,2026-06-14,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,30,14,0,0,12,3365
 2026-06-08,2026-06-14,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,23,11,0,0,16,13441
@@ -141,7 +139,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-08,2026-06-14,no,/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide,7,0,0,0,1,619
 2026-06-08,2026-06-14,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,6,0,0,0,1,4937
 2026-06-08,2026-06-14,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,4,0,0,0,0,135
-2026-06-08,2026-06-14,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,3,1,0,0,0,1140
 2026-06-08,2026-06-14,no,/knowledge-base/incident-analysis/repeat-incident-rate,3,1,0,0,1,145
 2026-06-08,2026-06-14,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,2,1,0,0,0,1060
 2026-06-08,2026-06-14,no,/knowledge-base/category/ai-code-assistant-analytics,2,0,0,0,0,4
@@ -151,6 +148,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-08,2026-06-14,no,/knowledge-base/category/delivery-flow-performance,2,0,0,0,0,2
 2026-06-08,2026-06-14,no,/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity,2,0,0,0,0,69
 2026-06-08,2026-06-14,no,/knowledge-base/core-flow-metrics/cycle-time-mastery-from-first-commit-to-production,2,1,0,0,0,0
+2026-06-08,2026-06-14,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,2,1,0,0,0,1140
 2026-06-08,2026-06-14,no,/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders,2,1,0,0,0,25
 2026-06-08,2026-06-14,no,/knowledge-base/delivery-flow-performance/flow-distribution,2,0,0,0,0,4
 2026-06-08,2026-06-14,no,/knowledge-base/incident-analysis/incident-frequency,2,1,0,0,1,44
@@ -180,8 +178,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-15,2026-06-21,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,20,12,0,0,15,3958
 2026-06-15,2026-06-21,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,8,3,0,0,3,3603
 2026-06-15,2026-06-21,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,7,3,0,0,3,11693
-2026-06-15,2026-06-21,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,5,1,0,0,0,1535
 2026-06-15,2026-06-21,no,/knowledge-base/ci-cd-platform-analytics/build-failure-rate-what-it-tells-engineering-teams,4,2,0,0,1,36
+2026-06-15,2026-06-21,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,3,1,0,0,0,1535
 2026-06-15,2026-06-21,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,2,0,0,0,1,2878
 2026-06-15,2026-06-21,no,/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide,2,0,0,0,1,1492
 2026-06-15,2026-06-21,no,/knowledge-base/delivery-flow-performance/time-to-value,2,0,0,0,0,35
@@ -196,11 +194,11 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-15,2026-06-21,no,/knowledge-base/quality-risk/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders,1,0,0,0,0,0
 2026-06-15,2026-06-21,no,/knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,1,0,0,0,0,0
 2026-06-15,2026-06-21,no,/knowledge-base/core-devex-metrics/what-is-developer-experience-devex-a-friendly-guide-for-engineers,0,0,0,0,1,28
-2026-06-22,2026-06-28,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,56,22,0,0,57,31724
+2026-06-22,2026-06-28,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,54,22,0,0,57,31724
 2026-06-22,2026-06-28,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,21,7,0,0,14,3805
 2026-06-22,2026-06-28,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,9,2,0,0,4,1972
 2026-06-22,2026-06-28,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,7,3,0,0,1,3162
-2026-06-22,2026-06-28,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,4,3,0,0,3,1479
+2026-06-22,2026-06-28,no,/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine,3,3,0,0,3,1479
 2026-06-22,2026-06-28,no,/knowledge-base/incident-analysis/incident-frequency,3,0,0,0,0,35
 2026-06-22,2026-06-28,no,/knowledge-base/incident-analysis/repeat-incident-rate,2,1,0,0,1,310
 2026-06-22,2026-06-28,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,1,0,0,0,0,950

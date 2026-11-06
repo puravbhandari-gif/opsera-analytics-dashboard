@@ -1,5 +1,5 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
-2026-10-05,2026-10-11,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,60,18,0,0,61,37662
+2026-10-05,2026-10-11,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,58,18,0,0,61,37662
 2026-10-05,2026-10-11,no,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,32,14,0,0,13,1414
 2026-10-05,2026-10-11,no,/knowledge-base/incident-analysis/repeat-incident-rate,21,6,0,0,0,261
 2026-10-05,2026-10-11,no,/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide,15,3,0,0,2,1182
@@ -132,6 +132,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-03,yes,/knowledge-base/ci-cd-platform-analytics/build-failure-rate-what-it-tells-engineering-teams,2,0,0,0,0,0
 2026-11-02,2026-11-03,yes,/knowledge-base/core-flow-metrics/cycle-time-mastery-from-first-commit-to-production,2,0,0,0,0,9
 2026-11-02,2026-11-03,yes,/knowledge-base/core-reliability-metrics/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it,2,0,0,0,0,22
+2026-11-02,2026-11-03,yes,/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders,2,0,0,0,0,101
 2026-11-02,2026-11-03,yes,/knowledge-base/quality-risk/patch-management-efficiency,2,0,0,0,0,0
 2026-11-02,2026-11-03,yes,/knowledge-base/tool-specific-analysis/cursor-ai-explained,2,0,0,0,0,8
 2026-11-02,2026-11-03,yes,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,1,0,0,0,0,0
@@ -139,5 +140,4 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-03,yes,/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor,1,1,0,0,0,20
 2026-11-02,2026-11-03,yes,/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity,1,0,0,0,0,21
 2026-11-02,2026-11-03,yes,/knowledge-base/core-flow-metrics/lead-time-for-changes-and-mean-lead-time,1,0,0,0,0,26
-2026-11-02,2026-11-03,yes,/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders,1,0,0,0,0,101
 2026-11-02,2026-11-03,yes,/knowledge-base/quality-risk/understanding-system-hardening-timelines-in-devsecops-environments,1,0,0,0,0,0

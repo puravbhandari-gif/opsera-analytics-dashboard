@@ -2,13 +2,27 @@
  "source": "Google Analytics, visits by referring site",
  "ga_start": "2026-04-01",
  "ga_end": "2026-11-03",
- "checked": "2026-11-04",
+ "checked": "2026-11-06",
  "by_link": {
+  "": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-11-06",
+   "to": "2026-11-03"
+  },
   "https://aithority.com/machine-learning/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce/": {
    "visits": 1,
    "engaged": 1,
    "demos": 0,
    "from": "2026-09-15",
+   "to": "2026-10-29"
+  },
+  "https://aithority.com/machine-learning/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-29",
    "to": "2026-11-03"
   },
   "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering": {
@@ -16,6 +30,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-24",
+   "to": "2026-11-03"
+  },
+  "https://cmotech.news/story/opsera-relaunches-as-ai-native-software-factory-platform": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-30",
    "to": "2026-11-03"
   },
   "https://cognitiveworld.com/articles/2026/9/1/sounds-right-points-wrong-what-expert-judgment-is-actually-worth-when-ai-makes-everything-seem-easy": {
@@ -79,6 +100,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-09-08",
+   "to": "2026-11-03"
+  },
+  "https://geroundtable.com/opsera-ai-native-software-factory-forge/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-28",
    "to": "2026-11-03"
   },
   "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem": {

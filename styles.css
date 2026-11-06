@@ -398,3 +398,4 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 .seo-claims { margin: 6px 0 0; padding-left: 18px; font-size: 0.85rem; color: var(--ink-2); }
 .seo-claims li { margin-bottom: 6px; }
 @media (max-width: 900px) { .seo-inf-grid { grid-template-columns: 1fr; gap: 16px; } }
+.exec-note { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }

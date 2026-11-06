@@ -37,6 +37,9 @@ GA_SPLIT_MAX_SHARE = 1.01
 # Leads: one HubSpot form submission per real fill, sorted by the page it happened on.
 # Agreed with Purav on 21 Oct 2026.
 FORM_EVENT = "hs_form_submission"
+# Visits and page views count on opsera.ai only (agreed 6 Nov 2026). The property also records www.opsera.io, HubSpot landing
+# pages, HubSpot email links and test copies of the site. Form fills keep every site, and Google Ads cost can't be split by site.
+SITE_HOSTS = ["opsera.ai", "www.opsera.ai"]
 LEAD_LINES = [
     ("demo", "Demo requests", lambda p: p in ("/demo", "/demo/")),
     ("contact", "Contact forms", lambda p: p in ("/contact", "/contact/")),
@@ -194,6 +197,8 @@ def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=Non
             filters.append({"filter": {"fieldName": "eventName", "inListFilter": {"values": event_names}}})
         if flt:
             filters.append(flt)
+        if not event_names and not any(m.startswith("advertiser") for m in metrics):
+            filters.append({"filter": {"fieldName": "hostName", "inListFilter": {"values": SITE_HOSTS}}})
         if filters:
             body["dimensionFilter"] = filters[0] if len(filters) == 1 else {"andGroup": {"expressions": filters}}
         res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}:runReport", body)

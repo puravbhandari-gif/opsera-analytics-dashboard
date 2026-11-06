@@ -84,8 +84,8 @@
   {
    "date": "2026-09-14",
    "group": "cant_tell",
-   "visits": 12,
-   "engaged": 5
+   "visits": 11,
+   "engaged": 4
   },
   {
    "date": "2026-09-15",
@@ -204,14 +204,14 @@
   {
    "date": "2026-10-01",
    "group": "cant_tell",
-   "visits": 22,
-   "engaged": 13
+   "visits": 20,
+   "engaged": 11
   },
   {
    "date": "2026-10-02",
    "group": "cant_tell",
-   "visits": 6,
-   "engaged": 4
+   "visits": 5,
+   "engaged": 3
   },
   {
    "date": "2026-10-03",
@@ -222,7 +222,7 @@
   {
    "date": "2026-10-04",
    "group": "cant_tell",
-   "visits": 4,
+   "visits": 3,
    "engaged": 3
   },
   {
@@ -695,8 +695,8 @@
    "post": "https://www.linkedin.com/posts/opsera_opsera-github-universe-activity-7523428976573493251-J0z3"
   }
  ],
- "untagged_total": 507,
+ "untagged_total": 502,
  "start_date": "2026-09-01",
  "end_date": "2026-11-03",
- "pulled_at": "2026-11-04T18:40+05:30"
+ "pulled_at": "2026-11-06T14:17+05:30"
 }

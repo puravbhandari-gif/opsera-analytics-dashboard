@@ -227,7 +227,7 @@
      "clicks": 891,
      "times_shown": 32162,
      "by": "Opsera",
-     "ai_visits": 30,
+     "ai_visits": 17,
      "months": [
       79,
       90,
@@ -284,7 +284,7 @@
      "clicks": 451,
      "times_shown": 39194,
      "by": "Opsera",
-     "ai_visits": 8,
+     "ai_visits": 2,
      "months": [
       46,
       58,
@@ -360,7 +360,7 @@
      "clicks": 268,
      "times_shown": 259416,
      "by": "Opsera",
-     "ai_visits": 70,
+     "ai_visits": 69,
      "months": [
       90,
       83,
@@ -529,20 +529,20 @@
      "by": "Opsera"
     },
     {
-     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
-     "group": "Blog",
-     "first_week": "2026-03-30",
-     "first_spot": 8.2,
-     "spot": 6.1,
-     "by": "Opsera"
-    },
-    {
      "page": "/blog/cobol-modernization",
      "group": "Blog",
      "first_week": "2026-09-07",
      "first_spot": 8.8,
      "spot": 6.8,
      "by": "Infrasity"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.2,
+     "spot": 6.1,
+     "by": "Opsera"
     },
     {
      "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
@@ -601,62 +601,62 @@
      "by": "Infrasity"
     },
     {
-     "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "page": "/blog/harness-engineering",
      "group": "Blog",
-     "first_week": "2026-03-30",
-     "first_spot": 18.8,
-     "spot": 11.8,
-     "by": "Opsera"
+     "first_week": "2026-10-12",
+     "first_spot": 7.0,
+     "spot": 7.2,
+     "by": "Infrasity"
     }
    ],
-   "ai_visits": 831,
+   "ai_visits": 755,
    "ai_tools": {
-    "chatgpt": 415,
-    "gemini": 220,
-    "perplexity": 105,
-    "claude": 85,
-    "copilot": 6
+    "chatgpt": 365,
+    "gemini": 210,
+    "perplexity": 103,
+    "claude": 72,
+    "copilot": 5
    },
    "ai_months": [
     {
      "month": "2026-01",
-     "visits": 79
+     "visits": 75
     },
     {
      "month": "2026-02",
-     "visits": 76
+     "visits": 71
     },
     {
      "month": "2026-03",
-     "visits": 107
+     "visits": 95
     },
     {
      "month": "2026-04",
-     "visits": 71
+     "visits": 59
     },
     {
      "month": "2026-05",
-     "visits": 84
+     "visits": 76
     },
     {
      "month": "2026-06",
-     "visits": 81
+     "visits": 73
     },
     {
      "month": "2026-07",
-     "visits": 86
+     "visits": 77
     },
     {
      "month": "2026-08",
-     "visits": 66
+     "visits": 60
     },
     {
      "month": "2026-09",
-     "visits": 71
+     "visits": 64
     },
     {
      "month": "2026-10",
-     "visits": 110
+     "visits": 105
     }
    ],
    "ai_top_pages": [
@@ -672,21 +672,21 @@
     },
     {
      "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
-     "visits": 70,
+     "visits": 69,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "visits": 30,
      "by": "Opsera"
     },
     {
      "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
-     "visits": 35,
-     "by": "Opsera"
-    },
-    {
-     "page": "/careers",
-     "visits": 30,
+     "visits": 24,
      "by": "Opsera"
     }
    ],
-   "ai_page_not_recorded": 133
+   "ai_page_not_recorded": 130
   },
   "forge": {
    "months": [
@@ -891,7 +891,7 @@
      "clicks": 67,
      "times_shown": 3355,
      "by": "Opsera",
-     "ai_visits": 5,
+     "ai_visits": 3,
      "months": [
       0,
       0,
@@ -910,7 +910,7 @@
      "clicks": 67,
      "times_shown": 2611,
      "by": "Opsera",
-     "ai_visits": 11,
+     "ai_visits": 9,
      "months": [
       0,
       0,
@@ -1091,9 +1091,9 @@
      "by": "Infrasity"
     }
    ],
-   "ai_visits": 64,
+   "ai_visits": 60,
    "ai_tools": {
-    "chatgpt": 34,
+    "chatgpt": 30,
     "gemini": 26,
     "perplexity": 4
    },
@@ -1120,11 +1120,11 @@
     },
     {
      "month": "2026-06",
-     "visits": 8
+     "visits": 6
     },
     {
      "month": "2026-07",
-     "visits": 6
+     "visits": 4
     },
     {
      "month": "2026-08",
@@ -1146,13 +1146,13 @@
      "by": "Opsera"
     },
     {
-     "page": "/forge",
-     "visits": 11,
+     "page": "/blog/spec-driven-development",
+     "visits": 10,
      "by": "Opsera"
     },
     {
-     "page": "/blog/spec-driven-development",
-     "visits": 10,
+     "page": "/forge",
+     "visits": 9,
      "by": "Opsera"
     },
     {
@@ -1352,7 +1352,7 @@
      "clicks": 268,
      "times_shown": 259416,
      "by": "Opsera",
-     "ai_visits": 70,
+     "ai_visits": 69,
      "months": [
       90,
       83,
@@ -1390,7 +1390,7 @@
      "clicks": 259,
      "times_shown": 39987,
      "by": "Opsera",
-     "ai_visits": 7,
+     "ai_visits": 6,
      "months": [
       33,
       26,
@@ -1409,7 +1409,7 @@
      "clicks": 104,
      "times_shown": 23689,
      "by": "Opsera",
-     "ai_visits": 5,
+     "ai_visits": 4,
      "months": [
       12,
       6,
@@ -1466,7 +1466,7 @@
      "clicks": 61,
      "times_shown": 119495,
      "by": "Opsera",
-     "ai_visits": 35,
+     "ai_visits": 24,
      "months": [
       14,
       13,
@@ -1529,22 +1529,14 @@
      "first_spot": 6.8,
      "spot": 6.2,
      "by": "Opsera"
-    },
-    {
-     "page": "/blog/13-code-quality-metrics-that-you-must-track",
-     "group": "Blog",
-     "first_week": "2026-03-30",
-     "first_spot": 18.8,
-     "spot": 11.8,
-     "by": "Opsera"
     }
    ],
-   "ai_visits": 290,
+   "ai_visits": 276,
    "ai_tools": {
-    "chatgpt": 109,
+    "chatgpt": 101,
     "gemini": 79,
-    "claude": 52,
-    "perplexity": 46,
+    "claude": 47,
+    "perplexity": 45,
     "copilot": 4
    },
    "ai_months": [
@@ -1554,11 +1546,11 @@
     },
     {
      "month": "2026-02",
-     "visits": 35
+     "visits": 32
     },
     {
      "month": "2026-03",
-     "visits": 49
+     "visits": 40
     },
     {
      "month": "2026-04",
@@ -1566,7 +1558,7 @@
     },
     {
      "month": "2026-05",
-     "visits": 32
+     "visits": 31
     },
     {
      "month": "2026-06",
@@ -1578,7 +1570,7 @@
     },
     {
      "month": "2026-08",
-     "visits": 20
+     "visits": 19
     },
     {
      "month": "2026-09",
@@ -1597,17 +1589,17 @@
     },
     {
      "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
-     "visits": 70,
-     "by": "Opsera"
-    },
-    {
-     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
-     "visits": 35,
+     "visits": 69,
      "by": "Opsera"
     },
     {
      "page": "/blog/dora-2025-report-ai-software-development",
      "visits": 30,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "visits": 24,
      "by": "Opsera"
     },
     {

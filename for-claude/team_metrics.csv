@@ -1,12 +1,12 @@
 person,section,metric,baseline_monthly_average,this_month_so_far,counted_from,counted_to,goal_per_month,share_of_goal_pct,source
-Purav Bhandari,Website,"Website visits, overall",11142.0,1900,2026-11-01,2026-11-03,15000,12.7,Google Analytics
-Purav Bhandari,Website,Visits from search engines and AI tools,3749.3,405,2026-11-01,2026-11-03,To set,,Google Analytics
+Purav Bhandari,Website,"Website visits, overall",8113.7,1405,2026-11-01,2026-11-03,15000,9.4,Google Analytics
+Purav Bhandari,Website,Visits from search engines and AI tools,3636.0,404,2026-11-01,2026-11-03,To set,,Google Analytics
 Purav Bhandari,Website,"Asset downloads (reports, white papers, ebooks, comparison guides)",41.3,2,2026-11-01,2026-11-03,To set,,Google Analytics
 Purav Bhandari,Website,Demo requests,8.0,1,2026-11-01,2026-11-03,To set,,Google Analytics
 Purav Bhandari,LinkedIn (company page),"Impressions, unpaid",22861.7,221,2026-11-01,2026-11-01,35000,0.6,LinkedIn exports
-Purav Bhandari,LinkedIn (company page),Visits to opsera.ai from LinkedIn,449.3,25,2026-11-01,2026-11-03,To set,,Google Analytics
+Purav Bhandari,LinkedIn (company page),Visits to opsera.ai from LinkedIn,434.7,25,2026-11-01,2026-11-03,To set,,Google Analytics
 Purav Bhandari,LinkedIn (company page),Asset downloads from LinkedIn visits,3.0,0,2026-11-01,2026-11-03,To set,,Google Analytics
-Purav Bhandari,Website,"Website visits, without email robots",9580.0,1384,2026-11-01,2026-11-03,,,Google Analytics
+Purav Bhandari,Website,"Website visits, without email robots",7840.7,1317,2026-11-01,2026-11-03,,,Google Analytics
 Nassir,,Metrics coming,,,,,,,
 Yusra Syed,,Metrics coming,,,,,,,
 David Howard,,Metrics coming,,,,,,,

@@ -8,8 +8,6 @@ page,type,page_title
 /blog/2021-gartner-market-guide-for-devops-value-stream-management-platforms-opsera-devops-orchestration,Blog,Opsera Recognized in 2021 Gartner® Market Guide - Opsera
 /blog/2022-recap-opsera-year-3,Blog,2022 Recap: Opsera Year 3 - Opsera
 /blog/2022-trends-the-no-code-devops-orchestration-boom,Blog,2023 Trends: The No-Code DevOps Orchestration Boom - Opsera
-/blog/2025-devops-ai-report,Blog,Page not found - Opsera
-/blog/2026-01-15-ai-code-generation-productivity-report,Blog,Page not found - Opsera
 /blog/3-devops-predictions-for-2024,Blog,3 DevOps Predictions for 2024 | Opsera - Opsera
 /blog/4-ways-to-automate-security-in-software-development,Blog,4 Ways to automate security in software development - Opsera
 /blog/5-ways-to-improve-developer-productivity,Blog,5 Ways To Improve Developer Productivity | Opsera - Opsera
@@ -29,14 +27,8 @@ page,type,page_title
 /blog/agile-slackbot-power,Blog,Opsera — The context-aware software factory
 /blog/ai-agent-guardrails-ontologies,Blog,AI Agent Guardrails: Why Agents Need Ontologies - Opsera
 /blog/ai-agents-are-building-faster-than-you-can-govern,Blog,AI Agents Are Building Faster Than You Can Govern - Opsera
-/blog/ai-code-assistant-benchmark-report,Blog,Page not found - Opsera
-/blog/ai-code-assistant-metrics,Blog,Page not found - Opsera
-/blog/ai-code-generation-research-report,Blog,Page not found - Opsera
-/blog/ai-code-quality-benchmark-2026,Blog,Page not found - Opsera
 /blog/ai-code-security,Blog,AI Code Security: Why SAST Scanners Fall Short - Opsera
 /blog/ai-coding-impact-2026-benchmark-report,Blog,Opsera — The context-aware software factory
-/blog/ai-coding-impact-report,Blog,Page not found - Opsera
-/blog/ai-engineering-metrics,Blog,Page not found - Opsera
 /blog/ai-first-devops-at-aws-reinvent-2025-recap,Blog,AI first DevOps at AWS reInvent 2025: Recap - Opsera
 /blog/ai-in-the-workplace-insights-from-the-2024-dora-report,Blog,AI in the Workplace: Insights from the 2024 DORA Report - Opsera
 /blog/ai-made-your-developers-faster-it-also-made-your-pipeline-slower,Blog,AI Made Your Developers Faster. It Also Made Your Pipeline Slower. - Opsera
@@ -51,7 +43,6 @@ page,type,page_title
 /blog/application-modernization,Blog,Application Modernization Without Architectural Drift - Opsera
 /blog/application-modernization-strategy,Blog,Application Modernization Strategy for SaaS Teams - Opsera
 /blog/automate-to-empower-how-toolchain-automation-can-empower-and-elevate-your-teams,Blog,Toolchain Automation Can Empower Your Team - Opsera
-/blog/autonomous-security-agents,Blog,Page not found - Opsera
 /blog/aws-reinvent-2022-recap,Blog,AWS Reinvent 2022 Recap - Opsera
 /blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026,Blog,Back-to-Back: G2 Users Name Opsera a High Performer Again in Summer 2026 - Opsera
 /blog/best-devops-tools,Blog,Ultimate list of DevOps tools for 2023 | Opsera - Opsera
@@ -82,18 +73,13 @@ page,type,page_title
 /blog/conversations-with-former-cio-on-continuous-orchestration,Blog,A CIO on Continuous Orchestration - Opsera
 /blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve,Blog,Copado vs. Opsera: The DevOps Showdown Salesforce Teams Deserve - Opsera
 /blog/copado-vs-opsera-which-is-the-best-platform-for-salesforce-devops-and-beyond,Blog,Copado vs Opsera: Which is the best platform for Salesforce DevOps ? - Opsera
-/blog/copilot-cursor-claude-code-what-250k-developers-revealed,Blog,Page not found - Opsera
 /blog/cspm-shift-left,Blog,
-/blog/cursor-ai-adoption-trends,Blog,Page not found - Opsera
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-coding-tool,Blog,
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,Cursor AI Adoption Trends: Real Data from the Fastest Growing Coding T - Opsera
-/blog/cursor-ai-review,Blog,Page not found - Opsera
 /blog/cursor-alternatives,Blog,Cursor Alternatives for Teams Running Multiple AI Assistants - Opsera
-/blog/cursor-security-agents,Blog,Page not found - Opsera
 /blog/dark-software-factory,Blog,Opsera - The context-aware software factory
-/blog/data-validation-testing-techniques-examples-tools,Blog,Page not found - Opsera
 /blog/defect-escape-rate-der-a-comprehensive-guide,Blog,Page not found - Opsera
-/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accelerate-2023-state-of-devops-report,Blog,Human-centric Insights from Google and DORA’s 2023 State Report - Opsera
+/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accelerate-2023-state-of-devops-report,Blog,Human-centric Insights from Google and DORA’s 2023 State Report — Opsera
 /blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline,Blog,"Container Orchestration, Kubernetes, and the CI/CD Pipeline - Opsera"
 /blog/devops-at-the-core-container-orchestration-kubernetes-and-the-ci-cd-pipeline-part-2,Blog,A Difficult Adoption: Challenges in Migrating to Kubernetes - Opsera
 /blog/devops-at-the-crossroads-the-future-of-software-delivery,Blog,DevOps: The Future of Software Delivery - Opsera
@@ -129,7 +115,6 @@ page,type,page_title
 /blog/dreamforce-2022-recap,Blog,Dreamforce 2022 recap - Opsera
 /blog/dreamforce-2023-recap-the-doctor-is-in,Blog,Dreamforce 2023 Recap: The Doctor is in! - Opsera
 /blog/dreamforce-2024-preview-new-and-exciting-salesforce-features-from-opsera,Blog,Dreamforce 2024 Preview: New and Exciting Salesforce Features from Ops - Opsera
-/blog/driving-github-copilot-adoption-and-measuring-developer-productivity,Blog,Page not found - Opsera
 /blog/dungeons-developers-which-generative-ai-hero-will-save-your-build,Blog,Dungeons & Developers: Which Generative AI Hero Will Save Your Build? - Opsera
 /blog/ensuring-security-in-salesforce-devops,Blog,Ensuring security in Salesforce DevOps | Opsera - Opsera
 /blog/enterprise-benchmark,Blog,AI-SDLC Benchmark: Why Spec and Context Matter Most - Opsera
@@ -138,7 +123,6 @@ page,type,page_title
 /blog/five-devops-predictions-for-2023,Blog,5 DevOps Predictions for 2023 - Opsera
 /blog/forge-cursor-ai-speed-meets-enterprise-control,Blog,Forge + Cursor: AI Speed Meets Enterprise Control - Opsera
 /blog/forge-ontology-ai-agents,Blog,How Forge Uses an Ontology to Guide AI Agents - Opsera
-/blog/from-ado-to-github-upgrade-your-developer-experience-without-breaking-the-build,Blog,Page not found - Opsera
 /blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success,Blog,From AI Adoption to AI-Driven Business Outcomes: 4 Important Findings to Drive Success - Opsera
 /blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption,Blog,From Chaos to Copilot: What Teams Get Wrong About GitHub Copilot Adopt - Opsera
 /blog/frontier-ai-software-readiness-benchmark,Blog,Frontier AI Labs Reveal the Same Problem Enterprises Face: Speed Is Not Software Readiness - Opsera
@@ -151,7 +135,6 @@ page,type,page_title
 /blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership,Blog,"Get to GitHub, Get Working, and Get Insights | Opsera - Opsera"
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,Github Copilot Adoption Trends: Insights from Real Data - Opsera
 /blog/github-copilot-alternatives,Blog,Best GitHub Copilot Alternatives for Enterprise Governance - Opsera
-/blog/github-copilot-enterprise-impact-on-developer-productivity,Blog,Page not found - Opsera
 /blog/github-copilot-trends-and-measuring-impact,Blog,GitHub Copilot Trends and Measuring Impact | Opsera - Opsera
 /blog/harness-engineering,Blog,What Is Harness Engineering? Enterprise AI Delivery Guide — Opsera
 /blog/healthcare-data-modernization,Blog,Healthcare Data Modernization: SQL to Cloud — Opsera
@@ -167,12 +150,11 @@ page,type,page_title
 /blog/how-to-measure-code-churn-and-predict-future-risk,Blog,
 /blog/how-to-measure-code-churn-and-predict-its-risk,Blog,Page not found - Opsera
 /blog/how-to-measure-code-churn-and-predict-your-future-risk,Blog,
-/blog/i-get-devops-but-what-is-devsecops,Blog,Page not found - Opsera
+/blog/i-get-devops-but-what-is-devsecops,Blog,Opsera — The context-aware software factory
 /blog/i-ran-an-ai-security-scan-on-a-notoriously-vulnerable-app-heres-what-happened,Blog,I Ran AI Security Scan on a Notoriously Vulnerable App - Opsera
 /blog/important-no-code-devops-orchestration,Blog,Why No-Code DevOps Orchestration is Important - Opsera
 /blog/improving-devops-observability-with-value-streams-gamification,Blog,Gamification in DevOps | Opsera Blog - Opsera
 /blog/improving-salesforce-devops-efficiency,Blog,7 tips to Improve Salesforce DevOps efficiency | Opsera - Opsera
-/blog/introducing-opsera-ai-agents,Blog,Page not found - Opsera
 /blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops,Blog,Introducing Opsera AI Agents: The Next Frontier of Agentic DevSecOps - Opsera
 /blog/introducing-opsera-continuous-orchestration-for-next-gen-devops,Blog,Opsera for continuous orchestration - Opsera
 /blog/introducing-vibeshift-from-prototype-to-production-grade-app-in-one-command,Blog,Introducing VIBEshift: from prototype to production-grade app in one command - Opsera
@@ -188,12 +170,10 @@ page,type,page_title
 /blog/meet-derek-ross-lead-solutions-engineer,Blog,Inside Voices: Meet Derek Ross - Lead Solutions Engineer - Opsera
 /blog/migrate-coldfusion-to-java-spring-boot,Blog,"ColdFusion to Java Migration with Spring Boot, Step by Step - Opsera"
 /blog/migrate-dotnet-framework-to-dotnet-10,Blog,A Step-by-Step .NET Framework Migration to .NET 10 - Opsera
-/blog/migrating-salesforce-files-to-s3,Blog,Page not found - Opsera
 /blog/no-code-kubernetes-pipelines,Blog,No-code Kubernetes pipelines | Opsera Blog - Opsera
 /blog/npm-supply-chain-attacks,Blog,npm Supply Chain Attack Prevention | AppSec Agents - Opsera
 /blog/operationalizing-ai-productivity-scaling-and-governing-the-ai-driven-lifecycle,Blog,Operationalizing AI Productivity: Scaling and Governing the AI-Driven Lifecycle - Opsera
 /blog/opsera-2021-recap,Blog,Opsera in 2021 - A Recap - Opsera
-/blog/opsera-and-cursor-partner-to-transform-the-enterprise,Blog,Page not found - Opsera
 /blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc,Blog,Opsera and Cursor Partner to Transform the Enterprise from SDLC to AI-SDLC - Opsera
 /blog/opsera-and-developer-experience,Blog,Opsera and Developer Experience | Opsera - Opsera
 /blog/opsera-and-sdlc-to-ai-sdlc,Blog,Page not found - Opsera
@@ -204,13 +184,12 @@ page,type,page_title
 /blog/opsera-expands-ai-impact-introducing-support-for-amazon-q-alongside-github-copilot-windsurf-and-more,Blog,"Opsera Expands AI Impact: Introducing Support for Amazon Q alongside GitHub Copilot, Windsurf, and More - Opsera"
 /blog/opsera-extends-no-code-devops-orchestration-platform-to-salesforce-release-automation,Blog,No-Code DevOps Orchestration Platform for Salesforce Release Automatio - Opsera
 /blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments,Blog,Octopus Integrates With Opsera - Opsera
-/blog/opsera-io-blog-change-failure-rate,Blog,Page not found - Opsera
+/blog/opsera-io-blog-change-failure-rate,Blog,Opsera — The context-aware software factory
 /blog/opsera-io-blog-what-is-security-posture,Blog,How to Improve your Organization’s Security Posture | Opsera - Opsera
 /blog/opsera-is-a-gartner-magic-quadrant-leader-heres-what-that-means-for-engineering-leaders,Blog,Opsera Is a Gartner Magic Quadrant Leader. Here’s What That Means for Engineering Leaders. - Opsera
 /blog/opsera-is-included-as-an-honorable-mention-in-the-2023-gartner-r-magic-quadrant-tm-for-devops-platforms,Blog,Opsera included as Honorable Mention in 2023 Gartner® Magic Quadrant - Opsera
 /blog/opsera-is-one-of-the-10-hottest-devops-startups,Blog,Opsera is One of “The 10 Hottest DevOps Startups” - Opsera
 /blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow,Blog,Opsera Joins the Claude Marketplace — Bringing Agentic DevOps to Your AI Workflow - Opsera
-/blog/opsera-mcp,Blog,Page not found - Opsera
 /blog/opsera-named-an-honorable-mention-in-the-2024-magic-quadrant-for-devops-platforms,Blog,Opsera Named an Honorable Mention in the 2024 Magic Quadrant for DevOp - Opsera
 /blog/opsera-named-high-performer-in-fall-2023-g2-reports-for-enterprise-continuous-delivery-continuous-integration-configuration-management-and-build-automation,Blog,Opsera Named High Performer in Fall 2023 G2 Reports - Opsera
 /blog/opsera-now-available-on-salesforce-appexchange-the-worlds-leading-enterprise-cloud-marketplace,Blog,Opsera Now Available on Salesforce AppExchange - Opsera
@@ -228,7 +207,7 @@ page,type,page_title
 /blog/release-roundup---june-2024,Blog,Opsera - The context-aware software factory
 /blog/release-roundup---may,Blog,Opsera - The context-aware software factory
 /blog/release-roundup-august-2024,Blog,Release Roundup - August 2024 | Opsera - Opsera
-/blog/release-roundup-june-2024,Blog,Release Roundup - June 2024 | Opsera - Opsera
+/blog/release-roundup-june-2024,Blog,Release Roundup - June 2024 | Opsera
 /blog/release-roundup-may,Blog,Release Roundup - May | Opsera - Opsera
 /blog/rethinking-devops-for-orchestration-insights-security,Blog,"DevOps for orchestration, insights, & security - Opsera"
 /blog/salesforce-devops-trends-in-2021,Blog,Salesforce DevOps Trends 2023 | Opsera - Opsera
@@ -253,7 +232,6 @@ page,type,page_title
 /blog/solving-merge-conflicts-in-salesforce,Blog,Quickest way to resolve Salesforce merge conflicts | Opsera - Opsera
 /blog/spec-driven-development,Blog,Spec-Driven Development: Specs Beat Prompts — Opsera
 /blog/speed-up-the-innovation-with-devops,Blog,How to drive DevOps innovation | Opsera - Opsera
-/blog/sre-vs-devops-responsibilities-differences-and-salaries,Blog,Page not found - Opsera
 /blog/takeaways-from-the-devops-huddle-episode-18-measuring-github-copilot,Blog,Takeaways from the DevOps Huddle Episode 18 - Measuring GitHub Copilot - Opsera
 /blog/taking-control-of-github-security-how-opseras-advanced-security-dashboard-helps-you-manage-risk-at-scale,Blog,Opsera’s Advanced Security Dashboard for GitHub Security - Opsera
 /blog/technical-depth-in-ai-sdlc,Blog,Technical Depth In AI-SDLC: Beyond Code Generation - Opsera
@@ -262,7 +240,6 @@ page,type,page_title
 /blog/the-code-warriors-a-tale-of-devops-and-devsecops-evolution,Blog,The Code Warriors: A Tale of DevOps and DevSecOps Evolution | Opsera - Opsera
 /blog/the-company-that-invented-modern-devops-just-learned-a-hard-lesson-about-ai-generated-code,Blog,The Company That Invented Modern DevOps Just Learned a Hard Lesson About AI-Generated Code - Opsera
 /blog/the-developer-productivity-world-cup,Blog,The Developer Productivity World Cup - Opsera
-/blog/the-devops-continuum-exploring-the-ci-cd-pipeline,Blog,Page not found - Opsera
 /blog/the-future-of-salesforce-devops-center,Blog,The Future of Salesforce DevOps Center - Opsera
 /blog/the-hidden-costs-of-salesforce-implementations-devops-scoping,Blog,The Hidden Costs of Salesforce Implementations: DevOps Scoping - Opsera
 /blog/the-high-speed-lane-cursor-opsera-agentic-devops,Blog,The High-Speed Lane: Cursor + Opsera Agentic DevOps - Opsera
@@ -275,7 +252,6 @@ page,type,page_title
 /blog/the-role-of-ai-in-modern-software-development,Blog,The Role of AI in Modern Software Development - Opsera
 /blog/the-secret-life-of-a-build-how-ai-watches-learns-and-helps-it-improve,Blog,"The Secret Life of a Build: How AI Watches, Learns, & Helps It Improve - Opsera"
 /blog/the-sql-migration-audit-we-scanned-the-tools-you-trust,Blog,The SQL Migration Audit: We Scanned the Tools You Trust - Opsera
-/blog/the-top-3-enterprise-devsecops-challenges-and-a-webinar-about-how-to-solve-them,Blog,Page not found - Opsera
 /blog/top-10-devops-books,Blog,Top 10 DevOps books that you must read - Opsera
 /blog/top-25-devops-tools-that-you-need-to-know,Blog,Page not found - Opsera
 /blog/top-devsecops-tools-and-how-to-orchestrate-them-with-opsera,Blog,Top DevSecOps tools and how to orchestrate them | Opsera - Opsera
@@ -294,7 +270,6 @@ page,type,page_title
 /blog/what-githubs-engineering-system-success-playbook-can-teach-you-about-scaling-and-securing-your-devops,Blog,What GitHub’s Engineering System Success Playbook Can Teach You About - Opsera
 /blog/what-is-a-modern-ci-cd-pipeline,Blog,What is a modern CI/CD pipeline? - Opsera
 /blog/what-is-agentic-devops,Blog,What is Agentic DevOps? - Opsera
-/blog/what-is-code-,Blog,Page not found - Opsera
 /blog/what-is-code-churn-how-to-measure-it,Blog,Page not found - Opsera
 /blog/what-is-code-smell,Blog,Opsera | What is Code Smell & How to Avoid it - Opsera
 /blog/what-is-code-smell--how-to-avoid-it,Blog,
@@ -303,7 +278,6 @@ page,type,page_title
 /blog/what-is-deployment-frequency,Blog,Opsera — The context-aware software factory
 /blog/what-is-devsecops,Blog,What is DevSecOps? | Opsera Blog - Opsera
 /blog/whats-new-at-opsera-smarter-merges-sharper-test-mapping-and-salesforce-visibility-all-in-one-update,Blog,"What’s New at Opsera: Smarter Merges, Sharper Test Mapping, and Salesforce Visibility All in One Update - Opsera"
-/blog/whats-the-difference-between-agile-devops-and-cicd,Blog,Page not found - Opsera
 /blog/why-built-forge-software-factory-ai-era-actually-needs,Blog,
 /blog/why-leadership-teams-need-a-unified-view-of-devops-performance,Blog,Why Leadership Teams Need a Unified View of DevOps Performance - Opsera
 /blog/why-salesforce-orgs-need-a-headless-devops-platform,Blog,Why Salesforce Orgs Need a Headless DevOps Platform - Opsera
@@ -316,17 +290,10 @@ page,type,page_title
 /blog/will-ai-ever-replace-your-dev-team-spoiler-not-quite,Blog,Will AI Ever Replace Your Dev Team? Spoiler: Not Quite. - Opsera
 /blog/you-cant-improve-what-you-cant-measure-13-kpis-necessary-for-every-devops-leader,Blog,13 DevOps KPIs every leader should track | Opsera Blog - Opsera
 /blog/you-got-the-insights-so-now-what,Blog,You Got the Insights … So Now What? - Opsera
-/comparison-guides/jenkins,Comparison,Page not found - Opsera
-/comparison-guides/opsera-vs-cloudbees,Comparison,Page not found - Opsera
-/comparison-guides/opsera-vs-copado,Comparison,Page not found - Opsera
-/comparison-guides/opsera-vs-flosum,Comparison,Page not found - Opsera
-/comparison-guides/opsera-vs-gearset,Comparison,Page not found - Opsera
-/comparison-guides/opsera-vs-jellyfish,Comparison,Page not found - Opsera
 /comparison/opsera-vs-copado,Comparison,
 /comparison/opsera-vs-flosum,Comparison,Page not found - Opsera
 /comparison/opsera-vs-gearset,Comparison,Page not found - Opsera
 /comparison/opsera-vs-harness,Comparison,Page not found - Opsera
-/comparison/opsera-vs-jenkins,Comparison,Page not found - Opsera
 /knowledge-base/ai-code-assistant-analytics/amazon-q-developer,Guide (knowledge base),Amazon Q Developer: An Overview of the AI Coding Assistant - Opsera
 /knowledge-base/ai-code-assistant-analytics/amazon-q-developer-what-it-is-how-it-works-and-how-teams-measure-its-impact,Guide (knowledge base),Opsera — The context-aware software factory
 /knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,Guide (knowledge base),Amazon Q vs Cursor - Opsera
@@ -385,3 +352,24 @@ page,type,page_title
 /knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),Understanding System Hardening Timelines in DevSecOps Environments — Opsera
 /knowledge-base/tool-specific-analysis/amazon-q-developer,Guide (knowledge base),Amazon Q Developer: An Overview of the AI Coding Assistant — Opsera
 /knowledge-base/tool-specific-analysis/cursor-ai-explained,Guide (knowledge base),Cursor AI Explained: An Overview of the AI Coding Assistant — Opsera
+/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide,Guide (knowledge base),Gemini Code Assist: A Complete Developer’s Guide — Opsera
+/knowledge-base/uncategorized/cycle-time-mastery-from-first-commit-to-production,Guide (knowledge base),Cycle Time Mastery: From First Commit to Production - Opsera
+/knowledge-base/value-stream-management/flow-distribution,Guide (knowledge base),Flow Distribution — Opsera
+/knowledge-base/value-stream-management/flow-efficiency-metrics,Guide (knowledge base),Flow Efficiency Metrics: An In-Depth Overview — Opsera
+/knowledge-base/value-stream-management/time-to-value,Guide (knowledge base),Time to Value: A Practical Guide — Opsera
+/knowledge-base/value-stream-management/value-stream-management-explained-from-idea-to-customer-value,Guide (knowledge base),Value Stream Management: From Idea to Customer Value — Opsera
+/resources/comparison-guides/8090,Comparison,Forge vs 8090 — Opsera Forge
+/resources/comparison-guides/devin-ai,Comparison,Forge vs Devin — Opsera Forge
+/resources/comparison-guides/opsera-vs-cloudbees,Comparison,Opsera vs Cloudbees - Opsera
+/resources/comparison-guides/opsera-vs-copado,Comparison,Opsera vs Copado: Which is better for Salesforce DevOps? - Opsera
+/resources/comparison-guides/opsera-vs-dx,Comparison,Opsera vs DX - Opsera
+/resources/comparison-guides/opsera-vs-dx-atlassian,Comparison,Opsera vs DX (Atlassian) - Opsera
+/resources/comparison-guides/opsera-vs-flosum,Comparison,Opsera vs Flosum - Opsera
+/resources/comparison-guides/opsera-vs-gearset,Comparison,Opsera vs Gearset - Opsera
+/resources/comparison-guides/opsera-vs-harness,Comparison,Opsera vs Harness - Opsera
+/resources/comparison-guides/opsera-vs-jellyfish,Comparison,Opsera vs Jellyfish - Opsera
+/resources/comparison-guides/opsera-vs-jenkins,Comparison,Opsera vs Jenkins - Opsera
+/resources/comparison-guides/opsera-vs-linearb,Comparison,Opsera vs LinearB - Opsera
+/resources/comparison-guides/opsera-vs-swarmia,Comparison,Opsera vs Swarmia - Opsera
+/resources/ebooks/build-vs-buy-the-salesforce-devops-handbook,eBook,Build vs Buy: Making the Right Choice for Your Salesforce DevOps Solution - Opsera
+/resources/ebooks/implementing-a-robust-and-secure-environment-for-salesforce-deployments,eBook,Implementing a Robust and Secure Environment for Salesforce Deployments - Opsera

@@ -1,8 +1,6 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
-2026-11-02,2026-11-03,yes,/hs/preferences-center/en/direct,236,26,0,0,0,0
-2026-11-02,2026-11-03,yes,/hs/preferences-center/en/page,229,21,0,0,0,0
-2026-11-02,2026-11-03,yes,/events/roundtable-webinar,165,20,11,0,0,0
-2026-11-02,2026-11-03,yes,/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory,7,2,0,0,2,23
+2026-11-02,2026-11-03,yes,/events/roundtable-webinar,164,19,11,0,0,0
+2026-11-02,2026-11-03,yes,/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory,7,3,0,0,2,23
 2026-11-02,2026-11-03,yes,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,6,0,0,0,0,0
 2026-11-02,2026-11-03,yes,/author/kevin-railsback,4,1,0,0,0,0
 2026-11-02,2026-11-03,yes,/forge/modernization,4,2,0,0,0,10
@@ -33,7 +31,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-03,yes,/forge/modernization/cobol-to-csharp,2,1,0,0,0,13
 2026-11-02,2026-11-03,yes,/forge/modernization/cobol-to-python,2,1,0,0,1,16
 2026-11-02,2026-11-03,yes,/forge/modernization/perl-to-python,2,1,0,0,1,10
-2026-11-02,2026-11-03,yes,/hs/preferences-center/en/fallback,2,1,0,0,0,0
 2026-11-02,2026-11-03,yes,/huddle/episode-16-source-code-migration-made-easy,2,0,0,0,0,0
 2026-11-02,2026-11-03,yes,/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes,2,0,0,0,0,8
 2026-11-02,2026-11-03,yes,/platform/continuous-orchestration,2,0,0,0,0,0

@@ -1,158 +1,101 @@
 period_start,period_end,period_not_finished,campaign,visits,engaged_visits,form_fills,of_which_asset_downloads
-2026-04-01,2026-04-30,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,468,272,58,5
-2026-04-01,2026-04-30,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,382,167,17,0
 2026-04-01,2026-04-30,no,Brand - Search - M+D,253,136,1,0
-2026-04-01,2026-04-30,no,Competitors,193,61,0,0
-2026-04-01,2026-04-30,no,34235921-DG-FY26-Q4-Holiday-Newsletter,150,45,0,0
-2026-04-01,2026-04-30,no,42630936-DG-FY27-Architecture-Agent-Workshop,122,40,0,0
-2026-04-01,2026-04-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,49,24,0,0
-2026-04-01,2026-04-30,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,44,15,2,2
+2026-04-01,2026-04-30,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,217,116,17,0
+2026-04-01,2026-04-30,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,210,123,58,5
+2026-04-01,2026-04-30,no,Competitors,140,48,0,0
+2026-04-01,2026-04-30,no,34235921-DG-FY26-Q4-Holiday-Newsletter,92,16,0,0
+2026-04-01,2026-04-30,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,30,15,2,2
+2026-04-01,2026-04-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,16,4,0,0
 2026-04-01,2026-04-30,no,34235716-DG-FY26-Q4-Trends-Webinar,8,0,0,0
-2026-04-01,2026-04-30,no,14633393-DG-2025-Q2-Whitepaper-Databricks,7,4,0,0
 2026-04-01,2026-04-30,no,DG-Webinar-DevOpsHuddle-Ep16-03-14,5,3,0,0
-2026-04-01,2026-04-30,no,16485134-Release Notes,4,2,0,0
-2026-04-01,2026-04-30,no,33167493-DG-FY26-ContactUs-LN,4,1,0,0
 2026-04-01,2026-04-30,no,39712174-DG-FY27-Q1-Agentic-Launch,3,2,0,0
 2026-04-01,2026-04-30,no,24503380-DG-FY26-Q3-DORA-Webinar,2,1,0,0
 2026-04-01,2026-04-30,no,42934107-DG-FY27-Q1-Forge-Launch,2,1,0,0
-2026-04-01,2026-04-30,no,Search-AgilevsDevops-2021-02-23,2,0,0,0
-2026-04-01,2026-04-30,no,41776420-DG-FY27-Invited-to-Discord-Community,1,1,0,0
-2026-04-01,2026-04-30,no,DG-2024-Q2-DevOpsHuddle-CopilotReports,1,1,0,0
-2026-05-01,2026-05-31,no,34235921-DG-FY26-Q4-Holiday-Newsletter,1410,72,0,0
+2026-05-01,2026-05-31,no,34235921-DG-FY26-Q4-Holiday-Newsletter,1292,8,0,0
 2026-05-01,2026-05-31,no,Brand - Search - M+D,346,198,3,0
-2026-05-01,2026-05-31,no,Competitors,304,58,3,3
-2026-05-01,2026-05-31,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,67,17,1,0
-2026-05-01,2026-05-31,no,44234617-DG-FY27-Q2-Cursor-Workshop,64,9,0,0
+2026-05-01,2026-05-31,no,Competitors,291,53,3,3
 2026-05-01,2026-05-31,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,39,23,1,0
 2026-05-01,2026-05-31,no,43702534-DG-FY27-Gartner-MQ,39,19,4,4
-2026-05-01,2026-05-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,33,13,0,0
-2026-05-01,2026-05-31,no,16485134-Release Notes,10,7,0,0
-2026-05-01,2026-05-31,no,14633393-DG-2025-Q2-Whitepaper-Databricks,6,2,0,0
+2026-05-01,2026-05-31,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,18,9,1,0
+2026-05-01,2026-05-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,8,1,0,0
 2026-05-01,2026-05-31,no,34235716-DG-FY26-Q4-Trends-Webinar,3,1,0,0
 2026-05-01,2026-05-31,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,3,1,0,0
-2026-05-01,2026-05-31,no,45202087-DG-FY27-AWT Mumbai,3,2,0,0
-2026-05-01,2026-05-31,no,10222977-PR-2025-Q1-SeriesB-Announcement,2,1,0,0
-2026-05-01,2026-05-31,no,41776420-DG-FY27-Invited-to-Discord-Community,2,2,0,0
-2026-05-01,2026-05-31,no,42630936-DG-FY27-Architecture-Agent-Workshop,2,1,0,0
-2026-05-01,2026-05-31,no,Free trial,2,0,0,0
-2026-05-01,2026-05-31,no,octopus_integration,2,0,0,0
-2026-05-01,2026-05-31,no,28354891-DG-FY26-Q4-Databricks_Outbound,1,1,0,0
-2026-05-01,2026-05-31,no,Display-US-2021-01-13,1,1,0,0
-2026-05-01,2026-05-31,no,Hummingbird AI,1,0,0,0
+2026-05-01,2026-05-31,no,45202087-DG-FY27-AWT Mumbai,2,1,0,0
 2026-05-01,2026-05-31,no,profile,1,1,0,0
-2026-06-01,2026-06-30,no,34235921-DG-FY26-Q4-Holiday-Newsletter,1034,92,0,0
-2026-06-01,2026-06-30,no,44893279-DG-FY27-Q2-MQ-Roundtable,158,41,4,0
-2026-06-01,2026-06-30,no,41776420-DG-FY27-Invited-to-Discord-Community,139,9,0,0
+2026-06-01,2026-06-30,no,34235921-DG-FY26-Q4-Holiday-Newsletter,923,28,0,0
 2026-06-01,2026-06-30,no,Brand - Search - M+D,136,76,4,0
-2026-06-01,2026-06-30,no,Competitors,124,25,1,1
+2026-06-01,2026-06-30,no,44893279-DG-FY27-Q2-MQ-Roundtable,116,22,4,0
+2026-06-01,2026-06-30,no,Competitors,113,23,1,1
 2026-06-01,2026-06-30,no,ai-roundtable-june2026,92,77,57,0
-2026-06-01,2026-06-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,32,10,0,0
 2026-06-01,2026-06-30,no,43702534-DG-FY27-Gartner-MQ,18,12,6,6
 2026-06-01,2026-06-30,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,13,8,0,0
-2026-06-01,2026-06-30,no,16485134-Release Notes,6,4,0,0
-2026-06-01,2026-06-30,no,14341128-DG-FY26-Q2-Event-DAIS,5,4,0,0
-2026-06-01,2026-06-30,no,42934107-DG-FY27-Q1-Forge-Launch,3,3,0,0
-2026-06-01,2026-06-30,no,45202087-DG-FY27-AWT Mumbai,3,2,0,0
+2026-06-01,2026-06-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,8,1,0,0
+2026-06-01,2026-06-30,no,14341128-DG-FY26-Q2-Event-DAIS,4,3,0,0
 2026-06-01,2026-06-30,no,arcade_demos,3,2,1,0
-2026-06-01,2026-06-30,no,24303938-DG-FY26-Q3-Event-GitHub Universe,2,0,0,0
-2026-06-01,2026-06-30,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,2,2,0,0
-2026-06-01,2026-06-30,no,46874396-DG-FY27-Q2-Forge-J2EE,2,2,0,0
-2026-06-01,2026-06-30,no,28353439-DG-FY26-Q4-Event-AWS-Reinvent,1,1,0,0
 2026-06-01,2026-06-30,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,1,0,0,0
-2026-06-01,2026-06-30,no,Dreamforce 2022,1,0,0,0
-2026-07-01,2026-07-31,no,Competitors,157,48,3,2
+2026-06-01,2026-06-30,no,42107251-DG-FY27-Q1-AI-BM-Report-Webinar,1,1,0,0
+2026-06-01,2026-06-30,no,45202087-DG-FY27-AWT Mumbai,1,1,0,0
+2026-07-01,2026-07-31,no,Competitors,147,46,3,2
 2026-07-01,2026-07-31,no,Magic Quadrant 2026,118,19,0,0
 2026-07-01,2026-07-31,no,48732806-DG-FY27-Q2-Velocity-Whitepaper,61,46,30,30
-2026-07-01,2026-07-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,22,10,0,0
 2026-07-01,2026-07-31,no,Gartner Magic Quadrant,21,8,2,2
-2026-07-01,2026-07-31,no,44893279-DG-FY27-Q2-MQ-Roundtable,19,10,3,1
 2026-07-01,2026-07-31,no,43702534-DG-FY27-Gartner-MQ,18,10,0,0
+2026-07-01,2026-07-31,no,44893279-DG-FY27-Q2-MQ-Roundtable,17,9,3,1
 2026-07-01,2026-07-31,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,14,9,0,0
 2026-07-01,2026-07-31,no,Brand - Search - M+D,11,9,1,1
 2026-07-01,2026-07-31,no,rko,7,1,0,0
 2026-07-01,2026-07-31,no,Magic+Quadrant+2026,6,3,4,4
-2026-07-01,2026-07-31,no,34235921-DG-FY26-Q4-Holiday-Newsletter,3,3,0,0
-2026-07-01,2026-07-31,no,DG-2023-11-07-DORA-Report-Webinar,3,0,0,0
-2026-07-01,2026-07-31,no,14633393-DG-2025-Q2-Whitepaper-Databricks,2,2,0,0
-2026-07-01,2026-07-31,no,16485134-Release Notes,2,1,0,0
-2026-07-01,2026-07-31,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,2,1,0,0
-2026-07-01,2026-07-31,no,41776420-DG-FY27-Invited-to-Discord-Community,2,2,0,0
-2026-07-01,2026-07-31,no,14296482-DG-FY26-Q2-Event-RKO,1,1,0,0
-2026-07-01,2026-07-31,no,EmailPromos_January,1,0,0,0
+2026-07-01,2026-07-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,3,3,0,0
+2026-07-01,2026-07-31,no,34235921-DG-FY26-Q4-Holiday-Newsletter,1,1,0,0
+2026-07-01,2026-07-31,no,40231487-DG-FY27-Q1-Meet-the-Agents-Webinar,1,1,0,0
 2026-07-01,2026-07-31,no,ai-roundtable-june2026,1,0,0,0
 2026-07-01,2026-07-31,no,arcade_demos,1,1,1,0
 2026-07-01,2026-07-31,no,profile,1,0,0,0
-2026-08-01,2026-08-31,no,50406442-DG-FY27-Q3-Tokenomics-Webinar,1607,183,15,0
-2026-08-01,2026-08-31,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,298,147,0,0
-2026-08-01,2026-08-31,no,Competitors,166,64,0,0
-2026-08-01,2026-08-31,no,41776420-DG-FY27-Invited-to-Discord-Community,56,14,0,0
+2026-08-01,2026-08-31,no,50406442-DG-FY27-Q3-Tokenomics-Webinar,1047,88,15,0
+2026-08-01,2026-08-31,no,Competitors,157,62,0,0
+2026-08-01,2026-08-31,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,50,15,0,0
 2026-08-01,2026-08-31,no,Magic Quadrant 2026,32,3,0,0
 2026-08-01,2026-08-31,no,Gartner Magic Quadrant,31,17,3,3
-2026-08-01,2026-08-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,28,20,0,0
-2026-08-01,2026-08-31,no,DevOps Huddle April 14,28,6,0,0
 2026-08-01,2026-08-31,no,universe26,21,8,0,0
 2026-08-01,2026-08-31,no,43702534-DG-FY27-Gartner-MQ,13,5,2,2
-2026-08-01,2026-08-31,no,44893279-DG-FY27-Q2-MQ-Roundtable,9,5,0,0
 2026-08-01,2026-08-31,no,rko,9,5,0,0
-2026-08-01,2026-08-31,no,14633393-DG-2025-Q2-Whitepaper-Databricks,8,7,0,0
+2026-08-01,2026-08-31,no,44893279-DG-FY27-Q2-MQ-Roundtable,8,4,0,0
 2026-08-01,2026-08-31,no,48732806-DG-FY27-Q2-Velocity-Whitepaper,8,8,8,8
-2026-08-01,2026-08-31,no,16485134-Release Notes,3,2,0,0
-2026-08-01,2026-08-31,no,34235921-DG-FY26-Q4-Holiday-Newsletter,2,2,0,0
+2026-08-01,2026-08-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,5,1,0,0
 2026-08-01,2026-08-31,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,2,2,0,0
 2026-08-01,2026-08-31,no,Brand - Search - M+D,2,1,0,0
 2026-08-01,2026-08-31,no,Magic+Quadrant+2026,2,1,0,0
-2026-08-01,2026-08-31,no,Test-PM-Unified insights,2,0,0,0
 2026-08-01,2026-08-31,no,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
-2026-08-01,2026-08-31,no,Bi-weekly demo,1,0,0,0
-2026-08-01,2026-08-31,no,DG-2024-Github-Copilot-Demo,1,0,0,0
-2026-08-01,2026-08-31,no,DG-2024-Q3-Dreamforce-Dinner-Party,1,0,0,0
-2026-08-01,2026-08-31,no,Free trial,1,0,0,0
-2026-08-01,2026-08-31,no,GITCustodian,1,0,0,0
-2026-09-01,2026-09-30,no,50406442-DG-FY27-Q3-Tokenomics-Webinar,1137,225,60,0
-2026-09-01,2026-09-30,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,737,155,1,0
-2026-09-01,2026-09-30,no,14633393-DG-2025-Q2-Whitepaper-Databricks,208,4,0,0
-2026-09-01,2026-09-30,no,53487406-DG-FY27-Q3-Event-Dreamforce,74,20,5,0
-2026-09-01,2026-09-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,31,15,0,0
-2026-09-01,2026-09-30,no,41776420-DG-FY27-Invited-to-Discord-Community,5,2,0,0
+2026-09-01,2026-09-30,no,50406442-DG-FY27-Q3-Tokenomics-Webinar,777,155,60,0
+2026-09-01,2026-09-30,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,149,75,1,0
+2026-09-01,2026-09-30,no,53487406-DG-FY27-Q3-Event-Dreamforce,49,17,5,0
+2026-09-01,2026-09-30,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,8,4,0,0
 2026-09-01,2026-09-30,no,DG-Webinar-DevOpsHuddle-Ep16-03-14,5,1,0,0
-2026-09-01,2026-09-30,no,DG-2023-12-12-SCM Migration,3,1,0,0
 2026-09-01,2026-09-30,no,37269766-DG-FY27-Q1-Amazon-Q-Webinar,2,2,0,0
-2026-09-01,2026-09-30,no,Search-AgilevsDevops-2021-02-23,2,0,0,0
 2026-09-01,2026-09-30,no,34235921-DG-FY26-Q4-Holiday-Newsletter,1,1,0,0
 2026-09-01,2026-09-30,no,43702534-DG-FY27-Gartner-MQ,1,1,0,0
-2026-09-01,2026-09-30,no,Competitors,1,0,0,0
-2026-09-01,2026-09-30,no,Display-US-Demo-2021-03-24,1,0,0,0
 2026-09-01,2026-09-30,no,Magic Quadrant 2026,1,0,0,0
 2026-10-01,2026-10-31,no,43702534-DG-FY27-Gartner-MQ,42,27,1,1
 2026-10-01,2026-10-31,no,brand-page,37,25,1,0
-2026-10-01,2026-10-31,no,54448666-DG-FY27-Q3-Event-Gartner-Symposium,33,4,0,0
-2026-10-01,2026-10-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,16,5,0,0
+2026-10-01,2026-10-31,no,54448666-DG-FY27-Q3-Event-Gartner-Symposium,31,2,0,0
 2026-10-01,2026-10-31,no,php2shell,11,6,0,0
 2026-10-01,2026-10-31,no,50406442-DG-FY27-Q3-Tokenomics-Webinar,10,4,1,0
-2026-10-01,2026-10-31,no,14633393-DG-2025-Q2-Whitepaper-Databricks,9,3,0,0
 2026-10-01,2026-10-31,no,DG-Webinar-DevOpsHuddle-Ep16-03-14,9,8,1,0
 2026-10-01,2026-10-31,no,github-universe-2026,8,6,0,0
 2026-10-01,2026-10-31,no,meta-ai-series,7,1,0,0
 2026-10-01,2026-10-31,no,53487406-DG-FY27-Q3-Event-Dreamforce,6,1,0,0
-2026-10-01,2026-10-31,no,41776420-DG-FY27-Invited-to-Discord-Community,5,1,0,0
-2026-10-01,2026-10-31,no,Search-AgilevsDevops-2021-02-23,5,0,0,0
-2026-10-01,2026-10-31,no,56008481-DG-FY27-Q3-Event-WDLA,4,0,0,0
-2026-10-01,2026-10-31,no,Dreamforce 2023,4,0,0,0
 2026-10-01,2026-10-31,no,change_impact_analysis_for_code,4,2,0,0
 2026-10-01,2026-10-31,no,external-news,4,0,0,0
 2026-10-01,2026-10-31,no,pulse_article,4,0,0,0
-2026-10-01,2026-10-31,no,16485134-Release Notes,3,3,0,0
-2026-10-01,2026-10-31,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,3,1,0,0
-2026-10-01,2026-10-31,no,Github Better Together,3,0,0,0
 2026-10-01,2026-10-31,no,appdevprofile,3,0,0,0
 2026-10-01,2026-10-31,no,ontologies-series,3,0,0,0
 2026-10-01,2026-10-31,no,opsera-architecture-analyzer-set-2,3,1,0,0
-2026-10-01,2026-10-31,no,promotion,3,2,0,0
 2026-10-01,2026-10-31,no,universe26,3,0,0,0
 2026-10-01,2026-10-31,no,2024-dora-webinar,2,1,0,0
+2026-10-01,2026-10-31,no,51450123-DG-FY27-Q3-Flutter-AISDLC-Sumit,2,0,0,0
 2026-10-01,2026-10-31,no,909exec-episode-43-from-adobe-to-ai-kumar-chivukula-s,2,1,0,0
 2026-10-01,2026-10-31,no,Brand - Search - M+D,2,1,0,0
-2026-10-01,2026-10-31,no,Display-US-2021-01-13,2,0,0,0
+2026-10-01,2026-10-31,no,Github Better Together,2,0,0,0
 2026-10-01,2026-10-31,no,accelerate-ai-powered-coding-with-the-windsurf-dashboard-in,2,0,0,0
 2026-10-01,2026-10-31,no,accelerate-ci-cd-with-opsera-s-webhook-driven-automation,2,1,0,0
 2026-10-01,2026-10-31,no,accelerate-developer-productivity-and-realize-roi-faster,2,1,0,0
@@ -290,11 +233,7 @@ period_start,period_end,period_not_finished,campaign,visits,engaged_visits,form_
 2026-10-01,2026-10-31,no,why-your-devops-pipeline-is-still-broken-and-how-ai-can-fix,2,0,0,0
 2026-10-01,2026-10-31,no,why-your-devops-team-is-growing-too-fast-and-how-to-stop-it,2,0,0,0
 2026-10-01,2026-10-31,no,why-your-software-is-broken-and-how-automation-fixes-it,2,1,0,0
-2026-10-01,2026-10-31,no,28353439-DG-FY26-Q4-Event-AWS-Reinvent,1,0,0,0
-2026-10-01,2026-10-31,no,DG-2024-Q2-Github-Copilot-Free Trial,1,0,0,0
-2026-10-01,2026-10-31,no,DG-2024-Q3-Dreamforce-Dinner-Party,1,0,0,0
-2026-10-01,2026-10-31,no,DG-2024-Q3-Event-GitHub Universe-HappyHour,1,1,0,0
-2026-10-01,2026-10-31,no,DG-2024-Q3-Event-Github-Universe,1,0,0,0
+2026-10-01,2026-10-31,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,1,0,0,0
 2026-10-01,2026-10-31,no,ai_news_stories,1,0,0,0
 2026-10-01,2026-10-31,no,application-security-posture-dashboard-complete-visibility,1,1,0,0
 2026-10-01,2026-10-31,no,best-ai-coding-agents,1,1,0,0
@@ -311,14 +250,11 @@ period_start,period_end,period_not_finished,campaign,visits,engaged_visits,form_
 2026-10-01,2026-10-31,no,the-agentic-future-scaling-delivery-securing-code-and,1,0,0,0
 2026-10-01,2026-10-31,no,top 1 miami,1,0,0,0
 2026-10-01,2026-10-31,no,transform-your-devops-strategy-with-hummingbird-ai-s,1,1,0,0
-2026-11-01,2026-11-03,yes,14633393-DG-2025-Q2-Whitepaper-Databricks,7,1,0,0
 2026-11-01,2026-11-03,yes,16485134-Release Notes,4,0,0,0
 2026-11-01,2026-11-03,yes,change_impact_analysis_for_code,4,4,0,0
 2026-11-01,2026-11-03,yes,43702534-DG-FY27-Gartner-MQ,3,2,0,0
-2026-11-01,2026-11-03,yes,34235921-DG-FY26-Q4-Holiday-Newsletter,2,1,0,0
 2026-11-01,2026-11-03,yes,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
 2026-11-01,2026-11-03,yes,39712174-DG-FY27-Q1-Agentic-Launch,1,0,0,0
-2026-11-01,2026-11-03,yes,41776420-DG-FY27-Invited-to-Discord-Community,1,1,0,0
 2026-11-01,2026-11-03,yes,53487406-DG-FY27-Q3-Event-Dreamforce,1,1,0,0
 2026-11-01,2026-11-03,yes,BuiltIn,1,1,0,0
 2026-11-01,2026-11-03,yes,ai_news_stories,1,0,0,0
