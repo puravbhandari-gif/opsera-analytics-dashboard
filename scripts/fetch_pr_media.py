@@ -13,7 +13,7 @@ Rows already in the file stay. Each run adds new ones from:
   "Coverage Tracker 2026" tab is placed by SamsonPR, with its readership from "Circulation or UVM". Its "Account
   Activities" tab gives data/pr_opportunities.json: outlet, ask, status and deadline, with no reporter or customer names.
 - A few rows added by hand (MANUAL): briefings, partnerships and pieces still in draft. They show in the list but
-  don't count as placements.
+  don't count as placements. Nor do pages marked by hand as naming Opsera only in passing (PASSING).
 
 A found page counts only if its own text says Opsera. Job posts, directory and review listings,
 company profiles, social media and our own sites are left out. Before 1 Jul 2026 only bylines, interviews
@@ -42,7 +42,7 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "pr_media.json"
 AGENCY = Path.home() / "Desktop" / "Data" / "pr-agency"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 MAX_CHARGE_USD = 1   # each weekly run costs a few cents; this caps a run that goes wrong
-TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership")
+TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership", "Passing mention")
 OPPORTUNITIES = Path(__file__).resolve().parent.parent / "data" / "pr_opportunities.json"
 # Added by hand (agreed 6 Nov 2026). Not placements: a briefing, a partnership listing and a piece still in draft.
 MANUAL = [
@@ -52,6 +52,13 @@ MANUAL = [
      "topic": "Security", "quoted": "", "placed_by": "", "found_by": "Added by hand"},
 ]
 PARTNERSHIP = {"https://x.ai/news/partnernetworkannouncement", "https://x.ai/partners/marketplace"}   # the xAI partner network
+# Pages that name Opsera only in passing: kept in the list, not placements (Purav, 6 Nov 2026)
+PASSING = {
+    "https://www.rfp.wiki/it-security/service-orchestration-and-automation-platforms/puppet/opsera",
+    "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering",
+    "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap",
+    "https://cognitiveworld.com/articles/2026/9/1/sounds-right-points-wrong-what-expert-judgment-is-actually-worth-when-ai-makes-everything-seem-easy",
+}
 # One short ask per outlet in SamsonPR's Account Activities tab, written without reporter or customer names
 ASKS = {"CIO News/TechTarget": ("Follow-up questions on a customer's modernization story, with Kumar's view first", False),
         "CIO": ("Story on whether faster AI development brings business value, with a customer engineering leader", False),
@@ -385,6 +392,8 @@ def main():
         x.setdefault("placed_by", "")
         if x["link"] in PARTNERSHIP:
             x["type"] = "Partnership"
+        if x["link"] in PASSING:
+            x["type"] = "Passing mention"
         if not x["found_by"].startswith(("PR agency", "Added by hand", "SamsonPR")):
             x["topic"] = topic(x["title"])
     for x in items.values():   # a pickup found before its press release
