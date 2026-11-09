@@ -2065,7 +2065,7 @@ function renderPublished(p) {
 
 // Blogs by type: each blog tagged by hand with one type (agreed 6 Nov 2026), counted for the period at the top
 // Content by type: blog counts by type for the period. Click a type to list its pieces with visits, engaged visits and
-// Google clicks; Industry hot topics opens first. Each card compares the type's visits per piece with all blogs (agreed 9 Nov 2026).
+// Google clicks; Industry hot topics opens first. Each card compares the type's visits per piece and engaged share with all blogs (agreed 9 Nov 2026).
 let btypePick = "Industry hot topics";
 function renderBlogTypes(p, bt, d) {
   const rows = p.items.filter((i) => i.type === "Blog").map((i) => ({ date: i.date, title: i.title, link: i.link,
@@ -2085,10 +2085,11 @@ function renderBlogTypes(p, bt, d) {
     return list;
   })());
   const avg = (list) => (list.length ? Math.round(list.reduce((t, r) => t + r.visits, 0) / list.length) : 0);
+  const engagedPct = (list) => { const v = list.reduce((t, r) => t + r.visits, 0); return v ? Math.round((list.reduce((t, r) => t + r.engaged, 0) / v) * 100) : 0; };
   const line = (t, a, b, named) => {
     const all = piecesIn(a, b), mine = all.filter((r) => r.t === t);
     if (!mine.length || mine.length === all.length) return "";
-    return `${named ? `${t} averaged` : "Averaged"} ${num(avg(mine))} visits per piece, against ${num(avg(all))} for all ${num(all.length)} blogs`;
+    return `${named ? `${t} averaged` : "Averaged"} ${num(avg(mine))} visits per piece (${engagedPct(mine)}% engaged), against ${num(avg(all))} for all blogs (${engagedPct(all)}% engaged)`;
   };
   const cur = () => (periodsFor(periodMode, p.start_date, p.checked).cur || { start: p.start_date, end: p.checked });
   const drawPieces = () => {
