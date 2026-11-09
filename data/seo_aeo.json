@@ -2,7 +2,7 @@
  "source": "Google Search Console (sc-domain:opsera.ai) and Google Analytics 4, opsera.ai 2026",
  "start_date": "2026-01-01",
  "end_date": "2026-10-31",
- "pulled": "2026-11-06",
+ "pulled": "2026-11-09",
  "rankings_week": "2026-10-26",
  "infrasity": {
   "list": "Infrasity's content list, Google Sheet opsera_aeo_content, read 6 Nov 2026",
@@ -181,6 +181,8 @@
     }
    ],
    "pages_with_clicks": 501,
+   "kb_clicks": 2329,
+   "kb_pages_with_clicks": 36,
    "infrasity_clicks": 1020,
    "infrasity_pages_with_clicks": 35,
    "top_pages": [
@@ -207,7 +209,7 @@
      "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
      "clicks": 1593,
      "times_shown": 1071882,
-     "by": "Opsera",
+     "by": "Insights knowledge base",
      "ai_visits": 10,
      "months": [
       0,
@@ -302,7 +304,7 @@
      "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
      "clicks": 319,
      "times_shown": 55777,
-     "by": "Opsera",
+     "by": "Insights knowledge base",
      "ai_visits": 7,
      "months": [
       0,
@@ -807,6 +809,8 @@
     }
    ],
    "pages_with_clicks": 42,
+   "kb_clicks": 0,
+   "kb_pages_with_clicks": 0,
    "infrasity_clicks": 591,
    "infrasity_pages_with_clicks": 27,
    "top_pages": [
@@ -1287,6 +1291,8 @@
     }
    ],
    "pages_with_clicks": 46,
+   "kb_clicks": 2236,
+   "kb_pages_with_clicks": 16,
    "infrasity_clicks": 0,
    "infrasity_pages_with_clicks": 0,
    "top_pages": [
@@ -1294,7 +1300,7 @@
      "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
      "clicks": 1593,
      "times_shown": 1071882,
-     "by": "Opsera",
+     "by": "Insights knowledge base",
      "ai_visits": 10,
      "months": [
       0,
@@ -1313,7 +1319,7 @@
      "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
      "clicks": 319,
      "times_shown": 55777,
-     "by": "Opsera",
+     "by": "Insights knowledge base",
      "ai_visits": 7,
      "months": [
       0,
@@ -1427,7 +1433,7 @@
      "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer",
      "clicks": 84,
      "times_shown": 34337,
-     "by": "Opsera",
+     "by": "Insights knowledge base",
      "ai_visits": 1,
      "months": [
       0,
@@ -1605,7 +1611,7 @@
     {
      "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
      "visits": 12,
-     "by": "Opsera"
+     "by": "Insights knowledge base"
     }
    ],
    "ai_page_not_recorded": 0

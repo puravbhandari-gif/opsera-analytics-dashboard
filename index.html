@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=40">
+<link rel="stylesheet" href="styles.css?v=41">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -117,7 +117,7 @@
     <div class="exec-cards seo-cards" id="seo-cards"></div>
     <div class="seo-grid">
       <div class="exec-card"><h3>Top 10 keywords on Google</h3><p class="muted">Not counting searches for Opsera by name</p><div id="seo-keywords"></div></div>
-      <div class="exec-card"><h3>Pages that bring the clicks</h3><p class="muted">Written by us or by Infrasity</p><div id="seo-pages"></div></div>
+      <div class="exec-card"><h3>Pages that bring the clicks</h3><p class="muted">Written by us or by Infrasity, or in the Insights knowledge base</p><div id="seo-pages"></div></div>
       <div class="exec-card"><h3>Google spot, Rankings panel</h3><p class="muted">Tracked pages: first week tracked, then late Oct. Lower is better</p><div id="seo-ranks"></div></div>
       <div class="exec-card"><h3>Pages AI tools send people to</h3><p class="muted">ChatGPT, Gemini, Perplexity, Claude and others</p><div id="seo-ai-pages"></div></div>
     </div>
@@ -261,6 +261,12 @@
       <p class="muted">Click a row to see its topic, outlet tier, who placed it, visits and Ahrefs estimates.</p>
       <div id="pr-list"></div>
       <p class="source" id="pr-list-source"></p>
+    </div>
+    <div class="panel" id="pr-catapult-panel" hidden>
+      <div class="panel-head"><h3 id="pr-catapult-title">Catapult's report</h3><span class="seo-unchecked">Catapult's numbers, not checked by us</span></div>
+      <p class="muted">Not in our placement count.</p>
+      <div class="cards compact" id="pr-catapult"></div>
+      <p class="source" id="pr-catapult-source"></p>
     </div>
     <div class="panel" id="pr-ops-panel">
       <h3>Open and missed opportunities</h3>
@@ -1041,6 +1047,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=112"></script>
+<script src="app.js?v=113"></script>
 </body>
 </html>

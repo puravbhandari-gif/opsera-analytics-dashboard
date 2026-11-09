@@ -7,7 +7,8 @@ Forge and Insights. Writes data/seo_aeo.json. Agreed with Purav on 6 Nov 2026. R
 - AI answers: Google Analytics visits from AI tools (ChatGPT, Gemini, Perplexity, Claude, Copilot and others),
   by the page they landed on.
 - Content: which pages bring the clicks, each tagged "Infrasity" when it's on Infrasity's content list
-  (their Google Sheet "opsera_aeo_content", read 6 Nov 2026), otherwise "Opsera".
+  (their Google Sheet "opsera_aeo_content", read 6 Nov 2026), "Insights knowledge base" for /knowledge-base/ articles
+  (launched Mar 2026; agreed 9 Nov 2026), otherwise "Opsera".
 - Rankings: the pages our Google Rankings panel tracks (data/rankings.json), each with its average Google spot in
   the last week of October and in its first week there.
 - Opsera overall is the whole site. A page belongs to Forge or Insights by its address (PRODUCTS); a page can be in neither.
@@ -148,10 +149,11 @@ def main():
                                         "ai_visits": inf_ai.get(a[:7], 0)} for a, _ in months() if a >= "2026-07"]},
               "products": {}}
     for k, v in out.items():
-        def by(page):
-            return "Infrasity" if infrasity(page) else "Opsera"
+        def by(page):   # knowledge base articles are their own group (Purav, 9 Nov 2026)
+            return "Infrasity" if infrasity(page) else "Insights knowledge base" if page.startswith("/knowledge-base/") else "Opsera"
         pages = sorted(v["pages"].items(), key=lambda x: -x[1]["clicks"])
         inf_clicks = sum(x["clicks"] for p, x in pages if by(p) == "Infrasity")
+        kb = [(p, x) for p, x in pages if by(p) == "Insights knowledge base"]
         top_kw = [q for q, _ in v["keywords"].most_common() if not BRAND.search(q)][:10]
         show = lambda p: "/resources/webinars/(a customer's modernization webinar)" if CUSTOMER.search(p) else p
         result["products"][k] = {
@@ -161,6 +163,7 @@ def main():
             "keywords": [{"keyword": q, "clicks": v["keywords"][q], "times_shown": v["kw_shown"][q],
                           "avg_spot": round(v["kw_spot"][q] / v["kw_shown"][q], 1) if v["kw_shown"][q] else None} for q in top_kw],
             "pages_with_clicks": sum(1 for _, x in pages if x["clicks"]),
+            "kb_clicks": sum(x["clicks"] for _, x in kb), "kb_pages_with_clicks": sum(1 for _, x in kb if x["clicks"]),
             "infrasity_clicks": inf_clicks, "infrasity_pages_with_clicks": sum(1 for p, x in pages if by(p) == "Infrasity" and x["clicks"]),
             "top_pages": [{"page": show(p), "clicks": x["clicks"], "times_shown": x["times_shown"], "by": by(p),
                            "ai_visits": v["ai_pages"].get(p, 0), "months": [page_months[p].get(a[:7], 0) for a, _ in months()]} for p, x in pages[:10]],

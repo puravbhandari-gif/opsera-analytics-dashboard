@@ -1,0 +1,11 @@
+{
+ "source": "Catapult's FY27 Q3 report, from Purav, 9 Nov 2026",
+ "quarter": "FY27 Q3",
+ "range": "1 Aug to 31 Oct 2026",
+ "items": [
+  {"label": "Mentions", "value": "705", "detail": "679 in May to Jul. 676 online and 29 on social media"},
+  {"label": "Agentforce release", "value": "297 sites", "detail": "Sites that ran the Salesforce Agentforce press release"},
+  {"label": "Analysts", "value": "3 reports", "detail": "IDC's Jim Mercer at Flutter, and an IDC quote for Forge"},
+  {"label": "Podcasts", "value": "8 of 12", "detail": "Replied, out of 12 contacted"}
+ ]
+}

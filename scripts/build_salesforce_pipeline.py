@@ -27,9 +27,10 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
   are matched by email to the meetings export, and count when a meeting was set on or after the event's first day.
 - A "To review" list: deals with a campaign joined just outside the 90-day window (91 to 120 days), or whose campaigns
   match more than one source (marketing, booking agency, SDR or AE outreach).
-Agreed with Purav on 6 Nov 2026: flags on the To review list, with the deals kept in the totals.
-- An existing customer's deal (EXISTING_CUSTOMERS, by account; the account name is never written).
-- A deal credited to an event that started after the deal was created: doubtful.
+Agreed with Purav on 9 Nov 2026 (replacing the 6 Nov flags): a deal that existed before the event it's credited to counts as
+influenced, never sourced, and is flagged "Deal existed before the event; counted as influenced" on the To review list.
+- Accounts in INFLUENCED_ONLY (the account name is never written): Honeywell Aerospace, sourced by GitHub Universe.
+- Any deal credited to an event that started after the deal was created (Insurity Forge and Gartner Xpo).
 """
 import collections
 import datetime as dt
@@ -61,7 +62,8 @@ FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 
          "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
          "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls"}
-EXISTING_CUSTOMERS = {"Honeywell Aerospace"}   # flagged on the To review list (Purav, 6 Nov 2026)
+INFLUENCED_ONLY = {"Honeywell Aerospace"}   # existed before the event it's credited to (Purav, 9 Nov 2026)
+EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
 EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28)}
 
 
@@ -92,11 +94,12 @@ class _Tables(HTMLParser):
             self.cell.append(data)
 
 
-def read(kind):
-    """The newest export of one kind, as a list of dicts, and the date in its file name."""
+def read(kind, back=0):
+    """The newest export of one kind (or the one `back` places before it), as a list of dicts, and the date in its file name."""
     found = sorted(glob.glob(str(EXPORTS / FILES[kind])), key=lambda p: re.search(r"(\d{4}-\d{2}-\d{2}-\d{2}-\d{2}-\d{2})", p).group(1))
-    if not found:
+    if len(found) <= back:
         sys.exit(f"No {kind} export in {EXPORTS}")
+    found = found[:len(found) - back]
     raw = Path(found[-1]).read_bytes()
     text = next(raw.decode(e) for e in ("utf-8", "cp1252", "latin-1") if _decodes(raw, e))
     p = _Tables()
@@ -162,6 +165,17 @@ def main():
     opps, opps_on = read("opportunities")
     # the report's start, from "…-05-01-2026.xls" in the file name; newer exports drop it, so use the 1st of the earliest month
     opps_cover_from = read.covers_from or min(day(o["Created Date"]) for o in opps if o["Created Date"]).replace(day=1).isoformat()
+    # An export that starts later than the one before it (the 6 Nov 2026 export starts in August): deals created before it
+    # starts come from the earlier exports, so earlier months keep their deals (agreed 9 Nov 2026).
+    for back in range(1, 10):
+        try:
+            older, _ = read("opportunities", back)
+        except SystemExit:
+            break
+        older_from = read.covers_from or min(day(o["Created Date"]) for o in older if o["Created Date"]).replace(day=1).isoformat()
+        if older_from < opps_cover_from:
+            opps += [o for o in older if o["Created Date"] and day(o["Created Date"]).isoformat() < opps_cover_from]
+            opps_cover_from = older_from
     touches, touches_on = read("touches")
     meets, meets_on = read("meetings")
     ids, _ = read("campaign_ids")
@@ -228,6 +242,10 @@ def main():
             if not bucket:
                 campaign = next((c for c in others if AGENCY.search(c)), "")
                 bucket = "agency" if campaign else None
+        before_event = bucket in ("sourced", "influenced") and (o["Account Name"].strip() in INFLUENCED_ONLY or any(
+            EVENT_CAMPAIGNS[k] == campaign and created < first for k, first in EVENT_FIRST_DAY.items()))
+        if before_event:
+            bucket = "influenced"
         if not bucket:
             dropped_by_window += had_marketing
             if not has_contact:
@@ -236,9 +254,7 @@ def main():
                   {"SDR or AE outreach" for c in [primary, *others] if c and SALES.search(c)}
         reasons = ([f"Joined {', '.join(sorted(public(c) for c in near))} 91 to {NEAR_DAYS} days before the deal"] if near else []) + \
                   ([f"Matches more than 1 source: {', '.join(sorted(sources))}"] if len(sources) > 1 else []) + \
-                  (["Existing customer"] if bucket in ("sourced", "influenced") and o["Account Name"].strip() in EXISTING_CUSTOMERS else []) + \
-                  ([f"Doubtful: deal created before the event ({public(campaign)})"] if bucket in ("sourced", "influenced") and any(
-                      EVENT_CAMPAIGNS[k] == campaign and created < first for k, first in EVENT_FIRST_DAY.items()) else [])
+                  ([EXISTED_BEFORE] if before_event else [])
         if reasons:
             review.append({"date": created.isoformat(), "amount": amount, "stage": o["Stage"],
                            "counted_as": {"sourced": "Marketing sourced (estimate)", "influenced": "Marketing influenced", "agency": "Booking agency",

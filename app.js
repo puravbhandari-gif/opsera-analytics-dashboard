@@ -2064,11 +2064,12 @@ function logoWall(el, outlets, picked) {
 let prPickOutlet = null;   // set once the PR list is drawn: shows only one outlet's pieces
 const prWords = (t) => (t.toLowerCase().match(/[a-z0-9]+/g) || []).join(" ");
 function openPrMedia() {
-  if (!prLoad) prLoad = Promise.all(["pr_media.json", "pr_media_ga.json", "pr_media_ahrefs.json", "share_of_voice.json", "pr_opportunities.json"]
-    .map((f) => load(f).catch(() => null))).then(([d, ga, ah, sov, ops]) => {
+  if (!prLoad) prLoad = Promise.all(["pr_media.json", "pr_media_ga.json", "pr_media_ahrefs.json", "share_of_voice.json", "pr_opportunities.json", "pr_catapult.json"]
+    .map((f) => load(f).catch(() => null))).then(([d, ga, ah, sov, ops, cat]) => {
       if (!d) throw new Error("the list is missing");
       renderPrMedia(d, ga || { by_link: {} }, ah || { by_domain: {}, by_link: {} }, sov);
       renderPrOps(ops);
+      renderCatapult(cat);
     })
     .catch((err) => { $("pr-status").textContent = `Couldn't load the PR and media list: ${err.message}`; });
 }
@@ -2191,6 +2192,15 @@ function renderPrMedia(d, ga, ah, sov) {
     $("pr-sov-source").textContent = `Source: ${sov.source}, checked ${dayYear(sov.checked)}. ${p.why ? `${p.why} ${p.prev ? "" : `${p.none}. `}` : "Compares this quarter so far with the same number of days of the quarter before. "}Counts Google News articles whose headline names the company, leaving out each company's own site. Never added to the rows above.`;
   }
 }
+// Catapult's own quarterly report: their numbers, shown apart and never added to the placement count (agreed 9 Nov 2026)
+function renderCatapult(c) {
+  if (!c) return;
+  $("pr-catapult-panel").hidden = false;
+  $("pr-catapult-title").textContent = `Catapult's report, ${c.quarter} (${c.range})`;
+  $("pr-catapult").innerHTML = c.items.map((x) => card(esc(x.label), esc(x.value), esc(x.detail))).join("");
+  $("pr-catapult-source").textContent = `Source: ${c.source}.`;
+}
+
 // Open and missed opportunities, from SamsonPR's tracker (agreed 6 Nov 2026)
 function renderPrOps(ops) {
   if (!ops || !ops.items.length) { $("pr-ops-panel").hidden = true; return; }
@@ -2723,7 +2733,7 @@ function openSeo() {
 function renderSeo(d, t) {
   const NAMES = { overall: "Opsera overall", forge: "Forge", insights: "Insights" };
   const pathLink = (p) => (p.startsWith("/") && !p.includes("(") ? `<a href="https://opsera.ai${encodeURI(p)}" target="_blank" rel="noopener">${esc(p)}</a>` : esc(p));
-  const by = (x) => `<span class="seo-tag ${x === "Infrasity" ? "inf" : ""}">${x === "Infrasity" ? "Infrasity" : "Us"}</span>`;
+  const by = (x) => `<span class="seo-tag ${x === "Infrasity" ? "inf" : x === "Insights knowledge base" ? "kb" : ""}">${x === "Opsera" ? "Us" : x}</span>`;
   const list = (rows) => (rows.length ? `<table class="seo-table"><tbody>${rows.join("")}</tbody></table>` : `<p class="muted">None</p>`);
   // One line per product: what's working and what isn't
   $("seo-lines").innerHTML = Object.keys(NAMES).map((k) => `<div class="seo-line"><h3>${NAMES[k]}</h3>
@@ -2742,7 +2752,8 @@ function renderSeo(d, t) {
     countUp($("seo-cards"));
     $("seo-keywords").innerHTML = list(p.keywords.map((x) => `<tr><td>${esc(x.keyword)}</td><td class="num">${num(x.clicks)} clicks</td><td class="num muted">spot ${x.avg_spot}</td></tr>`));
     $("seo-pages").innerHTML = list(p.top_pages.map((x) => `<tr><td class="wrap">${pathLink(x.page)}</td><td>${by(x.by)}</td><td class="num">${num(x.clicks)}</td></tr>`)) +
-      `<p class="muted small">Infrasity's pages brought ${num(p.infrasity_clicks)} of ${num(p.clicks)} clicks (${pct((p.infrasity_clicks / p.clicks) * 100, 1)}), from ${num(p.infrasity_pages_with_clicks)} pages.</p>`;
+      `<p class="muted small">Infrasity's pages brought ${num(p.infrasity_clicks)} of ${num(p.clicks)} clicks (${pct((p.infrasity_clicks / p.clicks) * 100, 1)}), from ${num(p.infrasity_pages_with_clicks)} pages. ` +
+      `The Insights knowledge base, launched Mar 2026, brought ${num(p.kb_clicks)} (${pct((p.kb_clicks / p.clicks) * 100, 1)}), from ${num(p.kb_pages_with_clicks)} articles.</p>`;
     const ranks = (k === "overall" ? p.tracked.filter((x) => x.group === "Homepage" || x.group === "Product") : p.tracked).slice(0, 10);
     $("seo-ranks").innerHTML = list(ranks.map((x) => { const better = x.spot < x.first_spot;
       return `<tr><td class="wrap">${pathLink(x.page)}</td><td>${by(x.by)}</td><td class="num">${x.first_spot} to <strong class="${better ? "seo-good" : x.spot > x.first_spot ? "seo-bad" : ""}">${x.spot}</strong></td></tr>`; }));

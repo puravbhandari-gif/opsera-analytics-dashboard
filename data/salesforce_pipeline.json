@@ -1,13 +1,13 @@
 {
  "source": "Salesforce reports",
  "exports": {
-  "opportunities": "2026-11-02",
+  "opportunities": "2026-11-06",
   "campaign_touches": "2026-11-02",
   "meetings": "2026-10-27"
  },
  "opportunities_cover_from": "2026-05-01",
  "opportunities_from": "2026-05-08",
- "opportunities_to": "2026-10-30",
+ "opportunities_to": "2026-11-04",
  "share_without_contact_pct": 79,
  "window_days": 90,
  "deals_join_date_unknown": 14,
@@ -55,7 +55,7 @@
    "influenced_value": 150000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 17
+   "nocontact_deals": 16
   },
   {
    "month": "2026-09",
@@ -66,18 +66,29 @@
    "influenced_value": 500000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 18
+   "nocontact_deals": 17
   },
   {
    "month": "2026-10",
    "quarter": "FY27 Q3",
-   "sourced_deals": 3,
-   "sourced_value": 400000,
-   "influenced_deals": 2,
-   "influenced_value": 150000,
+   "sourced_deals": 2,
+   "sourced_value": 200000,
+   "influenced_deals": 3,
+   "influenced_value": 350000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 19
+  },
+  {
+   "month": "2026-11",
+   "quarter": "FY27 Q4",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 6
   }
  ],
  "days": [
@@ -349,7 +360,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 2
+   "nocontact_deals": 1
   },
   {
    "date": "2026-08-13",
@@ -390,16 +401,6 @@
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 9
-  },
-  {
-   "date": "2026-09-08",
-   "sourced_deals": 0,
-   "sourced_value": 0,
-   "influenced_deals": 0,
-   "influenced_value": 0,
-   "agency_deals": 0,
-   "agency_value": 0,
-   "nocontact_deals": 1
   },
   {
    "date": "2026-09-09",
@@ -523,13 +524,33 @@
   },
   {
    "date": "2026-10-30",
-   "sourced_deals": 1,
-   "sourced_value": 200000,
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 200000,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-11-03",
+   "sourced_deals": 0,
+   "sourced_value": 0,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 0
+   "nocontact_deals": 2
+  },
+  {
+   "date": "2026-11-04",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 4
   }
  ],
  "campaigns": [
@@ -570,7 +591,7 @@
    "value": 250000
   },
   {
-   "bucket": "sourced",
+   "bucket": "influenced",
    "campaign": "DG-FY27-Q3-GitHub-Universe-2026",
    "deals": 1,
    "value": 200000
@@ -705,7 +726,7 @@
     "DG-FY27-Q3-Gartner-Xpo"
    ],
    "reasons": [
-    "Doubtful: deal created before the event (DG-FY27-Q3-Gartner-Xpo)"
+    "Deal existed before the event; counted as influenced"
    ]
   },
   {
@@ -740,12 +761,12 @@
    "date": "2026-10-30",
    "amount": 200000,
    "stage": "1 Meeting",
-   "counted_as": "Marketing sourced (estimate)",
+   "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-FY27-Q3-GitHub-Universe-2026"
    ],
    "reasons": [
-    "Existing customer"
+    "Deal existed before the event; counted as influenced"
    ]
   }
  ],
@@ -1501,11 +1522,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Q4-Trends-Webinar",
+    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
+    "campaign": "DG-FY26-Q4-Trends-Webinar",
     "people": 1
    },
    {
@@ -1513,11 +1534,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
@@ -1545,19 +1566,19 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
-    "people": 1
-   },
-   {
     "campaign": "DG-FY22-Q3-Dreamforce 2022",
     "people": 1
    },
    {
-    "campaign": "DG-FY23-Q2-GitHub Actions",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
     "campaign": "MQL Tracking",
+    "people": 1
+   },
+   {
+    "campaign": "DG-FY23-Q2-GitHub Actions",
     "people": 1
    },
    {
