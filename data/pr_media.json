@@ -329,6 +329,17 @@
    "found_by": "Apify, Google News and Google search"
   },
   {
+   "date": "2026-09-24",
+   "outlet": "TJ Klug",
+   "title": "You Can't Sprint Your Way to Agentic Engineering. Where to Start When Your Codebase Is Twenty Years Old.",
+   "link": "https://tjklug.com/posts/agile-to-agentic/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-09-15",
    "outlet": "Yahoo Finance",
    "title": "Opsera Launches Industry's First Headless DevOps Platform for Salesforce Agentforce",
@@ -525,6 +536,17 @@
    "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google search (all-time search for Opsera people)"
+  },
+  {
+   "date": "2026-03-12",
+   "outlet": "Apple Podcasts",
+   "title": "SE 21: Confidence, Bias, and O...-AI and the Future of Work",
+   "link": "https://podcasts.apple.com/in/podcast/se-21-confidence-bias-and-opportunity-lessons-from/id1476885647?i=1000754849729&l=pa",
+   "type": "Podcast",
+   "topic": "AI-SDLC",
+   "quoted": "Patty Hatter",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-02-10",

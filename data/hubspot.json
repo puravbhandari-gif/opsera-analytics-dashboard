@@ -1,8 +1,8 @@
 {
  "source": "HubSpot",
  "start_date": "2026-04-01",
- "end_date": "2026-11-03",
- "pulled_at": "2026-11-04T18:43+05:30",
+ "end_date": "2026-11-07",
+ "pulled_at": "2026-11-09T11:46+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -2991,8 +2991,64 @@
    "count": 1
   },
   {
-   "date": "2026-11-18",
+   "date": "2026-11-06",
+   "line": "form",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-12",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-17",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-24",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-01",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-01",
    "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-08",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-15",
+   "line": "form",
    "channel": "events",
    "kind": "upcoming",
    "demo": false,
@@ -3047,7 +3103,7 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 847,
+ "meetings_all_calendar": 873,
  "deals_weekly": [
   {
    "start": "2026-05-04",
@@ -3142,8 +3198,8 @@
  ],
  "deals_quarters": [
   {
-   "start": "2026-08-04",
-   "end": "2026-11-03",
+   "start": "2026-08-08",
+   "end": "2026-11-07",
    "channel": "search",
    "demo": true,
    "tool": null,
@@ -3153,8 +3209,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-08-04",
-   "end": "2026-11-03",
+   "start": "2026-08-08",
+   "end": "2026-11-07",
    "channel": "direct",
    "demo": true,
    "tool": null,
@@ -3164,8 +3220,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-05-04",
-   "end": "2026-08-03",
+   "start": "2026-05-08",
+   "end": "2026-08-07",
    "channel": "search",
    "demo": false,
    "tool": null,
@@ -3175,8 +3231,8 @@
    "won_amount": 0.0
   },
   {
-   "start": "2026-05-04",
-   "end": "2026-08-03",
+   "start": "2026-05-08",
+   "end": "2026-08-07",
    "channel": "other",
    "demo": true,
    "tool": null,
@@ -3372,12 +3428,12 @@
    "note": "Sign-ups include people who asked for the recording",
    "signed_up": 485,
    "attended": null,
-   "meetings_after": 22,
+   "meetings_after": 24,
    "people_with_meeting": 8,
-   "meetings_upcoming": 5,
+   "meetings_upcoming": 6,
    "sf_campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
    "sf_members": 451,
-   "sf_meetings": 21,
+   "sf_meetings": 23,
    "sf_people_with_meeting": 7
   },
   {
@@ -3413,9 +3469,9 @@
    "note": "Sign-ups may overlap with the event page form",
    "signed_up": 83,
    "attended": null,
-   "meetings_after": 2,
+   "meetings_after": 3,
    "people_with_meeting": 2,
-   "meetings_upcoming": 0,
+   "meetings_upcoming": 6,
    "sf_campaign": "DG-FY27-Q3-Tokenomics-Webinar",
    "sf_members": 75,
    "sf_meetings": 1,
@@ -3480,8 +3536,8 @@
    "meetings_upcoming": null,
    "sf_campaign": "DG-FY27-Q3-GitHub-Universe-2026",
    "sf_members": 240,
-   "sf_meetings": 0,
-   "sf_people_with_meeting": 0
+   "sf_meetings": 1,
+   "sf_people_with_meeting": 1
   }
  ],
  "campaigns": [
@@ -3514,7 +3570,7 @@
    "start": null,
    "contactFirstTouch": 4,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 688,
+   "influencedContacts": 785,
    "influencedContacts_also_flutter_guests": 10
   },
   {
@@ -3530,7 +3586,7 @@
    "start": null,
    "contactFirstTouch": 0,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 1882,
+   "influencedContacts": 1884,
    "influencedContacts_also_flutter_guests": 27
   },
   {
@@ -4247,37 +4303,6 @@
    },
    {
     "sent_on": "2026-05-04",
-    "subject": "Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",
-    "kind": "BATCH_EMAIL",
-    "sends": 2479,
-    "opens": 82,
-    "clicks": 7,
-    "open_rate_pct": 3.3,
-    "click_rate_pct": 0.3,
-    "campaign": "Release Notes",
-    "words": [
-     "3687395b",
-     "1036ae7e",
-     "83815eca",
-     "f31ea7f7",
-     "2a4a32b2",
-     "0f29c2a6",
-     "1327bcbb",
-     "856e942f",
-     "8f259e5f",
-     "bb34a54d",
-     "d3442983",
-     "f352e36f",
-     "542abc6b",
-     "2a577ae7",
-     "8c911c01",
-     "b6873945",
-     "923fa396",
-     "05a26650"
-    ]
-   },
-   {
-    "sent_on": "2026-05-04",
     "subject": "Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",
     "kind": "BATCH_EMAIL",
     "sends": 2536,
@@ -4305,6 +4330,37 @@
      "7f37f5e5",
      "1705ad44",
      "d3442983"
+    ]
+   },
+   {
+    "sent_on": "2026-05-04",
+    "subject": "Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",
+    "kind": "BATCH_EMAIL",
+    "sends": 2479,
+    "opens": 82,
+    "clicks": 7,
+    "open_rate_pct": 3.3,
+    "click_rate_pct": 0.3,
+    "campaign": "Release Notes",
+    "words": [
+     "3687395b",
+     "1036ae7e",
+     "83815eca",
+     "f31ea7f7",
+     "2a4a32b2",
+     "0f29c2a6",
+     "1327bcbb",
+     "856e942f",
+     "8f259e5f",
+     "bb34a54d",
+     "d3442983",
+     "f352e36f",
+     "542abc6b",
+     "2a577ae7",
+     "8c911c01",
+     "b6873945",
+     "923fa396",
+     "05a26650"
     ]
    },
    {
@@ -4934,7 +4990,7 @@
     "sent_on": "2026-06-07",
     "subject": "An invitation just for {{ contact.firstname }}",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 1983,
+    "sends": 1985,
     "opens": 554,
     "clicks": 450,
     "open_rate_pct": 28.4,
@@ -6716,10 +6772,10 @@
     "subject": "Save the Date: Opsera Flutter 2026, The AI-SDLC Summit",
     "kind": "BATCH_EMAIL",
     "sends": 5703,
-    "opens": 128,
-    "clicks": 19,
+    "opens": 129,
+    "clicks": 20,
     "open_rate_pct": 2.3,
-    "click_rate_pct": 0.3,
+    "click_rate_pct": 0.4,
     "campaign": "DG-FY27-Q3-Flutter-AISDLC-Sumit",
     "words": [
      "175c54d9",
@@ -6739,7 +6795,7 @@
     "subject": "[Invite Only] Opsera Flutter 2026: The AI-SDLC Summit",
     "kind": "BATCH_EMAIL",
     "sends": 30154,
-    "opens": 862,
+    "opens": 863,
     "clicks": 186,
     "open_rate_pct": 3.0,
     "click_rate_pct": 0.6,
@@ -6994,7 +7050,7 @@
     "subject": "Tokenomics: the new discipline every AI leader needs to know",
     "kind": "BATCH_EMAIL",
     "sends": 58670,
-    "opens": 824,
+    "opens": 825,
     "clicks": 122,
     "open_rate_pct": 1.9,
     "click_rate_pct": 0.3,
@@ -7222,9 +7278,9 @@
     "subject": "Did You Know Your Teams Can Self-Serve Platform Operations?\u00a0",
     "kind": "BATCH_EMAIL",
     "sends": 1482,
-    "opens": 71,
+    "opens": 72,
     "clicks": 0,
-    "open_rate_pct": 4.8,
+    "open_rate_pct": 4.9,
     "click_rate_pct": 0.0,
     "campaign": "Release Notes",
     "words": [
@@ -7689,7 +7745,7 @@
     "subject": "Opsera Release Notes | Pipeline Event Webhooks & Dynamic JFrog Image Selection for Argo CD",
     "kind": "BATCH_EMAIL",
     "sends": 1483,
-    "opens": 38,
+    "opens": 39,
     "clicks": 1,
     "open_rate_pct": 2.6,
     "click_rate_pct": 0.1,
@@ -7899,9 +7955,9 @@
     "subject": "From \"I need infrastructure\" to deployed \u2014 without a single ticket.",
     "kind": "BATCH_EMAIL",
     "sends": 1477,
-    "opens": 41,
+    "opens": 42,
     "clicks": 1,
-    "open_rate_pct": 2.8,
+    "open_rate_pct": 2.9,
     "click_rate_pct": 0.1,
     "campaign": "Release Notes",
     "words": [
@@ -9012,9 +9068,9 @@
     "subject": "{{ contact.firstname }} - A GitHub Universe-only offer from Opsera.",
     "kind": "BATCH_EMAIL",
     "sends": 10379,
-    "opens": 241,
+    "opens": 242,
     "clicks": 70,
-    "open_rate_pct": 2.3,
+    "open_rate_pct": 2.4,
     "click_rate_pct": 0.7,
     "campaign": "",
     "words": [
@@ -9196,9 +9252,9 @@
     "subject": "{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.",
     "kind": "BATCH_EMAIL",
     "sends": 10422,
-    "opens": 440,
+    "opens": 442,
     "clicks": 20,
-    "open_rate_pct": 4.2,
+    "open_rate_pct": 4.3,
     "click_rate_pct": 0.2,
     "campaign": "",
     "words": [
@@ -9258,6 +9314,26 @@
    },
    {
     "sent_on": "2026-11-02",
+    "subject": "{{ contact.firstname }} How's it going with Forge?",
+    "kind": "AUTOMATED_EMAIL",
+    "sends": 2,
+    "opens": 0,
+    "clicks": 0,
+    "open_rate_pct": 0.0,
+    "click_rate_pct": 0.0,
+    "campaign": "",
+    "words": [
+     "89b29c10",
+     "c7dd6978",
+     "4303b923",
+     "6976b5ba",
+     "01c3ac8d",
+     "0b4ec68d",
+     "0c4afe69"
+    ]
+   },
+   {
+    "sent_on": "2026-11-02",
     "subject": "{{ contact.firstname }} - Modernize legacy estates.",
     "kind": "BATCH_EMAIL",
     "sends": 115,
@@ -9283,9 +9359,9 @@
     "subject": "Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation",
     "kind": "BATCH_EMAIL",
     "sends": 1335,
-    "opens": 29,
+    "opens": 32,
     "clicks": 0,
-    "open_rate_pct": 2.2,
+    "open_rate_pct": 2.4,
     "click_rate_pct": 0.0,
     "campaign": "Release Notes",
     "words": [
@@ -9360,9 +9436,9 @@
     "subject": "{{ contact.firstname }} - Thanks for connecting at GitHub Universe.",
     "kind": "BATCH_EMAIL",
     "sends": 126,
-    "opens": 17,
+    "opens": 18,
     "clicks": 1,
-    "open_rate_pct": 13.5,
+    "open_rate_pct": 14.3,
     "click_rate_pct": 0.8,
     "campaign": "",
     "words": [
@@ -9382,10 +9458,10 @@
     "sent_on": "2026-11-03",
     "subject": "Legacy estate modernization in the AI era.",
     "kind": "BATCH_EMAIL",
-    "sends": 13961,
-    "opens": 368,
-    "clicks": 62,
-    "open_rate_pct": 2.7,
+    "sends": 13951,
+    "opens": 386,
+    "clicks": 64,
+    "open_rate_pct": 2.8,
     "click_rate_pct": 0.5,
     "campaign": "",
     "words": [
@@ -9401,13 +9477,33 @@
    },
    {
     "sent_on": "2026-11-04",
+    "subject": "{{ contact.firstname }} Patch PHP2Shell today.",
+    "kind": "BATCH_EMAIL",
+    "sends": 21204,
+    "opens": 1034,
+    "clicks": 137,
+    "open_rate_pct": 4.9,
+    "click_rate_pct": 0.7,
+    "campaign": "",
+    "words": [
+     "88abb3bb",
+     "ef5001d2",
+     "73d5d200",
+     "4303b923",
+     "6976b5ba",
+     "f9100aa9",
+     "420372be"
+    ]
+   },
+   {
+    "sent_on": "2026-11-04",
     "subject": "Did You Know Modernization Can Run at AI Speed?",
     "kind": "BATCH_EMAIL",
     "sends": 1467,
-    "opens": 13,
-    "clicks": 2,
-    "open_rate_pct": 0.9,
-    "click_rate_pct": 0.1,
+    "opens": 16,
+    "clicks": 3,
+    "open_rate_pct": 1.1,
+    "click_rate_pct": 0.2,
     "campaign": "Release Notes",
     "words": [
      "f23bb04f",
@@ -9418,6 +9514,94 @@
      "f0743965",
      "2acd4eca",
      "7b80c780"
+    ]
+   },
+   {
+    "sent_on": "2026-11-05",
+    "subject": "Indiana Pacers - was yesterday a turning point?",
+    "kind": "BATCH_EMAIL",
+    "sends": 343,
+    "opens": 19,
+    "clicks": 1,
+    "open_rate_pct": 5.6,
+    "click_rate_pct": 0.3,
+    "campaign": "",
+    "words": [
+     "39a21e9b",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "105d93e5",
+     "16e2c1f2",
+     "63fe3327",
+     "bc398ac6",
+     "18ae6c91"
+    ]
+   },
+   {
+    "sent_on": "2026-11-05",
+    "subject": "{{ contact.firstname }} - Monday is game day! Hawks v. Lakers",
+    "kind": "BATCH_EMAIL",
+    "sends": 117,
+    "opens": 1,
+    "clicks": 0,
+    "open_rate_pct": 0.9,
+    "click_rate_pct": 0.0,
+    "campaign": "",
+    "words": [
+     "1c8bcfa6",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "4cfa1739",
+     "4249d707",
+     "e44f21fd"
+    ]
+   },
+   {
+    "sent_on": "2026-11-05",
+    "subject": "{{ contact.firstname }} Monday - Hawks/Lakers in our private suite.",
+    "kind": "BATCH_EMAIL",
+    "sends": 476,
+    "opens": 2,
+    "clicks": 0,
+    "open_rate_pct": 0.4,
+    "click_rate_pct": 0.0,
+    "campaign": "",
+    "words": [
+     "39a21e9b",
+     "ef853eed",
+     "bd2c3575",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "4cfa1739",
+     "a91a3339",
+     "62cb0d0c",
+     "99d6137f"
+    ]
+   },
+   {
+    "sent_on": "2026-11-06",
+    "subject": "Your free code modernization trial awaits.",
+    "kind": "BATCH_EMAIL",
+    "sends": 48,
+    "opens": 7,
+    "clicks": 0,
+    "open_rate_pct": 14.6,
+    "click_rate_pct": 0.0,
+    "campaign": "",
+    "words": [
+     "2edc649c",
+     "db819b62",
+     "b2db881c",
+     "00f0e6aa",
+     "99b3eedb",
+     "f9316cf4",
+     "bd77f9d3",
+     "647f3cda"
     ]
    }
   ]
@@ -9523,6 +9707,32 @@
    {
     "date": "2026-04-30",
     "status": "Open",
+    "stage": "4 Business Case",
+    "pipeline": "Salesforce - Direct",
+    "amount": 36000,
+    "product": "Not named in the deal",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000mechJYAQ",
+    "first_campaign": "701UR00000mechJYAQ",
+    "last_campaign": "701UR00000mechJYAQ",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-30",
+    "status": "Open",
+    "stage": "5 Procurement",
+    "pipeline": "Salesforce - Direct",
+    "amount": 371339,
+    "product": "Forge",
+    "lead_source": "AE Outreach",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "701UR00000mlOjCYAU",
+    "last_campaign": "701UR00000mlOjCYAU",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-30",
+    "status": "Open",
     "stage": "2 Demo",
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
@@ -9541,10 +9751,10 @@
     "amount": 150000,
     "product": "Forge, Platform, Agents",
     "lead_source": "Contact Us / Demo Request",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
+    "primary_campaign": "7014Q000002aJSeQAM",
+    "first_campaign": "7014Q000002aJSeQAM",
+    "last_campaign": "7014Q000002aJSeQAM",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-05-18",
@@ -9612,30 +9822,17 @@
     "bucket": "Marketing sourced"
    },
    {
-    "date": "2026-07-07",
+    "date": "2026-06-10",
     "status": "Open",
-    "stage": "1 Meeting",
+    "stage": "2 Demo",
     "pipeline": "Salesforce - Direct",
-    "amount": 100000,
-    "product": "BrickForge",
-    "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
-   },
-   {
-    "date": "2026-07-08",
-    "status": "Open",
-    "stage": "1 Meeting",
-    "pipeline": "Salesforce - Direct",
-    "amount": 100000,
-    "product": "BrickForge",
-    "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
+    "amount": 150000,
+    "product": "Forge, Unified Insights",
+    "lead_source": "Not set",
+    "primary_campaign": "701UR00000nwQKXYA2",
+    "first_campaign": "7014Q000002aJSeQAM",
+    "last_campaign": "701UR00000nwQKXYA2",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-07-10",
@@ -9664,32 +9861,6 @@
     "bucket": "Marketing sourced"
    },
    {
-    "date": "2026-07-22",
-    "status": "Open",
-    "stage": "1 Meeting",
-    "pipeline": "Salesforce - Direct",
-    "amount": 100000,
-    "product": "BrickForge",
-    "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
-   },
-   {
-    "date": "2026-07-28",
-    "status": "Open",
-    "stage": "1 Meeting",
-    "pipeline": "Salesforce - Direct",
-    "amount": 100000,
-    "product": "BrickForge",
-    "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
-   },
-   {
     "date": "2026-08-12",
     "status": "Open",
     "stage": "3 POC",
@@ -9716,6 +9887,19 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-09-01",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "cognism",
+    "primary_campaign": "701UR00000QP6jCYAT",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
     "date": "2026-09-23",
     "status": "Open",
     "stage": "2 Demo",
@@ -9731,12 +9915,25 @@
    {
     "date": "2026-09-24",
     "status": "Open",
-    "stage": "2 Demo",
+    "stage": "3 POC",
     "pipeline": "Salesforce - Direct",
     "amount": 588000,
     "product": "Not named in the deal",
     "lead_source": "Purchased List",
     "primary_campaign": "701UR00000pYaGbYAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-01",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge, Pipelines",
+    "lead_source": "cognism",
+    "primary_campaign": "701UR00000ntYrIYAU",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -9768,6 +9965,19 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-10-07",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Salesforce DevOps, Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000QP6jCYAT",
+    "first_campaign": "701UR00000QP6jCYAT",
+    "last_campaign": "701UR00000QP6jCYAT",
+    "bucket": "Marketing sourced"
+   },
+   {
     "date": "2026-10-30",
     "status": "Open",
     "stage": "1 Meeting",
@@ -9792,6 +10002,19 @@
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-04",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 0,
+    "product": "Forge",
+    "lead_source": "Events",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
    }
   ]
  },
@@ -9799,7 +10022,7 @@
   "error": null,
   "rows": [
    {
-    "people": 96801,
+    "people": 96844,
     "kind": "Active",
     "updated_on": "2026-11-02",
     "words": [
@@ -9809,7 +10032,7 @@
     ]
    },
    {
-    "people": 84885,
+    "people": 85117,
     "kind": "Active",
     "updated_on": "2026-07-02",
     "words": [
@@ -9821,7 +10044,7 @@
     ]
    },
    {
-    "people": 82069,
+    "people": 81982,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -9833,7 +10056,7 @@
     ]
    },
    {
-    "people": 67191,
+    "people": 67114,
     "kind": "Active",
     "updated_on": "2026-07-17",
     "words": [
@@ -9841,7 +10064,7 @@
     ]
    },
    {
-    "people": 63043,
+    "people": 63208,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -9855,7 +10078,7 @@
     ]
    },
    {
-    "people": 56273,
+    "people": 56328,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -9869,7 +10092,7 @@
     ]
    },
    {
-    "people": 54039,
+    "people": 53717,
     "kind": "Active",
     "updated_on": "2026-04-27",
     "words": [
@@ -9879,7 +10102,7 @@
     ]
    },
    {
-    "people": 53394,
+    "people": 53501,
     "kind": "Active",
     "updated_on": "2026-06-08",
     "words": [
@@ -9888,7 +10111,7 @@
     ]
    },
    {
-    "people": 50317,
+    "people": 50427,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -9897,7 +10120,7 @@
     ]
    },
    {
-    "people": 46133,
+    "people": 46169,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -9909,7 +10132,7 @@
     ]
    },
    {
-    "people": 36272,
+    "people": 36256,
     "kind": "Active",
     "updated_on": "2026-10-16",
     "words": [
@@ -9919,7 +10142,7 @@
     ]
    },
    {
-    "people": 33592,
+    "people": 33646,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -9932,7 +10155,7 @@
     ]
    },
    {
-    "people": 32999,
+    "people": 32880,
     "kind": "Active",
     "updated_on": "2026-05-21",
     "words": [
@@ -9942,7 +10165,7 @@
     ]
    },
    {
-    "people": 31558,
+    "people": 31606,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -9951,7 +10174,7 @@
     ]
    },
    {
-    "people": 24617,
+    "people": 25035,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -9963,7 +10186,7 @@
     ]
    },
    {
-    "people": 23993,
+    "people": 24137,
     "kind": "Active",
     "updated_on": "2026-04-23",
     "words": [
@@ -9976,7 +10199,7 @@
     ]
    },
    {
-    "people": 19440,
+    "people": 19747,
     "kind": "Active",
     "updated_on": "2026-08-17",
     "words": [
@@ -9986,7 +10209,7 @@
     ]
    },
    {
-    "people": 19284,
+    "people": 19286,
     "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
@@ -9998,7 +10221,18 @@
     ]
    },
    {
-    "people": 15438,
+    "people": 18337,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "89b29c10",
+     "01ef608e",
+     "0cfb455b",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 15449,
     "kind": "Active",
     "updated_on": "2026-04-29",
     "words": [
@@ -10010,7 +10244,7 @@
     ]
    },
    {
-    "people": 11844,
+    "people": 12202,
     "kind": "Active",
     "updated_on": "2026-06-23",
     "words": [
@@ -10019,7 +10253,7 @@
     ]
    },
    {
-    "people": 11844,
+    "people": 12202,
     "kind": "Active",
     "updated_on": "2026-06-19",
     "words": [
@@ -10029,7 +10263,7 @@
     ]
    },
    {
-    "people": 11746,
+    "people": 11749,
     "kind": "Active",
     "updated_on": "2026-04-21",
     "words": [
@@ -10041,7 +10275,7 @@
     ]
    },
    {
-    "people": 11544,
+    "people": 11540,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -10051,7 +10285,7 @@
     ]
    },
    {
-    "people": 11289,
+    "people": 11282,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -10060,7 +10294,7 @@
     ]
    },
    {
-    "people": 10242,
+    "people": 10396,
     "kind": "Active",
     "updated_on": "2026-08-19",
     "words": [
@@ -10068,11 +10302,12 @@
      "827a7e1d",
      "0f29c2a6",
      "1e801cec",
-     "cedcb8f0"
+     "cedcb8f0",
+     "700e0da4"
     ]
    },
    {
-    "people": 9676,
+    "people": 9688,
     "kind": "Active",
     "updated_on": "2026-07-06",
     "words": [
@@ -10082,7 +10317,7 @@
     ]
    },
    {
-    "people": 9545,
+    "people": 9583,
     "kind": "Active",
     "updated_on": "2026-05-29",
     "words": [
@@ -10091,7 +10326,7 @@
     ]
    },
    {
-    "people": 9497,
+    "people": 9511,
     "kind": "Active",
     "updated_on": "2026-09-09",
     "words": [
@@ -10102,7 +10337,7 @@
     ]
    },
    {
-    "people": 9146,
+    "people": 9497,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -10112,7 +10347,7 @@
     ]
    },
    {
-    "people": 8479,
+    "people": 8431,
     "kind": "Active",
     "updated_on": "2026-10-19",
     "words": [
@@ -10134,7 +10369,7 @@
     ]
    },
    {
-    "people": 8245,
+    "people": 8400,
     "kind": "Active",
     "updated_on": "2026-09-18",
     "words": [
@@ -10148,7 +10383,7 @@
     ]
    },
    {
-    "people": 7825,
+    "people": 7839,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -10170,7 +10405,7 @@
     ]
    },
    {
-    "people": 6611,
+    "people": 6766,
     "kind": "Active",
     "updated_on": "2026-09-21",
     "words": [
@@ -10182,7 +10417,7 @@
     ]
    },
    {
-    "people": 6438,
+    "people": 6465,
     "kind": "Active",
     "updated_on": "2026-07-27",
     "words": [
@@ -10194,7 +10429,7 @@
     ]
    },
    {
-    "people": 6411,
+    "people": 6460,
     "kind": "Active",
     "updated_on": "2026-11-03",
     "words": [
@@ -10206,7 +10441,7 @@
     ]
    },
    {
-    "people": 6156,
+    "people": 6117,
     "kind": "Active",
     "updated_on": "2026-09-30",
     "words": [
@@ -10217,7 +10452,7 @@
     ]
    },
    {
-    "people": 5880,
+    "people": 5891,
     "kind": "Active",
     "updated_on": "2026-09-24",
     "words": [
@@ -10230,7 +10465,7 @@
     ]
    },
    {
-    "people": 5781,
+    "people": 5761,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -10241,7 +10476,7 @@
     ]
    },
    {
-    "people": 5673,
+    "people": 5700,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -10253,7 +10488,7 @@
     ]
    },
    {
-    "people": 5505,
+    "people": 5512,
     "kind": "Active",
     "updated_on": "2026-09-04",
     "words": [
@@ -10264,7 +10499,7 @@
     ]
    },
    {
-    "people": 5283,
+    "people": 5286,
     "kind": "Active",
     "updated_on": "2026-04-24",
     "words": [
@@ -10276,7 +10511,7 @@
     ]
    },
    {
-    "people": 4999,
+    "people": 5023,
     "kind": "Active",
     "updated_on": "2026-07-27",
     "words": [
@@ -10286,7 +10521,7 @@
     ]
    },
    {
-    "people": 4879,
+    "people": 4900,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10311,7 +10546,7 @@
     ]
    },
    {
-    "people": 4748,
+    "people": 4779,
     "kind": "Active",
     "updated_on": "2026-06-22",
     "words": [
@@ -10322,7 +10557,7 @@
     ]
    },
    {
-    "people": 4660,
+    "people": 4719,
     "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
@@ -10346,7 +10581,7 @@
     ]
    },
    {
-    "people": 4512,
+    "people": 4597,
     "kind": "Active",
     "updated_on": "2026-10-01",
     "words": [
@@ -10358,7 +10593,7 @@
     ]
    },
    {
-    "people": 4210,
+    "people": 4227,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10382,7 +10617,7 @@
     ]
    },
    {
-    "people": 3884,
+    "people": 3888,
     "kind": "Active",
     "updated_on": "2026-10-08",
     "words": [
@@ -10393,7 +10628,7 @@
     ]
    },
    {
-    "people": 3770,
+    "people": 3788,
     "kind": "Active",
     "updated_on": "2026-06-05",
     "words": [
@@ -10405,7 +10640,7 @@
     ]
    },
    {
-    "people": 3469,
+    "people": 3504,
     "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
@@ -10430,7 +10665,7 @@
     ]
    },
    {
-    "people": 3368,
+    "people": 3397,
     "kind": "Active",
     "updated_on": "2026-06-30",
     "words": [
@@ -10441,7 +10676,7 @@
     ]
    },
    {
-    "people": 3368,
+    "people": 3397,
     "kind": "Active",
     "updated_on": "2026-06-25",
     "words": [
@@ -10452,7 +10687,7 @@
     ]
    },
    {
-    "people": 3184,
+    "people": 3166,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -10465,7 +10700,7 @@
     ]
    },
    {
-    "people": 3149,
+    "people": 3155,
     "kind": "Active",
     "updated_on": "2026-08-12",
     "words": [
@@ -10475,7 +10710,18 @@
     ]
    },
    {
-    "people": 2974,
+    "people": 2931,
+    "kind": "Active",
+    "updated_on": "2026-06-04",
+    "words": [
+     "a2c77168",
+     "0f29c2a6",
+     "f3878b7e",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 2875,
     "kind": "Active",
     "updated_on": "2026-06-29",
     "words": [
@@ -10487,18 +10733,7 @@
     ]
    },
    {
-    "people": 2941,
-    "kind": "Active",
-    "updated_on": "2026-06-04",
-    "words": [
-     "a2c77168",
-     "0f29c2a6",
-     "f3878b7e",
-     "cedcb8f0"
-    ]
-   },
-   {
-    "people": 2853,
+    "people": 2852,
     "kind": "Active",
     "updated_on": "2026-06-12",
     "words": [
@@ -10522,7 +10757,7 @@
     ]
    },
    {
-    "people": 2744,
+    "people": 2747,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -10532,7 +10767,7 @@
     ]
    },
    {
-    "people": 2744,
+    "people": 2747,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -10552,7 +10787,7 @@
     ]
    },
    {
-    "people": 2659,
+    "people": 2628,
     "kind": "Active",
     "updated_on": "2026-09-02",
     "words": [
@@ -10566,7 +10801,7 @@
     ]
    },
    {
-    "people": 2642,
+    "people": 2625,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -10590,20 +10825,7 @@
     ]
    },
    {
-    "people": 2522,
-    "kind": "Active",
-    "updated_on": "2026-07-10",
-    "words": [
-     "4bf4922d",
-     "cedcb8f0",
-     "0c4afe69",
-     "63e1d819",
-     "a229d2ec",
-     "d472dc59"
-    ]
-   },
-   {
-    "people": 2513,
+    "people": 2530,
     "kind": "Active",
     "updated_on": "2026-06-12",
     "words": [
@@ -10614,6 +10836,19 @@
      "0f29c2a6",
      "be1a3784",
      "949b51e3"
+    ]
+   },
+   {
+    "people": 2524,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "4bf4922d",
+     "cedcb8f0",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
     ]
    },
    {
@@ -10628,6 +10863,15 @@
     ]
    },
    {
+    "people": 2478,
+    "kind": "Active",
+    "updated_on": "2026-10-12",
+    "words": [
+     "13254bc4",
+     "7a968ed4"
+    ]
+   },
+   {
     "people": 2477,
     "kind": "Static",
     "updated_on": "2026-04-16",
@@ -10639,16 +10883,7 @@
     ]
    },
    {
-    "people": 2476,
-    "kind": "Active",
-    "updated_on": "2026-10-12",
-    "words": [
-     "13254bc4",
-     "7a968ed4"
-    ]
-   },
-   {
-    "people": 2403,
+    "people": 2396,
     "kind": "Active",
     "updated_on": "2026-06-10",
     "words": [
@@ -10661,13 +10896,24 @@
     ]
    },
    {
-    "people": 2392,
+    "people": 2393,
     "kind": "Active",
     "updated_on": "2026-09-10",
     "words": [
      "35742be0",
      "174d9c62",
      "0cfb5881"
+    ]
+   },
+   {
+    "people": 2388,
+    "kind": "Active",
+    "updated_on": "2026-05-29",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "e4c35bdc",
+     "337a0cca"
     ]
    },
    {
@@ -10685,18 +10931,7 @@
     ]
    },
    {
-    "people": 2364,
-    "kind": "Active",
-    "updated_on": "2026-05-29",
-    "words": [
-     "f2200e9f",
-     "831eb2f4",
-     "e4c35bdc",
-     "337a0cca"
-    ]
-   },
-   {
-    "people": 2349,
+    "people": 2350,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -10707,7 +10942,7 @@
     ]
    },
    {
-    "people": 2302,
+    "people": 2345,
     "kind": "Active",
     "updated_on": "2026-08-21",
     "words": [
@@ -10789,7 +11024,7 @@
     ]
    },
    {
-    "people": 1757,
+    "people": 1765,
     "kind": "Active",
     "updated_on": "2026-06-09",
     "words": [
@@ -10802,7 +11037,7 @@
     ]
    },
    {
-    "people": 1727,
+    "people": 1724,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -10816,7 +11051,7 @@
     ]
    },
    {
-    "people": 1713,
+    "people": 1712,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -10854,7 +11089,7 @@
     ]
    },
    {
-    "people": 1555,
+    "people": 1459,
     "kind": "Active",
     "updated_on": "2026-04-08",
     "words": [
@@ -10866,7 +11101,7 @@
     ]
    },
    {
-    "people": 1411,
+    "people": 1454,
     "kind": "Active",
     "updated_on": "2026-07-24",
     "words": [
@@ -10875,7 +11110,32 @@
     ]
    },
    {
-    "people": 1388,
+    "people": 1433,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "294fc75c",
+     "a229d2ec",
+     "d22f9095",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 1433,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
+    ]
+   },
+   {
+    "people": 1392,
     "kind": "Active",
     "updated_on": "2026-06-27",
     "words": [
@@ -10887,7 +11147,7 @@
     ]
    },
    {
-    "people": 1380,
+    "people": 1387,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10910,7 +11170,7 @@
     ]
    },
    {
-    "people": 1294,
+    "people": 1296,
     "kind": "Active",
     "updated_on": "2026-07-10",
     "words": [
@@ -10921,7 +11181,7 @@
     ]
    },
    {
-    "people": 1292,
+    "people": 1296,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -10932,7 +11192,7 @@
     ]
    },
    {
-    "people": 1248,
+    "people": 1244,
     "kind": "Active",
     "updated_on": "2026-08-04",
     "words": [
@@ -10944,7 +11204,7 @@
     ]
    },
    {
-    "people": 1205,
+    "people": 1206,
     "kind": "Active",
     "updated_on": "2026-10-19",
     "words": [
@@ -10954,32 +11214,7 @@
     ]
    },
    {
-    "people": 1180,
-    "kind": "Active",
-    "updated_on": "2026-06-24",
-    "words": [
-     "4bf4922d",
-     "294fc75c",
-     "a229d2ec",
-     "d22f9095",
-     "8c6e32a8"
-    ]
-   },
-   {
-    "people": 1180,
-    "kind": "Active",
-    "updated_on": "2026-07-06",
-    "words": [
-     "4bf4922d",
-     "8c6e32a8",
-     "0c4afe69",
-     "63e1d819",
-     "a229d2ec",
-     "d472dc59"
-    ]
-   },
-   {
-    "people": 1172,
+    "people": 1175,
     "kind": "Active",
     "updated_on": "2026-10-16",
     "words": [
@@ -10987,7 +11222,7 @@
     ]
    },
    {
-    "people": 1166,
+    "people": 1154,
     "kind": "Active",
     "updated_on": "2026-04-08",
     "words": [
@@ -10999,16 +11234,7 @@
     ]
    },
    {
-    "people": 1127,
-    "kind": "Active",
-    "updated_on": "2026-08-11",
-    "words": [
-     "c09344de",
-     "e710f325"
-    ]
-   },
-   {
-    "people": 1126,
+    "people": 1133,
     "kind": "Active",
     "updated_on": "2026-08-21",
     "words": [
@@ -11021,7 +11247,39 @@
     ]
    },
    {
-    "people": 1112,
+    "people": 1127,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "e710f325"
+    ]
+   },
+   {
+    "people": 1108,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "2e70890c",
+     "c09344de"
+    ]
+   },
+   {
+    "people": 1079,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "0f29c2a6",
+     "1e801cec",
+     "cedcb8f0",
+     "89e7fa47",
+     "3e63f834"
+    ]
+   },
+   {
+    "people": 1078,
     "kind": "Active",
     "updated_on": "2026-06-02",
     "words": [
@@ -11032,16 +11290,7 @@
     ]
    },
    {
-    "people": 1099,
-    "kind": "Active",
-    "updated_on": "2026-08-19",
-    "words": [
-     "2e70890c",
-     "c09344de"
-    ]
-   },
-   {
-    "people": 1058,
+    "people": 1064,
     "kind": "Active",
     "updated_on": "2026-04-13",
     "words": [
@@ -11053,7 +11302,7 @@
     ]
    },
    {
-    "people": 1043,
+    "people": 1044,
     "kind": "Active",
     "updated_on": "2026-10-13",
     "words": [
@@ -11063,7 +11312,7 @@
     ]
    },
    {
-    "people": 989,
+    "people": 991,
     "kind": "Active",
     "updated_on": "2026-08-24",
     "words": [
@@ -11089,18 +11338,7 @@
     ]
    },
    {
-    "people": 978,
-    "kind": "Active",
-    "updated_on": "2026-10-12",
-    "words": [
-     "d59947bc",
-     "2edc649c",
-     "40293d93",
-     "c54cb882"
-    ]
-   },
-   {
-    "people": 970,
+    "people": 972,
     "kind": "Active",
     "updated_on": "2026-06-09",
     "words": [
@@ -11112,21 +11350,18 @@
     ]
    },
    {
-    "people": 926,
+    "people": 960,
     "kind": "Active",
-    "updated_on": "2026-09-02",
+    "updated_on": "2026-10-12",
     "words": [
-     "c09344de",
-     "827a7e1d",
-     "0f29c2a6",
-     "1e801cec",
-     "cedcb8f0",
-     "89e7fa47",
-     "3e63f834"
+     "d59947bc",
+     "2edc649c",
+     "40293d93",
+     "c54cb882"
     ]
    },
    {
-    "people": 912,
+    "people": 921,
     "kind": "Active",
     "updated_on": "2026-04-15",
     "words": [
@@ -11138,7 +11373,16 @@
     ]
    },
    {
-    "people": 895,
+    "people": 900,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "e5a4f945",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 894,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -11149,15 +11393,6 @@
      "ba85df6a",
      "e206d1e7",
      "bfa8cd7f"
-    ]
-   },
-   {
-    "people": 894,
-    "kind": "Active",
-    "updated_on": "2026-09-01",
-    "words": [
-     "e5a4f945",
-     "e367307e"
     ]
    },
    {
@@ -11173,14 +11408,15 @@
     ]
    },
    {
-    "people": 840,
+    "people": 843,
     "kind": "Active",
-    "updated_on": "2026-10-28",
+    "updated_on": "2026-09-21",
     "words": [
-     "877f0914",
-     "d6e12155",
-     "a3f90171",
-     "621caf0e"
+     "2edc649c",
+     "c09344de",
+     "0f29c2a6",
+     "aa62e8bc",
+     "242ab48e"
     ]
    },
    {
@@ -11197,19 +11433,18 @@
     ]
    },
    {
-    "people": 832,
+    "people": 833,
     "kind": "Active",
-    "updated_on": "2026-09-21",
+    "updated_on": "2026-10-28",
     "words": [
-     "2edc649c",
-     "c09344de",
-     "0f29c2a6",
-     "aa62e8bc",
-     "242ab48e"
+     "877f0914",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
     ]
    },
    {
-    "people": 798,
+    "people": 800,
     "kind": "Active",
     "updated_on": "2026-07-13",
     "words": [
@@ -11220,7 +11455,7 @@
     ]
    },
    {
-    "people": 740,
+    "people": 739,
     "kind": "Active",
     "updated_on": "2026-07-25",
     "words": [
@@ -11256,6 +11491,28 @@
      "877f0914",
      "4bd02db4",
      "cf381ba3"
+    ]
+   },
+   {
+    "people": 620,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "f9befe96",
+     "0cfb5881",
+     "0f29c2a6",
+     "e82bd96f",
+     "4303b923"
+    ]
+   },
+   {
+    "people": 612,
+    "kind": "Active",
+    "updated_on": "2026-10-30",
+    "words": [
+     "7d1fb3a2",
+     "bed023b3",
+     "37e24810"
     ]
    },
    {
@@ -11316,7 +11573,7 @@
     ]
    },
    {
-    "people": 506,
+    "people": 507,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -11343,7 +11600,20 @@
     ]
    },
    {
-    "people": 487,
+    "people": 497,
+    "kind": "Active",
+    "updated_on": "2026-11-06",
+    "words": [
+     "c075320c",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "12c0d7b1",
+     "3b1787cc"
+    ]
+   },
+   {
+    "people": 489,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -11389,7 +11659,7 @@
     ]
    },
    {
-    "people": 463,
+    "people": 464,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -11408,17 +11678,6 @@
     ]
    },
    {
-    "people": 447,
-    "kind": "Active",
-    "updated_on": "2026-08-12",
-    "words": [
-     "b2fa08eb",
-     "37968efd",
-     "953445ed",
-     "6b98ed8f"
-    ]
-   },
-   {
     "people": 443,
     "kind": "Active",
     "updated_on": "2026-04-29",
@@ -11432,13 +11691,14 @@
     ]
    },
    {
-    "people": 431,
+    "people": 441,
     "kind": "Active",
-    "updated_on": "2026-10-30",
+    "updated_on": "2026-08-12",
     "words": [
-     "7d1fb3a2",
-     "bed023b3",
-     "37e24810"
+     "b2fa08eb",
+     "37968efd",
+     "953445ed",
+     "6b98ed8f"
     ]
    },
    {
@@ -11453,7 +11713,7 @@
     ]
    },
    {
-    "people": 427,
+    "people": 428,
     "kind": "Active",
     "updated_on": "2026-07-16",
     "words": [
@@ -11476,6 +11736,19 @@
     ]
    },
    {
+    "people": 416,
+    "kind": "Active",
+    "updated_on": "2026-09-08",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5",
+     "29b19c8a",
+     "06d73a77"
+    ]
+   },
+   {
     "people": 407,
     "kind": "Active",
     "updated_on": "2026-04-03",
@@ -11489,13 +11762,23 @@
     ]
    },
    {
-    "people": 403,
+    "people": 405,
     "kind": "Active",
     "updated_on": "2026-11-02",
     "words": [
      "89b29c10",
      "e548412c",
      "ac8c5c51"
+    ]
+   },
+   {
+    "people": 405,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "8c6e32a8",
+     "3ff21de3",
+     "f5674cd4"
     ]
    },
    {
@@ -11522,6 +11805,18 @@
     ]
    },
    {
+    "people": 384,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "886f1733",
+     "7afe4abf",
+     "54eed4d0",
+     "0c4afe69",
+     "2fae3ec5"
+    ]
+   },
+   {
     "people": 381,
     "kind": "Active",
     "updated_on": "2026-08-31",
@@ -11534,18 +11829,6 @@
      "96e6b96b",
      "db819b62",
      "f847265f"
-    ]
-   },
-   {
-    "people": 379,
-    "kind": "Active",
-    "updated_on": "2026-06-30",
-    "words": [
-     "886f1733",
-     "7afe4abf",
-     "54eed4d0",
-     "0c4afe69",
-     "2fae3ec5"
     ]
    },
    {
@@ -11618,23 +11901,23 @@
     ]
    },
    {
-    "people": 345,
-    "kind": "Active",
-    "updated_on": "2026-10-29",
-    "words": [
-     "c075320c",
-     "4bd02db4",
-     "cf381ba3"
-    ]
-   },
-   {
-    "people": 342,
+    "people": 348,
     "kind": "Active",
     "updated_on": "2026-08-25",
     "words": [
      "c09344de",
      "94e93fea",
      "a8e99c47"
+    ]
+   },
+   {
+    "people": 344,
+    "kind": "Active",
+    "updated_on": "2026-10-29",
+    "words": [
+     "c075320c",
+     "4bd02db4",
+     "cf381ba3"
     ]
    },
    {
@@ -11646,6 +11929,17 @@
      "90ad4210",
      "3b952e97",
      "3028b3db"
+    ]
+   },
+   {
+    "people": 338,
+    "kind": "Active",
+    "updated_on": "2026-07-24",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
     ]
    },
    {
@@ -11675,6 +11969,17 @@
     ]
    },
    {
+    "people": 326,
+    "kind": "Active",
+    "updated_on": "2026-06-09",
+    "words": [
+     "2eba068b",
+     "acf38390",
+     "609a6d33",
+     "d1c5907e"
+    ]
+   },
+   {
     "people": 325,
     "kind": "Active",
     "updated_on": "2026-04-22",
@@ -11685,17 +11990,6 @@
      "d55997bc",
      "10066ae1",
      "3d8466cb"
-    ]
-   },
-   {
-    "people": 322,
-    "kind": "Active",
-    "updated_on": "2026-06-09",
-    "words": [
-     "2eba068b",
-     "acf38390",
-     "609a6d33",
-     "d1c5907e"
     ]
    },
    {
@@ -11749,7 +12043,7 @@
     ]
    },
    {
-    "people": 297,
+    "people": 302,
     "kind": "Active",
     "updated_on": "2026-08-26",
     "words": [
@@ -11759,16 +12053,7 @@
     ]
    },
    {
-    "people": 295,
-    "kind": "Active",
-    "updated_on": "2026-08-11",
-    "words": [
-     "c09344de",
-     "4860455d"
-    ]
-   },
-   {
-    "people": 290,
+    "people": 299,
     "kind": "Active",
     "updated_on": "2026-08-31",
     "words": [
@@ -11776,6 +12061,15 @@
      "9b0f2144",
      "a4bdaa19",
      "cedcb8f0"
+    ]
+   },
+   {
+    "people": 295,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "4860455d"
     ]
    },
    {
@@ -11836,15 +12130,12 @@
     ]
    },
    {
-    "people": 261,
+    "people": 258,
     "kind": "Active",
-    "updated_on": "2026-04-23",
+    "updated_on": "2026-11-04",
     "words": [
-     "f9befe96",
-     "0cfb5881",
-     "0f29c2a6",
-     "e82bd96f",
-     "4303b923"
+     "39a21e9b",
+     "c075320c"
     ]
    },
    {
@@ -11857,6 +12148,21 @@
     ]
    },
    {
+    "people": 257,
+    "kind": "Active",
+    "updated_on": "2026-11-06",
+    "words": [
+     "f5ce03fb",
+     "a65b72c3",
+     "6261af7f",
+     "b3f184a9",
+     "acf38390",
+     "5cf09f23",
+     "27b19964",
+     "40293d93"
+    ]
+   },
+   {
     "people": 249,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -11865,7 +12171,7 @@
     ]
    },
    {
-    "people": 237,
+    "people": 238,
     "kind": "Active",
     "updated_on": "2026-04-15",
     "words": [
@@ -11874,15 +12180,6 @@
      "f801948c",
      "e79397f1",
      "8a8753c7"
-    ]
-   },
-   {
-    "people": 236,
-    "kind": "Active",
-    "updated_on": "2026-11-02",
-    "words": [
-     "39a21e9b",
-     "c075320c"
     ]
    },
    {
@@ -11934,17 +12231,6 @@
     ]
    },
    {
-    "people": 223,
-    "kind": "Active",
-    "updated_on": "2026-10-16",
-    "words": [
-     "c075320c",
-     "d6e12155",
-     "a3f90171",
-     "621caf0e"
-    ]
-   },
-   {
     "people": 222,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -11976,6 +12262,17 @@
     ]
    },
    {
+    "people": 219,
+    "kind": "Active",
+    "updated_on": "2026-10-16",
+    "words": [
+     "c075320c",
+     "d6e12155",
+     "a3f90171",
+     "621caf0e"
+    ]
+   },
+   {
     "people": 216,
     "kind": "Active",
     "updated_on": "2026-06-07",
@@ -12003,7 +12300,7 @@
     ]
    },
    {
-    "people": 202,
+    "people": 197,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -12029,12 +12326,44 @@
     ]
    },
    {
-    "people": 188,
+    "people": 191,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "c09344de",
+     "cf85e230"
+    ]
+   },
+   {
+    "people": 190,
     "kind": "Active",
     "updated_on": "2026-08-27",
     "words": [
      "4bf4922d",
      "8c6e32a8",
+     "0c4afe69",
+     "04d092fd",
+     "67826267"
+    ]
+   },
+   {
+    "people": 187,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd",
+     "aa62e8bc"
+    ]
+   },
+   {
+    "people": 186,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4bf4922d",
+     "cedcb8f0",
      "0c4afe69",
      "04d092fd",
      "67826267"
@@ -12048,38 +12377,6 @@
      "826f1d3e",
      "3d3c9730",
      "0f5781a6"
-    ]
-   },
-   {
-    "people": 185,
-    "kind": "Active",
-    "updated_on": "2026-10-08",
-    "words": [
-     "4bf4922d",
-     "cedcb8f0",
-     "0c4afe69",
-     "04d092fd",
-     "67826267"
-    ]
-   },
-   {
-    "people": 183,
-    "kind": "Active",
-    "updated_on": "2026-05-01",
-    "words": [
-     "3dddb9fd",
-     "00e27e4b",
-     "37968efd",
-     "aa62e8bc"
-    ]
-   },
-   {
-    "people": 181,
-    "kind": "Active",
-    "updated_on": "2026-08-19",
-    "words": [
-     "c09344de",
-     "cf85e230"
     ]
    },
    {
@@ -12099,19 +12396,6 @@
      "175c54d9",
      "2fb1a5fc",
      "3687395b"
-    ]
-   },
-   {
-    "people": 174,
-    "kind": "Active",
-    "updated_on": "2026-09-08",
-    "words": [
-     "8c6e32a8",
-     "b6f40207",
-     "fcefccca",
-     "d872e2a5",
-     "29b19c8a",
-     "06d73a77"
     ]
    },
    {
@@ -12141,22 +12425,21 @@
     ]
    },
    {
-    "people": 169,
-    "kind": "Active",
-    "updated_on": "2026-08-19",
-    "words": [
-     "8c6e32a8",
-     "3ff21de3",
-     "f5674cd4"
-    ]
-   },
-   {
-    "people": 165,
+    "people": 166,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
      "3b1787cc",
      "621caf0e"
+    ]
+   },
+   {
+    "people": 163,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "43eca75c"
     ]
    },
    {
@@ -12173,17 +12456,6 @@
     ]
    },
    {
-    "people": 162,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "416aec5d",
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
-    ]
-   },
-   {
     "people": 159,
     "kind": "Active",
     "updated_on": "2026-06-13",
@@ -12195,21 +12467,34 @@
     ]
    },
    {
-    "people": 158,
+    "people": 157,
     "kind": "Active",
-    "updated_on": "2026-08-26",
+    "updated_on": "2026-08-21",
     "words": [
-     "c09344de",
-     "43eca75c"
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "6d48538c"
     ]
    },
    {
-    "people": 154,
+    "people": 155,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
      "c00af369",
      "e367307e"
+    ]
+   },
+   {
+    "people": 154,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "416aec5d",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
     ]
    },
    {
@@ -12225,7 +12510,7 @@
     ]
    },
    {
-    "people": 153,
+    "people": 152,
     "kind": "Active",
     "updated_on": "2026-07-06",
     "words": [
@@ -12268,6 +12553,16 @@
      "6261af7f",
      "ef853eed",
      "bd2c3575"
+    ]
+   },
+   {
+    "people": 138,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "e5a4f945",
+     "e367307e",
+     "c09344de"
     ]
    },
    {
@@ -12333,29 +12628,7 @@
     ]
    },
    {
-    "people": 128,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "1c8bcfa6",
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
-    ]
-   },
-   {
-    "people": 124,
-    "kind": "Active",
-    "updated_on": "2026-06-02",
-    "words": [
-     "d6e12155",
-     "a3f90171",
-     "621caf0e",
-     "0dc48142"
-    ]
-   },
-   {
-    "people": 124,
+    "people": 129,
     "kind": "Active",
     "updated_on": "2026-05-28",
     "words": [
@@ -12367,13 +12640,25 @@
     ]
    },
    {
-    "people": 123,
+    "people": 128,
     "kind": "Active",
-    "updated_on": "2026-09-18",
+    "updated_on": "2026-11-04",
     "words": [
-     "e5a4f945",
-     "e367307e",
-     "c09344de"
+     "1c8bcfa6",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 126,
+    "kind": "Active",
+    "updated_on": "2026-06-02",
+    "words": [
+     "d6e12155",
+     "a3f90171",
+     "621caf0e",
+     "0dc48142"
     ]
    },
    {
@@ -12406,6 +12691,15 @@
     ]
    },
    {
+    "people": 119,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "227104ea"
+    ]
+   },
+   {
     "people": 118,
     "kind": "Active",
     "updated_on": "2026-09-24",
@@ -12415,26 +12709,6 @@
      "0c4afe69",
      "e44f21fd",
      "876fffdd"
-    ]
-   },
-   {
-    "people": 114,
-    "kind": "Active",
-    "updated_on": "2026-08-26",
-    "words": [
-     "c09344de",
-     "227104ea"
-    ]
-   },
-   {
-    "people": 114,
-    "kind": "Active",
-    "updated_on": "2026-08-21",
-    "words": [
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "6d48538c"
     ]
    },
    {
@@ -12483,17 +12757,7 @@
     ]
    },
    {
-    "people": 96,
-    "kind": "Active",
-    "updated_on": "2026-08-21",
-    "words": [
-     "058c4484",
-     "1c4b54db",
-     "621caf0e"
-    ]
-   },
-   {
-    "people": 96,
+    "people": 98,
     "kind": "Active",
     "updated_on": "2026-06-22",
     "words": [
@@ -12504,6 +12768,16 @@
      "e1fc8517",
      "875f385d",
      "7dc29488"
+    ]
+   },
+   {
+    "people": 96,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "058c4484",
+     "1c4b54db",
+     "621caf0e"
     ]
    },
    {
@@ -12594,16 +12868,6 @@
    {
     "people": 87,
     "kind": "Active",
-    "updated_on": "2026-10-05",
-    "words": [
-     "175c54d9",
-     "40293d93",
-     "17f478c0"
-    ]
-   },
-   {
-    "people": 86,
-    "kind": "Active",
     "updated_on": "2026-07-20",
     "words": [
      "4460277f",
@@ -12613,11 +12877,30 @@
     ]
    },
    {
+    "people": 87,
+    "kind": "Active",
+    "updated_on": "2026-10-05",
+    "words": [
+     "175c54d9",
+     "40293d93",
+     "17f478c0"
+    ]
+   },
+   {
     "people": 85,
     "kind": "Active",
     "updated_on": "2026-06-12",
     "words": [
      "c62808e8"
+    ]
+   },
+   {
+    "people": 83,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "39a21e9b",
+     "e367307e"
     ]
    },
    {
@@ -12652,15 +12935,6 @@
     ]
    },
    {
-    "people": 76,
-    "kind": "Active",
-    "updated_on": "2026-09-01",
-    "words": [
-     "39a21e9b",
-     "e367307e"
-    ]
-   },
-   {
     "people": 75,
     "kind": "Active",
     "updated_on": "2026-06-03",
@@ -12670,6 +12944,19 @@
      "7a968ed4",
      "1ac6a97e",
      "2b0b962b"
+    ]
+   },
+   {
+    "people": 75,
+    "kind": "Active",
+    "updated_on": "2026-10-26",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "abf095df",
+     "06755279",
+     "cfdb2d7c",
+     "875f385d"
     ]
    },
    {
@@ -12694,18 +12981,17 @@
     ]
    },
    {
-    "people": 74,
-    "kind": "Active",
-    "updated_on": "2026-07-24",
+    "people": 70,
+    "kind": "Static",
+    "updated_on": "2026-10-07",
     "words": [
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "9b759fb9"
+     "e82bd96f",
+     "175c54d9",
+     "5b6c4f70"
     ]
    },
    {
-    "people": 73,
+    "people": 70,
     "kind": "Active",
     "updated_on": "2026-10-23",
     "words": [
@@ -12714,40 +13000,6 @@
      "8318e578",
      "0f29c2a6",
      "2471847e"
-    ]
-   },
-   {
-    "people": 73,
-    "kind": "Active",
-    "updated_on": "2026-10-26",
-    "words": [
-     "f2200e9f",
-     "63e1d819",
-     "abf095df",
-     "06755279",
-     "cfdb2d7c",
-     "875f385d"
-    ]
-   },
-   {
-    "people": 72,
-    "kind": "Active",
-    "updated_on": "2026-10-08",
-    "words": [
-     "4303b923",
-     "edbf0fe3",
-     "d35ec4c9",
-     "addf1e8f"
-    ]
-   },
-   {
-    "people": 70,
-    "kind": "Static",
-    "updated_on": "2026-10-07",
-    "words": [
-     "e82bd96f",
-     "175c54d9",
-     "5b6c4f70"
     ]
    },
    {
@@ -12774,6 +13026,17 @@
    {
     "people": 67,
     "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4303b923",
+     "edbf0fe3",
+     "d35ec4c9",
+     "addf1e8f"
+    ]
+   },
+   {
+    "people": 67,
+    "kind": "Active",
     "updated_on": "2026-06-25",
     "words": [
      "f2200e9f",
@@ -12783,6 +13046,16 @@
      "89b29c10",
      "fce32734",
      "40293d93"
+    ]
+   },
+   {
+    "people": 66,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "39a21e9b",
+     "e367307e",
+     "c09344de"
     ]
    },
    {
@@ -12824,7 +13097,7 @@
     ]
    },
    {
-    "people": 57,
+    "people": 56,
     "kind": "Active",
     "updated_on": "2026-04-17",
     "words": [
@@ -12937,6 +13210,15 @@
     ]
    },
    {
+    "people": 50,
+    "kind": "Active",
+    "updated_on": "2026-06-01",
+    "words": [
+     "5c8ff3a6",
+     "c6270703"
+    ]
+   },
+   {
     "people": 49,
     "kind": "Active",
     "updated_on": "2026-04-30",
@@ -12944,15 +13226,6 @@
      "19bb34eb",
      "205a0a01",
      "b9bd7cb5"
-    ]
-   },
-   {
-    "people": 49,
-    "kind": "Active",
-    "updated_on": "2026-06-01",
-    "words": [
-     "5c8ff3a6",
-     "c6270703"
     ]
    },
    {
@@ -13010,6 +13283,19 @@
    {
     "people": 45,
     "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "c09344de",
+     "1e801cec",
+     "3757b0a1",
+     "67826267",
+     "5127f14d",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 45,
+    "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
      "0e8eae33",
@@ -13059,16 +13345,6 @@
      "ab5684c8",
      "16fa9c87",
      "8c911c01"
-    ]
-   },
-   {
-    "people": 42,
-    "kind": "Active",
-    "updated_on": "2026-09-18",
-    "words": [
-     "39a21e9b",
-     "e367307e",
-     "c09344de"
     ]
    },
    {
@@ -13193,6 +13469,15 @@
    {
     "people": 34,
     "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "402a547c",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 34,
+    "kind": "Active",
     "updated_on": "2026-09-26",
     "words": [
      "e1fc8517",
@@ -13266,10 +13551,10 @@
    {
     "people": 29,
     "kind": "Active",
-    "updated_on": "2026-04-23",
+    "updated_on": "2026-08-14",
     "words": [
-     "402a547c",
-     "0cfb5881"
+     "c09344de",
+     "54a9a29f"
     ]
    },
    {
@@ -13400,15 +13685,6 @@
      "4460277f",
      "17c6537c",
      "57b20f7d"
-    ]
-   },
-   {
-    "people": 19,
-    "kind": "Active",
-    "updated_on": "2026-08-14",
-    "words": [
-     "c09344de",
-     "54a9a29f"
     ]
    },
    {
@@ -13709,6 +13985,16 @@
     ]
    },
    {
+    "people": 7,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "1c8bcfa6",
+     "e367307e",
+     "c09344de"
+    ]
+   },
+   {
     "people": 6,
     "kind": "Active",
     "updated_on": "2026-08-31",
@@ -13727,6 +14013,18 @@
     "words": [
      "105d93e5",
      "8c6e32a8"
+    ]
+   },
+   {
+    "people": 6,
+    "kind": "Active",
+    "updated_on": "2026-11-06",
+    "words": [
+     "c075320c",
+     "5b33a4e1",
+     "fb343bd2",
+     "29b19c8a",
+     "7261c8af"
     ]
    },
    {
@@ -13771,6 +14069,16 @@
      "b6f40207",
      "fcefccca",
      "d872e2a5"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
+    "updated_on": "2026-04-24",
+    "words": [
+     "29b19c8a",
+     "06d73a77",
+     "7d1fb3a2"
     ]
    },
    {
@@ -13853,11 +14161,31 @@
    {
     "people": 4,
     "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "31ed74bb",
+     "82416065"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
     "updated_on": "2026-09-02",
     "words": [
      "c09344de",
      "c8790a35",
      "93339342"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Static",
+    "updated_on": "2026-11-02",
+    "words": [
+     "89b29c10",
+     "e548412c",
+     "ac8c5c51",
+     "d290c23b"
     ]
    },
    {
@@ -13876,11 +14204,30 @@
    {
     "people": 4,
     "kind": "Active",
+    "updated_on": "2026-08-27",
+    "words": [
+     "31ed74bb",
+     "420372be"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
     "updated_on": "2026-04-06",
     "words": [
      "bdf0855a",
      "ef01af58",
      "f89daae5"
+    ]
+   },
+   {
+    "people": 4,
+    "kind": "Active",
+    "updated_on": "2026-07-01",
+    "words": [
+     "0746795c",
+     "7a968ed4",
+     "420372be"
     ]
    },
    {
@@ -13906,11 +14253,11 @@
    {
     "people": 3,
     "kind": "Active",
-    "updated_on": "2026-04-24",
+    "updated_on": "2026-09-18",
     "words": [
-     "29b19c8a",
-     "06d73a77",
-     "7d1fb3a2"
+     "416aec5d",
+     "e367307e",
+     "c09344de"
     ]
    },
    {
@@ -13925,45 +14272,12 @@
    },
    {
     "people": 2,
-    "kind": "Static",
-    "updated_on": "2026-11-02",
-    "words": [
-     "89b29c10",
-     "e548412c",
-     "ac8c5c51",
-     "d290c23b"
-    ]
-   },
-   {
-    "people": 2,
     "kind": "Active",
     "updated_on": "2026-10-29",
     "words": [
      "2edc649c",
      "29b19c8a",
      "7261c8af"
-    ]
-   },
-   {
-    "people": 2,
-    "kind": "Active",
-    "updated_on": "2026-10-19",
-    "words": [
-     "c075320c",
-     "5b33a4e1",
-     "fb343bd2",
-     "29b19c8a",
-     "7261c8af"
-    ]
-   },
-   {
-    "people": 2,
-    "kind": "Active",
-    "updated_on": "2026-09-18",
-    "words": [
-     "416aec5d",
-     "e367307e",
-     "c09344de"
     ]
    },
    {
@@ -14032,10 +14346,11 @@
    {
     "people": 1,
     "kind": "Active",
-    "updated_on": "2026-06-22",
+    "updated_on": "2026-06-11",
     "words": [
-     "31ed74bb",
-     "82416065"
+     "9c7f8847",
+     "5c8ff3a6",
+     "c6270703"
     ]
    },
    {
@@ -14048,15 +14363,6 @@
      "d67a0605",
      "6e6f1dc1",
      "8a8753c7"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
-    "updated_on": "2026-08-27",
-    "words": [
-     "31ed74bb",
-     "420372be"
     ]
    },
    {
@@ -14082,16 +14388,6 @@
      "7a968ed4",
      "0c4afe69",
      "bed023b3"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
-    "updated_on": "2026-07-01",
-    "words": [
-     "0746795c",
-     "7a968ed4",
-     "420372be"
     ]
    },
    {
@@ -14144,16 +14440,6 @@
    {
     "people": 0,
     "kind": "Active",
-    "updated_on": "2026-09-18",
-    "words": [
-     "1c8bcfa6",
-     "e367307e",
-     "c09344de"
-    ]
-   },
-   {
-    "people": 0,
-    "kind": "Active",
     "updated_on": "2026-04-13",
     "words": [
      "dd3e8af6"
@@ -14181,16 +14467,6 @@
      "60d56f8c",
      "4bf4922d",
      "4674caee"
-    ]
-   },
-   {
-    "people": 0,
-    "kind": "Active",
-    "updated_on": "2026-06-11",
-    "words": [
-     "9c7f8847",
-     "5c8ff3a6",
-     "c6270703"
     ]
    },
    {

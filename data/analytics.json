@@ -1,16 +1,16 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T11:28+05:30",
+ "pulled_at": "2026-11-09T11:43+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
   "sessions": 68468,
-  "totalUsers": 51179,
+  "totalUsers": 51186,
   "engagedSessions": 28225
  },
  "split_sums": {
-  "daily": 67423,
+  "daily": 67428,
   "channels": 67901
  },
  "daily": [
@@ -1342,8 +1342,8 @@
   },
   {
    "date": "2026-11-08",
-   "sessions": 188,
-   "totalUsers": 183,
+   "sessions": 193,
+   "totalUsers": 188,
    "engagedSessions": 40
   }
  ],
@@ -1351,9 +1351,9 @@
   {
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 25160,
-   "totalUsers": 22418,
+   "totalUsers": 22421,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.39957343163752
+   "averageSessionDuration": 68.39979900814785
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -2318,6 +2318,12 @@
    "engagedSessions": 59
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 129,
+   "engagedSessions": 13
+  },
+  {
    "date": "2026-04-28",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 128,
@@ -2394,12 +2400,6 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 125,
    "engagedSessions": 58
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 125,
-   "engagedSessions": 13
   },
   {
    "date": "2026-04-27",
@@ -4124,6 +4124,12 @@
    "engagedSessions": 16
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 38,
+   "engagedSessions": 22
+  },
+  {
    "date": "2026-04-01",
    "sessionDefaultChannelGroup": "Referral",
    "sessions": 37,
@@ -4170,12 +4176,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 37,
    "engagedSessions": 14
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 37,
-   "engagedSessions": 22
   },
   {
    "date": "2026-04-05",
@@ -10718,9 +10718,9 @@
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
    "sessions": 25160,
-   "totalUsers": 22418,
+   "totalUsers": 22421,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.39957343163752
+   "averageSessionDuration": 68.39979900814785
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -15568,7 +15568,7 @@
  "pages": [
   {
    "page": "/",
-   "views": 21724
+   "views": 21725
   },
   {
    "page": "/about",
@@ -15700,7 +15700,7 @@
   },
   {
    "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
-   "views": 547
+   "views": 548
   },
   {
    "page": "/developers",
@@ -16235,6 +16235,10 @@
    "views": 56
   },
   {
+   "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
+   "views": 56
+  },
+  {
    "page": "/blog/g2-users-recognize-opsera-in-five-key-categories",
    "views": 55
   },
@@ -16248,10 +16252,6 @@
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-flosum",
-   "views": 55
-  },
-  {
-   "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
    "views": 55
   },
   {
@@ -16500,7 +16500,7 @@
   },
   {
    "page": "/ecosystem/coverity",
-   "views": 33
+   "views": 34
   },
   {
    "page": "/knowledge-base/ci-cd-platform-analytics/deployment-success-rate",
@@ -16895,6 +16895,10 @@
    "views": 22
   },
   {
+   "page": "/blog/software-factory-benefits",
+   "views": 21
+  },
+  {
    "page": "/knowledge-base/category/delivery-flow-performance",
    "views": 21
   },
@@ -16916,10 +16920,6 @@
   },
   {
    "page": "/blog/context-engineering-ai-coding",
-   "views": 20
-  },
-  {
-   "page": "/blog/software-factory-benefits",
    "views": 20
   },
   {
@@ -43721,14 +43721,14 @@
   {
    "date": "2026-11-08",
    "channel": "all",
-   "visits": 188,
+   "visits": 193,
    "demo_page": 4,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "direct",
-   "visits": 125,
+   "visits": 129,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -43749,7 +43749,7 @@
   {
    "date": "2026-11-08",
    "channel": "search",
-   "visits": 37,
+   "visits": 38,
    "demo_page": 2,
    "demo_form": 0
   }
