@@ -28,7 +28,7 @@
   {
    "quarter": "FY27 Q4",
    "counts": {
-    "Harness": 2,
+    "Harness": 1,
     "Copado": 6,
     "LinearB": 6,
     "Opsera": 0,
@@ -194,7 +194,6 @@
   {
    "date": "2026-11-04",
    "counts": {
-    "Harness": 1,
     "Copado": 4
    }
   },

@@ -1,17 +1,17 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:18+05:30",
+ "pulled_at": "2026-11-09T22:58+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
-  "sessions": 68471,
-  "totalUsers": 51210,
-  "engagedSessions": 28225
+  "sessions": 68483,
+  "totalUsers": 51221,
+  "engagedSessions": 28249
  },
  "split_sums": {
-  "daily": 67466,
-  "channels": 67909
+  "daily": 67491,
+  "channels": 67923
  },
  "daily": [
   {
@@ -1342,25 +1342,25 @@
   },
   {
    "date": "2026-11-08",
-   "sessions": 231,
-   "totalUsers": 223,
-   "engagedSessions": 42
+   "sessions": 256,
+   "totalUsers": 246,
+   "engagedSessions": 52
   }
  ],
  "channels": [
   {
    "sessionDefaultChannelGroup": "Direct",
-   "sessions": 25168,
-   "totalUsers": 22442,
-   "engagedSessions": 8287,
-   "averageSessionDuration": 68.38409978583917
+   "sessions": 25171,
+   "totalUsers": 22452,
+   "engagedSessions": 8291,
+   "averageSessionDuration": 68.3780704349847
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 24080,
+   "sessions": 24086,
    "totalUsers": 14984,
-   "engagedSessions": 12279,
-   "averageSessionDuration": 169.99149494348006
+   "engagedSessions": 12280,
+   "averageSessionDuration": 170.01302894951422
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -1378,17 +1378,17 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessions": 3706,
+   "sessions": 3708,
    "totalUsers": 2448,
-   "engagedSessions": 1956,
-   "averageSessionDuration": 158.55803875229358
+   "engagedSessions": 1957,
+   "averageSessionDuration": 158.67612276833873
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
-   "sessions": 3597,
+   "sessions": 3599,
    "totalUsers": 2259,
-   "engagedSessions": 2157,
-   "averageSessionDuration": 147.63699770086183
+   "engagedSessions": 2158,
+   "averageSessionDuration": 148.2632934267852
   },
   {
    "sessionDefaultChannelGroup": "Paid Search",
@@ -1399,10 +1399,10 @@
   },
   {
    "sessionDefaultChannelGroup": "AI Assistant",
-   "sessions": 370,
-   "totalUsers": 233,
-   "engagedSessions": 158,
-   "averageSessionDuration": 210.3402748918919
+   "sessions": 371,
+   "totalUsers": 234,
+   "engagedSessions": 159,
+   "averageSessionDuration": 209.8331153207547
   },
   {
    "sessionDefaultChannelGroup": "Organic Video",
@@ -1790,6 +1790,12 @@
    "engagedSessions": 11
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 172,
+   "engagedSessions": 16
+  },
+  {
    "date": "2026-10-05",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 171,
@@ -1920,12 +1926,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 158,
    "engagedSessions": 87
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 158,
-   "engagedSessions": 14
   },
   {
    "date": "2026-09-09",
@@ -3722,6 +3722,12 @@
    "engagedSessions": 23
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 54,
+   "engagedSessions": 28
+  },
+  {
    "date": "2026-09-19",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 53,
@@ -3900,12 +3906,6 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessions": 47,
    "engagedSessions": 16
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 47,
-   "engagedSessions": 23
   },
   {
    "date": "2026-05-09",
@@ -6566,6 +6566,12 @@
    "engagedSessions": 3
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 11,
+   "engagedSessions": 4
+  },
+  {
    "date": "2026-04-02",
    "sessionDefaultChannelGroup": "Organic Social",
    "sessions": 10,
@@ -6756,12 +6762,6 @@
    "sessionDefaultChannelGroup": "Organic Social",
    "sessions": 10,
    "engagedSessions": 6
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Referral",
-   "sessions": 10,
-   "engagedSessions": 3
   },
   {
    "date": "2026-04-03",
@@ -9086,6 +9086,18 @@
    "engagedSessions": 0
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "AI Assistant",
+   "sessions": 3,
+   "engagedSessions": 2
+  },
+  {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Organic Social",
+   "sessions": 3,
+   "engagedSessions": 1
+  },
+  {
    "date": "2026-04-05",
    "sessionDefaultChannelGroup": "Organic Social",
    "sessions": 2,
@@ -9672,12 +9684,6 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 2,
    "engagedSessions": 0
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "AI Assistant",
-   "sessions": 2,
-   "engagedSessions": 1
   },
   {
    "date": "2026-04-01",
@@ -10704,12 +10710,6 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 1,
    "engagedSessions": 0
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Organic Social",
-   "sessions": 1,
-   "engagedSessions": 0
   }
  ],
  "sources": [
@@ -10717,19 +10717,19 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
-   "sessions": 25168,
-   "totalUsers": 22442,
-   "engagedSessions": 8287,
-   "averageSessionDuration": 68.38409978583917
+   "sessions": 25171,
+   "totalUsers": 22452,
+   "engagedSessions": 8291,
+   "averageSessionDuration": 68.3780704349847
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessionSource": "google",
    "sessionMedium": "organic",
-   "sessions": 22699,
+   "sessions": 22705,
    "totalUsers": 14222,
-   "engagedSessions": 11602,
-   "averageSessionDuration": 170.13500664355257
+   "engagedSessions": 11603,
+   "averageSessionDuration": 170.1558548837701
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -10771,10 +10771,10 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessionSource": "bing",
    "sessionMedium": "organic",
-   "sessions": 1052,
-   "totalUsers": 569,
-   "engagedSessions": 530,
-   "averageSessionDuration": 178.14978461692016
+   "sessions": 1053,
+   "totalUsers": 570,
+   "engagedSessions": 531,
+   "averageSessionDuration": 178.02281208167142
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -10897,10 +10897,10 @@
    "sessionDefaultChannelGroup": "AI Assistant",
    "sessionSource": "gemini.google.com",
    "sessionMedium": "ai-assistant",
-   "sessions": 142,
-   "totalUsers": 82,
-   "engagedSessions": 46,
-   "averageSessionDuration": 243.6288988450704
+   "sessions": 143,
+   "totalUsers": 83,
+   "engagedSessions": 47,
+   "averageSessionDuration": 242.08033363636363
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -10987,19 +10987,19 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "localhost:3000",
    "sessionMedium": "referral",
-   "sessions": 65,
+   "sessions": 66,
    "totalUsers": 5,
-   "engagedSessions": 38,
-   "averageSessionDuration": 350.26108315384613
+   "engagedSessions": 39,
+   "averageSessionDuration": 356.3930608181818
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
    "sessionSource": "lnkd.in",
    "sessionMedium": "referral",
-   "sessions": 60,
+   "sessions": 61,
    "totalUsers": 45,
-   "engagedSessions": 25,
-   "averageSessionDuration": 153.20485221666664
+   "engagedSessions": 26,
+   "averageSessionDuration": 192.48530239344262
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -15568,11 +15568,11 @@
  "pages": [
   {
    "page": "/",
-   "views": 21742
+   "views": 21746
   },
   {
    "page": "/about",
-   "views": 3263
+   "views": 3265
   },
   {
    "page": "/job-application",
@@ -15580,7 +15580,7 @@
   },
   {
    "page": "/careers",
-   "views": 3137
+   "views": 3139
   },
   {
    "page": "/agents",
@@ -15600,7 +15600,7 @@
   },
   {
    "page": "/forge",
-   "views": 1381
+   "views": 1383
   },
   {
    "page": "/events/tokenomics-the-currency-of-enterprise-ai",
@@ -15612,7 +15612,7 @@
   },
   {
    "page": "/blog",
-   "views": 1108
+   "views": 1111
   },
   {
    "page": "/careers/devops-evangelist",
@@ -15620,7 +15620,7 @@
   },
   {
    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-   "views": 1046
+   "views": 1048
   },
   {
    "page": "/solutions",
@@ -15647,12 +15647,12 @@
    "views": 745
   },
   {
-   "page": "/contact",
-   "views": 713
+   "page": "/customer-stories",
+   "views": 715
   },
   {
-   "page": "/customer-stories",
-   "views": 712
+   "page": "/contact",
+   "views": 713
   },
   {
    "page": "/careers/devops-sales-engineer",
@@ -15664,7 +15664,7 @@
   },
   {
    "page": "/php2shell",
-   "views": 683
+   "views": 684
   },
   {
    "page": "/careers/enterprise-account-executive",
@@ -15700,7 +15700,7 @@
   },
   {
    "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
-   "views": 548
+   "views": 554
   },
   {
    "page": "/developers",
@@ -15720,7 +15720,7 @@
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-copado",
-   "views": 460
+   "views": 461
   },
   {
    "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
@@ -15736,7 +15736,7 @@
   },
   {
    "page": "/partners",
-   "views": 404
+   "views": 405
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-dx",
@@ -15752,7 +15752,7 @@
   },
   {
    "page": "/blog/ai-sdlc",
-   "views": 362
+   "views": 363
   },
   {
    "page": "/solutions/salesforce-devops-platform",
@@ -15776,7 +15776,7 @@
   },
   {
    "page": "/blog/claude-code-alternative",
-   "views": 278
+   "views": 279
   },
   {
    "page": "/blog/devsecops-tools",
@@ -15811,11 +15811,11 @@
    "views": 237
   },
   {
-   "page": "/agentic-devops",
-   "views": 233
+   "page": "/events/roundtable-webinar",
+   "views": 234
   },
   {
-   "page": "/events/roundtable-webinar",
+   "page": "/agentic-devops",
    "views": 233
   },
   {
@@ -15875,20 +15875,20 @@
    "views": 206
   },
   {
+   "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+   "views": 201
+  },
+  {
    "page": "/blog/spec-driven-development",
    "views": 198
   },
   {
-   "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+   "page": "/events",
    "views": 198
   },
   {
    "page": "/partners/databricks",
    "views": 196
-  },
-  {
-   "page": "/events",
-   "views": 195
   },
   {
    "page": "/platform/declarative-pipelines",
@@ -15908,7 +15908,7 @@
   },
   {
    "page": "/salesforce-devops",
-   "views": 173
+   "views": 174
   },
   {
    "page": "/blog/cobol-modernization",
@@ -15939,12 +15939,12 @@
    "views": 147
   },
   {
-   "page": "/privacy",
+   "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
    "views": 146
   },
   {
-   "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
-   "views": 145
+   "page": "/privacy",
+   "views": 146
   },
   {
    "page": "/interactive-demo",
@@ -15968,7 +15968,7 @@
   },
   {
    "page": "/blog/legacy-code-modernization",
-   "views": 132
+   "views": 134
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
@@ -16015,12 +16015,12 @@
    "views": 109
   },
   {
-   "page": "/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
+   "page": "/blog/harness-engineering",
    "views": 108
   },
   {
-   "page": "/blog/harness-engineering",
-   "views": 107
+   "page": "/events/ai-budget-burning-how-to-convert-ai-panic-into-tangible-business-results",
+   "views": 108
   },
   {
    "page": "/ecosystem/gitlab-ci",
@@ -16036,7 +16036,7 @@
   },
   {
    "page": "/customer-stories/cisco",
-   "views": 105
+   "views": 106
   },
   {
    "page": "/platform/toolchain-automation",
@@ -16087,11 +16087,11 @@
    "views": 89
   },
   {
-   "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
-   "views": 88
+   "page": "/resources/comparison-guides/opsera-vs-harness",
+   "views": 89
   },
   {
-   "page": "/resources/comparison-guides/opsera-vs-harness",
+   "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
    "views": 88
   },
   {
@@ -16163,11 +16163,11 @@
    "views": 66
   },
   {
-   "page": "/ecosystem/kibana",
-   "views": 65
+   "page": "/resources/comparison-guides/opsera-vs-jellyfish",
+   "views": 66
   },
   {
-   "page": "/resources/comparison-guides/opsera-vs-jellyfish",
+   "page": "/ecosystem/kibana",
    "views": 65
   },
   {
@@ -16176,7 +16176,7 @@
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-jenkins",
-   "views": 63
+   "views": 64
   },
   {
    "page": "/blog/the-role-of-ai-in-modern-software-development",
@@ -16231,6 +16231,10 @@
    "views": 56
   },
   {
+   "page": "/resources/comparison-guides/opsera-vs-flosum",
+   "views": 56
+  },
+  {
    "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
    "views": 56
   },
@@ -16248,10 +16252,6 @@
   },
   {
    "page": "/ecosystem/instana",
-   "views": 55
-  },
-  {
-   "page": "/resources/comparison-guides/opsera-vs-flosum",
    "views": 55
   },
   {
@@ -16315,6 +16315,10 @@
    "views": 48
   },
   {
+   "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+   "views": 47
+  },
+  {
    "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
    "views": 47
   },
@@ -16336,10 +16340,6 @@
   },
   {
    "page": "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
-   "views": 45
-  },
-  {
-   "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
    "views": 45
   },
   {
@@ -16371,11 +16371,15 @@
    "views": 43
   },
   {
+   "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
+   "views": 43
+  },
+  {
    "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
    "views": 42
   },
   {
-   "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
+   "page": "/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience",
    "views": 42
   },
   {
@@ -16400,10 +16404,6 @@
   },
   {
    "page": "/blog/change-failure-rate",
-   "views": 41
-  },
-  {
-   "page": "/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience",
    "views": 41
   },
   {
@@ -16735,6 +16735,10 @@
    "views": 26
   },
   {
+   "page": "/resources/comparison-guides/opsera-vs-cloudbees",
+   "views": 26
+  },
+  {
    "page": "/blog/opsera-series-a-funding",
    "views": 26
   },
@@ -16768,10 +16772,6 @@
   },
   {
    "page": "/blog/devops-security-automation-best-practices",
-   "views": 25
-  },
-  {
-   "page": "/resources/comparison-guides/opsera-vs-cloudbees",
    "views": 25
   },
   {
@@ -16971,6 +16971,10 @@
    "views": 20
   },
   {
+   "page": "/resources/comparison-guides/opsera-vs-linearb",
+   "views": 20
+  },
+  {
    "page": "/diagram-test",
    "views": 19
   },
@@ -17012,10 +17016,6 @@
   },
   {
    "page": "/knowledge-base/core-flow-metrics/lead-time-for-changes-and-mean-lead-time",
-   "views": 19
-  },
-  {
-   "page": "/resources/comparison-guides/opsera-vs-linearb",
    "views": 19
   },
   {
@@ -17139,6 +17139,10 @@
    "views": 16
   },
   {
+   "page": "/resources/comparison-guides/opsera-vs-gearset",
+   "views": 16
+  },
+  {
    "page": "/resources/webinars/leading-with-data-simplify-devops-and-elevate-devex",
    "views": 16
   },
@@ -17236,10 +17240,6 @@
   },
   {
    "page": "/newsroom/opsera-and-lineaje-partner-to-deliver-agentic-ai-powered-auto-remediation-gold-secure-images-and-open-source-security-at-scale",
-   "views": 15
-  },
-  {
-   "page": "/resources/comparison-guides/opsera-vs-gearset",
    "views": 15
   },
   {
@@ -22500,8 +22500,8 @@
    {
     "date": "2026-11-08",
     "group": "untagged",
-    "visits": 1,
-    "engaged": 0
+    "visits": 3,
+    "engaged": 1
    }
   ],
   "landing": [
@@ -22628,7 +22628,7 @@
    {
     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
     "group": "untagged",
-    "visits": 24,
+    "visits": 25,
     "engaged": 12
    },
    {
@@ -23260,6 +23260,12 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "page": "/salesforce-devops",
@@ -30752,6 +30758,20 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "date": "2026-11-08",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-08",
+    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
    }
   ],
   "demo_path": [
@@ -32736,6 +32756,24 @@
     "group": "untagged",
     "visits": 1,
     "engaged": 0
+   },
+   {
+    "sessionSource": "linkedin.com",
+    "sessionMedium": "referral",
+    "sessionCampaignName": "(referral)",
+    "content": "",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "sessionSource": "lnkd.in",
+    "sessionMedium": "referral",
+    "sessionCampaignName": "(referral)",
+    "content": "",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
    }
   ],
   "forms": [
@@ -43714,21 +43752,21 @@
   {
    "date": "2026-11-08",
    "channel": "ai",
-   "visits": 2,
+   "visits": 3,
    "demo_page": 0,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "all",
-   "visits": 231,
+   "visits": 256,
    "demo_page": 4,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "direct",
-   "visits": 158,
+   "visits": 172,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -43742,14 +43780,14 @@
   {
    "date": "2026-11-08",
    "channel": "linkedin",
-   "visits": 1,
+   "visits": 3,
    "demo_page": 0,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "search",
-   "visits": 46,
+   "visits": 52,
    "demo_page": 2,
    "demo_form": 0
   }
@@ -46199,8 +46237,8 @@
    {
     "date": "2026-11-08",
     "tool": "gemini",
-    "visits": 1,
-    "engaged": 1,
+    "visits": 2,
+    "engaged": 2,
     "demo_page": 0,
     "demo_form": 0
    }
@@ -46315,6 +46353,12 @@
     "engaged": 1
    },
    {
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 6,
+    "engaged": 4
+   },
+   {
     "page": "/blog/dora-2025-report-ai-software-development",
     "tool": "claude",
     "visits": 6,
@@ -46337,12 +46381,6 @@
     "tool": "claude",
     "visits": 6,
     "engaged": 5
-   },
-   {
-    "page": "/blog/claude-code-alternative",
-    "tool": "gemini",
-    "visits": 5,
-    "engaged": 3
    },
    {
     "page": "/forge",
@@ -47277,8 +47315,8 @@
  "google_search_visits": [
   {
    "kind": "new",
-   "visits": 13909,
-   "engaged": 8291
+   "visits": 13911,
+   "engaged": 8294
   },
   {
    "kind": "returning",
@@ -47292,7 +47330,7 @@
   },
   {
    "kind": "",
-   "visits": 10,
+   "visits": 12,
    "engaged": 0
   }
  ],

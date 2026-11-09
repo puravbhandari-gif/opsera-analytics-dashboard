@@ -1,12 +1,12 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
 2026-11-02,2026-11-08,no,/blog/cobol-modernization,60,5,0,0,6,1536
-2026-11-02,2026-11-08,no,/blog/claude-code-alternative,46,20,0,0,27,4898
+2026-11-02,2026-11-08,no,/blog/claude-code-alternative,47,21,0,0,27,4898
 2026-11-02,2026-11-08,no,/blog/spec-driven-development,41,16,0,0,15,2160
-2026-11-02,2026-11-08,no,/blog/ai-sdlc,33,12,0,0,14,2483
+2026-11-02,2026-11-08,no,/blog/ai-sdlc,34,13,0,0,14,2483
 2026-11-02,2026-11-08,no,/blog/snowflake-to-databricks-migration,30,0,0,0,19,729
 2026-11-02,2026-11-08,no,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,28,4,0,0,4,438
+2026-11-02,2026-11-08,no,/blog/legacy-code-modernization,28,5,0,0,11,1231
 2026-11-02,2026-11-08,no,/blog/what-is-agentic-devops,28,11,0,0,10,500
-2026-11-02,2026-11-08,no,/blog/legacy-code-modernization,27,4,0,0,11,1231
 2026-11-02,2026-11-08,no,/blog/github-copilot-adoption-trends-insights-from-real-data,26,1,0,0,0,749
 2026-11-02,2026-11-08,no,/blog/harness-engineering,26,11,0,0,4,676
 2026-11-02,2026-11-08,no,/blog/software-factory-pattern,26,7,0,0,12,388
@@ -55,6 +55,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-08,no,/blog/blitzy-alternatives,3,2,0,0,2,181
 2026-11-02,2026-11-08,no,/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly,3,1,0,0,5,637
 2026-11-02,2026-11-08,no,/blog/devops-tool-chains-imperative-for-devops-success-choice-vs-standardization,3,0,0,0,0,0
+2026-11-02,2026-11-08,no,/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience,3,1,0,0,1,175
 2026-11-02,2026-11-08,no,/blog/how-to-measure-code-churn,3,0,0,0,0,254
 2026-11-02,2026-11-08,no,/blog/java-modernization-architecture,3,0,0,0,0,5
 2026-11-02,2026-11-08,no,/blog/migrate-coldfusion-to-java-spring-boot,3,2,0,0,1,66
@@ -78,7 +79,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-08,no,/blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success,2,0,0,0,0,3
 2026-11-02,2026-11-08,no,/blog/frontier-ai-software-readiness-benchmark,2,1,0,0,0,153
 2026-11-02,2026-11-08,no,/blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership,2,0,0,0,0,16
-2026-11-02,2026-11-08,no,/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience,2,0,0,0,1,175
 2026-11-02,2026-11-08,no,/blog/how-opsera-appsec-agents-stop-npm-supply-chain-attacks-before-they-hit-your-build,2,0,0,0,0,0
 2026-11-02,2026-11-08,no,/blog/improving-salesforce-devops-efficiency,2,0,0,0,0,51
 2026-11-02,2026-11-08,no,/blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops,2,0,0,0,0,9

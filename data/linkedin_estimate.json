@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-09T08:54+00:00",
+ "posts_pulled_at": "2026-11-09T17:34+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -474,8 +474,8 @@
   {
    "date": "2026-11-08",
    "group": "cant_tell",
-   "visits": 1,
-   "engaged": 0
+   "visits": 3,
+   "engaged": 1
   }
  ],
  "matches": [
@@ -747,10 +747,16 @@
    "date": "2026-11-06",
    "page": "/blog/measure-ai-roi-software-development",
    "post": "https://www.linkedin.com/posts/opsera_reuters-reported-metas-ai-assisted-code-activity-7524516238358929408-xTY1"
+  },
+  {
+   "account": "company",
+   "date": "2026-11-09",
+   "page": "/blog/harness-engineering",
+   "post": "https://www.linkedin.com/posts/opsera_harness-engineering-is-everything-around-activity-7525603851215859712-9Yka"
   }
  ],
- "untagged_total": 530,
+ "untagged_total": 532,
  "start_date": "2026-09-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:18+05:30"
+ "pulled_at": "2026-11-09T22:58+05:30"
 }

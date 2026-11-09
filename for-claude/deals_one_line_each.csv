@@ -1,5 +1,7 @@
-month,first_came_from,first_page,first_form,product,open_or_won,amount_usd
+month,first_came_from,first_page,first_form,product,open_won_or_lost,amount_usd
+2026-04,Direct,/,Schedule a Demo,BrickForge,Lost,100000
 2026-05,Google search,/resources/comparison-guides/opsera-vs-copado,Contact,"Forge, Platform, Agents",Open,150000
 2026-06,Other websites,www.opsera.io/demo,Schedule a Demo,"Forge, Unified Insights",Open,150000
 2026-08,Direct,/,Schedule a Demo,Copilot,Open,150000
+2026-09,Google search,/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms,Opsera Named a Leader in the 2026 Gartner® Magic Quadrant™ for Developer Productivity Insight Platforms,"Unified Insights, Pipelines",Lost,30000
 2026-10,Google search,/newsroom/opsera-releases-native-ci-cd-automation-for-salesforce-2,Book a demo,Salesforce DevOps,Open,150000

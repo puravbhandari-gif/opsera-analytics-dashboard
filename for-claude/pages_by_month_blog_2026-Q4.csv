@@ -246,17 +246,17 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/blog/welcoming-opseras-gitcustodian-monitor-prevent-secrets-in-your-source-code,1,0,0,0,0,18
 2026-10-01,2026-10-31,no,/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool,1,0,0,0,0,0
 2026-11-01,2026-11-08,yes,/blog/cobol-modernization,66,7,0,0,6,1802
-2026-11-01,2026-11-08,yes,/blog/claude-code-alternative,51,23,0,0,32,5598
+2026-11-01,2026-11-08,yes,/blog/claude-code-alternative,52,24,0,0,32,5598
 2026-11-01,2026-11-08,yes,/blog/spec-driven-development,43,17,0,0,17,2403
-2026-11-01,2026-11-08,yes,/blog/ai-sdlc,39,15,0,0,16,2672
+2026-11-01,2026-11-08,yes,/blog/ai-sdlc,40,16,0,0,16,2672
 2026-11-01,2026-11-08,yes,/blog/harness-engineering,33,12,0,0,5,813
 2026-11-01,2026-11-08,yes,/blog/github-copilot-adoption-trends-insights-from-real-data,32,1,0,0,0,869
 2026-11-01,2026-11-08,yes,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,31,4,0,0,4,515
 2026-11-01,2026-11-08,yes,/blog/what-is-agentic-devops,31,12,0,0,10,577
 2026-11-01,2026-11-08,yes,/blog/snowflake-to-databricks-migration,30,0,0,0,19,748
+2026-11-01,2026-11-08,yes,/blog/legacy-code-modernization,29,5,0,0,11,1407
 2026-11-01,2026-11-08,yes,/blog/software-factory-pattern,29,8,0,0,14,441
 2026-11-01,2026-11-08,yes,/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,28,8,0,0,12,823
-2026-11-01,2026-11-08,yes,/blog/legacy-code-modernization,28,4,0,0,11,1407
 2026-11-01,2026-11-08,yes,/blog/cursor-alternatives,25,2,0,0,2,2040
 2026-11-01,2026-11-08,yes,/blog/software-factory,25,7,0,0,11,3131
 2026-11-01,2026-11-08,yes,/blog/dora-2025-report-ai-software-development,23,4,0,0,4,1664
@@ -287,6 +287,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-08,yes,/blog/ci-cd-business-benefits,5,0,0,0,5,1001
 2026-11-01,2026-11-08,yes,/blog/devops-monitoring,5,2,0,0,0,714
 2026-11-01,2026-11-08,yes,/blog/github-copilot-trends-and-measuring-impact,5,2,0,0,2,212
+2026-11-01,2026-11-08,yes,/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience,5,2,0,0,1,206
 2026-11-01,2026-11-08,yes,/blog/shift-left-security,5,2,0,0,0,211
 2026-11-01,2026-11-08,yes,/blog/what-is-deployment-frequency,5,0,0,0,0,0
 2026-11-01,2026-11-08,yes,/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins,4,0,0,0,1,80
@@ -294,7 +295,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-08,yes,/blog/copado-vs-opsera-which-is-the-best-platform-for-salesforce-devops-and-beyond,4,0,0,0,0,704
 2026-11-01,2026-11-08,yes,/blog/devops-security-automation-best-practices,4,0,0,0,1,316
 2026-11-01,2026-11-08,yes,/blog/forge-cursor-ai-speed-meets-enterprise-control,4,0,0,0,0,9
-2026-11-01,2026-11-08,yes,/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience,4,1,0,0,1,206
 2026-11-01,2026-11-08,yes,/blog/how-to-measure-code-churn,4,0,0,0,0,289
 2026-11-01,2026-11-08,yes,/blog/opsera-expands-ai-impact-introducing-support-for-amazon-q-alongside-github-copilot-windsurf-and-more,4,0,0,0,0,14
 2026-11-01,2026-11-08,yes,/blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments,4,0,0,0,0,79

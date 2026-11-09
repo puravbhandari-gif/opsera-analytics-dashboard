@@ -129,11 +129,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "3,120",
-      "cur": 3120,
+      "value": "3,145",
+      "cur": 3145,
       "prev": 2995,
       "before": "2,995",
-      "change_pct": 4.2,
+      "change_pct": 5.0,
       "good": true,
       "min_change_pct": 10
      },
@@ -162,7 +162,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3120
+       "value": 3145
       }
      ]
     },
@@ -227,15 +227,15 @@
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "36",
-      "cur": 36,
+      "value": "37",
+      "cur": 37,
       "prev": 37,
       "before": "37",
-      "change_pct": -2.7,
-      "good": false,
+      "change_pct": 0.0,
+      "good": null,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent 23 of the 36 AI visits.",
+     "why": null,
      "do": null,
      "trend": [
       {
@@ -260,7 +260,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 36
+       "value": 37
       }
      ]
     },
@@ -339,16 +339,16 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "1,061",
-      "cur": 1061,
+      "value": "1,075",
+      "cur": 1075,
       "prev": 1319,
       "before": "1,319",
-      "change_pct": -19.6,
+      "change_pct": -18.5,
       "good": false,
       "min_change_pct": 15
      },
      "why": "COBOL Modernization visits rose to 60, up from 31.",
-     "do": "Write more like Claude Code Alternatives: 20 of 46 engaged.",
+     "do": null,
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
@@ -372,7 +372,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1061
+       "value": 1075
       }
      ]
     },
@@ -528,8 +528,7 @@
    "boxes": {
     "well": [
      "COBOL Modernization visits rose to 60, up from 31.",
-     "Unlabelled visits fell to 834, down from 1,333.",
-     "Visits from other websites rose to 210, up from 155."
+     "Unlabelled visits fell to 834, down from 1,333."
     ],
     "attention": [
      "New marketing contacts fell to 2, down from 12.",
@@ -538,7 +537,6 @@
     ],
     "do": [
      "Fix the COBOL page: only 5 of 60 visits engaged.",
-     "Write more like Claude Code Alternatives: 20 of 46 engaged.",
      "Post more like 26 Oct: 1,244 views, next best 668."
     ]
    }
@@ -739,7 +737,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3120
+       "value": 3145
       }
      ]
     },
@@ -837,7 +835,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 36
+       "value": 37
       }
      ]
     },
@@ -958,7 +956,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1061
+       "value": 1075
       }
      ]
     },
@@ -1255,7 +1253,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3120
+       "value": 3145
       }
      ]
     },
@@ -1439,7 +1437,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1061
+       "value": 1075
       }
      ]
     },
@@ -1699,11 +1697,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "30,680",
-      "cur": 30680,
+      "value": "30,705",
+      "cur": 30705,
       "prev": 23825,
       "before": "23,825",
-      "change_pct": 28.8,
+      "change_pct": 28.9,
       "good": true,
       "min_change_pct": 10
      },
@@ -1732,7 +1730,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3120
+       "value": 3145
       }
      ]
     },
@@ -1797,15 +1795,15 @@
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "254",
-      "cur": 254,
+      "value": "255",
+      "cur": 255,
       "prev": 219,
       "before": "219",
-      "change_pct": 16.0,
+      "change_pct": 16.4,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent 125 visits and Gemini 109.",
+     "why": null,
      "do": null,
      "trend": [
       {
@@ -1830,7 +1828,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 36
+       "value": 37
       }
      ]
     },
@@ -1909,11 +1907,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "8,843",
-      "cur": 8843,
+      "value": "8,857",
+      "cur": 8857,
       "prev": 5837,
       "before": "5,837",
-      "change_pct": 51.5,
+      "change_pct": 51.7,
       "good": true,
       "min_change_pct": 15
      },
@@ -1942,7 +1940,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1061
+       "value": 1075
       }
      ]
     },
@@ -2098,7 +2096,6 @@
    "boxes": {
     "well": [
      "Meetings booked rose to 19, up from 5.",
-     "Content visits grew 51.5% to 8,843.",
      "Event form fills rose to 121, up from 79."
     ],
     "attention": [

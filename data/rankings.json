@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:18+05:30",
+ "pulled_at": "2026-11-09T22:58+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai, and Google Analytics 4, opsera.ai 2026",
  "pages": [
   {
@@ -1560,7 +1560,7 @@
    "page": "/blog/claude-code-alternative",
    "group": "Blog",
    "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026 \u2014 Opsera",
-   "visits_since_new_site": 239,
+   "visits_since_new_site": 240,
    "weeks": [
     {
      "week": "2026-09-28",
@@ -2017,6 +2017,208 @@
    ]
   },
   {
+   "page": "/blog/ai-sdlc",
+   "group": "Blog",
+   "title": "What is AI SDLC? How It Transforms Software Delivery \u2014 Opsera",
+   "visits_since_new_site": 129,
+   "weeks": [
+    {
+     "week": "2026-06-08",
+     "clicks": 0,
+     "times_shown": 12,
+     "avg_spot": 5.8
+    },
+    {
+     "week": "2026-06-15",
+     "clicks": 0,
+     "times_shown": 172,
+     "avg_spot": 20.0
+    },
+    {
+     "week": "2026-06-22",
+     "clicks": 2,
+     "times_shown": 72,
+     "avg_spot": 16.5
+    },
+    {
+     "week": "2026-06-29",
+     "clicks": 1,
+     "times_shown": 26,
+     "avg_spot": 12.1
+    },
+    {
+     "week": "2026-07-06",
+     "clicks": 1,
+     "times_shown": 22,
+     "avg_spot": 5.8
+    },
+    {
+     "week": "2026-07-13",
+     "clicks": 4,
+     "times_shown": 109,
+     "avg_spot": 8.4
+    },
+    {
+     "week": "2026-07-20",
+     "clicks": 9,
+     "times_shown": 926,
+     "avg_spot": 8.1
+    },
+    {
+     "week": "2026-07-27",
+     "clicks": 4,
+     "times_shown": 889,
+     "avg_spot": 8.8
+    },
+    {
+     "week": "2026-08-03",
+     "clicks": 7,
+     "times_shown": 718,
+     "avg_spot": 9.1
+    },
+    {
+     "week": "2026-08-10",
+     "clicks": 15,
+     "times_shown": 1097,
+     "avg_spot": 8.4
+    },
+    {
+     "week": "2026-08-17",
+     "clicks": 7,
+     "times_shown": 1128,
+     "avg_spot": 8.0
+    },
+    {
+     "week": "2026-08-24",
+     "clicks": 14,
+     "times_shown": 1750,
+     "avg_spot": 8.7
+    },
+    {
+     "week": "2026-08-31",
+     "clicks": 8,
+     "times_shown": 1501,
+     "avg_spot": 6.7
+    },
+    {
+     "week": "2026-09-07",
+     "clicks": 14,
+     "times_shown": 1191,
+     "avg_spot": 7.2
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 7,
+     "times_shown": 1006,
+     "avg_spot": 6.8
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 24,
+     "times_shown": 2019,
+     "avg_spot": 5.3
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 11,
+     "times_shown": 1686,
+     "avg_spot": 5.2
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 7,
+     "times_shown": 936,
+     "avg_spot": 7.5
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 7,
+     "times_shown": 882,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 5,
+     "times_shown": 981,
+     "avg_spot": 7.6
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 13,
+     "times_shown": 1831,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 14,
+     "times_shown": 2483,
+     "avg_spot": 7.9
+    }
+   ],
+   "searches": [
+    {
+     "search": "ai sdlc",
+     "clicks": 32,
+     "times_shown": 4248,
+     "avg_spot": 7.1
+    },
+    {
+     "search": "what is ai sdlc",
+     "clicks": 5,
+     "times_shown": 921,
+     "avg_spot": 8.3
+    },
+    {
+     "search": "aisdlc",
+     "clicks": 4,
+     "times_shown": 781,
+     "avg_spot": 6.7
+    },
+    {
+     "search": "ai-sdlc",
+     "clicks": 4,
+     "times_shown": 601,
+     "avg_spot": 7.7
+    },
+    {
+     "search": "sdlc ai",
+     "clicks": 2,
+     "times_shown": 419,
+     "avg_spot": 6.9
+    },
+    {
+     "search": "ai sldc",
+     "clicks": 2,
+     "times_shown": 155,
+     "avg_spot": 6.5
+    },
+    {
+     "search": "ai sdlc framework",
+     "clicks": 2,
+     "times_shown": 103,
+     "avg_spot": 7.2
+    },
+    {
+     "search": "ai sdlc workflow",
+     "clicks": 2,
+     "times_shown": 101,
+     "avg_spot": 7.7
+    },
+    {
+     "search": "ai sdlc meaning",
+     "clicks": 1,
+     "times_shown": 624,
+     "avg_spot": 7.8
+    },
+    {
+     "search": "ai in sdlc",
+     "clicks": 1,
+     "times_shown": 50,
+     "avg_spot": 10.4
+    }
+   ]
+  },
+  {
    "page": "/blog/what-is-agentic-devops",
    "group": "Blog",
    "title": "What is Agentic DevOps? \u2014 Opsera",
@@ -2275,208 +2477,6 @@
      "clicks": 0,
      "times_shown": 429,
      "avg_spot": 2.1
-    }
-   ]
-  },
-  {
-   "page": "/blog/ai-sdlc",
-   "group": "Blog",
-   "title": "What is AI SDLC? How It Transforms Software Delivery \u2014 Opsera",
-   "visits_since_new_site": 128,
-   "weeks": [
-    {
-     "week": "2026-06-08",
-     "clicks": 0,
-     "times_shown": 12,
-     "avg_spot": 5.8
-    },
-    {
-     "week": "2026-06-15",
-     "clicks": 0,
-     "times_shown": 172,
-     "avg_spot": 20.0
-    },
-    {
-     "week": "2026-06-22",
-     "clicks": 2,
-     "times_shown": 72,
-     "avg_spot": 16.5
-    },
-    {
-     "week": "2026-06-29",
-     "clicks": 1,
-     "times_shown": 26,
-     "avg_spot": 12.1
-    },
-    {
-     "week": "2026-07-06",
-     "clicks": 1,
-     "times_shown": 22,
-     "avg_spot": 5.8
-    },
-    {
-     "week": "2026-07-13",
-     "clicks": 4,
-     "times_shown": 109,
-     "avg_spot": 8.4
-    },
-    {
-     "week": "2026-07-20",
-     "clicks": 9,
-     "times_shown": 926,
-     "avg_spot": 8.1
-    },
-    {
-     "week": "2026-07-27",
-     "clicks": 4,
-     "times_shown": 889,
-     "avg_spot": 8.8
-    },
-    {
-     "week": "2026-08-03",
-     "clicks": 7,
-     "times_shown": 718,
-     "avg_spot": 9.1
-    },
-    {
-     "week": "2026-08-10",
-     "clicks": 15,
-     "times_shown": 1097,
-     "avg_spot": 8.4
-    },
-    {
-     "week": "2026-08-17",
-     "clicks": 7,
-     "times_shown": 1128,
-     "avg_spot": 8.0
-    },
-    {
-     "week": "2026-08-24",
-     "clicks": 14,
-     "times_shown": 1750,
-     "avg_spot": 8.7
-    },
-    {
-     "week": "2026-08-31",
-     "clicks": 8,
-     "times_shown": 1501,
-     "avg_spot": 6.7
-    },
-    {
-     "week": "2026-09-07",
-     "clicks": 14,
-     "times_shown": 1191,
-     "avg_spot": 7.2
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 7,
-     "times_shown": 1006,
-     "avg_spot": 6.8
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 24,
-     "times_shown": 2019,
-     "avg_spot": 5.3
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 11,
-     "times_shown": 1686,
-     "avg_spot": 5.2
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 7,
-     "times_shown": 936,
-     "avg_spot": 7.5
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 7,
-     "times_shown": 882,
-     "avg_spot": 7.7
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 5,
-     "times_shown": 981,
-     "avg_spot": 7.6
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 13,
-     "times_shown": 1831,
-     "avg_spot": 7.7
-    },
-    {
-     "week": "2026-11-02",
-     "clicks": 14,
-     "times_shown": 2483,
-     "avg_spot": 7.9
-    }
-   ],
-   "searches": [
-    {
-     "search": "ai sdlc",
-     "clicks": 32,
-     "times_shown": 4248,
-     "avg_spot": 7.1
-    },
-    {
-     "search": "what is ai sdlc",
-     "clicks": 5,
-     "times_shown": 921,
-     "avg_spot": 8.3
-    },
-    {
-     "search": "aisdlc",
-     "clicks": 4,
-     "times_shown": 781,
-     "avg_spot": 6.7
-    },
-    {
-     "search": "ai-sdlc",
-     "clicks": 4,
-     "times_shown": 601,
-     "avg_spot": 7.7
-    },
-    {
-     "search": "sdlc ai",
-     "clicks": 2,
-     "times_shown": 419,
-     "avg_spot": 6.9
-    },
-    {
-     "search": "ai sldc",
-     "clicks": 2,
-     "times_shown": 155,
-     "avg_spot": 6.5
-    },
-    {
-     "search": "ai sdlc framework",
-     "clicks": 2,
-     "times_shown": 103,
-     "avg_spot": 7.2
-    },
-    {
-     "search": "ai sdlc workflow",
-     "clicks": 2,
-     "times_shown": 101,
-     "avg_spot": 7.7
-    },
-    {
-     "search": "ai sdlc meaning",
-     "clicks": 1,
-     "times_shown": 624,
-     "avg_spot": 7.8
-    },
-    {
-     "search": "ai in sdlc",
-     "clicks": 1,
-     "times_shown": 50,
-     "avg_spot": 10.4
     }
    ]
   },
@@ -2870,7 +2870,7 @@
    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
    "group": "Resource",
    "title": "AI Coding Impact 2026 Benchmark Report \u2014 Opsera",
-   "visits_since_new_site": 108,
+   "visits_since_new_site": 109,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -3840,7 +3840,7 @@
    "page": "/blog/legacy-code-modernization",
    "group": "Blog",
    "title": "Legacy Code Modernization: AI-Powered Migration \u2014 Opsera",
-   "visits_since_new_site": 88,
+   "visits_since_new_site": 89,
    "weeks": [
     {
      "week": "2026-08-31",

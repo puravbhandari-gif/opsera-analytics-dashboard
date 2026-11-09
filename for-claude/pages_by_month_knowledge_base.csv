@@ -280,7 +280,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,1,0,0,0,0,81
 2026-10-01,2026-10-31,no,/knowledge-base/value-stream-management/flow-efficiency-metrics,1,0,0,0,0,184
 2026-10-01,2026-10-31,no,/knowledge-base/value-stream-management/time-to-value,1,0,0,0,0,111
-2026-11-01,2026-11-08,yes,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,29,8,0,0,10,1130
+2026-11-01,2026-11-08,yes,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,35,8,0,0,10,1130
 2026-11-01,2026-11-08,yes,/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,9,1,0,0,0,97
 2026-11-01,2026-11-08,yes,/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer,8,2,0,0,1,390
 2026-11-01,2026-11-08,yes,/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide,8,0,0,0,0,61

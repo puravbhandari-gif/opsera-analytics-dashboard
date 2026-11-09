@@ -2,7 +2,7 @@
  "source": "HubSpot",
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:22+05:30",
+ "pulled_at": "2026-11-09T23:02+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -3103,8 +3103,21 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 873,
+ "meetings_all_calendar": 874,
  "deals_weekly": [
+  {
+   "start": "2026-04-27",
+   "end": "2026-05-03",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 0,
+   "open_amount": 0.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 1,
+   "lost_amount": 100000.0
+  },
   {
    "start": "2026-05-04",
    "end": "2026-05-10",
@@ -3114,7 +3127,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-06-08",
@@ -3125,7 +3140,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-08-10",
@@ -3136,7 +3153,22 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
+  },
+  {
+   "start": "2026-09-07",
+   "end": "2026-09-13",
+   "channel": "search",
+   "demo": false,
+   "tool": null,
+   "open_count": 0,
+   "open_amount": 0.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 1,
+   "lost_amount": 30000.0
   },
   {
    "start": "2026-10-05",
@@ -3147,10 +3179,25 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   }
  ],
  "deals_monthly": [
+  {
+   "start": "2026-04-01",
+   "end": "2026-04-30",
+   "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 0,
+   "open_amount": 0.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 1,
+   "lost_amount": 100000.0
+  },
   {
    "start": "2026-05-01",
    "end": "2026-05-31",
@@ -3160,7 +3207,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-06-01",
@@ -3171,7 +3220,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-08-01",
@@ -3182,7 +3233,22 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
+  },
+  {
+   "start": "2026-09-01",
+   "end": "2026-09-30",
+   "channel": "search",
+   "demo": false,
+   "tool": null,
+   "open_count": 0,
+   "open_amount": 0.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 1,
+   "lost_amount": 30000.0
   },
   {
    "start": "2026-10-01",
@@ -3193,10 +3259,25 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   }
  ],
  "deals_quarters": [
+  {
+   "start": "2026-08-09",
+   "end": "2026-11-08",
+   "channel": "search",
+   "demo": false,
+   "tool": null,
+   "open_count": 0,
+   "open_amount": 0.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 1,
+   "lost_amount": 30000.0
+  },
   {
    "start": "2026-08-09",
    "end": "2026-11-08",
@@ -3206,7 +3287,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-08-09",
@@ -3217,7 +3300,9 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   },
   {
    "start": "2026-05-09",
@@ -3228,17 +3313,22 @@
    "open_count": 1,
    "open_amount": 150000.0,
    "won_count": 0,
-   "won_amount": 0.0
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
   }
  ],
  "deals_total": {
   "open_count": 4,
   "open_amount": 600000.0,
   "won_count": 0,
-  "won_amount": 0
+  "won_amount": 0,
+  "lost_count": 2,
+  "lost_amount": 130000.0
  },
  "deals_lost": {
-  "count": 2
+  "count": 2,
+  "amount": 130000.0
  },
  "deals_by_stage": [
   [
@@ -3255,6 +3345,16 @@
   "amount": 4111758.0
  },
  "deal_lines": [
+  {
+   "month": "2026-04",
+   "amount": 100000,
+   "status": "Lost",
+   "stage": "8 ClosedLost",
+   "came_from": "Direct",
+   "first_page": "/",
+   "first_form": "Schedule a Demo",
+   "product": "BrickForge"
+  },
   {
    "month": "2026-05",
    "amount": 150000,
@@ -3284,6 +3384,16 @@
    "first_page": "/",
    "first_form": "Schedule a Demo",
    "product": "Copilot"
+  },
+  {
+   "month": "2026-09",
+   "amount": 30000,
+   "status": "Lost",
+   "stage": "8 ClosedLost",
+   "came_from": "Google search",
+   "first_page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+   "first_form": "Opsera Named a Leader in the 2026 Gartner\u00ae Magic Quadrant\u2122 for Developer Productivity Insight Platforms",
+   "product": "Unified Insights, Pipelines"
   },
   {
    "month": "2026-10",
@@ -3419,7 +3529,7 @@
    "attended": null,
    "meetings_after": 24,
    "people_with_meeting": 8,
-   "meetings_upcoming": 6,
+   "meetings_upcoming": 5,
    "sf_campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
    "sf_members": 451,
    "sf_meetings": 23,
@@ -3559,7 +3669,7 @@
    "start": null,
    "contactFirstTouch": 4,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 785,
+   "influencedContacts": 786,
    "influencedContacts_also_flutter_guests": 10
   },
   {
@@ -9448,7 +9558,7 @@
     "subject": "Legacy estate modernization in the AI era.",
     "kind": "BATCH_EMAIL",
     "sends": 13951,
-    "opens": 386,
+    "opens": 388,
     "clicks": 64,
     "open_rate_pct": 2.8,
     "click_rate_pct": 0.5,
@@ -9469,8 +9579,8 @@
     "subject": "{{ contact.firstname }} Patch PHP2Shell today.",
     "kind": "BATCH_EMAIL",
     "sends": 21204,
-    "opens": 1034,
-    "clicks": 137,
+    "opens": 1037,
+    "clicks": 138,
     "open_rate_pct": 4.9,
     "click_rate_pct": 0.7,
     "campaign": "",
@@ -9597,6 +9707,12 @@
  },
  "campaign_deals": [
   {
+   "date": "2026-04-30",
+   "campaign": "DG-Webinar-DevOpsHuddle-Ep16-03-14",
+   "status": "Lost",
+   "amount": 100000
+  },
+  {
    "date": "2026-05-08",
    "campaign": "",
    "status": "Open",
@@ -9615,6 +9731,12 @@
    "amount": 150000
   },
   {
+   "date": "2026-09-09",
+   "campaign": "",
+   "status": "Lost",
+   "amount": 30000
+  },
+  {
    "date": "2026-10-07",
    "campaign": "",
    "status": "Open",
@@ -9628,6 +9750,45 @@
    "last": true
   },
   "rows": [
+   {
+    "date": "2026-04-01",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 67500,
+    "product": "Not named in the deal",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000YPHy9YAH",
+    "first_campaign": "701UR00000YPHy9YAH",
+    "last_campaign": "701UR00000YPHy9YAH",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 5650,
+    "product": "Unified Insights",
+    "lead_source": "Events",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
+    "date": "2026-04-07",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000fxXLMYA2",
+    "first_campaign": "701UR00000fxXLMYA2",
+    "last_campaign": "701UR00000fxXLMYA2",
+    "bucket": "Marketing sourced"
+   },
    {
     "date": "2026-04-08",
     "status": "Won",
@@ -9665,6 +9826,19 @@
     "primary_campaign": "701UR00000nMDP2YAO",
     "first_campaign": "701UR00000nMDP2YAO",
     "last_campaign": "701UR00000nMDP2YAO",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-24",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 125000,
+    "product": "Forge, Unified Insights",
+    "lead_source": "cognism",
+    "primary_campaign": "701UR00000GQv9WYAT",
+    "first_campaign": "701UR00000GQv9WYAT",
+    "last_campaign": "701UR00000GQv9WYAT",
     "bucket": "Marketing sourced"
    },
    {
@@ -9717,6 +9891,19 @@
     "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "701UR00000mlOjCYAU",
     "last_campaign": "701UR00000mlOjCYAU",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-30",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Contact Us / Demo Request",
+    "primary_campaign": "7014Q000002aJSjQAM",
+    "first_campaign": "7014Q000002aJSjQAM",
+    "last_campaign": "7014Q000002aJSjQAM",
     "bucket": "Marketing sourced"
    },
    {
@@ -9824,6 +10011,84 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-06-11",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Events",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
+    "date": "2026-06-11",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-07",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-07",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "cognism",
+    "primary_campaign": "701UR00000QP6jCYAT",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 125000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
     "date": "2026-07-10",
     "status": "Open",
     "stage": "2 Demo",
@@ -9838,12 +10103,77 @@
    },
    {
     "date": "2026-07-13",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000sUXFaYAO",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-13",
     "status": "Open",
     "stage": "2 Demo",
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-16",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000rYkErYAK",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-22",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000r6l0wYAA",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-28",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-28",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Purchased List",
     "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
@@ -9876,6 +10206,19 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-08-18",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
     "date": "2026-09-01",
     "status": "Open",
     "stage": "1 Meeting",
@@ -9887,6 +10230,45 @@
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-09",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 30000,
+    "product": "Unified Insights, Pipelines",
+    "lead_source": "Marketing",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
+    "date": "2026-09-11",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "Not named in the deal",
+    "lead_source": "Marketing",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
+   },
+   {
+    "date": "2026-09-15",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Marketing",
+    "primary_campaign": "",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Sales only"
    },
    {
     "date": "2026-09-23",
@@ -9936,6 +10318,19 @@
     "product": "Unified Insights",
     "lead_source": "Marketing",
     "primary_campaign": "701UR00000oPGjAYAW",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-07",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 0,
+    "product": "Forge",
+    "lead_source": "Zoominfo",
+    "primary_campaign": "701UR00000QjG85YAF",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10045,7 +10440,7 @@
     ]
    },
    {
-    "people": 67115,
+    "people": 67117,
     "kind": "Active",
     "updated_on": "2026-07-17",
     "words": [
@@ -10053,7 +10448,7 @@
     ]
    },
    {
-    "people": 63209,
+    "people": 63211,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -10109,7 +10504,7 @@
     ]
    },
    {
-    "people": 46170,
+    "people": 46171,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10131,7 +10526,7 @@
     ]
    },
    {
-    "people": 33647,
+    "people": 33648,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10163,7 +10558,7 @@
     ]
    },
    {
-    "people": 25036,
+    "people": 25107,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -10188,7 +10583,7 @@
     ]
    },
    {
-    "people": 19748,
+    "people": 19750,
     "kind": "Active",
     "updated_on": "2026-08-17",
     "words": [
@@ -10306,7 +10701,7 @@
     ]
    },
    {
-    "people": 9584,
+    "people": 9586,
     "kind": "Active",
     "updated_on": "2026-05-29",
     "words": [
@@ -10418,7 +10813,7 @@
     ]
    },
    {
-    "people": 6461,
+    "people": 6463,
     "kind": "Active",
     "updated_on": "2026-11-03",
     "words": [
@@ -10430,7 +10825,7 @@
     ]
    },
    {
-    "people": 6118,
+    "people": 6119,
     "kind": "Active",
     "updated_on": "2026-09-30",
     "words": [
@@ -10535,7 +10930,7 @@
     ]
    },
    {
-    "people": 4779,
+    "people": 4783,
     "kind": "Active",
     "updated_on": "2026-06-22",
     "words": [
@@ -10814,7 +11209,7 @@
     ]
    },
    {
-    "people": 2530,
+    "people": 2531,
     "kind": "Active",
     "updated_on": "2026-06-12",
     "words": [
@@ -10931,7 +11326,7 @@
     ]
    },
    {
-    "people": 2345,
+    "people": 2348,
     "kind": "Active",
     "updated_on": "2026-08-21",
     "words": [
@@ -11078,6 +11473,31 @@
     ]
    },
    {
+    "people": 1509,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "294fc75c",
+     "a229d2ec",
+     "d22f9095",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 1509,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
+    ]
+   },
+   {
     "people": 1459,
     "kind": "Active",
     "updated_on": "2026-04-08",
@@ -11096,31 +11516,6 @@
     "words": [
      "c462a115",
      "5955feaa"
-    ]
-   },
-   {
-    "people": 1433,
-    "kind": "Active",
-    "updated_on": "2026-06-24",
-    "words": [
-     "4bf4922d",
-     "294fc75c",
-     "a229d2ec",
-     "d22f9095",
-     "8c6e32a8"
-    ]
-   },
-   {
-    "people": 1433,
-    "kind": "Active",
-    "updated_on": "2026-07-06",
-    "words": [
-     "4bf4922d",
-     "8c6e32a8",
-     "0c4afe69",
-     "63e1d819",
-     "a229d2ec",
-     "d472dc59"
     ]
    },
    {
@@ -11211,7 +11606,7 @@
     ]
    },
    {
-    "people": 1154,
+    "people": 1152,
     "kind": "Active",
     "updated_on": "2026-04-08",
     "words": [
@@ -11268,7 +11663,7 @@
     ]
    },
    {
-    "people": 1078,
+    "people": 1077,
     "kind": "Active",
     "updated_on": "2026-06-02",
     "words": [
@@ -11602,6 +11997,19 @@
     ]
    },
    {
+    "people": 491,
+    "kind": "Active",
+    "updated_on": "2026-09-08",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5",
+     "29b19c8a",
+     "06d73a77"
+    ]
+   },
+   {
     "people": 489,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -11620,6 +12028,16 @@
      "0e8eae33",
      "e0946331",
      "205a0a01"
+    ]
+   },
+   {
+    "people": 480,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "8c6e32a8",
+     "3ff21de3",
+     "f5674cd4"
     ]
    },
    {
@@ -11725,19 +12143,6 @@
     ]
    },
    {
-    "people": 416,
-    "kind": "Active",
-    "updated_on": "2026-09-08",
-    "words": [
-     "8c6e32a8",
-     "b6f40207",
-     "fcefccca",
-     "d872e2a5",
-     "29b19c8a",
-     "06d73a77"
-    ]
-   },
-   {
     "people": 407,
     "kind": "Active",
     "updated_on": "2026-04-03",
@@ -11758,16 +12163,6 @@
      "89b29c10",
      "e548412c",
      "ac8c5c51"
-    ]
-   },
-   {
-    "people": 405,
-    "kind": "Active",
-    "updated_on": "2026-08-19",
-    "words": [
-     "8c6e32a8",
-     "3ff21de3",
-     "f5674cd4"
     ]
    },
    {
@@ -12336,7 +12731,7 @@
     ]
    },
    {
-    "people": 187,
+    "people": 188,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -12445,6 +12840,17 @@
     ]
    },
    {
+    "people": 160,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "6d48538c"
+    ]
+   },
+   {
     "people": 159,
     "kind": "Active",
     "updated_on": "2026-06-13",
@@ -12453,17 +12859,6 @@
      "99b3eedb",
      "c708c45c",
      "a229d2ec"
-    ]
-   },
-   {
-    "people": 158,
-    "kind": "Active",
-    "updated_on": "2026-08-21",
-    "words": [
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "6d48538c"
     ]
    },
    {
@@ -12510,7 +12905,7 @@
     ]
    },
    {
-    "people": 143,
+    "people": 144,
     "kind": "Active",
     "updated_on": "2026-07-06",
     "words": [
@@ -14017,6 +14412,16 @@
     ]
    },
    {
+    "people": 6,
+    "kind": "Active",
+    "updated_on": "2026-04-24",
+    "words": [
+     "29b19c8a",
+     "06d73a77",
+     "7d1fb3a2"
+    ]
+   },
+   {
     "people": 5,
     "kind": "Active",
     "updated_on": "2026-09-03",
@@ -14058,16 +14463,6 @@
      "b6f40207",
      "fcefccca",
      "d872e2a5"
-    ]
-   },
-   {
-    "people": 5,
-    "kind": "Active",
-    "updated_on": "2026-04-24",
-    "words": [
-     "29b19c8a",
-     "06d73a77",
-     "7d1fb3a2"
     ]
    },
    {
@@ -14204,6 +14599,15 @@
    {
     "people": 3,
     "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "31ed74bb",
+     "82416065"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
     "updated_on": "2026-06-30",
     "words": [
      "9a796d00",
@@ -14219,6 +14623,25 @@
      "416aec5d",
      "e367307e",
      "c09344de"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-08-27",
+    "words": [
+     "31ed74bb",
+     "420372be"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-07-01",
+    "words": [
+     "0746795c",
+     "7a968ed4",
+     "420372be"
     ]
    },
    {
@@ -14307,15 +14730,6 @@
    {
     "people": 1,
     "kind": "Active",
-    "updated_on": "2026-06-22",
-    "words": [
-     "31ed74bb",
-     "82416065"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
     "updated_on": "2026-06-11",
     "words": [
      "9c7f8847",
@@ -14333,15 +14747,6 @@
      "d67a0605",
      "6e6f1dc1",
      "8a8753c7"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
-    "updated_on": "2026-08-27",
-    "words": [
-     "31ed74bb",
-     "420372be"
     ]
    },
    {
@@ -14367,16 +14772,6 @@
      "7a968ed4",
      "0c4afe69",
      "bed023b3"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
-    "updated_on": "2026-07-01",
-    "words": [
-     "0746795c",
-     "7a968ed4",
-     "420372be"
     ]
    },
    {

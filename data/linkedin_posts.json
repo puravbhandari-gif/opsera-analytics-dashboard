@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-11-09T08:54+00:00",
+ "pulled_at": "2026-11-09T17:34+00:00",
  "posts": [
   {
    "account": "company",
@@ -453,6 +453,18 @@
     {
      "link": "https://lnkd.in/dvggqaqP",
      "lands_on": "/blog/measure-ai-roi-software-development"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_harness-engineering-is-everything-around-activity-7525603851215859712-9Yka",
+   "posted_utc": "2026-11-09T17:02:57.088Z",
+   "date_pacific": "2026-11-09",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dHQCZYxA",
+     "lands_on": "/blog/harness-engineering"
     }
    ]
   }
