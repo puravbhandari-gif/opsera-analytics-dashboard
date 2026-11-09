@@ -412,7 +412,7 @@ def main():
               f"Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to {ga_last}), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out")
     if (DATA / "salesforce_pipeline.json").exists():
         sf = json.loads((DATA / "salesforce_pipeline.json").read_text())
-        made = f"Salesforce opportunities created {sf['opportunities_from']} to {sf['opportunities_to']}, exported {', '.join(sorted(set(sf['exports'].values())))}"
+        made = f"Salesforce opportunities created {sf['opportunities_from']} to {sf['opportunities_to']}, exported {', '.join(sorted({d for v in sf['exports'].values() for d in (v if isinstance(v, list) else [v])}))}"
         write("marketing_pipeline_by_month", ["month", "fiscal_quarter", "sourced_deals", "sourced_value_usd", "influenced_deals", "influenced_value_usd", "booking_agency_deals", "booking_agency_value_usd", "no_contact_linked_deals"],
               [[m["month"], m["quarter"], m["sourced_deals"], m["sourced_value"], m["influenced_deals"], m["influenced_value"], m.get("agency_deals", 0), m.get("agency_value", 0),
                 m.get("nocontact_deals", 0)] for m in sf["months"]],

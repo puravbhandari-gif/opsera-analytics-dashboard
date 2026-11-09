@@ -8,7 +8,7 @@
    "well": [
     "COBOL Modernization visits rose to 60, up from 31.",
     "Unlabelled visits fell to 834, down from 1,333.",
-    "Visits from other websites rose to 210, up from 155."
+    "Visits from other websites rose to 211, up from 155."
    ],
    "attention": [
     "New marketing contacts fell to 2, down from 12.",
@@ -17,7 +17,7 @@
    ],
    "do": [
     "Fix the COBOL page: only 5 of 60 visits engaged.",
-    "Write more like Claude Code Alternatives: 20 of 46 engaged.",
+    "Write more like Claude Code Alternatives: 21 of 47 engaged.",
     "Post more like 26 Oct: 1,244 views, next best 668."
    ]
   },
@@ -61,7 +61,7 @@
     "period": "2 to 8 Nov 2026",
     "period_before": "26 Oct to 1 Nov 2026",
     "main": "ai_visits",
-    "why": "ChatGPT sent 23 of the 36 AI visits.",
+    "why": "ChatGPT sent 23 of the 37 AI visits.",
     "do": ""
    },
    "campaigns": {
@@ -83,7 +83,7 @@
     "period_before": "26 Oct to 1 Nov 2026",
     "main": "content_visits",
     "why": "COBOL Modernization visits rose to 60, up from 31.",
-    "do": "Write more like Claude Code Alternatives: 20 of 46 engaged."
+    "do": "Write more like Claude Code Alternatives: 21 of 47 engaged."
    },
    "linkedin": {
     "period": "26 Oct to 1 Nov 2026",
@@ -214,7 +214,7 @@
   "boxes": {
    "well": [
     "Meetings booked rose to 19, up from 5.",
-    "Content visits grew 51.5% to 8,843.",
+    "Content visits grew 51.7% to 8,857.",
     "Event form fills rose to 121, up from 79."
    ],
    "attention": [
@@ -268,7 +268,7 @@
     "period": "9 Aug to 8 Nov 2026",
     "period_before": "9 May to 8 Aug 2026",
     "main": "ai_visits",
-    "why": "ChatGPT sent 125 visits and Gemini 109.",
+    "why": "ChatGPT sent 125 visits and Gemini 110.",
     "do": ""
    },
    "campaigns": {

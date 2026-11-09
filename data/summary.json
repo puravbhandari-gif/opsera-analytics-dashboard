@@ -235,7 +235,7 @@
       "good": null,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "ChatGPT sent 23 of the 37 AI visits.",
      "do": null,
      "trend": [
       {
@@ -348,7 +348,7 @@
       "min_change_pct": 15
      },
      "why": "COBOL Modernization visits rose to 60, up from 31.",
-     "do": null,
+     "do": "Write more like Claude Code Alternatives: 21 of 47 engaged.",
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
@@ -528,7 +528,8 @@
    "boxes": {
     "well": [
      "COBOL Modernization visits rose to 60, up from 31.",
-     "Unlabelled visits fell to 834, down from 1,333."
+     "Unlabelled visits fell to 834, down from 1,333.",
+     "Visits from other websites rose to 211, up from 155."
     ],
     "attention": [
      "New marketing contacts fell to 2, down from 12.",
@@ -537,6 +538,7 @@
     ],
     "do": [
      "Fix the COBOL page: only 5 of 60 visits engaged.",
+     "Write more like Claude Code Alternatives: 21 of 47 engaged.",
      "Post more like 26 Oct: 1,244 views, next best 668."
     ]
    }
@@ -1803,7 +1805,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "ChatGPT sent 125 visits and Gemini 110.",
      "do": null,
      "trend": [
       {
@@ -2096,6 +2098,7 @@
    "boxes": {
     "well": [
      "Meetings booked rose to 19, up from 5.",
+     "Content visits grew 51.7% to 8,857.",
      "Event form fills rose to 121, up from 79."
     ],
     "attention": [
