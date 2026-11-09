@@ -1,17 +1,17 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T11:43+05:30",
+ "pulled_at": "2026-11-09T14:01+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
-  "sessions": 68468,
-  "totalUsers": 51186,
+  "sessions": 68471,
+  "totalUsers": 51210,
   "engagedSessions": 28225
  },
  "split_sums": {
-  "daily": 67428,
-  "channels": 67901
+  "daily": 67462,
+  "channels": 67909
  },
  "daily": [
   {
@@ -1342,25 +1342,25 @@
   },
   {
    "date": "2026-11-08",
-   "sessions": 193,
-   "totalUsers": 188,
-   "engagedSessions": 40
+   "sessions": 227,
+   "totalUsers": 219,
+   "engagedSessions": 42
   }
  ],
  "channels": [
   {
    "sessionDefaultChannelGroup": "Direct",
-   "sessions": 25160,
-   "totalUsers": 22421,
+   "sessions": 25168,
+   "totalUsers": 22439,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.39979900814785
+   "averageSessionDuration": 68.38388019886365
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 24080,
-   "totalUsers": 14983,
+   "totalUsers": 14984,
    "engagedSessions": 12279,
-   "averageSessionDuration": 169.99022120332225
+   "averageSessionDuration": 169.99149494348006
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -1952,6 +1952,12 @@
    "engagedSessions": 90
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 155,
+   "engagedSessions": 14
+  },
+  {
    "date": "2026-05-07",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 153,
@@ -2316,12 +2322,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 129,
    "engagedSessions": 59
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 129,
-   "engagedSessions": 13
   },
   {
    "date": "2026-04-28",
@@ -3908,6 +3908,12 @@
    "engagedSessions": 15
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 46,
+   "engagedSessions": 23
+  },
+  {
    "date": "2026-05-03",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 45,
@@ -4122,12 +4128,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 38,
    "engagedSessions": 16
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 38,
-   "engagedSessions": 22
   },
   {
    "date": "2026-04-01",
@@ -10717,19 +10717,19 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
-   "sessions": 25160,
-   "totalUsers": 22421,
+   "sessions": 25168,
+   "totalUsers": 22439,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.39979900814785
+   "averageSessionDuration": 68.38388019886365
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessionSource": "google",
    "sessionMedium": "organic",
    "sessions": 22699,
-   "totalUsers": 14219,
+   "totalUsers": 14222,
    "engagedSessions": 11602,
-   "averageSessionDuration": 170.13365540944534
+   "averageSessionDuration": 170.13500664355257
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -15568,11 +15568,11 @@
  "pages": [
   {
    "page": "/",
-   "views": 21725
+   "views": 21742
   },
   {
    "page": "/about",
-   "views": 3262
+   "views": 3263
   },
   {
    "page": "/job-application",
@@ -15612,7 +15612,7 @@
   },
   {
    "page": "/blog",
-   "views": 1105
+   "views": 1108
   },
   {
    "page": "/careers/devops-evangelist",
@@ -15752,7 +15752,7 @@
   },
   {
    "page": "/blog/ai-sdlc",
-   "views": 361
+   "views": 362
   },
   {
    "page": "/solutions/salesforce-devops-platform",
@@ -15764,7 +15764,7 @@
   },
   {
    "page": "/platform/hummingbird-ai",
-   "views": 308
+   "views": 310
   },
   {
    "page": "/blog/dora-2025-report-ai-software-development",
@@ -15864,7 +15864,7 @@
   },
   {
    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
-   "views": 208
+   "views": 209
   },
   {
    "page": "/blog/how-to-measure-code-churn",
@@ -15996,7 +15996,7 @@
   },
   {
    "page": "/blog/software-factory-model",
-   "views": 117
+   "views": 118
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
@@ -16295,12 +16295,12 @@
    "views": 51
   },
   {
-   "page": "/blog/reducing-mean-time-to-recovery-mttr",
+   "page": "/blog/software-factory-pattern",
    "views": 50
   },
   {
-   "page": "/blog/software-factory-pattern",
-   "views": 49
+   "page": "/blog/reducing-mean-time-to-recovery-mttr",
+   "views": 50
   },
   {
    "page": "/solutions/gitcustodian",
@@ -16515,6 +16515,10 @@
    "views": 32
   },
   {
+   "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
+   "views": 32
+  },
+  {
    "page": "/blog/how-honeywell-transformed-their-devops-and-you-can-too",
    "views": 32
   },
@@ -16524,6 +16528,10 @@
   },
   {
    "page": "/blog/improving-salesforce-devops-efficiency",
+   "views": 32
+  },
+  {
+   "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
    "views": 32
   },
   {
@@ -16537,10 +16545,6 @@
   {
    "page": "/ecosystem/terrascan",
    "views": 32
-  },
-  {
-   "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
-   "views": 31
   },
   {
    "page": "/blog/opsera-expands-ai-impact-introducing-support-for-amazon-q-alongside-github-copilot-windsurf-and-more",
@@ -16557,10 +16561,6 @@
   {
    "page": "/knowledge-base/incident-analysis/incident-frequency",
    "views": 31
-  },
-  {
-   "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
-   "views": 30
   },
   {
    "page": "/blog/claude-mythos-vulnerability",
@@ -16707,6 +16707,10 @@
    "views": 26
   },
   {
+   "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
+   "views": 26
+  },
+  {
    "page": "/blog/value-stream-management-a-guide-to-getting-more-out-of-your-software-delivery",
    "views": 26
   },
@@ -16739,10 +16743,6 @@
    "views": 25
   },
   {
-   "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
-   "views": 25
-  },
-  {
    "page": "/ecosystem/appdynamics",
    "views": 25
   },
@@ -16772,6 +16772,10 @@
   },
   {
    "page": "/resources/comparison-guides/opsera-vs-cloudbees",
+   "views": 25
+  },
+  {
+   "page": "/ecosystem/datadog",
    "views": 25
   },
   {
@@ -16808,10 +16812,6 @@
   },
   {
    "page": "/customer-stories/reflektion",
-   "views": 23
-  },
-  {
-   "page": "/ecosystem/datadog",
    "views": 23
   },
   {
@@ -17035,6 +17035,10 @@
    "views": 18
   },
   {
+   "page": "/customer-stories/keywest-networks",
+   "views": 18
+  },
+  {
    "page": "/knowledge-base/category/ci-cd-platform-analytics",
    "views": 18
   },
@@ -17057,10 +17061,6 @@
   {
    "page": "/solutions/platform-engineering",
    "views": 18
-  },
-  {
-   "page": "/customer-stories/keywest-networks",
-   "views": 17
   },
   {
    "page": "/knowledge-base/delivery-flow-performance/flow-efficiency-metrics",
@@ -43721,14 +43721,14 @@
   {
    "date": "2026-11-08",
    "channel": "all",
-   "visits": 193,
+   "visits": 227,
    "demo_page": 4,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "direct",
-   "visits": 129,
+   "visits": 155,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -43749,7 +43749,7 @@
   {
    "date": "2026-11-08",
    "channel": "search",
-   "visits": 38,
+   "visits": 46,
    "demo_page": 2,
    "demo_form": 0
   }
@@ -47292,8 +47292,34 @@
   },
   {
    "kind": "",
-   "visits": 7,
+   "visits": 10,
    "engaged": 0
+  }
+ ],
+ "kumar_links": [
+  {
+   "date": "2026-10-27",
+   "where": "profile",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-02",
+   "where": "profile",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-04",
+   "where": "profile",
+   "visits": 1,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-05",
+   "where": "profile",
+   "visits": 2,
+   "engaged": 1
   }
  ],
  "email_robots_daily": [
@@ -48607,9 +48633,9 @@
   },
   {
    "date": "2026-11-08",
-   "visits": 2,
+   "visits": 3,
    "engaged": 1,
-   "robots": 1
+   "robots": 2
   }
  ],
  "google_ads_daily": [
@@ -51330,32 +51356,6 @@
    "visits": 1,
    "engaged": 1,
    "demo_requests": 0
-  }
- ],
- "kumar_links": [
-  {
-   "date": "2026-10-27",
-   "where": "profile",
-   "visits": 1,
-   "engaged": 1
-  },
-  {
-   "date": "2026-11-02",
-   "where": "profile",
-   "visits": 1,
-   "engaged": 1
-  },
-  {
-   "date": "2026-11-04",
-   "where": "profile",
-   "visits": 1,
-   "engaged": 1
-  },
-  {
-   "date": "2026-11-05",
-   "where": "profile",
-   "visits": 2,
-   "engaged": 1
   }
  ]
 }

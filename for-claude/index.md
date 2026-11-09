@@ -23,7 +23,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 
 ## Date ranges
 
-- Google Analytics and HubSpot: 2026-04-01 to 2026-11-07.
+- Google Analytics and HubSpot: 2026-04-01 to 2026-11-08.
 - Search Console (Google search): 2026-04-01 to 2026-11-07. It runs about 2 days behind.
 - LinkedIn company page: 2026-07-01 to 2026-11-07. LinkedIn Kumar: 2026-07-01 to 2026-10-27, the last day still being counted when exported.
 - YouTube: 2026-04-01 to 2026-11-06.
@@ -84,9 +84,9 @@ Visits count people who landed on the page from outside the site. Page files lis
 - [page_titles_main.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_main.csv): The title of each page: main pages 1 level deep (the homepage, /demo, /pricing and the like). Source: Google Analytics. 183 rows.
 - page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /a/auth/signup to /wp-json/wp/v2/posts/9397](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/9472 to /wp-json/wp/v2/resource/8544](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
 - [page_titles_resources.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_resources.csv): The title of each page: pages under /resources/. Source: Google Analytics. 97 rows.
-- [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 273 rows.
-- [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 409 rows.
-- [campaigns_since_1_apr.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_since_1_apr.csv): Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to 2026-11-07), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out. 211 rows.
+- [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 274 rows.
+- [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 410 rows.
+- [campaigns_since_1_apr.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_since_1_apr.csv): Each campaign since 1 Apr 2026: visits, engaged visits and form fills from Google Analytics link tags (to 2026-11-08), emails and deals from HubSpot. Never add the two sources together. A deal belongs to the campaign its person first came in on. Target-account campaigns, sales outreach codes and spam sites are left out. 211 rows.
 
 ## Content tab
 

@@ -11,13 +11,6 @@
    "from": "2026-11-06",
    "to": "2026-11-08"
   },
-  "https://agpt.co/integrations/opsera/": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-11-08",
-   "to": "2026-11-08"
-  },
   "https://aithority.com/machine-learning/opsera-launches-industrys-first-headless-devops-platform-for-salesforce-agentforce/": {
    "visits": 1,
    "engaged": 1,
@@ -37,6 +30,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-25",
+   "to": "2026-11-08"
+  },
+  "https://www.bunnyshell.com/blog/ai-writes-code-in-minutes-your-team-waits-days-for-staging/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-09-16",
    "to": "2026-11-08"
   },
   "https://claude-media.com/articles/claude-code-opsera-devsecops-plugin": {
@@ -74,18 +74,18 @@
    "from": "2026-04-01",
    "to": "2026-11-08"
   },
+  "https://www.devopsdigest.com/opsera-extends-forge-to-cursor-marketplace": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-07-28",
+   "to": "2026-10-29"
+  },
   "https://www.devopsdigest.com/opsera-relaunches-ai-native-software-factory": {
    "visits": 0,
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-29",
-   "to": "2026-11-08"
-  },
-  "https://devyardstick.com/tools/opsera/": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-10-15",
    "to": "2026-11-08"
   },
   "https://finance.yahoo.com/technology/ai/articles/opsera-launches-industrys-first-headless-130200820.html": {
@@ -135,13 +135,6 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-11-06",
-   "to": "2026-11-06"
-  },
-  "https://www.forbes.com/councils/forbestechcouncil/people/kumarchivukula/": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-11-06",
    "to": "2026-11-08"
   },
   "https://geroundtable.com/opsera-ai-native-software-factory-forge/": {
@@ -149,20 +142,6 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-28",
-   "to": "2026-11-08"
-  },
-  "https://getinkahoots.com/work": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-07-17",
-   "to": "2026-11-08"
-  },
-  "https://globallawlists.org/law-firms/opsera-law-pllc": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-09-26",
    "to": "2026-11-08"
   },
   "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem": {
@@ -177,13 +156,6 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-26",
-   "to": "2026-11-08"
-  },
-  "https://luma.com/opsera-48rn": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-10-01",
    "to": "2026-11-08"
   },
   "https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/2456240": {
@@ -207,13 +179,6 @@
    "from": "2026-09-15",
    "to": "2026-11-08"
   },
-  "https://www.mydogood.com/results/": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-08-02",
-   "to": "2026-11-08"
-  },
   "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap": {
    "visits": 0,
    "engaged": 0,
@@ -235,7 +200,7 @@
    "from": "2026-09-10",
    "to": "2026-11-08"
   },
-  "https://podcasts.apple.com/in/podcast/se-21-confidence-bias-and-opportunity-lessons-from/id1476885647?i=1000754849729&l=pa": {
+  "https://podcasts.apple.com/us/podcast/se-21-confidence-bias-and-opportunity-lessons-from/id1476885647?i=1000754849729": {
    "visits": 0,
    "engaged": 0,
    "demos": 0,
@@ -303,13 +268,6 @@
    "engaged": 4,
    "demos": 0,
    "from": "2026-10-29",
-   "to": "2026-11-08"
-  },
-  "https://startupfundraising.com/founders/kumar-chivukula-opsera": {
-   "visits": 0,
-   "engaged": 0,
-   "demos": 0,
-   "from": "2026-07-06",
    "to": "2026-11-08"
   },
   "https://startupintros.com/orgs/opsera": {

@@ -390,21 +390,22 @@ period_start,period_end,period_not_finished,campaign,visits,engaged_visits,form_
 2026-10-26,2026-11-01,no,influencer/,1,0,0,0
 2026-10-26,2026-11-01,no,kumar,1,1,0,0
 2026-10-26,2026-11-01,no,octopus_integration,1,0,0,0
-2026-11-02,2026-11-07,yes,VIP_experiences,6,3,0,0
-2026-11-02,2026-11-07,yes,16485134-Release Notes,5,0,0,0
-2026-11-02,2026-11-07,yes,change_impact_analysis_for_code,5,5,0,0
-2026-11-02,2026-11-07,yes,kumar,4,3,0,0
-2026-11-02,2026-11-07,yes,43702534-DG-FY27-Gartner-MQ,3,1,0,0
-2026-11-02,2026-11-07,yes,brand-page,3,0,0,0
-2026-11-02,2026-11-07,yes,meta-ai-series,3,1,0,0
-2026-11-02,2026-11-07,yes,ontologies-series,3,3,0,0
-2026-11-02,2026-11-07,yes,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
-2026-11-02,2026-11-07,yes,36176271-DG-FY26-Q4-AI-BM-Report,1,0,0,0
-2026-11-02,2026-11-07,yes,BuiltIn,1,1,0,0
-2026-11-02,2026-11-07,yes,Search-AgilevsDevops-2021-02-23,1,0,0,0
-2026-11-02,2026-11-07,yes,appdevprofile,1,0,0,0
-2026-11-02,2026-11-07,yes,best_ai_software_factories,1,0,0,0
-2026-11-02,2026-11-07,yes,google-brings-ai-to-assistant-and-pixel-8,1,0,0,0
-2026-11-02,2026-11-07,yes,php2shell,1,1,0,0
-2026-11-02,2026-11-07,yes,top 1 ios,1,0,0,0
-2026-11-02,2026-11-07,yes,top 1 sanfrancisco,1,0,0,0
+2026-11-02,2026-11-08,no,VIP_experiences,6,3,0,0
+2026-11-02,2026-11-08,no,16485134-Release Notes,5,0,0,0
+2026-11-02,2026-11-08,no,change_impact_analysis_for_code,5,5,0,0
+2026-11-02,2026-11-08,no,kumar,4,3,0,0
+2026-11-02,2026-11-08,no,43702534-DG-FY27-Gartner-MQ,3,1,0,0
+2026-11-02,2026-11-08,no,brand-page,3,0,0,0
+2026-11-02,2026-11-08,no,meta-ai-series,3,1,0,0
+2026-11-02,2026-11-08,no,ontologies-series,3,3,0,0
+2026-11-02,2026-11-08,no,appdevprofile,2,0,0,0
+2026-11-02,2026-11-08,no,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
+2026-11-02,2026-11-08,no,36176271-DG-FY26-Q4-AI-BM-Report,1,0,0,0
+2026-11-02,2026-11-08,no,36500047-DG-FY27-Q1-AI-Adoption-Webinar,1,0,0,0
+2026-11-02,2026-11-08,no,BuiltIn,1,1,0,0
+2026-11-02,2026-11-08,no,Search-AgilevsDevops-2021-02-23,1,0,0,0
+2026-11-02,2026-11-08,no,best_ai_software_factories,1,0,0,0
+2026-11-02,2026-11-08,no,google-brings-ai-to-assistant-and-pixel-8,1,0,0,0
+2026-11-02,2026-11-08,no,php2shell,1,1,0,0
+2026-11-02,2026-11-08,no,top 1 ios,1,0,0,0
+2026-11-02,2026-11-08,no,top 1 sanfrancisco,1,0,0,0
