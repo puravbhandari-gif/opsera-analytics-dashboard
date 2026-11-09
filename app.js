@@ -2071,27 +2071,32 @@ function renderBlogTypes(p, bt) {
     source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
     metrics: types.map((t) => ({ label: t, value: rangeSum(rows, (r) => (r.t === t ? 1 : 0)), fmt: num, noDelta: true })) });
 }
-// A campaign hub as a hub and spoke: the hub blog in the middle, its formats and channels around it, each with its number.
-// Visits come from Google Analytics (opsera.ai only) from the hub's date; the rest is given in the file (agreed 9 Nov 2026).
+// Hub and spoke campaigns: one card per campaign in data/campaign_hubs.json, the core piece in the middle and its formats
+// and channels around it, each with its number. A new campaign is one more block in that file, no code (agreed 9 Nov 2026).
+// Visits come from Google Analytics (opsera.ai only) from the hub's date, to visits_to if given; the rest is given in the file.
 function renderHubs(d, lk) {
   const idx = Object.fromEntries(lk.pages.map((p, i) => [p, i]));
-  const visits = (path, from) => { const i = idx[path]; if (i == null) return null;
-    const a = Math.round((toDate(from) - toDate(lk.start_date)) / 864e5);
-    return lk.visits.reduce((t, r) => (r[1] === i && r[0] >= a ? t + r[3] : t), 0); };
+  const dayNo = (x) => Math.round((toDate(x) - toDate(lk.start_date)) / 864e5);
+  const visits = (path, from, to) => { const i = idx[path]; if (i == null) return null;
+    const a = dayNo(from), b = to ? dayNo(to) : Infinity;
+    return lk.visits.reduce((t, r) => (r[1] === i && r[0] >= a && r[0] <= b ? t + r[3] : t), 0); };
   const wrap = (text, n) => { const out = [], words = text.split(" "); let line = "";
     words.forEach((w) => { if ((line + " " + w).trim().length > n) { out.push(line.trim()); line = w; } else line += ` ${w}`; }); out.push(line.trim()); return out; };
-  $("content-hubs").innerHTML = d.hubs.map((h) => {
-    const hubVisits = visits(h.hub.visits_path, h.hub.date);
-    const spokes = h.spokes.map((s) => ({ ...s, number: s.visits_path ? `${num(visits(s.visits_path, h.hub.date))} visits` : s.number || "" }));
+  const card = (h) => {
+    const kind = h.hub.kind || "Blog", to = h.hub.visits_to;
+    const hubVisits = h.hub.visits_path ? visits(h.hub.visits_path, h.hub.date, to) : null;
+    const hubNumber = hubVisits != null ? `${num(hubVisits)} visits` : h.hub.number || "";
+    const spokes = (h.spokes || []).map((s) => { const v = s.visits_path ? visits(s.visits_path, h.hub.date, to) : null;
+      return { ...s, group: s.group === "Format" ? "Format" : "Channel", number: v != null ? `${num(v)} visits` : s.number || "" }; });
     const W = 760, H = 520, cx = W / 2, cy = H / 2, rx = 290, ry = 195;
     const nodes = spokes.map((s, i) => { const t = -Math.PI / 2 + (i * 2 * Math.PI) / spokes.length;
       return { ...s, x: cx + rx * Math.cos(t), y: cy + ry * Math.sin(t) }; });
-    const svg = `<svg class="hub-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(h.name)} hub and spoke: the hub blog, ${hubVisits == null ? "" : `${num(hubVisits)} visits, `}with ${spokes.length} formats and channels">
+    const svg = `<svg class="hub-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(h.name)} hub and spoke: the hub ${esc(kind.toLowerCase())}, ${hubNumber ? `${esc(hubNumber)}, ` : ""}with ${spokes.length} formats and channels">
       ${nodes.map((n) => `<line x1="${cx}" y1="${cy}" x2="${n.x.toFixed(1)}" y2="${n.y.toFixed(1)}" class="hub-line ${n.group === "Format" ? "f" : "c"}"/>`).join("")}
       <circle cx="${cx}" cy="${cy}" r="86" class="hub-core"/>
-      <text x="${cx}" y="${cy - 30}" class="hub-k">Hub blog, ${esc(day(h.hub.date))}</text>
+      <text x="${cx}" y="${cy - 30}" class="hub-k">Hub ${esc(kind.toLowerCase())}, ${esc(day(h.hub.date))}</text>
       ${wrap(h.hub.title, 22).slice(0, 3).map((l, i) => `<text x="${cx}" y="${cy - 8 + i * 17}" class="hub-t">${esc(l)}</text>`).join("")}
-      ${hubVisits == null ? "" : `<text x="${cx}" y="${cy + 52}" class="hub-n">${num(hubVisits)} visits</text>`}
+      ${hubNumber ? `<text x="${cx}" y="${cy + 52}" class="hub-n">${esc(hubNumber)}</text>` : ""}
       ${nodes.map((n) => { const lines = wrap(n.name, 20), bw = 150, bh = 26 + lines.length * 15 + (n.number ? 16 : 0);
         return `<g class="hub-node ${n.group === "Format" ? "f" : "c"}"><rect x="${(n.x - bw / 2).toFixed(1)}" y="${(n.y - bh / 2).toFixed(1)}" width="${bw}" height="${bh}" rx="10"/>
           <text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 15).toFixed(1)}" class="hub-g">${n.group}</text>
@@ -2099,12 +2104,17 @@ function renderHubs(d, lk) {
           ${n.number ? `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 31 + lines.length * 15 + 2).toFixed(1)}" class="hub-num">${esc(n.number)}</text>` : ""}</g>`; }).join("")}
     </svg>`;
     // Phones: the same hub and spokes as a list, so every label stays readable
-    const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub blog, ${esc(dayYear(h.hub.date))}</span>
-      <a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>${hubVisits == null ? "" : `<strong>${num(hubVisits)} visits</strong>`}</div>
+    const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub ${esc(kind.toLowerCase())}, ${esc(dayYear(h.hub.date))}</span>
+      ${h.hub.link ? `<a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>` : `<span>${esc(h.hub.title)}</span>`}${hubNumber ? `<strong>${esc(hubNumber)}</strong>` : ""}</div>
       ${["Format", "Channel"].map((g) => `<p class="hub-list-g">${g === "Format" ? "Formats" : "Channels"}</p><ul>${spokes.filter((s) => s.group === g).map((s) =>
         `<li class="${g === "Format" ? "f" : "c"}"><span>${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</span>${s.number ? `<strong>${esc(s.number)}</strong>` : ""}</li>`).join("")}</ul>`).join("")}</div>`;
-    return `<div class="hub"><h4>${esc(h.name)}</h4>${svg}${list}<p class="source">${esc(h.source)}. ${esc(d.numbers_note)}</p></div>`;
-  }).join("");
+    return `<article class="hub hub-card"><h4>${esc(h.name)}</h4>${svg}${list}<p class="source">${esc(h.source || "")}${h.source ? ". " : ""}${esc(h.numbers_note || d.numbers_note || "")}</p></article>`;
+  };
+  // A block with a mistake in it shows a short note instead of stopping the other cards
+  const blocks = d.campaigns || d.hubs || [];
+  $("content-hubs").innerHTML = blocks.length ? blocks.map((h) => { try { return card(h); }
+    catch (e) { return `<article class="hub hub-card"><h4>${esc(h?.name || "A campaign")}</h4><p class="muted">This campaign's block in campaign_hubs.json needs a hub with a title and date.</p></article>`; } }).join("")
+    : `<p class="muted">No campaigns yet.</p>`;
   $("content-hubs-source").textContent = "";
 }
 

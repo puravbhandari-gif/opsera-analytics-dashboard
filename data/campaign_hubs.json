@@ -1,36 +1,22 @@
 {
- "source": "Campaign hubs, written by hand from Purav's list (6 Nov 2026)",
- "hubs": [
+ "how_to_add": [
+  "Add one block to campaigns, in the order the cards should show. The page draws each block as its own card.",
+  "name: the campaign. hub: the core piece. kind is what it is (Blog, Webinar, Event, Press release, Report), title and date, plus link if there is one.",
+  "For visits, give hub.visits_path (an opsera.ai path) and the page counts Google Analytics visits from hub.date, or to visits_to if given. Or give hub.number as text.",
+  "spokes: each has group (Format or Channel) and name, plus link, visits_path or number as text.",
+  "source is the line under the card. numbers_note says where the numbers came from and when.",
+  "Never put people's emails or a single customer's deal in this file: it is public."
+ ],
+ "campaigns": [
   {
    "name": "PHP2Shell",
    "hub": {
+    "kind": "Blog",
     "title": "PHP2Shell: Invisible Threats and What to Do Next",
     "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps",
     "date": "2026-10-26",
     "visits_path": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
    },
-   "formats": [
-    {
-     "name": "Campaign page",
-     "link": "https://opsera.ai/php2shell"
-    },
-    {
-     "name": "Video with Vishnu and Nassir"
-    },
-    {
-     "name": "One-pager"
-    }
-   ],
-   "shared_via": [
-    "Kumar's LinkedIn post",
-    "Brand LinkedIn post",
-    "Team LinkedIn posts",
-    "GitHub Universe email: 10,276 delivered, 15 clicks",
-    "GitHub Universe booth",
-    "Catapult pitch",
-    "Forbes byline, in draft"
-   ],
-   "source": "Source: PHP2Shell campaign, 26 Oct 2026",
    "spokes": [
     {
      "group": "Format",
@@ -78,8 +64,9 @@
      "name": "Forbes byline",
      "number": "In draft"
     }
-   ]
+   ],
+   "source": "Source: PHP2Shell campaign, 26 Oct 2026",
+   "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct."
   }
- ],
- "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct."
+ ]
 }

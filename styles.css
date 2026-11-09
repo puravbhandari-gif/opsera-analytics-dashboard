@@ -366,6 +366,9 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 .logo-blank { width: 28px; height: 28px; border-radius: 6px; display: grid; place-items: center; background: var(--sunk); font-weight: 600; color: var(--ink-2); }
 
 .hub h4 { font-family: var(--display); font-size: 1rem; margin: 4px 0 8px; }
+/* Each hub and spoke campaign is its own card */
+#content-hubs { display: grid; gap: 16px; }
+.hub-card { border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px 10px; background: var(--surface); }
 
 /* SEO and AEO view: the exec style, one product at a time */
 .seo-lines { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-bottom: 24px; }
