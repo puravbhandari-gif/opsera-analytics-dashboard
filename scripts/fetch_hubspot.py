@@ -23,6 +23,8 @@ from urllib.parse import urlparse
 from zoneinfo import ZoneInfo
 
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 API = "https://api.hubapi.com"
 START_DATE = "2026-04-01"   # from 1 Apr, so "Last 3 months" can compare with the 3 months before
@@ -133,6 +135,11 @@ def session():
         stop("The HUBSPOT_TOKEN secret is missing.")
     s = requests.Session()
     s.headers["Authorization"] = f"Bearer {token}"
+    # HubSpot allows only a few requests a second; on 9 Nov 2026 a busy run hit that limit (429) and stopped. Every request
+    # now waits and tries again, up to 6 times, using the wait HubSpot asks for, before giving up.
+    retry = Retry(total=6, backoff_factor=1.5, status_forcelist=(429, 500, 502, 503, 504),
+                  allowed_methods=None, respect_retry_after_header=True, raise_on_status=False)
+    s.mount("https://", HTTPAdapter(max_retries=retry))
     return s
 
 
