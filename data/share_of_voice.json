@@ -1,12 +1,12 @@
 {
  "source": "Google News search feed, US English, headlines naming each company",
  "start_date": "2026-07-01",
- "checked": "2026-11-04",
+ "checked": "2026-11-09",
  "quarters": [
   {
    "quarter": "FY27 Q2",
    "counts": {
-    "Harness": 5,
+    "Harness": 4,
     "Opsera": 0,
     "CloudBees": 0,
     "Copado": 0,
@@ -17,21 +17,21 @@
   {
    "quarter": "FY27 Q3",
    "counts": {
-    "Harness": 24,
-    "Gearset": 2,
-    "Copado": 8,
     "Opsera": 4,
+    "Harness": 18,
     "CloudBees": 5,
+    "Copado": 8,
+    "Gearset": 1,
     "LinearB": 0
    }
   },
   {
    "quarter": "FY27 Q4",
    "counts": {
-    "LinearB": 9,
-    "Copado": 1,
+    "Harness": 1,
+    "Copado": 6,
+    "LinearB": 6,
     "Opsera": 0,
-    "Harness": 0,
     "CloudBees": 0,
     "Gearset": 0
    }
@@ -46,12 +46,6 @@
   },
   {
    "date": "2026-07-15",
-   "counts": {
-    "Harness": 1
-   }
-  },
-  {
-   "date": "2026-07-21",
    "counts": {
     "Harness": 1
    }
@@ -83,7 +77,7 @@
   {
    "date": "2026-08-27",
    "counts": {
-    "Harness": 2
+    "Harness": 3
    }
   },
   {
@@ -93,31 +87,7 @@
    }
   },
   {
-   "date": "2026-09-02",
-   "counts": {
-    "Harness": 1
-   }
-  },
-  {
-   "date": "2026-09-04",
-   "counts": {
-    "Gearset": 1
-   }
-  },
-  {
    "date": "2026-09-09",
-   "counts": {
-    "Harness": 1
-   }
-  },
-  {
-   "date": "2026-09-10",
-   "counts": {
-    "Harness": 1
-   }
-  },
-  {
-   "date": "2026-09-11",
    "counts": {
     "Harness": 1
    }
@@ -167,26 +137,15 @@
   {
    "date": "2026-10-08",
    "counts": {
-    "Harness": 7,
+    "Harness": 6,
     "CloudBees": 1
-   }
-  },
-  {
-   "date": "2026-10-09",
-   "counts": {
-    "Harness": 1
    }
   },
   {
    "date": "2026-10-10",
    "counts": {
+    "Harness": 1,
     "Copado": 1
-   }
-  },
-  {
-   "date": "2026-10-12",
-   "counts": {
-    "Harness": 2
    }
   },
   {
@@ -204,7 +163,6 @@
   {
    "date": "2026-10-23",
    "counts": {
-    "Harness": 1,
     "Gearset": 1
    }
   },
@@ -223,14 +181,27 @@
   {
    "date": "2026-11-02",
    "counts": {
-    "LinearB": 6
+    "LinearB": 5
    }
   },
   {
    "date": "2026-11-03",
    "counts": {
     "Copado": 1,
-    "LinearB": 3
+    "LinearB": 1
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "counts": {
+    "Harness": 1,
+    "Copado": 4
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "counts": {
+    "Copado": 1
    }
   }
  ]

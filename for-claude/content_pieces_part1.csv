@@ -76,7 +76,7 @@ page,type,page_title
 /blog/cspm-shift-left,Blog,
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-coding-tool,Blog,
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,Cursor AI Adoption Trends: Real Data from the Fastest Growing Coding T - Opsera
-/blog/cursor-alternatives,Blog,Cursor Alternatives for Teams Running Multiple AI Assistants - Opsera
+/blog/cursor-alternatives,Blog,Cursor Alternatives for Teams Using Many AI Tools - Opsera
 /blog/dark-software-factory,Blog,Opsera - The context-aware software factory
 /blog/defect-escape-rate-der-a-comprehensive-guide,Blog,Page not found - Opsera
 /blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accelerate-2023-state-of-devops-report,Blog,Human-centric Insights from Google and DORA’s 2023 State Report — Opsera
@@ -225,10 +225,10 @@ page,type,page_title
 /blog/software-delivery-industry-experts-share-2022-trends-and-predictions,Blog,Software Delivery Industry Experts Share 2023 Trends and Predictions - Opsera
 /blog/software-factory,Blog,Software Factory: Intent-Driven Development at AI Speed - Opsera
 /blog/software-factory-as-a-service,Blog,"Software Factory as a Service: What It Is, How to Evaluate - Opsera"
-/blog/software-factory-benefits,Blog,Software Factory Benefits: What the Research Actually Shows - Opsera
+/blog/software-factory-benefits,Blog,Software Factory Benefits Leaders Can Measure - Opsera
 /blog/software-factory-compliance-tools,Blog,Opsera — The context-aware software factory
 /blog/software-factory-model,Blog,Software Factory Model: Reducing Architecture Drift — Opsera
-/blog/software-factory-pattern,Blog,How the Software Factory Pattern Works in Enterprises - Opsera
+/blog/software-factory-pattern,Blog,How the Software Factory Pattern Works at Scale - Opsera
 /blog/solving-merge-conflicts-in-salesforce,Blog,Quickest way to resolve Salesforce merge conflicts | Opsera - Opsera
 /blog/spec-driven-development,Blog,Spec-Driven Development: Specs Beat Prompts — Opsera
 /blog/speed-up-the-innovation-with-devops,Blog,How to drive DevOps innovation | Opsera - Opsera
@@ -346,7 +346,7 @@ page,type,page_title
 /knowledge-base/quality-risk/time-to-mitigate-vulnerability-ttmv,Guide (knowledge base),Time to Mitigate Vulnerability (TTMV) - Opsera
 /knowledge-base/quality-risk/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),Understanding System Hardening Timelines in DevSecOps Environments - Opsera
 /knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,Guide (knowledge base),Defect Escape Rate (DER): A Comprehensive Guide - Opsera
-/knowledge-base/security-and-devsecops-metrics/patch-management-efficiency,Guide (knowledge base),Patch Management Efficiency — Opsera
+/knowledge-base/security-and-devsecops-metrics/patch-management-efficiency,Guide (knowledge base),Patch Management Efficiency - Opsera
 /knowledge-base/security-and-devsecops-metrics/time-to-detect-vulnerability-ttdv,Guide (knowledge base),Time to Detect Vulnerability (TTDV) — Opsera
 /knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv,Guide (knowledge base),Time to Mitigate Vulnerability (TTMV) — Opsera
 /knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),Understanding System Hardening Timelines in DevSecOps Environments — Opsera
@@ -359,7 +359,10 @@ page,type,page_title
 /knowledge-base/value-stream-management/time-to-value,Guide (knowledge base),Time to Value: A Practical Guide — Opsera
 /knowledge-base/value-stream-management/value-stream-management-explained-from-idea-to-customer-value,Guide (knowledge base),Value Stream Management: From Idea to Customer Value — Opsera
 /resources/comparison-guides/8090,Comparison,Forge vs 8090 — Opsera Forge
+/resources/comparison-guides/blitzy,Comparison,Forge vs Blitzy — Opsera Forge
+/resources/comparison-guides/claude,Comparison,Forge vs Claude - Opsera Forge
 /resources/comparison-guides/devin-ai,Comparison,Forge vs Devin — Opsera Forge
+/resources/comparison-guides/factory-ai,Comparison,Forge vs Factory.ai - Opsera Forge
 /resources/comparison-guides/opsera-vs-cloudbees,Comparison,Opsera vs Cloudbees - Opsera
 /resources/comparison-guides/opsera-vs-copado,Comparison,Opsera vs Copado: Which is better for Salesforce DevOps? - Opsera
 /resources/comparison-guides/opsera-vs-dx,Comparison,Opsera vs DX - Opsera
@@ -372,4 +375,3 @@ page,type,page_title
 /resources/comparison-guides/opsera-vs-linearb,Comparison,Opsera vs LinearB - Opsera
 /resources/comparison-guides/opsera-vs-swarmia,Comparison,Opsera vs Swarmia - Opsera
 /resources/ebooks/build-vs-buy-the-salesforce-devops-handbook,eBook,Build vs Buy: Making the Right Choice for Your Salesforce DevOps Solution - Opsera
-/resources/ebooks/implementing-a-robust-and-secure-environment-for-salesforce-deployments,eBook,Implementing a Robust and Secure Environment for Salesforce Deployments - Opsera

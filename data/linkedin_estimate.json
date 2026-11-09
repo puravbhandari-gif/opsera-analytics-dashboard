@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-04T13:15+00:00",
+ "posts_pulled_at": "2026-11-09T06:02+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -440,6 +440,42 @@
    "group": "cant_tell",
    "visits": 9,
    "engaged": 7
+  },
+  {
+   "date": "2026-11-04",
+   "group": "cant_tell",
+   "visits": 7,
+   "engaged": 5
+  },
+  {
+   "date": "2026-11-05",
+   "group": "cant_tell",
+   "visits": 11,
+   "engaged": 7
+  },
+  {
+   "date": "2026-11-06",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 2
+  },
+  {
+   "date": "2026-11-06",
+   "group": "estimated_company",
+   "visits": 3,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-07",
+   "group": "cant_tell",
+   "visits": 3,
+   "engaged": 1
+  },
+  {
+   "date": "2026-11-08",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 0
   }
  ],
  "matches": [
@@ -552,6 +588,18 @@
    "dates": [
     "2026-10-27",
     "2026-10-28"
+   ]
+  },
+  {
+   "page": "/blog/measure-ai-roi-software-development",
+   "group": "estimated_company",
+   "visits": 3,
+   "engaged": 1,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-11-06"
    ]
   },
   {
@@ -693,10 +741,16 @@
    "date": "2026-11-03",
    "page": "/events/github-universe",
    "post": "https://www.linkedin.com/posts/opsera_opsera-github-universe-activity-7523428976573493251-J0z3"
+  },
+  {
+   "account": "company",
+   "date": "2026-11-06",
+   "page": "/blog/measure-ai-roi-software-development",
+   "post": "https://www.linkedin.com/posts/opsera_reuters-reported-metas-ai-assisted-code-activity-7524516238358929408-xTY1"
   }
  ],
- "untagged_total": 502,
+ "untagged_total": 530,
  "start_date": "2026-09-01",
- "end_date": "2026-11-03",
- "pulled_at": "2026-11-06T14:17+05:30"
+ "end_date": "2026-11-08",
+ "pulled_at": "2026-11-09T11:28+05:30"
 }

@@ -263,10 +263,12 @@ period_start,period_end,period_not_finished,came_from,visits,engaged_visits
 2026-10-26,2026-11-01,no,Paid search ads,1,1
 2026-10-26,2026-11-01,no,Other websites,155,58
 2026-10-26,2026-11-01,no,Unlabelled,1333,48
-2026-11-02,2026-11-03,yes,"AI tools (ChatGPT, Gemini, Perplexity)",15,3
-2026-11-02,2026-11-03,yes,"Direct (typed in, or unknown)",492,84
-2026-11-02,2026-11-03,yes,Email,26,1
-2026-11-02,2026-11-03,yes,Search engines (mostly Google),318,183
-2026-11-02,2026-11-03,yes,Social media (LinkedIn and others),15,11
-2026-11-02,2026-11-03,yes,Other websites,49,23
-2026-11-02,2026-11-03,yes,Unlabelled,179,20
+2026-11-02,2026-11-07,yes,"AI tools (ChatGPT, Gemini, Perplexity)",34,9
+2026-11-02,2026-11-07,yes,"Direct (typed in, or unknown)",1346,225
+2026-11-02,2026-11-07,yes,Email,50,8
+2026-11-02,2026-11-07,yes,Search engines (mostly Google),696,369
+2026-11-02,2026-11-07,yes,Social media (LinkedIn and others),51,29
+2026-11-02,2026-11-07,yes,Video sites,1,1
+2026-11-02,2026-11-07,yes,Paid search ads,1,0
+2026-11-02,2026-11-07,yes,Other websites,200,48
+2026-11-02,2026-11-07,yes,Unlabelled,821,141

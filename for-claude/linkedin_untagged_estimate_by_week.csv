@@ -26,6 +26,6 @@ period_start,period_end,period_not_finished,estimate,visits
 2026-10-26,2026-11-01,no,Estimated: company page,0
 2026-10-26,2026-11-01,no,Estimated: Kumar,16
 2026-10-26,2026-11-01,no,Can't tell,46
-2026-11-02,2026-11-03,yes,Estimated: company page,0
-2026-11-02,2026-11-03,yes,Estimated: Kumar,0
-2026-11-02,2026-11-03,yes,Can't tell,12
+2026-11-02,2026-11-07,yes,Estimated: company page,3
+2026-11-02,2026-11-07,yes,Estimated: Kumar,0
+2026-11-02,2026-11-07,yes,Can't tell,36

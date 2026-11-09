@@ -1,11 +1,23 @@
 {
  "source": "opsera.ai sitemap, with each page's own publish date, and YouTube Analytics for public videos",
  "start_date": "2026-07-01",
- "checked": "2026-11-04",
- "youtube_pulled_at": "2026-11-04T18:43+05:30",
+ "checked": "2026-11-09",
+ "youtube_pulled_at": "2026-11-09T11:29+05:30",
  "pages_checked": 314,
  "pages_without_date": 33,
  "items": [
+  {
+   "date": "2026-11-04",
+   "type": "YouTube video",
+   "title": "Modernize Legacy Applications with Opsera Forge: From Assessment to Delivery",
+   "link": "https://www.youtube.com/watch?v=xLlVX_WJSmA"
+  },
+  {
+   "date": "2026-11-04",
+   "type": "YouTube video",
+   "title": "Get Started with Metric Studio: Custom Engineering KPIs, Your Way",
+   "link": "https://www.youtube.com/watch?v=zcIowgLUiYE"
+  },
   {
    "date": "2026-11-02",
    "type": "Blog",

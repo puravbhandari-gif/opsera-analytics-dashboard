@@ -28,15 +28,15 @@
         "2026-08": 8432,
         "2026-09": 8179
        },
-       "so_far": 1405,
+       "so_far": 3513,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": 15000,
-       "goal_share_pct": 9.4,
+       "goal_share_pct": 23.4,
        "without_email_robots": {
         "baseline": 7840.7,
-        "so_far": 1317
+        "so_far": 3198
        }
       },
       {
@@ -49,10 +49,10 @@
         "2026-08": 3448,
         "2026-09": 3712
        },
-       "so_far": 404,
+       "so_far": 801,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": null,
        "goal_share_pct": null
       },
@@ -66,10 +66,10 @@
         "2026-08": 38,
         "2026-09": 21
        },
-       "so_far": 2,
+       "so_far": 3,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": null,
        "goal_share_pct": null
       },
@@ -85,8 +85,8 @@
        },
        "so_far": 1,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": null,
        "goal_share_pct": null
       }
@@ -122,10 +122,10 @@
         "2026-08": 420,
         "2026-09": 260
        },
-       "so_far": 25,
+       "so_far": 58,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": null,
        "goal_share_pct": null
       },
@@ -141,8 +141,8 @@
        },
        "so_far": 0,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-03",
-       "days_counted": 3,
+       "so_far_end": "2026-11-07",
+       "days_counted": 7,
        "goal": null,
        "goal_share_pct": null
       }

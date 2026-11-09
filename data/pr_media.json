@@ -1,8 +1,30 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-06",
+ "checked": "2026-11-09",
  "items": [
+  {
+   "date": "2026-11-08",
+   "outlet": "AutoGPT",
+   "title": "Opsera MCP server for AI agents - Integrations",
+   "link": "https://agpt.co/integrations/opsera/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-11-06",
+   "outlet": "RamaOnHealthcare",
+   "title": "The Agentic Paradox: Why Smarter AI Requires Stronger Human Governance",
+   "link": "https://ramaonhealthcare.com/the-agentic-paradox-why-smarter-ai-requires-stronger-human-governance/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
   {
    "date": "2026-11-06",
    "outlet": "Forbes",
@@ -16,6 +38,28 @@
    "found_by": "Added by hand"
   },
   {
+   "date": "2026-11-06",
+   "outlet": "Forbes",
+   "title": "The Agentic Paradox: Why Smarter AI Requires Stronger Human Governance",
+   "link": "https://www.forbes.com/councils/forbestechcouncil/2026/11/06/the-agentic-paradox-why-smarter-ai-requires-stronger-human-governance/",
+   "type": "Byline",
+   "topic": "AI-SDLC",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-11-06",
+   "outlet": "Forbes",
+   "title": "Kumar Chivukula - Forbes Technology Council",
+   "link": "https://www.forbes.com/councils/forbestechcouncil/people/kumarchivukula/",
+   "type": "Byline",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-11-03",
    "outlet": "Voltage Control",
    "title": "AI Review Gate Redesign: Fix the Reason, Not the Speed",
@@ -23,6 +67,17 @@
    "type": "Mention",
    "topic": "AI-SDLC",
    "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-31",
+   "outlet": "TechGig",
+   "title": "Opsera relaunches as AI-native software factory with Forge at core",
+   "link": "https://techgig.com/news/ai/opsera-relaunches-as-ai-native-software-factory-with-forge-at-core/135388064",
+   "type": "Mention",
+   "topic": "Forge",
+   "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
   },
@@ -98,6 +153,17 @@
   },
   {
    "date": "2026-10-28",
+   "outlet": "Techloy",
+   "title": "Best 7 Tools for AI-Powered Software Development Lifecycle Management",
+   "link": "https://www.techloy.com/best-7-tools-for-ai-powered-software-development-lifecycle-management/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-28",
    "outlet": "GEroundtable",
    "title": "Opsera Rebuilds Software Delivery As An AI Factory",
    "link": "https://geroundtable.com/opsera-ai-native-software-factory-forge/",
@@ -129,6 +195,17 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Unified Insights"
+  },
+  {
+   "date": "2026-10-25",
+   "outlet": "brokenrobot.xyz",
+   "title": "Spec-driven development: promised benefits, measured costs",
+   "link": "https://www.brokenrobot.xyz/blog/spec-driven-development-promised-benefits-measured-costs/",
+   "type": "Mention",
+   "topic": "Unified Insights",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-10-24",
@@ -164,6 +241,17 @@
    "found_by": "Apify, Google search (page checked by hand in a browser)"
   },
   {
+   "date": "2026-10-20",
+   "outlet": "claude-media.com",
+   "title": "Claude Code\u00e3\u0081\u00abOpsera DevSecOps\u00e3\u0083\u0097\u00e3\u0083\u00a9\u00e3\u0082\u00b0\u00e3\u0082\u00a4\u00e3\u0083\u00b3\u00e3\u0082\u0092\u00e5\u0085\u00a5\u00e3\u0082\u008c\u00e3\u0081\u00a6\u00e3\u0082\u00b9\u00e3\u0082\u00ad\u00e3\u0083\u00a3\u00e3\u0083\u00b3\u00e3\u0082\u0092\u00e5\u009b\u009e\u00e3\u0081\u0099",
+   "link": "https://claude-media.com/articles/claude-code-opsera-devsecops-plugin",
+   "type": "Mention",
+   "topic": "Security",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-10-19",
    "outlet": "xAI",
    "title": "Marketplace Partner Program | SpaceXSI",
@@ -186,6 +274,17 @@
    "found_by": "SamsonPR tracker, Account Activities"
   },
   {
+   "date": "2026-10-15",
+   "outlet": "devyardstick.com",
+   "title": "Opsera - DevYardstick",
+   "link": "https://devyardstick.com/tools/opsera/",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-10-08",
    "outlet": "rfp.wiki",
    "title": "Puppet vs Opsera (2026): We tried both - see who wins",
@@ -206,6 +305,28 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Other"
+  },
+  {
+   "date": "2026-10-01",
+   "outlet": "Luma",
+   "title": "Opsera Flutter 2026: The AI-SDLC Summit",
+   "link": "https://luma.com/opsera-48rn",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-09-26",
+   "outlet": "globallawlists.org",
+   "title": "Opsera Law PLLC | Law Firm in Seattle, United States",
+   "link": "https://globallawlists.org/law-firms/opsera-law-pllc",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-09-15",
@@ -285,6 +406,28 @@
    "topic": "AI-SDLC"
   },
   {
+   "date": "2026-08-06",
+   "outlet": "nomadx.ae",
+   "title": "Agentic SDLC Platforms Compared: Factory vs Overcut vs Opsera (2026)",
+   "link": "https://nomadx.ae/blog/agentic-sdlc-platforms-compared-factory-overcut-opsera-2026/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-08-02",
+   "outlet": "mydogood.com",
+   "title": "Customer Results | DoGood",
+   "link": "https://www.mydogood.com/results/",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
    "date": "2026-07-28",
    "outlet": "PR Newswire",
    "title": "Opsera Extends Forge to Cursor Marketplace, Bringing Enterprise Context and Governance to AI-Assisted Development",
@@ -319,6 +462,17 @@
   },
   {
    "date": "2026-07-17",
+   "outlet": "getinkahoots.com",
+   "title": "Work | Brands We've Built With - Kahoots",
+   "link": "https://getinkahoots.com/work",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-07-17",
    "outlet": "InformationWeek",
    "title": "AI coding's next CIO problem is bigger than productivity",
    "link": "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem",
@@ -336,6 +490,17 @@
    "type": "Mention",
    "topic": "Other",
    "quoted": "Kumar Chivukula, Chandra Ranganathan",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-07-06",
+   "outlet": "Startup Fundraising",
+   "title": "Kumar Chivukula, Founder of Opsera \u2014 $39M Raised",
+   "link": "https://startupfundraising.com/founders/kumar-chivukula-opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
   },

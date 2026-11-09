@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-11-04T13:15+00:00",
+ "pulled_at": "2026-11-09T06:02+00:00",
  "posts": [
   {
    "account": "company",
@@ -441,6 +441,18 @@
     {
      "link": "https://lnkd.in/d6wtyHFC",
      "lands_on": "/events/github-universe"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_reuters-reported-metas-ai-assisted-code-activity-7524516238358929408-xTY1",
+   "posted_utc": "2026-11-06T17:01:09.976Z",
+   "date_pacific": "2026-11-06",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dvggqaqP",
+     "lands_on": "/blog/measure-ai-roi-software-development"
     }
    ]
   }
