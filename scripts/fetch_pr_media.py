@@ -59,6 +59,10 @@ PASSING = {
     "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering",
     "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap",
     "https://cognitiveworld.com/articles/2026/9/1/sounds-right-points-wrong-what-expert-judgment-is-actually-worth-when-ai-makes-everything-seem-easy",
+    "https://www.bunnyshell.com/blog/ai-writes-code-in-minutes-your-team-waits-days-for-staging/",
+    "https://www.techloy.com/best-7-tools-for-ai-powered-software-development-lifecycle-management/",
+    "https://nomadx.ae/blog/agentic-sdlc-platforms-compared-factory-overcut-opsera-2026/",
+    "https://claude-media.com/articles/claude-code-opsera-devsecops-plugin",
 }
 # One short ask per outlet in SamsonPR's Account Activities tab, written without reporter or customer names
 ASKS = {"CIO News/TechTarget": ("Follow-up questions on a customer's modernization story, with Kumar's view first", False),

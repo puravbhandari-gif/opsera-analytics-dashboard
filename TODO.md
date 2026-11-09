@@ -44,7 +44,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Business questions check, after the team replies.
 - [ ] Ask our PR agencies for their coverage lists since 1 Jul 2026, save them in Desktop/Data/pr-agency, then ask Claude Code to add the PR agency list.
 - [ ] When SamsonPR updates their tracker: ask Claude Code to "read SamsonPR's tracker". It saves it to Desktop/Data/pr-agency as SamsonPR-tracker-<date>.xlsx and runs `.venv/bin/python scripts/fetch_pr_media.py --agency`, which refreshes Placed by, Readership and the open and missed opportunities.
-- [ ] Review the 6 PR finds marked To review: TechGig, Techloy, nomadx, claude-media, Bunnyshell (16 Sep) and DEVOPSdigest (28 Jul, a pickup of the Cursor Marketplace release). Until then Q3 stays at 10 placements and Q2 at 7.
+- [x] 9 Nov: Purav counted TechGig and DEVOPSdigest as placements and marked Bunnyshell, Techloy, nomadx and claude-media as passing mentions (in PASSING). Q3 is 11 placements across 14 outlets, Q2 8.
 - [ ] Slack post for the week ending 8 Nov: the 9 Nov run (42588591905) stopped on purpose because Search Console only had data to 7 Nov. Rerun with slack_week=2026-11-08 once Search Console has 8 Nov, likely Tuesday 10 Nov.
 - [ ] When Valentina sends a new Luma list for an event: save it to Desktop/Data and run `.venv/bin/python scripts/build_luma_flutter.py`.
 - [ ] When a new LinkedIn company export comes in: add its 3 files to convert_linkedin.py (like COMPANY_NOV2) and run it.
