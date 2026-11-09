@@ -2064,12 +2064,61 @@ function renderPublished(p) {
 }
 
 // Blogs by type: each blog tagged by hand with one type (agreed 6 Nov 2026), counted for the period at the top
-function renderBlogTypes(p, bt) {
-  const rows = p.items.filter((i) => i.type === "Blog").map((i) => ({ date: i.date, t: bt.by_slug[i.link.split("/blog/")[1]] || "Not tagged yet" }));
+// Content by type: blog counts by type for the period. Click a type to list its pieces with visits, engaged visits and
+// Google clicks; Industry hot topics opens first. Each card compares the type's visits per piece with all blogs (agreed 9 Nov 2026).
+let btypePick = "Industry hot topics";
+function renderBlogTypes(p, bt, d) {
+  const rows = p.items.filter((i) => i.type === "Blog").map((i) => ({ date: i.date, title: i.title, link: i.link,
+    path: new URL(i.link).pathname.replace(/\/$/, ""), t: bt.by_slug[i.link.split("/blog/")[1]] || "Not tagged yet" }));
   const types = [...bt.types, ...(rows.some((r) => r.t === "Not tagged yet") ? ["Not tagged yet"] : [])];
+  const gaLast = lastFullDayPacific(d.end_date, d.pulled_at), pageNo = Object.fromEntries(d.pages.map((x, i) => [x, i]));
+  const dayNo = (x) => Math.round((toDate(x) - toDate(d.start_date)) / 864e5);
+  // Each blog published in the period, with its visits and Google clicks from the period's start (it can't have any
+  // before it was published) to the period's end, or the last day each source has
+  const memo = {};
+  const piecesIn = (a, b) => memo[`${a}${b}`] || (memo[`${a}${b}`] = (() => {
+    const list = rows.filter((r) => r.date >= a && r.date <= b).map((r) => ({ ...r, visits: 0, engaged: 0, clicks: 0, i: pageNo[r.path] }));
+    const by = Object.fromEntries(list.filter((r) => r.i != null).map((r) => [r.i, r]));
+    const [va, vb] = [dayNo(a), dayNo(b < gaLast ? b : gaLast)], [ca, cb] = [dayNo(a), dayNo(b < d.gsc_last_day ? b : d.gsc_last_day)];
+    d.visits.forEach((v) => { const r = by[v[1]]; if (r && v[0] >= va && v[0] <= vb) { r.visits += v[3]; r.engaged += v[4]; } });
+    d.gsc.forEach((g) => { const r = by[g[1]]; if (r && g[0] >= ca && g[0] <= cb) r.clicks += g[2]; });
+    return list;
+  })());
+  const avg = (list) => (list.length ? Math.round(list.reduce((t, r) => t + r.visits, 0) / list.length) : 0);
+  const line = (t, a, b, named) => {
+    const all = piecesIn(a, b), mine = all.filter((r) => r.t === t);
+    if (!mine.length || mine.length === all.length) return "";
+    return `${named ? `${t} averaged` : "Averaged"} ${num(avg(mine))} visits per piece, against ${num(avg(all))} for all ${num(all.length)} blogs`;
+  };
+  const cur = () => (periodsFor(periodMode, p.start_date, p.checked).cur || { start: p.start_date, end: p.checked });
+  const drawPieces = () => {
+    const { start: a, end: b } = cur();
+    const cards = [...$("content-btype-cmp-cards").querySelectorAll(".card")];
+    cards.forEach((c, i) => { const on = types[i] === btypePick;
+      c.classList.add("pickable"); c.classList.toggle("picked", on); c.setAttribute("role", "button"); c.tabIndex = 0; c.setAttribute("aria-pressed", on); });
+    const mine = piecesIn(a, b).filter((r) => r.t === btypePick), said = line(btypePick, a, b, true);
+    $("content-btype-head").textContent = `${btypePick}, ${range(a, b)}`;
+    $("content-btype-line").textContent = said ? `${said}.` : "";
+    if (!mine.length) { $("content-btype-pieces").innerHTML = `<p class="muted">No ${esc(btypePick.toLowerCase())} published in this period.</p>`; return; }
+    table($("content-btype-pieces"), { rows: mine, sortKey: "visits", pageSize: 25, columns: [
+      { key: "title", label: "Piece", fmt: (v, r) => `<a href="${esc(r.link)}" target="_blank" rel="noopener">${esc(r.title)}</a>` },
+      { key: "date", label: "Published", fmt: (v) => esc(dayYear(v)) },
+      { key: "visits", label: "Visits", num: true, fmt: num },
+      { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "clicks", label: "Google clicks", num: true, fmt: num },
+    ] });
+    $("content-btype-pieces-source").textContent = `Visits and engaged visits: Google Analytics, opsera.ai only, to ${dayYear(b < gaLast ? b : gaLast)} (Pacific time). Google clicks: Search Console, to ${dayYear(b < d.gsc_last_day ? b : d.gsc_last_day)}. Each piece counts from its publish date. All blogs means every blog published in the period.`;
+  };
   compare({ id: "content-btype", start: p.start_date, last: p.checked,
     source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
-    metrics: types.map((t) => ({ label: t, value: rangeSum(rows, (r) => (r.t === t ? 1 : 0)), fmt: num, noDelta: true })) });
+    metrics: types.map((t) => ({ label: t, value: (a, b) => rows.filter((r) => r.t === t && r.date >= a && r.date <= b).length, fmt: num, noDelta: true,
+      sub: (a, b) => line(t, a, b, false) })) });
+  const pickAt = (el) => { const c = el.closest(".card"); if (!c) return;
+    btypePick = types[[...$("content-btype-cmp-cards").querySelectorAll(".card")].indexOf(c)] || btypePick; drawPieces(); };
+  $("content-btype-cmp-cards").addEventListener("click", (e) => pickAt(e.target));
+  $("content-btype-cmp-cards").addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pickAt(e.target); } });
+  monthlyTabs.push(drawPieces);   // after a new period redraws the cards
+  drawPieces();
 }
 // Hub and spoke campaigns, a tab of its own: one button and one card per campaign in data/campaign_hubs.json, newest first,
 // one card shown at a time. Each card has the core piece in the middle and its formats and channels around it, each with its
@@ -2517,7 +2566,7 @@ function renderPipeline(sf) {
 function openContent() {
   if (!publishedLoad) publishedLoad = load("published.json").then((pub) => {
     renderPublished(pub);
-    load("blog_types.json").then((bt) => renderBlogTypes(pub, bt)).catch(() => { $("content-btype-cmp-cards").innerHTML = `<p class="muted">Blog types aren't available right now.</p>`; });
+    Promise.all([load("blog_types.json"), load("lookup.json")]).then(([bt, d]) => renderBlogTypes(pub, bt, d)).catch(() => { $("content-btype-cmp-cards").innerHTML = `<p class="muted">Blog types aren't available right now.</p>`; });
   })
     .catch(() => { $("content-published").innerHTML = `<p class="muted">The list of what we published isn't available right now.</p>`; });
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=45">
+<link rel="stylesheet" href="styles.css?v=46">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -214,9 +214,13 @@
     <div class="seg" id="content-type" role="group" aria-label="Choose a type of content"></div>
     <div class="panel">
       <h3>Content by type</h3>
-      <p class="muted">Every blog has one type. Counts follow the period above.</p>
+      <p class="muted">Every blog has one type. Counts follow the period above. Click a type to see its pieces.</p>
       <div class="cards compact" id="content-btype-cmp-cards"></div>
       <p class="source" id="content-btype-cmp-source"></p>
+      <h4 class="btype-head" id="content-btype-head"></h4>
+      <p class="btype-line" id="content-btype-line"></p>
+      <div id="content-btype-pieces"></div>
+      <p class="source" id="content-btype-pieces-source"></p>
     </div>
     <p class="muted" id="content-status">Loading...</p>
     <div class="panel">
@@ -1064,6 +1068,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=123"></script>
+<script src="app.js?v=124"></script>
 </body>
 </html>

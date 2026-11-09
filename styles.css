@@ -435,3 +435,10 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
   .hub-list li.c { border-left: 3px solid var(--accent); }
   .hub-list li strong { color: var(--accent-deep); white-space: nowrap; font-size: 0.85rem; }
 }
+
+/* Content by type: each type card picks the list of pieces below */
+.card.pickable { cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.card.pickable:hover { background: var(--wash); }
+.card.picked { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.btype-head { font-family: var(--display); font-size: 1rem; margin: 18px 0 4px; }
+.btype-line { margin: 0 0 8px; color: var(--ink-2); }
