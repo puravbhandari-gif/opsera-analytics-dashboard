@@ -52,7 +52,12 @@ INFRASITY = {"/blog/harness-engineering", "/blog/ai-software-factory", "/blog/so
              "/blog/enterprise-benchmark", "/blog/application-modernization-strategy", "/blog/mcp-security", "/blog/claude-mythos-vulnerability",
              "/blog/software-factory-pattern", "/blog/github-copilot-alternatives", "/blog/migrate-dotnet-framework-to-dotnet-10",
              "/blog/migrate-coldfusion-to-java-spring-boot", "/blog/software-factory-benefits", "/blog/software-factory-as-a-service",
-             "/blog/cursor-alternatives"}
+             "/blog/cursor-alternatives",
+             # Their full list (sheet "Opsera answers 2026-11-06", tab "5 All opsera.ai pages", read 9 Nov 2026), less
+             # softwareforge.ai's utility pages and repeats: 57 opsera.ai pages, which adds these 7.
+             "/blog/agentic-ai-security", "/blog/ai-code-security", "/blog/cloud-security-posture-management",
+             "/blog/how-opsera-appsec-agents-stop-npm-supply-chain-attacks-before-they-hit-your-build", "/blog/shift-left-security",
+             "/flutter-2026-ai-sdlc-summit", "/headless-devops-for-salesforce-orgs"}
 INFRASITY_UNDER = ("/forge/modernization/", "/forge/new-apps/")   # their migration and new-app pages, moved onto opsera.ai on 12 Oct
 INFRASITY_OFFSITE = 11   # their Distribution posts on Medium, dev.to and daily.dev
 # What they published each month, from their reports (Jul and Aug on softwareforge.ai, before it moved to opsera.ai)

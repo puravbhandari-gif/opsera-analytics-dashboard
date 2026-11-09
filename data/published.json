@@ -4,7 +4,7 @@
  "checked": "2026-11-09",
  "youtube_pulled_at": "2026-11-09T11:45+05:30",
  "pages_checked": 314,
- "pages_without_date": 33,
+ "pages_without_date": 5,
  "items": [
   {
    "date": "2026-11-04",
@@ -335,6 +335,12 @@
    "type": "Blog",
    "title": "DORA vs SPACE Metrics: Differences and Use Cases",
    "link": "https://opsera.ai/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework"
+  },
+  {
+   "date": "2026-07-01",
+   "type": "Guide",
+   "title": "DORA vs SPACE Metrics: Differences and Use Cases",
+   "link": "https://opsera.ai/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework"
   }
  ]
 }

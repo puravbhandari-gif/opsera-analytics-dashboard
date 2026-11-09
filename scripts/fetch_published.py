@@ -3,7 +3,9 @@ blog posts, reports, white papers, eBooks, guides, webinars and YouTube videos, 
 Writes data/published.json. Runs every Monday after fetch_youtube.py.
 
 Pages come from opsera.ai's sitemap. Each page's date is the publish date the page itself states
-(datePublished, or article:published_time). A page with no publish date is left out and counted.
+(datePublished, or article:published_time). A page with no publish date is left out and counted, except knowledge
+base articles: they take their last edit on the old WordPress site, from data/kb_dates.json (read from Contentful on
+9 Nov 2026), since the site shows no publish date for them.
 YouTube videos come from data/youtube.json (public videos only), so this makes no YouTube calls.
 Agreed with Purav on 4 Nov 2026.
 """
@@ -73,10 +75,12 @@ def main():
     if len(wanted) < 100:
         stop(f"Only {len(wanted)} content pages in the sitemap, which looks wrong.")
 
+    kb_dates = json.loads((DATA / "kb_dates.json").read_text())["dates"] if (DATA / "kb_dates.json").exists() else {}
     rows, undated = [], []
     with concurrent.futures.ThreadPoolExecutor(8) as pool:
         for url, date, title in pool.map(page_facts, wanted):
             path, k = wanted[url]
+            date = date or kb_dates.get(path)
             if not date:
                 undated.append(path)
             elif date >= START:

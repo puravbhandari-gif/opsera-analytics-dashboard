@@ -6,7 +6,7 @@
  "rankings_week": "2026-10-26",
  "infrasity": {
   "list": "Infrasity's content list, Google Sheet opsera_aeo_content, read 6 Nov 2026",
-  "pages_on_site": 51,
+  "pages_on_site": 58,
   "posts_elsewhere": 11,
   "published": [
    {
@@ -41,22 +41,22 @@
   "months": [
    {
     "month": "2026-07",
-    "clicks": 83,
+    "clicks": 85,
     "ai_visits": 2
    },
    {
     "month": "2026-08",
-    "clicks": 115,
-    "ai_visits": 0
+    "clicks": 136,
+    "ai_visits": 1
    },
    {
     "month": "2026-09",
-    "clicks": 451,
-    "ai_visits": 5
+    "clicks": 518,
+    "ai_visits": 11
    },
    {
     "month": "2026-10",
-    "clicks": 363,
+    "clicks": 406,
     "ai_visits": 15
    }
   ]
@@ -183,8 +183,8 @@
    "pages_with_clicks": 501,
    "kb_clicks": 2329,
    "kb_pages_with_clicks": 36,
-   "infrasity_clicks": 1020,
-   "infrasity_pages_with_clicks": 35,
+   "infrasity_clicks": 1165,
+   "infrasity_pages_with_clicks": 41,
    "top_pages": [
     {
      "page": "/",
@@ -475,14 +475,6 @@
      "by": "Infrasity"
     },
     {
-     "page": "/blog/factory-ai-alternatives",
-     "group": "Blog",
-     "first_week": "2026-09-14",
-     "first_spot": 4.3,
-     "spot": 3.1,
-     "by": "Infrasity"
-    },
-    {
      "page": "/blog/spec-driven-development",
      "group": "Blog",
      "first_week": "2026-09-28",
@@ -491,12 +483,12 @@
      "by": "Opsera"
     },
     {
-     "page": "/blog/dora-2025-report-ai-software-development",
+     "page": "/blog/factory-ai-alternatives",
      "group": "Blog",
-     "first_week": "2026-03-30",
-     "first_spot": 8.3,
-     "spot": 7.4,
-     "by": "Opsera"
+     "first_week": "2026-09-14",
+     "first_spot": 4.3,
+     "spot": 3.1,
+     "by": "Infrasity"
     },
     {
      "page": "/blog/what-is-agentic-devops",
@@ -512,6 +504,22 @@
      "first_week": "2026-06-08",
      "first_spot": 5.8,
      "spot": 7.7,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 8.3,
+     "spot": 7.4,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/cobol-modernization",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 8.8,
+     "spot": 6.8,
      "by": "Infrasity"
     },
     {
@@ -531,14 +539,6 @@
      "by": "Opsera"
     },
     {
-     "page": "/blog/cobol-modernization",
-     "group": "Blog",
-     "first_week": "2026-09-07",
-     "first_spot": 8.8,
-     "spot": 6.8,
-     "by": "Infrasity"
-    },
-    {
      "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
      "group": "Blog",
      "first_week": "2026-03-30",
@@ -555,35 +555,11 @@
      "by": "Opsera"
     },
     {
-     "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
-     "group": "Blog",
-     "first_week": "2026-03-30",
-     "first_spot": 41.8,
-     "spot": 16.7,
-     "by": "Opsera"
-    },
-    {
-     "page": "/blog/devsecops-tools",
-     "group": "Blog",
-     "first_week": "2026-06-22",
-     "first_spot": 11.7,
-     "spot": 8.8,
-     "by": "Infrasity"
-    },
-    {
      "page": "/blog/legacy-code-modernization",
      "group": "Blog",
      "first_week": "2026-08-31",
      "first_spot": 6.8,
      "spot": 7.5,
-     "by": "Infrasity"
-    },
-    {
-     "page": "/blog/sast-tools",
-     "group": "Blog",
-     "first_week": "2026-07-06",
-     "first_spot": 8.7,
-     "spot": 8.3,
      "by": "Infrasity"
     },
     {
@@ -595,19 +571,43 @@
      "by": "Infrasity"
     },
     {
-     "page": "/blog/8090-ai-alternatives",
-     "group": "Blog",
-     "first_week": "2026-09-14",
-     "first_spot": 7.0,
-     "spot": 6.4,
-     "by": "Infrasity"
-    },
-    {
      "page": "/blog/harness-engineering",
      "group": "Blog",
      "first_week": "2026-10-12",
      "first_spot": 7.0,
      "spot": 7.2,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/devsecops-tools",
+     "group": "Blog",
+     "first_week": "2026-06-22",
+     "first_spot": 11.7,
+     "spot": 8.8,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+     "group": "Blog",
+     "first_week": "2026-03-30",
+     "first_spot": 41.8,
+     "spot": 16.7,
+     "by": "Opsera"
+    },
+    {
+     "page": "/blog/sast-tools",
+     "group": "Blog",
+     "first_week": "2026-07-06",
+     "first_spot": 8.7,
+     "spot": 8.3,
+     "by": "Infrasity"
+    },
+    {
+     "page": "/blog/snowflake-to-databricks-migration",
+     "group": "Blog",
+     "first_week": "2026-09-07",
+     "first_spot": 6.4,
+     "spot": 5.5,
      "by": "Infrasity"
     }
    ],
@@ -1047,20 +1047,20 @@
      "by": "Infrasity"
     },
     {
-     "page": "/blog/factory-ai-alternatives",
-     "group": "Blog",
-     "first_week": "2026-09-14",
-     "first_spot": 4.3,
-     "spot": 3.1,
-     "by": "Infrasity"
-    },
-    {
      "page": "/blog/spec-driven-development",
      "group": "Blog",
      "first_week": "2026-09-28",
      "first_spot": 8.5,
      "spot": 9.2,
      "by": "Opsera"
+    },
+    {
+     "page": "/blog/factory-ai-alternatives",
+     "group": "Blog",
+     "first_week": "2026-09-14",
+     "first_spot": 4.3,
+     "spot": 3.1,
+     "by": "Infrasity"
     },
     {
      "page": "/blog/cobol-modernization",
@@ -1087,11 +1087,11 @@
      "by": "Infrasity"
     },
     {
-     "page": "/blog/8090-ai-alternatives",
+     "page": "/blog/snowflake-to-databricks-migration",
      "group": "Blog",
-     "first_week": "2026-09-14",
-     "first_spot": 7.0,
-     "spot": 6.4,
+     "first_week": "2026-09-07",
+     "first_spot": 6.4,
+     "spot": 5.5,
      "by": "Infrasity"
     }
    ],

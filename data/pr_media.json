@@ -4,17 +4,6 @@
  "checked": "2026-11-09",
  "items": [
   {
-   "date": "2026-11-08",
-   "outlet": "AutoGPT",
-   "title": "Opsera MCP server for AI agents - Integrations",
-   "link": "https://agpt.co/integrations/opsera/",
-   "type": "Mention",
-   "topic": "AI-SDLC",
-   "quoted": "",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
    "date": "2026-11-06",
    "outlet": "RamaOnHealthcare",
    "title": "The Agentic Paradox: Why Smarter AI Requires Stronger Human Governance",
@@ -49,17 +38,6 @@
    "found_by": "Apify, Google News and Google search"
   },
   {
-   "date": "2026-11-06",
-   "outlet": "Forbes",
-   "title": "Kumar Chivukula - Forbes Technology Council",
-   "link": "https://www.forbes.com/councils/forbestechcouncil/people/kumarchivukula/",
-   "type": "Byline",
-   "topic": "Other",
-   "quoted": "Kumar Chivukula",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
    "date": "2026-11-03",
    "outlet": "Voltage Control",
    "title": "AI Review Gate Redesign: Fix the Reason, Not the Speed",
@@ -79,7 +57,8 @@
    "topic": "Forge",
    "quoted": "Kumar Chivukula",
    "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-30",
@@ -160,7 +139,8 @@
    "topic": "AI-SDLC",
    "quoted": "",
    "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-28",
@@ -201,7 +181,7 @@
    "outlet": "brokenrobot.xyz",
    "title": "Spec-driven development: promised benefits, measured costs",
    "link": "https://www.brokenrobot.xyz/blog/spec-driven-development-promised-benefits-measured-costs/",
-   "type": "Mention",
+   "type": "Passing mention",
    "topic": "Unified Insights",
    "quoted": "",
    "placed_by": "",
@@ -249,7 +229,8 @@
    "topic": "Security",
    "quoted": "",
    "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-19",
@@ -274,17 +255,6 @@
    "found_by": "SamsonPR tracker, Account Activities"
   },
   {
-   "date": "2026-10-15",
-   "outlet": "devyardstick.com",
-   "title": "Opsera - DevYardstick",
-   "link": "https://devyardstick.com/tools/opsera/",
-   "type": "Mention",
-   "topic": "Other",
-   "quoted": "",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
    "date": "2026-10-08",
    "outlet": "rfp.wiki",
    "title": "Puppet vs Opsera (2026): We tried both - see who wins",
@@ -307,33 +277,11 @@
    "topic": "Other"
   },
   {
-   "date": "2026-10-01",
-   "outlet": "Luma",
-   "title": "Opsera Flutter 2026: The AI-SDLC Summit",
-   "link": "https://luma.com/opsera-48rn",
-   "type": "Mention",
-   "topic": "AI-SDLC",
-   "quoted": "Kumar Chivukula",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
-   "date": "2026-09-26",
-   "outlet": "globallawlists.org",
-   "title": "Opsera Law PLLC | Law Firm in Seattle, United States",
-   "link": "https://globallawlists.org/law-firms/opsera-law-pllc",
-   "type": "Mention",
-   "topic": "Other",
-   "quoted": "",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
    "date": "2026-09-24",
    "outlet": "TJ Klug",
    "title": "You Can't Sprint Your Way to Agentic Engineering. Where to Start When Your Codebase Is Twenty Years Old.",
    "link": "https://tjklug.com/posts/agile-to-agentic/",
-   "type": "Mention",
+   "type": "Passing mention",
    "topic": "AI-SDLC",
    "quoted": "",
    "placed_by": "",
@@ -425,18 +373,8 @@
    "topic": "AI-SDLC",
    "quoted": "",
    "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
-   "date": "2026-08-02",
-   "outlet": "mydogood.com",
-   "title": "Customer Results | DoGood",
-   "link": "https://www.mydogood.com/results/",
-   "type": "Mention",
-   "topic": "Other",
-   "quoted": "",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-07-28",
@@ -473,17 +411,6 @@
   },
   {
    "date": "2026-07-17",
-   "outlet": "getinkahoots.com",
-   "title": "Work | Brands We've Built With - Kahoots",
-   "link": "https://getinkahoots.com/work",
-   "type": "Mention",
-   "topic": "Other",
-   "quoted": "",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
-   "date": "2026-07-17",
    "outlet": "InformationWeek",
    "title": "AI coding's next CIO problem is bigger than productivity",
    "link": "https://www.informationweek.com/machine-learning-ai/the-ai-coding-rollout-worked-now-cios-have-a-bigger-problem",
@@ -501,17 +428,6 @@
    "type": "Mention",
    "topic": "Other",
    "quoted": "Kumar Chivukula, Chandra Ranganathan",
-   "placed_by": "",
-   "found_by": "Apify, Google News and Google search"
-  },
-  {
-   "date": "2026-07-06",
-   "outlet": "Startup Fundraising",
-   "title": "Kumar Chivukula, Founder of Opsera \u2014 $39M Raised",
-   "link": "https://startupfundraising.com/founders/kumar-chivukula-opsera",
-   "type": "Mention",
-   "topic": "Other",
-   "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
   },

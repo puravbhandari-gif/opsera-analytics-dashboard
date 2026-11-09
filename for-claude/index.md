@@ -25,7 +25,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 
 - Google Analytics and HubSpot: 2026-04-01 to 2026-11-07.
 - Search Console (Google search): 2026-04-01 to 2026-11-07. It runs about 2 days behind.
-- LinkedIn company page: 2026-07-01 to 2026-11-01. LinkedIn Kumar: 2026-07-01 to 2026-10-27, the last day still being counted when exported.
+- LinkedIn company page: 2026-07-01 to 2026-11-07. LinkedIn Kumar: 2026-07-01 to 2026-10-27, the last day still being counted when exported.
 - YouTube: 2026-04-01 to 2026-11-06.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
@@ -112,8 +112,8 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 Paid means sponsored posts. LinkedIn's own sheets disagree on reposts, so we leave them out.
 
 - [linkedin_brand_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_by_month.csv): LinkedIn brand tab (Opsera company page), by month. Source: LinkedIn exports, dates in UTC. 5 rows.
-- [linkedin_brand_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_by_week.csv): LinkedIn brand tab (Opsera company page), by week. Source: LinkedIn exports, dates in UTC. 18 rows.
-- [linkedin_brand_posts.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_posts.csv): Each Opsera company page post. Source: LinkedIn exports. 65 rows.
+- [linkedin_brand_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_by_week.csv): LinkedIn brand tab (Opsera company page), by week. Source: LinkedIn exports, dates in UTC. 19 rows.
+- [linkedin_brand_posts.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_posts.csv): Each Opsera company page post. Source: LinkedIn exports. 67 rows.
 
 ## LinkedIn exec tab (Kumar Chivukula)
 

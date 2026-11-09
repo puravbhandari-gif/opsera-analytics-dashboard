@@ -54,6 +54,7 @@ MANUAL = [
 PARTNERSHIP = {"https://x.ai/news/partnernetworkannouncement", "https://x.ai/partners/marketplace"}   # the xAI partner network
 # Pages that name Opsera only in passing: kept in the list, not placements (Purav, 6 Nov 2026)
 PASSING = {
+    "https://www.brokenrobot.xyz/blog/spec-driven-development-promised-benefits-measured-costs/", "https://tjklug.com/posts/agile-to-agentic/",
     "https://www.rfp.wiki/it-security/service-orchestration-and-automation-platforms/puppet/opsera",
     "https://www.clearhavenpartners.com/news-and-insights/you-cant-sprint-your-way-to-agentic-engineering",
     "https://www.news.aakashg.com/p/pm-to-product-builder-roadmap",
@@ -90,10 +91,13 @@ LEFT_OUT = ("opsera.ai", "opsera.io", "linkedin.com", "facebook.com", "x.com", "
             "f6s.com", "g2.com", "capterra.com", "trustradius.com", "itechguides.com", "sourceforge.net", "github.com",
             "marketplace.microsoft.com", "aws.amazon.com", "appexchange.salesforce.com", "bizups.info", "wellfound.com", "builtin.com",
             "pitchbook.com", "cbinsights.com", "owler.com", "apollo.io", "signalhire.com", "lusha.com", "theorg.com",
-            "opseragovernance.com")   # opseragovernance.com is another company's site
+            "opseragovernance.com",   # opseragovernance.com is another company's site
+            # Found by the 9 Nov 2026 run and left out (Purav to confirm): our own event page, another company called Opsera,
+            # agencies' own pages, tool directories and profiles
+            "luma.com", "globallawlists.org", "mydogood.com", "getinkahoots.com", "devyardstick.com", "startupfundraising.com", "agpt.co")
 # Checked by hand and left out, so the weekly run doesn't add them again: a podcast's list of episodes (the episode itself is a row)
 STRAIGHT = str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'})   # straight quotes, as on the rest of the page
-NOT_A_PIECE = {"https://firehorse.ai/podcast"}
+NOT_A_PIECE = {"https://firehorse.ai/podcast", "https://www.forbes.com/councils/forbestechcouncil/people/kumarchivukula/"}   # an author page
 SIDE_PARTS = re.compile(r"<(aside|nav|footer)\b.*?</\1>|<(ul|ol|div|section)\b[^>]*class=\"[^\"]*(related|sidebar|widget)[^\"]*\".*?</\2>", re.S | re.I)
 JOB_WORDS = re.compile(r"\b(job|jobs|careers?|hiring|salary|salaries|vacanc|openings?)\b", re.I)
 OUTLETS = {"prnewswire.com": "PR Newswire", "globenewswire.com": "GlobeNewswire", "finance.yahoo.com": "Yahoo Finance",

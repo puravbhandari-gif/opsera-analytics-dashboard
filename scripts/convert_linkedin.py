@@ -53,8 +53,14 @@ COMPANY_NOV = {   # 18 Oct to 1 Nov 2026, exported 3 Nov (2 visitor files came d
     "visitors": "opsera_visitors_1793692764754.xls",
 }
 COMPANY_NOV_RANGE = ("2026-10-18", "2026-11-01")
+COMPANY_NOV2 = {   # 24 Oct to 7 Nov 2026, exported 9 Nov (again 2 visitor files with the same daily numbers; this one is kept)
+    "content": "opsera_content_1794203290329.xls", "content_start": "2026-10-09",
+    "followers": "opsera_followers_1794203321813.xls",
+    "visitors": "opsera_visitors_1794203309042.xls",
+}
+COMPANY_NOV2_RANGE = ("2026-10-24", "2026-11-07")
 COMPANY_DELAY_DAYS = 2   # LinkedIn: "Data is delayed by up to 2 days"
-EXPORTED_ON = {"company": "2026-11-03"}
+EXPORTED_ON = {"company": "2026-11-09"}
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
 KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
@@ -133,7 +139,9 @@ def check_days(label, dates, start=START, end=END):
 
 def company(files=COMPANY, start=START, end=END):
     metrics = by_header(xls_sheet(files["content"], "Metrics"), 1)
-    check_days("Company content sheet", [iso(r["Date"]) for r in metrics], start, end)
+    # The 9 Nov 2026 content export covers 30 days while its other files cover 15: check all its days, keep the export's range
+    check_days("Company content sheet", [iso(r["Date"]) for r in metrics], files.get("content_start", start), end)
+    metrics = [r for r in metrics if iso(r["Date"]) >= start]
     daily = []
     for r in metrics:
         row = {"date": iso(r["Date"])}
@@ -181,6 +189,7 @@ def company(files=COMPANY, start=START, end=END):
     if any(int(r["Life page views (total)"]) for r in visitors):
         stop("Life page views are no longer 0. Check with Purav before showing or hiding them.")
 
+    posts = [p for p in posts if p["created"] >= start] if files.get("content_start") else posts   # earlier exports hold the rest
     if any(not start <= p["created"] <= end for p in posts):
         stop(f"The company post list has posts created outside {start} to {end}.")
     return {
@@ -240,7 +249,7 @@ def kumar(name=KUMAR, start=START, end=END):
 
 def main():
     oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
-    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), *COMPANY_NOV.values(), KUMAR, *oct_files.values()]
+    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), *COMPANY_NOV.values(), *(v for k, v in COMPANY_NOV2.items() if k != "content_start"), KUMAR, *oct_files.values()]
                if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
@@ -253,7 +262,8 @@ def main():
     # The company page: July to September, then 1 to 20 Oct, 11 to 25 Oct and 18 Oct to 1 Nov joined into one run of
     # days, each newer export winning where they overlap
     q3 = company()
-    exports = [company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE), company(COMPANY_NOV, *COMPANY_NOV_RANGE)]
+    exports = [company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE), company(COMPANY_NOV, *COMPANY_NOV_RANGE),
+               company(COMPANY_NOV2, *COMPANY_NOV2_RANGE)]
     latest_co = exports[-1]
     co = {**q3, "end_date": latest_co["end_date"], "breakdowns": latest_co["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
     for key in ("daily", "followers_daily", "visitors_daily"):

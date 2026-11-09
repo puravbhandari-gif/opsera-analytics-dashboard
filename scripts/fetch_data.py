@@ -362,6 +362,15 @@ def ai_visits(s, end):
             "sources": [{"source": k, "tool": v} for k, v in sorted(sources.items())]}
 
 
+def kumar_links(s, end):
+    """Visits from links Kumar shares, tagged utm_campaign=kumar, by day: his profile button (utm_content=profile-button)
+    and his posts (any other utm_content). Added 9 Nov 2026."""
+    flt = {"filter": {"fieldName": "sessionCampaignName", "stringFilter": {"matchType": "EXACT", "value": "kumar", "caseSensitive": False}}}
+    rows = ga_report(s, end, ["date", "sessionManualAdContent"], ["sessions", "engagedSessions"], flt=flt)
+    return [{"date": r["date"], "where": "profile" if r["sessionManualAdContent"].lower() == "profile-button" else "posts",
+             "visits": r["sessions"], "engaged": r["engagedSessions"]} for r in sorted(rows, key=lambda r: r["date"])]
+
+
 def google_search_visits(s, end):
     """Google organic visits split into first and return visits, to explain why visits can top Search Console clicks."""
     rows = ga_report(s, end, ["newVsReturning"], ["sessions", "engagedSessions"],
@@ -504,6 +513,7 @@ def fetch_ga(s, end):
         "journey": journey(s, end),
         "ai": ai_visits(s, end),
         "google_search_visits": google_search_visits(s, end),
+        "kumar_links": kumar_links(s, end),
         "email_robots_daily": email_robots(s, end),
         "google_ads_daily": google_ads(s, end),
     }, leads(form_rows)

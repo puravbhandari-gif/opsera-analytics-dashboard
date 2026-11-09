@@ -20,8 +20,7 @@
   "items": [
    "Google AI Overviews name Opsera as a source for all 6 blogs they checked.",
    "Perplexity lists Opsera as a source for the same 6 blogs.",
-   "ChatGPT cites 2 blogs: Factory.ai alternatives and Software factory as a service.",
-   "Claude cites opsera.ai for 11 of 35 tracked prompts. ChatGPT cites it for 7, Gemini for 5 and Perplexity for none."
+   "ChatGPT cites 2 blogs: Factory.ai alternatives and Software factory as a service."
   ],
   "softwareforge": [
    {
@@ -38,6 +37,59 @@
     "visits": 1801,
     "note": ""
    }
-  ]
+  ],
+  "prompts": {
+   "source": "Infrasity's prompt tracker, sheet \"Opsera answers 2026-11-06\", tab \"4 Claude prompts\", read 9 Nov 2026",
+   "total": 35,
+   "assistants": [
+    [
+     "Claude, last 30 days",
+     11
+    ],
+    [
+     "Claude, last 90 days",
+     17
+    ],
+    [
+     "ChatGPT, 30 days",
+     7
+    ],
+    [
+     "Gemini, 30 days",
+     6
+    ],
+    [
+     "Perplexity, 30 days",
+     0
+    ]
+   ],
+   "clusters": [
+    [
+     "Opsera",
+     5,
+     10
+    ],
+    [
+     "Agentic DevOps",
+     3,
+     5
+    ],
+    [
+     "AI-driven DevOps",
+     2,
+     5
+    ],
+    [
+     "SoftwareForge",
+     1,
+     10
+    ],
+    [
+     "Platform engineering",
+     0,
+     5
+    ]
+   ]
+  }
  }
 }

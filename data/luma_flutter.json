@@ -1,0 +1,91 @@
+{
+ "source": "Luma guest list for Flutter 2026, from Valentina",
+ "exported": "2026-11-09",
+ "read": "2026-11-09",
+ "registered": 507,
+ "confirmed": 200,
+ "waitlist": 48,
+ "declined": 259,
+ "attended": 119,
+ "attended_staff": 25,
+ "sources": [
+  {
+   "source": "No source tag",
+   "registered": 173,
+   "confirmed": 76,
+   "attended": 54
+  },
+  {
+   "source": "Newsletter",
+   "registered": 137,
+   "confirmed": 11,
+   "attended": 4
+  },
+  {
+   "source": "Aakash's newsletter",
+   "registered": 47,
+   "confirmed": 17,
+   "attended": 3
+  },
+  {
+   "source": "Exec team",
+   "registered": 37,
+   "confirmed": 34,
+   "attended": 21
+  },
+  {
+   "source": "Email",
+   "registered": 20,
+   "confirmed": 12,
+   "attended": 7
+  },
+  {
+   "source": "sv",
+   "registered": 18,
+   "confirmed": 15,
+   "attended": 7
+  },
+  {
+   "source": "kc",
+   "registered": 14,
+   "confirmed": 9,
+   "attended": 5
+  },
+  {
+   "source": "Facebook",
+   "registered": 14,
+   "confirmed": 0,
+   "attended": 0
+  },
+  {
+   "source": "Opsera staff",
+   "registered": 7,
+   "confirmed": 7,
+   "attended": 4
+  },
+  {
+   "source": "ph",
+   "registered": 6,
+   "confirmed": 6,
+   "attended": 6
+  },
+  {
+   "source": "The Deep View",
+   "registered": 6,
+   "confirmed": 1,
+   "attended": 0
+  },
+  {
+   "source": "Opsera social",
+   "registered": 5,
+   "confirmed": 3,
+   "attended": 3
+  },
+  {
+   "source": "Other sources (under 5 each)",
+   "registered": 23,
+   "confirmed": 9,
+   "attended": 5
+  }
+ ]
+}

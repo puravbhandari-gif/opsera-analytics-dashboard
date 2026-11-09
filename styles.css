@@ -400,3 +400,34 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 @media (max-width: 900px) { .seo-inf-grid { grid-template-columns: 1fr; gap: 16px; } }
 .exec-note { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
 .seo-tag.kb { background: rgba(0, 132, 155, 0.14); color: var(--s3); }
+
+/* Campaign hub: hub and spoke on wide screens, a list on phones */
+.hub-svg { width: 100%; height: auto; display: block; margin: 4px 0 8px; }
+.hub-line { stroke: var(--axis); stroke-width: 1.5; }
+.hub-line.f { stroke: var(--s3); opacity: 0.6; }
+.hub-line.c { stroke: var(--accent); opacity: 0.45; }
+.hub-core { fill: var(--accent); }
+.hub-svg text { text-anchor: middle; font-family: var(--font); }
+.hub-k { fill: rgba(255, 255, 255, 0.85); font-size: 11px; }
+.hub-t { fill: #fff; font-size: 13px; font-weight: 500; }
+.hub-n { fill: #fff; font-size: 15px; font-weight: 700; font-family: var(--display); }
+.hub-node rect { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+.hub-node.f rect { stroke: var(--s3); }
+.hub-node.c rect { stroke: var(--accent); }
+.hub-g { fill: var(--muted); font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
+.hub-name { fill: var(--ink); font-size: 13px; font-weight: 500; }
+.hub-num { fill: var(--accent-deep); font-size: 12px; font-weight: 700; }
+.hub-list { display: none; }
+@media (max-width: 640px) {
+  .hub-svg { display: none; }
+  .hub-list { display: block; }
+  .hub-list-core { background: var(--accent); color: #fff; border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; }
+  .hub-list-core a { color: #fff; font-weight: 500; }
+  .hub-list-k { font-size: 0.78rem; opacity: 0.85; }
+  .hub-list-g { margin: 14px 0 6px; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+  .hub-list ul { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 2px solid var(--axis); display: grid; gap: 8px; }
+  .hub-list li { display: flex; justify-content: space-between; gap: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; font-size: 0.9rem; }
+  .hub-list li.f { border-left: 3px solid var(--s3); }
+  .hub-list li.c { border-left: 3px solid var(--accent); }
+  .hub-list li strong { color: var(--accent-deep); white-space: nowrap; font-size: 0.85rem; }
+}

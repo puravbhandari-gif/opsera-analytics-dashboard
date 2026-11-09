@@ -1,0 +1,33 @@
+{
+ "source": "Contentful, each Hub article's last edit on the old WordPress site (wordpressUpdated), read 9 Nov 2026. The site shows no publish date for these.",
+ "dates": {
+  "/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor": "2026-04-28",
+  "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer": "2026-04-28",
+  "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor": "2026-04-28",
+  "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide": "2026-04-22",
+  "/knowledge-base/ci-cd-health/build-failure-rate-what-it-tells-engineering-teams": "2026-05-08",
+  "/knowledge-base/ci-cd-health/deployment-success-rate": "2026-05-08",
+  "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework": "2026-07-01",
+  "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity": "2026-04-28",
+  "/knowledge-base/core-devex-metrics/what-is-developer-experience-devex-a-friendly-guide-for-engineers": "2026-04-22",
+  "/knowledge-base/core-flow-metrics/cycle-time-mastery-from-first-commit-to-production": "2026-04-29",
+  "/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine": "2026-04-22",
+  "/knowledge-base/core-flow-metrics/lead-time-for-changes-and-mean-lead-time": "2026-04-22",
+  "/knowledge-base/core-flow-metrics/sdlc-flow-velocity": "2026-04-29",
+  "/knowledge-base/core-reliability-metrics/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it": "2026-04-22",
+  "/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders": "2026-04-22",
+  "/knowledge-base/incident-analysis/incident-frequency": "2026-04-28",
+  "/knowledge-base/incident-analysis/repeat-incident-rate": "2026-04-28",
+  "/knowledge-base/security-and-devsecops-metrics/patch-management-efficiency": "2026-04-28",
+  "/knowledge-base/security-and-devsecops-metrics/time-to-detect-vulnerability-ttdv": "2026-04-30",
+  "/knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv": "2026-04-28",
+  "/knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments": "2026-04-28",
+  "/knowledge-base/tool-specific-analysis/amazon-q-developer": "2026-04-11",
+  "/knowledge-base/tool-specific-analysis/cursor-ai-explained": "2026-04-21",
+  "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide": "2026-04-28",
+  "/knowledge-base/value-stream-management/flow-distribution": "2026-04-23",
+  "/knowledge-base/value-stream-management/flow-efficiency-metrics": "2026-04-22",
+  "/knowledge-base/value-stream-management/time-to-value": "2026-04-23",
+  "/knowledge-base/value-stream-management/value-stream-management-explained-from-idea-to-customer-value": "2026-04-22"
+ }
+}

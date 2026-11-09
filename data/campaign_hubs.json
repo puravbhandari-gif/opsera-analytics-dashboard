@@ -6,7 +6,8 @@
    "hub": {
     "title": "PHP2Shell: Invisible Threats and What to Do Next",
     "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps",
-    "date": "2026-10-26"
+    "date": "2026-10-26",
+    "visits_path": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
    },
    "formats": [
     {
@@ -28,7 +29,57 @@
     "GitHub Universe booth",
     "Catapult pitch",
     "Forbes byline, in draft"
+   ],
+   "source": "Source: PHP2Shell campaign, 26 Oct 2026",
+   "spokes": [
+    {
+     "group": "Format",
+     "name": "Campaign page",
+     "link": "https://opsera.ai/php2shell",
+     "visits_path": "/php2shell"
+    },
+    {
+     "group": "Format",
+     "name": "Video with Vishnu and Nassir"
+    },
+    {
+     "group": "Format",
+     "name": "One-pager"
+    },
+    {
+     "group": "Channel",
+     "name": "Kumar's LinkedIn post",
+     "number": "12 reactions"
+    },
+    {
+     "group": "Channel",
+     "name": "Brand LinkedIn posts",
+     "number": "2 posts, 1,208 times seen"
+    },
+    {
+     "group": "Channel",
+     "name": "Team LinkedIn posts"
+    },
+    {
+     "group": "Channel",
+     "name": "GitHub Universe email",
+     "number": "10,276 delivered, 15 clicks"
+    },
+    {
+     "group": "Channel",
+     "name": "GitHub Universe booth"
+    },
+    {
+     "group": "Channel",
+     "name": "Catapult pitch"
+    },
+    {
+     "group": "Channel",
+     "name": "Forbes byline",
+     "number": "In draft"
+    }
    ]
   }
- ]
+ ],
+ "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct."
 }

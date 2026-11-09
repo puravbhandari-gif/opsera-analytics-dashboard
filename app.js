@@ -935,6 +935,23 @@ function renderLinkedIn(d) {
 }
 
 // Kumar's own posts and reposts: counted by month from his profile, two separate lines, never added together
+// Visits from Kumar's tagged links (utm_campaign=kumar), split into his posts and his profile button (added 9 Nov 2026)
+function renderKumarLinks(ga) {
+  const rows = ga.kumar_links || [], last = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const q = periodsFor("cq", ga.start_date, last).cur;
+  const sum = (where, a, b) => rows.reduce((t, r) => (r.date >= a && r.date <= b && (!where || r.where === where) ? t + r.visits : t), 0);
+  $("li-kl-cards").innerHTML = [["From his posts", "posts"], ["From his profile button", "profile"], ["All", null]]
+    .map(([label, w]) => card(`${label}, ${quarterName(q.start)}`, num(sum(w, q.start, q.end)))).join("");
+  const first = rows.length ? weekStart(rows[0].date) : null, weeks = [];
+  for (let w = first; w && w <= last; w = addDays(w, 7)) weeks.push(w);
+  $("li-kl-weeks").innerHTML = weeks.length ? `<div class="table-wrap"><table><thead><tr><th scope="col">Week</th><th class="num" scope="col">His posts</th><th class="num" scope="col">Profile button</th></tr></thead><tbody>${
+    weeks.slice().reverse().map((w) => { const e = addDays(w, 6) > last ? last : addDays(w, 6);
+      return `<tr><td>${range(w, e)}</td><td class="num">${num(sum("posts", w, e))}</td><td class="num">${num(sum("profile", w, e))}</td></tr>`; }).join("")}</tbody></table></div>`
+    : `<p class="muted">No visits from these links yet.</p>`;
+  $("li-kl-source").textContent = `Source: Google Analytics, visits on opsera.ai only, ${range(ga.start_date, last)} (Pacific time). ${quarterName(q.start)} is ${range(q.start, q.end)}. ` +
+    (rows.length ? `The first tagged visit was on ${dayYear(rows[0].date)}.` : "");
+}
+
 function renderKumarPosts(kp) {
   const src = kp.as_of ? `Source: ${kp.source}, checked ${dayYear(kp.as_of)}. Months follow UTC.` : `Source: ${kp.source}`;
   const months = kp.months, cur = months[months.length - 1], prev = months[months.length - 2];
@@ -2028,12 +2045,41 @@ function renderBlogTypes(p, bt) {
     source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
     metrics: types.map((t) => ({ label: t, value: rangeSum(rows, (r) => (r.t === t ? 1 : 0)), fmt: num, noDelta: true })) });
 }
-function renderHubs(d) {
-  $("content-hubs").innerHTML = d.hubs.map((h) => `<div class="hub"><h4>${esc(h.name)}</h4><dl class="row-facts">
-    <div><dt>Hub blog</dt><dd><a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>, ${esc(dayYear(h.hub.date))}</dd></div>
-    <div><dt>Formats</dt><dd>${h.formats.map((f) => (f.link ? `<a href="${esc(f.link)}" target="_blank" rel="noopener">${esc(f.name)}</a>` : esc(f.name))).join(", ")}</dd></div>
-    <div><dt>Shared via</dt><dd>${h.shared_via.map(esc).join(", ")}</dd></div></dl></div>`).join("");
-  $("content-hubs-source").textContent = `Source: ${d.source}.`;
+// A campaign hub as a hub and spoke: the hub blog in the middle, its formats and channels around it, each with its number.
+// Visits come from Google Analytics (opsera.ai only) from the hub's date; the rest is given in the file (agreed 9 Nov 2026).
+function renderHubs(d, lk) {
+  const idx = Object.fromEntries(lk.pages.map((p, i) => [p, i]));
+  const visits = (path, from) => { const i = idx[path]; if (i == null) return null;
+    const a = Math.round((toDate(from) - toDate(lk.start_date)) / 864e5);
+    return lk.visits.reduce((t, r) => (r[1] === i && r[0] >= a ? t + r[3] : t), 0); };
+  const wrap = (text, n) => { const out = [], words = text.split(" "); let line = "";
+    words.forEach((w) => { if ((line + " " + w).trim().length > n) { out.push(line.trim()); line = w; } else line += ` ${w}`; }); out.push(line.trim()); return out; };
+  $("content-hubs").innerHTML = d.hubs.map((h) => {
+    const hubVisits = visits(h.hub.visits_path, h.hub.date);
+    const spokes = h.spokes.map((s) => ({ ...s, number: s.visits_path ? `${num(visits(s.visits_path, h.hub.date))} visits` : s.number || "" }));
+    const W = 760, H = 520, cx = W / 2, cy = H / 2, rx = 290, ry = 195;
+    const nodes = spokes.map((s, i) => { const t = -Math.PI / 2 + (i * 2 * Math.PI) / spokes.length;
+      return { ...s, x: cx + rx * Math.cos(t), y: cy + ry * Math.sin(t) }; });
+    const svg = `<svg class="hub-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(h.name)} hub and spoke: the hub blog, ${hubVisits == null ? "" : `${num(hubVisits)} visits, `}with ${spokes.length} formats and channels">
+      ${nodes.map((n) => `<line x1="${cx}" y1="${cy}" x2="${n.x.toFixed(1)}" y2="${n.y.toFixed(1)}" class="hub-line ${n.group === "Format" ? "f" : "c"}"/>`).join("")}
+      <circle cx="${cx}" cy="${cy}" r="86" class="hub-core"/>
+      <text x="${cx}" y="${cy - 30}" class="hub-k">Hub blog, ${esc(day(h.hub.date))}</text>
+      ${wrap(h.hub.title, 22).slice(0, 3).map((l, i) => `<text x="${cx}" y="${cy - 8 + i * 17}" class="hub-t">${esc(l)}</text>`).join("")}
+      ${hubVisits == null ? "" : `<text x="${cx}" y="${cy + 52}" class="hub-n">${num(hubVisits)} visits</text>`}
+      ${nodes.map((n) => { const lines = wrap(n.name, 20), bw = 150, bh = 26 + lines.length * 15 + (n.number ? 16 : 0);
+        return `<g class="hub-node ${n.group === "Format" ? "f" : "c"}"><rect x="${(n.x - bw / 2).toFixed(1)}" y="${(n.y - bh / 2).toFixed(1)}" width="${bw}" height="${bh}" rx="10"/>
+          <text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 15).toFixed(1)}" class="hub-g">${n.group}</text>
+          ${lines.map((l, i) => `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 31 + i * 15).toFixed(1)}" class="hub-name">${esc(l)}</text>`).join("")}
+          ${n.number ? `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 31 + lines.length * 15 + 2).toFixed(1)}" class="hub-num">${esc(n.number)}</text>` : ""}</g>`; }).join("")}
+    </svg>`;
+    // Phones: the same hub and spokes as a list, so every label stays readable
+    const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub blog, ${esc(dayYear(h.hub.date))}</span>
+      <a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>${hubVisits == null ? "" : `<strong>${num(hubVisits)} visits</strong>`}</div>
+      ${["Format", "Channel"].map((g) => `<p class="hub-list-g">${g === "Format" ? "Formats" : "Channels"}</p><ul>${spokes.filter((s) => s.group === g).map((s) =>
+        `<li class="${g === "Format" ? "f" : "c"}"><span>${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</span>${s.number ? `<strong>${esc(s.number)}</strong>` : ""}</li>`).join("")}</ul>`).join("")}</div>`;
+    return `<div class="hub"><h4>${esc(h.name)}</h4>${svg}${list}<p class="source">${esc(h.source)}. ${esc(d.numbers_note)}</p></div>`;
+  }).join("");
+  $("content-hubs-source").textContent = "";
 }
 
 // ---------- PR and media: every article, interview, byline, podcast and press mention, by quarter ----------
@@ -2109,7 +2155,7 @@ function renderPrMedia(d, ga, ah, sov) {
     return card(`${label}, ${qName}`, num(cur), pp.prev ? `${pp.prevName}: ${num(prev)}` : pp.none, cmpDelta(cur, prev));
   }).join("");
   $("pr-cards-source").textContent = `${pp.why ? `${pp.why} ` : ""}Source: ${d.source}, checked ${dayYear(d.checked)}. ${qName}, ${range(pp.cur.start, pp.cur.end)}` +
-    `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it. Briefings, partnership pages, passing mentions and drafts don't count as placements.`;
+    `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it. Briefings, partnership pages, passing mentions, drafts and pieces still to review don't count as placements.`;
 
   // Filters: outlet, type, year, quarter, person, topic and outlet tier
   const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };
@@ -2130,7 +2176,7 @@ function renderPrMedia(d, ga, ah, sov) {
     : esc(v);
   // The table shows 5 columns; clicking a row opens the rest underneath it (agreed 4 Nov 2026)
   const cols = [
-    { key: "date", label: "Published", fmt: (v, r) => esc(r.status || dayYear(v)), cls: "pr-date" },
+    { key: "date", label: "Published", fmt: (v, r) => (r.status === "In draft" ? esc(r.status) : `${esc(dayYear(v))}${r.status ? `<div class="muted small">${esc(r.status)}</div>` : ""}`), cls: "pr-date" },
     { key: "outlet", label: "Outlet", fmt: outletCell, cls: "pr-outlet" },
     { key: "title", label: "Title", fmt: linked, cls: "pr-title" },
     { key: "type", label: "Type", cls: "pr-type" },
@@ -2237,6 +2283,16 @@ function renderEvents(hub, leads, sf) {
   // Each event's note sits under the table, so the rows stay short
   $("events-notes").innerHTML = list.filter((e) => e.note).map((e) => `<li><strong>${esc(e.name)}:</strong> ${esc(e.note)}</li>`).join("");
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
+}
+
+// Flutter 2026 on Luma: registered, confirmed and attended, and registrations by UTM source (added 9 Nov 2026)
+function renderLuma(l) {
+  $("events-luma-panel").hidden = false;
+  $("events-luma-cards").innerHTML = card("Registered", num(l.registered), `${num(l.waitlist)} on the waitlist, ${num(l.declined)} declined`) +
+    card("Confirmed", num(l.confirmed)) + card("Attended", num(l.attended), `${num(l.attended - l.attended_staff)} without Opsera staff`);
+  $("events-luma-sources").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Where they registered from (UTM source)</th><th class="num" scope="col">Registered</th><th class="num" scope="col">Confirmed</th><th class="num" scope="col">Attended</th></tr></thead><tbody>${
+    l.sources.map((s) => `<tr><td>${esc(s.source)}</td><td class="num">${num(s.registered)}</td><td class="num">${num(s.confirmed)}</td><td class="num">${num(s.attended)}</td></tr>`).join("")}</tbody></table></div>`;
+  $("events-luma-source").textContent = `Source: ${l.source}, exported ${dayYear(l.exported)}. Attended means checked in on Luma. Counts only.`;
 }
 
 // ---------- Campaigns: 1 row per campaign. Google Analytics link tags and HubSpot, side by side ----------
@@ -2407,7 +2463,7 @@ function openContent() {
   if (!publishedLoad) publishedLoad = load("published.json").then((pub) => {
     renderPublished(pub);
     load("blog_types.json").then((bt) => renderBlogTypes(pub, bt)).catch(() => { $("content-btype-cmp-cards").innerHTML = `<p class="muted">Blog types aren't available right now.</p>`; });
-    load("campaign_hubs.json").then(renderHubs).catch(() => { $("content-hubs").innerHTML = `<p class="muted">Campaign hubs aren't available right now.</p>`; });
+    Promise.all([load("campaign_hubs.json"), load("lookup.json")]).then(([h, lk]) => renderHubs(h, lk)).catch(() => { $("content-hubs").innerHTML = `<p class="muted">Campaign hubs aren't available right now.</p>`; });
   })
     .catch(() => { $("content-published").innerHTML = `<p class="muted">The list of what we published isn't available right now.</p>`; });
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
@@ -2773,6 +2829,12 @@ function renderSeo(d, t) {
     <table class="seo-table"><thead><tr><th>softwareforge.ai</th><th class="num">Google clicks</th><th class="num">Visits</th></tr></thead><tbody>${
       t.infrasity_claims.softwareforge.map((x) => `<tr><td>${mon(x.month)}${x.note ? `<div class="muted small">${esc(x.note)}</div>` : ""}</td><td class="num">${num(x.clicks)}</td><td class="num">${num(x.visits)}</td></tr>`).join("")}</tbody></table>`;
   $("seo-inf-claims").innerHTML = t.infrasity_claims.items.map((c) => `<li>${esc(c)}</li>`).join("");
+  const pr = t.infrasity_claims.prompts;   // their 35 tracked prompts: how many cite opsera.ai
+  if (pr) $("seo-inf-claims").insertAdjacentHTML("afterend", `<table class="seo-table"><thead><tr><th>Cites opsera.ai</th><th class="num">Prompts</th></tr></thead><tbody>${
+    pr.assistants.map(([n, v]) => `<tr><td>${esc(n)}</td><td class="num">${num(v)} of ${num(pr.total)}</td></tr>`).join("")}</tbody></table>
+    <table class="seo-table"><thead><tr><th>Claude, 30 days, by topic</th><th class="num">Prompts</th></tr></thead><tbody>${
+    pr.clusters.map(([n, v, of]) => `<tr><td>${esc(n)}</td><td class="num">${num(v)} of ${num(of)}</td></tr>`).join("")}</tbody></table>
+    <p class="muted small">${esc(pr.source)}.</p>`);
   $("seo-infrasity").textContent = `Sources: our Search Console and Google Analytics for opsera.ai; ${t.infrasity_claims.source} and their July and August SoftwareForge reports for what they published, softwareforge.ai and the AI citations. ` +
     `Our numbers count ${num(inf.pages_on_site)} Infrasity pages on opsera.ai, from their content list and reports. Their ${num(inf.posts_elsewhere)} posts on Medium, dev.to and daily.dev aren't in these numbers.`;
   $("seo-source").textContent = `Sources: ${d.source}, ${range(d.start_date, d.end_date)}, pulled ${dayYear(d.pulled)}. Google spots from the Rankings panel, week of ${day(d.rankings_week)}. ` +
@@ -2847,12 +2909,14 @@ $("summary-body").addEventListener("click", (e) => {
     renderLinkedIn(li);
     renderKumarPosts(kp);
     renderLinkedInVisits(ga);
+    renderKumarLinks(ga);
     renderLinkedInEstimate(est, ga);
     renderLinkedInPath(ga);
     renderJourney(ga, leads, hub, gsc);
     renderAeo(ga, hub);
     renderLeadsHubspot(hub);
     load("salesforce_pipeline.json").catch(() => null).then((sf) => renderEvents(hub, leads, sf));
+    load("luma_flutter.json").then(renderLuma).catch(() => {});
     load("salesforce_pipeline.json").then(renderPipeline)
       .catch(() => { $("pipe-cmp-cards").innerHTML = `<div class="card"><div class="label">Marketing pipeline</div><div class="sub">No data</div></div>`; });
     renderYouTube(yt, ga);

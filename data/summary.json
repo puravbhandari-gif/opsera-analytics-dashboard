@@ -396,8 +396,8 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": "The 26 Oct post was seen most: 1,108 times.",
-     "do": "Post more like 26 Oct: 1,108 views, next best 588.",
+     "why": null,
+     "do": null,
      "trend": [
       {
        "week": "21 to 27 Sep 2026",
@@ -966,7 +966,7 @@
      "title": "LinkedIn brand",
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
-     "note": "November has only 1 day so far, so this shows the last full month.",
+     "note": "November has only 7 days so far, so this shows the last full month.",
      "period": "1 to 31 Oct 2026",
      "period_before": "1 to 30 Sep 2026",
      "notable": true,
@@ -1890,7 +1890,7 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "2 Aug to 1 Nov 2026",
+     "period": "8 Aug to 7 Nov 2026",
      "period_before": null,
      "notable": false,
      "main": null,
