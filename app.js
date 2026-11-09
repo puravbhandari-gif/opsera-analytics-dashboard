@@ -174,7 +174,9 @@ const view = (() => {
   const a = new URLSearchParams(query || "");
   const period = Object.keys(PERIOD_IN_ADDRESS).find((k) => PERIOD_IN_ADDRESS[k] === a.get("period"));
   if (period) periodMode = period;   // a link's period wins over the one this browser last used
-  return { tab: tab || "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
+  // #content-hubs opens the Content tab at the campaign hubs, and fq=fy27-q3 pins the Quarter view to that full quarter (agreed 9 Nov 2026)
+  const anchor = tab === "content-hubs" ? tab : "";
+  return { tab: anchor ? "content" : tab || "", anchor, fq: /^fy\d\d-q[1-4]$/.test(a.get("fq") || "") ? a.get("fq") : "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
     type: a.get("type") || "all", q: a.get("q") || "", markers: a.get("markers") !== "off", mtype: a.get("mtype") || "all" };
 })();
 function viewAddress() {
@@ -186,7 +188,8 @@ function viewAddress() {
   if (view.q) a.set("q", view.q);
   if (!gtm.on) a.set("markers", "off");
   if (gtm.type !== "all") a.set("mtype", gtm.type);
-  return `#${view.tab || "exec"}?${a.toString()}`;
+  if (view.fq && periodMode === "cq") a.set("fq", view.fq);
+  return `#${view.tab === "content" && view.anchor ? view.anchor : view.tab || "exec"}?${a.toString()}`;
 }
 function saveView() { history.replaceState(null, "", viewAddress()); }
 
@@ -308,6 +311,13 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
 // or this month so far against the whole of last month.
 function periodsFor(mode, start, last) {
+  if (mode === "cq" && view.fq) {   // a pinned full quarter against the whole quarter before
+    const fy = Number(view.fq.slice(2, 4)), q = Number(view.fq.slice(-1));
+    const qs = `${2000 + fy - 1}-${String(2 + 3 * (q - 1)).padStart(2, "0")}-01`, bs = quarterStart(addDays(qs, -1));
+    if (qs >= quarterStart(start) && quarterEnd(qs) <= last)
+      return { cur: { start: qs < start ? start : qs, end: quarterEnd(qs) }, prev: bs >= start ? { start: bs, end: quarterEnd(bs) } : null,
+        prevName: `${quarterName(bs)}, full quarter`, none: `No full ${quarterName(bs)} before it: the data starts ${dayYear(start)}` };
+  }
   if (mode === "cq") {   // this quarter so far against the same number of days of the quarter before (agreed 4 Nov 2026)
     const qs = quarterStart(last), ps = quarterStart(addDays(qs, -1));
     const daysIn = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5) + 1;
@@ -454,6 +464,7 @@ function fillCompare(spec) {
 
 function setPeriodMode(mode) {
   periodMode = mode;
+  view.fq = "";   // picking a period lets go of a quarter pinned by a link
   try { localStorage.setItem("period", mode); } catch (e) {}
   $("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === mode));
   comparisons.forEach((spec) => { fillCompare(spec); const c = charts.find((x) => x.id === `${spec.id}-cmp-chart`); if (c) draw(c); });
@@ -2635,6 +2646,7 @@ function renderRankings(d) {
 }
 
 function showTab(name) {
+  if (name === "content-hubs") { view.anchor = name; name = "content"; } else if (name !== "content") view.anchor = "";
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
   const execish = name === "exec" || name === "seo";   // the exec views have no team controls
@@ -2651,7 +2663,10 @@ function showTab(name) {
   if (name === "summary") openSummary();
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
-  if (name === "content") openContent();
+  if (name === "content") openContent().then(() => publishedLoad).then(() => {
+    // after the hubs and types have drawn, and below the sticky header
+    if (view.anchor) setTimeout(() => window.scrollTo(0, $("content-hubs-panel").getBoundingClientRect().top + window.scrollY - document.querySelector("header.top").offsetHeight - 12), 300);
+  });
   if (name === "pr") openPrMedia();
   if (name === "search") openRankings();
   if (name === "campaigns") openCampaigns();
