@@ -1,5 +1,20 @@
 "use strict";
 
+// A browser may keep an older copy of the page for up to 10 minutes (GitHub Pages), and older code doesn't know newer
+// links such as #content-hubs. If a newer version is published, reload once to get it (agreed 9 Nov 2026).
+(() => {
+  const mine = Number((document.currentScript?.src.match(/app\.js\?v=(\d+)/) || [])[1] || 0);
+  fetch(`index.html?check=${Date.now()}`, { cache: "no-store" }).then((r) => r.text()).then((html) => {
+    const live = Number((html.match(/app\.js\?v=(\d+)/) || [])[1] || 0);
+    let tried = "";
+    try { tried = sessionStorage.getItem("reloaded-for") || ""; } catch (e) {}
+    if (mine && live > mine && tried !== String(live)) {
+      try { sessionStorage.setItem("reloaded-for", String(live)); } catch (e) {}
+      location.reload();
+    }
+  }).catch(() => {});
+})();
+
 // ---------- small helpers ----------
 
 const $ = (id) => document.getElementById(id);
