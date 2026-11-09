@@ -154,9 +154,14 @@ def main():
         t = content_type(r["creatorContentType"])
         if t:
             sources[t][r["insightTrafficSourceType"]] = sources[t].get(r["insightTrafficSourceType"], 0) + r["views"]
+    # YouTube's split by source can differ from its total by a view or 2 (9 Nov 2026: 2,886 against 2,885, from a view added
+    # between 3 and 6 Nov). A gap up to 2 views or 0.1% is kept and shown on the page; anything bigger still stops the update.
+    source_gap = {}
     for t, src in sources.items():
-        if sum(src.values()) != by_type[t]["views"]:
-            stop(f"{t} views by where they came from don't add up to the total.")
+        gap = sum(src.values()) - by_type[t]["views"]
+        if abs(gap) > max(2, by_type[t]["views"] * 0.001):
+            stop(f"{t} views by where they came from add up to {sum(src.values())}, but the total is {by_type[t]['views']}.")
+        source_gap[t] = gap
 
     # YouTube names outside sites for the whole channel only. That's fine while all of them are long videos.
     sites = report(s, end, dimensions="insightTrafficSourceDetail", filters="insightTrafficSourceType==EXT_URL",
@@ -222,7 +227,7 @@ def main():
             "published": published,
         },
         "types": {t: {**by_type[t], "daily": [r for r in daily if r["type"] == t],
-                      "videos": top[t], "videos_listed": listed[t], "sources": plain(t)} for t in TYPES.values()},
+                      "videos": top[t], "videos_listed": listed[t], "sources": plain(t), "source_gap": source_gap[t]} for t in TYPES.values()},
     }
     OUT.write_text(json.dumps(out, indent=1))
     print(f"YouTube {START_DATE} to {end} (last day with data {out['last_day_with_data']}): "

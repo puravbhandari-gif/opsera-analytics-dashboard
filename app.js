@@ -1488,7 +1488,7 @@ function renderYouTube(d, ga) {
     <div class="panel">
       <h3>Where views came from</h3>
       <div class="chart-box short"><canvas id="yt-${t}-sources" aria-label="${title} views by where they came from"></canvas></div>
-      <p class="source">${src}</p>
+      <p class="source">${src}${d.types[t].source_gap ? ` YouTube's split by source counts ${num(Math.abs(d.types[t].source_gap))} ${Math.abs(d.types[t].source_gap) === 1 ? "view" : "views"} ${d.types[t].source_gap > 0 ? "more" : "fewer"} than its total of ${num(d.types[t].views)}.` : ""}</p>
     </div>
     <div class="panel">
       <h3>Top videos by views</h3>

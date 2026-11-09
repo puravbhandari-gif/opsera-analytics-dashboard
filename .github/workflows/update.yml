@@ -1,8 +1,11 @@
 name: Update numbers and publish
 
 on:
+  # GitHub can delay or drop a scheduled run when it's busy; it dropped the 9 Nov 2026 run. So there are 2 each Monday:
+  # 07:47 India time (02:17 UTC), and a backup at 10:47 (05:17 UTC) that stops at once if the first one already saved its numbers.
   schedule:
-    - cron: "30 2 * * 1"   # Every Monday 08:00 India time (02:30 UTC)
+    - cron: "17 2 * * 1"
+    - cron: "17 5 * * 1"
   workflow_dispatch:       # "Run workflow" button in the Actions tab
     inputs:
       slack_week:
@@ -22,7 +25,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # A scheduled run goes ahead only if today's update hasn't saved its numbers yet (the backup run, after a dropped one).
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.done.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - id: done
+        run: |
+          today=$(date -u +%Y-%m-%d)
+          if [ "${{ github.event_name }}" = "schedule" ] && git log --since="${today}T00:00:00Z" --format=%s | grep -qx "Update numbers ${today}"; then
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Today's update already ran, so this backup run stops here."
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
   update-and-publish:
+    needs: check
+    if: needs.check.outputs.run == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

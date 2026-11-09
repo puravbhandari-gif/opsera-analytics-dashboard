@@ -60,5 +60,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Content scorecard tab.
 - [x] Download button on every table.
 - [x] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.
-- [ ] Monday 9 Nov 2026: the scheduled update didn't run. Start "Update numbers and publish" from the Actions tab (Run workflow), with the week 2026-11-08 if it should post to Slack.
 - [ ] When David sends a new "DG-Demo Requests" export: save it to Desktop/Data/salesforce-exports and run `.venv/bin/python scripts/build_demo_requests.py`. It has X-Factor since the 5 Nov export.
