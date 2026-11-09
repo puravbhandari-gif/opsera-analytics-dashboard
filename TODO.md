@@ -46,6 +46,9 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] When SamsonPR updates their tracker: ask Claude Code to "read SamsonPR's tracker". It saves it to Desktop/Data/pr-agency as SamsonPR-tracker-<date>.xlsx and runs `.venv/bin/python scripts/fetch_pr_media.py --agency`, which refreshes Placed by, Readership and the open and missed opportunities.
 - [x] 9 Nov: Purav counted TechGig and DEVOPSdigest as placements and marked Bunnyshell, Techloy, nomadx and claude-media as passing mentions (in PASSING). Q3 is 11 placements across 14 outlets, Q2 8.
 - [ ] Slack post for the week ending 8 Nov: the 9 Nov run (42588591905) stopped on purpose because Search Console only had data to 7 Nov. Rerun with slack_week=2026-11-08 once Search Console has 8 Nov, likely Tuesday 10 Nov.
+- [ ] Flutter registered: Luma's file has 507 rows, Valentina reported 509. Ask Valentina which is right before quoting it.
+- [ ] PR list: confirm Gilbert Martin (quoted in 2 PR items) is Opsera staff, since names on the public page are limited to Opsera people.
+- [ ] PR before 1 Jul: the weekly search covers 1 Jul onwards, so the Q2 PR count (8) comes from the agency list and manual rows only.
 - [ ] When Valentina sends a new Luma list for an event: save it to Desktop/Data and run `.venv/bin/python scripts/build_luma_flutter.py`.
 - [ ] When a new LinkedIn company export comes in: add its 3 files to convert_linkedin.py (like COMPANY_NOV2) and run it.
 - [ ] When new blogs go up: ask Claude Code to tag each one with a type in data/blog_types.json. Untagged blogs show as "Not tagged yet" on the Content tab.
