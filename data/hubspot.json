@@ -2,7 +2,7 @@
  "source": "HubSpot",
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:04+05:30",
+ "pulled_at": "2026-11-09T14:22+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -10045,7 +10045,7 @@
     ]
    },
    {
-    "people": 67114,
+    "people": 67115,
     "kind": "Active",
     "updated_on": "2026-07-17",
     "words": [
@@ -10175,7 +10175,7 @@
     ]
    },
    {
-    "people": 24138,
+    "people": 24137,
     "kind": "Active",
     "updated_on": "2026-04-23",
     "words": [
@@ -11921,7 +11921,7 @@
     ]
    },
    {
-    "people": 339,
+    "people": 338,
     "kind": "Active",
     "updated_on": "2026-07-24",
     "words": [
@@ -12456,7 +12456,7 @@
     ]
    },
    {
-    "people": 157,
+    "people": 158,
     "kind": "Active",
     "updated_on": "2026-08-21",
     "words": [
@@ -14222,19 +14222,6 @@
     ]
    },
    {
-    "people": 3,
-    "kind": "Active",
-    "updated_on": "2026-08-20",
-    "words": [
-     "f2200e9f",
-     "831eb2f4",
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "9b759fb9"
-    ]
-   },
-   {
     "people": 2,
     "kind": "Static",
     "updated_on": "2026-10-07",
@@ -14289,6 +14276,19 @@
      "6ccaf138",
      "1f6a832c",
      "21d08197"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
+    "updated_on": "2026-08-20",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
     ]
    },
    {

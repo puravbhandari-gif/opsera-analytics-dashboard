@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:01+05:30",
+ "pulled_at": "2026-11-09T14:18+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai, and Google Analytics 4, opsera.ai 2026",
  "pages": [
   {
@@ -1796,7 +1796,7 @@
    "page": "/blog/spec-driven-development",
    "group": "Blog",
    "title": "Spec-Driven Development: Specs Beat Prompts \u2014 Opsera",
-   "visits_since_new_site": 164,
+   "visits_since_new_site": 165,
    "weeks": [
     {
      "week": "2026-09-28",

@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T14:01+05:30",
+ "pulled_at": "2026-11-09T14:18+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -10,7 +10,7 @@
   "engagedSessions": 28225
  },
  "split_sums": {
-  "daily": 67462,
+  "daily": 67466,
   "channels": 67909
  },
  "daily": [
@@ -1342,8 +1342,8 @@
   },
   {
    "date": "2026-11-08",
-   "sessions": 227,
-   "totalUsers": 219,
+   "sessions": 231,
+   "totalUsers": 223,
    "engagedSessions": 42
   }
  ],
@@ -1351,9 +1351,9 @@
   {
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 25168,
-   "totalUsers": 22439,
+   "totalUsers": 22442,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.38388019886365
+   "averageSessionDuration": 68.38409978583917
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -1922,6 +1922,12 @@
    "engagedSessions": 87
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 158,
+   "engagedSessions": 14
+  },
+  {
    "date": "2026-09-09",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 157,
@@ -1950,12 +1956,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 155,
    "engagedSessions": 90
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 155,
-   "engagedSessions": 14
   },
   {
    "date": "2026-05-07",
@@ -3902,16 +3902,16 @@
    "engagedSessions": 16
   },
   {
+   "date": "2026-11-08",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 47,
+   "engagedSessions": 23
+  },
+  {
    "date": "2026-05-09",
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 46,
    "engagedSessions": 15
-  },
-  {
-   "date": "2026-11-08",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 46,
-   "engagedSessions": 23
   },
   {
    "date": "2026-05-03",
@@ -10718,9 +10718,9 @@
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
    "sessions": 25168,
-   "totalUsers": 22439,
+   "totalUsers": 22442,
    "engagedSessions": 8287,
-   "averageSessionDuration": 68.38388019886365
+   "averageSessionDuration": 68.38409978583917
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -11434,6 +11434,15 @@
    "averageSessionDuration": 61.2156774375
   },
   {
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessionSource": "baidu",
+   "sessionMedium": "organic",
+   "sessions": 15,
+   "totalUsers": 13,
+   "engagedSessions": 8,
+   "averageSessionDuration": 63.39934173333334
+  },
+  {
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "github.com",
    "sessionMedium": "referral",
@@ -11468,15 +11477,6 @@
    "totalUsers": 14,
    "engagedSessions": 1,
    "averageSessionDuration": 3.4900949285714282
-  },
-  {
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessionSource": "baidu",
-   "sessionMedium": "organic",
-   "sessions": 14,
-   "totalUsers": 13,
-   "engagedSessions": 8,
-   "averageSessionDuration": 67.92786614285714
   },
   {
    "sessionDefaultChannelGroup": "Organic Video",
@@ -15875,12 +15875,12 @@
    "views": 206
   },
   {
-   "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+   "page": "/blog/spec-driven-development",
    "views": 198
   },
   {
-   "page": "/blog/spec-driven-development",
-   "views": 197
+   "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+   "views": 198
   },
   {
    "page": "/partners/databricks",
@@ -16339,6 +16339,10 @@
    "views": 45
   },
   {
+   "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+   "views": 45
+  },
+  {
    "page": "/knowledge-base/core-reliability-metrics/mean-time-to-restore-mttr-a-practical-guide-for-engineering-and-technology-leaders",
    "views": 45
   },
@@ -16356,10 +16360,6 @@
   },
   {
    "page": "/blog/7-best-value-stream-management-tools",
-   "views": 44
-  },
-  {
-   "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
    "views": 44
   },
   {
@@ -16663,6 +16663,10 @@
    "views": 28
   },
   {
+   "page": "/blog/github-copilot-alternatives",
+   "views": 27
+  },
+  {
    "page": "/ecosystem/qualys",
    "views": 27
   },
@@ -16701,10 +16705,6 @@
   {
    "page": "/ecosystem/the-anchore-engine",
    "views": 27
-  },
-  {
-   "page": "/blog/github-copilot-alternatives",
-   "views": 26
   },
   {
    "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
@@ -43721,14 +43721,14 @@
   {
    "date": "2026-11-08",
    "channel": "all",
-   "visits": 227,
+   "visits": 231,
    "demo_page": 4,
    "demo_form": 0
   },
   {
    "date": "2026-11-08",
    "channel": "direct",
-   "visits": 155,
+   "visits": 158,
    "demo_page": 2,
    "demo_form": 0
   },
@@ -48633,9 +48633,9 @@
   },
   {
    "date": "2026-11-08",
-   "visits": 3,
+   "visits": 4,
    "engaged": 1,
-   "robots": 2
+   "robots": 3
   }
  ],
  "google_ads_daily": [

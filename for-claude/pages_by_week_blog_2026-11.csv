@@ -1,7 +1,7 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
 2026-11-02,2026-11-08,no,/blog/cobol-modernization,60,5,0,0,6,1536
 2026-11-02,2026-11-08,no,/blog/claude-code-alternative,46,20,0,0,27,4898
-2026-11-02,2026-11-08,no,/blog/spec-driven-development,40,16,0,0,15,2160
+2026-11-02,2026-11-08,no,/blog/spec-driven-development,41,16,0,0,15,2160
 2026-11-02,2026-11-08,no,/blog/ai-sdlc,33,12,0,0,14,2483
 2026-11-02,2026-11-08,no,/blog/snowflake-to-databricks-migration,30,0,0,0,19,729
 2026-11-02,2026-11-08,no,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,28,4,0,0,4,438
@@ -34,10 +34,10 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-02,2026-11-08,no,/blog/forge-ontology-ai-agents,7,4,0,0,6,110
 2026-11-02,2026-11-08,no,/blog/software-factory-as-a-service,7,5,0,0,4,187
 2026-11-02,2026-11-08,no,/blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve,6,3,0,0,0,655
+2026-11-02,2026-11-08,no,/blog/github-copilot-alternatives,6,2,0,0,3,121
 2026-11-02,2026-11-08,no,/blog/measure-ai-roi-software-development,6,2,0,0,0,286
 2026-11-02,2026-11-08,no,/blog/what-is-a-modern-ci-cd-pipeline,6,1,0,0,5,2566
 2026-11-02,2026-11-08,no,/blog/agentic-ai-security,5,0,0,0,2,94
-2026-11-02,2026-11-08,no,/blog/github-copilot-alternatives,5,2,0,0,3,121
 2026-11-02,2026-11-08,no,/blog/shift-left-security,5,2,0,0,0,183
 2026-11-02,2026-11-08,no,/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins,4,0,0,0,1,75
 2026-11-02,2026-11-08,no,/blog/ci-cd-business-benefits,4,0,0,0,3,882

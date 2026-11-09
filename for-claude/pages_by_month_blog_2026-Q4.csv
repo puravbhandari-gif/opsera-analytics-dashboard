@@ -247,7 +247,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool,1,0,0,0,0,0
 2026-11-01,2026-11-08,yes,/blog/cobol-modernization,66,7,0,0,6,1802
 2026-11-01,2026-11-08,yes,/blog/claude-code-alternative,51,23,0,0,32,5598
-2026-11-01,2026-11-08,yes,/blog/spec-driven-development,42,17,0,0,17,2403
+2026-11-01,2026-11-08,yes,/blog/spec-driven-development,43,17,0,0,17,2403
 2026-11-01,2026-11-08,yes,/blog/ai-sdlc,39,15,0,0,16,2672
 2026-11-01,2026-11-08,yes,/blog/harness-engineering,33,12,0,0,5,813
 2026-11-01,2026-11-08,yes,/blog/github-copilot-adoption-trends-insights-from-real-data,32,1,0,0,0,869
@@ -280,8 +280,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-08,yes,/blog/opsera-raises-20m-in-series-b-funding,8,3,0,0,2,263
 2026-11-01,2026-11-08,yes,/blog/software-factory-as-a-service,8,6,0,0,6,226
 2026-11-01,2026-11-08,yes,/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi,7,0,0,0,1,20
+2026-11-01,2026-11-08,yes,/blog/github-copilot-alternatives,7,2,0,0,3,134
 2026-11-01,2026-11-08,yes,/blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve,6,3,0,0,0,717
-2026-11-01,2026-11-08,yes,/blog/github-copilot-alternatives,6,2,0,0,3,134
 2026-11-01,2026-11-08,yes,/blog/what-is-a-modern-ci-cd-pipeline,6,1,0,0,8,3016
 2026-11-01,2026-11-08,yes,/blog/agentic-ai-security,5,0,0,0,2,108
 2026-11-01,2026-11-08,yes,/blog/ci-cd-business-benefits,5,0,0,0,5,1001

@@ -164,11 +164,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "3,117",
-      "cur": 3117,
+      "value": "3,120",
+      "cur": 3120,
       "prev": 2995,
       "before": "2,995",
-      "change_pct": 4.1,
+      "change_pct": 4.2,
       "good": true,
       "min_change_pct": 10
      },
@@ -197,7 +197,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3117
+       "value": 3120
       }
      ]
     },
@@ -374,11 +374,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "1,058",
-      "cur": 1058,
+      "value": "1,061",
+      "cur": 1061,
       "prev": 1319,
       "before": "1,319",
-      "change_pct": -19.8,
+      "change_pct": -19.6,
       "good": false,
       "min_change_pct": 15
      },
@@ -407,7 +407,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1058
+       "value": 1061
       }
      ]
     },
@@ -774,7 +774,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3117
+       "value": 3120
       }
      ]
     },
@@ -993,7 +993,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1058
+       "value": 1061
       }
      ]
     },
@@ -1290,7 +1290,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3117
+       "value": 3120
       }
      ]
     },
@@ -1474,7 +1474,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1058
+       "value": 1061
       }
      ]
     },
@@ -1734,8 +1734,8 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "30,677",
-      "cur": 30677,
+      "value": "30,680",
+      "cur": 30680,
       "prev": 23825,
       "before": "23,825",
       "change_pct": 28.8,
@@ -1767,7 +1767,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3117
+       "value": 3120
       }
      ]
     },
@@ -1944,11 +1944,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "8,840",
-      "cur": 8840,
+      "value": "8,843",
+      "cur": 8843,
       "prev": 5837,
       "before": "5,837",
-      "change_pct": 51.4,
+      "change_pct": 51.5,
       "good": true,
       "min_change_pct": 15
      },
@@ -1977,7 +1977,7 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1058
+       "value": 1061
       }
      ]
     },
@@ -2133,7 +2133,6 @@
    "boxes": {
     "well": [
      "Meetings booked rose to 19, up from 5.",
-     "Content visits grew 51.4% to 8,840.",
      "Event form fills rose to 121, up from 79."
     ],
     "attention": [
