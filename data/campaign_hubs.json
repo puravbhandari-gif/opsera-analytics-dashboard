@@ -1,13 +1,160 @@
 {
  "how_to_add": [
   "Add one block to campaigns, in the order the cards should show. The page draws each block as its own card.",
-  "name: the campaign. hub: the core piece. kind is what it is (Blog, Webinar, Event, Press release, Report), title and date, plus link if there is one.",
-  "For visits, give hub.visits_path (an opsera.ai path) and the page counts Google Analytics visits from hub.date, or to visits_to if given. Or give hub.number as text.",
+  "name: the campaign. hub: the core piece. kind is what it is (Blog, Webinar, Event, Press release, Report), title and date, plus link if there is one. short_title is an optional shorter title for the diagram.",
+  "For visits, give hub.visits_path (an opsera.ai path). The page counts Google Analytics visits from hub.date, or from visits_from, to visits_to if given. Or give hub.number as text.",
   "spokes: each has group (Format or Channel) and name, plus link, visits_path or number as text.",
   "source is the line under the card. numbers_note says where the numbers came from and when.",
+  "note: an optional short label under the campaign name, for example \"Runs into Q4, counted from 28 Oct\".",
   "Never put people's emails or a single customer's deal in this file: it is public."
  ],
  "campaigns": [
+  {
+   "name": "Brand relaunch",
+   "note": "Runs into Q4, counted from 28 Oct",
+   "hub": {
+    "kind": "Press release",
+    "title": "Opsera Relaunches as an AI-Native Software Factory for the Enterprise",
+    "date": "2026-10-28",
+    "link": "https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/2456240",
+    "number": "8 articles",
+    "short_title": "Opsera relaunches as an AI-native software factory"
+   },
+   "spokes": [
+    {
+     "group": "Channel",
+     "name": "Wire pickups",
+     "number": "4, incl. Yahoo Finance"
+    },
+    {
+     "group": "Channel",
+     "name": "Trade press stories",
+     "number": "4, incl. SD Times"
+    },
+    {
+     "group": "Format",
+     "name": "Software factory blog",
+     "link": "https://opsera.ai/blog/software-factory",
+     "visits_path": "/blog/software-factory"
+    },
+    {
+     "group": "Format",
+     "name": "Software factory page",
+     "link": "https://opsera.ai/software-factory",
+     "visits_path": "/software-factory"
+    },
+    {
+     "group": "Channel",
+     "name": "Customer email on the rebrand",
+     "number": "Sent 16 Oct"
+    },
+    {
+     "group": "Format",
+     "name": "Insights relaunch press release",
+     "number": "Due 17 Nov"
+    }
+   ],
+   "source": "Source: Relaunch press release, 28 Oct 2026",
+   "numbers_note": "Wire pickups: Yahoo Finance, Business Insider, The Manila Times and AiThority. Stories: SD Times, DEVOPSdigest, CMOtech and TechGig. From the PR tab, checked 9 Nov 2026. Visits from Google Analytics, opsera.ai only, from 28 Oct."
+  },
+  {
+   "name": "Flutter 2026",
+   "hub": {
+    "kind": "Event",
+    "title": "Flutter 2026: The AI-SDLC Summit",
+    "date": "2026-10-01",
+    "link": "https://opsera.ai/flutter-2026-ai-sdlc-summit",
+    "number": "119 checked in",
+    "visits_from": "2026-08-01",
+    "visits_to": "2026-10-31"
+   },
+   "spokes": [
+    {
+     "group": "Format",
+     "name": "Summit page",
+     "link": "https://opsera.ai/flutter-2026-ai-sdlc-summit",
+     "visits_path": "/flutter-2026-ai-sdlc-summit"
+    },
+    {
+     "group": "Format",
+     "name": "Events page",
+     "link": "https://opsera.ai/events/flutter-the-ai-sdlc-summit",
+     "visits_path": "/events/flutter-the-ai-sdlc-summit"
+    },
+    {
+     "group": "Format",
+     "name": "Fireside chat with Sheila Jordan"
+    },
+    {
+     "group": "Channel",
+     "name": "Luma registration",
+     "number": "507 registered, 200 confirmed"
+    },
+    {
+     "group": "Channel",
+     "name": "Invite emails",
+     "number": "18 emails, 91,101 sent, 331 clicks"
+    },
+    {
+     "group": "Channel",
+     "name": "Brand LinkedIn posts",
+     "number": "13 posts, 22,758 times seen"
+    },
+    {
+     "group": "Channel",
+     "name": "Campaign links",
+     "number": "201 visits, 90 engaged"
+    },
+    {
+     "group": "Channel",
+     "name": "Paid and partner promotion",
+     "number": "1 to 22 Sep"
+    }
+   ],
+   "source": "Source: Flutter 2026 campaign, 1 Oct 2026",
+   "numbers_note": "Registrations and check-ins from Valentina's Luma list; 25 of the 119 checked in are Opsera staff. Emails from HubSpot, LinkedIn from the company page export, campaign links and page visits from Google Analytics, opsera.ai only, 1 Aug to 31 Oct 2026."
+  },
+  {
+   "name": "Tokenomics",
+   "hub": {
+    "kind": "Webinar",
+    "title": "Tokenomics: The Currency of Enterprise AI",
+    "date": "2026-09-15",
+    "link": "https://opsera.ai/events/tokenomics-the-currency-of-enterprise-ai",
+    "visits_path": "/events/tokenomics-the-currency-of-enterprise-ai",
+    "visits_from": "2026-08-01",
+    "visits_to": "2026-10-31"
+   },
+   "spokes": [
+    {
+     "group": "Format",
+     "name": "Webinar recording",
+     "number": "Emailed after the webinar"
+    },
+    {
+     "group": "Format",
+     "name": "Tokenomics whitepaper",
+     "number": "Due 20 Nov"
+    },
+    {
+     "group": "Channel",
+     "name": "Emails",
+     "number": "3 emails, 111,141 sent, 196 clicks"
+    },
+    {
+     "group": "Channel",
+     "name": "Campaign links",
+     "number": "1,834 visits, 247 engaged"
+    },
+    {
+     "group": "Channel",
+     "name": "HubSpot list",
+     "number": "83 people, 32 first touch"
+    }
+   ],
+   "source": "Source: Tokenomics webinar, 15 Sep 2026",
+   "numbers_note": "Hub visits are to the event page. Emails and the list from HubSpot, campaign links and page visits from Google Analytics, opsera.ai only, 1 Aug to 31 Oct 2026."
+  },
   {
    "name": "PHP2Shell",
    "hub": {
