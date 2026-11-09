@@ -11,48 +11,13 @@
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
      "note": null,
-     "period": "26 Oct to 1 Nov 2026",
-     "period_before": "19 to 25 Oct 2026",
-     "notable": true,
-     "main": {
-      "key": "influenced_value",
-      "label": "Marketing influenced pipeline",
-      "value": "$200,000",
-      "cur": 200000,
-      "prev": 0,
-      "before": "$0",
-      "change_pct": null,
-      "good": null,
-      "min_change_pct": 15
-     },
-     "why": "Influenced pipeline came to $200,000 this week.",
+     "period": "2 to 8 Nov 2026",
+     "period_before": "26 Oct to 1 Nov 2026",
+     "notable": false,
+     "main": null,
+     "why": null,
      "do": null,
-     "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 500000
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 0
-      },
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 150000
-      },
-      {
-       "week": "12 to 18 Oct 2026",
-       "value": 0
-      },
-      {
-       "week": "19 to 25 Oct 2026",
-       "value": 0
-      },
-      {
-       "week": "26 Oct to 1 Nov 2026",
-       "value": 200000
-      }
-     ]
+     "trend": []
     },
     {
      "key": "leads",
@@ -587,7 +552,7 @@
      "title": "Pipeline",
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
-     "note": "November has only 5 days so far, so this shows the last full month.",
+     "note": "November has only 8 days so far, so this shows the last full month.",
      "period": "1 to 31 Oct 2026",
      "period_before": "1 to 30 Sep 2026",
      "notable": true,
@@ -606,10 +571,6 @@
      "do": "Link contacts to deals: 19 had no contact this month.",
      "trend": [
       {
-       "week": "21 to 27 Sep 2026",
-       "value": 1
-      },
-      {
        "week": "28 Sep to 4 Oct 2026",
        "value": 1
       },
@@ -627,6 +588,10 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "2 to 8 Nov 2026",
        "value": 0
       }
      ]
@@ -1112,19 +1077,15 @@
       "label": "Marketing sourced deals (estimate)",
       "value": "4",
       "cur": 4,
-      "prev": 8,
-      "before": "8",
-      "change_pct": -50.0,
+      "prev": 6,
+      "before": "6",
+      "change_pct": -33.3,
       "good": false,
       "min_change_pct": 15
      },
      "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 1
-      },
       {
        "week": "28 Sep to 4 Oct 2026",
        "value": 1
@@ -1143,6 +1104,10 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "2 to 8 Nov 2026",
        "value": 0
       }
      ]
@@ -1564,7 +1529,7 @@
      "Content page visits up 29.6%"
     ],
     "attention": [
-     "Marketing sourced deals (estimate) down 50%",
+     "Marketing sourced deals (estimate) down 33.3%",
      "Times Google showed our pages down 31.4%",
      "Visits from tagged campaigns down 26.5%"
     ],
@@ -1581,27 +1546,23 @@
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
      "note": null,
-     "period": "6 Aug to 5 Nov 2026",
-     "period_before": "6 May to 5 Aug 2026",
+     "period": "9 Aug to 8 Nov 2026",
+     "period_before": "9 May to 8 Aug 2026",
      "notable": true,
      "main": {
       "key": "sourced_value",
       "label": "Marketing sourced pipeline (estimate)",
       "value": "$1,056,000",
       "cur": 1056000,
-      "prev": 798375,
-      "before": "$798,375",
-      "change_pct": 32.3,
+      "prev": 400000,
+      "before": "$400,000",
+      "change_pct": 164.0,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Influenced pipeline grew 17.6% to $1,000,000.",
-     "do": "Link contacts to deals: 56 had no contact in 3 months.",
+     "why": null,
+     "do": null,
      "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 588000
-      },
       {
        "week": "28 Sep to 4 Oct 2026",
        "value": 200000
@@ -1620,6 +1581,10 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "2 to 8 Nov 2026",
        "value": 0
       }
      ]
@@ -2133,6 +2098,7 @@
    "boxes": {
     "well": [
      "Meetings booked rose to 19, up from 5.",
+     "Content visits grew 51.5% to 8,843.",
      "Event form fills rose to 121, up from 79."
     ],
     "attention": [
@@ -2141,7 +2107,7 @@
      "Contact form fills fell to 19, down from 31."
     ],
     "do": [
-     "Link contacts to deals: 56 had no contact in 3 months.",
+     "Link contacts to deals: 57 had no contact in 3 months.",
      "Filter out unlabelled visits, up from 591 to 2,563.",
      "Fix the PHP2Shell blog: 23 of 367 visits engaged."
     ]

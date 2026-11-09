@@ -23,7 +23,7 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
 - Events: people in each event's Salesforce campaign who then had a meeting set.
 - Anything based on Primary Campaign Source is an estimate (David: a starting point, not reliable on its own).
 - Deals with no contact linked are their own group, "No contact linked", not sales.
-- Events with their own Salesforce member export (Flutter, Gartner Xpo, GitHub Universe; agreed 3 Nov 2026): members
+- Events with their own Salesforce member export (Flutter, Gartner Xpo, GitHub Universe; agreed 3 Nov 2026; Tokenomics from 9 Nov): members
   are matched by email to the meetings export, and count when a meeting was set on or after the event's first day.
 - A "To review" list: deals with a campaign joined just outside the 90-day window (91 to 120 days), or whose campaigns
   match more than one source (marketing, booking agency, SDR or AE outreach).
@@ -61,10 +61,11 @@ TARGET_ACCOUNTS = re.compile(r"\b(abm|abx|microsite)\b", re.I)
 FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 Multi-Attrib Opportunities-*.xls",
          "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
          "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
-         "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls"}
+         "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls", "event_tokenomics": "DG-FY27-Q3-Tokenomics-Webinar-*.xls"}
 INFLUENCED_ONLY = {"Honeywell Aerospace"}   # existed before the event it's credited to (Purav, 9 Nov 2026)
 EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
-EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28)}
+EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28),
+                   "tokenomics": dt.date(2026, 9, 15)}
 
 
 class _Tables(HTMLParser):
@@ -178,6 +179,21 @@ def main():
             opps_cover_from = older_from
     touches, touches_on = read("touches")
     meets, meets_on = read("meetings")
+    # The 9 Nov 2026 export covers fewer people than the 27 Oct one (it filters on meeting date), so older exports fill in:
+    # a person's join date doesn't change, and without it a campaign counts by default (agreed 9 Nov 2026).
+    seen = {(m.get("Email", "").lower(), m["Campaign Name"], m["Date 3 - Meeting Set"]) for m in meets}
+    meets_older = []   # dates of the older exports used
+    for back in range(1, 10):
+        try:
+            older, older_on = read("meetings", back)
+            meets_older.append(older_on)
+        except SystemExit:
+            break
+        for m in older:
+            k = (m.get("Email", "").lower(), m["Campaign Name"], m["Date 3 - Meeting Set"])
+            if k not in seen:
+                seen.add(k)
+                meets.insert(0, m)   # older rows first, so the newest export's join date wins
     ids, _ = read("campaign_ids")
     id_names = {r["Campaign ID"][:15]: r["Campaign Name"] for r in ids if r.get("Campaign ID")}
     name = lambda v: id_names.get(v.strip()[:15], v) if CAMPAIGN_ID.match((v or "").strip()) else (v or "").strip()
@@ -292,8 +308,8 @@ def main():
 
     out = {
         "source": "Salesforce reports",
-        "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "meetings": meets_on},
-        "opportunities_cover_from": opps_cover_from or START.isoformat(),
+        "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "meetings": meets_on, "meetings_older": sorted(meets_older)},
+        "opportunities_cover_from": max(opps_cover_from or "", START.isoformat()),   # deals before START are never counted
         "opportunities_from": min(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),
         "opportunities_to": max(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),
         "share_without_contact_pct": round(no_contact / counted * 100) if counted else None,

@@ -2540,10 +2540,13 @@ function renderPipeline(sf) {
   $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open and won. ${num((sf.to_review || []).length)} deals. ` +
     "Existing customer and doubtful deals stay in the totals above. No company or person names.";
 
+  const older = sf.exports.meetings_older || [];
+  const meetOlder = !older.length ? "" : older.length === 1 ? `. The ${dayYear(older[0])} export fills in people the newest one leaves out`
+    : `. Earlier exports (${older.map(dayYear).join(", ")}) fill in people the newest one leaves out`;
   const mt = sf.meetings, OUT = ["Meeting Held", "Meeting Cancelled", "Meeting No Show - New Date TBD", "Meeting Changed", "Not recorded"];
   const outcome = (k) => rangeSum(mt.days, (r) => r.outcomes[k] || 0);
   compare({ id: "pipe-meet", start: mt.since, last: addDays(sf.exports.meetings, -1), fullPeriods: true,
-    source: (a, b) => `Source: Salesforce campaign members with a meeting on ${range(a, b)}, exported ${dayYear(sf.exports.meetings)}.`,
+    source: (a, b) => `Source: Salesforce campaign members with a meeting on ${range(a, b)}, exported ${dayYear(sf.exports.meetings)}${meetOlder}.`,
     metrics: [{ label: "People with a meeting", value: rangeSum(mt.days, "people"), fmt: num, sub: "After joining a marketing campaign" },
       { label: "Held", value: outcome("Meeting Held"), fmt: num }, { label: "Cancelled", value: outcome("Meeting Cancelled"), fmt: num, lowerIsBetter: true },
       { label: "No outcome recorded", value: outcome("Not recorded"), fmt: num, lowerIsBetter: true }] });
@@ -2557,7 +2560,7 @@ function renderPipeline(sf) {
       { key: "Meeting Changed", label: "Moved", num: true, fmt: num },
       { key: "Not recorded", label: "No outcome recorded", num: true, fmt: num },
     ] });
-  $("pipe-meet-source").textContent = `Source: Salesforce campaign members with a meeting, since ${dayYear("2026-04-01")}, exported ${dayYear(sf.exports.meetings)}.`;
+  $("pipe-meet-source").textContent = `Source: Salesforce campaign members with a meeting, since ${dayYear("2026-04-01")}, exported ${dayYear(sf.exports.meetings)}${meetOlder}.`;
   table($("pipe-meet-campaigns"), { rows: mt.campaigns, search: "campaigns", sortKey: "people", columns: [
     { key: "campaign", label: "Campaign", search: true, fmt: (v, r) => esc(v) + (r.flag ? `<br><span class="muted">Counted as marketing for now, ${esc(r.flag)}</span>` : "") },
     { key: "people", label: "People with a meeting", num: true, fmt: num },

@@ -68,3 +68,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Download button on every table.
 - [x] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.
 - [ ] When David sends a new "DG-Demo Requests" export: save it to Desktop/Data/salesforce-exports and run `.venv/bin/python scripts/build_demo_requests.py`. It has X-Factor since the 5 Nov export.
+- [ ] David's Salesforce exports now come from Drive folder 1sZj8gazMtBLyhG0RfoMP22QwOqIvlOGw (from 9 Nov). Save them to Desktop/Data/salesforce-exports, then run build_salesforce_pipeline.py and build_demo_requests.py.
+- [ ] Ask David for a new "Mktg#05 Multi-Attrib Opportunities" export. The 2 Nov one has no campaign touches for the 8 deals created 3 to 6 Nov, and it carries half of Q3 influenced ($500,000 of $1.0M).
+- [ ] Ask David: the 9 Nov "02a Campaigns with Meetings (members)" has 415 rows against 809 on 27 Oct (it now filters on meeting date). The older export fills the gap for now. It isn't a full member list: Flutter, Tokenomics and GitHub Universe 2026 have no rows, and Gartner Xpo has 1.
+- [ ] Ask David for fresh member exports for Flutter (all statuses, the 2 Nov one is "Attended" only), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).

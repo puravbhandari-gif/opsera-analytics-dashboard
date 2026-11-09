@@ -214,7 +214,7 @@
   "boxes": {
    "well": [
     "Meetings booked rose to 19, up from 5.",
-    "Content visits grew 51.4% to 8,840.",
+    "Content visits grew 51.5% to 8,843.",
     "Event form fills rose to 121, up from 79."
    ],
    "attention": [
@@ -223,7 +223,7 @@
     "Contact form fills fell to 19, down from 31."
    ],
    "do": [
-    "Link contacts to deals: 56 had no contact in 3 months.",
+    "Link contacts to deals: 57 had no contact in 3 months.",
     "Filter out unlabelled visits, up from 591 to 2,563.",
     "Fix the PHP2Shell blog: 23 of 367 visits engaged."
    ]
@@ -233,8 +233,8 @@
     "period": "6 Aug to 5 Nov 2026",
     "period_before": "6 May to 5 Aug 2026",
     "main": "sourced_value",
-    "why": "Influenced pipeline grew 17.6% to $1,000,000.",
-    "do": "Link contacts to deals: 56 had no contact in 3 months."
+    "why": "Influenced pipeline rose to $1,000,000, from $350,000.",
+    "do": "Link contacts to deals: 57 had no contact in 3 months."
    },
    "leads": {
     "period": "9 Aug to 8 Nov 2026",
