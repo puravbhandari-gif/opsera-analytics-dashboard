@@ -123,7 +123,7 @@
     "Google showed our pages 22.6% less often."
    ],
    "do": [
-    "Link contacts to deals: 19 had no contact this month.",
+    "Link contacts to deals: 20 had no contact this month.",
     "Write more like Claude Code Alternatives: 81 of 189 engaged.",
     "Find what drove direct visits from 2,742 to 8,400."
    ]
@@ -134,7 +134,7 @@
     "period_before": "1 to 30 Sep 2026",
     "main": "sourced_deals",
     "why": "Their pipeline came to $200,000, down from $588,000.",
-    "do": "Link contacts to deals: 19 had no contact this month."
+    "do": "Link contacts to deals: 20 had no contact this month."
    },
    "leads": {
     "period": "1 to 31 Oct 2026",
@@ -223,7 +223,7 @@
     "Contact form fills fell to 19, down from 31."
    ],
    "do": [
-    "Link contacts to deals: 57 had no contact in 3 months.",
+    "Link contacts to deals: 63 had no contact in 3 months.",
     "Filter out unlabelled visits, up from 591 to 2,563.",
     "Fix the PHP2Shell blog: 23 of 367 visits engaged."
    ]
@@ -233,8 +233,8 @@
     "period": "6 Aug to 5 Nov 2026",
     "period_before": "6 May to 5 Aug 2026",
     "main": "sourced_value",
-    "why": "Influenced pipeline rose to $1,000,000, from $350,000.",
-    "do": "Link contacts to deals: 57 had no contact in 3 months."
+    "why": "Influenced pipeline rose 21.2% to $1,030,000.",
+    "do": "Link contacts to deals: 63 had no contact in 3 months."
    },
    "leads": {
     "period": "9 Aug to 8 Nov 2026",

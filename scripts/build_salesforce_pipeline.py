@@ -4,7 +4,8 @@ Run by hand when new exports arrive (they aren't part of the Monday update):
     .venv/bin/python scripts/build_salesforce_pipeline.py
 
 Agreed with Purav on 28 Oct 2026:
-- Open and won opportunities only; closed lost is left out.
+- Open and won opportunities only; closed lost is left out. (Replaced 9 Nov 2026: every deal created counts, open, won or lost,
+  so a past quarter doesn't drop when deals are lost later. Marketing deals are also split into won, lost and open.)
 - Marketing sourced: the Primary Campaign Source is a marketing campaign.
 - Marketing influenced: not sourced, but the Attrib First or Attrib Last Campaign, or any campaign touch in the
   multi-attribution export, is a marketing campaign.
@@ -213,15 +214,18 @@ def main():
             by_person_name[f"{m.get('First Name', '')} {m.get('Last Name', '')}".strip().lower()].add(e)
 
     BUCKETS = ("sourced", "influenced", "agency", "nocontact")
+    STATUSES = ("won", "lost", "open")
     by_month = collections.defaultdict(lambda: {b: [0, 0] for b in BUCKETS})
     by_day = collections.defaultdict(lambda: {b: [0, 0] for b in BUCKETS})   # for the period switch
+    status_day = collections.defaultdict(lambda: {s: [0, 0] for s in STATUSES})   # marketing deals (sourced and influenced) by won, lost, open
     by_campaign = collections.defaultdict(lambda: [0, 0])
     counted = no_contact = unknown_join = dropped_by_window = 0
     review = []
     for o in opps:
         created = day(o["Created Date"])
-        if not created or created < START or "lost" in o["Stage"].lower():
+        if not created or created < START:
             continue
+        status = "won" if "won" in o["Stage"].lower() else "lost" if "lost" in o["Stage"].lower() else "open"
         counted += 1
         no_contact += not o.get("Primary Contact")
         amount = round(float(o.get("Amount") or 0))
@@ -282,6 +286,10 @@ def main():
         for x in (by_month[created.strftime("%Y-%m")][bucket], by_day[created.isoformat()][bucket]):
             x[0] += 1
             x[1] += amount
+        if bucket in ("sourced", "influenced"):
+            x = status_day[created.isoformat()][status]
+            x[0] += 1
+            x[1] += amount
         if bucket != "nocontact":
             c = by_campaign[(bucket, public(campaign))]
             c[0] += 1
@@ -319,6 +327,8 @@ def main():
                    for k, v in sorted(by_month.items())],
         "days": [{"date": k, **{f"{b}_{w}": v[b][i] for b in BUCKETS for i, w in enumerate(("deals", "value")) if (b, w) != ("nocontact", "value")}}
                  for k, v in sorted(by_day.items())],   # no contact linked: count only, never the value (agreed 29 Oct 2026)
+        "marketing_status_days": [{"date": k, **{f"{s}_{w}": v[s][i] for s in STATUSES for i, w in enumerate(("deals", "value"))}}
+                                  for k, v in sorted(status_day.items())],
         "campaigns": [{"bucket": b, "campaign": c, "deals": v[0], "value": v[1]} for (b, c), v in sorted(by_campaign.items(), key=lambda x: -x[1][1])],
         "to_review": sorted(review, key=lambda r: r["date"]),
         "event_meetings": [{"key": k, "campaign": c, "people": len(event_people[c]),
@@ -332,7 +342,7 @@ def main():
     }
     OUT.write_text(json.dumps(out, indent=1) + "\n")
     s, i, a, n = (sum(m[f"{b}_deals"] for m in out["months"]) for b in BUCKETS)
-    print(f"Wrote {OUT.name}: {counted} open and won opportunities since {START}, {s} marketing sourced, {i} influenced, {a} booking agency, "
+    print(f"Wrote {OUT.name}: {counted} opportunities (open, won and lost) since {START}, {s} marketing sourced, {i} influenced, {a} booking agency, "
           f"{n} no contact linked, {len(review)} to review, "
           f"{out['share_without_contact_pct']}% with no contact, {unknown_join} counted without a known join date, {dropped_by_window} left out by the "
           f"{WINDOW_DAYS}-day rule; {len(people)} people with a campaign-influenced meeting; event meetings "

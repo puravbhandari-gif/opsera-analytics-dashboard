@@ -84,7 +84,7 @@ CONTACT_PROPS = ["createdate", "hs_object_source", "hs_analytics_source", "hs_an
                  "first_conversion_event_name", "recent_conversion_event_name", "hs_analytics_first_url",
                  "utm_campaign_fc", "hs_analytics_first_touch_converting_campaign"]
 
-# How each deal came in (agreed 27 Oct 2026): one line per marketing deal, open or won, with no company,
+# How each deal came in (agreed 27 Oct 2026): one line per marketing deal, open, won or lost (lost from 9 Nov 2026), with no company,
 # person or job title. HubSpot has no product field, so the product comes from words in the deal name;
 # only the product is kept, never the name. Checked in order; a deal can name more than 1 product.
 PRODUCTS = [(r"sfdc|salesforce|agentforce|agentforge", "Salesforce DevOps"), (r"brickforge", "BrickForge"),
@@ -358,8 +358,6 @@ def all_pipeline(s):
     for d in deals:
         p = d["properties"]
         pipeline, stage, closed, prob = stages.get(p.get("dealstage"), ("Unknown", "Unknown", False, 0))
-        if closed and prob == 0:
-            continue   # closed lost isn't pipeline
         camp = {k: public(p.get(f)) if f else None for k, f in fields.items()}
         bucket = None
         if have_fields:
@@ -368,7 +366,7 @@ def all_pipeline(s):
         lead_source = public(lead_labels.get(p.get("lead_source"), p.get("lead_source"))) or "Not set"
         if not (MARKETING_LEAD_SOURCES.search(lead_source) and not SALES_MOTIONS.search(lead_source)) and bucket not in ("Marketing sourced", "Marketing influenced"):
             continue
-        rows.append({"date": pacific_day(p["createdate"]), "status": "Won" if closed and prob >= 1 else "Open", "stage": stage, "pipeline": pipeline,
+        rows.append({"date": pacific_day(p["createdate"]), "status": "Won" if closed and prob >= 1 else "Lost" if closed and prob == 0 else "Open", "stage": stage, "pipeline": pipeline,
                      "amount": round(float(p.get("amount") or 0)), "product": products_in(p.get("dealname")),
                      "lead_source": lead_source,
                      "primary_campaign": camp["primary"], "first_campaign": camp["first"], "last_campaign": camp["last"], "bucket": bucket})
@@ -377,8 +375,10 @@ def all_pipeline(s):
 
 def summarise_deals(deal_rows, end):
     """The page is public, so marketing deals are kept only as totals per week, per month and per 3 months
-    (agreed 22 Oct 2026). Closed Lost deals are left out; open and won are kept apart."""
-    kept = [d for d in deal_rows if d["counts"] == "marketing" and not d["lost"]]
+    (agreed 22 Oct 2026). Every deal created counts, open, won or lost, so a past period doesn't drop when deals are
+    lost later (agreed 9 Nov 2026); the three are kept apart."""
+    kept = [d for d in deal_rows if d["counts"] == "marketing"]
+    status = lambda d: "won" if d["won"] else "lost" if d["lost"] else "open"
     end_d, start_d = dt.date.fromisoformat(end), dt.date.fromisoformat(START_DATE)
     weeks, months, quarters = [], [], []
     w = start_d - dt.timedelta(days=start_d.weekday())
@@ -398,11 +398,11 @@ def summarise_deals(deal_rows, end):
     def totals(periods):
         out = []
         for a, b in periods:
-            groups = collections.defaultdict(lambda: {"open_count": 0, "open_amount": 0.0, "won_count": 0, "won_amount": 0.0})
+            groups = collections.defaultdict(lambda: {"open_count": 0, "open_amount": 0.0, "won_count": 0, "won_amount": 0.0, "lost_count": 0, "lost_amount": 0.0})
             for d in kept:
                 if a.isoformat() <= d["date"] <= b.isoformat():
                     g = groups[(d["channel"], d.get("demo", False), d.get("tool"))]
-                    k = "won" if d["won"] else "open"
+                    k = status(d)
                     g[f"{k}_count"] += 1
                     g[f"{k}_amount"] += d["amount"]
             out += [{"start": a.isoformat(), "end": b.isoformat(), "channel": ch, "demo": dm, "tool": tl, **v} for (ch, dm, tl), v in groups.items()]
@@ -412,10 +412,10 @@ def summarise_deals(deal_rows, end):
     existing = [d for d in deal_rows if d["counts"] == "existing"]
     return {
         "deals_weekly": totals(weeks), "deals_monthly": totals(months), "deals_quarters": totals(quarters),
-        "deals_total": {k: sum(d["amount"] if "amount" in k else 1 for d in kept if (d["won"] == k.startswith("won")))
-                        for k in ("open_count", "open_amount", "won_count", "won_amount")},
-        "deals_lost": {"count": len(lost)},
-        "deals_by_stage": collections.Counter(d["stage"] for d in kept).most_common(),
+        "deals_total": {f"{st}_{k}": sum(d["amount"] if k == "amount" else 1 for d in kept if status(d) == st)
+                        for st in ("open", "won", "lost") for k in ("count", "amount")},
+        "deals_lost": {"count": len(lost), "amount": round(sum(d["amount"] for d in lost), 2)},
+        "deals_by_stage": collections.Counter(d["stage"] for d in kept if status(d) == "open").most_common(),
         "existing_deals": {"count": len(existing), "amount": round(sum(d["amount"] for d in existing), 2)},
     }
 
@@ -612,8 +612,8 @@ def main():
         e["campaign"] = public(campaign_names.get(e["campaign_id"], ""))
     pipeline = all_pipeline(s)
     campaign_deals = [{"date": d["date"], "campaign": public(d["campaign"] or campaign_names.get(d["campaign_id"], "")),
-                       "status": "Won" if d["won"] else "Open", "amount": round(d["amount"])}
-                      for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]]
+                       "status": "Won" if d["won"] else "Lost" if d["lost"] else "Open", "amount": round(d["amount"])}
+                      for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing"]
 
     daily = collections.Counter((c["date"], c["line"], c["channel"], c["demo"]) for c in contacts.values())
     out = {
@@ -631,9 +631,9 @@ def main():
                            for (d, l, ch, k, dm), n in sorted(collections.Counter((m["date"], m["line"], m["channel"], m["kind"], m["demo"]) for m in meeting_rows).items())],
         "meetings_all_calendar": len(meetings),
         **summarise_deals(deal_rows, end),
-        "deal_lines": [{"month": d["date"][:7], "amount": round(d["amount"]), "status": "Won" if d["won"] else "Open", "stage": d["stage"],
+        "deal_lines": [{"month": d["date"][:7], "amount": round(d["amount"]), "status": "Won" if d["won"] else "Lost" if d["lost"] else "Open", "stage": d["stage"],
                         "came_from": d["came_from"], "first_page": d["first_page"], "first_form": d["first_form"], "product": d["product"]}
-                       for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing" and not d["lost"]],
+                       for d in sorted(deal_rows, key=lambda d: d["date"]) if d["counts"] == "marketing"],
         "events": events,
         "event_rows": event_rows,
         "campaigns": campaigns,
@@ -655,7 +655,7 @@ def main():
     print("  deal lines:", [(d["month"], d["came_from"], d["product"]) for d in out["deal_lines"]])
     t = out["deals_total"]
     print(f"  deals: open {t['open_count']} (${t['open_amount']:,.0f}), won {t['won_count']} (${t['won_amount']:,.0f}), "
-          f"closed lost left out {out['deals_lost']['count']}, existing {out['existing_deals']['count']}")
+          f"lost {t['lost_count']} (${t['lost_amount']:,.0f}), existing {out['existing_deals']['count']}")
     print("  events:", [(e["label"], e["members"]) for e in events])
     print("  event rows:", [(e["key"], e["signed_up"], e["attended"], e["meetings_after"], e["meetings_upcoming"], e["people_with_meeting"]) for e in event_rows])
     print("  event Salesforce campaigns (members, meetings after, people with a meeting):",

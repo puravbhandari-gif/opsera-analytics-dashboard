@@ -72,3 +72,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Ask David for a new "Mktg#05 Multi-Attrib Opportunities" export. The 2 Nov one has no campaign touches for the 8 deals created 3 to 6 Nov, and it carries half of Q3 influenced ($500,000 of $1.0M).
 - [ ] Ask David: the 9 Nov "02a Campaigns with Meetings (members)" has 415 rows against 809 on 27 Oct (it now filters on meeting date). The older export fills the gap for now. It isn't a full member list: Flutter, Tokenomics and GitHub Universe 2026 have no rows, and Gartner Xpo has 1.
 - [ ] Ask David for fresh member exports for Flutter (all statuses, the 2 Nov one is "Attended" only), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).
+- [ ] Ask David whether April deals from "Current Customer Expansion", "All Database" and partner campaigns belong under marketing. With lost deals counted, April shows 13 sourced deals ($1.34M) on the Pipeline tab.

@@ -559,16 +559,16 @@
      "main": {
       "key": "sourced_deals",
       "label": "Marketing sourced deals (estimate)",
-      "value": "2",
-      "cur": 2,
+      "value": "3",
+      "cur": 3,
       "prev": 1,
       "before": "1",
-      "change_pct": 100.0,
+      "change_pct": 200.0,
       "good": true,
       "min_change_pct": 15
      },
      "why": "Their pipeline came to $200,000, down from $588,000.",
-     "do": "Link contacts to deals: 19 had no contact this month.",
+     "do": "Link contacts to deals: 20 had no contact this month.",
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
@@ -576,7 +576,7 @@
       },
       {
        "week": "5 to 11 Oct 2026",
-       "value": 1
+       "value": 2
       },
       {
        "week": "12 to 18 Oct 2026",
@@ -1053,7 +1053,7 @@
      "Google showed our pages 22.6% less often."
     ],
     "do": [
-     "Link contacts to deals: 19 had no contact this month.",
+     "Link contacts to deals: 20 had no contact this month.",
      "Write more like Claude Code Alternatives: 81 of 189 engaged.",
      "Find what drove direct visits from 2,742 to 8,400."
     ]
@@ -1075,11 +1075,11 @@
      "main": {
       "key": "sourced_deals",
       "label": "Marketing sourced deals (estimate)",
-      "value": "4",
-      "cur": 4,
-      "prev": 6,
-      "before": "6",
-      "change_pct": -33.3,
+      "value": "6",
+      "cur": 6,
+      "prev": 11,
+      "before": "11",
+      "change_pct": -45.5,
       "good": false,
       "min_change_pct": 15
      },
@@ -1092,7 +1092,7 @@
       },
       {
        "week": "5 to 11 Oct 2026",
-       "value": 1
+       "value": 2
       },
       {
        "week": "12 to 18 Oct 2026",
@@ -1529,7 +1529,7 @@
      "Content page visits up 29.6%"
     ],
     "attention": [
-     "Marketing sourced deals (estimate) down 33.3%",
+     "Marketing sourced deals (estimate) down 45.5%",
      "Times Google showed our pages down 31.4%",
      "Visits from tagged campaigns down 26.5%"
     ],
@@ -1550,14 +1550,14 @@
      "period_before": "9 May to 8 Aug 2026",
      "notable": true,
      "main": {
-      "key": "sourced_value",
-      "label": "Marketing sourced pipeline (estimate)",
-      "value": "$1,056,000",
-      "cur": 1056000,
-      "prev": 400000,
-      "before": "$400,000",
-      "change_pct": 164.0,
-      "good": true,
+      "key": "sourced_deals",
+      "label": "Marketing sourced deals (estimate)",
+      "value": "6",
+      "cur": 6,
+      "prev": 9,
+      "before": "9",
+      "change_pct": -33.3,
+      "good": false,
       "min_change_pct": 15
      },
      "why": null,
@@ -1565,11 +1565,11 @@
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
-       "value": 200000
+       "value": 1
       },
       {
        "week": "5 to 11 Oct 2026",
-       "value": 0
+       "value": 2
       },
       {
        "week": "12 to 18 Oct 2026",
@@ -2107,7 +2107,7 @@
      "Contact form fills fell to 19, down from 31."
     ],
     "do": [
-     "Link contacts to deals: 57 had no contact in 3 months.",
+     "Link contacts to deals: 63 had no contact in 3 months.",
      "Filter out unlabelled visits, up from 591 to 2,563.",
      "Fix the PHP2Shell blog: 23 of 367 visits engaged."
     ]

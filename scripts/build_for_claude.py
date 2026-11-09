@@ -187,10 +187,11 @@ def main():
         drows = hub["deals_weekly"] if kind == "week" else hub["deals_monthly"]
         def deals_for(p, keep):
             rs = [r for r in drows if r["start"] == p["start"] and keep(r)]
-            return {k: sum(r[k] for r in rs) for k in ("open_count", "open_amount", "won_count", "won_amount")}
-        write(f"customer_journey_summary_by_{kind}", PERIOD_HEAD + ["demo_requests", "meetings_booked", "open_pipeline_usd", "won_usd"],
+            return {k: sum(r.get(k, 0) for r in rs) for k in ("open_count", "open_amount", "won_count", "won_amount", "lost_count", "lost_amount")}
+        write(f"customer_journey_summary_by_{kind}", PERIOD_HEAD + ["demo_requests", "meetings_booked", "open_pipeline_usd", "won_usd", "lost_usd"],
               [period_cols(p) + [total(leads["daily"], "demo", p["start"], p["end"]), total(booked, "count", p["start"], p["end"]),
-                                 round(deals_for(p, lambda r: True)["open_amount"]), round(deals_for(p, lambda r: True)["won_amount"])] for p in ps],
+                                 round(deals_for(p, lambda r: True)["open_amount"]), round(deals_for(p, lambda r: True)["won_amount"]),
+                                 round(deals_for(p, lambda r: True)["lost_amount"])] for p in ps],
               f"Customer journey tab, top numbers, by {kind}. Sources: Google Analytics (demo requests), HubSpot (meetings and deals)")
         funnel = []
         for p in ps:
@@ -212,9 +213,9 @@ def main():
                                sum(r["times_shown"] for r in g) if ch == "search" else "", sum(r["clicks"] for r in g) if ch == "search" else "",
                                total(ga["daily"], "sessions", a, b) if ch == "all" else ga_sum("visits"), ga_sum("demo_page"), ga_sum("demo_form"),
                                contacts, total(booked, "count", a, b, lambda r: in_ch(r) and r["demo"]),
-                               d["open_count"] + d["won_count"], round(d["open_amount"]), round(d["won_amount"])])
+                               d["open_count"] + d["won_count"] + d["lost_count"], round(d["open_amount"]), round(d["won_amount"]), round(d["lost_amount"])])
         write(f"customer_journey_funnel_by_{kind}", PERIOD_HEAD + ["channel", "google_times_shown", "google_clicks", "visits", "saw_demo_page", "filled_demo_form",
-                                                                    "new_contacts", "meetings", "deals_open_or_won", "open_pipeline_usd", "won_usd"],
+                                                                    "new_contacts", "meetings", "deals_open_won_or_lost", "open_pipeline_usd", "won_usd", "lost_usd"],
               funnel, f"The funnel for each channel, by {kind}. Sources: Search Console for the 2 Google columns, Google Analytics from visits to demo form, HubSpot from contacts to deals")
 
         # AEO: visits from AI tools and what came next, per tool
@@ -224,10 +225,10 @@ def main():
                 row = [total(ga["ai"]["daily"], k, p["start"], p["end"], lambda r: r["tool"] == t) for k in ("visits", "engaged", "demo_page", "demo_form")]
                 contacts = total(hub["ai_contacts_daily"], "count", p["start"], p["end"], lambda r: r["tool"] == t and r["demo"])
                 d = deals_for(p, lambda r: r["demo"] and r["tool"] == t)
-                if any(row) or contacts or d["open_count"] or d["won_count"]:
-                    aeo.append(period_cols(p) + [name] + row + [contacts, d["open_count"] + d["won_count"], round(d["open_amount"]), round(d["won_amount"])])
+                if any(row) or contacts or d["open_count"] or d["won_count"] or d["lost_count"]:
+                    aeo.append(period_cols(p) + [name] + row + [contacts, d["open_count"] + d["won_count"] + d["lost_count"], round(d["open_amount"]), round(d["won_amount"]), round(d["lost_amount"])])
         write(f"aeo_by_{kind}", PERIOD_HEAD + ["ai_tool", "visits", "engaged_visits", "saw_demo_page", "filled_demo_form", "new_contacts",
-                                               "deals_open_or_won", "open_pipeline_usd", "won_usd"],
+                                               "deals_open_won_or_lost", "open_pipeline_usd", "won_usd", "lost_usd"],
               aeo, f"AEO tab: visits from each AI tool and what came next, by {kind}. Sources: Google Analytics, HubSpot")
 
         # Google search
@@ -350,9 +351,9 @@ def main():
     write("google_top_searches", ["search", "clicks", "times_google_showed_us", "click_rate_pct", "average_spot_on_google"],
           [[s["search"], s["clicks"], s["times_shown"], s["click_rate_pct"], s["avg_spot"]] for s in gsc["searches"][:600] if s["clicks"]],
           f"The searches bringing the most Google clicks, {gsc['start_date']} to {gsc_last}. Source: Search Console. Google hides rare searches")
-    write("deals_one_line_each", ["month", "first_came_from", "first_page", "first_form", "product", "open_or_won", "amount_usd"],
+    write("deals_one_line_each", ["month", "first_came_from", "first_page", "first_form", "product", "open_won_or_lost", "amount_usd"],
           [[d["month"], d["came_from"], d["first_page"], d["first_form"], d["product"], d["status"], d["amount"]] for d in hub.get("deal_lines", [])],
-          "How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name")
+          "How each marketing deal came in: 1 line per deal, open, won or lost, with no company or person. Source: HubSpot. The product comes from words in the deal name")
     em = hub.get("emails") or {}
     if em.get("rows"):
         write("hubspot_marketing_emails", ["sent_on", "subject", "sends", "opens", "clicks", "open_rate_pct", "click_rate_pct"],

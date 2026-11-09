@@ -1070,7 +1070,7 @@ function funnelHtml(steps) {
   }).join("");
 }
 
-// Deals are stored only as totals per week, month and 3 months (the page is public). Closed Lost is left out.
+// Deals are stored only as totals per week, month and 3 months (the page is public). Open, won and lost all count (agreed 9 Nov 2026).
 // mode "all" adds up every month. Returns null when the period isn't one that's stored, such as a single day.
 function dealsIn(hub, mode, a, keep = () => true, b = null) {
   const rows = { week: hub.deals_weekly, month: hub.deals_monthly, cq: hub.deals_monthly, quarter: hub.deals_quarters, all: hub.deals_monthly }[mode];
@@ -1079,8 +1079,8 @@ function dealsIn(hub, mode, a, keep = () => true, b = null) {
     if (a !== quarterStart(a)) return null;
     if (b && b < quarterEnd(a) && b < hub.end_date && b !== monthEnd(b)) return null;   // part of a past month: deals are stored by month
     const end = quarterEnd(a) < hub.end_date ? quarterEnd(a) : hub.end_date;
-    const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, start: a, end };
-    rows.filter((r) => r.start >= a && r.start <= end && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount"].forEach((k) => { out[k] += r[k]; }));
+    const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, lost_count: 0, lost_amount: 0, start: a, end };
+    rows.filter((r) => r.start >= a && r.start <= end && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount", "lost_count", "lost_amount"].forEach((k) => { out[k] += r[k] || 0; }));
     return out;
   }
   if (mode === "week" && a !== weekStart(a)) return null;
@@ -1096,10 +1096,14 @@ function dealsIn(hub, mode, a, keep = () => true, b = null) {
     ({ start, end } = near);
   }
   if (mode === "all") start = hub.start_date;
-  const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, start, end };
-  rows.filter((r) => (mode === "all" || r.start === start) && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount"].forEach((k) => { out[k] += r[k]; }));
+  const out = { open_count: 0, open_amount: 0, won_count: 0, won_amount: 0, lost_count: 0, lost_amount: 0, start, end };
+  rows.filter((r) => (mode === "all" || r.start === start) && keep(r)).forEach((r) => ["open_count", "open_amount", "won_count", "won_amount", "lost_count", "lost_amount"].forEach((k) => { out[k] += r[k] || 0; }));
   return out;
 }
+
+// every deal created counts, open, won or lost (agreed 9 Nov 2026)
+const dealSum = (d, k) => d[`open_${k}`] + d[`won_${k}`] + (d[`lost_${k}`] || 0);
+const dealExtra = (d) => `${money(d.open_amount)} open, ${money(d.won_amount)} won, ${money(d.lost_amount || 0)} lost`;
 
 // the deal step's note when the stored totals cover other dates than the rest of the funnel
 const dealNote = (d, a, b) => (!d ? (periodMode === "cq" ? "We store deals as monthly totals, so there's no figure for part of a month."
@@ -1122,7 +1126,7 @@ function renderJourney(ga, leads, hub, gsc) {
     metrics: [
       { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
       { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
-      { label: "Open pipeline", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.open_amount ?? null, fmt: money },
+      { label: "Pipeline created", value: (a, b) => { const d = dealsIn(hub, periodMode, a, undefined, b); return d ? dealSum(d, "amount") : null; }, fmt: money, sub: "Open, won and lost" },
       { label: "Won", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.won_amount ?? null, fmt: money },
     ] });
 
@@ -1145,8 +1149,8 @@ function renderJourney(ga, leads, hub, gsc) {
       { label: "New contact", value: contacts, src: "HubSpot" },
       { label: "Meeting", value: hubSum(booked, "count"), src: "HubSpot",
         note: "Only meetings with demo form contacts. The top numbers count any marketing contact." },
-      { label: "Deal", value: d ? d.open_count + d.won_count : null, src: "HubSpot",
-        extra: d ? `${money(d.open_amount)} open, ${money(d.won_amount)} won` : "",
+      { label: "Deal", value: d ? dealSum(d, "count") : null, src: "HubSpot",
+        extra: d ? dealExtra(d) : "",
         note: mode === "all" ? "" : dealNote(d, a, b) },
     ];
     if (ch === "search") {
@@ -1271,7 +1275,7 @@ function renderJourney(ga, leads, hub, gsc) {
   const dt2 = hub.deals_total;
   $("journey-deals").innerHTML = card("Open deals", num(dt2.open_count), `${money(dt2.open_amount)} pipeline. ${hub.deals_by_stage.map(([st, n]) => `${st}: ${n}`).join(", ")}`) +
     card("Won deals", num(dt2.won_count), money(dt2.won_amount)) +
-    card("Closed lost", num(hub.deals_lost.count), "Not counted") +
+    card("Lost deals", num(dt2.lost_count ?? hub.deals_lost.count), dt2.lost_amount == null ? "" : money(dt2.lost_amount)) +
     card("Older deals for these contacts", num(hub.existing_deals.count), `${money(hub.existing_deals.amount)}, from before sign-up. Not counted`);
   $("journey-deals-source").textContent = `Source: HubSpot deals created since ${dayYear(start)}, ${hubWhen}.`;
   // One line per marketing deal: where the person first came from, their first page and form, and the product
@@ -1284,7 +1288,7 @@ function renderJourney(ga, leads, hub, gsc) {
       { key: "first_page", label: "First page", sort: false, fmt: pageCell },
       { key: "first_form", label: "First form", sort: false },
       { key: "product", label: "Product", sort: false },
-      { key: "status", label: "Open or won", sort: false },
+      { key: "status", label: "Open, won or lost", sort: false },
       { key: "amount", label: "Amount", num: true, fmt: money, sort: false },
     ] });
   } else {
@@ -1292,7 +1296,8 @@ function renderJourney(ga, leads, hub, gsc) {
   }
   const openSum = lines.filter((d) => d.status === "Open").reduce((t2, d) => t2 + d.amount, 0);
   const wonSum = lines.filter((d) => d.status === "Won").reduce((t2, d) => t2 + d.amount, 0);
-  $("journey-deal-lines-source").textContent = `Source: HubSpot deals created since ${dayYear(start)}, ${hubWhen}. ${num(lines.length)} deals: ${money(openSum)} open and ${money(wonSum)} won.`;
+  const lostSum = lines.filter((d) => d.status === "Lost").reduce((t2, d) => t2 + d.amount, 0);
+  $("journey-deal-lines-source").textContent = `Source: HubSpot deals created since ${dayYear(start)}, ${hubWhen}. ${num(lines.length)} deals: ${money(openSum)} open, ${money(wonSum)} won and ${money(lostSum)} lost.`;
   const contacts = (line) => hub.contacts_daily.filter((r) => r.line === line).reduce((t2, r) => t2 + r.count, 0);
   $("journey-contacts").innerHTML = card("Form contacts", num(contacts("form")), `Demo form: ${num(hub.contacts_daily.filter((r) => r.line === "form" && r.demo).reduce((t2, r) => t2 + r.count, 0))}`) +
     card("Luma event sign-ups", num(contacts("luma")), "Imported from Luma") +
@@ -1347,7 +1352,7 @@ function renderAeo(ga, hub) {
       { label: "New contact", value: sum(hub.ai_contacts_daily.filter((r) => r.demo), "count"), src: "HubSpot" },
       (() => {
         const d = dealsIn(hub, periodMode, cur.start, (r) => r.demo && (tool === "all" ? !!r.tool : r.tool === tool));
-        return { label: "Deal", value: d ? d.open_count + d.won_count : null, src: "HubSpot", extra: d ? `${money(d.open_amount)} open, ${money(d.won_amount)} won` : "",
+        return { label: "Deal", value: d ? dealSum(d, "count") : null, src: "HubSpot", extra: d ? dealExtra(d) : "",
           note: dealNote(d, cur.start, cur.end) };
       })(),
     ]);
@@ -2454,7 +2459,7 @@ function renderCampaigns(d, hub) {
     ] });
     $("campaigns-source").textContent = `Visits, engaged visits and form fills: Google Analytics, ${range(cur.start, cur.end)} (Pacific time). Form fills leave out job applications.`;
     drawAdsFor(cur);
-    $("campaigns-hub-source").textContent = `Emails and deals: HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Emails by the day they were sent; deals by the day they were created, open or won.`;
+    $("campaigns-hub-source").textContent = `Emails and deals: HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}. Emails by the day they were sent; deals by the day they were created, open, won or lost.`;
   };
   $("campaigns-range").addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
@@ -2482,11 +2487,11 @@ function renderPipeline(sf) {
     return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline` };
   };
   compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast, fullPeriods: true,
-    source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open and won, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
+    source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
     metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
       { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
   $("pipe-undercount").textContent = "Marketing sourced is an estimate: it rests on Salesforce's Primary Campaign Source, a starting point that isn't reliable on its own. " +
-    `Marketing numbers are undercounted: ${sf.share_without_contact_pct}% of open and won opportunities have no contact attached in Salesforce, so their campaigns can't be seen. ` +
+    `Marketing numbers are undercounted: ${sf.share_without_contact_pct}% of opportunities have no contact attached in Salesforce, so their campaigns can't be seen. ` +
     `A campaign counts only if the person joined it within ${sf.window_days} days before the deal was created; ${num(sf.deals_left_out_by_window)} deal${sf.deals_left_out_by_window === 1 ? " was" : "s were"} left out by this rule. ` +
     `For ${num(sf.deals_join_date_unknown)} deals the exports don't show when the person joined, so those still count.`;
 
@@ -2537,7 +2542,7 @@ function renderPipeline(sf) {
     { key: "campaigns", label: "Campaigns", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.campaigns.join(" | ") },
     { key: "reasons", label: "Why it needs a check", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.reasons.join(" | ") },
   ] });
-  $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open and won. ${num((sf.to_review || []).length)} deals. ` +
+  $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open, won and lost. ${num((sf.to_review || []).length)} deals. ` +
     "Existing customer and doubtful deals stay in the totals above. No company or person names.";
 
   const older = sf.exports.meetings_older || [];
@@ -2815,12 +2820,15 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
   const booked = hub.meetings_daily.filter((r) => r.kind === "booked");
   const robots = rangeSum(ga.email_robots_daily || [], "robots"), sessions = rangeSum(ga.daily, "sessions");
   const sourced = rangeSum(sf.days, "sourced_value"), influenced = rangeSum(sf.days, "influenced_value");
+  // Every deal created in the quarter counts, open, won or lost, so a past quarter doesn't drop when deals are lost later (agreed 9 Nov 2026)
+  const byStatus = ["won", "lost", "open"].map((k) => [k, rangeSum(sf.marketing_status_days || [], `${k}_value`)]);
   const placed = prRows(pr, { by_link: {} }, { by_domain: {}, by_link: {} }).filter(prPlacement);
   const metrics = [
     { label: "Marketing pipeline", start: sf.opportunities_cover_from, last: addDays(sf.exports.opportunities, -1), fmt: moneyShort,
       value: (a, b) => sourced(a, b) + influenced(a, b),
       line: (a, b) => `${moneyShort(sourced(a, b))} sourced, ${moneyShort(influenced(a, b))} influenced`,
-      src: `Salesforce opportunities, exported ${dayYear(sf.exports.opportunities)}` },
+      note: (a, b) => byStatus.map(([k, f]) => `${k[0].toUpperCase() + k.slice(1)} ${moneyShort(f(a, b))}`).join(" / "),
+      src: `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
       line: () => "Demo form fills on opsera.ai", src: "Google Analytics" },
     { label: "Meetings with marketing contacts", start: hub.start_date, last: hub.end_date, fmt: num, value: rangeSum(booked, "count"),
@@ -2858,7 +2866,7 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       const prevLabel = `${quarterName(p.ps)}${p.prev && p.prev.end < quarterEnd(p.ps) ? `, ${range(p.prev.start, p.prev.end)}` : ""}`;
       return `<article class="exec-card"><h3>${esc(m.label)}</h3><div class="exec-big value">${esc(m.fmt(cur))}</div>
         ${ch == null ? "" : `<div class="exec-change ${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}% vs ${esc(quarterName(p.ps))}</div>`}
-        <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}${m.note ? `<span class="exec-note">${esc(m.note)}</span>` : ""}</p>
+        <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}${m.note ? `<span class="exec-note">${esc(typeof m.note === "function" ? m.note(p.cur.start, p.cur.end) : m.note)}</span>` : ""}</p>
         ${barsFor([...(p.prev ? [{ label: prevLabel, v: prev, fmt: m.fmt }] : []), { label: `${quarterName(q)}${p.cur.end < quarterEnd(q) ? ` to ${day(p.cur.end)}` : ""}`, v: cur, fmt: m.fmt, now: true }])}</article>`;
     });
     // Content published: the number, and a bar for each month of the quarter

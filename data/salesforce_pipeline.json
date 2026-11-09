@@ -11,21 +11,21 @@
  "opportunities_cover_from": "2026-04-01",
  "opportunities_from": "2026-01-05",
  "opportunities_to": "2026-11-06",
- "share_without_contact_pct": 79,
+ "share_without_contact_pct": 70,
  "window_days": 90,
- "deals_join_date_unknown": 19,
- "deals_left_out_by_window": 2,
+ "deals_join_date_unknown": 28,
+ "deals_left_out_by_window": 3,
  "months": [
   {
    "month": "2026-04",
    "quarter": "FY27 Q1",
-   "sourced_deals": 6,
-   "sourced_value": 581550,
+   "sourced_deals": 13,
+   "sourced_value": 1337200,
    "influenced_deals": 0,
    "influenced_value": 0,
-   "agency_deals": 2,
-   "agency_value": 250000,
-   "nocontact_deals": 12
+   "agency_deals": 3,
+   "agency_value": 400000,
+   "nocontact_deals": 13
   },
   {
    "month": "2026-05",
@@ -34,64 +34,64 @@
    "sourced_value": 498375,
    "influenced_deals": 0,
    "influenced_value": 0,
-   "agency_deals": 0,
-   "agency_value": 0,
-   "nocontact_deals": 2
+   "agency_deals": 1,
+   "agency_value": 125000,
+   "nocontact_deals": 8
   },
   {
    "month": "2026-06",
    "quarter": "FY27 Q2",
-   "sourced_deals": 1,
-   "sourced_value": 100000,
+   "sourced_deals": 2,
+   "sourced_value": 150000,
    "influenced_deals": 1,
    "influenced_value": 150000,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 13
+  },
+  {
+   "month": "2026-07",
+   "quarter": "FY27 Q2",
+   "sourced_deals": 4,
+   "sourced_value": 400000,
+   "influenced_deals": 7,
+   "influenced_value": 700000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 9
   },
   {
-   "month": "2026-07",
-   "quarter": "FY27 Q2",
-   "sourced_deals": 0,
-   "sourced_value": 0,
-   "influenced_deals": 2,
-   "influenced_value": 200000,
-   "agency_deals": 0,
-   "agency_value": 0,
-   "nocontact_deals": 7
-  },
-  {
    "month": "2026-08",
    "quarter": "FY27 Q3",
-   "sourced_deals": 1,
-   "sourced_value": 268000,
+   "sourced_deals": 2,
+   "sourced_value": 368000,
    "influenced_deals": 1,
    "influenced_value": 150000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 16
+   "nocontact_deals": 18
   },
   {
    "month": "2026-09",
    "quarter": "FY27 Q3",
    "sourced_deals": 1,
    "sourced_value": 588000,
-   "influenced_deals": 1,
-   "influenced_value": 500000,
+   "influenced_deals": 2,
+   "influenced_value": 530000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 17
+   "nocontact_deals": 20
   },
   {
    "month": "2026-10",
    "quarter": "FY27 Q3",
-   "sourced_deals": 2,
+   "sourced_deals": 3,
    "sourced_value": 200000,
-   "influenced_deals": 3,
+   "influenced_deals": 4,
    "influenced_value": 350000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 19
+   "nocontact_deals": 20
   },
   {
    "month": "2026-11",
@@ -108,8 +108,8 @@
  "days": [
   {
    "date": "2026-04-01",
-   "sourced_deals": 1,
-   "sourced_value": 25000,
+   "sourced_deals": 3,
+   "sourced_value": 180650,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
@@ -117,13 +117,33 @@
    "nocontact_deals": 6
   },
   {
-   "date": "2026-04-08",
+   "date": "2026-04-07",
    "sourced_deals": 1,
-   "sourced_value": 94500,
+   "sourced_value": 75000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-04-08",
+   "sourced_deals": 2,
+   "sourced_value": 244500,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-04-13",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 1,
+   "agency_value": 150000,
    "nocontact_deals": 0
   },
   {
@@ -158,8 +178,8 @@
   },
   {
    "date": "2026-04-24",
-   "sourced_deals": 0,
-   "sourced_value": 0,
+   "sourced_deals": 1,
+   "sourced_value": 125000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 1,
@@ -178,18 +198,18 @@
   },
   {
    "date": "2026-04-29",
-   "sourced_deals": 0,
-   "sourced_value": 0,
+   "sourced_deals": 1,
+   "sourced_value": 150000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 2
+   "nocontact_deals": 3
   },
   {
    "date": "2026-04-30",
-   "sourced_deals": 2,
-   "sourced_value": 186000,
+   "sourced_deals": 3,
+   "sourced_value": 286000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 1,
@@ -205,6 +225,16 @@
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 1
+  },
+  {
+   "date": "2026-05-19",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 1,
+   "agency_value": 125000,
+   "nocontact_deals": 0
   },
   {
    "date": "2026-05-20",
@@ -224,7 +254,17 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 1
+   "nocontact_deals": 5
+  },
+  {
+   "date": "2026-05-29",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 2
   },
   {
    "date": "2026-06-01",
@@ -238,13 +278,23 @@
   },
   {
    "date": "2026-06-03",
+   "sourced_deals": 1,
+   "sourced_value": 50000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 5
+  },
+  {
+   "date": "2026-06-05",
    "sourced_deals": 0,
    "sourced_value": 0,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 2
+   "nocontact_deals": 1
   },
   {
    "date": "2026-06-08",
@@ -307,9 +357,39 @@
    "nocontact_deals": 1
   },
   {
-   "date": "2026-07-10",
+   "date": "2026-07-01",
    "sourced_deals": 0,
    "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 1
+  },
+  {
+   "date": "2026-07-07",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 100000,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-07-08",
+   "sourced_deals": 1,
+   "sourced_value": 125000,
+   "influenced_deals": 1,
+   "influenced_value": 100000,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 1
+  },
+  {
+   "date": "2026-07-10",
+   "sourced_deals": 1,
+   "sourced_value": 75000,
    "influenced_deals": 1,
    "influenced_value": 100000,
    "agency_deals": 0,
@@ -320,8 +400,8 @@
    "date": "2026-07-13",
    "sourced_deals": 0,
    "sourced_value": 0,
-   "influenced_deals": 1,
-   "influenced_value": 100000,
+   "influenced_deals": 2,
+   "influenced_value": 200000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 0
@@ -337,6 +417,16 @@
    "nocontact_deals": 4
   },
   {
+   "date": "2026-07-16",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
    "date": "2026-07-17",
    "sourced_deals": 0,
    "sourced_value": 0,
@@ -345,6 +435,26 @@
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 1
+  },
+  {
+   "date": "2026-07-22",
+   "sourced_deals": 1,
+   "sourced_value": 100000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-07-28",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 2,
+   "influenced_value": 200000,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
   },
   {
    "date": "2026-08-03",
@@ -394,7 +504,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 1
+   "nocontact_deals": 2
   },
   {
    "date": "2026-08-13",
@@ -408,8 +518,8 @@
   },
   {
    "date": "2026-08-18",
-   "sourced_deals": 0,
-   "sourced_value": 0,
+   "sourced_deals": 1,
+   "sourced_value": 100000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 0,
@@ -437,11 +547,31 @@
    "nocontact_deals": 9
   },
   {
-   "date": "2026-09-09",
+   "date": "2026-08-27",
    "sourced_deals": 0,
    "sourced_value": 0,
    "influenced_deals": 0,
    "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 1
+  },
+  {
+   "date": "2026-09-08",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 2
+  },
+  {
+   "date": "2026-09-09",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 30000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 3
@@ -454,7 +584,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 1
+   "nocontact_deals": 2
   },
   {
    "date": "2026-09-22",
@@ -518,7 +648,7 @@
   },
   {
    "date": "2026-10-07",
-   "sourced_deals": 0,
+   "sourced_deals": 1,
    "sourced_value": 0,
    "influenced_deals": 1,
    "influenced_value": 150000,
@@ -544,10 +674,20 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 7
+   "nocontact_deals": 8
   },
   {
    "date": "2026-10-22",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
+   "nocontact_deals": 0
+  },
+  {
+   "date": "2026-10-23",
    "sourced_deals": 0,
    "sourced_value": 0,
    "influenced_deals": 1,
@@ -597,12 +737,314 @@
    "nocontact_deals": 1
   }
  ],
+ "marketing_status_days": [
+  {
+   "date": "2026-04-01",
+   "won_deals": 1,
+   "won_value": 25000,
+   "lost_deals": 2,
+   "lost_value": 155650,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-04-07",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 75000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-04-08",
+   "won_deals": 1,
+   "won_value": 94500,
+   "lost_deals": 1,
+   "lost_value": 150000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-04-15",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 200000
+  },
+  {
+   "date": "2026-04-24",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 125000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-04-28",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 76050
+  },
+  {
+   "date": "2026-04-29",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 150000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-04-30",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 2,
+   "open_value": 186000
+  },
+  {
+   "date": "2026-05-08",
+   "won_deals": 1,
+   "won_value": 48375,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 150000
+  },
+  {
+   "date": "2026-05-20",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 3,
+   "open_value": 300000
+  },
+  {
+   "date": "2026-06-03",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 50000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-06-08",
+   "won_deals": 1,
+   "won_value": 100000,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-06-10",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 150000
+  },
+  {
+   "date": "2026-07-07",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-07-08",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 2,
+   "lost_value": 225000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-07-10",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 75000,
+   "open_deals": 1,
+   "open_value": 100000
+  },
+  {
+   "date": "2026-07-13",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 1,
+   "open_value": 100000
+  },
+  {
+   "date": "2026-07-16",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-07-22",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-07-28",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 2,
+   "lost_value": 200000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-08-12",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 268000
+  },
+  {
+   "date": "2026-08-13",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 150000
+  },
+  {
+   "date": "2026-08-18",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 100000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-09-09",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 30000,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-09-22",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 500000
+  },
+  {
+   "date": "2026-09-24",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 588000
+  },
+  {
+   "date": "2026-10-01",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 200000
+  },
+  {
+   "date": "2026-10-06",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 0
+  },
+  {
+   "date": "2026-10-07",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 150000
+  },
+  {
+   "date": "2026-10-22",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 0
+  },
+  {
+   "date": "2026-10-23",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 1,
+   "lost_value": 0,
+   "open_deals": 0,
+   "open_value": 0
+  },
+  {
+   "date": "2026-10-30",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 200000
+  }
+ ],
  "campaigns": [
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "deals": 7,
+   "value": 700000
+  },
   {
    "bucket": "sourced",
    "campaign": "DG-FY27-Gartner-MQ",
    "deals": 1,
    "value": 588000
+  },
+  {
+   "bucket": "agency",
+   "campaign": "DG-FY26-27-CrestingWave-Meetings",
+   "deals": 4,
+   "value": 525000
   },
   {
    "bucket": "influenced",
@@ -613,14 +1055,20 @@
   {
    "bucket": "influenced",
    "campaign": "DG-Demo Requests",
-   "deals": 3,
-   "value": 450000
+   "deals": 4,
+   "value": 480000
   },
   {
    "bucket": "sourced",
    "campaign": "Current Customer Expansion",
-   "deals": 2,
-   "value": 294500
+   "deals": 3,
+   "value": 444500
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "deals": 3,
+   "value": 325000
   },
   {
    "bucket": "sourced",
@@ -630,13 +1078,19 @@
   },
   {
    "bucket": "sourced",
+   "campaign": "Target-account campaign",
+   "deals": 2,
+   "value": 250000
+  },
+  {
+   "bucket": "sourced",
    "campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
    "deals": 2,
    "value": 250000
   },
   {
-   "bucket": "agency",
-   "campaign": "DG-FY26-27-CrestingWave-Meetings",
+   "bucket": "sourced",
+   "campaign": "DG-Contact Us",
    "deals": 2,
    "value": 250000
   },
@@ -653,10 +1107,10 @@
    "value": 200000
   },
   {
-   "bucket": "influenced",
-   "campaign": "DG-FY27-Databricks-AI-Summit-2026",
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Q2-CXO-Dinner",
    "deals": 2,
-   "value": 200000
+   "value": 150000
   },
   {
    "bucket": "sourced",
@@ -666,15 +1120,15 @@
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-Contact Us",
+   "campaign": "DG-F27 - Partner Deal Reg",
    "deals": 1,
    "value": 150000
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-FY27-Q2-CXO-Dinner",
+   "campaign": "DG-2025-Q1-Webinar-Leading with Data to Simplify DevOps and Elevate DevEx",
    "deals": 1,
-   "value": 100000
+   "value": 125000
   },
   {
    "bucket": "sourced",
@@ -690,6 +1144,18 @@
   },
   {
    "bucket": "sourced",
+   "campaign": "LinkedIn via SEMBIOTICS",
+   "deals": 1,
+   "value": 75000
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "DG-FY26-Q3-Event-Dreamforce",
+   "deals": 1,
+   "value": 75000
+  },
+  {
+   "bucket": "sourced",
    "campaign": "DG-FY27-Q1-Partner-Interest",
    "deals": 1,
    "value": 36000
@@ -701,9 +1167,15 @@
    "value": 25000
   },
   {
+   "bucket": "sourced",
+   "campaign": "DG-2024-Q3-DORA-Webinar",
+   "deals": 1,
+   "value": 5650
+  },
+  {
    "bucket": "influenced",
    "campaign": "DG-FY27-Q3-Event-Dreamforce",
-   "deals": 1,
+   "deals": 2,
    "value": 0
   },
   {
@@ -711,9 +1183,42 @@
    "campaign": "DG-FY27-Invited-to-Discord-Community",
    "deals": 1,
    "value": 0
+  },
+  {
+   "bucket": "sourced",
+   "campaign": "All Database",
+   "deals": 1,
+   "value": 0
   }
  ],
  "to_review": [
+  {
+   "date": "2026-07-07",
+   "amount": 100000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-FY27-Databricks-AI-Summit-2026",
+    "SDR-Meeting-Set"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-07-08",
+   "amount": 100000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-FY27-Databricks-AI-Summit-2026",
+    "DG-FY27-Insights-Nurture",
+    "SDR-Meeting-Set"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
   {
    "date": "2026-07-13",
    "amount": 100000,
@@ -721,6 +1226,50 @@
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-FY27-Databricks-AI-Summit-2026",
+    "SDR-Meeting-Set"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-07-28",
+   "amount": 100000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-2025-Lantern_Records",
+    "DG-FY27-Databricks-AI-Summit-2026",
+    "DG-FY27-Insights-Nurture",
+    "Nurture 1 - General Nurture",
+    "SDR-Meeting-Set",
+    "Target-account campaign"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-07-28",
+   "amount": 100000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-FY27-Databricks-AI-Summit-2026",
+    "DG-FY27-Insights-Nurture",
+    "SDR-Meeting-Set"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-09-09",
+   "amount": 30000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-Demo Requests",
     "SDR-Meeting-Set"
    ],
    "reasons": [
@@ -761,6 +1310,19 @@
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-Demo Requests",
+    "SDR-Meeting-Set"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-10-23",
+   "amount": 0,
+   "stage": "8 ClosedLost",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "DG-FY27-Q3-Event-Dreamforce",
     "SDR-Meeting-Set"
    ],
    "reasons": [
@@ -1571,11 +2133,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Q4-Trends-Webinar",
+    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
+    "campaign": "DG-FY26-Q4-Trends-Webinar",
     "people": 1
    },
    {
@@ -1591,6 +2153,10 @@
     "people": 1
    },
    {
+    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "people": 1
+   },
+   {
     "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
@@ -1599,19 +2165,15 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
-    "people": 1
-   },
-   {
     "campaign": "DG-FY23-AWS Reinvent 2023",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
+    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
+    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
     "people": 1
    },
    {
