@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=44">
+<link rel="stylesheet" href="styles.css?v=45">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -67,6 +67,7 @@
           <option value="campaigns">Campaigns</option>
           <option value="events">Events</option>
           <option value="content">Content</option>
+          <option value="hubs">Hub and spoke campaigns</option>
           <option value="pr">PR and media</option>
         </optgroup>
         <optgroup label="Social">
@@ -211,12 +212,6 @@
     <h2>Content</h2>
     <p class="lead">How each blog post, report, white paper, eBook, guide and comparison page did in the period above.</p>
     <div class="seg" id="content-type" role="group" aria-label="Choose a type of content"></div>
-    <div class="panel" id="content-hubs-panel">
-      <h3>Hub and spoke campaigns</h3>
-      <p class="muted">Each campaign has one core piece (the hub) and the formats and channels built from it (the spokes).</p>
-      <div id="content-hubs"></div>
-      <p class="source" id="content-hubs-source"></p>
-    </div>
     <div class="panel">
       <h3>Content by type</h3>
       <p class="muted">Every blog has one type. Counts follow the period above.</p>
@@ -244,6 +239,13 @@
       <p class="note">Pieces with no visits, form fills, Google clicks or deals don't show. Addresses with stray characters at the end are left out.</p>
       <p class="note">Published this quarter lists each page in the opsera.ai sitemap under /blog/, /resources/ or /knowledge-base/, dated by the publish date on the page itself, plus each public YouTube video. Guide pages carry no publish date, so they can't be listed by date. Quarters are Opsera's fiscal quarters: Q2 is May to Jul, Q3 is Aug to Oct and Q4 is Nov to Jan. The list starts 1 Jul 2026. Updated every Monday.</p>
     </details>
+  </section>
+
+  <section id="tab-hubs" class="tab" role="tabpanel" hidden>
+    <h2>Hub and spoke campaigns</h2>
+    <p class="lead">Each campaign has one core piece (the hub) and the formats and channels built from it (the spokes).</p>
+    <div class="seg" id="hubs-pick" role="group" aria-label="Choose a campaign"></div>
+    <div id="hubs-cards"><p class="muted">Loading...</p></div>
   </section>
 
   <section id="tab-pr" class="tab" role="tabpanel" hidden>
@@ -1062,6 +1064,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=122"></script>
+<script src="app.js?v=123"></script>
 </body>
 </html>

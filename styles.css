@@ -367,7 +367,7 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 
 .hub h4 { font-family: var(--display); font-size: 1rem; margin: 4px 0 8px; }
 /* Each hub and spoke campaign is its own card */
-#content-hubs { display: grid; gap: 16px; }
+#hubs-cards { margin-top: 16px; }
 .hub-card { border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px 10px; background: var(--surface); }
 .hub-note { display: inline-block; margin: 0 0 4px; padding: 2px 10px; border-radius: 999px; background: var(--wash); color: var(--accent-deep); font-size: 0.82rem; font-weight: 500; }
 

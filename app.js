@@ -189,9 +189,8 @@ const view = (() => {
   const a = new URLSearchParams(query || "");
   const period = Object.keys(PERIOD_IN_ADDRESS).find((k) => PERIOD_IN_ADDRESS[k] === a.get("period"));
   if (period) periodMode = period;   // a link's period wins over the one this browser last used
-  // #content-hubs opens the Content tab at the campaign hubs, and fq=fy27-q3 pins the Quarter view to that full quarter (agreed 9 Nov 2026)
-  const anchor = tab === "content-hubs" ? tab : "";
-  return { tab: anchor ? "content" : tab || "", anchor, fq: /^fy\d\d-q[1-4]$/.test(a.get("fq") || "") ? a.get("fq") : "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
+  // #content-hubs, the older link, opens the Hub and spoke campaigns tab. fq=fy27-q3 pins the Quarter view to that full quarter (agreed 9 Nov 2026)
+  return { tab: tab === "content-hubs" ? "hubs" : tab || "", campaign: a.get("campaign") || "", fq: /^fy\d\d-q[1-4]$/.test(a.get("fq") || "") ? a.get("fq") : "", channel: a.get("channel") || "all", funnelmonth: a.get("funnelmonth") || "", person: a.get("person") || "",
     type: a.get("type") || "all", q: a.get("q") || "", markers: a.get("markers") !== "off", mtype: a.get("mtype") || "all" };
 })();
 function viewAddress() {
@@ -204,7 +203,8 @@ function viewAddress() {
   if (!gtm.on) a.set("markers", "off");
   if (gtm.type !== "all") a.set("mtype", gtm.type);
   if (view.fq && periodMode === "cq") a.set("fq", view.fq);
-  return `#${view.tab === "content" && view.anchor ? view.anchor : view.tab || "exec"}?${a.toString()}`;
+  if (view.tab === "hubs" && view.campaign) a.set("campaign", view.campaign);
+  return `#${view.tab || "exec"}?${a.toString()}`;
 }
 function saveView() { history.replaceState(null, "", viewAddress()); }
 
@@ -2071,8 +2071,9 @@ function renderBlogTypes(p, bt) {
     source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
     metrics: types.map((t) => ({ label: t, value: rangeSum(rows, (r) => (r.t === t ? 1 : 0)), fmt: num, noDelta: true })) });
 }
-// Hub and spoke campaigns: one card per campaign in data/campaign_hubs.json, the core piece in the middle and its formats
-// and channels around it, each with its number. A new campaign is one more block in that file, no code (agreed 9 Nov 2026).
+// Hub and spoke campaigns, a tab of its own: one button and one card per campaign in data/campaign_hubs.json, newest first,
+// one card shown at a time. Each card has the core piece in the middle and its formats and channels around it, each with its
+// number. A new campaign is one more block in that file, and its button appears on its own (agreed 9 Nov 2026).
 // Visits come from Google Analytics (opsera.ai only) from the hub's date (or visits_from), to visits_to if given; the rest is given in the file.
 function renderHubs(d, lk) {
   const idx = Object.fromEntries(lk.pages.map((p, i) => [p, i]));
@@ -2112,10 +2113,28 @@ function renderHubs(d, lk) {
   };
   // A block with a mistake in it shows a short note instead of stopping the other cards
   const blocks = d.campaigns || d.hubs || [];
-  $("content-hubs").innerHTML = blocks.length ? blocks.map((h) => { try { return card(h); }
-    catch (e) { return `<article class="hub hub-card"><h4>${esc(h?.name || "A campaign")}</h4><p class="muted">This campaign's block in campaign_hubs.json needs a hub with a title and date.</p></article>`; } }).join("")
+  const slug = (h, i) => String(h?.name || `campaign-${i + 1}`).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const slugs = blocks.map(slug);
+  $("hubs-cards").innerHTML = blocks.length ? blocks.map((h, i) => { let html;
+    try { html = card(h); }
+    catch (e) { html = `<article class="hub hub-card"><h4>${esc(h?.name || "A campaign")}</h4><p class="muted">This campaign's block in campaign_hubs.json needs a hub with a title and date.</p></article>`; }
+    return html.replace("<article ", `<article data-campaign="${esc(slugs[i])}" `); }).join("")
     : `<p class="muted">No campaigns yet.</p>`;
-  $("content-hubs-source").textContent = "";
+  $("hubs-pick").innerHTML = blocks.map((h, i) => `<button type="button" data-campaign="${esc(slugs[i])}">${esc(h?.name || `Campaign ${i + 1}`)}</button>`).join("");
+  const pick = (c) => {
+    if (!slugs.includes(c)) c = slugs[0];   // the newest campaign, first in the file, unless the link names another
+    view.campaign = c === slugs[0] ? "" : c;
+    $("hubs-pick").querySelectorAll("button").forEach((b) => { b.classList.toggle("on", b.dataset.campaign === c); b.setAttribute("aria-pressed", b.dataset.campaign === c); });
+    $("hubs-cards").querySelectorAll("article").forEach((a) => { a.hidden = a.dataset.campaign !== c; });
+  };
+  $("hubs-pick").onclick = (e) => { const b = e.target.closest("button"); if (b) { pick(b.dataset.campaign); saveView(); } };
+  pick(view.campaign);
+}
+let hubsLoad = null;
+function openHubs() {
+  if (!hubsLoad) hubsLoad = Promise.all([load("campaign_hubs.json"), load("lookup.json")]).then(([h, lk]) => renderHubs(h, lk))
+    .catch(() => { $("hubs-cards").innerHTML = `<p class="muted">Hub and spoke campaigns aren't available right now.</p>`; });
+  return hubsLoad;
 }
 
 // ---------- PR and media: every article, interview, byline, podcast and press mention, by quarter ----------
@@ -2499,7 +2518,6 @@ function openContent() {
   if (!publishedLoad) publishedLoad = load("published.json").then((pub) => {
     renderPublished(pub);
     load("blog_types.json").then((bt) => renderBlogTypes(pub, bt)).catch(() => { $("content-btype-cmp-cards").innerHTML = `<p class="muted">Blog types aren't available right now.</p>`; });
-    Promise.all([load("campaign_hubs.json"), load("lookup.json")]).then(([h, lk]) => renderHubs(h, lk)).catch(() => { $("content-hubs").innerHTML = `<p class="muted">Campaign hubs aren't available right now.</p>`; });
   })
     .catch(() => { $("content-published").innerHTML = `<p class="muted">The list of what we published isn't available right now.</p>`; });
   if (!contentLoad) contentLoad = Promise.all(["lookup.json", "hubspot.json"].map(load)).then(([d, hub]) => renderContent(d, hub))
@@ -2671,7 +2689,7 @@ function renderRankings(d) {
 }
 
 function showTab(name) {
-  if (name === "content-hubs") { view.anchor = name; name = "content"; } else if (name !== "content") view.anchor = "";
+  if (name === "content-hubs") name = "hubs";   // the older link to the hub and spoke campaigns
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
   const execish = name === "exec" || name === "seo";   // the exec views have no team controls
@@ -2688,10 +2706,8 @@ function showTab(name) {
   if (name === "summary") openSummary();
   if (name === "team") openTeam();
   if (name === "todo") openTodo();
-  if (name === "content") openContent().then(() => publishedLoad).then(() => {
-    // after the hubs and types have drawn, and below the sticky header
-    if (view.anchor) setTimeout(() => window.scrollTo(0, $("content-hubs-panel").getBoundingClientRect().top + window.scrollY - document.querySelector("header.top").offsetHeight - 12), 300);
-  });
+  if (name === "content") openContent();
+  if (name === "hubs") openHubs();
   if (name === "pr") openPrMedia();
   if (name === "search") openRankings();
   if (name === "campaigns") openCampaigns();
