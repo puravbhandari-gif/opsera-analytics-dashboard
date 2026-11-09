@@ -3299,9 +3299,9 @@
  "events": [
   {
    "key": "flutter_guests",
-   "label": "Flutter 2026: signed up (Luma import)",
+   "label": "Flutter 2026: signed up (early Luma copy, 2 Sep)",
    "list": "Opsera Flutter 2026_ The AI-SDLC Summit - Guests - 2026-09-02-20-27-29.csv",
-   "note": "",
+   "note": "An early copy of the Luma list. Luma's full list is above",
    "members": 174,
    "joined_daily": [
     {
@@ -3475,7 +3475,7 @@
    "pages": [
     "/flutter-2026-ai-sdlc-summit"
    ],
-   "note": "Sign-ups are the Luma guest list. Includes the fireside chat with Sheila Jordan",
+   "note": "Signed up and attended are HubSpot lists from an early copy of the Luma list (2 Sep) and the attendee import. Luma's full list is in Flutter 2026 on Luma above. Includes the fireside chat with Sheila Jordan",
    "signed_up": 174,
    "attended": 87,
    "meetings_after": 6,
