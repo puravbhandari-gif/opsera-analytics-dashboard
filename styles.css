@@ -442,3 +442,6 @@ body.exec-mode .top-controls, body.exec-mode .nav-row, body.exec-mode footer { d
 .card.picked { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
 .btype-head { font-family: var(--display); font-size: 1rem; margin: 18px 0 4px; }
 .btype-line { margin: 0 0 8px; color: var(--ink-2); }
+
+/* Analysts box on the PR tab (10 Nov 2026) */
+.plain-list { margin: 8px 0 0; padding-left: 20px; line-height: 1.6; color: var(--ink-2); }

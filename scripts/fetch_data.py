@@ -484,6 +484,58 @@ def google_ads(s, end):
     return out
 
 
+# Products by page address (agreed 6 Nov 2026; scripts/fetch_seo_aeo.py uses the same rules)
+PRODUCTS = {
+    "forge": re.compile(r"forge|software-factory|moderni[sz]|migrat|cobol|legacy|coldfusion|dotnet|spec-driven|blitzy|8090|factory-ai|devin-ai"
+                        r"|comparison-guides/claude"),
+    "insights": re.compile(r"insight|dora|space-metrics|ai-code-assistant-analytics|adoption-trends|code-churn|code-quality-metrics|defect-escape"
+                           r"|change-and-quality-metrics|core-devex-metrics|incident-analysis|quality-risk|developer-productivity|ai-coding-impact"
+                           r"|measure-ai-roi|engineering-metrics"),
+}
+
+
+def demo_products(s, end, daily):
+    """Demo requests by product (agreed 10 Nov 2026): the page the person was on before /demo, sorted with the product
+    rules above. The homepage, other pages and no page each get their own group, and the groups add up to the day's demo
+    requests (what Google doesn't give a page for goes in "none")."""
+    demo = {"filter": {"fieldName": "pagePath", "inListFilter": {"values": ["/demo", "/demo/"]}}}
+    out = {r["date"]: {"forge": 0, "insights": 0, "home": 0, "other": 0, "none": 0} for r in daily if r.get("demo")}
+    for r in ga_report(s, end, ["date", "pageReferrer"], ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
+        if r["date"] not in out:
+            stop(f"Demo requests by page: {r['date']} has form fills on /demo but none in the Leads numbers.")
+        u = urlparse(r["pageReferrer"])
+        path = page_key(u.path or "/") if u.netloc in SITE_HOSTS else None
+        group = ("none" if path is None or path.startswith(("/demo", "/ty-demo")) else "home" if path == "/" else
+                 next((k for k, rx in PRODUCTS.items() if rx.search(path)), "other"))
+        out[r["date"]][group] += r["eventCount"]
+    for r in daily:
+        if not r.get("demo"):
+            continue
+        row = out[r["date"]]
+        known = sum(v for k, v in row.items() if k != "none")
+        if known > r["demo"]:
+            stop(f"Demo requests by page add up to more than the {r['demo']} demo requests on {r['date']}.")
+        row["none"] = r["demo"] - known
+    return [{"date": d, **v} for d, v in sorted(out.items())]
+
+
+def cta_clicks(s, end):
+    """Website buttons that send a click event (checked 10 Nov 2026): cta_click (from 30 Oct 2026, with the button text and page),
+    demo_click (from 12 Oct 2026, "Book a demo" style buttons) and file_download. Each is its own kind and never added up:
+    one demo button can send both cta_click and demo_click."""
+    host = {"filter": {"fieldName": "hostName", "inListFilter": {"values": SITE_HOSTS}}}
+    kinds = [("cta", "cta_click", "customEvent:cta_page", "customEvent:cta_text"),
+             ("demo", "demo_click", "pagePath", "customEvent:click_text"),
+             ("download", "file_download", "pagePath", "linkText")]
+    rows = {}
+    for kind, event, page_dim, text_dim in kinds:
+        for r in ga_report(s, end, ["date", page_dim, text_dim], ["eventCount"], event_names=[event], flt=host):
+            text = " ".join((r[text_dim] or "").replace("→", "").split()) or "(no text)"
+            k = (r["date"], kind, page_key(r[page_dim] or "/"), text if text != "(not set)" else "(no text)")
+            rows[k] = rows.get(k, 0) + r["eventCount"]
+    return [{"date": d, "kind": k, "page": p, "button": b, "clicks": n} for (d, k, p, b), n in sorted(rows.items())]
+
+
 def fetch_ga(s, end):
     tz = check_ga_property(s)
     base = ["sessions", "totalUsers", "engagedSessions"]
@@ -516,6 +568,7 @@ def fetch_ga(s, end):
         "kumar_links": kumar_links(s, end),
         "email_robots_daily": email_robots(s, end),
         "google_ads_daily": google_ads(s, end),
+        "cta_clicks": cta_clicks(s, end),
     }, leads(form_rows)
 
 
@@ -701,6 +754,7 @@ def main():
             "pulled_at": dt.datetime.now(IST).isoformat(timespec="minutes")}
     gsc = fetch_gsc(s, end)
     ga, lead_data = fetch_ga(s, end)
+    lead_data["demo_by_product"] = demo_products(s, end, lead_data["daily"])
     write("search_console.json", gsc, meta)
     write("analytics.json", ga, meta)
     write("leads.json", {"source": f"{ga['source']}, form event {FORM_EVENT}", "time_zone": ga["time_zone"], **lead_data},

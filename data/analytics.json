@@ -51395,5 +51395,1113 @@
    "engaged": 1,
    "demo_requests": 0
   }
+ ],
+ "cta_clicks": [
+  {
+   "date": "2026-04-14",
+   "kind": "download",
+   "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-04-15",
+   "kind": "download",
+   "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-05-08",
+   "kind": "download",
+   "page": "/customer-stories/log4j-cybersecurity-vulnerability-solved",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-06-01",
+   "kind": "download",
+   "page": "/customer-stories/city-of-hope",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-06-16",
+   "kind": "download",
+   "page": "/for/proofpoint",
+   "button": "Tech Snapshot: AI Coding Impact Benchmark Report",
+   "clicks": 1
+  },
+  {
+   "date": "2026-06-22",
+   "kind": "download",
+   "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-09-04",
+   "kind": "download",
+   "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-09-07",
+   "kind": "download",
+   "page": "/customer-stories/city-of-hope",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-12",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-12",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 4
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/contact",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/demo",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/salesforce-devops",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "demo",
+   "page": "/unified-insights",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "download",
+   "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
+   "button": "Download the PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-13",
+   "kind": "download",
+   "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
+   "button": "Download the PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-14",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-14",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-14",
+   "kind": "demo",
+   "page": "/gartner-symposium",
+   "button": "Book a meeting",
+   "clicks": 5
+  },
+  {
+   "date": "2026-10-14",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "demo",
+   "page": "/blog/frontier-ai-software-readiness-benchmark",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "demo",
+   "page": "/gartner-symposium",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "demo",
+   "page": "/gartner-symposium",
+   "button": "Book a meeting",
+   "clicks": 4
+  },
+  {
+   "date": "2026-10-16",
+   "kind": "demo",
+   "page": "/demo",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-16",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-16",
+   "kind": "demo",
+   "page": "/forge/modernization/fortran-to-python",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-16",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-17",
+   "kind": "demo",
+   "page": "/demo",
+   "button": "Book a demo",
+   "clicks": 3
+  },
+  {
+   "date": "2026-10-17",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-18",
+   "kind": "demo",
+   "page": "/blog",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 8
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get a modernization assessment today",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-20",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/):",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/:",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/customer-stories",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-21",
+   "kind": "demo",
+   "page": "/demo",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-22",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-22",
+   "kind": "demo",
+   "page": "/agentic-devops",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-22",
+   "kind": "demo",
+   "page": "/agents",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-22",
+   "kind": "demo",
+   "page": "/unified-insights",
+   "button": "Book a demo",
+   "clicks": 6
+  },
+  {
+   "date": "2026-10-23",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-24",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-25",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-26",
+   "kind": "demo",
+   "page": "/blog",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-26",
+   "kind": "demo",
+   "page": "/unified-insights",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/agentic-devops",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "button": "Schedule a demo at opsera.ai/demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/events/github-universe",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/salesforce-devops",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "demo",
+   "page": "/salesforce-devops",
+   "button": "Sign up now",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "demo",
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "button": "Schedule a demo at opsera.ai/demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "demo",
+   "page": "/events/roundtable-webinar",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "demo",
+   "page": "/events/roundtable-webinar",
+   "button": "Request an Invitation",
+   "clicks": 5
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "demo",
+   "page": "/forge/modernization",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-29",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-29",
+   "kind": "demo",
+   "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+   "button": "Schedule a demo at opsera.ai/demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-29",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-29",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/",
+   "button": "Get a modernization assessment today",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/",
+   "button": "See how it works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/brickforge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
+   "button": "Download PDF",
+   "clicks": 4
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Analyze your codebase readiness",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 3
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get a modernization assessment today",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "demo",
+   "page": "/brickforge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "demo",
+   "page": "/salesforce-devops",
+   "button": "Sign up now",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-30",
+   "kind": "download",
+   "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
+   "button": "Download PDF",
+   "clicks": 5
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "cta",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "cta",
+   "page": "/forge/modernization/fortran-to-python",
+   "button": "Analyze your codebase readiness",
+   "clicks": 1
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "cta",
+   "page": "/forge/modernization/fortran-to-python",
+   "button": "Book a modernization assessment",
+   "clicks": 3
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-10-31",
+   "kind": "demo",
+   "page": "/forge/modernization/fortran-to-python",
+   "button": "Book a modernization assessment",
+   "clicks": 3
+  },
+  {
+   "date": "2026-11-01",
+   "kind": "cta",
+   "page": "/about",
+   "button": "How it works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-01",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-01",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-01",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/",
+   "button": "Explore Forge",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/",
+   "button": "See Forge in action",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/",
+   "button": "See how it works",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/events/roundtable-webinar",
+   "button": "Request an Invitation",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 3
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/gartner-symposium/free-modernization",
+   "button": "Claim your modernization offer",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/gartner-symposium/free-modernization",
+   "button": "Enter to win a Mac Mini!",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/partners",
+   "button": "Apply",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/partners",
+   "button": "Become a partner",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "cta",
+   "page": "/partners",
+   "button": "Register a deal",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/",
+   "button": "See Forge in action",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/",
+   "button": "See how it works",
+   "clicks": 5
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/about",
+   "button": "How it works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/agentic-devops",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/blog/opsera-is-a-gartner-magic-quadrant-leader-heres-what-that-means-for-engineering-leaders",
+   "button": "Download the report here",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/events/roundtable-webinar",
+   "button": "Request an Invitation",
+   "clicks": 5
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Start building",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/forge/database-migration/oracle-to-postgres",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/php2shell",
+   "button": "Book a working session",
+   "clicks": 9
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "cta",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "demo",
+   "page": "/",
+   "button": "Book a demo",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "demo",
+   "page": "/agentic-devops",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "demo",
+   "page": "/forge/database-migration/oracle-to-postgres",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-03",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/",
+   "button": "Explore AI value",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/",
+   "button": "See how it works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Analyze your codebase readiness",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 4
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/forge/modernization",
+   "button": "Get a modernization score",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/forge/modernization",
+   "button": "Get your ForgeScore",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/php2shell",
+   "button": "Book a working session",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/unified-insights",
+   "button": "See full story",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "cta",
+   "page": "/whitepapers",
+   "button": "Go to the homepage",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "demo",
+   "page": "/blog/forge-ontology-ai-agents",
+   "button": "schedule a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "demo",
+   "page": "/software-factory",
+   "button": "Get a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "cta",
+   "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 3
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "cta",
+   "page": "/forge/modernization",
+   "button": "Get a modernization score",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "cta",
+   "page": "/partners",
+   "button": "Become a partner",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "download",
+   "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
+   "button": "Download PDF",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/",
+   "button": "Read the PHP2Shell security brief",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/",
+   "button": "See Forge in action",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/",
+   "button": "See how it works",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/newsroom/opsera-announces-free-trial-of-salesforce-release-management-platform-to-help-developers-a",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/pricing",
+   "button": "Request pricing",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "cta",
+   "page": "/resources/case-studies",
+   "button": "Go to the homepage",
+   "clicks": 2
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "demo",
+   "page": "/",
+   "button": "Get your modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "demo",
+   "page": "/forge",
+   "button": "Book a modernization assessment",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-06",
+   "kind": "demo",
+   "page": "/newsroom/opsera-announces-free-trial-of-salesforce-release-management-platform-to-help-developers-and-architects-increase-the-velocity-quality-and-security-of-salesforce-releases",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-07",
+   "kind": "cta",
+   "page": "/forge",
+   "button": "See how Forge works",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-08",
+   "kind": "cta",
+   "page": "/",
+   "button": "Explore AI value",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-08",
+   "kind": "cta",
+   "page": "/customer-stories",
+   "button": "Book a demo",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-08",
+   "kind": "demo",
+   "page": "/customer-stories",
+   "button": "Book a demo",
+   "clicks": 1
+  }
  ]
 }

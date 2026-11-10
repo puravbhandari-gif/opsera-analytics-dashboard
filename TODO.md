@@ -73,3 +73,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Ask David: the 9 Nov "02a Campaigns with Meetings (members)" has 415 rows against 809 on 27 Oct (it now filters on meeting date). The older export fills the gap for now. It isn't a full member list: Flutter, Tokenomics and GitHub Universe 2026 have no rows, and Gartner Xpo has 1.
 - [ ] Ask David for fresh member exports for Flutter (all statuses, the 2 Nov one is "Attended" only), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).
 - [ ] Ask David whether April deals from "Current Customer Expansion", "All Database" and partner campaigns belong under marketing. With lost deals counted, April shows 13 sourced deals ($1.34M) on the Pipeline tab.
+- [ ] Fix the website buttons that link to localhost:3000 (events page and the roundtable webinar page): 10 clicks went to http://localhost:3000/events#notify and /events/roundtable-webinar.
+- [ ] Microsoft Clarity heat maps: needs a Clarity Data Export API token (Clarity, Settings, Data Export). Project ID zb2b12566l. The API gives only the last 1 to 3 days, so the dashboard would need a daily pull.
+- [ ] Demo requests by product: only 7 of 36 Q3 requests come from a Forge or Insights page. A "Which product?" field on the demo form would give a firmer split for goals.
+

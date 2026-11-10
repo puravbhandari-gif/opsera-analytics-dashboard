@@ -1674,5 +1674,423 @@
    "count": 2452
   }
  ],
- "new_site_live": "2026-09-30"
+ "new_site_live": "2026-09-30",
+ "demo_by_product": [
+  {
+   "date": "2026-04-05",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-04-13",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-04-15",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-04-21",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-04-27",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-04-29",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 3,
+   "none": 0
+  },
+  {
+   "date": "2026-05-09",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-05-10",
+   "forge": 0,
+   "insights": 0,
+   "home": 2,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-05-17",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-05-21",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-05-28",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-05-29",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-05-31",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-06-03",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-06-05",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-06-08",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-06-12",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 2,
+   "none": 0
+  },
+  {
+   "date": "2026-06-17",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 2,
+   "none": 0
+  },
+  {
+   "date": "2026-06-25",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-06-30",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-02",
+   "forge": 1,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-05",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-08",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-07-09",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-13",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-17",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-07-27",
+   "forge": 0,
+   "insights": 0,
+   "home": 2,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-07-30",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  },
+  {
+   "date": "2026-07-31",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-08-05",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-08-06",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-08-12",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-08-15",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-08-17",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-08-22",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-08-25",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-08-26",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-09-04",
+   "forge": 0,
+   "insights": 1,
+   "home": 0,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-09-16",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 1
+  },
+  {
+   "date": "2026-09-23",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-09-28",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 1
+  },
+  {
+   "date": "2026-10-01",
+   "forge": 1,
+   "insights": 0,
+   "home": 3,
+   "other": 0,
+   "none": 4
+  },
+  {
+   "date": "2026-10-02",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-10-04",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-10-06",
+   "forge": 1,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-10-13",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 1,
+   "none": 1
+  },
+  {
+   "date": "2026-10-14",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-10-19",
+   "forge": 1,
+   "insights": 0,
+   "home": 2,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-10-26",
+   "forge": 0,
+   "insights": 1,
+   "home": 0,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-10-29",
+   "forge": 1,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-10-31",
+   "forge": 1,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-11-02",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 0,
+   "none": 1
+  }
+ ]
 }

@@ -27,13 +27,7 @@ import fetch_data as f   # the same Google sign-in, Search Console and Google An
 
 START, END = "2026-01-01", "2026-10-31"
 OUT = Path(__file__).resolve().parent.parent / "data" / "seo_aeo.json"
-PRODUCTS = {   # by page address (agreed 6 Nov 2026)
-    "forge": re.compile(r"forge|software-factory|moderni[sz]|migrat|cobol|legacy|coldfusion|dotnet|spec-driven|blitzy|8090|factory-ai|devin-ai"
-                        r"|comparison-guides/claude"),
-    "insights": re.compile(r"insight|dora|space-metrics|ai-code-assistant-analytics|adoption-trends|code-churn|code-quality-metrics|defect-escape"
-                           r"|change-and-quality-metrics|core-devex-metrics|incident-analysis|quality-risk|developer-productivity|ai-coding-impact"
-                           r"|measure-ai-roi|engineering-metrics"),
-}
+PRODUCTS = f.PRODUCTS   # by page address (agreed 6 Nov 2026), shared with the demo requests split
 BRAND = re.compile(r"opsera|opserа|opsra|opersa|ospera|opsea", re.I)
 CUSTOMER = re.compile(r"honeywell", re.I)   # customer names stay off the public page
 RANKINGS = Path(__file__).resolve().parent.parent / "data" / "rankings.json"

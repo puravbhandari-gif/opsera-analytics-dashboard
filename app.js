@@ -591,6 +591,7 @@ const channelName = (c) => CHANNELS[c] || c;
 function renderVisits(d) {
   const src = "Source: Google Analytics, visits on opsera.ai only";
   const when = `${range(d.start_date, d.end_date)} (Pacific time)`;
+  renderCta(d);
   const t = d.totals;
   const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
   $("visits-source").textContent = `${src}, ${when}.`;
@@ -736,7 +737,14 @@ function renderLeads(d) {
   compare({ id: "leads", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
     source: (a, b) => `${src}, ${range(a, b)} (Pacific time).`,
     metrics: ["demo", "events", "gartner_offer", "contact"].map((k) => ({ label: d.lines[k].label, value: rangeSum(d.daily, k), fmt: num })) });
+
+  // Demo requests by product, from the page before /demo (agreed 10 Nov 2026). The 5 groups add up to the demo requests.
+  if (d.demo_by_product) compare({ id: "leads-demo-product", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
+    source: (a, b) => `Source: Google Analytics, form fills on /demo by the page before it, ${range(a, b)} (Pacific time). The 5 groups add up to the demo requests.`,
+    metrics: DEMO_PRODUCTS.map(([k, label, sub]) => ({ label, value: rangeSum(d.demo_by_product, k), fmt: num, sub })) });
 }
+const DEMO_PRODUCTS = [["forge", "Modernization (Forge)", "From a Forge page"], ["insights", "Insights", "From an Insights page"],
+  ["home", "Homepage", "From the homepage"], ["other", "Other pages", "From any other page"], ["none", "No page recorded", "Came straight to /demo, or Google gave no page"]];
 
 // What happened to demo requests: David's Salesforce export, by Lead Status (agreed 5 Nov 2026).
 // The Google Analytics form count sits beside it, never added to it.
@@ -978,6 +986,44 @@ function renderKumarLinks(ga) {
     (rows.length ? `The first tagged visit was on ${dayYear(rows[0].date)}.` : "");
 }
 
+// CTA clicks (added 10 Nov 2026): cta_click from 30 Oct 2026, demo_click from 12 Oct 2026, file_download. Kinds are never added up.
+const CTA_KINDS = { demo: "Demo button clicks", cta: "Other button clicks", download: "Downloads" };
+const CTA_FROM = { demo: "2026-10-12", cta: "2026-10-30" };
+function renderCta(d) {
+  const cta = d.cta_clicks || [];
+  if (!cta.length) return;
+  $("visits-cta-panel").hidden = false;
+  const last = lastFullDayPacific(d.end_date, d.pulled_at);
+  const pageCell = (v) => `<a href="https://opsera.ai${encodeURI(v)}" target="_blank" rel="noopener">${esc(v)}</a>`;
+  const fill = () => {
+    const p = periodsFor(periodMode, d.start_date, last).cur;
+    if (!p) return;
+    const rows = cta.filter((r) => r.date >= p.start && r.date <= p.end);
+    const buttons = {}, pages = {};
+    for (const r of rows) {
+      const b = buttons[`${r.kind}|${r.button}`] || (buttons[`${r.kind}|${r.button}`] = { button: r.button, kind: CTA_KINDS[r.kind], pages: new Set(), clicks: 0 });
+      b.pages.add(r.page); b.clicks += r.clicks;
+      const pg = pages[r.page] || (pages[r.page] = { page: r.page, demo: 0, cta: 0, download: 0 });
+      pg[r.kind] += r.clicks;
+    }
+    $("visits-cta-title").textContent = `CTA clicks, ${range(p.start, p.end)}`;
+    table($("visits-cta-buttons"), { rows: Object.values(buttons).map((b) => ({ ...b, pages: b.pages.size })), search: "buttons", sortKey: "clicks", pageSize: 15, columns: [
+      { key: "button", label: "Button", search: true },
+      { key: "kind", label: "Kind", search: true },
+      { key: "pages", label: "Pages", num: true, fmt: num },
+      { key: "clicks", label: "Clicks", num: true, fmt: num },
+    ] });
+    table($("visits-cta-pages"), { rows: Object.values(pages), search: "pages", sortKey: "demo", pageSize: 15, columns: [
+      { key: "page", label: "Page", search: true, fmt: pageCell },
+      ...Object.entries(CTA_KINDS).map(([k, label]) => ({ key: k, label, num: true, fmt: num })),
+    ] });
+    const late = Object.entries(CTA_FROM).filter(([, from]) => p.start < from).map(([k, from]) => `${CTA_KINDS[k].toLowerCase()} from ${dayYear(from)}`);
+    $("visits-cta-source").textContent = `Source: Google Analytics click events on opsera.ai, ${range(p.start, p.end)} (Pacific time).` +
+      (late.length ? ` The website started sending ${late.join(" and ")}, so earlier days have none.` : "");
+  };
+  fill(); monthlyTabs.push(fill);
+}
+
 function renderKumarPosts(kp) {
   const src = kp.as_of ? `Source: ${kp.source}, checked ${dayYear(kp.as_of)}. Months follow UTC.` : `Source: ${kp.source}`;
   const months = kp.months, cur = months[months.length - 1], prev = months[months.length - 2];
@@ -1126,7 +1172,7 @@ function renderJourney(ga, leads, hub, gsc) {
     metrics: [
       { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
       { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
-      { label: "Pipeline created", value: (a, b) => { const d = dealsIn(hub, periodMode, a, undefined, b); return d ? dealSum(d, "amount") : null; }, fmt: money, sub: "Open, won and lost" },
+      { label: "Pipeline created", value: (a, b) => { const d = dealsIn(hub, periodMode, a, undefined, b); return d ? dealSum(d, "amount") : null; }, fmt: money, sub: "Open, won and lost. HubSpot only sees deals with a marketing contact linked. Salesforce total is on the exec view." },
       { label: "Won", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.won_amount ?? null, fmt: money },
     ] });
 
@@ -2355,6 +2401,12 @@ function renderCatapult(c) {
   $("pr-catapult-title").textContent = `Catapult's report, ${c.quarter} (${c.range})`;
   $("pr-catapult").innerHTML = c.items.map((x) => card(esc(x.label), esc(x.value), esc(x.detail))).join("");
   $("pr-catapult-source").textContent = `Source: ${c.source}.`;
+  if (c.analysts?.length) {   // analyst work, its own box (agreed 10 Nov 2026)
+    $("pr-analysts-panel").hidden = false;
+    $("pr-analysts-title").textContent = `Analysts, ${c.quarter}`;
+    $("pr-analysts").innerHTML = c.analysts.map((x) => `<li>${esc(x)}</li>`).join("");
+    $("pr-analysts-source").textContent = `Source: ${c.source}.`;
+  }
 }
 
 // Open and missed opportunities, from SamsonPR's tracker (agreed 6 Nov 2026)
@@ -2830,7 +2882,11 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       note: (a, b) => byStatus.map(([k, f]) => `${k[0].toUpperCase() + k.slice(1)} ${moneyShort(f(a, b))}`).join(" / "),
       src: `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
-      line: () => "Demo form fills on opsera.ai", src: "Google Analytics" },
+      line: () => "Demo form fills on opsera.ai",
+      // by the page before /demo (agreed 10 Nov 2026); the rest came from the homepage, other pages or no page
+      note: leads.demo_by_product ? (a, b) => { const g = (k) => rangeSum(leads.demo_by_product, k)(a, b);
+        return `Forge ${num(g("forge"))} / Insights ${num(g("insights"))} / Other ${num(g("home") + g("other") + g("none"))}`; } : undefined,
+      src: "Google Analytics" },
     { label: "Meetings with marketing contacts", start: hub.start_date, last: hub.end_date, fmt: num, value: rangeSum(booked, "count"),
       line: () => "Booked by people from marketing", src: `HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}` },
     { label: "Website visitors", start: ga.start_date, last: gaLast, fmt: num, value: (a, b) => sessions(a, b) - robots(a, b),
