@@ -3,12 +3,12 @@
  "days": [
   {
    "date": "2026-11-10",
-   "pulled_at": "2026-11-10T12:51+05:30",
+   "pulled_at": "2026-11-10T12:53+05:30",
    "window": "the 24 hours before the pull",
    "pages": [
     {
      "page": "/",
-     "sessions": 2,
+     "sessions": 3,
      "bot_sessions": 0,
      "scroll_depth": 8.0,
      "rage_clicks": 0,
@@ -18,7 +18,7 @@
     },
     {
      "page": "/php2shell",
-     "sessions": 2,
+     "sessions": 3,
      "bot_sessions": 2,
      "scroll_depth": 16.0,
      "rage_clicks": 0,
