@@ -989,6 +989,10 @@ function renderKumarLinks(ga) {
 
 // Microsoft Clarity (added 10 Nov 2026): 1 pull a day, each covering the 24 hours before it. Clarity's sessions are shown next to
 // Google Analytics visits for the same days, never added to them, so it's clear how much of the site Clarity sees.
+// Shown first (Susmitha, 10 Nov 2026): the homepage and the 3 product pages with the most visits, 10 Aug to 9 Nov 2026
+const CLARITY_FOCUS = [["/", "Homepage"], ["/forge", "Forge"], ["/platform", "Platform"], ["/unified-insights", "Unified Insights"]];
+const CLARITY_PROJECT = "zb2b12566l";
+const clarityHeatmap = (page) => `https://clarity.microsoft.com/projects/view/${CLARITY_PROJECT}/heatmaps?url=${encodeURIComponent(`https://opsera.ai${page}`)}`;
 function renderClarity(c, ga) {
   if (!c?.days?.length) return;
   $("visits-clarity-panel").hidden = false;
@@ -1012,6 +1016,15 @@ function renderClarity(c, ga) {
     $("visits-clarity-title").textContent = `Heat map numbers, ${range(p.start, p.end)}`;
     $("visits-clarity-coverage").textContent = !days.length ? "No Clarity pull in this period yet. The daily pull started on 10 Nov 2026."
       : `Clarity recorded ${num(tot("sessions"))} sessions on the days pulled. Google Analytics counted ${num(gaVisits)} visits on the same days, so Clarity sees only part of the site.`;
+    const byPage = Object.fromEntries(list.map((g) => [g.page, g]));
+    table($("visits-clarity-focus"), { rows: CLARITY_FOCUS.map(([page, name]) => ({ name, page, ...(byPage[page] || { sessions: 0, scroll: null, rage: 0, dead: 0 }) })), columns: [
+      { key: "name", label: "Page", sort: false, fmt: (v, r) => `${esc(v)}<br><a class="muted" href="https://opsera.ai${encodeURI(r.page)}" target="_blank" rel="noopener">${esc(r.page)}</a>`, csv: (r) => r.page },
+      { key: "sessions", label: "Sessions", num: true, fmt: num, sort: false },
+      { key: "scroll", label: "Scroll depth", num: true, fmt: (v) => (v == null ? "-" : `${v.toFixed(0)}%`), sort: false },
+      { key: "rage", label: "Rage clicks", num: true, fmt: num, sort: false },
+      { key: "dead", label: "Dead clicks", num: true, fmt: num, sort: false },
+      { key: "page", label: "Heat map", sort: false, fmt: (v) => `<a href="${clarityHeatmap(v)}" target="_blank" rel="noopener">Open in Clarity</a>`, csv: (r) => clarityHeatmap(r.page) },
+    ] });
     $("visits-clarity-cards").innerHTML = card("Clarity sessions", num(tot("sessions"))) +
       card("Average scroll depth", scroll == null ? "-" : `${scroll.toFixed(0)}%`, "How far down the page people got") +
       card("Rage clicks", num(tot("rage"))) + card("Dead clicks", num(tot("dead")));
