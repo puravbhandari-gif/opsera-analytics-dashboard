@@ -992,7 +992,13 @@ function renderKumarLinks(ga) {
 // Shown first (Susmitha, 10 Nov 2026): the homepage and the 3 product pages with the most visits, 10 Aug to 9 Nov 2026
 const CLARITY_FOCUS = [["/", "Homepage"], ["/forge", "Forge"], ["/platform", "Platform"], ["/unified-insights", "Unified Insights"]];
 const CLARITY_PROJECT = "zb2b12566l";
-const clarityHeatmap = (page) => `https://clarity.microsoft.com/projects/view/${CLARITY_PROJECT}/heatmaps?url=${encodeURIComponent(`https://opsera.ai${page}`)}`;
+// Clarity's own heat map links filter on URL=2;6;<regex> (copied from Clarity on 10 Nov 2026). This regex takes the page with or
+// without www, a trailing slash or a query, so each link opens that one page's heat map.
+const clarityPageRegex = (page) => {
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return `^https://(www\\.)?opsera\\.ai${page === "/" ? "/" : `${esc(page)}/?`}(\\?.*)?$`;
+};
+const clarityHeatmap = (page) => `https://clarity.microsoft.com/projects/view/${CLARITY_PROJECT}/heatmaps?date=Last%203%20days&heatmapType=0&heatmapDeviceType=2&URL=${encodeURIComponent(`2;6;${clarityPageRegex(page)}`)}`;
 function renderClarity(c, ga) {
   if (!c?.days?.length) return;
   $("visits-clarity-panel").hidden = false;
