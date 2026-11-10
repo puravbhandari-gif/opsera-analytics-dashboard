@@ -1,0 +1,52 @@
+{
+ "source": "Microsoft Clarity, project zb2b12566l, Data Export API",
+ "days": [
+  {
+   "date": "2026-11-10",
+   "pulled_at": "2026-11-10T12:51+05:30",
+   "window": "the 24 hours before the pull",
+   "pages": [
+    {
+     "page": "/",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 8.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/php2shell",
+     "sessions": 2,
+     "bot_sessions": 2,
+     "scroll_depth": 16.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/careers",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 98.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 9,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/demo",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 32.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    }
+   ]
+  }
+ ]
+}

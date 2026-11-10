@@ -592,6 +592,7 @@ function renderVisits(d) {
   const src = "Source: Google Analytics, visits on opsera.ai only";
   const when = `${range(d.start_date, d.end_date)} (Pacific time)`;
   renderCta(d);
+  load("clarity.json").then((c) => renderClarity(c, d)).catch(() => {});
   const t = d.totals;
   const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
   $("visits-source").textContent = `${src}, ${when}.`;
@@ -984,6 +985,46 @@ function renderKumarLinks(ga) {
     : `<p class="muted">No visits from these links yet.</p>`;
   $("li-kl-source").textContent = `Source: Google Analytics, visits on opsera.ai only, ${range(ga.start_date, last)} (Pacific time). ${quarterName(q.start)} is ${range(q.start, q.end)}. ` +
     (rows.length ? `The first tagged visit was on ${dayYear(rows[0].date)}.` : "");
+}
+
+// Microsoft Clarity (added 10 Nov 2026): 1 pull a day, each covering the 24 hours before it. Clarity's sessions are shown next to
+// Google Analytics visits for the same days, never added to them, so it's clear how much of the site Clarity sees.
+function renderClarity(c, ga) {
+  if (!c?.days?.length) return;
+  $("visits-clarity-panel").hidden = false;
+  const last = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const pageCell = (v) => `<a href="https://opsera.ai${encodeURI(v)}" target="_blank" rel="noopener">${esc(v)}</a>`;
+  const fill = () => {
+    const p = periodsFor(periodMode, ga.start_date, last).cur;   // the same period as the rest of the tab
+    if (!p) return;
+    const days = c.days.filter((x) => x.date >= p.start && x.date <= p.end);
+    const pages = {};
+    for (const x of days) for (const r of x.pages) {
+      const g = pages[r.page] || (pages[r.page] = { page: r.page, sessions: 0, scrollSum: 0, scrollN: 0, rage: 0, dead: 0 });
+      g.sessions += r.sessions; g.rage += r.rage_clicks; g.dead += r.dead_clicks;
+      if (r.scroll_depth != null) { g.scrollSum += r.scroll_depth * Math.max(r.sessions, 1); g.scrollN += Math.max(r.sessions, 1); }
+    }
+    const list = Object.values(pages).map((g) => ({ ...g, scroll: g.scrollN ? g.scrollSum / g.scrollN : null }));
+    const tot = (k) => list.reduce((t, g) => t + g[k], 0);
+    const sN = list.reduce((t, g) => t + g.scrollN, 0), scroll = sN ? list.reduce((t, g) => t + g.scrollSum, 0) / sN : null;
+    const covered = days.map((x) => addDays(x.date, -1)).filter((x) => x >= ga.start_date && x <= last);
+    const gaVisits = ga.daily.filter((r) => covered.includes(r.date)).reduce((t, r) => t + r.sessions, 0);
+    $("visits-clarity-title").textContent = `Heat map numbers, ${range(p.start, p.end)}`;
+    $("visits-clarity-coverage").textContent = !days.length ? "No Clarity pull in this period yet. The daily pull started on 10 Nov 2026."
+      : `Clarity recorded ${num(tot("sessions"))} sessions on the days pulled. Google Analytics counted ${num(gaVisits)} visits on the same days, so Clarity sees only part of the site.`;
+    $("visits-clarity-cards").innerHTML = card("Clarity sessions", num(tot("sessions"))) +
+      card("Average scroll depth", scroll == null ? "-" : `${scroll.toFixed(0)}%`, "How far down the page people got") +
+      card("Rage clicks", num(tot("rage"))) + card("Dead clicks", num(tot("dead")));
+    table($("visits-clarity-pages"), { rows: list, search: "pages", sortKey: "sessions", pageSize: 15, columns: [
+      { key: "page", label: "Page", search: true, fmt: pageCell },
+      { key: "sessions", label: "Sessions", num: true, fmt: num },
+      { key: "scroll", label: "Scroll depth", num: true, fmt: (v) => (v == null ? "-" : `${v.toFixed(0)}%`) },
+      { key: "rage", label: "Rage clicks", num: true, fmt: num },
+      { key: "dead", label: "Dead clicks", num: true, fmt: num },
+    ] });
+    $("visits-clarity-source").textContent = `Source: ${c.source}. ${num(days.length)} daily pull${days.length === 1 ? "" : "s"} in this period, each covering the 24 hours before it. Page addresses without their query, so no email in a link is kept.`;
+  };
+  fill(); monthlyTabs.push(fill);
 }
 
 // CTA clicks (added 10 Nov 2026): cta_click from 30 Oct 2026, demo_click from 12 Oct 2026, file_download. Kinds are never added up.

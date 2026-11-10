@@ -74,6 +74,6 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Ask David for fresh member exports for Flutter (the 5 Nov one has Attended, Approved and Waitlisted only: 211 against 507 registered on Luma), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).
 - [ ] Ask David whether April deals from "Current Customer Expansion", "All Database" and partner campaigns belong under marketing. With lost deals counted, April shows 13 sourced deals ($1.34M) on the Pipeline tab.
 - [ ] Fix the website buttons that link to localhost:3000 (events page and the roundtable webinar page): 10 clicks went to http://localhost:3000/events#notify and /events/roundtable-webinar.
-- [ ] Microsoft Clarity heat maps: needs a Clarity Data Export API token (Clarity, Settings, Data Export). Project ID zb2b12566l. The API gives only the last 1 to 3 days, so the dashboard would need a daily pull.
+- [ ] Microsoft Clarity: connected through Tag Manager on 10 Nov 2026, daily pull running (clarity.yml). Check on Thu 13 Nov that Clarity sessions are close to GA visits; tell Purav if they're still far below.
 - [ ] Demo requests by product: only 7 of 36 Q3 requests come from a Forge or Insights page. A "Which product?" field on the demo form would give a firmer split for goals.
 
