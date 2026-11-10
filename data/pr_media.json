@@ -1,7 +1,7 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-09",
+ "checked": "2026-11-10",
  "items": [
   {
    "date": "2026-11-09",
@@ -11,6 +11,17 @@
    "type": "Mention",
    "topic": "AI-SDLC",
    "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-11-09",
+   "outlet": "AI & ML Events",
+   "title": "AI DevWorld 2027",
+   "link": "https://aiml.events/events/ai-devworld-2027",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "Kumar Chivukula",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
   },

@@ -1,8 +1,8 @@
 {
  "source": "opsera.ai sitemap, with each page's own publish date, and YouTube Analytics for public videos",
  "start_date": "2026-07-01",
- "checked": "2026-11-09",
- "youtube_pulled_at": "2026-11-09T23:01+05:30",
+ "checked": "2026-11-10",
+ "youtube_pulled_at": "2026-11-10T12:24+05:30",
  "pages_checked": 314,
  "pages_without_date": 5,
  "items": [
@@ -93,7 +93,7 @@
   {
    "date": "2026-10-16",
    "type": "Blog",
-   "title": "What Is Harness Engineering? Enterprise AI Guide",
+   "title": "What Is AI Harness Engineering? Enterprise AI Guide",
    "link": "https://opsera.ai/blog/harness-engineering"
   },
   {

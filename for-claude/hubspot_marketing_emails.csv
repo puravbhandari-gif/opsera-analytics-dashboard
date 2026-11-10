@@ -7,7 +7,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-08,We value your feedback on AI.,56,3,1,5.4,1.8
 2026-04-09,Boost Your DevOps Workflow with Opsera's Latest Features 🚀,1,1,0,100.0,0.0
 2026-04-10,Your recording is ready: Meet the Opsera AppSec Agents workshop,21,7,1,33.3,4.8
-2026-04-15, Success with AI Requires Much More than Adoption,767,144,33,18.8,4.3
+2026-04-15, Success with AI Requires Much More than Adoption,769,146,33,19.0,4.3
 2026-04-15,Successful AI DevOps Transformation In 90 Days,822,139,25,17.0,3.1
 2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1003,157,38,15.9,3.8
 2026-04-15,Watch the Recording: Meet the Opsera AppSec Agents workshop,19581,669,146,3.5,0.8
@@ -27,8 +27,8 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-30,"Your webinar recording is ready: Copilot, Cursor, Claude Code: What 250K Developers Revealed",54,12,5,22.6,9.4
 2026-04-30,Did You Know: Pipeline Run View is redesigned for faster debugging,2677,126,7,4.7,0.3
 2026-05-04,"Opsera Release Notes | Smarter Pipelines, Richer Salesforce Workflows — What's New in Opsera ",193,37,3,19.6,1.6
-2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
 2026-05-04,"Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",2479,82,7,3.3,0.3
+2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
 2026-05-05,"April Newsletter: The missing piece in AI-driven software, solved",63325,2614,305,4.2,0.5
 2026-05-06,An invitation just for {{ contact.firstname }},5834,93,4,1.6,0.1
 2026-05-11,"Opsera Release Notes | Copilot Cumulative Totals, Agent Activity Toggle & On-Premise Jira Linked Issues ",2536,145,9,5.7,0.4
@@ -232,7 +232,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-26,{{ contact.firstname }} - Hawks/Lakers game day at the Farm is getting closer.,100,1,0,1.0,0.0
 2026-10-26,Activate your Gartner free code modernization trial.,50,5,0,10.0,0.0
 2026-10-27,"{{ contact.firstname }} Pacers v. Rockets soon, at the Fieldhouse.",54,0,0,0.0,0.0
-2026-10-27,{{ contact.firstname }} - Thanks for visiting us at Gartner in Orlando.,135,16,2,11.9,1.5
+2026-10-27,{{ contact.firstname }} - Thanks for visiting us at Gartner in Orlando.,135,17,2,12.6,1.5
 2026-10-28,{{ contact.firstname }} - Meet for coffee here at GitHub Universe?,110,24,0,22.2,0.0
 2026-10-28,{{ contact.firstname }} Hawks/Lakers game day at the Farm is getting closer.,55,1,0,1.8,0.0
 2026-10-28,{{ contact.firstname }} - Nice to connect with you at Gartner!,61,6,0,9.8,0.0
@@ -245,10 +245,11 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-11-02,Opsera Release Notes | Expanded Salesforce Metadata Support for Revenue Cloud and Platform Events,135,4,0,3.0,0.0
 2026-11-02,{{ contact.firstname }} - In just two weeks: Pacers v. Rockets,226,0,0,0.0,0.0
 2026-11-02,{{ contact.firstname }} - Thanks for connecting at GitHub Universe.,126,18,1,14.3,0.8
-2026-11-03,Legacy estate modernization in the AI era.,13951,388,64,2.8,0.5
-2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1037,138,4.9,0.7
+2026-11-03,Legacy estate modernization in the AI era.,13951,389,65,2.8,0.5
+2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1038,139,4.9,0.7
 2026-11-04,Did You Know Modernization Can Run at AI Speed?,1467,16,3,1.1,0.2
 2026-11-05,Indiana Pacers - was yesterday a turning point?,343,19,1,5.6,0.3
 2026-11-05,{{ contact.firstname }} - Monday is game day! Hawks v. Lakers,117,1,0,0.9,0.0
 2026-11-05,{{ contact.firstname }} Monday - Hawks/Lakers in our private suite.,476,2,0,0.4,0.0
 2026-11-06,Your free code modernization trial awaits.,48,7,0,14.6,0.0
+2026-11-09,Nine days away - claim your spot.,311,18,0,5.8,0.0

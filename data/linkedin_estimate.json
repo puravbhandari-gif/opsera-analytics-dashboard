@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-09T17:34+00:00",
+ "posts_pulled_at": "2026-11-10T06:57+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -476,6 +476,18 @@
    "group": "cant_tell",
    "visits": 3,
    "engaged": 1
+  },
+  {
+   "date": "2026-11-09",
+   "group": "cant_tell",
+   "visits": 10,
+   "engaged": 3
+  },
+  {
+   "date": "2026-11-09",
+   "group": "estimated_company",
+   "visits": 11,
+   "engaged": 3
   }
  ],
  "matches": [
@@ -519,6 +531,18 @@
    "dates": [
     "2026-09-17",
     "2026-09-18"
+   ]
+  },
+  {
+   "page": "/blog/harness-engineering",
+   "group": "estimated_company",
+   "visits": 11,
+   "engaged": 3,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-11-09"
    ]
   },
   {
@@ -752,11 +776,11 @@
    "account": "company",
    "date": "2026-11-09",
    "page": "/blog/harness-engineering",
-   "post": "https://www.linkedin.com/posts/opsera_harness-engineering-is-everything-around-activity-7525603851215859712-9Yka"
+   "post": "https://www.linkedin.com/posts/opsera_ai-harness-engineering-is-everything-around-activity-7525603851215859712-Fncs"
   }
  ],
- "untagged_total": 532,
+ "untagged_total": 552,
  "start_date": "2026-09-01",
- "end_date": "2026-11-08",
- "pulled_at": "2026-11-09T22:58+05:30"
+ "end_date": "2026-11-09",
+ "pulled_at": "2026-11-10T12:21+05:30"
 }

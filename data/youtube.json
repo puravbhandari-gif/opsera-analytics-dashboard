@@ -1,14 +1,14 @@
 {
  "source": "YouTube Analytics API, Opsera channel",
  "start_date": "2026-04-01",
- "end_date": "2026-11-08",
- "last_day_with_data": "2026-11-06",
- "pulled_at": "2026-11-09T23:01+05:30",
+ "end_date": "2026-11-09",
+ "last_day_with_data": "2026-11-07",
+ "pulled_at": "2026-11-10T12:24+05:30",
  "channel": {
-  "views": 2901,
-  "minutes": 3944,
-  "subs_gained": 35,
-  "subs_lost": 22,
+  "views": 2908,
+  "minutes": 3948,
+  "subs_gained": 36,
+  "subs_lost": 23,
   "subs_daily": [
    {
     "date": "2026-04-01",
@@ -1109,6 +1109,11 @@
     "date": "2026-11-06",
     "gained": 1,
     "lost": 1
+   },
+   {
+    "date": "2026-11-07",
+    "gained": 1,
+    "lost": 1
    }
   ],
   "card_clicks": 0,
@@ -1117,7 +1122,7 @@
   "search_terms": [
    {
     "term": "measurement of ai productivity",
-    "views": 14
+    "views": 15
    },
    {
     "term": "ai dlc",
@@ -1184,7 +1189,7 @@
     "views": 1
    }
   ],
-  "search_views": 1193,
+  "search_views": 1199,
   "other_sites": [
    {
     "site": "iframely.net",
@@ -1380,8 +1385,8 @@
  },
  "types": {
   "long": {
-   "views": 2885,
-   "minutes": 3944,
+   "views": 2892,
+   "minutes": 3946,
    "avg_seconds": 95,
    "daily": [
     {
@@ -2695,14 +2700,20 @@
     {
      "date": "2026-11-05",
      "type": "long",
-     "views": 35,
-     "minutes": 29
+     "views": 36,
+     "minutes": 30
     },
     {
      "date": "2026-11-06",
      "type": "long",
      "views": 16,
      "minutes": 13
+    },
+    {
+     "date": "2026-11-07",
+     "type": "long",
+     "views": 6,
+     "minutes": 1
     }
    ],
    "videos": [
@@ -2786,9 +2797,9 @@
     {
      "id": "vgr4ggGmMxA",
      "title": "Opsera Pipeline Workflow Actions: Run, Lock and Audit CI/CD Pipelines",
-     "views": 57,
-     "minutes": 75,
-     "avg_seconds": 94
+     "views": 59,
+     "minutes": 76,
+     "avg_seconds": 93
     },
     {
      "id": "AyzfYJfCwTY",
@@ -2805,13 +2816,6 @@
      "avg_seconds": 46
     },
     {
-     "id": "ca4GQ7AFtjQ",
-     "title": "Salesforce DevOps 3.0 from Opsera",
-     "views": 41,
-     "minutes": 29,
-     "avg_seconds": 49
-    },
-    {
      "id": "pC9mLxz8aOs",
      "title": "DevOps Tools Integrations: Connect GitHub, Jenkins, AWS and Argo CD in the Opsera Tool Registry",
      "views": 41,
@@ -2819,18 +2823,25 @@
      "avg_seconds": 151
     },
     {
+     "id": "ca4GQ7AFtjQ",
+     "title": "Salesforce DevOps 3.0 from Opsera",
+     "views": 41,
+     "minutes": 29,
+     "avg_seconds": 49
+    },
+    {
+     "id": "_7K0TxJZHHs",
+     "title": "Claude Code Security Audit with Markdown and HTML Reports | Opsera",
+     "views": 39,
+     "minutes": 17,
+     "avg_seconds": 32
+    },
+    {
      "id": "BRgdfN-CVRA",
      "title": "Cursor Dashboard | Track AI Adoption, Productivity & Code Contribution with Opsera",
      "views": 39,
      "minutes": 18,
      "avg_seconds": 33
-    },
-    {
-     "id": "_7K0TxJZHHs",
-     "title": "Claude Code Security Audit with Markdown and HTML Reports | Opsera",
-     "views": 37,
-     "minutes": 17,
-     "avg_seconds": 32
     },
     {
      "id": "FH280o85rHY",
@@ -2938,18 +2949,18 @@
      "avg_seconds": 43
     },
     {
+     "id": "XN1BKlrM4fE",
+     "title": "Measuring the Impact of AI Code Assistants on Developer Productivity",
+     "views": 23,
+     "minutes": 15,
+     "avg_seconds": 45
+    },
+    {
      "id": "wY4iUwj8Osg",
      "title": "Software Supply Chain Security in DevOps Pipelines: Opsera and Lineaje Integration",
      "views": 22,
      "minutes": 7,
      "avg_seconds": 26
-    },
-    {
-     "id": "XN1BKlrM4fE",
-     "title": "Measuring the Impact of AI Code Assistants on Developer Productivity",
-     "views": 22,
-     "minutes": 14,
-     "avg_seconds": 45
     },
     {
      "id": "w4YUB63VXaQ",
@@ -2973,13 +2984,6 @@
      "avg_seconds": 19
     },
     {
-     "id": "2HiW2yE1ZpM",
-     "title": "Introducing Opsera's Leadership Dashboard for Unified DevOps Insights",
-     "views": 19,
-     "minutes": 5,
-     "avg_seconds": 17
-    },
-    {
      "id": "exzXdufinTY",
      "title": "Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",
      "views": 19,
@@ -3001,6 +3005,20 @@
      "avg_seconds": 93
     },
     {
+     "id": "2HiW2yE1ZpM",
+     "title": "Introducing Opsera's Leadership Dashboard for Unified DevOps Insights",
+     "views": 19,
+     "minutes": 5,
+     "avg_seconds": 17
+    },
+    {
+     "id": "iEvNFFze6fA",
+     "title": "Webhook CI/CD Pipeline in Opsera: Trigger Builds on Every Commit",
+     "views": 18,
+     "minutes": 21,
+     "avg_seconds": 79
+    },
+    {
      "id": "rBdcfhsnXUM",
      "title": "Pipeline Failure Analysis: AI Debugging with Opsera's Redesigned Pipeline Logs",
      "views": 18,
@@ -3013,13 +3031,6 @@
      "views": 18,
      "minutes": 25,
      "avg_seconds": 90
-    },
-    {
-     "id": "iEvNFFze6fA",
-     "title": "Webhook CI/CD Pipeline in Opsera: Trigger Builds on Every Commit",
-     "views": 18,
-     "minutes": 21,
-     "avg_seconds": 79
     },
     {
      "id": "fgroxzfnpos",
@@ -3057,13 +3068,6 @@
      "avg_seconds": 57
     },
     {
-     "id": "7UYqC_t1dOw",
-     "title": "Bulk Pipeline Automation: Insert, Remove & Update Steps",
-     "views": 16,
-     "minutes": 14,
-     "avg_seconds": 52
-    },
-    {
      "id": "V9N8jfwciO8",
      "title": "Architecture Risk Analysis in Claude Code | Opsera AI Agent",
      "views": 16,
@@ -3071,11 +3075,25 @@
      "avg_seconds": 60
     },
     {
+     "id": "7UYqC_t1dOw",
+     "title": "Bulk Pipeline Automation: Insert, Remove & Update Steps",
+     "views": 16,
+     "minutes": 14,
+     "avg_seconds": 52
+    },
+    {
      "id": "3916-Y_Wk6c",
      "title": "DORA Metrics and DevEx for GitHub Copilot: Value and Impact",
      "views": 16,
      "minutes": 19,
      "avg_seconds": 74
+    },
+    {
+     "id": "DOaW-TDDgDk",
+     "title": "DevOps Huddle EP16: How to Migrate Bitbucket to GitHub: Source Code Migration | Opsera",
+     "views": 15,
+     "minutes": 8,
+     "avg_seconds": 40
     },
     {
      "id": "9mj_YXT2S9s",
@@ -3090,13 +3108,6 @@
      "views": 15,
      "minutes": 21,
      "avg_seconds": 97
-    },
-    {
-     "id": "DOaW-TDDgDk",
-     "title": "DevOps Huddle EP16: How to Migrate Bitbucket to GitHub: Source Code Migration | Opsera",
-     "views": 14,
-     "minutes": 8,
-     "avg_seconds": 42
     },
     {
      "id": "S0KTo3VSwd0",
@@ -3127,6 +3138,13 @@
      "avg_seconds": 78
     },
     {
+     "id": "fA3HAn7QqcM",
+     "title": "Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams",
+     "views": 13,
+     "minutes": 3,
+     "avg_seconds": 25
+    },
+    {
      "id": "xLlVX_WJSmA",
      "title": "Modernize Legacy Applications with Opsera Forge: From Assessment to Delivery",
      "views": 13,
@@ -3139,13 +3157,6 @@
      "views": 12,
      "minutes": 62,
      "avg_seconds": 375
-    },
-    {
-     "id": "fA3HAn7QqcM",
-     "title": "Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams",
-     "views": 12,
-     "minutes": 3,
-     "avg_seconds": 25
     },
     {
      "id": "MHuU8V0RYKU",
@@ -3239,13 +3250,6 @@
      "avg_seconds": 110
     },
     {
-     "id": "T8vRLLXC2MA",
-     "title": "Sprint Velocity Dashboard in Opsera: Track Capacity, Goals and Quality",
-     "views": 9,
-     "minutes": 7,
-     "avg_seconds": 88
-    },
-    {
      "id": "qacSDkCgs8A",
      "title": "Leading with Data to Simplify DevOps and Elevate DevEx",
      "views": 9,
@@ -3272,6 +3276,13 @@
      "views": 9,
      "minutes": 8,
      "avg_seconds": 73
+    },
+    {
+     "id": "T8vRLLXC2MA",
+     "title": "Sprint Velocity Dashboard in Opsera: Track Capacity, Goals and Quality",
+     "views": 9,
+     "minutes": 7,
+     "avg_seconds": 88
     },
     {
      "id": "-Tn6K50Wh3Y",
@@ -3456,6 +3467,13 @@
      "avg_seconds": 14
     },
     {
+     "id": "cCLbQxasOg8",
+     "title": "How to Measure Software Delivery Performance, from Deployment Frequency to Rollback",
+     "views": 5,
+     "minutes": 1,
+     "avg_seconds": 33
+    },
+    {
      "id": "-bf7qzEeRfU",
      "title": "DevOps Huddle EP17: Top 4 Salesforce DevOps Challenges (and How to Solve Them) | Opsera",
      "views": 5,
@@ -3503,13 +3521,6 @@
      "views": 5,
      "minutes": 6,
      "avg_seconds": 102
-    },
-    {
-     "id": "cCLbQxasOg8",
-     "title": "How to Measure Software Delivery Performance, from Deployment Frequency to Rollback",
-     "views": 5,
-     "minutes": 1,
-     "avg_seconds": 33
     },
     {
      "id": "0g61Q3-Srzw",
@@ -3645,11 +3656,11 @@
      "avg_seconds": 48
     },
     {
-     "id": "Wn303Yojtrs",
-     "title": "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",
+     "id": "z87UHVeMz5A",
+     "title": "Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera",
      "views": 3,
-     "minutes": 1,
-     "avg_seconds": 23
+     "minutes": 3,
+     "avg_seconds": 109
     },
     {
      "id": "Gb8lp8L-RDg",
@@ -3659,11 +3670,11 @@
      "avg_seconds": 22
     },
     {
-     "id": "z87UHVeMz5A",
-     "title": "Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera",
+     "id": "Wn303Yojtrs",
+     "title": "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",
      "views": 3,
-     "minutes": 3,
-     "avg_seconds": 109
+     "minutes": 1,
+     "avg_seconds": 23
     },
     {
      "id": "iqaBbpqz0wo",
@@ -4094,13 +4105,13 @@
     }
    ],
    "videos_listed": {
-    "views": 2871,
-    "minutes": 3845
+    "views": 2878,
+    "minutes": 3847
    },
    "sources": [
     {
      "source": "YouTube search",
-     "views": 1180
+     "views": 1186
     },
     {
      "source": "Google",
@@ -4139,7 +4150,7 @@
      "views": 5
     }
    ],
-   "source_gap": 1
+   "source_gap": 0
   },
   "shorts": {
    "views": 16,

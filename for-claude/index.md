@@ -1,7 +1,7 @@
 # Opsera website analytics, in plain text
 
 The data behind the dashboard at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/, written for AI assistants such as Claude.
-Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled 2026-11-09.
+Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled 2026-11-10.
 
 ## How to answer questions
 
@@ -24,9 +24,9 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 ## Date ranges
 
 - Google Analytics and HubSpot: 2026-04-01 to 2026-11-08.
-- Search Console (Google search): 2026-04-01 to 2026-11-07. It runs about 2 days behind.
+- Search Console (Google search): 2026-04-01 to 2026-11-08. It runs about 2 days behind.
 - LinkedIn company page: 2026-07-01 to 2026-11-07. LinkedIn Kumar: 2026-07-01 to 2026-10-27, the last day still being counted when exported.
-- YouTube: 2026-04-01 to 2026-11-06.
+- YouTube: 2026-04-01 to 2026-11-07.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
 ## Customer journey tab
@@ -81,8 +81,8 @@ Visits count people who landed on the page from outside the site. Page files lis
 - pages_by_week_resources, split to stay small: Pages under /resources/ by week. Every row has a visit, form fill or Google click. Sources: Google Analytics for visits and form fills, Search Console for Google clicks. Parts: [2026-Q2](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pages_by_week_resources_2026-Q2.csv), [2026-Q3](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pages_by_week_resources_2026-Q3.csv), [2026-Q4](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pages_by_week_resources_2026-Q4.csv).
 - [page_titles_blog.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_blog.csv): The title of each page: pages under /blog/. Source: Google Analytics. 268 rows.
 - [page_titles_knowledge_base.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_knowledge_base.csv): The title of each page: pages under /knowledge-base/. Source: Google Analytics. 80 rows.
-- [page_titles_main.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_main.csv): The title of each page: main pages 1 level deep (the homepage, /demo, /pricing and the like). Source: Google Analytics. 183 rows.
-- page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /a/auth/signup to /wp-json/wp/v2/posts/9397](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/9472 to /wp-json/wp/v2/resource/8544](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
+- [page_titles_main.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_main.csv): The title of each page: main pages 1 level deep (the homepage, /demo, /pricing and the like). Source: Google Analytics. 185 rows.
+- page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /a/auth/signup to /wp-json/wp/v2/posts/9363](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/9367 to /wp-json/wp/v2/resource/8544](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
 - [page_titles_resources.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_resources.csv): The title of each page: pages under /resources/. Source: Google Analytics. 97 rows.
 - [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 274 rows.
 - [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 410 rows.
@@ -98,9 +98,9 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 
 - [google_search_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_month.csv): Google search tab, by month. Source: Search Console. A lower average spot is better. 8 rows.
 - [google_search_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_week.csv): Google search tab, by week. Source: Search Console. A lower average spot is better. 32 rows.
-- [google_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_top_searches.csv): The searches bringing the most Google clicks, 2026-04-01 to 2026-11-07. Source: Search Console. Google hides rare searches. 600 rows.
-- [google_rankings_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_by_week.csv): Average spot on Google, Monday-to-Sunday weeks, for the homepage, the 8 product pages and the top 20 blogs and resources by visits since 2026-09-30. 1 is the top. Source: Google Search Console, up to 2026-11-07. 487 rows.
-- [google_rankings_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_top_searches.csv): The top 10 searches for each key page, 2026-08-11 to 2026-11-07. Source: Google Search Console. 287 rows.
+- [google_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_top_searches.csv): The searches bringing the most Google clicks, 2026-04-01 to 2026-11-08. Source: Search Console. Google hides rare searches. 600 rows.
+- [google_rankings_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_by_week.csv): Average spot on Google, Monday-to-Sunday weeks, for the homepage, the 8 product pages and the top 20 blogs and resources by visits since 2026-09-30. 1 is the top. Source: Google Search Console, up to 2026-11-08. 487 rows.
+- [google_rankings_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_top_searches.csv): The top 10 searches for each key page, 2026-08-12 to 2026-11-08. Source: Google Search Console. 287 rows.
 
 ## AEO tab: visits from AI tools
 
@@ -121,7 +121,7 @@ Paid means sponsored posts. LinkedIn's own sheets disagree on reposts, so we lea
 - [linkedin_exec_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_week.csv): LinkedIn exec tab (Kumar Chivukula's profile), by week. Source: LinkedIn exports, dates in UTC. 18 rows.
 - [linkedin_exec_exports.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_exports.csv): Each LinkedIn export of Kumar's profile as LinkedIn gave it. People reached doesn't add up across days. Source: LinkedIn exports. 4 rows.
 - [linkedin_exec_post_list.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_post_list.csv): Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify. 27 rows.
-- [linkedin_exec_posts_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_posts_by_month.csv): Kumar's own posts and reposts by month (UTC), 2 separate counts. Source: Kumar's public LinkedIn profile, read with Apify, checked 2026-11-09. 5 rows.
+- [linkedin_exec_posts_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_posts_by_month.csv): Kumar's own posts and reposts by month (UTC), 2 separate counts. Source: Kumar's public LinkedIn profile, read with Apify, checked 2026-11-10. 5 rows.
 
 ## LinkedIn visits to opsera.ai
 
@@ -138,16 +138,16 @@ We never add Shorts and long videos together.
 
 - [youtube_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_by_month.csv): YouTube tab, by month. Source: YouTube Analytics. 8 rows.
 - [youtube_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_by_week.csv): YouTube tab, by week. Source: YouTube Analytics. 32 rows.
-- [youtube_videos.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_videos.csv): Each video's views and watch time, 2026-04-01 to 2026-11-06. Source: YouTube Analytics. 199 rows.
+- [youtube_videos.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_videos.csv): Each video's views and watch time, 2026-04-01 to 2026-11-07. Source: YouTube Analytics. 199 rows.
 
 ## Pipeline tab
 
 Marketing sourced and influenced pipeline from Salesforce exports (counts and totals only), and campaign-influenced meetings. Updated when new exports arrive, not on Mondays.
 
-- [marketing_pipeline_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_by_month.csv): Marketing sourced (an estimate: it rests on Primary Campaign Source) and influenced pipeline, and deals with no contact linked as their own group (not sales), (open and won) by month, and the outside booking agency (DoGood, CrestingWave) on its own. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. A campaign counts only if the person joined it within 90 days before the deal; 14 deals have no known join date and still count. SDR and AE outreach count as sales. Undercounted: 79% of opportunities have no contact attached. Source: Salesforce opportunities created 2026-05-08 to 2026-11-04, exported 2026-10-27, 2026-11-02, 2026-11-06. 7 rows.
-- [marketing_pipeline_campaigns.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_campaigns.csv): The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: Salesforce opportunities created 2026-05-08 to 2026-11-04, exported 2026-10-27, 2026-11-02, 2026-11-06. 15 rows.
-- [marketing_pipeline_meetings.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_meetings.csv): Campaign-influenced meetings: people with a meeting since 1 Apr 2026 who joined a marketing campaign on or before it, each counted once. Source: Salesforce campaign members, exported 2026-10-27. 7 rows.
-- [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open or won, with no company or person. Source: HubSpot. The product comes from words in the deal name. 4 rows.
+- [marketing_pipeline_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_by_month.csv): Marketing sourced (an estimate: it rests on Primary Campaign Source) and influenced pipeline, and deals with no contact linked as their own group (not sales), (open and won) by month, and the outside booking agency (DoGood, CrestingWave) on its own. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. A campaign counts only if the person joined it within 90 days before the deal; 28 deals have no known join date and still count. SDR and AE outreach count as sales. Undercounted: 70% of opportunities have no contact attached. Source: Salesforce opportunities created 2026-01-05 to 2026-11-06, exported 2026-10-27, 2026-11-02, 2026-11-09. 8 rows.
+- [marketing_pipeline_campaigns.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_campaigns.csv): The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: Salesforce opportunities created 2026-01-05 to 2026-11-06, exported 2026-10-27, 2026-11-02, 2026-11-09. 27 rows.
+- [marketing_pipeline_meetings.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_meetings.csv): Campaign-influenced meetings: people with a meeting since 1 Apr 2026 who joined a marketing campaign on or before it, each counted once. Source: Salesforce campaign members, exported 2026-11-09. 7 rows.
+- [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open, won or lost, with no company or person. Source: HubSpot. The product comes from words in the deal name. 6 rows.
 
 ## Team metrics tab
 
