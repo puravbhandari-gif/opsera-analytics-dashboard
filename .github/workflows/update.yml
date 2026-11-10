@@ -170,7 +170,10 @@ jobs:
         id: newest
         run: |
           latest=$(git ls-remote origin refs/heads/main | cut -f1)
-          if [ "$(git rev-parse HEAD)" = "$latest" ]; then
+          git fetch -q origin main
+          # The daily Clarity pull (clarity.yml) only changes data/clarity.json; a newer commit like that doesn't stop a publish
+          newer=$(git diff --name-only HEAD "$latest" | grep -v '^data/clarity.json$' || true)
+          if [ "$(git rev-parse HEAD)" = "$latest" ] || { git merge-base --is-ancestor HEAD "$latest" && [ -z "$newer" ]; }; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           else
             echo "publish=false" >> "$GITHUB_OUTPUT"
