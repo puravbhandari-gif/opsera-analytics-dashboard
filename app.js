@@ -2444,6 +2444,22 @@ function renderEvents(hub, leads, sf) {
   ] });
   // Each event's note sits under the table, so the rows stay short
   $("events-notes").innerHTML = list.filter((e) => e.note).map((e) => `<li><strong>${esc(e.name)}:</strong> ${esc(e.note)}</li>`).join("");
+  // Salesforce member exports, with each person's status (added 10 Nov 2026). Counts only.
+  const exp = sf?.event_members || [];
+  if (exp.length) {
+    const names = Object.fromEntries(rows.map((e) => [e.key, e.name]));
+    $("events-sf-panel").hidden = false;
+    table($("events-sf-table"), { rows: exp.map((e) => ({ name: names[e.key] || e.campaign, members: e.members, export: e.export,
+      statuses: Object.entries(e.statuses).sort((x, y) => y[1] - x[1]).map(([k, n]) => `${k} ${num(n)}`).join(", "), met: e.people_with_meeting })),
+      sortKey: "members", columns: [
+        { key: "name", label: "Event" },
+        { key: "members", label: "Members", num: true, fmt: num },
+        { key: "statuses", label: "By status", sort: false },
+        { key: "met", label: "Meeting set after the event", num: true, fmt: num },
+        { key: "export", label: "Exported", fmt: (v) => dayYear(v) },
+      ] });
+    $("events-sf-source").textContent = `Source: Salesforce campaign member exports, matched by email to the meetings export (${dayYear(sf.exports.meetings)}). Counts only.`;
+  }
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
 }
 

@@ -1396,10 +1396,12 @@
   {
    "key": "flutter",
    "campaign": "DG-FY27-Q3-SC-Flutter-Summit",
-   "export": "2026-11-02",
-   "members": 86,
+   "export": "2026-11-05",
+   "members": 211,
    "statuses": {
-    "Attended": 86
+    "Approved": 77,
+    "Attended": 86,
+    "Waitlisted": 48
    },
    "people_with_meeting": 1,
    "held": 0
@@ -2081,11 +2083,11 @@
     "people": 2
    },
    {
-    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
+    "campaign": "DG-FY27-Q1-Agentic-Launch",
     "people": 2
    },
    {
-    "campaign": "DG-FY27-Q1-Agentic-Launch",
+    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
     "people": 2
    },
    {
@@ -2109,11 +2111,11 @@
     "people": 1
    },
    {
-    "campaign": "MQL Tracking",
+    "campaign": "DG-FY23-Q2-GitHub Actions",
     "people": 1
    },
    {
-    "campaign": "DG-FY23-Q2-GitHub Actions",
+    "campaign": "MQL Tracking",
     "people": 1
    },
    {
@@ -2153,10 +2155,6 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
-    "people": 1
-   },
-   {
     "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
@@ -2165,15 +2163,19 @@
     "people": 1
    },
    {
+    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "people": 1
+   },
+   {
     "campaign": "DG-FY23-AWS Reinvent 2023",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
+    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
+    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
     "people": 1
    },
    {
