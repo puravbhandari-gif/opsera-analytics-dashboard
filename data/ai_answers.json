@@ -1,5 +1,5 @@
 {
- "how_to_update": "Claude Code fills this file by hand from Ahrefs Brand Radar (the Monday run can't reach Ahrefs without an API key). Ask: \"refresh the AI answer checks\". Each check string has 1 character per day from first_check to last_check: 1 = the answer named Opsera, 0 = it didn't.",
+ "how_to_update": "scripts/fetch_ai_answers.py fills this file on the Monday run once the AHREFS_API_KEY secret exists. Until then Claude Code fills it by hand from Ahrefs Brand Radar: ask \"refresh the AI answer checks\". Each check string has 1 character per day from first_check to last_check: 1 = the answer named Opsera, 0 = it didn't, - = no check ran.",
  "source": "Ahrefs Brand Radar",
  "pulled": "2026-11-16",
  "first_check": "2026-10-26",

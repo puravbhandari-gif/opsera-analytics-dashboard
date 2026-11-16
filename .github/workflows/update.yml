@@ -131,6 +131,14 @@ jobs:
         continue-on-error: true
         run: python scripts/fetch_share_of_voice.py
 
+      # Optional: needs the AHREFS_API_KEY secret. Without it, or if Ahrefs fails, the AI answer checks stay as they were.
+      - name: Pull the AI answer checks from Ahrefs (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          AHREFS_API_KEY: ${{ secrets.AHREFS_API_KEY }}
+        run: python scripts/fetch_ai_answers.py
+
       # Optional: if this fails, the Content tab's "Published this quarter" keeps last week's list.
       - name: List what we published this quarter (optional)
         if: github.event_name != 'push'

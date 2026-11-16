@@ -1502,24 +1502,35 @@ async function renderAiVisibility(ga) {
   }
   $("aiv-pages-source").textContent = `${src}, the first page of each AI visit, week of ${range(addDays(lastWeek, -6), lastWeek)} against ${range(addDays(before[0] || lastWeek, -6), before[3] || lastWeek)} (Pacific time). Most pages get 1 or 2 AI visits a week, so the change is a count, not a percent.`;
 
-  // 3. AI answers (Ahrefs Brand Radar; data/ai_answers.json is filled by hand through Claude Code)
+  // 3. AI answers (Ahrefs Brand Radar; data/ai_answers.json comes from scripts/fetch_ai_answers.py once the
+  // AHREFS_API_KEY secret exists, and is filled by hand through Claude Code until then).
+  // Questions without "Opsera" in them come first: they show whether AI brings us up on its own.
   try {
     const ans = await load("ai_answers.json");
     const days = Math.round((toDate(ans.last_check) - toDate(ans.first_check)) / 864e5) + 1;
     const names = ans.assistants.map((a) => a.name).join(" and ");
-    if (days < AIV_MIN_DAYS) {
-      $("aiv-answers").innerHTML = aivWait(`We have ${num(days)} days of checks, from ${day(ans.first_check)} to ${dayYear(ans.last_check)}. Counts for each question start on ${dayYear(addDays(ans.first_check, AIV_MIN_DAYS))}, once 4 weeks of checks are in.`)
-        + `<p>The ${num(ans.prompts.length)} questions we check every day on ${names}:</p><ul>${ans.prompts.map((p) => `<li>${esc(p.question)}${p.names_opsera ? "" : ' <span class="muted">(doesn\'t name Opsera)</span>'}</li>`).join("")}</ul>`;
-    } else {
-      const m = AIV_MIN_DAYS, hits = (str) => [...str.slice(-m)].filter((c) => c === "1").length;
-      table($("aiv-answers"), { rows: ans.prompts.map((p) => ({ question: p.question, kind: p.names_opsera ? "Names Opsera" : "Doesn't name Opsera",
-        ...Object.fromEntries(ans.assistants.map((a) => [a.key, hits(p.checks[a.key])])) })), sortKey: "kind", sortDir: 1, pageSize: 20, columns: [
+    const halves = [
+      { id: "aiv-answers-without", rows: ans.prompts.filter((p) => !p.names_opsera), title: 'Questions without "Opsera" in them',
+        note: "These show whether AI brings up Opsera on its own." },
+      { id: "aiv-answers-with", rows: ans.prompts.filter((p) => p.names_opsera), title: 'Questions with "Opsera" in them',
+        note: "These show whether AI knows Opsera once someone asks about us by name." },
+    ];
+    const wait = days < AIV_MIN_DAYS;
+    $("aiv-answers").innerHTML = `<p class="note-inline"><strong>Covers ${names} only.</strong> We don't check Gemini, Perplexity, Claude or Copilot answers.</p>`
+      + (wait ? aivWait(`We have ${num(days)} days of checks, from ${day(ans.first_check)} to ${dayYear(ans.last_check)}. Counts for each question start on ${dayYear(addDays(ans.first_check, AIV_MIN_DAYS))}, once 4 weeks of checks are in.`) : "")
+      + halves.map((g) => `<h4>${g.title} (${num(g.rows.length)})</h4><p class="note-inline">${g.note}</p>`
+        + (wait ? `<ul>${g.rows.map((p) => `<li>${esc(p.question)}</li>`).join("")}</ul>` : `<div id="${g.id}"></div>`)).join("");
+    if (!wait) {
+      // 1 character per day: 1 = named Opsera, 0 = didn't, - = no check ran
+      const last = (str) => [...str.slice(-AIV_MIN_DAYS)].filter((c) => c !== "-");
+      halves.forEach((g) => table($(g.id), { rows: g.rows.map((p) => ({ question: p.question,
+        ...Object.fromEntries(ans.assistants.map((a) => [a.key, last(p.checks[a.key]).filter((c) => c === "1").length])),
+        ...Object.fromEntries(ans.assistants.map((a) => [a.key + "_of", last(p.checks[a.key]).length])) })), sortKey: ans.assistants[0].key, pageSize: 20, columns: [
         { key: "question", label: "Question" },
-        { key: "kind", label: "The question" },
-        ...ans.assistants.map((a) => ({ key: a.key, label: `${a.name}: answers naming Opsera`, num: true, fmt: (v) => `${num(v)} of the last ${m} checks` })),
-      ] });
+        ...ans.assistants.map((a) => ({ key: a.key, label: `${a.name}: answers naming Opsera`, num: true, fmt: (v, r) => `${num(v)} of the last ${num(r[a.key + "_of"])} checks` })),
+      ] }));
     }
-    $("aiv-answers-source").textContent = `Source: ${ans.source}, 1 check a day for each question on ${names}, ${range(ans.first_check, ans.last_check)}. Updated by hand on ${dayYear(ans.pulled)}. A check counts when the answer names Opsera.`;
+    $("aiv-answers-source").textContent = `Source: ${ans.source}, 1 check a day for each question on ${names} only, ${range(ans.first_check, ans.last_check)}. ${ans.by_hand === false ? "Updated" : "Updated by hand"} on ${dayYear(ans.pulled)}. A check counts when the answer names Opsera.`;
   } catch (e) {
     $("aiv-answers").innerHTML = aivWait("The AI answer checks didn't load.");
   }
