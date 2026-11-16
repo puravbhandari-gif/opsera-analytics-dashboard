@@ -1432,7 +1432,136 @@ function renderJourney(ga, leads, hub, gsc) {
 
 const AI_TOOL_NAMES = { all: "All AI tools", chatgpt: "ChatGPT", gemini: "Gemini", perplexity: "Perplexity", claude: "Claude", copilot: "Copilot", other: "Other AI tools" };
 
+// ---------- AI visibility: week by week, at the top of the AEO tab (added 16 Nov 2026) ----------
+// Weeks run Monday to Sunday and carry their Sunday's date. Every number sits next to the average of the 4 weeks before it.
+// Anything with under 4 weeks of data says "Not enough data yet" instead of a number.
+
+const AIV_WEEKS = 12;        // weeks on the chart
+const AIV_MIN_DAYS = 28;     // 4 weeks
+const weekEnding = (s) => addDays(s, (7 - toDate(s).getUTCDay()) % 7);
+const one = (v) => (Number.isInteger(v) ? num(v) : v.toFixed(1));
+// change against the 4-week average: a percent once the average reaches 5, the plain difference below it
+function aivDelta(cur, avg) {
+  const diff = cur - avg;
+  if (Math.abs(diff) < 0.05) return `<span class="delta flat">Level with the 4-week average of ${one(avg)}</span>`;
+  const size = avg >= 5 ? `${Math.abs((diff / avg) * 100).toFixed(0)}%` : one(Math.abs(diff));
+  return `<span class="delta ${diff > 0 ? "good" : "bad"}">${diff > 0 ? "Up" : "Down"} ${size} on the 4-week average of ${one(avg)}</span>`;
+}
+const aivWait = (text) => `<p><strong>Not enough data yet.</strong> ${text}</p>`;
+
+async function renderAiVisibility(ga) {
+  const ai = ga.ai, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
+  const lastWeek = weekEnding(last) === last ? last : addDays(weekEnding(last), -7);   // the last full week
+  const firstWeek = weekEnding(ga.start_date) === addDays(ga.start_date, 6) ? weekEnding(ga.start_date) : addDays(weekEnding(ga.start_date), 7);
+  const weeks = [];
+  for (let w = lastWeek; w >= firstWeek && weeks.length < AIV_WEEKS; w = addDays(w, -7)) weeks.unshift(w);
+  const before = weeks.slice(-5, -1);   // the 4 weeks before the latest one
+  const enough = weeks.length >= 5;
+  const groups = [["chatgpt", "ChatGPT"], ["gemini", "Gemini"], ["perplexity", "Perplexity"], ["claude", "Claude"], ["others", "Others"]];
+  const group = (tool) => (groups.some(([k]) => k === tool) ? tool : "others");
+
+  // 1. visits by assistant
+  const byWeek = {};
+  ai.daily.forEach((r) => { const k = `${weekEnding(r.date)}|${group(r.tool)}`; byWeek[k] = (byWeek[k] || 0) + r.visits; });
+  const visits = (w, g) => (g ? byWeek[`${w}|${g}`] || 0 : groups.reduce((t, [k]) => t + (byWeek[`${w}|${k}`] || 0), 0));
+  const avg = (g) => before.reduce((t, w) => t + visits(w, g), 0) / 4;
+  const src = "Source: Google Analytics, visits on opsera.ai only";
+  if (!enough) {
+    $("aiv-cards").innerHTML = aivWait("Week by week numbers need 5 full weeks of visits.");
+  } else {
+    $("aiv-week").textContent = `Week of ${range(addDays(lastWeek, -6), lastWeek)}, next to the average of the 4 weeks before it (${range(addDays(before[0], -6), before[3])}).`;
+    $("aiv-cards").innerHTML = card("All AI assistants", num(visits(lastWeek)), "", aivDelta(visits(lastWeek), avg()))
+      + groups.map(([k, name]) => card(name, num(visits(lastWeek, k)), k === "others" ? "Copilot and other AI tools" : "", aivDelta(visits(lastWeek, k), avg(k)))).join("");
+    chart("aiv-chart", (t) => ({ type: "line", whole: true, ytitle: "Visits in the week",
+      dates: weeks.map((w) => [addDays(w, -6), w]),
+      data: { labels: weeks.map(day), datasets: groups.map(([k, name], i) => line(name, weeks.map((w) => visits(w, k)), t.s[i])) },
+      tooltip: { title: (items) => `Week of ${range(addDays(weeks[items[0].dataIndex], -6), weeks[items[0].dataIndex])}` } }));
+  }
+  $("aiv-visits-source").textContent = `${src}, weeks from Monday to Sunday, ${range(addDays(weeks[0], -6), lastWeek)} (Pacific time). The chart shows each week under its Sunday.`;
+
+  // 2. landing pages
+  const lw = (ai.landing_weekly || []).filter((r) => r.week <= lastWeek);
+  const pages = {};
+  lw.forEach((r) => {
+    if (r.week !== lastWeek && !before.includes(r.week)) return;
+    const x = pages[r.page] = pages[r.page] || { page: r.page, now: 0, past: 0, tools: {} };
+    if (r.week === lastWeek) { x.now += r.visits; x.tools[group(r.tool)] = (x.tools[group(r.tool)] || 0) + r.visits; } else x.past += r.visits;
+  });
+  const pageRows = Object.values(pages).map((x) => ({ ...x, avg: x.past / 4, diff: x.now - x.past / 4,
+    from: groups.filter(([k]) => x.tools[k]).map(([k, name]) => `${name} ${num(x.tools[k])}`).join(", ") }));
+  if (!enough || !lw.length) {
+    $("aiv-pages").innerHTML = aivWait("Pages by week need 5 full weeks of visits.");
+  } else {
+    table($("aiv-pages"), { rows: pageRows, search: "pages", sortKey: "now", pageSize: 10, columns: [
+      { key: "page", label: "Landing page", search: true, fmt: (v) => (v === "(not set)" ? "Page not recorded by Google Analytics" : esc(v)) },
+      { key: "now", label: `Week to ${day(lastWeek)}`, num: true, fmt: num },
+      { key: "from", label: "From", sort: false, fmt: (v) => esc(v || "-") },
+      { key: "avg", label: "4-week average", num: true, fmt: one },
+      { key: "diff", label: "Change", num: true, fmt: (v, r) => aivDelta(r.now, r.avg).replace(/ on the 4-week average of [\d.,]+| with the 4-week average of [\d.,]+/, "") },
+    ] });
+  }
+  $("aiv-pages-source").textContent = `${src}, the first page of each AI visit, week of ${range(addDays(lastWeek, -6), lastWeek)} against ${range(addDays(before[0] || lastWeek, -6), before[3] || lastWeek)} (Pacific time). Most pages get 1 or 2 AI visits a week, so the change is a count, not a percent.`;
+
+  // 3. AI answers (Ahrefs Brand Radar; data/ai_answers.json comes from scripts/fetch_ai_answers.py once the
+  // AHREFS_API_KEY secret exists, and is filled by hand through Claude Code until then).
+  // Questions without "Opsera" in them come first: they show whether AI brings us up on its own.
+  try {
+    const ans = await load("ai_answers.json");
+    const days = Math.round((toDate(ans.last_check) - toDate(ans.first_check)) / 864e5) + 1;
+    const names = ans.assistants.map((a) => a.name).join(" and ");
+    const halves = [
+      { id: "aiv-answers-without", rows: ans.prompts.filter((p) => !p.names_opsera), title: 'Questions without "Opsera" in them',
+        note: "These show whether AI brings up Opsera on its own." },
+      { id: "aiv-answers-with", rows: ans.prompts.filter((p) => p.names_opsera), title: 'Questions with "Opsera" in them',
+        note: "These show whether AI knows Opsera once someone asks about us by name." },
+    ];
+    const wait = days < AIV_MIN_DAYS;
+    $("aiv-answers").innerHTML = `<p class="note-inline"><strong>Covers ${names} only.</strong> We don't check Gemini, Perplexity, Claude or Copilot answers.</p>`
+      + (wait ? aivWait(`We have ${num(days)} days of checks, from ${day(ans.first_check)} to ${dayYear(ans.last_check)}. Counts for each question start on ${dayYear(addDays(ans.first_check, AIV_MIN_DAYS))}, once 4 weeks of checks are in.`) : "")
+      + halves.map((g) => `<h4>${g.title} (${num(g.rows.length)})</h4><p class="note-inline">${g.note}</p>`
+        + (wait ? `<ul>${g.rows.map((p) => `<li>${esc(p.question)}</li>`).join("")}</ul>` : `<div id="${g.id}"></div>`)).join("");
+    if (!wait) {
+      // 1 character per day: 1 = named Opsera, 0 = didn't, - = no check ran
+      const last = (str) => [...str.slice(-AIV_MIN_DAYS)].filter((c) => c !== "-");
+      halves.forEach((g) => table($(g.id), { rows: g.rows.map((p) => ({ question: p.question,
+        ...Object.fromEntries(ans.assistants.map((a) => [a.key, last(p.checks[a.key]).filter((c) => c === "1").length])),
+        ...Object.fromEntries(ans.assistants.map((a) => [a.key + "_of", last(p.checks[a.key]).length])) })), sortKey: ans.assistants[0].key, pageSize: 20, columns: [
+        { key: "question", label: "Question" },
+        ...ans.assistants.map((a) => ({ key: a.key, label: `${a.name}: answers naming Opsera`, num: true, fmt: (v, r) => `${num(v)} of the last ${num(r[a.key + "_of"])} checks` })),
+      ] }));
+    }
+    $("aiv-answers-source").textContent = `Source: ${ans.source}, 1 check a day for each question on ${names} only, ${range(ans.first_check, ans.last_check)}. ${ans.by_hand === false ? "Updated" : "Updated by hand"} on ${dayYear(ans.pulled)}. A check counts when the answer names Opsera.`;
+  } catch (e) {
+    $("aiv-answers").innerHTML = aivWait("The AI answer checks didn't load.");
+  }
+
+  // 4. AI bots (the website's server sends each bot visit to Google Analytics; bots are never added to people's visits)
+  const bots = ai.bots || { daily: [], pages: [] };
+  const botDays = bots.daily.length ? Math.round((toDate(bots.to) - toDate(bots.daily[0].date)) / 864e5) + 1 : 0;
+  if (!bots.daily.length) {
+    $("aiv-bots").innerHTML = aivWait(`Google Analytics has received 0 AI bot visits${bots.from ? ` from ${day(bots.from)} to ${dayYear(bots.to)}` : ""}. The website has a bot log, but its 2 Google Analytics settings look unset on the live site. The website team needs to check them.`);
+  } else if (botDays < AIV_MIN_DAYS) {
+    $("aiv-bots").innerHTML = aivWait(`We have ${num(botDays)} days of bot visits, from ${day(bots.daily[0].date)} to ${dayYear(bots.to)}. Week by week numbers start once 4 weeks are in.`);
+  } else {
+    const total = {}, wk = {};
+    bots.daily.forEach((r) => { total[r.bot] = (total[r.bot] || 0) + r.visits; });
+    const top = Object.keys(total).sort((a, b) => total[b] - total[a]).slice(0, 4);
+    const bg = (b) => (top.includes(b) ? b : "Other bots");
+    bots.daily.forEach((r) => { const k = `${weekEnding(r.date)}|${bg(r.bot)}`; wk[k] = (wk[k] || 0) + r.visits; });
+    const bw = weeks.filter((w) => addDays(w, -6) >= bots.daily[0].date);
+    const names = Object.keys(total).length > 4 ? [...top, "Other bots"] : top;
+    $("aiv-bots").innerHTML = `<div class="chart-box short"><canvas id="aiv-bots-chart" aria-label="AI bot visits week by week"></canvas></div><div id="aiv-bots-pages"></div>`;
+    chart("aiv-bots-chart", (t) => ({ type: "line", whole: true, ytitle: "Bot visits in the week",
+      data: { labels: bw.map(day), datasets: names.map((b, i) => line(b, bw.map((w) => wk[`${w}|${b}`] || 0), t.s[i])) } }));
+    table($("aiv-bots-pages"), { rows: bots.pages, search: "pages", sortKey: "visits", pageSize: 10, columns: [
+      { key: "page", label: "Page", search: true }, { key: "bot", label: "Bot", search: true }, { key: "visits", label: "Bot visits", num: true, fmt: num },
+    ] });
+  }
+  $("aiv-bots-source").textContent = `Source: Google Analytics, bot visits sent by the website's server${bots.from ? `, checked ${range(bots.from, bots.to)}` : ""}. Bots are programs, not people, so they are never added to visits.`;
+}
+
 function renderAeo(ga, hub) {
+  renderAiVisibility(ga).catch((e) => console.error("AI visibility", e));
   const ai = ga.ai;
   const start = ga.start_date, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const src = "Source: Google Analytics, visits on opsera.ai only";
