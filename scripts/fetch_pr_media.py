@@ -362,6 +362,8 @@ def main():
         items[link] = {"date": date, "outlet": outlet_for(link, c.get("outlet") or ""), "title": title or link, "link": link,
                        "type": t, "topic": c.get("topic") or topic(title), "quoted": people, "placed_by": "",
                        "found_by": "Opsera newsroom" if c.get("own") else c.get("found_by") or how}
+        if not (c.get("own") or c.get("checked_by_hand")):   # a search find stays out of every placement count until Purav clears it
+            items[link]["status"] = "To review"
         if t == "Press release":
             release_titles.add(words(title))
         added += 1

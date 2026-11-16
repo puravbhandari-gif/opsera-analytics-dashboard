@@ -45,6 +45,10 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Ask our PR agencies for their coverage lists since 1 Jul 2026, save them in Desktop/Data/pr-agency, then ask Claude Code to add the PR agency list.
 - [ ] When SamsonPR updates their tracker: ask Claude Code to "read SamsonPR's tracker". It saves it to Desktop/Data/pr-agency as SamsonPR-tracker-<date>.xlsx and runs `.venv/bin/python scripts/fetch_pr_media.py --agency`, which refreshes Placed by, Readership and the open and missed opportunities.
 - [x] 9 Nov: Purav counted TechGig and DEVOPSdigest as placements and marked Bunnyshell, Techloy, nomadx and claude-media as passing mentions (in PASSING). Q3 is 11 placements across 14 outlets, Q2 8.
+- [ ] Every Monday after the update: open the PR and media tab and look at the rows marked "To review". New search finds land there and stay out of every placement count until Purav says which ones count (from 16 Nov; scripts/fetch_pr_media.py sets it).
+- [ ] 16 Nov: 9 rows are waiting as "To review" and out of the count. Purav said these 7 are not placements: BeBee, CaseStudies.com, TechDogs, BestBlogs, SD Times AppSec Archives, APIs.io, Articsledge. Purav still has to read 2: Voltage Control (3 Nov) and IT Supply Chain (9 Nov).
+- [x] 16 Nov: Purav's PR decisions. Q3 is 11 placements across 14 outlets, Q2 8 across 6, Q4 so far 1 (the Forbes byline of 6 Nov). RamaOnHealthcare (a copy of the Forbes byline) and AI & ML Events (an event listing) are marked "Not counted".
+- [ ] Slack post for the week ending 15 Nov: held on 16 Nov because Search Console only reached 14 Nov. Rerun with slack_week=2026-11-15 once it has 15 Nov.
 - [ ] Slack post for the week ending 8 Nov: the 9 Nov run (42588591905) stopped on purpose because Search Console only had data to 7 Nov. Rerun with slack_week=2026-11-08 once Search Console has 8 Nov, likely Tuesday 10 Nov.
 - [ ] Flutter registered: Luma's file has 507 rows, Valentina reported 509. Ask Valentina which is right before quoting it.
 - [ ] PR list: confirm Gilbert Martin (quoted in 2 PR items) is Opsera staff, since names on the public page are limited to Opsera people.

@@ -2343,7 +2343,7 @@ function prRows(d, ga, ah) {
     const site = prSite(x.link), dom = ah.by_domain[site] || {}, a = ah.by_link[x.link], g = ga.by_link[x.link];
     const one = { ...x, sites: [{ outlet: x.outlet, link: x.link }], dr: dom.domain_rating ?? null, tier: dom.tier || "",
       ga: g || null, ah: a || null, people: x.quoted ? x.quoted.split(", ") : [], readership: x.readership ?? null, status: x.status || "" };
-    if (x.type !== "Press release") { rows.push(one); return; }
+    if (x.type !== "Press release" || x.status) { rows.push(one); return; }   // a copy still to review stays on its own, so it can't hide the release
     const key = prWords(x.title), have = releases.get(key);
     if (!have) { releases.set(key, one); rows.push(one); return; }
     have.sites.push({ outlet: x.outlet, link: x.link });
