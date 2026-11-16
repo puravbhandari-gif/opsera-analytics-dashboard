@@ -13,6 +13,7 @@ page,page_title
 /blog/9-ways-you-can-improve-security-posture,9 Sure Shot ways to Improve Security Posture | Opsera - Opsera
 /blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi,91% Have Adopted AI. Here’s Why Only 6% Can Show the ROI. - Opsera
 /blog/Ny1iZXN0LX,Opsera — The context-aware software factory
+/blog/ZW50ZXJwcm,Opsera - The context-aware software factory
 /blog/a-day-with-opseras-devops-ai-assistant-your-ai-powered-devsecops-ally,A Day with Opsera’s DevOps AI Assistant: Your AI-Powered DevSecOps Ally - Opsera
 /blog/a-devops-journey-wisdom-from-the-special-operations-community,A DevOps Journey: Wisdom from the Special Operations Community - Opsera
 /blog/a-journey-towards-devops-at-scale,A journey towards DevOps at scale | Opsera Blog - Opsera
@@ -24,6 +25,7 @@ page,page_title
 /blog/agile-slackbot-power,Opsera — The context-aware software factory
 /blog/ai-agent-guardrails-ontologies,AI Agent Guardrails: Why Agents Need Ontologies - Opsera
 /blog/ai-agents-are-building-faster-than-you-can-govern,AI Agents Are Building Faster Than You Can Govern - Opsera
+/blog/ai-code-generation-research-report,Opsera - The context-aware software factory
 /blog/ai-code-security,AI Code Security: Why SAST Scanners Fall Short - Opsera
 /blog/ai-coding-impact-2026-benchmark-report,Opsera — The context-aware software factory
 /blog/ai-first-devops-at-aws-reinvent-2025-recap,AI first DevOps at AWS reInvent 2025: Recap - Opsera
@@ -62,7 +64,8 @@ page,page_title
 /blog/contact-us,Opsera - The context-aware software factory
 /blog/contact_us,Opsera - The context-aware software factory
 /blog/contactus,Opsera - The context-aware software factory
-/blog/context-engineering-ai-coding,Context Engineering for AI Coding: The Hidden Cost of Missing Context — Opsera
+/blog/container-orchestration-kubernetes-and-the-ci-cd-pipeline,Opsera - The context-aware software factory
+/blog/context-engineering-ai-coding,The Hidden Cost of Missing Context in AI Coding - Opsera
 /blog/continuous-orchestration-for-next-gen-devops,Continuous Orchestration for Next-Gen DevOps - Opsera
 /blog/conversations-with-former-cio-on-continuous-orchestration,A CIO on Continuous Orchestration - Opsera
 /blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve,Copado vs. Opsera: The DevOps Showdown Salesforce Teams Deserve - Opsera
@@ -115,8 +118,9 @@ page,page_title
 /blog/github-copilot-adoption-trends-insights-from-real-data,Github Copilot Adoption Trends: Insights from Real Data - Opsera
 /blog/github-copilot-adoption-trends-insights-from-real-data/`,Page not found - Opsera
 /blog/github-copilot-adoption-trends-insights-from-real-data/​,Page not found - Opsera
-/blog/github-copilot-alternatives,Best GitHub Copilot Alternatives for Enterprise Governance - Opsera
-/blog/github-copilot-trends-and-measuring-impact,GitHub Copilot Trends and Measuring Impact | Opsera - Opsera
+/blog/github-copilot-alternatives,GitHub Copilot Alternatives for Governance in 2026 - Opsera
+/blog/github-copilot-enterprise-impact-on-developer-productivity,Opsera - The context-aware software factory
+/blog/github-copilot-trends-and-measuring-impact,GitHub Copilot Trends and Measuring Impact | Opsera
 /blog/harness-engineering,What Is Harness Engineering? Enterprise AI Delivery Guide — Opsera
 /blog/healthcare-data-modernization,Healthcare Data Modernization: SQL to Cloud — Opsera
 /blog/healthcare-it-modernization,Healthcare IT Modernization: A Practical Guide - Opsera
@@ -201,14 +205,16 @@ page,page_title
 /blog/shift-left-security,Shift Left Security: Scan Code Before It Ships - Opsera
 /blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops,The Future of AI-Powered DevSecOps - Opsera
 /blog/simplify-databricks-deployments-with-low-code-yaml-automation,Simplify Databricks Deployments with Low-Code YAML Automation - Opsera
+/blog/smart-model-selection,Smart Model Selection: Pick the Right AI Model per Task - Opsera
 /blog/snowflake-to-databricks-migration,Snowflake to Databricks Migration: Complete Guide — Opsera
 /blog/software-delivery-industry-experts-share-2022-trends-and-predictions,Software Delivery Industry Experts Share 2023 Trends and Predictions - Opsera
 /blog/software-factory,Software Factory: Intent-Driven Development at AI Speed - Opsera
-/blog/software-factory-as-a-service,"Software Factory as a Service: What It Is, How to Evaluate - Opsera"
+/blog/software-factory-as-a-service,Software Factory as a Service for Enterprise Teams - Opsera
 /blog/software-factory-benefits,Software Factory Benefits Leaders Can Measure - Opsera
 /blog/software-factory-compliance-tools,Opsera — The context-aware software factory
-/blog/software-factory-model,Software Factory Model: Reducing Architecture Drift — Opsera
+/blog/software-factory-model,Software Factory Model: Reducing Architecture Drift - Opsera
 /blog/software-factory-pattern,How the Software Factory Pattern Works at Scale - Opsera
+/blog/software-factory-vs-dark-factory,Software Factory vs Dark Factory: Human-in-the-Loop Wins - Opsera
 /blog/software-factory/null,Page not found - Opsera
 /blog/solving-merge-conflicts-in-salesforce,Quickest way to resolve Salesforce merge conflicts | Opsera - Opsera
 /blog/spec-driven-development,Spec-Driven Development: Specs Beat Prompts — Opsera
@@ -253,7 +259,7 @@ page,page_title
 /blog/what-is-agentic-devops,What is Agentic DevOps? - Opsera
 /blog/what-is-code-churn-how-to-measure-it,Page not found - Opsera
 /blog/what-is-code-smell,Opsera | What is Code Smell & How to Avoid it - Opsera
-/blog/what-is-deployment-frequency,Opsera — The context-aware software factory
+/blog/what-is-deployment-frequency,Opsera - The context-aware software factory
 /blog/what-is-devsecops,What is DevSecOps? | Opsera Blog - Opsera
 /blog/whats-new-at-opsera-smarter-merges-sharper-test-mapping-and-salesforce-visibility-all-in-one-update,"What’s New at Opsera: Smarter Merges, Sharper Test Mapping, and Salesforce Visibility All in One Update - Opsera"
 /blog/why-leadership-teams-need-a-unified-view-of-devops-performance,Why Leadership Teams Need a Unified View of DevOps Performance - Opsera

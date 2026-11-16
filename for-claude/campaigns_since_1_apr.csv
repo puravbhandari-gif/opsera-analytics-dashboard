@@ -1,14 +1,14 @@
 campaign,visits_ga,engaged_visits_ga,form_fills_ga,emails_sent_hubspot,email_sends,email_opens,email_clicks,deals_hubspot,deal_amount_usd
 DG-FY26-Q4-Holiday-Newsletter,2309,54,0,2,132915,4643,622,0,0
-DG-FY27-Q3-Tokenomics-Webinar,1834,247,76,3,111141,1689,196,0,0
+DG-FY27-Q3-Tokenomics-Webinar,1834,247,76,3,111141,1690,196,0,0
 Competitors,848,232,7,0,0,0,0,0,0
 Brand - Search - M+D,750,421,9,0,0,0,0,0,0
 DG-FY27-Q1-AI-BM-Report-Webinar,229,133,59,3,110397,4514,700,0,0
 DG-FY27-Q1-Meet-the-Agents-Webinar,222,118,17,5,31469,1654,404,0,0
 DG-FY27-Q3-Flutter-AISDLC-Sumit,201,90,1,18,91101,2077,331,0,0
 Magic Quadrant 2026,159,26,4,0,0,0,0,0,0
+DG-FY27-Gartner-MQ,144,81,13,0,0,0,0,0,0
 DG-FY27-Q2-MQ-Roundtable,141,35,7,2,20152,423,49,0,0
-DG-FY27-Gartner-MQ,136,76,13,0,0,0,0,0,0
 DG-FY27-Q1-Amazon-Q-Webinar,100,59,3,0,0,0,0,0,0
 ai-roundtable-june2026,93,77,57,0,0,0,0,0,0
 DG-FY27-Q2-Velocity-Whitepaper,69,54,38,0,0,0,0,0,0
@@ -18,31 +18,36 @@ DG-FY27-Q1-AI-Adoption-Webinar,50,14,0,0,0,0,0,0,0
 brand-page,40,25,1,0,0,0,0,0,0
 DG-FY27-Q3-Event-Gartner-Symposium,31,2,0,1,2631,17,8,0,0
 universe26,24,8,0,0,0,0,0,0,0
-DG-Webinar-DevOpsHuddle-Ep16-03-14,19,12,1,1,299,90,40,1,100000
+DG-Webinar-DevOpsHuddle-Ep16-03-14,19,12,1,1,304,90,40,1,100000
+harness-engineering,19,7,0,0,0,0,0,0,0
+meta-ai-series,17,7,0,0,0,0,0,0,0
 rko,16,6,0,0,0,0,0,0,0
+change_impact_analysis_for_code,16,13,0,0,0,0,0,0,0
 DG-FY26-Q4-Trends-Webinar,13,3,0,0,0,0,0,0,0
 php2shell,12,7,0,0,0,0,0,0,0
-change_impact_analysis_for_code,11,9,0,0,0,0,0,0,0
-meta-ai-series,10,2,0,0,0,0,0,0,0
+VIP_experiences,11,5,0,0,0,0,0,0,0
 github-universe-2026,8,6,0,0,0,0,0,0,0
+tool-comparison,8,0,0,0,0,0,0,0,0
+kumar,7,6,0,0,0,0,0,0,0
 ontologies-series,6,3,0,0,0,0,0,0,0
-VIP_experiences,6,3,0,0,0,0,0,0,0
+pulse_article,5,0,0,0,0,0,0,0,0
 appdevprofile,5,0,0,0,0,0,0,0,0
-kumar,5,4,0,0,0,0,0,0,0
-Release Notes,5,0,0,53,75479,3034,187,0,0
+external-news,5,0,0,0,0,0,0,0,0
+Release Notes,5,0,0,53,75479,3035,187,0,0
 DG-FY27-Q1-Agentic-Launch,4,2,0,0,0,0,0,0,0
 arcade_demos,4,3,2,0,0,0,0,0,0
 DG-FY26-Q2-Event-DAIS,4,3,0,3,518,23,4,0,0
-pulse_article,4,0,0,0,0,0,0,0,0
-external-news,4,0,0,0,0,0,0,0,0
+DG-FY26-Q2-Deepview-Newsletter,4,0,0,0,0,0,0,0,0
+profile,3,2,0,0,0,0,0,0,0
 DG-FY27-AWT Mumbai,3,2,0,1,293,46,4,0,0
 opsera-architecture-analyzer-set-2,3,1,0,0,0,0,0,0,0
+Github Better Together,3,0,0,0,0,0,0,0,0
+top 1 miami,3,0,0,0,0,0,0,0,0
+best_ai_software_factories,3,2,0,0,0,0,0,0,0
 DG-FY26-Q3-DORA-Webinar,2,1,0,0,0,0,0,0,0
 DG-FY27-Q1-Forge-Launch,2,1,0,2,5858,198,7,0,0
-profile,2,1,0,0,0,0,0,0,0
 competitor_comparison,2,1,0,0,0,0,0,0,0
 909exec-episode-43-from-adobe-to-ai-kumar-chivukula-s,2,1,0,0,0,0,0,0,0
-Github Better Together,2,0,0,0,0,0,0,0,0
 accelerate-ai-powered-coding-with-the-windsurf-dashboard-in,2,0,0,0,0,0,0,0,0
 accelerate-ci-cd-with-opsera-s-webhook-driven-automation,2,1,0,0,0,0,0,0,0
 accelerate-developer-productivity-and-realize-roi-faster,2,1,0,0,0,0,0,0,0
@@ -181,7 +186,9 @@ leading-with-data-simplify-devops-and-elevate-devex,2,0,0,0,0,0,0,0,0
 time-saved-productivity-and-software-development-loops,2,1,0,0,0,0,0,0,0
 unleash-the-power-of-your-software,2,1,0,0,0,0,0,0,0
 ai_news_stories,2,0,0,0,0,0,0,0,0
-best_ai_software_factories,2,1,0,0,0,0,0,0,0
+influencer/,2,0,0,0,0,0,0,0,0
+Search-AgilevsDevops-2021-02-23,2,0,0,0,0,0,0,0,0
+latest-ai-blockchain-crypto-trends-insights-and-news-headlines-for-july-4-2025,2,0,0,0,0,0,0,0,0
 application-security-posture-dashboard-complete-visibility,1,1,0,0,0,0,0,0,0
 bulk-pipeline-automation-insert-remove-update-steps,1,0,0,0,0,0,0,0,0
 claude-security-audit,1,0,0,0,0,0,0,0,0
@@ -190,18 +197,18 @@ introducing-opsera-ai-release-notes-every-deployment-fully,1,1,0,0,0,0,0,0,0
 opsera-pipeline-notifications-smart-alerts-for-devops-teams,1,1,0,0,0,0,0,0,0
 opsera-s-new-workflow-editor-next-gen-pipeline-automation,1,0,0,0,0,0,0,0,0
 the-agentic-future-scaling-delivery-securing-code-and,1,0,0,0,0,0,0,0,0
-top 1 miami,1,0,0,0,0,0,0,0,0
 transform-your-devops-strategy-with-hummingbird-ai-s,1,1,0,0,0,0,0,0,0
 best-ai-coding-agents,1,1,0,0,0,0,0,0,0
 blog-cursor-ai-editor-produto,1,0,0,0,0,0,0,0,0
 octopus_integration,1,0,0,0,0,0,0,0,0
-influencer/,1,0,0,0,0,0,0,0,0
 BuiltIn,1,1,0,0,0,0,0,0,0
 google-brings-ai-to-assistant-and-pixel-8,1,0,0,0,0,0,0,0,0
-Search-AgilevsDevops-2021-02-23,1,0,0,0,0,0,0,0,0
 top 1 ios,1,0,0,0,0,0,0,0,0
 top 1 sanfrancisco,1,0,0,0,0,0,0,0,0
 DG-FY26-Q4-AI-BM-Report,1,0,0,0,0,0,0,0,0
+devops_huddle,1,1,0,0,0,0,0,0,0
+influencer,1,0,0,0,0,0,0,0,0
+listing_profile,1,0,0,0,0,0,0,0,0
 DG-2025-Q2-Whitepaper-Databricks,0,0,0,2,1591,285,58,0,0
 DG-FY27-Architecture-Agent-Workshop,0,0,0,3,12445,1075,374,0,0
 DG-FY27-Invited-to-Discord-Community,0,0,0,3,8350,657,456,0,0

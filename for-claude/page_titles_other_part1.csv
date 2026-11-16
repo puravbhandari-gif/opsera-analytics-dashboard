@@ -1,7 +1,9 @@
 page,page_title
 /a/auth/signup,Page not found - Opsera
+"/about, https:/opsera.ai/about",Page not found - Opsera
 /agents/vibeshift,"VIBEshift transforms your vibe code into secure, scalable, enterprise-ready applications."
 /agents/vibeshift/[reference:2],Page not found - Opsera
+/articles/repo-tracker-github-catch-up,Page not found - Opsera
 /author/chandra-ranganathan,Page not found - Opsera
 /author/garima-bajpai,Page not found - Opsera
 /author/kevin-railsback,Page not found - Opsera
@@ -25,7 +27,7 @@ page,page_title
 /careers/senior-customer-success-engineer-devops,Page not found - Opsera
 /case-study/city-of-hope,Page not found - Opsera
 /case-study/keywest-networks,Page not found - Opsera
-/case-study/log4j-cybersecurity-vulnerability-solved,Page not found — Opsera
+/case-study/log4j-cybersecurity-vulnerability-solved,Page not found - Opsera
 /case-study/nortonlifelock,Page not found - Opsera
 /case-study/reflektion,Page not found — Opsera
 /company/about-us,Page not found - Opsera
@@ -33,20 +35,21 @@ page,page_title
 /comparison/opsera-vs-flosum,Page not found - Opsera
 /comparison/opsera-vs-gearset,Page not found - Opsera
 /comparison/opsera-vs-harness,Page not found - Opsera
+/comparison/opsera-vs-jellyfish,Page not found - Opsera
 /create-and-manage-pipelines/pipeline-level-parameters,Page not found - Opsera
 /create-and-manage-pipelines/queuing-a-pipeline,Page not found - Opsera
 /customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-outcomes,A Fortune 100 Manufacturer + Opsera: Turning Deployment Speed Into Reliable Business Outcomes
 /customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot,A Leading Biotechnology Innovator + Opsera: Unlocking the Real Value of GitHub Copilot - Opsera
 /customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights,A Leading Industrial Enterprise + Opsera: Driving Real Value with Copilot Insights
 /customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights,A Leading Network Provider: Driving Productivity with GitHub Copilot and Opsera Insights - Opsera
-/customer-stories/accelerating-ai-driven-software-delivery-with-opsera,Accelerating AI Driven Software Delivery with Opsera
+/customer-stories/accelerating-ai-driven-software-delivery-with-opsera,Accelerating AI-Driven Software Delivery with Opsera
 /customer-stories/accelerating-ai-maturity-with-ltm,Accelerating AI Maturity with LTM - Opsera
 /customer-stories/accelerating-delivery-by-transforming-security-from-tax-to-enabler-at-cisco,Page not found - Opsera
 /customer-stories/cisco,Accelerating Delivery By Transforming Security From Tax to Enabler at Cisco - Opsera
 /customer-stories/city-of-hope,City of Hope - Opsera
 /customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise,Driving Copilot Adoption at a Leading Industrial Enterprise - Opsera
 /customer-stories/driving-github-copilot-adoption-at-a-global-e-commerce-leader-with-opsera-insights,Driving GitHub Copilot Adoption at a Global E‑Commerce Leader with Opsera Insights - Opsera
-/customer-stories/forge-fortune-1000-retailer-legacy-modernization,Forge modernized a Fortune 1000 retailer's legacy application - Opsera
+/customer-stories/forge-fortune-1000-retailer-legacy-modernization,Forge modernizes Fortune 1000 retailer's legacy app - Opsera
 /customer-stories/fortune-100-manufacturing,Fortune 100 Manufacturing - Opsera
 /customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot,Opsera — The context-aware software factory
 /customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera,How a Leading Insurer Unlocked $1.9M in Monthly Savings with GitHub Copilot + Opsera
@@ -83,7 +86,7 @@ page,page_title
 /ecosystem/cypress,Cypress - Opsera
 /ecosystem/datadog,Datadog - Opsera
 /ecosystem/docker-hub,Docker Hub - Opsera
-/ecosystem/dynatrace,Page not found — Opsera
+/ecosystem/dynatrace,Page not found - Opsera
 /ecosystem/elastic-stack,Elastic Stack - Opsera
 /ecosystem/git,Git - Opsera
 /ecosystem/github,Github_CI - Opsera
@@ -91,7 +94,7 @@ page,page_title
 /ecosystem/gitlab-ci,Gitlab CI - Opsera
 /ecosystem/gitlab-scm,GitLab SCM - Opsera
 /ecosystem/gitops,Gitops - Opsera
-/ecosystem/google-cloud,Google Cloud - Opsera
+/ecosystem/google-cloud,Page not found - Opsera
 /ecosystem/google-gke,Google GKE - Opsera
 /ecosystem/grafana,Grafana - Opsera
 /ecosystem/hashicorp-vault,Hashicorp vault - Opsera
@@ -117,7 +120,7 @@ page,page_title
 /ecosystem/octopus-deploy,Octopus Deploy - Opsera
 /ecosystem/pagerduty,PagerDuty - Opsera
 /ecosystem/prisma-container-security,Prisma Container Security - Opsera
-/ecosystem/puppet,Page not found — Opsera
+/ecosystem/puppet,Page not found - Opsera
 /ecosystem/qualys,Qualys - Opsera
 /ecosystem/red-hat-openshift,Page not found - Opsera
 /ecosystem/rundeck,Page not found - Opsera
@@ -195,33 +198,35 @@ page,page_title
 /for/zuora,Page not found - Opsera
 /forge/contact_us,Page not found - Opsera
 /forge/database-migration,Database migration — Opsera Forge
-/forge/database-migration/oracle-to-postgres,Oracle to Postgres — Opsera Forge
+/forge/database-migration/oracle-to-postgres,Oracle to Postgres - Opsera Forge
 /forge/modernization,Forge for legacy modernization — Opsera
 /forge/modernization-guide,What is legacy modernization? — Opsera
-/forge/modernization/cobol-to-csharp,COBOL to C# — Opsera Forge
+/forge/modernization/cobol-to-csharp,COBOL to C# - Opsera Forge
 /forge/modernization/cobol-to-go,COBOL to Go — Opsera Forge
 /forge/modernization/cobol-to-java,COBOL to Java — Opsera Forge
-/forge/modernization/cobol-to-python,COBOL to Python — Opsera Forge
+/forge/modernization/cobol-to-python,COBOL to Python - Opsera Forge
 /forge/modernization/coldfusion-to-dotnet,ColdFusion to .NET - Opsera Forge
 /forge/modernization/coldfusion-to-java,ColdFusion to Java — Opsera Forge
-/forge/modernization/fortran-to-python,Fortran to Python — Opsera Forge
+/forge/modernization/fortran-to-python,Fortran to Python - Opsera Forge
 /forge/modernization/framework-upgrades,Framework and runtime upgrades — Opsera Forge
-/forge/modernization/monolith-to-microservices,Monolith to microservices — Opsera Forge
-/forge/modernization/perl-to-python,Perl to Python — Opsera Forge
+/forge/modernization/monolith-to-microservices,Monolith to microservices - Opsera Forge
+/forge/modernization/perl-to-python,Perl to Python - Opsera Forge
 /forge/modernization/powerbuilder-to-dotnet,PowerBuilder to .NET - Opsera Forge
 /forge/modernization/powerbuilder-to-java,PowerBuilder to Java - Opsera Forge
-/forge/modernization/security-modernization,Security modernization — Opsera Forge
+/forge/modernization/security-modernization,Security modernization - Opsera Forge
 /forge/new-apps,New application development — Opsera Forge
 /forge/new-apps/healthcare-application-modernization,Healthcare application modernization - Opsera Forge
-/forge/new-apps/telehealth-patient-engagement-app-development,Telehealth and patient engagement app development — Opsera Forge
+/forge/new-apps/telehealth-patient-engagement-app-development,Telehealth app development - Opsera Forge
 /gartner-symposium/free-modernisation,Page not found — Opsera
 /gartner-symposium/free-modernization,Claim Your Free Modernization Project – Opsera at Gartner IT Symposium/Xpo 2026
 /gartner-symposium/poc,Claim Your Free Modernization POC – Opsera at Gartner IT Symposium/Xpo 2026
 /gartner-symposium/poc →,Page not found — Opsera
 /https:/opsera.ai/,Page not found — Opsera
 /https:/opsera.ai/privacy,Page not found - Opsera
+/https:/opsera.ai/resources/webinars/cio-roundtable-learnings-and-trends-for-2024,Page not found - Opsera
 /huddle/episode-16-source-code-migration-made-easy,Page not found - Opsera
 /huddle/episode-19-measuring-downstream-impact-with-dora,Page not found — Opsera
+/huddle/troubleshoot-pipelines-faster-unified-logs-and-build-manifests,Page not found - Opsera
 /integrations/monitoring,Page not found - Opsera
 /jobs/director-product-marketing,Page not found - Opsera
 /jobs/pre-sales-solution-engineer,Page not found - Opsera
@@ -238,6 +243,7 @@ page,page_title
 /newsroom/b3BzZXJhLW,Opsera - The context-aware software factory
 /newsroom/business-intelligence-platform-opsera-raises-15-million-funding,Business Intelligence Platform Opsera Raises $15 Million Funding — Opsera
 /newsroom/devops-orchestration-platform-opsera-raises-15m,DevOps orchestration platform Opsera raises $15M — Opsera
+/newsroom/in-the-news,Opsera - The context-aware software factory
 /newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes,New Opsera Report Reveals How AI is Transforming Software Delivery and Driving Business Outcomes - Opsera
 /newsroom/opsera-achieves-soc-2-type-ii-compliance,Opsera Achieves SOC 2 Type II Compliance — Opsera
 /newsroom/opsera-adds-native-aws-integrations-and-is-now-available-in-aws-marketplace,Opsera Adds Native AWS Integrations and is Now Available in AWS Marketplace - Opsera
@@ -349,10 +355,12 @@ page,page_title
 /solutions/sdlc,Automate Your SDLC with AI-Powered Automation - Opsera
 /use-cases/cobol-to-python,Page not found — Opsera
 /webinars/2024-dora-webinar,Page not found - Opsera
+/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github-copilot,Page not found - Opsera
 /webinars/honeywells-software-modernization-and-github-transformation,Page not found - Opsera
 /webinars/how-workday-improved-their-security-posture-with-opsera-unified-devops-platform,Page not found — Opsera
 /webinars/integrate-your-existing-tools-accelerate-your-salesforce-app-releases,Page not found — Opsera
 /webinars/leading-with-data-to-simplify-devops-and-elevate-devex,Page not found - Opsera
+/webinars/linkedin-live-session-with-workday-aws-and-opsera,Page not found - Opsera
 /wp-admin/post.php,Page not found — Opsera
 /wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_Aruna20Pattabiraman-150x150.jpg,Page not found — Opsera
 /wp-content/uploads/2025/02/618ac04d623bfe50bb750450_34.jpg,Page not found — Opsera
@@ -580,14 +588,3 @@ page,page_title
 /wp-json/wp/v2/posts/9119,Page not found — Opsera
 /wp-json/wp/v2/posts/9132,Page not found — Opsera
 /wp-json/wp/v2/posts/9141,Page not found — Opsera
-/wp-json/wp/v2/posts/9147,Page not found — Opsera
-/wp-json/wp/v2/posts/9180,Page not found — Opsera
-/wp-json/wp/v2/posts/9220,Page not found — Opsera
-/wp-json/wp/v2/posts/9233,Page not found — Opsera
-/wp-json/wp/v2/posts/9243,Page not found — Opsera
-/wp-json/wp/v2/posts/9294,Page not found — Opsera
-/wp-json/wp/v2/posts/9304,Page not found — Opsera
-/wp-json/wp/v2/posts/9341,Page not found — Opsera
-/wp-json/wp/v2/posts/9355,Page not found — Opsera
-/wp-json/wp/v2/posts/9358,Page not found — Opsera
-/wp-json/wp/v2/posts/9363,Page not found — Opsera

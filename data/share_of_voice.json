@@ -1,7 +1,7 @@
 {
  "source": "Google News search feed, US English, headlines naming each company",
  "start_date": "2026-07-01",
- "checked": "2026-11-10",
+ "checked": "2026-11-16",
  "quarters": [
   {
    "quarter": "FY27 Q2",
@@ -17,22 +17,22 @@
   {
    "quarter": "FY27 Q3",
    "counts": {
-    "Opsera": 4,
-    "Harness": 17,
+    "Opsera": 3,
+    "Harness": 14,
     "CloudBees": 5,
-    "Copado": 8,
-    "Gearset": 1,
+    "Copado": 5,
+    "Gearset": 3,
     "LinearB": 0
    }
   },
   {
    "quarter": "FY27 Q4",
    "counts": {
-    "Harness": 2,
-    "Copado": 6,
-    "LinearB": 6,
-    "Opsera": 0,
-    "CloudBees": 0,
+    "Opsera": 1,
+    "Harness": 4,
+    "CloudBees": 1,
+    "Copado": 4,
+    "LinearB": 5,
     "Gearset": 0
    }
   }
@@ -65,7 +65,7 @@
   {
    "date": "2026-08-19",
    "counts": {
-    "Harness": 3
+    "Harness": 2
    }
   },
   {
@@ -77,13 +77,19 @@
   {
    "date": "2026-08-27",
    "counts": {
-    "Harness": 2
+    "Harness": 1
    }
   },
   {
    "date": "2026-08-28",
    "counts": {
     "Harness": 1
+   }
+  },
+  {
+   "date": "2026-09-04",
+   "counts": {
+    "Gearset": 1
    }
   },
   {
@@ -95,7 +101,7 @@
   {
    "date": "2026-09-14",
    "counts": {
-    "Copado": 2
+    "Copado": 1
    }
   },
   {
@@ -142,13 +148,6 @@
    }
   },
   {
-   "date": "2026-10-10",
-   "counts": {
-    "Harness": 1,
-    "Copado": 1
-   }
-  },
-  {
    "date": "2026-10-20",
    "counts": {
     "Copado": 3
@@ -157,11 +156,17 @@
   {
    "date": "2026-10-21",
    "counts": {
-    "Copado": 2
+    "Copado": 1
    }
   },
   {
    "date": "2026-10-22",
+   "counts": {
+    "Gearset": 1
+   }
+  },
+  {
+   "date": "2026-10-24",
    "counts": {
     "Gearset": 1
    }
@@ -173,21 +178,14 @@
    }
   },
   {
-   "date": "2026-10-31",
-   "counts": {
-    "Opsera": 1
-   }
-  },
-  {
    "date": "2026-11-02",
    "counts": {
-    "LinearB": 5
+    "LinearB": 4
    }
   },
   {
    "date": "2026-11-03",
    "counts": {
-    "Copado": 1,
     "LinearB": 1
    }
   },
@@ -195,7 +193,7 @@
    "date": "2026-11-04",
    "counts": {
     "Harness": 1,
-    "Copado": 4
+    "Copado": 3
    }
   },
   {
@@ -208,6 +206,25 @@
    "date": "2026-11-09",
    "counts": {
     "Harness": 1
+   }
+  },
+  {
+   "date": "2026-11-12",
+   "counts": {
+    "Harness": 1,
+    "CloudBees": 1
+   }
+  },
+  {
+   "date": "2026-11-13",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "counts": {
+    "Opsera": 1
    }
   }
  ]

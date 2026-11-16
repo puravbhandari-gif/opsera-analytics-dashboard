@@ -9,7 +9,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-10,Your recording is ready: Meet the Opsera AppSec Agents workshop,21,7,1,33.3,4.8
 2026-04-15, Success with AI Requires Much More than Adoption,769,146,33,19.0,4.3
 2026-04-15,Successful AI DevOps Transformation In 90 Days,822,139,25,17.0,3.1
-2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1003,157,38,15.9,3.8
+2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1004,157,38,15.9,3.8
 2026-04-15,Watch the Recording: Meet the Opsera AppSec Agents workshop,19581,669,146,3.5,0.8
 2026-04-20,A gift card for your feedback on Opsera.,273,12,2,4.4,0.7
 2026-04-20,"What's New in Unified Insights: New Dashboards, Enhanced AI & Smarter Analytics ",2608,80,3,3.1,0.1
@@ -27,8 +27,8 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-30,"Your webinar recording is ready: Copilot, Cursor, Claude Code: What 250K Developers Revealed",54,12,5,22.6,9.4
 2026-04-30,Did You Know: Pipeline Run View is redesigned for faster debugging,2677,126,7,4.7,0.3
 2026-05-04,"Opsera Release Notes | Smarter Pipelines, Richer Salesforce Workflows — What's New in Opsera ",193,37,3,19.6,1.6
-2026-05-04,"Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",2479,82,7,3.3,0.3
 2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
+2026-05-04,"Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",2479,82,7,3.3,0.3
 2026-05-05,"April Newsletter: The missing piece in AI-driven software, solved",63325,2614,305,4.2,0.5
 2026-05-06,An invitation just for {{ contact.firstname }},5834,93,4,1.6,0.1
 2026-05-11,"Opsera Release Notes | Copilot Cumulative Totals, Agent Activity Toggle & On-Premise Jira Linked Issues ",2536,145,9,5.7,0.4
@@ -149,7 +149,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-09-03,Private invitation for {{ contact.firstname }} - join the AI-SDLC conversations at Flutter 2026,557,54,9,10.0,1.7
 2026-09-07,"Opsera Release Notes | Release Branch Filtering in Org Insights, Deployment Checkpoints and Smarter Commit Selection",136,26,0,19.1,0.0
 2026-09-07,Opsera Release Notes | Rename User Groups Without Losing Any Configuration ,1484,81,1,5.5,0.1
-2026-09-08,Tokens are capital now. Are you managing them like it?,52395,853,72,1.6,0.1
+2026-09-08,Tokens are capital now. Are you managing them like it?,52395,854,72,1.6,0.1
 2026-09-09,Private invitation for {{ contact.firstname }} - join the healthcare AI-SDLC conversations at Flutter 2026,2259,33,2,1.5,0.1
 2026-09-10,"Private invitation for {{ personalization_token('contact.firstname', 'you') }} - join the AI-SDLC conversations at Flutter 2026",100,2,0,2.1,0.0
 2026-09-10,Did You Know Your Teams Can Self-Serve Platform Operations? ,1482,72,0,4.9,0.0
@@ -178,7 +178,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",13,1,0,7.7,0.0
 2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",1,1,0,100.0,0.0
 2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",6,1,0,16.7,0.0
-2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",70,14,0,20.0,0.0
+2026-10-07,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",70,15,0,21.4,0.0
 2026-10-07,"From ""I need infrastructure"" to deployed — without a single ticket.",1477,42,1,2.9,0.1
 2026-10-08,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",5704,484,41,8.8,0.7
 2026-10-08,"{{ contact.firstname }} - {{ personalization_token('contact.buying_trigger_subject', 'Message from Opsera') }}",3657,85,2,2.4,0.1
@@ -189,14 +189,14 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-14,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",734,24,4,3.4,0.6
 2026-10-14,"{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",139,2,0,1.4,0.0
 2026-10-15,Your request to Opsera.,1,1,0,100.0,0.0
-2026-10-15,Thanks for signing up to see Opsera in action!,299,90,40,33.2,14.8
+2026-10-15,Thanks for signing up to see Opsera in action!,304,90,40,32.6,14.5
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,60,7,0,11.9,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,2,0,16.7,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,9,2,0,22.2,0.0
 2026-10-15,Be Opsera's guest at the 2026 WLDA Summit & Awards Gala,1520,42,3,2.8,0.2
-2026-10-16,Opsera has a new look,4970,94,6,1.9,0.1
+2026-10-16,Opsera has a new look,4970,95,7,1.9,0.1
 2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",111,2,0,1.8,0.0
 2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",113,8,0,7.5,0.0
 2026-10-16,"{{ contact.firstname }} - NBA private suite, Pacers v. Rockets",44,1,0,2.3,0.0
@@ -235,21 +235,28 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-27,{{ contact.firstname }} - Thanks for visiting us at Gartner in Orlando.,135,17,2,12.6,1.5
 2026-10-28,{{ contact.firstname }} - Meet for coffee here at GitHub Universe?,110,24,0,22.2,0.0
 2026-10-28,{{ contact.firstname }} Hawks/Lakers game day at the Farm is getting closer.,55,1,0,1.8,0.0
-2026-10-28,{{ contact.firstname }} - Nice to connect with you at Gartner!,61,6,0,9.8,0.0
-2026-10-28,{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.,10422,442,20,4.3,0.2
+2026-10-28,{{ contact.firstname }} - Nice to connect with you at Gartner!,61,7,0,11.5,0.0
+2026-10-28,{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.,10422,443,20,4.3,0.2
 2026-10-29,Speaker invite for {{ contact.firstname }},130,15,0,11.5,0.0
 2026-10-29,NBA Basketball - private suite for Pacers/Rockets,62,0,0,0.0,0.0
-2026-11-02,{{ contact.firstname }} How's it going with Forge?,2,0,0,0.0,0.0
+2026-11-02,{{ contact.firstname }} How's it going with Forge?,13,0,0,0.0,0.0
 2026-11-02,{{ contact.firstname }} - Modernize legacy estates.,115,17,2,14.9,1.8
-2026-11-02,Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation,1335,32,0,2.4,0.0
+2026-11-02,Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation,1335,33,0,2.5,0.0
 2026-11-02,Opsera Release Notes | Expanded Salesforce Metadata Support for Revenue Cloud and Platform Events,135,4,0,3.0,0.0
-2026-11-02,{{ contact.firstname }} - In just two weeks: Pacers v. Rockets,226,0,0,0.0,0.0
+2026-11-02,{{ contact.firstname }} - In just two weeks: Pacers v. Rockets,226,2,0,0.9,0.0
 2026-11-02,{{ contact.firstname }} - Thanks for connecting at GitHub Universe.,126,18,1,14.3,0.8
-2026-11-03,Legacy estate modernization in the AI era.,13951,389,65,2.8,0.5
-2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1038,139,4.9,0.7
+2026-11-03,Legacy estate modernization in the AI era.,13951,400,67,2.9,0.5
+2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1051,139,5.0,0.7
 2026-11-04,Did You Know Modernization Can Run at AI Speed?,1467,16,3,1.1,0.2
 2026-11-05,Indiana Pacers - was yesterday a turning point?,343,19,1,5.6,0.3
 2026-11-05,{{ contact.firstname }} - Monday is game day! Hawks v. Lakers,117,1,0,0.9,0.0
 2026-11-05,{{ contact.firstname }} Monday - Hawks/Lakers in our private suite.,476,2,0,0.4,0.0
 2026-11-06,Your free code modernization trial awaits.,48,7,0,14.6,0.0
-2026-11-09,Nine days away - claim your spot.,311,18,0,5.8,0.0
+2026-11-09,Nine days away - claim your spot.,311,20,0,6.5,0.0
+2026-11-10,"{{ contact.firstname }} Next Week. Pacers v. Rockets soon, at the Fieldhouse.",210,11,0,5.2,0.0
+2026-11-10,Invitation for {{ contact.firstname }} - Closed-door session.,14924,484,51,3.3,0.3
+2026-11-11,{{ contact.firstname }} Fix PHP vulnerabilities today.,14868,497,48,3.3,0.3
+2026-11-12,{{ contact.firstname }} - meet-up at HLTH USA?,2806,39,0,1.5,0.0
+2026-11-12,{{ contact.firstname }} - meet for coffee at HLTH USA?,4,0,0,0.0,0.0
+2026-11-13,"Missing the Pacers game tonight {{ personalization_token('contact.firstname', ',') }} ?",462,7,1,1.5,0.2
+2026-11-13,{{ contact.firstname }} - Coffee at HLTH next week?,2,0,0,0.0,0.0

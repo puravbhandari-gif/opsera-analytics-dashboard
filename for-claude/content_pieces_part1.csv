@@ -27,6 +27,7 @@ page,type,page_title
 /blog/agile-slackbot-power,Blog,Opsera — The context-aware software factory
 /blog/ai-agent-guardrails-ontologies,Blog,AI Agent Guardrails: Why Agents Need Ontologies - Opsera
 /blog/ai-agents-are-building-faster-than-you-can-govern,Blog,AI Agents Are Building Faster Than You Can Govern - Opsera
+/blog/ai-code-generation-research-report,Blog,Opsera - The context-aware software factory
 /blog/ai-code-security,Blog,AI Code Security: Why SAST Scanners Fall Short - Opsera
 /blog/ai-coding-impact-2026-benchmark-report,Blog,Opsera — The context-aware software factory
 /blog/ai-first-devops-at-aws-reinvent-2025-recap,Blog,AI first DevOps at AWS reInvent 2025: Recap - Opsera
@@ -68,7 +69,8 @@ page,type,page_title
 /blog/contact,Blog,Opsera - The context-aware software factory
 /blog/contact-us,Blog,Opsera - The context-aware software factory
 /blog/contactus,Blog,Opsera - The context-aware software factory
-/blog/context-engineering-ai-coding,Blog,Context Engineering for AI Coding: The Hidden Cost of Missing Context — Opsera
+/blog/container-orchestration-kubernetes-and-the-ci-cd-pipeline,Blog,Opsera - The context-aware software factory
+/blog/context-engineering-ai-coding,Blog,The Hidden Cost of Missing Context in AI Coding - Opsera
 /blog/continuous-orchestration-for-next-gen-devops,Blog,Continuous Orchestration for Next-Gen DevOps - Opsera
 /blog/conversations-with-former-cio-on-continuous-orchestration,Blog,A CIO on Continuous Orchestration - Opsera
 /blog/copado-vs-opsera-the-devops-showdown-salesforce-teams-deserve,Blog,Copado vs. Opsera: The DevOps Showdown Salesforce Teams Deserve - Opsera
@@ -134,8 +136,9 @@ page,type,page_title
 /blog/generative-ai-security,Blog,Generative AI Security in Development Workflows - Opsera
 /blog/get-to-github-get-working-and-get-insights-all-with-opsera-githubs-better-together-partnership,Blog,"Get to GitHub, Get Working, and Get Insights | Opsera - Opsera"
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,Github Copilot Adoption Trends: Insights from Real Data - Opsera
-/blog/github-copilot-alternatives,Blog,Best GitHub Copilot Alternatives for Enterprise Governance - Opsera
-/blog/github-copilot-trends-and-measuring-impact,Blog,GitHub Copilot Trends and Measuring Impact | Opsera - Opsera
+/blog/github-copilot-alternatives,Blog,GitHub Copilot Alternatives for Governance in 2026 - Opsera
+/blog/github-copilot-enterprise-impact-on-developer-productivity,Blog,Opsera - The context-aware software factory
+/blog/github-copilot-trends-and-measuring-impact,Blog,GitHub Copilot Trends and Measuring Impact | Opsera
 /blog/harness-engineering,Blog,What Is Harness Engineering? Enterprise AI Delivery Guide — Opsera
 /blog/healthcare-data-modernization,Blog,Healthcare Data Modernization: SQL to Cloud — Opsera
 /blog/healthcare-it-modernization,Blog,Healthcare IT Modernization: A Practical Guide - Opsera
@@ -221,14 +224,16 @@ page,type,page_title
 /blog/shift-left-security,Blog,Shift Left Security: Scan Code Before It Ships - Opsera
 /blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops,Blog,The Future of AI-Powered DevSecOps - Opsera
 /blog/simplify-databricks-deployments-with-low-code-yaml-automation,Blog,Simplify Databricks Deployments with Low-Code YAML Automation - Opsera
+/blog/smart-model-selection,Blog,Smart Model Selection: Pick the Right AI Model per Task - Opsera
 /blog/snowflake-to-databricks-migration,Blog,Snowflake to Databricks Migration: Complete Guide — Opsera
 /blog/software-delivery-industry-experts-share-2022-trends-and-predictions,Blog,Software Delivery Industry Experts Share 2023 Trends and Predictions - Opsera
 /blog/software-factory,Blog,Software Factory: Intent-Driven Development at AI Speed - Opsera
-/blog/software-factory-as-a-service,Blog,"Software Factory as a Service: What It Is, How to Evaluate - Opsera"
+/blog/software-factory-as-a-service,Blog,Software Factory as a Service for Enterprise Teams - Opsera
 /blog/software-factory-benefits,Blog,Software Factory Benefits Leaders Can Measure - Opsera
 /blog/software-factory-compliance-tools,Blog,Opsera — The context-aware software factory
-/blog/software-factory-model,Blog,Software Factory Model: Reducing Architecture Drift — Opsera
+/blog/software-factory-model,Blog,Software Factory Model: Reducing Architecture Drift - Opsera
 /blog/software-factory-pattern,Blog,How the Software Factory Pattern Works at Scale - Opsera
+/blog/software-factory-vs-dark-factory,Blog,Software Factory vs Dark Factory: Human-in-the-Loop Wins - Opsera
 /blog/solving-merge-conflicts-in-salesforce,Blog,Quickest way to resolve Salesforce merge conflicts | Opsera - Opsera
 /blog/spec-driven-development,Blog,Spec-Driven Development: Specs Beat Prompts — Opsera
 /blog/speed-up-the-innovation-with-devops,Blog,How to drive DevOps innovation | Opsera - Opsera
@@ -275,7 +280,7 @@ page,type,page_title
 /blog/what-is-code-smell--how-to-avoid-it,Blog,
 /blog/what-is-code-smell-how-to-avoid-it,Blog,
 /blog/what-is-code-smoke,Blog,
-/blog/what-is-deployment-frequency,Blog,Opsera — The context-aware software factory
+/blog/what-is-deployment-frequency,Blog,Opsera - The context-aware software factory
 /blog/what-is-devsecops,Blog,What is DevSecOps? | Opsera Blog - Opsera
 /blog/whats-new-at-opsera-smarter-merges-sharper-test-mapping-and-salesforce-visibility-all-in-one-update,Blog,"What’s New at Opsera: Smarter Merges, Sharper Test Mapping, and Salesforce Visibility All in One Update - Opsera"
 /blog/why-built-forge-software-factory-ai-era-actually-needs,Blog,
@@ -294,6 +299,7 @@ page,type,page_title
 /comparison/opsera-vs-flosum,Comparison,Page not found - Opsera
 /comparison/opsera-vs-gearset,Comparison,Page not found - Opsera
 /comparison/opsera-vs-harness,Comparison,Page not found - Opsera
+/comparison/opsera-vs-jellyfish,Comparison,Page not found - Opsera
 /knowledge-base/ai-code-assistant-analytics/amazon-q-developer,Guide (knowledge base),Amazon Q Developer: An Overview of the AI Coding Assistant - Opsera
 /knowledge-base/ai-code-assistant-analytics/amazon-q-developer-what-it-is-how-it-works-and-how-teams-measure-its-impact,Guide (knowledge base),Opsera — The context-aware software factory
 /knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,Guide (knowledge base),Amazon Q vs Cursor - Opsera
@@ -304,9 +310,9 @@ page,type,page_title
 /knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,Guide (knowledge base),GitHub Copilot vs. Amazon Q Developer - Opsera
 /knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer-comparison,Guide (knowledge base),
 /knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,Guide (knowledge base),GitHub Copilot vs Cursor - Opsera
-/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor,Guide (knowledge base),Amazon Q vs Cursor — Opsera
+/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor,Guide (knowledge base),Amazon Q vs Cursor - Opsera
 /knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer,Guide (knowledge base),GitHub Copilot vs. Amazon Q Developer — Opsera
-/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor,Guide (knowledge base),GitHub Copilot vs Cursor  — Opsera
+/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor,Guide (knowledge base),GitHub Copilot vs Cursor  - Opsera
 /knowledge-base/change-and-quality-metrics/defect-escape-rate-der,Guide (knowledge base),Page not found - Opsera
 /knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-im-matters-a-comprehensive-guide,Guide (knowledge base),
 /knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-a-comprehensive-guide,Guide (knowledge base),
@@ -331,7 +337,7 @@ page,type,page_title
 /knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-delivery-engine,Guide (knowledge base),Deployment Frequency: A View Into Your Software Delivery Engine - Opsera
 /knowledge-base/delivery-flow-performance/flow-distribution,Guide (knowledge base),Flow Distribution - Opsera
 /knowledge-base/delivery-flow-performance/flow-efficiency-metrics,Guide (knowledge base),Flow Efficiency Metrics: An In-Depth Overview - Opsera
-/knowledge-base/delivery-flow-performance/lead-time-for-changes-and-mean-lead-time,Guide (knowledge base),Lead Time for Changes and Mean Lead Time - Opsera
+/knowledge-base/delivery-flow-performance/lead-time-for-changes-and-mean-lead-time,Guide (knowledge base),Opsera - The context-aware software factory
 /knowledge-base/delivery-flow-performance/mean-time-to-detect-mttd-what-it-is-why-it-matters-and-how-teams-use-it,Guide (knowledge base),"Mean Time to Detect (MTTD): What It Is, Why It Matters, and How Teams Use It - Opsera"
 /knowledge-base/delivery-flow-performance/time-to-value,Guide (knowledge base),Time to Value: A Practical Guide - Opsera
 /knowledge-base/delivery-flow-performance/value-stream-management-explained-from-customer-value,Guide (knowledge base),
@@ -349,16 +355,16 @@ page,type,page_title
 /knowledge-base/security-and-devsecops-metrics/patch-management-efficiency,Guide (knowledge base),Patch Management Efficiency - Opsera
 /knowledge-base/security-and-devsecops-metrics/time-to-detect-vulnerability-ttdv,Guide (knowledge base),Time to Detect Vulnerability (TTDV) — Opsera
 /knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv,Guide (knowledge base),Time to Mitigate Vulnerability (TTMV) — Opsera
-/knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),Understanding System Hardening Timelines in DevSecOps Environments — Opsera
+/knowledge-base/security-and-devsecops-metrics/understanding-system-hardening-timelines-in-devsecops-environments,Guide (knowledge base),System Hardening Timelines in DevSecOps - Opsera
 /knowledge-base/tool-specific-analysis/amazon-q-developer,Guide (knowledge base),Amazon Q Developer: An Overview of the AI Coding Assistant — Opsera
-/knowledge-base/tool-specific-analysis/cursor-ai-explained,Guide (knowledge base),Cursor AI Explained: An Overview of the AI Coding Assistant — Opsera
+/knowledge-base/tool-specific-analysis/cursor-ai-explained,Guide (knowledge base),Cursor AI Explained: The AI Coding Assistant - Opsera
 /knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide,Guide (knowledge base),Gemini Code Assist: A Complete Developer’s Guide — Opsera
 /knowledge-base/uncategorized/cycle-time-mastery-from-first-commit-to-production,Guide (knowledge base),Cycle Time Mastery: From First Commit to Production - Opsera
 /knowledge-base/value-stream-management/flow-distribution,Guide (knowledge base),Flow Distribution — Opsera
 /knowledge-base/value-stream-management/flow-efficiency-metrics,Guide (knowledge base),Flow Efficiency Metrics: An In-Depth Overview — Opsera
 /knowledge-base/value-stream-management/time-to-value,Guide (knowledge base),Time to Value: A Practical Guide — Opsera
 /knowledge-base/value-stream-management/value-stream-management-explained-from-idea-to-customer-value,Guide (knowledge base),Value Stream Management: From Idea to Customer Value — Opsera
-/resources/comparison-guides/8090,Comparison,Forge vs 8090 — Opsera Forge
+/resources/comparison-guides/8090,Comparison,Forge vs 8090 - Opsera Forge
 /resources/comparison-guides/blitzy,Comparison,Forge vs Blitzy — Opsera Forge
 /resources/comparison-guides/claude,Comparison,Forge vs Claude - Opsera Forge
 /resources/comparison-guides/devin-ai,Comparison,Forge vs Devin — Opsera Forge
@@ -371,7 +377,3 @@ page,type,page_title
 /resources/comparison-guides/opsera-vs-gearset,Comparison,Opsera vs Gearset - Opsera
 /resources/comparison-guides/opsera-vs-harness,Comparison,Opsera vs Harness - Opsera
 /resources/comparison-guides/opsera-vs-jellyfish,Comparison,Opsera vs Jellyfish - Opsera
-/resources/comparison-guides/opsera-vs-jenkins,Comparison,Opsera vs Jenkins - Opsera
-/resources/comparison-guides/opsera-vs-linearb,Comparison,Opsera vs LinearB - Opsera
-/resources/comparison-guides/opsera-vs-swarmia,Comparison,Opsera vs Swarmia - Opsera
-/resources/ebooks/build-vs-buy-the-salesforce-devops-handbook,eBook,Build vs Buy: Making the Right Choice for Your Salesforce DevOps Solution - Opsera

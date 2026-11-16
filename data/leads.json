@@ -1,18 +1,18 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-09",
- "pulled_at": "2026-11-10T12:21+05:30",
+ "end_date": "2026-11-15",
+ "pulled_at": "2026-11-16T15:22+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
  "lines": {
   "demo": {
    "label": "Demo requests",
-   "count": 73,
+   "count": 78,
    "pages": [
     {
      "page": "/demo",
-     "count": 73
+     "count": 78
     }
    ]
   },
@@ -38,7 +38,7 @@
   },
   "events": {
    "label": "Event sign-ups",
-   "count": 274,
+   "count": 280,
    "pages": [
     {
      "page": "/events/tokenomics-the-currency-of-enterprise-ai",
@@ -61,16 +61,16 @@
      "count": 18
     },
     {
+     "page": "/events/roundtable-webinar",
+     "count": 17
+    },
+    {
      "page": "/gartner-symposium",
      "count": 12
     },
     {
      "page": "/events/github-universe",
      "count": 12
-    },
-    {
-     "page": "/events/roundtable-webinar",
-     "count": 11
     },
     {
      "page": "/github-universe-happy-hour",
@@ -88,11 +88,11 @@
   },
   "other": {
    "label": "Other forms",
-   "count": 291,
+   "count": 294,
    "pages": [
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "count": 100
+     "count": 102
     },
     {
      "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
@@ -152,6 +152,10 @@
     },
     {
      "page": "/resources/white-papers/leading-technology-company-using-opsera-unified-insights-with-github-copilot",
+     "count": 2
+    },
+    {
+     "page": "/partners",
      "count": 2
     },
     {
@@ -220,10 +224,6 @@
     },
     {
      "page": "/resources/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform",
-     "count": 1
-    },
-    {
-     "page": "/partners",
      "count": 1
     },
     {
@@ -1661,6 +1661,46 @@
    "gartner_offer": 0,
    "events": 0,
    "other": 1
+  },
+  {
+   "date": "2026-11-10",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 6,
+   "other": 0
+  },
+  {
+   "date": "2026-11-11",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-11-12",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-11-13",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-11-15",
+   "demo": 2,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
   }
  ],
  "removed_form_pages": [
@@ -2091,6 +2131,38 @@
    "home": 0,
    "other": 0,
    "none": 1
+  },
+  {
+   "date": "2026-11-10",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-11-11",
+   "forge": 0,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-11-13",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-11-15",
+   "forge": 1,
+   "insights": 0,
+   "home": 0,
+   "other": 1,
+   "none": 0
   }
  ]
 }
