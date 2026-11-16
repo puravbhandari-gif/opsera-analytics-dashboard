@@ -226,16 +226,6 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor number of users,0,60,7.6
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor data,0,55,9.8
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor user base,0,41,6.8
-/blog/software-factory-model,Blog,software factory model,5,169,7.4
-/blog/software-factory-model,Blog,factory model in software development,3,22,5.3
-/blog/software-factory-model,Blog,software factory,2,334,16.1
-/blog/software-factory-model,Blog,software factory framework,2,31,7.0
-/blog/software-factory-model,Blog,software factory sdlc,2,4,4.5
-/blog/software-factory-model,Blog,software factory pattern,1,77,20.3
-/blog/software-factory-model,Blog,sdlc factory,1,28,7.8
-/blog/software-factory-model,Blog,site:opsera.ai,1,6,20.7
-/blog/software-factory-model,Blog,software factory ai,1,3,23.7
-/blog/software-factory-model,Blog,tiny software factory,1,3,16.0
 /blog/devsecops-tools,Blog,devsecops tools,10,5268,12.8
 /blog/devsecops-tools,Blog,best devsecops tools,1,579,17.9
 /blog/devsecops-tools,Blog,devsecops security tools,1,555,12.9
@@ -246,6 +236,16 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/devsecops-tools,Blog,kubernetes devsecops tools,1,19,16.1
 /blog/devsecops-tools,Blog,ci cd pipeline security tools,1,18,9.5
 /blog/devsecops-tools,Blog,devsecops ci/cd pipeline,1,13,8.4
+/blog/software-factory-model,Blog,software factory model,5,169,7.4
+/blog/software-factory-model,Blog,factory model in software development,3,22,5.3
+/blog/software-factory-model,Blog,software factory,2,334,16.1
+/blog/software-factory-model,Blog,software factory framework,2,31,7.0
+/blog/software-factory-model,Blog,software factory sdlc,2,4,4.5
+/blog/software-factory-model,Blog,software factory pattern,1,77,20.3
+/blog/software-factory-model,Blog,sdlc factory,1,28,7.8
+/blog/software-factory-model,Blog,site:opsera.ai,1,6,20.7
+/blog/software-factory-model,Blog,software factory ai,1,3,23.7
+/blog/software-factory-model,Blog,tiny software factory,1,3,16.0
 /blog/legacy-code-modernization,Blog,legacy code modernization,4,613,7.4
 /blog/legacy-code-modernization,Blog,code modernization,2,1017,9.0
 /blog/legacy-code-modernization,Blog,ai legacy code modernization,2,91,10.2

@@ -3,7 +3,7 @@
  "start_date": "2026-04-01",
  "end_date": "2026-11-15",
  "last_day_with_data": "2026-11-13",
- "pulled_at": "2026-11-16T15:25+05:30",
+ "pulled_at": "2026-11-16T18:17+05:30",
  "channel": {
   "views": 3067,
   "minutes": 4029,
@@ -2910,18 +2910,18 @@
      "avg_seconds": 32
     },
     {
-     "id": "qLjkP1puaP4",
-     "title": "CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",
-     "views": 37,
-     "minutes": 18,
-     "avg_seconds": 36
-    },
-    {
      "id": "FH280o85rHY",
      "title": "DORA Metrics and GitHub Copilot: Measuring the Effect on Code Quality",
      "views": 37,
      "minutes": 20,
      "avg_seconds": 34
+    },
+    {
+     "id": "qLjkP1puaP4",
+     "title": "CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",
+     "views": 37,
+     "minutes": 18,
+     "avg_seconds": 36
     },
     {
      "id": "iBa8cXPLJk8",
@@ -3092,18 +3092,18 @@
      "avg_seconds": 92
     },
     {
-     "id": "exzXdufinTY",
-     "title": "Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",
-     "views": 19,
-     "minutes": 14,
-     "avg_seconds": 45
-    },
-    {
      "id": "fA3HAn7QqcM",
      "title": "Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams",
      "views": 19,
      "minutes": 3,
      "avg_seconds": 22
+    },
+    {
+     "id": "exzXdufinTY",
+     "title": "Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",
+     "views": 19,
+     "minutes": 14,
+     "avg_seconds": 45
     },
     {
      "id": "DOaW-TDDgDk",
@@ -3239,18 +3239,18 @@
      "avg_seconds": 36
     },
     {
-     "id": "eZKKIYsZYz8",
-     "title": "GitHub Copilot in DevOps: How Teams Use It Across Software Delivery",
-     "views": 12,
-     "minutes": 1,
-     "avg_seconds": 21
-    },
-    {
      "id": "MHuU8V0RYKU",
      "title": "AI Assisted DevOps: Opsera AI Assist for Pipeline Failures and Releases",
      "views": 12,
      "minutes": 9,
      "avg_seconds": 50
+    },
+    {
+     "id": "eZKKIYsZYz8",
+     "title": "GitHub Copilot in DevOps: How Teams Use It Across Software Delivery",
+     "views": 12,
+     "minutes": 1,
+     "avg_seconds": 21
     },
     {
      "id": "zcIowgLUiYE",
@@ -3743,11 +3743,11 @@
      "avg_seconds": 48
     },
     {
-     "id": "z87UHVeMz5A",
-     "title": "Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera",
+     "id": "Wn303Yojtrs",
+     "title": "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",
      "views": 3,
-     "minutes": 3,
-     "avg_seconds": 109
+     "minutes": 1,
+     "avg_seconds": 23
     },
     {
      "id": "Gb8lp8L-RDg",
@@ -3757,11 +3757,11 @@
      "avg_seconds": 22
     },
     {
-     "id": "Wn303Yojtrs",
-     "title": "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",
+     "id": "z87UHVeMz5A",
+     "title": "Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera",
      "views": 3,
-     "minutes": 1,
-     "avg_seconds": 23
+     "minutes": 3,
+     "avg_seconds": 109
     },
     {
      "id": "iqaBbpqz0wo",

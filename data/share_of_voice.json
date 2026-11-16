@@ -31,7 +31,7 @@
     "Opsera": 1,
     "Harness": 4,
     "CloudBees": 1,
-    "Copado": 4,
+    "Copado": 5,
     "LinearB": 5,
     "Gearset": 0
    }
@@ -194,6 +194,12 @@
    "counts": {
     "Harness": 1,
     "Copado": 3
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "counts": {
+    "Copado": 1
    }
   },
   {

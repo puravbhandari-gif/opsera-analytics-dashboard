@@ -1,8 +1,41 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-10",
+ "checked": "2026-11-16",
  "items": [
+  {
+   "date": "2026-11-15",
+   "outlet": "BeBee",
+   "title": "Senior Salesforce Developer - SFDC Sales Cloud - Opsera",
+   "link": "https://bebee.com/in/jobs/senior-salesforce-developer-sfdc-sales-cloud-opsera-new-delhi--t7xk-942829084",
+   "type": "Mention",
+   "topic": "Salesforce",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-11-13",
+   "outlet": "CaseStudies.com",
+   "title": "B2B Case Studies: How Opsera Uses Software & Services",
+   "link": "https://www.casestudies.com/customer/opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-11-11",
+   "outlet": "TechDogs",
+   "title": "Opsera Relaunches As An AI-Native Software Factory For The Enterprise",
+   "link": "https://www.techdogs.com/tech-news/globe-newswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise",
+   "type": "Press release",
+   "topic": "Forge",
+   "quoted": "Kumar Chivukula",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
+  },
   {
    "date": "2026-11-09",
    "outlet": "IT Supply Chain",
@@ -92,6 +125,17 @@
    "type": "Mention",
    "topic": "Forge",
    "quoted": "Kumar Chivukula"
+  },
+  {
+   "date": "2026-10-30",
+   "outlet": "BestBlogs",
+   "title": "Opsera \u4ee5AI \u539f\u751f\u8f6f\u4ef6\u5de5\u5382\u5e73\u53f0\u91cd\u65b0\u51fa\u53d1",
+   "link": "https://www.bestblogs.dev/article/4073702f85",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-10-29",
@@ -184,6 +228,17 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Forge"
+  },
+  {
+   "date": "2026-10-27",
+   "outlet": "SD Times",
+   "title": "AppSec Archives",
+   "link": "https://sdtimes.com/tag/appsec/",
+   "type": "Mention",
+   "topic": "Security",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-10-26",
@@ -459,6 +514,17 @@
    "found_by": "Apify, Google search (podcast page)",
    "placed_by": "",
    "topic": "AI-SDLC"
+  },
+  {
+   "date": "2026-07-20",
+   "outlet": "APIs.io",
+   "title": "Opsera OAuth Scopes",
+   "link": "https://apis.io/scopes/opsera/opsera-scopes/",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search"
   },
   {
    "date": "2026-07-17",

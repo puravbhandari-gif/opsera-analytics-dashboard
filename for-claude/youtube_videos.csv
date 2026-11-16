@@ -17,8 +17,8 @@ Terraform AI: Getting Started with Cloud Forge Infrastructure Provisioning,Long 
 Salesforce DevOps 3.0 from Opsera,Long video,43,31,50,https://www.youtube.com/watch?v=ca4GQ7AFtjQ
 "Cursor Dashboard | Track AI Adoption, Productivity & Code Contribution with Opsera",Long video,40,18,33,https://www.youtube.com/watch?v=BRgdfN-CVRA
 Claude Code Security Audit with Markdown and HTML Reports | Opsera,Long video,39,17,32,https://www.youtube.com/watch?v=_7K0TxJZHHs
-"CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",Long video,37,18,36,https://www.youtube.com/watch?v=qLjkP1puaP4
 DORA Metrics and GitHub Copilot: Measuring the Effect on Code Quality,Long video,37,20,34,https://www.youtube.com/watch?v=FH280o85rHY
+"CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",Long video,37,18,36,https://www.youtube.com/watch?v=qLjkP1puaP4
 SQL Injection Scanner for Claude Code | Opsera AI Agent,Long video,36,13,30,https://www.youtube.com/watch?v=iBa8cXPLJk8
 "DORA Report 2025 Lessons: The Future of DevOps, Powered by AI",Long video,34,150,282,https://www.youtube.com/watch?v=AdtG3pDyQpE
 GitHub Advanced Security Demo: The GHAS Dashboard in Opsera,Long video,33,19,38,https://www.youtube.com/watch?v=4bSKSpQdiIQ
@@ -43,8 +43,8 @@ Pipeline Failure Analysis: AI Debugging with Opsera's Redesigned Pipeline Logs,L
 Webhook CI/CD Pipeline in Opsera: Trigger Builds on Every Commit,Long video,19,21,75,https://www.youtube.com/watch?v=iEvNFFze6fA
 Honeywell’s Software Modernization and GitHub Transformation to Enhance DevEx and Productivity,Long video,19,104,330,https://www.youtube.com/watch?v=Uk42gxqR-Wk
 "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",Long video,19,27,92,https://www.youtube.com/watch?v=1SyD6NV1R9M
-"Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",Long video,19,14,45,https://www.youtube.com/watch?v=exzXdufinTY
 Connect Databricks to Git: Complete DevOps Setup Guide for Data Teams,Long video,19,3,22,https://www.youtube.com/watch?v=fA3HAn7QqcM
+"Claude Code Security Scan: Secrets, Dependencies and IaC | Opsera",Long video,19,14,45,https://www.youtube.com/watch?v=exzXdufinTY
 DevOps Huddle EP16: How to Migrate Bitbucket to GitHub: Source Code Migration | Opsera,Long video,18,9,40,https://www.youtube.com/watch?v=DOaW-TDDgDk
 "Opsera Tool Registry: Connect, Monitor and Govern Your DevOps Tools",Long video,18,14,59,https://www.youtube.com/watch?v=1TY7EJtT9pw
 Modernize Legacy Applications with Opsera Forge: From Assessment to Delivery,Long video,18,13,49,https://www.youtube.com/watch?v=xLlVX_WJSmA
@@ -64,8 +64,8 @@ Measuring the ROI of GitHub Copilot Adoption,Long video,13,4,23,https://www.yout
 Developer Experience (DevEx) Dashboard: Measure Engineering Productivity in Opsera,Long video,13,23,128,https://www.youtube.com/watch?v=qXEfUpwFb1w
 Webinar | DevOps Transformation Using No-Code Orchestration | Opsera,Long video,13,62,375,https://www.youtube.com/watch?v=mex5VPttcBA
 Snyk Vulnerability Scanner in Opsera CI/CD Pipelines: Setup and Security Gates,Long video,12,3,36,https://www.youtube.com/watch?v=t3ttjoUDhus
-GitHub Copilot in DevOps: How Teams Use It Across Software Delivery,Long video,12,1,21,https://www.youtube.com/watch?v=eZKKIYsZYz8
 AI Assisted DevOps: Opsera AI Assist for Pipeline Failures and Releases,Long video,12,9,50,https://www.youtube.com/watch?v=MHuU8V0RYKU
+GitHub Copilot in DevOps: How Teams Use It Across Software Delivery,Long video,12,1,21,https://www.youtube.com/watch?v=eZKKIYsZYz8
 "Get Started with Metric Studio: Custom Engineering KPIs, Your Way",Long video,11,3,22,https://www.youtube.com/watch?v=zcIowgLUiYE
 Pipeline Editor in Opsera: Horizontal and Vertical Workflow Views,Long video,11,16,119,https://www.youtube.com/watch?v=vR9TAKuFrlA
 Webinar | DevSecOps at Workday: Shift Left Security Across Hundreds of Pipelines,Long video,10,5,52,https://www.youtube.com/watch?v=7HAKuKhJ5e4
@@ -136,9 +136,9 @@ Webinar | Octopus Deploy: No-Code Orchestration of Deployments | Opsera,Long vid
 CI/CD for Databricks: Opsera DataOps Pipelines for Data Engineering Teams,Long video,4,8,126,https://www.youtube.com/watch?v=Z7mtwiMp5KQ
 AI Architecture Review of a React Codebase: Find Tech Debt | Opsera,Long video,4,6,102,https://www.youtube.com/watch?v=kPP8ym_krmE
 DevOps Huddle EP15: Secret Scanning with GitCustodian for DevSecOps | Opsera,Long video,3,2,48,https://www.youtube.com/watch?v=Stg2KCB6yKc
-Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera,Long video,3,3,109,https://www.youtube.com/watch?v=z87UHVeMz5A
-GitHub Copilot Fine Tuning: How a Legacy-Language Team Raised Productivity,Long video,3,1,22,https://www.youtube.com/watch?v=Gb8lp8L-RDg
 "The Agentic Future: Scaling Delivery, Securing Code, and Driving ROI in 2026",Long video,3,1,23,https://www.youtube.com/watch?v=Wn303Yojtrs
+GitHub Copilot Fine Tuning: How a Legacy-Language Team Raised Productivity,Long video,3,1,22,https://www.youtube.com/watch?v=Gb8lp8L-RDg
+Webinar | CI/CD Best Practices and 2021 Trends from the DZone Report | Opsera,Long video,3,3,109,https://www.youtube.com/watch?v=z87UHVeMz5A
 "Compliance Audit for SOC 2, HIPAA, PCI DSS and ISO 27001 in Your IDE | Opsera",Long video,3,3,74,https://www.youtube.com/watch?v=iqaBbpqz0wo
 How We Standardized Development Tools Across Multiple Teams Using GitHub Copilot,Long video,3,0,8,https://www.youtube.com/watch?v=xKBxMG8YIos
 Digital Transformation Leadership: Phased Rollouts and Executive Buy-In,Long video,3,0,5,https://www.youtube.com/watch?v=5yQD0TNV6C8

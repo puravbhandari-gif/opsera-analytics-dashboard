@@ -5,9 +5,9 @@ period_start,period_end,period_not_finished,estimate,visits
 2026-09-07,2026-09-13,no,Estimated: company page,0
 2026-09-07,2026-09-13,no,Estimated: Kumar,0
 2026-09-07,2026-09-13,no,Can't tell,77
-2026-09-14,2026-09-20,no,Estimated: company page,4
-2026-09-14,2026-09-20,no,Estimated: Kumar,6
-2026-09-14,2026-09-20,no,Can't tell,67
+2026-09-14,2026-09-20,no,Estimated: company page,0
+2026-09-14,2026-09-20,no,Estimated: Kumar,21
+2026-09-14,2026-09-20,no,Can't tell,56
 2026-09-21,2026-09-27,no,Estimated: company page,0
 2026-09-21,2026-09-27,no,Estimated: Kumar,0
 2026-09-21,2026-09-27,no,Can't tell,39
@@ -29,3 +29,6 @@ period_start,period_end,period_not_finished,estimate,visits
 2026-11-02,2026-11-08,no,Estimated: company page,3
 2026-11-02,2026-11-08,no,Estimated: Kumar,0
 2026-11-02,2026-11-08,no,Can't tell,39
+2026-11-09,2026-11-15,no,Estimated: company page,17
+2026-11-09,2026-11-15,no,Estimated: Kumar,0
+2026-11-09,2026-11-15,no,Can't tell,36

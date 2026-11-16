@@ -94,11 +94,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "2,530",
-      "cur": 2530,
+      "value": "2,703",
+      "cur": 2703,
       "prev": 3145,
       "before": "3,145",
-      "change_pct": -19.6,
+      "change_pct": -14.1,
       "good": false,
       "min_change_pct": 10
      },
@@ -127,7 +127,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 2530
+       "value": 2703
       }
      ]
     },
@@ -429,7 +429,7 @@
     "attention": [
      "Times the company page's posts were seen down 47.3%",
      "Visits from AI tools down 29.7%",
-     "Visits without email robots down 19.6%"
+     "Engagements on Kumar's posts down 17.2%"
     ],
     "do": []
    }
@@ -597,11 +597,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "5,981",
-      "cur": 5981,
+      "value": "6,154",
+      "cur": 6154,
       "prev": 13474,
       "before": "13,474",
-      "change_pct": -55.6,
+      "change_pct": -54.3,
       "good": false,
       "min_change_pct": 10
      },
@@ -630,7 +630,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 2530
+       "value": 2703
       }
      ]
     },
@@ -807,11 +807,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "2,220",
-      "cur": 2220,
+      "value": "2,377",
+      "cur": 2377,
       "prev": 3958,
       "before": "3,958",
-      "change_pct": -43.9,
+      "change_pct": -39.9,
       "good": false,
       "min_change_pct": 15
      },
@@ -840,7 +840,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 998
+       "value": 1155
       }
      ]
     },
@@ -931,7 +931,7 @@
     "attention": [
      "Visits from tagged campaigns down 74.5%",
      "Demo requests down 72.7%",
-     "Visits without email robots down 55.6%"
+     "Visits without email robots down 54.3%"
     ],
     "do": []
    }
@@ -1132,7 +1132,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 2530
+       "value": 2703
       }
      ]
     },
@@ -1316,7 +1316,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 998
+       "value": 1155
       }
      ]
     },
@@ -1576,15 +1576,15 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "31,466",
-      "cur": 31466,
+      "value": "31,639",
+      "cur": 31639,
       "prev": 24046,
       "before": "24,046",
-      "change_pct": 30.9,
+      "change_pct": 31.6,
       "good": true,
       "min_change_pct": 10
      },
-     "why": "Unlabelled visits jumped to 2,891, likely robots.",
+     "why": "Unlabelled visits jumped to 2,892, likely robots.",
      "do": null,
      "trend": [
       {
@@ -1609,7 +1609,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 2530
+       "value": 2703
       }
      ]
     },
@@ -1760,11 +1760,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "9,322",
-      "cur": 9322,
+      "value": "9,479",
+      "cur": 9479,
       "prev": 5985,
       "before": "5,985",
-      "change_pct": 55.8,
+      "change_pct": 58.4,
       "good": true,
       "min_change_pct": 15
      },
@@ -1793,7 +1793,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 998
+       "value": 1155
       }
      ]
     },
@@ -1949,8 +1949,8 @@
    "boxes": {
     "well": [
      "Meetings booked with marketing contacts up 300%",
-     "Content page visits up 55.8%",
-     "Demo requests up 31%"
+     "Content page visits up 58.4%",
+     "Visits without email robots up 31.6%"
     ],
     "attention": [
      "Times Google showed our pages down 51.4%",

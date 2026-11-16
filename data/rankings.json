@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-15",
- "pulled_at": "2026-11-16T15:22+05:30",
+ "pulled_at": "2026-11-16T18:15+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai, and Google Analytics 4, opsera.ai 2026",
  "pages": [
   {
@@ -1532,7 +1532,7 @@
    "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
    "group": "Blog",
    "title": "PHP2Shell: Invisible Threats and What to Do Next \u2014 Opsera",
-   "visits_since_new_site": 372,
+   "visits_since_new_site": 373,
    "weeks": [
     {
      "week": "2026-10-26",
@@ -1620,7 +1620,7 @@
    "page": "/blog/claude-code-alternative",
    "group": "Blog",
    "title": "Claude Code Alternatives: 8 AI Coding Tools for 2026 \u2014 Opsera",
-   "visits_since_new_site": 310,
+   "visits_since_new_site": 311,
    "weeks": [
     {
      "week": "2026-09-28",
@@ -1732,7 +1732,7 @@
    "page": "/blog/software-factory",
    "group": "Blog",
    "title": "Software Factory: Intent-Driven Development at AI Speed \u2014 Opsera",
-   "visits_since_new_site": 253,
+   "visits_since_new_site": 254,
    "weeks": [
     {
      "week": "2026-08-31",
@@ -1868,7 +1868,7 @@
    "page": "/blog/spec-driven-development",
    "group": "Blog",
    "title": "Spec-Driven Development: Specs Beat Prompts \u2014 Opsera",
-   "visits_since_new_site": 198,
+   "visits_since_new_site": 199,
    "weeks": [
     {
      "week": "2026-09-28",
@@ -1980,7 +1980,7 @@
    "page": "/blog/cobol-modernization",
    "group": "Blog",
    "title": "COBOL Modernization: AI-Powered Legacy Migration - Opsera",
-   "visits_since_new_site": 165,
+   "visits_since_new_site": 166,
    "weeks": [
     {
      "week": "2026-09-07",
@@ -2110,7 +2110,7 @@
    "page": "/blog/factory-ai-alternatives",
    "group": "Blog",
    "title": "Factory.ai Alternatives: 5 AI Software Development Platforms \u2014 Opsera",
-   "visits_since_new_site": 163,
+   "visits_since_new_site": 165,
    "weeks": [
     {
      "week": "2026-09-14",
@@ -2234,7 +2234,7 @@
    "page": "/blog/ai-sdlc",
    "group": "Blog",
    "title": "What is AI SDLC? How It Transforms Software Delivery \u2014 Opsera",
-   "visits_since_new_site": 151,
+   "visits_since_new_site": 153,
    "weeks": [
     {
      "week": "2026-06-08",
@@ -2710,7 +2710,7 @@
    "page": "/blog/dora-2025-report-ai-software-development",
    "group": "Blog",
    "title": "DORA Report 2025: How AI Adoption Shapes DevOps and Software Teams \u2014 Opsera",
-   "visits_since_new_site": 142,
+   "visits_since_new_site": 143,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -2978,7 +2978,7 @@
    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
    "group": "Blog",
    "title": "GitHub Copilot Adoption Trends: Insights from Data - Opsera",
-   "visits_since_new_site": 134,
+   "visits_since_new_site": 136,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -3514,7 +3514,7 @@
    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
    "group": "Blog",
    "title": "DORA vs SPACE Metrics: Key Differences, Use Cases, and When to Use Each Framework \u2014 Opsera",
-   "visits_since_new_site": 130,
+   "visits_since_new_site": 131,
    "weeks": [
     {
      "week": "2026-06-29",
@@ -3704,7 +3704,7 @@
    "page": "/blog/harness-engineering",
    "group": "Blog",
    "title": "What Is Harness Engineering? Enterprise AI Delivery Guide \u2014 Opsera",
-   "visits_since_new_site": 124,
+   "visits_since_new_site": 125,
    "weeks": [
     {
      "week": "2026-10-12",
@@ -3804,7 +3804,7 @@
    "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
    "group": "Blog",
    "title": "Cursor AI Adoption Trends: Real Data from the Fastest Growing Coding T \u2014 Opsera",
-   "visits_since_new_site": 114,
+   "visits_since_new_site": 115,
    "weeks": [
     {
      "week": "2026-03-30",
@@ -4069,140 +4069,10 @@
    ]
   },
   {
-   "page": "/blog/software-factory-model",
-   "group": "Blog",
-   "title": "Software Factory Model: Reducing Architecture Drift - Opsera",
-   "visits_since_new_site": 110,
-   "weeks": [
-    {
-     "week": "2026-09-07",
-     "clicks": 9,
-     "times_shown": 455,
-     "avg_spot": 11.0
-    },
-    {
-     "week": "2026-09-14",
-     "clicks": 9,
-     "times_shown": 576,
-     "avg_spot": 13.1
-    },
-    {
-     "week": "2026-09-21",
-     "clicks": 5,
-     "times_shown": 264,
-     "avg_spot": 10.1
-    },
-    {
-     "week": "2026-09-28",
-     "clicks": 1,
-     "times_shown": 162,
-     "avg_spot": 13.5
-    },
-    {
-     "week": "2026-10-05",
-     "clicks": 10,
-     "times_shown": 670,
-     "avg_spot": 11.6
-    },
-    {
-     "week": "2026-10-12",
-     "clicks": 2,
-     "times_shown": 60,
-     "avg_spot": 8.1
-    },
-    {
-     "week": "2026-10-19",
-     "clicks": 1,
-     "times_shown": 161,
-     "avg_spot": 7.7
-    },
-    {
-     "week": "2026-10-26",
-     "clicks": 4,
-     "times_shown": 300,
-     "avg_spot": 10.6
-    },
-    {
-     "week": "2026-11-02",
-     "clicks": 3,
-     "times_shown": 776,
-     "avg_spot": 8.9
-    },
-    {
-     "week": "2026-11-09",
-     "clicks": 9,
-     "times_shown": 995,
-     "avg_spot": 9.7
-    }
-   ],
-   "searches": [
-    {
-     "search": "software factory model",
-     "clicks": 5,
-     "times_shown": 169,
-     "avg_spot": 7.4
-    },
-    {
-     "search": "factory model in software development",
-     "clicks": 3,
-     "times_shown": 22,
-     "avg_spot": 5.3
-    },
-    {
-     "search": "software factory",
-     "clicks": 2,
-     "times_shown": 334,
-     "avg_spot": 16.1
-    },
-    {
-     "search": "software factory framework",
-     "clicks": 2,
-     "times_shown": 31,
-     "avg_spot": 7.0
-    },
-    {
-     "search": "software factory sdlc",
-     "clicks": 2,
-     "times_shown": 4,
-     "avg_spot": 4.5
-    },
-    {
-     "search": "software factory pattern",
-     "clicks": 1,
-     "times_shown": 77,
-     "avg_spot": 20.3
-    },
-    {
-     "search": "sdlc factory",
-     "clicks": 1,
-     "times_shown": 28,
-     "avg_spot": 7.8
-    },
-    {
-     "search": "site:opsera.ai",
-     "clicks": 1,
-     "times_shown": 6,
-     "avg_spot": 20.7
-    },
-    {
-     "search": "software factory ai",
-     "clicks": 1,
-     "times_shown": 3,
-     "avg_spot": 23.7
-    },
-    {
-     "search": "tiny software factory",
-     "clicks": 1,
-     "times_shown": 3,
-     "avg_spot": 16.0
-    }
-   ]
-  },
-  {
    "page": "/blog/devsecops-tools",
    "group": "Blog",
    "title": "5 DevSecOps Tools for Securing CI/CD Pipelines in 2026 \u2014 Opsera",
-   "visits_since_new_site": 109,
+   "visits_since_new_site": 110,
    "weeks": [
     {
      "week": "2026-06-22",
@@ -4395,10 +4265,140 @@
    ]
   },
   {
+   "page": "/blog/software-factory-model",
+   "group": "Blog",
+   "title": "Software Factory Model: Reducing Architecture Drift - Opsera",
+   "visits_since_new_site": 110,
+   "weeks": [
+    {
+     "week": "2026-09-07",
+     "clicks": 9,
+     "times_shown": 455,
+     "avg_spot": 11.0
+    },
+    {
+     "week": "2026-09-14",
+     "clicks": 9,
+     "times_shown": 576,
+     "avg_spot": 13.1
+    },
+    {
+     "week": "2026-09-21",
+     "clicks": 5,
+     "times_shown": 264,
+     "avg_spot": 10.1
+    },
+    {
+     "week": "2026-09-28",
+     "clicks": 1,
+     "times_shown": 162,
+     "avg_spot": 13.5
+    },
+    {
+     "week": "2026-10-05",
+     "clicks": 10,
+     "times_shown": 670,
+     "avg_spot": 11.6
+    },
+    {
+     "week": "2026-10-12",
+     "clicks": 2,
+     "times_shown": 60,
+     "avg_spot": 8.1
+    },
+    {
+     "week": "2026-10-19",
+     "clicks": 1,
+     "times_shown": 161,
+     "avg_spot": 7.7
+    },
+    {
+     "week": "2026-10-26",
+     "clicks": 4,
+     "times_shown": 300,
+     "avg_spot": 10.6
+    },
+    {
+     "week": "2026-11-02",
+     "clicks": 3,
+     "times_shown": 776,
+     "avg_spot": 8.9
+    },
+    {
+     "week": "2026-11-09",
+     "clicks": 9,
+     "times_shown": 995,
+     "avg_spot": 9.7
+    }
+   ],
+   "searches": [
+    {
+     "search": "software factory model",
+     "clicks": 5,
+     "times_shown": 169,
+     "avg_spot": 7.4
+    },
+    {
+     "search": "factory model in software development",
+     "clicks": 3,
+     "times_shown": 22,
+     "avg_spot": 5.3
+    },
+    {
+     "search": "software factory",
+     "clicks": 2,
+     "times_shown": 334,
+     "avg_spot": 16.1
+    },
+    {
+     "search": "software factory framework",
+     "clicks": 2,
+     "times_shown": 31,
+     "avg_spot": 7.0
+    },
+    {
+     "search": "software factory sdlc",
+     "clicks": 2,
+     "times_shown": 4,
+     "avg_spot": 4.5
+    },
+    {
+     "search": "software factory pattern",
+     "clicks": 1,
+     "times_shown": 77,
+     "avg_spot": 20.3
+    },
+    {
+     "search": "sdlc factory",
+     "clicks": 1,
+     "times_shown": 28,
+     "avg_spot": 7.8
+    },
+    {
+     "search": "site:opsera.ai",
+     "clicks": 1,
+     "times_shown": 6,
+     "avg_spot": 20.7
+    },
+    {
+     "search": "software factory ai",
+     "clicks": 1,
+     "times_shown": 3,
+     "avg_spot": 23.7
+    },
+    {
+     "search": "tiny software factory",
+     "clicks": 1,
+     "times_shown": 3,
+     "avg_spot": 16.0
+    }
+   ]
+  },
+  {
    "page": "/blog/legacy-code-modernization",
    "group": "Blog",
    "title": "Legacy Code Modernization: AI-Powered Migration \u2014 Opsera",
-   "visits_since_new_site": 100,
+   "visits_since_new_site": 101,
    "weeks": [
     {
      "week": "2026-08-31",
@@ -4534,7 +4534,7 @@
    "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
    "group": "Blog",
    "title": "CI/CD Pipelines Explained. Benefits and Best Practices | Opsera",
-   "visits_since_new_site": 85,
+   "visits_since_new_site": 86,
    "weeks": [
     {
      "week": "2026-03-30",

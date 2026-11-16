@@ -28,15 +28,15 @@
         "2026-08": 8432,
         "2026-09": 8179
        },
-       "so_far": 6468,
+       "so_far": 6641,
        "so_far_start": "2026-11-01",
        "so_far_end": "2026-11-15",
        "days_counted": 15,
        "goal": 15000,
-       "goal_share_pct": 43.1,
+       "goal_share_pct": 44.3,
        "without_email_robots": {
         "baseline": 7840.7,
-        "so_far": 5981
+        "so_far": 6154
        }
       },
       {
@@ -49,7 +49,7 @@
         "2026-08": 3448,
         "2026-09": 3712
        },
-       "so_far": 1634,
+       "so_far": 1647,
        "so_far_start": "2026-11-01",
        "so_far_end": "2026-11-15",
        "days_counted": 15,

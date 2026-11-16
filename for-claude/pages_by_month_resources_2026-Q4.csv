@@ -112,6 +112,9 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-15,yes,/resources/comparison-guides/opsera-vs-cloudbees,1,0,0,0,0,22
 2026-11-01,2026-11-15,yes,/resources/comparison-guides/opsera-vs-copado,1,1,0,0,0,596
 2026-11-01,2026-11-15,yes,/resources/comparison-guides/opsera-vs-swarmia,1,0,0,0,0,141
+2026-11-01,2026-11-15,yes,/resources/devops-huddles/automate-salesforce-releases-with-devops-crawl-walk-run,1,0,0,0,0,13
+2026-11-01,2026-11-15,yes,/resources/devops-huddles/cicd-pipelines-kubernetes-build-migrate-integrate-security,1,0,0,0,0,8
+2026-11-01,2026-11-15,yes,/resources/devops-huddles/devops-automation-for-iac,1,0,0,0,0,5
 2026-11-01,2026-11-15,yes,/resources/devops-huddles/episode-23-architecting-for-success-salesforce-devops-with-opsera,1,0,0,0,1,12
 2026-11-01,2026-11-15,yes,/resources/ebooks/the-new-dora-report-2023,1,0,0,0,0,24
 2026-11-01,2026-11-15,yes,/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms,1,0,2,2,2,24

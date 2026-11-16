@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-11-10T06:57+00:00",
+ "pulled_at": "2026-11-16T12:53+00:00",
  "posts": [
   {
    "account": "company",
@@ -60,12 +60,7 @@
    "post": "https://www.linkedin.com/posts/opsera_every-salesforce-org-has-one-deployment-queue-activity-7505701998353186818-Uk-8",
    "posted_utc": "2026-09-15T19:00:05.607Z",
    "date_pacific": "2026-09-15",
-   "opsera_pages": [
-    {
-     "link": "https://lnkd.in/dQ6tj-Ri",
-     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool"
-    }
-   ]
+   "opsera_pages": []
   },
   {
    "account": "company",
@@ -465,6 +460,18 @@
     {
      "link": "https://lnkd.in/dHQCZYxA",
      "lands_on": "/blog/harness-engineering"
+    }
+   ]
+  },
+  {
+   "account": "company",
+   "post": "https://www.linkedin.com/posts/opsera_most-ai-coding-tools-start-with-the-prompt-activity-7527057941418606593-9tJK",
+   "posted_utc": "2026-11-13T17:20:59.208Z",
+   "date_pacific": "2026-11-13",
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/g5XUxniW",
+     "lands_on": "/blog/context-engineering-ai-coding"
     }
    ]
   }

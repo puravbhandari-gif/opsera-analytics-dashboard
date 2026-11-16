@@ -70,6 +70,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-15,yes,/case-study/nortonlifelock,3,0,0,0,0,0
 2026-11-01,2026-11-15,yes,/comparison/opsera-vs-flosum,3,0,0,0,0,0
 2026-11-01,2026-11-15,yes,/customer-stories/driving-github-copilot-adoption-at-a-global-e-commerce-leader-with-opsera-insights,3,0,0,0,1,73
+2026-11-01,2026-11-15,yes,/customer-stories/infoblox-uses-opsera-unified-devops-platform-to-cut-tool-sprawl-by-two-thirds,3,0,0,0,0,48
 2026-11-01,2026-11-15,yes,/customer-stories/nortonlifelock,3,0,0,0,0,5
 2026-11-01,2026-11-15,yes,/ebook/security-at-the-speed-of-software,3,0,0,0,0,0
 2026-11-01,2026-11-15,yes,/ecosystem/aqua,3,0,0,0,0,0
@@ -105,7 +106,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-15,yes,/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights,2,0,0,0,0,2
 2026-11-01,2026-11-15,yes,/customer-stories/city-of-hope,2,0,0,0,0,31
 2026-11-01,2026-11-15,yes,/customer-stories/fortune-100-manufacturing,2,0,0,0,0,4
-2026-11-01,2026-11-15,yes,/customer-stories/infoblox-uses-opsera-unified-devops-platform-to-cut-tool-sprawl-by-two-thirds,2,0,0,0,0,48
 2026-11-01,2026-11-15,yes,/ecosystem/ansible,2,0,0,0,0,0
 2026-11-01,2026-11-15,yes,/ecosystem/argo-cd,2,0,0,0,0,0
 2026-11-01,2026-11-15,yes,/ecosystem/aws-elastic-beanstalk,2,0,0,0,0,0
