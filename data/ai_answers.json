@@ -1,0 +1,99 @@
+{
+ "how_to_update": "Claude Code fills this file by hand from Ahrefs Brand Radar (the Monday run can't reach Ahrefs without an API key). Ask: \"refresh the AI answer checks\". Each check string has 1 character per day from first_check to last_check: 1 = the answer named Opsera, 0 = it didn't.",
+ "source": "Ahrefs Brand Radar",
+ "pulled": "2026-11-16",
+ "first_check": "2026-10-26",
+ "last_check": "2026-11-16",
+ "assistants": [
+  {
+   "key": "chatgpt",
+   "name": "ChatGPT"
+  },
+  {
+   "key": "google_ai_mode",
+   "name": "Google AI Mode"
+  }
+ ],
+ "prompts": [
+  {
+   "question": "Best legacy modernization services and platforms compared",
+   "names_opsera": false,
+   "checks": {
+    "chatgpt": "0000000000000000000000",
+    "google_ai_mode": "0000000000000000000000"
+   }
+  },
+  {
+   "question": "Best AI SDLC platforms for regulated industries",
+   "names_opsera": false,
+   "checks": {
+    "chatgpt": "0000000000000000000100",
+    "google_ai_mode": "0000000000000000000000"
+   }
+  },
+  {
+   "question": "Best AI SDLC platforms for enterprises with strict governance requirements",
+   "names_opsera": false,
+   "checks": {
+    "chatgpt": "0000011000000000011000",
+    "google_ai_mode": "0000000000000000000000"
+   }
+  },
+  {
+   "question": "Which platform tracks what Cursor and Claude changed in a Salesforce org",
+   "names_opsera": false,
+   "checks": {
+    "chatgpt": "0000000000000000000000",
+    "google_ai_mode": "0000100000000000000000"
+   }
+  },
+  {
+   "question": "Opsera vs LinearB for engineering intelligence, which fits an enterprise better",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  },
+  {
+   "question": "Opsera vs Jellyfish vs Faros AI for engineering metrics and delivery insights",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  },
+  {
+   "question": "Is Opsera enterprise-ready, and who actually uses it",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  },
+  {
+   "question": "Is Opsera an engineering intelligence platform or a DevOps tool",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  },
+  {
+   "question": "Does Opsera handle legacy application modernization",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  },
+  {
+   "question": "Does Opsera track AI token spend and AI coding ROI",
+   "names_opsera": true,
+   "checks": {
+    "chatgpt": "1111111111111111111111",
+    "google_ai_mode": "1111111111111111111111"
+   }
+  }
+ ]
+}

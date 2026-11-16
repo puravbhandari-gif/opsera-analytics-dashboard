@@ -725,6 +725,38 @@
 
   <!-- AEO -->
   <section id="tab-aeo" class="tab" role="tabpanel" hidden>
+    <!-- AI visibility: its own block, added 16 Nov 2026. Filled by renderAiVisibility in app.js. -->
+    <div id="ai-visibility">
+      <h2>AI visibility</h2>
+      <p class="lead">AI answers change from one check to the next. Read the trend, not a single day.</p>
+
+      <div class="panel">
+        <h3>Visits from AI assistants, week by week</h3>
+        <p class="note-inline" id="aiv-week"></p>
+        <div class="cards" id="aiv-cards"></div>
+        <div class="chart-box short"><canvas id="aiv-chart" aria-label="Visits from each AI assistant week by week"></canvas></div>
+        <p class="source" id="aiv-visits-source"></p>
+      </div>
+
+      <div class="panel">
+        <h3>Pages AI visitors landed on, week by week</h3>
+        <div id="aiv-pages"></div>
+        <p class="source" id="aiv-pages-source"></p>
+      </div>
+
+      <div class="panel">
+        <h3>Does Opsera show up in AI answers?</h3>
+        <div id="aiv-answers"></div>
+        <p class="source" id="aiv-answers-source"></p>
+      </div>
+
+      <div class="panel">
+        <h3>AI bots reading our site</h3>
+        <div id="aiv-bots"></div>
+        <p class="source" id="aiv-bots-source"></p>
+      </div>
+    </div>
+
     <h2>AEO: visits from AI tools</h2>
     <p class="lead">Visits from AI assistants like ChatGPT, Gemini and Perplexity, and what came next.</p>
     <div class="seg period" id="aeo-tool" role="group" aria-label="Choose an AI tool">
@@ -737,7 +769,6 @@
     </div>
     <div class="cards" id="aeo-cmp-cards"></div>
     <p class="source" id="aeo-cmp-source"></p>
-    <p class="note-inline">We don't track showing up in AI answers yet. It needs the Ahrefs Brand Radar add-on.</p>
 
     <div class="panel">
       <h3 id="aeo-funnel-title">Funnel</h3>
@@ -1108,6 +1139,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=134"></script>
+<script src="app.js?v=135"></script>
 </body>
 </html>

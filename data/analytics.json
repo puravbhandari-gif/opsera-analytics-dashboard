@@ -48649,7 +48649,1029 @@
     "source": "perplexity.ai (Referral)",
     "tool": "perplexity"
    }
-  ]
+  ],
+  "landing_weekly": [
+   {
+    "week": "2026-08-30",
+    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
+    "tool": "gemini",
+    "visits": 3
+   },
+   {
+    "week": "2026-08-30",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-08-30",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/devops-orchestration",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-08-30",
+    "page": "(not set)",
+    "tool": "claude",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/dora-2025-report-ai-software-development",
+    "tool": "claude",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/dora-2025-report-ai-software-development",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/demo",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/ecosystem/amazon-web-services-aws",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/resources",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-08-30",
+    "page": "/solutions/salesforce-devops-platform",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "(not set)",
+    "tool": "claude",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-06",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/blog/sast-tools",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/knowledge-base/core-flow-metrics/deployment-frequency-a-clear-window-into-your-software-delivery-engine",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/partners/databricks",
+    "tool": "claude",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-06",
+    "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "tool": "chatgpt",
+    "visits": 5
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/blog/cobol-modernization",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/ecosystem/appdynamics",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/newsroom/opsera-unveils-appsec-ai-agents-to-power-the-shift-from-traditional-sdlc-to-ai-sdlc",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-13",
+    "page": "/privacy",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-20",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/blog/ai-sdlc",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/platform/unified-insights",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-20",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 3
+   },
+   {
+    "week": "2026-09-27",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/blog/ai-software-factory",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/events/aws-reinvent",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/flutter-2026-ai-sdlc-summit",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/platform/unified-insights/dora-metrics",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-09-27",
+    "page": "/resources/reports/2026-ai-coding-impact-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 5
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+    "tool": "gemini",
+    "visits": 4
+   },
+   {
+    "week": "2026-10-04",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/blog/factory-ai-alternatives",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/blog/software-factory",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/blog/unlock-deeper-insights-with-opseras-windsurf-dashboard",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/forge",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-04",
+    "page": "/platform/unified-insights/dora-metrics",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/blog/legacy-code-modernization",
+    "tool": "chatgpt",
+    "visits": 4
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 3
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/agentic-devops",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/events/gartner-summit-2026",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/forge",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/knowledge-base/ai-code-assistant-analytics/gemini-code-assist-a-complete-developers-guide",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/software-factory",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-11",
+    "page": "/unified-insights",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/forge",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/knowledge-base/value-stream-management/flow-distribution",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-10-18",
+    "page": "(not set)",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/blog/dora-2025-report-ai-software-development",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/blog/software-factory",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/blog/spec-driven-development",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/salesforce-devops",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-18",
+    "page": "/unified-insights",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/forge",
+    "tool": "gemini",
+    "visits": 3
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/spec-driven-development",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-10-25",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/agents",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/harness-engineering",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/legacy-code-modernization",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/snowflake-to-databricks-migration",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/software-factory",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/cursor-plugin",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/events/github-universe",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/forge/modernization/coldfusion-to-java",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/knowledge-base/incident-analysis/repeat-incident-rate",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-outcomes",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-10-25",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/spec-driven-development",
+    "tool": "gemini",
+    "visits": 7
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 4
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 4
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-01",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/solutions/copilot-dashboard",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/unified-insights",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/about",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/devsecops-tools",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/factory-ai-alternatives",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/forge-ontology-ai-agents",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/harness-engineering",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/blog/sast-tools",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-01",
+    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 5
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 5
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/solutions/copilot-dashboard",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/spec-driven-development",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/forge/modernization/cobol-to-csharp",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
+    "tool": "gemini",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-08",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "(not set)",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/cobol-modernization",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/devops-monitoring",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/frontier-ai-software-readiness-benchmark",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/software-factory-as-a-service",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/blog/software-factory-pattern",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/ecosystem/jmeter",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/forge/modernization/coldfusion-to-java",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/forge/modernization/fortran-to-python",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-08",
+    "page": "/software-factory",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/blog/claude-code-alternative",
+    "tool": "gemini",
+    "visits": 5
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/careers",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/forge",
+    "tool": "chatgpt",
+    "visits": 3
+   },
+   {
+    "week": "2026-11-15",
+    "page": "(not set)",
+    "tool": "chatgpt",
+    "visits": 2
+   },
+   {
+    "week": "2026-11-15",
+    "page": "(not set)",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "(not set)",
+    "tool": "perplexity",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/agentic-devops",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/agents",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/blog/dora-2025-report-ai-software-development",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/blog/software-factory",
+    "tool": "gemini",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/blog/the-new-opsera-brand",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/demo",
+    "tool": "chatgpt",
+    "visits": 1
+   },
+   {
+    "week": "2026-11-15",
+    "page": "/partners",
+    "tool": "chatgpt",
+    "visits": 1
+   }
+  ],
+  "bots": {
+   "from": "2026-10-25",
+   "to": "2026-11-15",
+   "daily": [],
+   "pages": []
+  }
  },
  "google_search_visits": [
   {

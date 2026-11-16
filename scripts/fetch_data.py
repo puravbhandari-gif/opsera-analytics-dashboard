@@ -359,7 +359,55 @@ def ai_visits(s, end):
         sources.setdefault(f"{r['sessionSource']} ({r['sessionDefaultChannelGroup']})", t)
     return {"daily": sorted(daily.values(), key=lambda r: (r["date"], r["tool"])),
             "landing": sorted(landing.values(), key=lambda r: -r["visits"]),
+            "landing_weekly": ai_landing_weekly(s, end),
+            "bots": ai_bots(s, end),
             "sources": [{"source": k, "tool": v} for k, v in sorted(sources.items())]}
+
+
+def week_ending(date):
+    """The Sunday closing the Monday-to-Sunday week a day falls in."""
+    d = dt.date.fromisoformat(date)
+    return (d + dt.timedelta(days=6 - d.weekday())).isoformat()
+
+
+AI_WEEKS = 12   # weeks of landing pages kept for the AI visibility section (added 16 Nov 2026)
+
+
+def ai_landing_weekly(s, end):
+    """Pages AI visitors landed on, by Monday-to-Sunday week (labelled by its Sunday), for the last AI_WEEKS full weeks."""
+    last = dt.date.fromisoformat(end)
+    last_sunday = last - dt.timedelta(days=(last.weekday() + 1) % 7)
+    start = (last_sunday - dt.timedelta(days=7 * AI_WEEKS - 1)).isoformat()
+    weekly = {}
+    for r in ga_report(s, last_sunday.isoformat(), ["date", "landingPage", "sessionDefaultChannelGroup", "sessionSource"], ["sessions"], start=start):
+        t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
+        if not t:
+            continue
+        page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        key = (week_ending(r["date"]), page, t)
+        x = weekly.setdefault(key, {"week": key[0], "page": page, "tool": t, "visits": 0})
+        x["visits"] += r["sessions"]
+    return sorted(weekly.values(), key=lambda r: (r["week"], -r["visits"], r["page"]))
+
+
+AI_BOT_EVENT = "ai_bot_visit"     # sent by the website's server for each AI bot visit (opsera-landing-page, lib/ai-bots.ts)
+AI_BOT_START = "2026-10-25"
+
+
+def ai_bots(s, end):
+    """AI bots reading the site, by day and bot, and the pages they read. Bots are not people: never add these to visits.
+    If Google Analytics can't answer (say the bot fields aren't registered), the lists stay empty."""
+    out = {"from": AI_BOT_START, "to": end, "daily": [], "pages": []}
+    try:
+        for r in ga_report(s, end, ["date", "customEvent:bot_name"], ["eventCount"], event_names=[AI_BOT_EVENT], start=AI_BOT_START):
+            out["daily"].append({"date": r["date"], "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
+        for r in ga_report(s, end, ["customEvent:page_path", "customEvent:bot_name"], ["eventCount"], event_names=[AI_BOT_EVENT], start=AI_BOT_START):
+            out["pages"].append({"page": page_key(r["customEvent:page_path"]), "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
+    except Exception as e:
+        print(f"AI bot visits skipped: {str(e)[:200]}")
+    out["daily"].sort(key=lambda r: (r["date"], r["bot"]))
+    out["pages"].sort(key=lambda r: -r["visits"])
+    return out
 
 
 def kumar_links(s, end):
