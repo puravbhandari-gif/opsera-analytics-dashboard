@@ -97,3 +97,5 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 17 Nov, Purav's decisions: both YouTube videos linked on the hubs (Tokenomics recording, PHP2Shell video). Kumar's PHP2Shell post is 17 reactions and the Flutter brand posts 22,563 times seen, both checked 17 Nov. The Pipeline tab and the exec pipeline card say the campaign export stops at 2 Nov when the period runs past it (the line goes away by itself when a newer export arrives).
 - [x] Team metrics is back in the sections row (Purav, 17 Nov, later); #team opens it again. Goals and numbers for the other 7 people are still to come.
 - [x] GEroundtable counts (Purav, 17 Nov 2026): trade press is 5 on the Brand relaunch hub.
+- [x] 17 Nov: Content by type has a total line (blogs in the period and in the last full month), and Month view cards show this quarter so far and the last full quarter. 3 November blogs tagged. Counts checked against Contentful: Nov 4, Oct 14, Sep 22, Aug 1.
+- [ ] "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.

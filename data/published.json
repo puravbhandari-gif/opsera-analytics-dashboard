@@ -3,9 +3,15 @@
  "start_date": "2026-07-01",
  "checked": "2026-11-17",
  "youtube_pulled_at": "2026-11-17T10:01+05:30",
- "pages_checked": 316,
+ "pages_checked": 317,
  "pages_without_date": 5,
  "items": [
+  {
+   "date": "2026-11-17",
+   "type": "Blog",
+   "title": "Closing the Security Gap in AI Modernization",
+   "link": "https://opsera.ai/blog/closing-the-security-gap-in-ai-modernization"
+  },
   {
    "date": "2026-11-16",
    "type": "YouTube video",

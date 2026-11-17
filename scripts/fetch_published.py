@@ -21,6 +21,10 @@ import requests
 
 START = "2026-07-01"
 SITEMAP = "https://opsera.ai/sitemap.xml"
+# Pages live on opsera.ai but not yet in the sitemap. Each still uses the publish date the page states (17 Nov 2026).
+NOT_IN_SITEMAP = [
+    "https://opsera.ai/blog/closing-the-security-gap-in-ai-modernization",
+]
 DATA = Path(__file__).resolve().parent.parent / "data"
 OUT = DATA / "published.json"
 HEADERS = {"User-Agent": "Mozilla/5.0 (opsera-analytics-dashboard)"}
@@ -56,7 +60,7 @@ def page_facts(url):
     t = re.search(r'<meta property="og:title" content="([^"]*)"', r.text) or re.search(r"<title>(.*?)</title>", r.text, re.S)
     title = html.unescape(t.group(1)).strip() if t else None
     if title:
-        title = re.sub(r"\s*[|-]\s*Opsera\s*$", "", title)
+        title = re.sub(r"(\s*[|-]\s*Opsera( Forge)?)+\s*$", "", title)
         title = title.translate(str.maketrans({"\u2018": "'", "\u2019": "'", "\u201c": '"', "\u201d": '"'}))
     return url, (m.group(1) if m else None), title
 
@@ -66,6 +70,7 @@ def main():
     if r.status_code != 200:
         stop(f"The sitemap returned {r.status_code}.")
     urls = [u.strip() for u in re.findall(r"<loc>([^<]+)</loc>", r.text)]
+    urls += [u for u in NOT_IN_SITEMAP if u not in urls]
     wanted = {}
     for u in urls:
         path = re.sub(r"^https?://(www\.)?opsera\.ai", "", u).rstrip("/")

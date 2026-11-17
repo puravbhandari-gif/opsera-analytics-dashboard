@@ -477,7 +477,7 @@ function fillCompare(spec) {
         const fullQ = lq >= spec.start && lq !== p.cur.start && m.value(lq, quarterEnd(lq)) ? ` ${quarterName(lq)}, the last full quarter: ${m.fmt(m.value(lq, quarterEnd(lq)))}${m.extra ? `, ${m.extra(lq, quarterEnd(lq))}` : ""}.` : "";
         return card(m.label, yet ? "None yet" : "None", `No ${m.none} created ${range(p.cur.start, p.cur.end)}${yet ? " so far" : ""}.${fullQ}${note ? ` ${note}.` : ""}`);
       }
-      return card(m.label, m.fmt(cur), [m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), m.noDelta ? "" : cmpDelta(cur, prev, m.lowerIsBetter));
+      return card(m.label, m.fmt(cur), [m.first ? m.first(p.cur.start, p.cur.end) : "", m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), m.noDelta ? "" : cmpDelta(cur, prev, m.lowerIsBetter));
     }).join("");
     $(`${spec.id}-cmp-source`).textContent = (p.why ? `${p.why} ` : "") + spec.source(p.cur.start, p.cur.end) +
       (p.prev ? ` Compared with ${range(p.prev.start, p.prev.end)}.` : "");
@@ -2358,13 +2358,19 @@ function renderBlogTypes(p, bt, d) {
   const avg = (list) => (list.length ? Math.round(list.reduce((t, r) => t + r.visits, 0) / list.length) : 0);
   const engagedPct = (list) => { const v = list.reduce((t, r) => t + r.visits, 0); return v ? Math.round((list.reduce((t, r) => t + r.engaged, 0) / v) * 100) : 0; };
   const line = (t, a, b, named) => {
-    const all = piecesIn(a, b), mine = all.filter((r) => r.t === t);
+    // A blog published after Google Analytics' last full day has no visits yet, so it stays out of the averages
+    const all = piecesIn(a, b).filter((r) => r.date <= gaLast), mine = all.filter((r) => r.t === t);
     if (!mine.length || mine.length === all.length) return "";
     return `${named ? `${t} averaged` : "Averaged"} ${num(avg(mine))} visits per piece (${engagedPct(mine)}% engaged), against ${num(avg(all))} for all blogs (${engagedPct(all)}% engaged)`;
   };
   const cur = () => (periodsFor(periodMode, p.start_date, p.checked).cur || { start: p.start_date, end: p.checked });
+  // The last full quarter and month before the latest day, for the cards in Month view and the total line (agreed 17 Nov 2026)
+  const lastQ = quarterStart(addDays(quarterStart(p.checked), -1)), lastM = addMonths(monthStart(p.checked), -1);
+  const qMonths = (q) => ["Feb to Apr", "May to Jul", "Aug to Oct", "Nov to Jan"][Math.floor(fiscalOffset(q) / 3)];
+  const blogsIn = (x, y) => rows.filter((r) => r.date >= x && r.date <= y).length;
   const drawPieces = () => {
     const { start: a, end: b } = cur();
+    $("content-btype-total").textContent = `${num(blogsIn(a, b))} blogs published ${range(a, b)}. ${monthName(lastM)}, the last full month: ${num(blogsIn(lastM, monthEnd(lastM)))}.`;
     const cards = [...$("content-btype-cmp-cards").querySelectorAll(".card")];
     cards.forEach((c, i) => { const on = types[i] === btypePick;
       c.classList.add("pickable"); c.classList.toggle("picked", on); c.setAttribute("role", "button"); c.tabIndex = 0; c.setAttribute("aria-pressed", on); });
@@ -2384,7 +2390,12 @@ function renderBlogTypes(p, bt, d) {
   compare({ id: "content-btype", start: p.start_date, last: p.checked,
     source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
     metrics: types.map((t) => ({ label: t, value: (a, b) => rows.filter((r) => r.t === t && r.date >= a && r.date <= b).length, fmt: num, noDelta: true,
-      sub: (a, b) => line(t, a, b, false) })) });
+      sub: (a, b) => line(t, a, b, false),
+      // Month view also shows the fiscal quarter up to the month's end, so a month with few blogs doesn't read as empty (agreed 17 Nov 2026)
+      first: (a, b) => { if (periodMode !== "month") return "";
+        const n = (x, y) => num(rows.filter((r) => r.t === t && r.date >= x && r.date <= y).length);
+        return `${b >= p.checked ? "This quarter so far" : `${quarterName(b)} to ${dayYear(b)}`}: ${n(quarterStart(b), b)}. ` +
+          `${quarterName(lastQ)} (${qMonths(lastQ)}): ${n(lastQ, quarterEnd(lastQ))}`; } })) });
   const pickAt = (el) => { const c = el.closest(".card"); if (!c) return;
     btypePick = types[[...$("content-btype-cmp-cards").querySelectorAll(".card")].indexOf(c)] || btypePick; drawPieces(); };
   $("content-btype-cmp-cards").addEventListener("click", (e) => pickAt(e.target));

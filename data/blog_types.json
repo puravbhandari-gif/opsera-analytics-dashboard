@@ -1,6 +1,6 @@
 {
  "source": "Tagged by hand from each blog's title (agreed with Purav, 6 Nov 2026). Industry hot topics, for blogs written in response to news, added 9 Nov 2026.",
- "tagged": "2026-11-06",
+ "tagged": "2026-11-17",
  "types": [
   "Modernization guide",
   "AI engineering thought leadership",
@@ -54,6 +54,9 @@
   "ai-agent-guardrails-ontologies": "AI engineering thought leadership",
   "migrate-dotnet-framework-to-dotnet-10": "Modernization guide",
   "forge-ontology-ai-agents": "AI engineering thought leadership",
-  "cursor-alternatives": "Comparison"
+  "cursor-alternatives": "Comparison",
+  "smart-model-selection": "AI engineering thought leadership",
+  "software-factory-vs-dark-factory": "Software factory",
+  "closing-the-security-gap-in-ai-modernization": "AI security"
  }
 }
