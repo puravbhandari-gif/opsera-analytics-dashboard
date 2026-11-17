@@ -7,6 +7,7 @@ Agreed with Purav on 28 Oct 2026:
 - Each line names its source. Sources are never added together. No emojis.
 - If a number doesn't add up, or this week's Google numbers are missing, nothing is posted and the run says why.
 """
+import datetime as dt
 import json
 import os
 import re
@@ -79,6 +80,9 @@ def message():
     clicks = both(gsc["daily"], "clicks")
     meetings = both(hub["meetings_daily"], "count", lambda r: r["kind"] == "booked")
 
+    early = [d for d in gsc.get("early_days", []) if prev["start"] <= d <= cur["end"]]
+    early_note = ([f"Search Console: {' and '.join(dt.date.fromisoformat(d).strftime('%A') + ' ' + day_name(d) for d in early)} "
+                   f"is Google's early figure and may change."] if early else [])
     hub_day = hub["pulled_at"][:10]
     return "\n".join([
         f"Opsera marketing numbers, week of {week_name(cur['start'], cur['end'])}",
@@ -89,6 +93,7 @@ def message():
         line("Demo requests", *demos, "Google Analytics, demo form"),
         line("Clicks from Google search", *clicks, "Search Console"),
         line("Meetings booked with marketing contacts", *meetings, f"HubSpot, updated {day_name(hub_day)}"),
+        *early_note,
         "",
         f"Week before: {week_name(prev['start'], prev['end'])}. Google Analytics days follow US Pacific time.",
         f"Dashboard: {DASHBOARD}",

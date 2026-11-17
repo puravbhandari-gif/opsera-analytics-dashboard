@@ -272,6 +272,9 @@ def search(mode):
     cur, prev, before = periods_for(mode, g["start_date"], g["last_day_with_data"])
     if not cur:
         return None
+    early = [e for e in g.get("early_days", []) if cur[0] <= e <= cur[1]]
+    if early:
+        NOTES.insert(0, f"{' and '.join(day_name(e) for e in early)} is Google's early figure and may change.")
     t = lambda k, p: total(g["daily"], k, *p) if p else None
     spot = lambda p: (round(total(g["daily"], lambda r: r["avg_spot"] * r["times_shown"], *p) / t("times_shown", p), 1)
                       if p and t("times_shown", p) else None)

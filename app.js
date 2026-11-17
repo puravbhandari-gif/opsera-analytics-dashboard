@@ -510,10 +510,17 @@ function delta(cur, prev, lowerIsBetter = false) {
   return `<div class="delta ${better ? "good" : "bad"}">${change > 0 ? "+" : ""}${change.toFixed(1)}% on last week (${better ? "better" : "worse"})</div>`;
 }
 
+function gscEarlyNote(d) {
+  const days = d.early_days || [];
+  return days.length ? ` ${days.map((x) => day(x)).join(" and ")} is Google's early figure and may change.` : "";
+}
+
 function renderSearch(d) {
   const last = d.last_day_with_data;
   const src = "Source: Google Search Console";
-  $("search-source").textContent = `${src}, ${range(d.start_date, last)}.`;
+  // a day shown before Google finalizes it (a one-off, see EARLY_DAYS in fetch_data.py); pages and searches leave it out
+  const early = gscEarlyNote(d), lastFinal = d.last_final_day || last;
+  $("search-source").textContent = `${src}, ${range(d.start_date, last)}.${early}`;
   const t = sumSearch(d.daily);
   $("search-cards").innerHTML =
     card("Clicks", num(t.clicks)) +
@@ -521,7 +528,7 @@ function renderSearch(d) {
     card("Click rate", pct(t.rate), "Clicks divided by times shown") +
     card("Average spot on Google", spot(t.spot), "Lower is better");
 
-  $("search-daily-source").textContent = `${src}, ${range(d.start_date, last)}.`;
+  $("search-daily-source").textContent = `${src}, ${range(d.start_date, last)}.${early}`;
   const metrics = {
     clicks: { label: "Clicks", fmt: num },
     times_shown: { label: "Times Google showed us", fmt: num },
@@ -549,12 +556,12 @@ function renderSearch(d) {
     { key: "click_rate_pct", label: "Click rate", num: true, fmt: (v) => pct(v) },
     { key: "avg_spot", label: "Average spot", num: true, fmt: spot },
   ];
-  $("search-pages-source").textContent = `${src}, ${range(d.start_date, last)}.`;
+  $("search-pages-source").textContent = `${src}, ${range(d.start_date, lastFinal)}.`;
   table($("search-pages"), {
     rows: d.pages.map((p) => ({ ...p, path: shortPage(p.page) })), search: "pages", sortKey: "clicks",
     columns: cols({ key: "path", label: "Page", search: true, fmt: (v) => esc(v) }),
   });
-  $("search-queries-source").textContent = `${src}, ${range(d.start_date, last)}.`;
+  $("search-queries-source").textContent = `${src}, ${range(d.start_date, lastFinal)}.`;
   table($("search-queries"), { rows: d.searches, search: "searches", sortKey: "clicks",
     columns: cols({ key: "search", label: "Search", search: true }) });
 
@@ -1372,7 +1379,7 @@ function renderJourney(ga, leads, hub, gsc) {
   const gv = Object.fromEntries(ga.google_search_visits.map((r) => [r.kind, r.visits]));
   $("journey-google-visits").innerHTML = card("First visits", num(gv.new || 0)) + card("Return visits", num(gv.returning || 0)) +
     card("Not labelled", num((gv["(not set)"] || 0) + (gv[""] || 0)), "Almost none engaged");
-  $("journey-google-visits-source").textContent = `Source: Google Analytics, Google organic visits from ${range(start, ga.end_date)} (Pacific time). Search Console counted ${num(gsc.daily.reduce((t2, r) => t2 + r.clicks, 0))} clicks from ${range(gsc.daily[0].date, gsc.last_day_with_data)}.`;
+  $("journey-google-visits-source").textContent = `Source: Google Analytics, Google organic visits from ${range(start, ga.end_date)} (Pacific time). Search Console counted ${num(gsc.daily.reduce((t2, r) => t2 + r.clicks, 0))} clicks from ${range(gsc.daily[0].date, gsc.last_day_with_data)}.${gscEarlyNote(gsc)}`;
   const mk = (k) => hub.meetings_daily.filter((r) => r.kind === k).reduce((t2, r) => t2 + r.count, 0);
   $("journey-meetings").innerHTML = card("Meetings booked", num(mk("booked")), "After sign-up, through yesterday") +
     card("Upcoming", num(mk("upcoming")), "Booked for later") + card("With existing customers", num(mk("existing_customer")), "Left out") +

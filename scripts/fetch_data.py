@@ -110,6 +110,10 @@ def page_key(path):
 
 # ---------- Search Console ----------
 
+# Final numbers are the rule, so this list stays empty. A day listed here shows with Google's early number while
+# Google's final numbers stop the day before it. One-off for the week ending 15 Nov 2026 (Purav, 17 Nov 2026).
+EARLY_DAYS = ["2026-11-15"]
+
 def find_gsc_site(s):
     sites = call(s, "GET", "https://searchconsole.googleapis.com/webmasters/v3/sites").get("siteEntry", [])
     urls = [x["siteUrl"] for x in sites]
@@ -159,12 +163,24 @@ def fetch_gsc(s, end):
     daily = [gsc_row(r, "date") for r in gsc_query(s, site, START_DATE, end, ["date"])]
     if not daily:
         stop("Search Console returned no days of data.")
+    last_final = daily[-1]["date"]
+    for d in sorted(EARLY_DAYS):
+        # only the day right after Google's final numbers; once Google finalizes it, the final number takes over on its own
+        if d == (dt.date.fromisoformat(daily[-1]["date"]) + dt.timedelta(days=1)).isoformat():
+            url = f"https://searchconsole.googleapis.com/webmasters/v3/sites/{quote(site, safe='')}/searchAnalytics/query"
+            rows = call(s, "POST", url, {"startDate": d, "endDate": d, "dimensions": ["date"], "dataState": "all"}).get("rows", [])
+            if len(rows) != 1 or rows[0]["keys"][0] != d:
+                stop(f"Search Console has no early number for {d}.")
+            daily.append({**gsc_row(rows[0], "date"), "early": True})
+            print(f"Search Console: {d} is Google's early number and may change.")
     pages = merge_slash_variants(gsc_query(s, site, START_DATE, end, ["page"]))
     # searches that contain an email address are left out, because the page is public
     searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"]) if "@" not in r["keys"][0]]
     return {
         "source": f"Google Search Console, {site}",
         "last_day_with_data": daily[-1]["date"],
+        # pages and searches only have Google's final numbers, so they end on last_final_day
+        "last_final_day": last_final, "early_days": [r["date"] for r in daily if r.get("early")],
         "daily": daily, "pages": pages, "searches": searches,
     }
 
@@ -810,7 +826,7 @@ def main():
     write("rankings.json", {"source": f"Google Search Console, {gsc['source'].split(', ', 1)[1]}, and Google Analytics 4, {GA_PROPERTY_NAME}",
                             **rankings(s, end, gsc["source"].split(", ", 1)[1])}, meta)
     look = lookup(s, end, gsc["source"].split(", ", 1)[1])
-    write("lookup.json", {**look, "gsc_last_day": gsc["last_day_with_data"]}, meta, compact=True)
+    write("lookup.json", {**look, "gsc_last_day": gsc["last_final_day"]}, meta, compact=True)
 
     print(f"\nRange asked for: {START_DATE} to {end}")
     print(f"Search Console: last day with data {gsc['last_day_with_data']}, "
