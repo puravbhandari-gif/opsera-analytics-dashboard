@@ -96,4 +96,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] LinkedIn exports needed: company page from 8 Nov, Kumar's profile from 28 Oct.
 - [x] 17 Nov, Purav's decisions: both YouTube videos linked on the hubs (Tokenomics recording, PHP2Shell video). Kumar's PHP2Shell post is 17 reactions and the Flutter brand posts 22,563 times seen, both checked 17 Nov. The Pipeline tab and the exec pipeline card say the campaign export stops at 2 Nov when the period runs past it (the line goes away by itself when a newer export arrives).
 - [ ] Team metrics tab is hidden, not deleted (Purav, 17 Nov): the button in index.html has "hidden" and #team opens Takeaways. Bring it back once goals are set and the other 7 people have numbers, by taking "hidden" off the button.
-- [ ] Trade press stays at 4 until Purav says if GEroundtable counts (https://geroundtable.com/opsera-ai-native-software-factory-forge/, a rewritten story on the relaunch with its own byline and commentary).
+- [x] GEroundtable counts (Purav, 17 Nov 2026): trade press is 5 on the Brand relaunch hub.
