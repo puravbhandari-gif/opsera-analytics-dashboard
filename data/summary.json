@@ -16,7 +16,7 @@
      "notable": false,
      "main": null,
      "why": null,
-     "do": null,
+     "do": "Link contacts to deals: 7 had no contact this week.",
      "trend": []
     },
     {
@@ -39,7 +39,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Event sign-ups: 6, down from 11.",
+     "why": "Event form fills fell to 6, down from 11.",
      "do": null,
      "trend": [
       {
@@ -76,11 +76,46 @@
      "note": null,
      "period": "9 to 15 Nov 2026",
      "period_before": "2 to 8 Nov 2026",
-     "notable": false,
-     "main": null,
-     "why": null,
+     "notable": true,
+     "main": {
+      "key": "new_marketing_contacts",
+      "label": "New marketing contacts",
+      "value": "5",
+      "cur": 5,
+      "prev": 2,
+      "before": "2",
+      "change_pct": 150.0,
+      "good": true,
+      "min_change_pct": 15
+     },
+     "why": "Direct visits and Google search each brought 2 contacts.",
      "do": null,
-     "trend": []
+     "trend": [
+      {
+       "week": "5 to 11 Oct 2026",
+       "value": 7
+      },
+      {
+       "week": "12 to 18 Oct 2026",
+       "value": 6
+      },
+      {
+       "week": "19 to 25 Oct 2026",
+       "value": 51
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 12
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 2
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 5
+      }
+     ]
     },
     {
      "key": "visits",
@@ -102,7 +137,7 @@
       "good": false,
       "min_change_pct": 10
      },
-     "why": null,
+     "why": "Unlabelled visits fell to 352, down from 834.",
      "do": null,
      "trend": [
       {
@@ -151,7 +186,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Sunday's figure is Google's early number and may change.",
      "do": null,
      "trend": [
       {
@@ -200,7 +235,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent the most: 16 of 26.",
+     "why": "ChatGPT sent 16 of the 26 AI visits.",
      "do": null,
      "trend": [
       {
@@ -249,8 +284,8 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
-     "do": null,
+     "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
+     "do": "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
@@ -300,11 +335,46 @@
      "note": null,
      "period": "9 to 15 Nov 2026",
      "period_before": "2 to 8 Nov 2026",
-     "notable": false,
-     "main": null,
-     "why": null,
-     "do": null,
-     "trend": []
+     "notable": true,
+     "main": {
+      "key": "content_visits",
+      "label": "Content page visits",
+      "value": "1,155",
+      "cur": 1155,
+      "prev": 1075,
+      "before": "1,075",
+      "change_pct": 7.4,
+      "good": true,
+      "min_change_pct": 15
+     },
+     "why": "Claude Code Alternatives visits rose to 71, up from 47.",
+     "do": "Write more like Claude Code Alternatives: 27 of 71 engaged.",
+     "trend": [
+      {
+       "week": "5 to 11 Oct 2026",
+       "value": 761
+      },
+      {
+       "week": "12 to 18 Oct 2026",
+       "value": 673
+      },
+      {
+       "week": "19 to 25 Oct 2026",
+       "value": 731
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 1319
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 1075
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 1155
+      }
+     ]
     },
     {
      "key": "linkedin",
@@ -424,7 +494,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Viewers watched 84 minutes of long videos.",
      "do": null,
      "trend": [
       {
@@ -454,19 +524,23 @@
      ]
     }
    ],
-   "by_claude": false,
+   "by_claude": true,
    "boxes": {
     "well": [
-     "Demo requests up 400%",
-     "Visits from tagged campaigns up 61.4%",
-     "Long video views up 52.4%"
+     "Demo requests rose to 5, up from 1.",
+     "Google search clicks grew 25.1% to 637.",
+     "Campaign visits grew 61.4% to 71."
     ],
     "attention": [
-     "Times the company page's posts were seen down 47.3%",
-     "Visits from AI tools down 29.7%",
-     "Engagements on Kumar's posts down 17.2%"
+     "Engaged visits fell 21.0% to 696.",
+     "Visits from other websites fell to 84, down from 211.",
+     "AI tool visits fell 29.7% to 26."
     ],
-    "do": []
+    "do": [
+     "Write more like Claude Code Alternatives: 27 of 71 engaged.",
+     "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
+     "Link contacts to deals: 7 had no contact this week."
+    ]
    }
   },
   "month": {
@@ -494,7 +568,7 @@
       "min_change_pct": 15
      },
      "why": "Their pipeline came to $200,000, down from $588,000.",
-     "do": "Link contacts to deals: 20 had no contact this month.",
+     "do": "Link contacts to deals: 20 had no contact in October.",
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
@@ -542,7 +616,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Event sign-ups: 17, down from 29.",
+     "why": "Gartner offer form fills slowed to 2, from 67.",
      "do": null,
      "trend": [
       {
@@ -591,7 +665,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Half of November brought 7 new contacts, against 82.",
      "do": null,
      "trend": [
       {
@@ -640,7 +714,7 @@
       "good": false,
       "min_change_pct": 10
      },
-     "why": null,
+     "why": "Half of November is set against all of October.",
      "do": null,
      "trend": [
       {
@@ -689,7 +763,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Half of November is set against all of October.",
      "do": null,
      "trend": [
       {
@@ -738,7 +812,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent the most: 40 of 66.",
+     "why": "ChatGPT sent 40 of the 66 AI visits.",
      "do": null,
      "trend": [
       {
@@ -787,7 +861,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
      "do": null,
      "trend": [
       {
@@ -850,8 +924,8 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
-     "do": null,
+     "why": "COBOL Modernization visits rose to 113, up from 53.",
+     "do": "Fix the COBOL page: only 17 of 113 visits engaged.",
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
@@ -957,18 +1031,23 @@
      "trend": []
     }
    ],
-   "by_claude": false,
+   "by_claude": true,
    "boxes": {
     "well": [
-     "Marketing sourced deals (estimate) up 200%",
-     "Times the company page's posts were seen up 115.1%"
+     "COBOL Modernization visits rose to 113, up from 53.",
+     "Harness Engineering blog visits rose to 80, up from 45.",
+     "Change impact campaign kept 11 of 12 visitors engaged."
     ],
     "attention": [
-     "Visits from tagged campaigns down 74.7%",
-     "Demo requests down 72.7%",
-     "Visits without email robots down 54.3%"
+     "Half of November brought 6 demo requests, against 22 in October.",
+     "Half of November brought 7 new contacts, against 82.",
+     "Gartner offer form fills slowed to 2, from 67."
     ],
-    "do": []
+    "do": [
+     "Write more like Claude Code Alternatives: 51 of 123 engaged.",
+     "Fix the COBOL page: only 17 of 113 visits engaged.",
+     "Link contacts to deals: 20 had no contact in October."
+    ]
    }
   },
   "cq": {
@@ -1462,26 +1541,26 @@
      "period_before": "9 May to 8 Aug 2026",
      "notable": true,
      "main": {
-      "key": "sourced_deals",
-      "label": "Marketing sourced deals (estimate)",
-      "value": "6",
-      "cur": 6,
-      "prev": 9,
-      "before": "9",
-      "change_pct": -33.3,
-      "good": false,
+      "key": "sourced_value",
+      "label": "Marketing sourced pipeline (estimate)",
+      "value": "$1,156,000",
+      "cur": 1156000,
+      "prev": 850000,
+      "before": "$850,000",
+      "change_pct": 36.0,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": null,
-     "do": null,
+     "why": "Influenced pipeline rose 21.2% to $1,030,000.",
+     "do": "Link contacts to deals: 63 had no contact in 3 months.",
      "trend": [
       {
        "week": "28 Sep to 4 Oct 2026",
-       "value": 1
+       "value": 200000
       },
       {
        "week": "5 to 11 Oct 2026",
-       "value": 2
+       "value": 0
       },
       {
        "week": "12 to 18 Oct 2026",
@@ -1521,7 +1600,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Event sign-ups: 127, up from 79.",
+     "why": "Event form fills rose to 127, up from 79.",
      "do": null,
      "trend": [
       {
@@ -1570,7 +1649,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "The most new contacts came from events: 196 of 358.",
+     "why": "Events brought 196 of 358 new contacts.",
      "do": null,
      "trend": [
       {
@@ -1620,7 +1699,7 @@
       "min_change_pct": 10
      },
      "why": "Unlabelled visits jumped to 2,891, likely robots.",
-     "do": null,
+     "do": "Filter out unlabelled visits, up from 583 to 2,891.",
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
@@ -1668,7 +1747,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Average spot slipped to 11.1, from 9.6.",
      "do": null,
      "trend": [
       {
@@ -1717,7 +1796,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Visits from AI tools led to 2 demo form fills.",
+     "why": "ChatGPT sent 131 visits and Gemini 118.",
      "do": null,
      "trend": [
       {
@@ -1754,11 +1833,46 @@
      "note": null,
      "period": "16 Aug to 15 Nov 2026",
      "period_before": "16 May to 15 Aug 2026",
-     "notable": false,
-     "main": null,
-     "why": "DG-FY27-Q3-Tokenomics-Webinar brought the most: 1,834 visits, 247 of them engaged.",
+     "notable": true,
+     "main": {
+      "key": "campaign_visits",
+      "label": "Visits from tagged campaigns",
+      "value": "2,718",
+      "cur": 2718,
+      "prev": 2518,
+      "before": "2,518",
+      "change_pct": 7.9,
+      "good": true,
+      "min_change_pct": 15
+     },
+     "why": "Tokenomics brought 1,834 visits, but only 247 engaged.",
      "do": null,
-     "trend": []
+     "trend": [
+      {
+       "week": "5 to 11 Oct 2026",
+       "value": 55
+      },
+      {
+       "week": "12 to 18 Oct 2026",
+       "value": 32
+      },
+      {
+       "week": "19 to 25 Oct 2026",
+       "value": 323
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 72
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 44
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 71
+      }
+     ]
     },
     {
      "key": "events",
@@ -1768,18 +1882,9 @@
      "note": null,
      "period": "16 Aug to 15 Nov 2026",
      "period_before": "16 May to 15 Aug 2026",
-     "notable": true,
-     "main": {
-      "key": "attended",
-      "label": "Flutter 2026: the AI-SDLC Summit: attended",
-      "value": "87",
-      "cur": 87,
-      "prev": null,
-      "before": null,
-      "change_pct": null,
-      "good": null
-     },
-     "why": "174 signed up. 3 had a meeting since.",
+     "notable": false,
+     "main": null,
+     "why": "3 Flutter attendees booked a meeting after.",
      "do": null,
      "trend": []
     },
@@ -1803,8 +1908,8 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
-     "do": null,
+     "why": "Software Factory brought 482 visits, 167 engaged.",
+     "do": "Fix the PHP2Shell blog: 24 of 372 visits engaged.",
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
@@ -1950,7 +2055,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Subscribers gained rose to 19, up from 11.",
      "do": null,
      "trend": [
       {
@@ -1980,18 +2085,23 @@
      ]
     }
    ],
-   "by_claude": false,
+   "by_claude": true,
    "boxes": {
     "well": [
-     "Meetings booked with marketing contacts up 300%",
-     "Content page visits up 58.4%",
-     "Visits without email robots up 31.6%"
+     "Meetings booked rose to 20, up from 5.",
+     "Content visits grew 58.4% to 9,479.",
+     "Event form fills rose to 127, up from 79."
     ],
     "attention": [
-     "Times Google showed our pages down 52%",
-     "Marketing sourced deals (estimate) down 33.3%"
+     "Google showed our pages 52.0% less often.",
+     "Unlabelled visits jumped to 2,891, likely robots.",
+     "Contact form fills fell to 19, down from 29."
     ],
-    "do": []
+    "do": [
+     "Link contacts to deals: 63 had no contact in 3 months.",
+     "Filter out unlabelled visits, up from 583 to 2,891.",
+     "Fix the PHP2Shell blog: 24 of 372 visits engaged."
+    ]
    }
   }
  }

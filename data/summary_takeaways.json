@@ -1,89 +1,89 @@
 {
  "written_by": "Claude Code",
- "written_on": "2026-11-09",
+ "written_on": "2026-11-17",
  "week": {
-  "period": "2 to 8 Nov 2026",
-  "period_before": "26 Oct to 1 Nov 2026",
+  "period": "9 to 15 Nov 2026",
+  "period_before": "2 to 8 Nov 2026",
   "boxes": {
    "well": [
-    "COBOL Modernization visits rose to 60, up from 31.",
-    "Unlabelled visits fell to 834, down from 1,333.",
-    "Visits from other websites rose to 211, up from 155."
+    "Demo requests rose to 5, up from 1.",
+    "Google search clicks grew 25.1% to 637.",
+    "Campaign visits grew 61.4% to 71."
    ],
    "attention": [
-    "New marketing contacts fell to 2, down from 12.",
-    "Demo requests fell to 1, down from 3.",
-    "Campaign visits fell 38.9% to 44."
+    "Engaged visits fell 21.0% to 696.",
+    "Visits from other websites fell to 84, down from 211.",
+    "AI tool visits fell 29.7% to 26."
    ],
    "do": [
-    "Fix the COBOL page: only 5 of 60 visits engaged.",
-    "Write more like Claude Code Alternatives: 21 of 47 engaged.",
-    "Post more like 26 Oct: 1,244 views, next best 668."
+    "Write more like Claude Code Alternatives: 27 of 71 engaged.",
+    "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
+    "Link contacts to deals: 7 had no contact this week."
    ]
   },
   "areas": {
    "pipeline": {
-    "period": "26 Oct to 1 Nov 2026",
-    "period_before": "19 to 25 Oct 2026",
-    "main": "influenced_value",
-    "why": "Influenced pipeline came to $200,000 this week.",
-    "do": ""
-   },
-   "leads": {
     "period": "2 to 8 Nov 2026",
     "period_before": "26 Oct to 1 Nov 2026",
-    "main": "demo_requests",
+    "main": "",
     "why": "",
+    "do": "Link contacts to deals: 7 had no contact this week."
+   },
+   "leads": {
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
+    "main": "demo_requests",
+    "why": "Event form fills fell to 6, down from 11.",
     "do": ""
    },
    "journey": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "new_marketing_contacts",
-    "why": "Meetings booked rose to 2, up from 1.",
+    "why": "Direct visits and Google search each brought 2 contacts.",
     "do": ""
    },
    "visits": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "visits_without_email_robots",
-    "why": "Unlabelled visits fell to 834, down from 1,333.",
+    "why": "Unlabelled visits fell to 352, down from 834.",
     "do": ""
    },
    "search": {
-    "period": "26 Oct to 1 Nov 2026",
-    "period_before": "19 to 25 Oct 2026",
-    "main": "times_shown",
-    "why": "Average spot improved to 10.7, from 12.6.",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
+    "main": "clicks",
+    "why": "Sunday's figure is Google's early number and may change.",
     "do": ""
    },
    "aeo": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "ai_visits",
-    "why": "ChatGPT sent 23 of the 37 AI visits.",
+    "why": "ChatGPT sent 16 of the 26 AI visits.",
     "do": ""
    },
    "campaigns": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "campaign_visits",
-    "why": "VIP_experiences led with 6 visits, 3 engaged.",
-    "do": ""
+    "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
+    "do": "Repeat the harness-engineering campaign: 7 of 19 visits engaged."
    },
    "events": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "",
     "why": "",
     "do": ""
    },
    "content": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "content_visits",
-    "why": "COBOL Modernization visits rose to 60, up from 31.",
-    "do": "Write more like Claude Code Alternatives: 21 of 47 engaged."
+    "why": "Claude Code Alternatives visits rose to 71, up from 47.",
+    "do": "Write more like Claude Code Alternatives: 27 of 71 engaged."
    },
    "linkedin": {
     "period": "26 Oct to 1 Nov 2026",
@@ -100,32 +100,32 @@
     "do": ""
    },
    "youtube": {
-    "period": "26 Oct to 1 Nov 2026",
-    "period_before": "19 to 25 Oct 2026",
+    "period": "2 to 8 Nov 2026",
+    "period_before": "26 Oct to 1 Nov 2026",
     "main": "long_video_views",
-    "why": "",
+    "why": "Viewers watched 84 minutes of long videos.",
     "do": ""
    }
   }
  },
  "month": {
-  "period": "1 to 31 Oct 2026",
-  "period_before": "1 to 30 Sep 2026",
+  "period": "1 to 15 Nov 2026",
+  "period_before": "1 to 31 Oct 2026",
   "boxes": {
    "well": [
-    "Demo requests rose to 22, up from 6.",
-    "Visits without email robots grew 71.9%.",
-    "LinkedIn post clicks grew 581.4% to 7,536."
+    "COBOL Modernization visits rose to 113, up from 53.",
+    "Harness Engineering blog visits rose to 80, up from 45.",
+    "Change impact campaign kept 11 of 12 visitors engaged."
    ],
    "attention": [
-    "Meetings booked fell to 4, down from 11.",
-    "Campaign visits fell 51.1% to 486.",
-    "Google showed our pages 22.6% less often."
+    "Half of November brought 6 demo requests, against 22 in October.",
+    "Half of November brought 7 new contacts, against 82.",
+    "Gartner offer form fills slowed to 2, from 67."
    ],
    "do": [
-    "Link contacts to deals: 20 had no contact this month.",
-    "Write more like Claude Code Alternatives: 81 of 189 engaged.",
-    "Find what drove direct visits from 2,742 to 8,400."
+    "Write more like Claude Code Alternatives: 51 of 123 engaged.",
+    "Fix the COBOL page: only 17 of 113 visits engaged.",
+    "Link contacts to deals: 20 had no contact in October."
    ]
   },
   "areas": {
@@ -134,63 +134,63 @@
     "period_before": "1 to 30 Sep 2026",
     "main": "sourced_deals",
     "why": "Their pipeline came to $200,000, down from $588,000.",
-    "do": "Link contacts to deals: 20 had no contact this month."
+    "do": "Link contacts to deals: 20 had no contact in October."
    },
    "leads": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "demo_requests",
-    "why": "The Gartner offer also brought 67 form fills.",
+    "why": "Gartner offer form fills slowed to 2, from 67.",
     "do": ""
    },
    "journey": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "meetings_booked",
-    "why": "New contacts fell to 82, down from 244.",
+    "why": "Half of November brought 7 new contacts, against 82.",
     "do": ""
    },
    "visits": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "visits_without_email_robots",
-    "why": "Unlabelled visits jumped to 1,435, likely robots.",
-    "do": "Find what drove direct visits from 2,742 to 8,400."
+    "why": "Half of November is set against all of October.",
+    "do": ""
    },
    "search": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
-    "main": "times_shown",
-    "why": "Fewer people saw our pages in Google search.",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
+    "main": "clicks",
+    "why": "Half of November is set against all of October.",
     "do": ""
    },
    "aeo": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "ai_visits",
-    "why": "AI tool visits led to 2 demo form fills.",
+    "why": "ChatGPT sent 40 of the 66 AI visits.",
     "do": ""
    },
    "campaigns": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "campaign_visits",
-    "why": "DG-FY27-Gartner-MQ led with 42 visits, 27 engaged.",
+    "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
     "do": ""
    },
    "events": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
-    "main": "attended",
-    "why": "174 signed up, and 3 had a meeting since.",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
+    "main": "",
+    "why": "",
     "do": ""
    },
    "content": {
-    "period": "1 to 31 Oct 2026",
-    "period_before": "1 to 30 Sep 2026",
+    "period": "1 to 15 Nov 2026",
+    "period_before": "1 to 31 Oct 2026",
     "main": "content_visits",
-    "why": "Claude Code Alternatives kept 81 of 189 visitors engaged.",
-    "do": "Write more like Claude Code Alternatives: 81 of 189 engaged."
+    "why": "COBOL Modernization visits rose to 113, up from 53.",
+    "do": "Fix the COBOL page: only 17 of 113 visits engaged."
    },
    "linkedin": {
     "period": "1 to 31 Oct 2026",
@@ -209,88 +209,88 @@
   }
  },
  "quarter": {
-  "period": "9 Aug to 8 Nov 2026",
-  "period_before": "9 May to 8 Aug 2026",
+  "period": "16 Aug to 15 Nov 2026",
+  "period_before": "16 May to 15 Aug 2026",
   "boxes": {
    "well": [
-    "Meetings booked rose to 19, up from 5.",
-    "Content visits grew 51.7% to 8,857.",
-    "Event form fills rose to 121, up from 79."
+    "Meetings booked rose to 20, up from 5.",
+    "Content visits grew 58.4% to 9,479.",
+    "Event form fills rose to 127, up from 79."
    ],
    "attention": [
-    "Google showed our pages 46.0% less often.",
-    "Unlabelled visits jumped to 2,563, likely robots.",
-    "Contact form fills fell to 19, down from 31."
+    "Google showed our pages 52.0% less often.",
+    "Unlabelled visits jumped to 2,891, likely robots.",
+    "Contact form fills fell to 19, down from 29."
    ],
    "do": [
     "Link contacts to deals: 63 had no contact in 3 months.",
-    "Filter out unlabelled visits, up from 591 to 2,563.",
-    "Fix the PHP2Shell blog: 23 of 367 visits engaged."
+    "Filter out unlabelled visits, up from 583 to 2,891.",
+    "Fix the PHP2Shell blog: 24 of 372 visits engaged."
    ]
   },
   "areas": {
    "pipeline": {
-    "period": "6 Aug to 5 Nov 2026",
-    "period_before": "6 May to 5 Aug 2026",
+    "period": "9 Aug to 8 Nov 2026",
+    "period_before": "9 May to 8 Aug 2026",
     "main": "sourced_value",
     "why": "Influenced pipeline rose 21.2% to $1,030,000.",
     "do": "Link contacts to deals: 63 had no contact in 3 months."
    },
    "leads": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "demo_requests",
-    "why": "Event form fills rose to 121, up from 79.",
+    "why": "Event form fills rose to 127, up from 79.",
     "do": ""
    },
    "journey": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "meetings_booked",
-    "why": "Events brought 196 of 361 new contacts.",
+    "why": "Events brought 196 of 358 new contacts.",
     "do": ""
    },
    "visits": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "visits_without_email_robots",
-    "why": "Unlabelled visits jumped to 2,563, likely robots.",
-    "do": "Filter out unlabelled visits, up from 591 to 2,563."
+    "why": "Unlabelled visits jumped to 2,891, likely robots.",
+    "do": "Filter out unlabelled visits, up from 583 to 2,891."
    },
    "search": {
-    "period": "8 Aug to 7 Nov 2026",
-    "period_before": "8 May to 7 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "times_shown",
-    "why": "Average spot slipped to 11.0, from 9.6.",
+    "why": "Average spot slipped to 11.1, from 9.6.",
     "do": ""
    },
    "aeo": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "ai_visits",
-    "why": "ChatGPT sent 125 visits and Gemini 110.",
+    "why": "ChatGPT sent 131 visits and Gemini 118.",
     "do": ""
    },
    "campaigns": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "campaign_visits",
     "why": "Tokenomics brought 1,834 visits, but only 247 engaged.",
     "do": ""
    },
    "events": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "",
     "why": "3 Flutter attendees booked a meeting after.",
     "do": ""
    },
    "content": {
-    "period": "9 Aug to 8 Nov 2026",
-    "period_before": "9 May to 8 Aug 2026",
+    "period": "16 Aug to 15 Nov 2026",
+    "period_before": "16 May to 15 Aug 2026",
     "main": "content_visits",
-    "why": "Software Factory brought 443 visits, 156 engaged.",
-    "do": "Fix the PHP2Shell blog: 23 of 367 visits engaged."
+    "why": "Software Factory brought 482 visits, 167 engaged.",
+    "do": "Fix the PHP2Shell blog: 24 of 372 visits engaged."
    },
    "linkedin": {
     "period": "8 Aug to 7 Nov 2026",
@@ -307,10 +307,10 @@
     "do": ""
    },
    "youtube": {
-    "period": "7 Aug to 6 Nov 2026",
-    "period_before": "7 May to 6 Aug 2026",
+    "period": "15 Aug to 14 Nov 2026",
+    "period_before": "15 May to 14 Aug 2026",
     "main": "long_video_views",
-    "why": "Subscribers gained rose to 19, up from 10.",
+    "why": "Subscribers gained rose to 19, up from 11.",
     "do": ""
    }
   }
