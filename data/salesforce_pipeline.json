@@ -41,10 +41,10 @@
   {
    "month": "2026-06",
    "quarter": "FY27 Q2",
-   "sourced_deals": 2,
-   "sourced_value": 150000,
-   "influenced_deals": 1,
-   "influenced_value": 150000,
+   "sourced_deals": 3,
+   "sourced_value": 300000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 13
@@ -63,10 +63,10 @@
   {
    "month": "2026-08",
    "quarter": "FY27 Q3",
-   "sourced_deals": 2,
-   "sourced_value": 368000,
-   "influenced_deals": 1,
-   "influenced_value": 150000,
+   "sourced_deals": 3,
+   "sourced_value": 518000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 18
@@ -85,10 +85,10 @@
   {
    "month": "2026-10",
    "quarter": "FY27 Q3",
-   "sourced_deals": 3,
-   "sourced_value": 200000,
-   "influenced_deals": 4,
-   "influenced_value": 350000,
+   "sourced_deals": 4,
+   "sourced_value": 350000,
+   "influenced_deals": 3,
+   "influenced_value": 200000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 20
@@ -308,10 +308,10 @@
   },
   {
    "date": "2026-06-10",
-   "sourced_deals": 0,
-   "sourced_value": 0,
-   "influenced_deals": 1,
-   "influenced_value": 150000,
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 0
@@ -508,10 +508,10 @@
   },
   {
    "date": "2026-08-13",
-   "sourced_deals": 0,
-   "sourced_value": 0,
-   "influenced_deals": 1,
-   "influenced_value": 150000,
+   "sourced_deals": 1,
+   "sourced_value": 150000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 0
@@ -648,10 +648,10 @@
   },
   {
    "date": "2026-10-07",
-   "sourced_deals": 1,
-   "sourced_value": 0,
-   "influenced_deals": 1,
-   "influenced_value": 150000,
+   "sourced_deals": 2,
+   "sourced_value": 150000,
+   "influenced_deals": 0,
+   "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 2
@@ -1036,6 +1036,12 @@
   },
   {
    "bucket": "sourced",
+   "campaign": "DG-Demo Requests",
+   "deals": 4,
+   "value": 600000
+  },
+  {
+   "bucket": "sourced",
    "campaign": "DG-FY27-Gartner-MQ",
    "deals": 1,
    "value": 588000
@@ -1051,12 +1057,6 @@
    "campaign": "DG-FY27-Q3-Gartner-Xpo",
    "deals": 1,
    "value": 500000
-  },
-  {
-   "bucket": "influenced",
-   "campaign": "DG-Demo Requests",
-   "deals": 4,
-   "value": 480000
   },
   {
    "bucket": "sourced",
@@ -1114,12 +1114,6 @@
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-Demo Requests",
-   "deals": 1,
-   "value": 150000
-  },
-  {
-   "bucket": "sourced",
    "campaign": "DG-F27 - Partner Deal Reg",
    "deals": 1,
    "value": 150000
@@ -1159,6 +1153,12 @@
    "campaign": "DG-FY27-Q1-Partner-Interest",
    "deals": 1,
    "value": 36000
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-Demo Requests",
+   "deals": 1,
+   "value": 30000
   },
   {
    "bucket": "sourced",
@@ -1297,19 +1297,6 @@
     "DG-FY23-Dreamforce 2023",
     "DG-FY26-GHAS-Nurture",
     "Nurture 2 - Salesforce DevOps",
-    "SDR-Meeting-Set"
-   ],
-   "reasons": [
-    "Matches more than 1 source: SDR or AE outreach, marketing"
-   ]
-  },
-  {
-   "date": "2026-10-07",
-   "amount": 150000,
-   "stage": "3 POC",
-   "counted_as": "Marketing influenced",
-   "campaigns": [
-    "DG-Demo Requests",
     "SDR-Meeting-Set"
    ],
    "reasons": [
@@ -2119,11 +2106,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022",
     "people": 1
    },
    {
@@ -2155,7 +2142,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
@@ -2163,7 +2150,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
    {

@@ -99,3 +99,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] GEroundtable counts (Purav, 17 Nov 2026): trade press is 5 on the Brand relaunch hub.
 - [x] 17 Nov: Content by type has a total line (blogs in the period and in the last full month), and Month view cards show this quarter so far and the last full quarter. 3 November blogs tagged. Counts checked against Contentful: Nov 4, Oct 14, Sep 22, Aug 1.
 - [ ] "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.
+- [ ] Waiting on David (17 Nov): the $30K Q3 deal (Closed Lost, created 9 Sep) also started with a demo request after an SDR meeting. Sourced or influenced? Influenced for now.
+- [ ] Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
+- [ ] Waiting on David (17 Nov): the $500,000 Q3 deal credited to Gartner Xpo. David says partner deal registration plus a Software Forge page visit, but his 2 Nov export links those touches to the other deal at the same account. Influenced and credited to Gartner Xpo for now.
+- [ ] Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.

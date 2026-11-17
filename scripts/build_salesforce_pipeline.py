@@ -32,6 +32,11 @@ Agreed with Purav on 9 Nov 2026 (replacing the 6 Nov flags): a deal that existed
 influenced, never sourced, and is flagged "Deal existed before the event; counted as influenced" on the To review list.
 - Accounts in INFLUENCED_ONLY (the account name is never written): Honeywell Aerospace, sourced by GitHub Universe.
 - Any deal credited to an event that started after the deal was created (Insurity Forge and Gartner Xpo).
+Agreed with Purav on 17 Nov 2026, from David's comments on the Q3 deal sheet:
+- "Promoted to X2 Status" is a helper campaign, not a real source. When it is the Primary Campaign Source, the first real
+  campaign (Attrib First, then Attrib Last) takes its place as the source.
+- Deals David named as started with a demo request form count as sourced by DG-Demo Requests. They're listed in
+  hand-rules.json next to the exports, so no deal name is in this repo.
 """
 import collections
 import datetime as dt
@@ -63,6 +68,8 @@ FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 
          "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
          "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls", "event_tokenomics": "DG-FY27-Q3-Tokenomics-Webinar-*.xls"}
+HELPERS = {"DG-FY27 Promoted to X2 Status"}   # helper campaigns: never the source (David, 17 Nov 2026)
+HAND_RULES = EXPORTS / "hand-rules.json"     # private: deal names stay out of the repo
 INFLUENCED_ONLY = {"Honeywell Aerospace"}   # existed before the event it's credited to (Purav, 9 Nov 2026)
 EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
 EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28),
@@ -213,6 +220,9 @@ def main():
             joined[(e, name(m["Campaign Name"]))] = day(m["Member First Associated Date"])
             by_person_name[f"{m.get('First Name', '')} {m.get('Last Name', '')}".strip().lower()].add(e)
 
+    hand = json.loads(HAND_RULES.read_text()) if HAND_RULES.exists() else {}
+    by_demo_request = set(hand.get("sourced_by_demo_request", {}))
+
     BUCKETS = ("sourced", "influenced", "agency", "nocontact")
     STATUSES = ("won", "lost", "open")
     by_month = collections.defaultdict(lambda: {b: [0, 0] for b in BUCKETS})
@@ -250,6 +260,10 @@ def main():
 
         primary = name(o.get("Primary Campaign Source", ""))
         others = [name(o.get("Attrib First Campaign", "")), name(o.get("Attrib Last Campaign", "")), *sorted(touched.get(o["Opportunity Name"], ()))]
+        if primary in HELPERS:
+            primary = next((c for c in others[:2] if c and c not in HELPERS), "")
+        if o["Opportunity Name"].strip() in by_demo_request and "DG-Demo Requests" in others:
+            primary = "DG-Demo Requests"
         had_marketing = any(marketing(c) for c in [primary, *others])
         if marketing(primary) and counts(primary):
             bucket, campaign = "sourced", primary
