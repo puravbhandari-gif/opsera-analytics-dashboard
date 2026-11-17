@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=50">
+<link rel="stylesheet" href="styles.css?v=51">
 <script>
   try { const t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
 </script>
@@ -48,38 +48,54 @@
       <button id="theme-toggle" class="ghost" type="button" aria-label="Switch light or dark mode">Theme: Auto</button>
     </div>
   </div>
-  <div class="nav-row">
-    <label class="pick nav-pick">Section
-      <select id="tab-pick" aria-label="Choose a section of the dashboard">
-        <optgroup label="Results">
-          <option value="summary">Takeaways</option>
-          <option value="team">Team metrics</option>
-          <option value="pipeline">Pipeline</option>
-          <option value="leads">Leads</option>
-          <option value="journey">Customer journey</option>
-        </optgroup>
-        <optgroup label="Traffic">
-          <option value="visits">Website visits</option>
-          <option value="search">Google search</option>
-          <option value="aeo">AEO</option>
-        </optgroup>
-        <optgroup label="What we ran">
-          <option value="campaigns">Campaigns</option>
-          <option value="events">Events</option>
-          <option value="content">Content</option>
-          <option value="hubs">Hub and spoke campaigns</option>
-          <option value="pr">PR and media</option>
-        </optgroup>
-        <optgroup label="Social">
-          <option value="linkedin">LinkedIn brand</option>
-          <option value="linkedin-exec">LinkedIn exec</option>
-          <option value="youtube">YouTube</option>
-        </optgroup>
-        <optgroup label="Tool">
-          <option value="lookup">Look up</option>
-        </optgroup>
-      </select>
-    </label>
+  <div class="tabs-row">
+    <button class="tabs-arrow left" type="button" aria-label="Show earlier sections" hidden>&lsaquo;</button>
+    <nav class="tabs" id="tab-row" role="tablist" aria-label="Dashboard sections">
+      <div class="tab-group" role="presentation">
+        <span class="tab-group-label" aria-hidden="true">Results</span>
+        <div class="tab-group-buttons" role="presentation">
+          <button role="tab" type="button" data-tab="summary">Takeaways</button>
+          <!-- Team metrics is hidden until goals are set and everyone has numbers (Purav, 17 Nov 2026). Take "hidden" off to bring it back. -->
+          <button role="tab" type="button" data-tab="team" hidden>Team metrics</button>
+          <button role="tab" type="button" data-tab="pipeline">Pipeline</button>
+          <button role="tab" type="button" data-tab="leads">Leads</button>
+          <button role="tab" type="button" data-tab="journey">Customer journey</button>
+        </div>
+      </div>
+      <div class="tab-group" role="presentation">
+        <span class="tab-group-label" aria-hidden="true">Traffic</span>
+        <div class="tab-group-buttons" role="presentation">
+          <button role="tab" type="button" data-tab="visits">Website visits</button>
+          <button role="tab" type="button" data-tab="search">Google search</button>
+          <button role="tab" type="button" data-tab="aeo">AEO</button>
+        </div>
+      </div>
+      <div class="tab-group" role="presentation">
+        <span class="tab-group-label" aria-hidden="true">What we ran</span>
+        <div class="tab-group-buttons" role="presentation">
+          <button role="tab" type="button" data-tab="campaigns">Campaigns</button>
+          <button role="tab" type="button" data-tab="events">Events</button>
+          <button role="tab" type="button" data-tab="content">Content</button>
+          <button role="tab" type="button" data-tab="hubs">Hub and spoke campaigns</button>
+          <button role="tab" type="button" data-tab="pr">PR and media</button>
+        </div>
+      </div>
+      <div class="tab-group" role="presentation">
+        <span class="tab-group-label" aria-hidden="true">Social</span>
+        <div class="tab-group-buttons" role="presentation">
+          <button role="tab" type="button" data-tab="linkedin">LinkedIn brand</button>
+          <button role="tab" type="button" data-tab="linkedin-exec">LinkedIn exec</button>
+          <button role="tab" type="button" data-tab="youtube">YouTube</button>
+        </div>
+      </div>
+      <div class="tab-group" role="presentation">
+        <span class="tab-group-label" aria-hidden="true">Tool</span>
+        <div class="tab-group-buttons" role="presentation">
+          <button role="tab" type="button" data-tab="lookup">Look up</button>
+        </div>
+      </div>
+    </nav>
+    <button class="tabs-arrow right" type="button" aria-label="Show more sections" hidden>&rsaquo;</button>
   </div>
 </header>
 
@@ -388,7 +404,7 @@
   <!-- Website visits -->
   <section id="tab-visits" class="tab" role="tabpanel" hidden>
     <h2>Website visits</h2>
-    <p class="lead">Visits to opsera.ai. The engaged ones are people who stayed, which leaves out most email robots.</p>
+    <p class="lead">All visits to opsera.ai come first. Engaged visits are people who stayed, which leaves out most email robots.</p>
 
     <div class="cards" id="visits-cmp-cards"></div>
     <p class="source" id="visits-cmp-source"></p>
@@ -531,6 +547,7 @@
     <p class="note">First version. Credit rules are being confirmed, so numbers may change.</p>
     <div class="cards" id="pipe-cmp-cards"></div>
     <p class="source" id="pipe-cmp-source"></p>
+    <p class="note-inline" id="pipe-export-gap"></p>
     <p class="note-inline" id="pipe-undercount"></p>
     <div class="panel">
       <div class="panel-head">
@@ -1141,6 +1158,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=139"></script>
+<script src="app.js?v=145"></script>
 </body>
 </html>

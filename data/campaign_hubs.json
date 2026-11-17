@@ -4,6 +4,7 @@
   "name: the campaign. hub: the core piece. kind is what it is (Blog, Webinar, Event, Press release, Report), title and date, plus link if there is one. short_title is an optional shorter title for the diagram.",
   "For visits, give hub.visits_path (an opsera.ai path). The page counts Google Analytics visits from hub.date, or from visits_from, to visits_to if given. Or give hub.number as text.",
   "spokes: each has group (Format or Channel) and name, plus link, visits_path or number as text.",
+  "A spoke made of several pieces takes links instead of link: a list of label and link, shown under the diagram.",
   "source is the line under the card. numbers_note says where the numbers came from and when.",
   "note: an optional short label under the campaign name, for example \"Runs into Q4, counted from 28 Oct\".",
   "Never put people's emails or a single customer's deal in this file: it is public."
@@ -24,12 +25,48 @@
     {
      "group": "Channel",
      "name": "Wire pickups",
-     "number": "4, incl. Yahoo Finance"
+     "number": "4, incl. Yahoo Finance",
+     "links": [
+      {
+       "label": "Yahoo Finance",
+       "link": "https://finance.yahoo.com/technology/ai/articles/opsera-relaunches-ai-native-software-130000553.html"
+      },
+      {
+       "label": "The Manila Times",
+       "link": "https://www.manilatimes.net/2026/10/28/tmt-newswire/globenewswire/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/2456240"
+      },
+      {
+       "label": "Business Insider",
+       "link": "https://markets.businessinsider.com/news/stocks/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise-1036676803"
+      },
+      {
+       "label": "AiThority",
+       "link": "https://aithority.com/machine-learning/opsera-relaunches-as-an-ai-native-software-factory-for-the-enterprise/"
+      }
+     ]
     },
     {
      "group": "Channel",
      "name": "Trade press stories",
-     "number": "4, incl. SD Times"
+     "number": "4, incl. SD Times",
+     "links": [
+      {
+       "label": "SD Times",
+       "link": "https://sdtimes.com/ai/opsera-relaunches-as-an-ai-native-software-factory/"
+      },
+      {
+       "label": "DEVOPSdigest",
+       "link": "https://www.devopsdigest.com/opsera-relaunches-ai-native-software-factory"
+      },
+      {
+       "label": "CMOtech",
+       "link": "https://cmotech.news/story/opsera-relaunches-as-ai-native-software-factory-platform"
+      },
+      {
+       "label": "TechGig",
+       "link": "https://techgig.com/news/ai/opsera-relaunches-as-ai-native-software-factory-with-forge-at-core/135388064"
+      }
+     ]
     },
     {
      "group": "Format",
@@ -98,7 +135,61 @@
     {
      "group": "Channel",
      "name": "Brand LinkedIn posts",
-     "number": "13 posts, 22,758 times seen"
+     "number": "13 posts, 22,563 times seen",
+     "links": [
+      {
+       "label": "27 Aug",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7498840725271531520"
+      },
+      {
+       "label": "9 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7503504837137862656"
+      },
+      {
+       "label": "14 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7505339614937886720"
+      },
+      {
+       "label": "22 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7508193702448705536"
+      },
+      {
+       "label": "24 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7508933654841221120"
+      },
+      {
+       "label": "25 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7509303267416424448"
+      },
+      {
+       "label": "29 Sep",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7510805672025001984"
+      },
+      {
+       "label": "1 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511568193216274433"
+      },
+      {
+       "label": "1 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511556527002947584"
+      },
+      {
+       "label": "1 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7511555584178073600"
+      },
+      {
+       "label": "5 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7512947546097569792"
+      },
+      {
+       "label": "6 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7513320818509086721"
+      },
+      {
+       "label": "9 Oct",
+       "link": "https://www.linkedin.com/feed/update/urn:li:activity:7514354179625340928"
+      }
+     ]
     },
     {
      "group": "Channel",
@@ -112,7 +203,7 @@
     }
    ],
    "source": "Source: Flutter 2026 campaign, 1 Oct 2026",
-   "numbers_note": "Registrations and check-ins from Valentina's Luma list; 25 of the 119 checked in are Opsera staff. Emails from HubSpot, LinkedIn from the company page export, campaign links and page visits from Google Analytics, opsera.ai only, 1 Aug to 31 Oct 2026."
+   "numbers_note": "Registrations and check-ins from Valentina's Luma list; 25 of the 119 checked in are Opsera staff. Emails from HubSpot, LinkedIn from the company page export, campaign links and page visits from Google Analytics, opsera.ai only, 1 Aug to 31 Oct 2026. LinkedIn times seen checked 17 Nov 2026."
   },
   {
    "name": "Tokenomics",
@@ -129,7 +220,8 @@
     {
      "group": "Format",
      "name": "Webinar recording",
-     "number": "Emailed after the webinar"
+     "number": "Emailed after the webinar",
+     "link": "https://www.youtube.com/watch?v=VuIhE0jl-l8"
     },
     {
      "group": "Format",
@@ -173,7 +265,8 @@
     },
     {
      "group": "Format",
-     "name": "Video with Vishnu and Nassir"
+     "name": "Video with Vishnu and Nassir",
+     "link": "https://www.youtube.com/watch?v=4cSX0l4pHUM"
     },
     {
      "group": "Format",
@@ -182,7 +275,8 @@
     {
      "group": "Channel",
      "name": "Kumar's LinkedIn post",
-     "number": "12 reactions"
+     "number": "17 reactions",
+     "link": "https://www.linkedin.com/posts/kumar-chivukula_php2shell-invisible-threats-and-what-to-activity-7521012966645923840-Xx-G"
     },
     {
      "group": "Channel",
@@ -213,7 +307,7 @@
     }
    ],
    "source": "Source: PHP2Shell campaign, 26 Oct 2026",
-   "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct."
+   "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct. Kumar's post reactions checked 17 Nov 2026."
   }
  ]
 }

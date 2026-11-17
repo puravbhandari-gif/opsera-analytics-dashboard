@@ -471,6 +471,12 @@ function fillCompare(spec) {
       // `extra` adds a second number for each period (the pipeline value next to the deal count), so each stays with its period
       const sub = p.prev ? `${p.prevName}: ${m.fmt(prev)}${m.extra ? `, ${m.extra(p.prev.start, p.prev.end)}` : ""}` : p.none;
       const note = typeof m.sub === "function" ? m.sub(p.cur.start, p.cur.end) : m.sub;   // a note can depend on the period
+      // A period with none of these yet says so in words, with the last full quarter next to it, so 0 doesn't read as broken (agreed 17 Nov 2026)
+      if (m.none && !cur) {
+        const yet = p.cur.end >= spec.last, lq = quarterStart(addDays(quarterStart(spec.last), -1));
+        const fullQ = lq >= spec.start && lq !== p.cur.start && m.value(lq, quarterEnd(lq)) ? ` ${quarterName(lq)}, the last full quarter: ${m.fmt(m.value(lq, quarterEnd(lq)))}${m.extra ? `, ${m.extra(lq, quarterEnd(lq))}` : ""}.` : "";
+        return card(m.label, yet ? "None yet" : "None", `No ${m.none} created ${range(p.cur.start, p.cur.end)}${yet ? " so far" : ""}.${fullQ}${note ? ` ${note}.` : ""}`);
+      }
       return card(m.label, m.fmt(cur), [m.extra ? m.extra(p.cur.start, p.cur.end) : "", sub, note].filter(Boolean).join(". "), m.noDelta ? "" : cmpDelta(cur, prev, m.lowerIsBetter));
     }).join("");
     $(`${spec.id}-cmp-source`).textContent = (p.why ? `${p.why} ` : "") + spec.source(p.cur.start, p.cur.end) +
@@ -607,8 +613,8 @@ function renderVisits(d) {
   const email = d.channels.find((r) => r.sessionDefaultChannelGroup === "Email");
   $("visits-source").textContent = `${src}, ${when}.`;
   $("visits-cards").innerHTML =
-    card("Engaged visits", num(t.engagedSessions), "Stayed 10+ seconds, saw 2+ pages, or filled a form") +
     card("All visits", num(t.sessions), "Includes robots") +
+    card("Engaged visits", num(t.engagedSessions), "Stayed 10+ seconds, saw 2+ pages, or filled a form") +
     card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged` : "") +
     card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1));
   $("visits-more-cards").innerHTML = card("People visiting", num(t.totalUsers), "Includes robots");
@@ -619,8 +625,8 @@ function renderVisits(d) {
   chart("visits-daily", (th) => ({
     type: "line", dates: d.daily.map((r) => [r.date, r.date]), 
     data: { labels: d.daily.map((r) => day(r.date)), datasets: [
-      line("Engaged visits", d.daily.map((r) => r.engagedSessions), th.s[0]),
-      line("All visits", d.daily.map((r) => r.sessions), th.s[1]),
+      line("All visits", d.daily.map((r) => r.sessions), th.s[0]),
+      line("Engaged visits", d.daily.map((r) => r.engagedSessions), th.s[1]),
       line("Visits from email", d.daily.map((r) => emailByDay[r.date] || 0), th.s[2]),
     ] },
   }));
@@ -677,8 +683,8 @@ function renderVisits(d) {
   const emailRows = d.daily.map((r) => ({ date: r.date, visits: emailByDay[r.date] || 0 }));
   compare({ id: "visits", start: d.start_date, last: lastFullDayPacific(d.end_date, d.pulled_at),
     source: (a, b) => `${src}, ${range(a, b)} (Pacific time).`, metrics: [
-      { label: "Engaged visits", value: engaged, fmt: num },
       { label: "All visits", value: all, fmt: num, sub: (a, b) => `Includes robots. Without email robots: ${num(all(a, b) - robots(a, b))}` },
+      { label: "Engaged visits", value: engaged, fmt: num, sub: "Stayed 10+ seconds, saw 2+ pages, or filled a form" },
       { label: "Visits from email", value: rangeSum(emailRows, "visits"), fmt: num },
       { label: "Share who engaged", value: (a, b) => (all(a, b) ? (engaged(a, b) / all(a, b)) * 100 : null), fmt: (v) => pct(v, 1), whole: false, yfmt: (v) => `${v}%` },
     ] });
@@ -1553,9 +1559,16 @@ async function renderAiVisibility(ga) {
   const bots = ai.bots || { daily: [], pages: [] };
   const botDays = bots.daily.length ? Math.round((toDate(bots.to) - toDate(bots.daily[0].date)) / 864e5) + 1 : 0;
   if (!bots.daily.length) {
-    $("aiv-bots").innerHTML = aivWait(`Google Analytics has received 0 AI bot visits${bots.from ? ` from ${day(bots.from)} to ${dayYear(bots.to)}` : ""}. The website has a bot log, but its 2 Google Analytics settings look unset on the live site. The website team needs to check them.`);
+    $("aiv-bots").innerHTML = aivWait(`Google Analytics returned no AI bot visits${bots.from ? ` from ${day(bots.from)} to ${dayYear(bots.to)}` : ""}.`);
   } else if (botDays < AIV_MIN_DAYS) {
-    $("aiv-bots").innerHTML = aivWait(`We have ${num(botDays)} days of bot visits, from ${day(bots.daily[0].date)} to ${dayYear(bots.to)}. Week by week numbers start once 4 weeks are in.`);
+    // under 4 weeks: a plain table by bot, no trend yet (Purav, 17 Nov 2026)
+    const total = {};
+    bots.daily.forEach((r) => { total[r.bot] = (total[r.bot] || 0) + r.visits; });
+    const all = Object.values(total).reduce((a, b) => a + b, 0);
+    $("aiv-bots").innerHTML = `<p><strong>${num(all)} bot visits</strong> from ${range(bots.daily[0].date, bots.to)} (${num(botDays)} days). The weekly trend starts after ${dayYear(addDays(bots.daily[0].date, AIV_MIN_DAYS - 1))}, once 4 weeks are in.</p><div id="aiv-bots-table"></div>`;
+    table($("aiv-bots-table"), { rows: Object.entries(total).map(([bot, visits]) => ({ bot, visits, share: visits / all })), sortKey: "visits", pageSize: 20, columns: [
+      { key: "bot", label: "Bot" }, { key: "visits", label: "Bot visits", num: true, fmt: num }, { key: "share", label: "Share of bot visits", num: true, fmt: (v) => `${(v * 100).toFixed(1)}%` },
+    ] });
   } else {
     const total = {}, wk = {};
     bots.daily.forEach((r) => { total[r.bot] = (total[r.bot] || 0) + r.visits; });
@@ -1571,7 +1584,11 @@ async function renderAiVisibility(ga) {
       { key: "page", label: "Page", search: true }, { key: "bot", label: "Bot", search: true }, { key: "visits", label: "Bot visits", num: true, fmt: num },
     ] });
   }
-  $("aiv-bots-source").textContent = `Source: Google Analytics, bot visits sent by the website's server${bots.from ? `, checked ${range(bots.from, bots.to)}` : ""}. Bots are programs, not people, so they are never added to visits.`;
+  const gaps = bots.plain_total_gaps || [];
+  const gapDays = gaps.length > 1 ? `${gaps.slice(0, -1).map(day).join(", ")} and ${day(gaps[gaps.length - 1])}` : gaps.map(day).join("");
+  $("aiv-bots-source").textContent = `Source: ${bots.source || "Google Analytics"}${bots.daily.length ? `, ${range(bots.daily[0].date, bots.to)}` : ""}. The website's server sends each bot visit. `
+    + (gaps.length ? `Google Analytics' plain total leaves out ${gapDays}. These numbers use the count by bot, which includes it. ` : "")
+    + "Bots are programs, not people, so they are never added to visits.";
 }
 
 function renderAeo(ga, hub) {
@@ -2403,17 +2420,21 @@ function renderHubs(d, lk) {
       ${wrap(h.hub.short_title || h.hub.title, 22).slice(0, 3).map((l, i) => `<text x="${cx}" y="${cy - 8 + i * 17}" class="hub-t">${esc(l)}</text>`).join("")}
       ${hubNumber ? `<text x="${cx}" y="${cy + 52}" class="hub-n">${esc(hubNumber)}</text>` : ""}
       ${nodes.map((n) => { const lines = wrap(n.name, 20), nums = n.number ? wrap(n.number, 22) : [], bw = 150, bh = 26 + lines.length * 15 + nums.length * 15;
-        return `<g class="hub-node ${n.group === "Format" ? "f" : "c"}"><rect x="${(n.x - bw / 2).toFixed(1)}" y="${(n.y - bh / 2).toFixed(1)}" width="${bw}" height="${bh}" rx="10"/>
+        const open = n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener" aria-label="${esc(n.name)}, opens in a new tab">` : "";
+        return `${open}<g class="hub-node ${n.group === "Format" ? "f" : "c"}${n.link ? " linked" : ""}"><rect x="${(n.x - bw / 2).toFixed(1)}" y="${(n.y - bh / 2).toFixed(1)}" width="${bw}" height="${bh}" rx="10"/>
           <text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 15).toFixed(1)}" class="hub-g">${n.group}</text>
           ${lines.map((l, i) => `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 31 + i * 15).toFixed(1)}" class="hub-name">${esc(l)}</text>`).join("")}
-          ${nums.map((l, i) => `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 33 + (lines.length + i) * 15).toFixed(1)}" class="hub-num">${esc(l)}</text>`).join("")}</g>`; }).join("")}
+          ${nums.map((l, i) => `<text x="${n.x.toFixed(1)}" y="${(n.y - bh / 2 + 33 + (lines.length + i) * 15).toFixed(1)}" class="hub-num">${esc(l)}</text>`).join("")}</g>${n.link ? "</a>" : ""}`; }).join("")}
     </svg>`;
+    // A spoke made of several pieces (press pickups, a run of posts) lists each piece under the diagram
+    const pieces = spokes.filter((s) => (s.links || []).length).map((s) => `<p class="hub-pieces"><strong>${esc(s.name)}:</strong> ${s.links.map((l) =>
+      `<a href="${esc(l.link)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(", ")}</p>`).join("");
     // Phones: the same hub and spokes as a list, so every label stays readable
     const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub ${esc(kind.toLowerCase())}, ${esc(dayYear(h.hub.date))}</span>
       ${h.hub.link ? `<a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>` : `<span>${esc(h.hub.title)}</span>`}${hubNumber ? `<strong>${esc(hubNumber)}</strong>` : ""}</div>
       ${["Format", "Channel"].map((g) => `<p class="hub-list-g">${g === "Format" ? "Formats" : "Channels"}</p><ul>${spokes.filter((s) => s.group === g).map((s) =>
         `<li class="${g === "Format" ? "f" : "c"}"><span>${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</span>${s.number ? `<strong>${esc(s.number)}</strong>` : ""}</li>`).join("")}</ul>`).join("")}</div>`;
-    return `<article class="hub hub-card"><h4>${esc(h.name)}</h4>${h.note ? `<p class="hub-note">${esc(h.note)}</p>` : ""}${svg}${list}<p class="source">${esc(h.source || "")}${h.source ? ". " : ""}${esc(h.numbers_note || d.numbers_note || "")}</p></article>`;
+    return `<article class="hub hub-card"><h4>${esc(h.name)}</h4>${h.note ? `<p class="hub-note">${esc(h.note)}</p>` : ""}${svg}${list}${pieces}<p class="source">${esc(h.source || "")}${h.source ? ". " : ""}${esc(h.numbers_note || d.numbers_note || "")}</p></article>`;
   };
   // A block with a mistake in it shows a short note instead of stopping the other cards
   const blocks = d.campaigns || d.hubs || [];
@@ -2755,10 +2776,12 @@ function renderPipeline(sf) {
   const dealsLast = addDays(sf.exports.opportunities, -1), deals = (n) => `${num(n)} deal${n === 1 ? "" : "s"}`;
   const bucketMetric = (label, k) => {
     const value = rangeSum(sf.days, `${k}_value`);
-    return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline` };
+    return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline`, none: `${label.replace(" (estimate)", "").toLowerCase()} deals` };
   };
   compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast, fullPeriods: true,
-    source: (a, b) => `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`,
+    source: (a, b) => { $("pipe-export-gap").textContent = b > sf.exports.campaign_touches   // deals after the last campaign export can't show their campaigns yet
+        ? `The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.` : "";
+      return `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`; },
     metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
       { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
   $("pipe-undercount").textContent = "Marketing sourced is an estimate: it rests on Salesforce's Primary Campaign Source, a starting point that isn't reliable on its own. " +
@@ -2793,7 +2816,8 @@ function renderPipeline(sf) {
     drawTime();
   });
   drawTime();
-  $("pipe-time-source").textContent = `Source: Salesforce opportunities created ${when}, exported ${exports}. Sourced and influenced are never added together.`;
+  $("pipe-time-source").textContent = `Source: Salesforce opportunities created ${when}, exported ${exports}. Sourced and influenced are never added together.` +
+    (sf.opportunities_to > sf.exports.campaign_touches ? ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so ${monthName(sf.opportunities_to)} may change when the next export arrives.` : "");
 
   table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: { sourced: "Marketing sourced (estimate)", influenced: "Marketing influenced", agency: "Booking agency" }[c.bucket] })),
     search: "campaigns", sortKey: "value", columns: [
@@ -3017,16 +3041,28 @@ function renderRankings(d) {
   $("rank-table-source").textContent = `Source: Google Search Console for spots and clicks, ${range(d.start_date, last)}${latestFull ? "" : " (the last week isn't finished)"}. Visits since 30 Sep are from Google Analytics, for blogs and resources only. Up means a better spot.`;
 }
 
+const tabRow = $("tab-row");
+function tabArrows() {
+  const scrollable = tabRow.scrollWidth > tabRow.clientWidth + 1;
+  document.querySelector(".tabs-arrow.left").hidden = !scrollable || tabRow.scrollLeft <= 2;
+  document.querySelector(".tabs-arrow.right").hidden = !scrollable || tabRow.scrollLeft + tabRow.clientWidth >= tabRow.scrollWidth - 2;
+}
 function showTab(name) {
   if (name === "content-hubs") name = "hubs";   // the older link to the hub and spoke campaigns
+  if (name === "team" && tabRow.querySelector('[data-tab="team"]').hidden) name = "summary";   // Team metrics is hidden for now
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
   const execish = name === "exec" || name === "seo";   // the exec views have no team controls
   document.body.classList.toggle("exec-mode", execish);
   $("to-exec").classList.toggle("on", name === "exec"); $("to-seo").classList.toggle("on", name === "seo"); $("to-team").classList.toggle("on", !execish);
   document.querySelectorAll(".tab").forEach((s) => { s.hidden = s.id !== `tab-${name}`; });
-  const pick = $("tab-pick"), listed = [...pick.options].some((o) => o.value === name);
-  if (listed) pick.value = name; else pick.selectedIndex = -1;
+  let listed = false;
+  tabRow.querySelectorAll("button").forEach((b) => {
+    const on = b.dataset.tab === name;
+    b.setAttribute("aria-selected", String(on));
+    if (on) { listed = true; b.scrollIntoView({ block: "nearest", inline: "nearest" }); }
+  });
+  tabArrows();
   charts.forEach((c) => c.instance && c.instance.resize());
   document.querySelectorAll(`#tab-${name} [id$="-cmp-cards"]`).forEach(countUp);
   if (name === "exec") openExec();
@@ -3043,8 +3079,13 @@ function showTab(name) {
   // the exec view and the footer views aren't in the list, so start them at the top of the page
   if (!listed) window.scrollTo(0, 0);
 }
-// The full dashboard: one list of sections, grouped as Results, Traffic, What we ran, Social and Tool (agreed 6 Nov 2026)
-$("tab-pick").addEventListener("change", (e) => { showTab(e.target.value); window.scrollTo(0, 0); });
+// The full dashboard: one row of sections, grouped as Results, Traffic, What we ran, Social and Tool, with arrows when they don't fit (17 Nov 2026)
+tabRow.addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { showTab(b.dataset.tab); window.scrollTo(0, 0); } });
+document.querySelectorAll(".tabs-arrow").forEach((b) => b.addEventListener("click", () => {
+  tabRow.scrollBy({ left: (b.classList.contains("left") ? -1 : 1) * tabRow.clientWidth * 0.7, behavior: calm.matches ? "auto" : "smooth" });
+}));
+tabRow.addEventListener("scroll", tabArrows, { passive: true });
+addEventListener("resize", tabArrows);
 // Exec view and Team view (the full dashboard), both always at the top (agreed 6 Nov 2026)
 $("to-exec").addEventListener("click", () => showTab("exec"));
 $("to-seo").addEventListener("click", () => showTab("seo"));
@@ -3099,6 +3140,8 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       value: (a, b) => sourced(a, b) + influenced(a, b),
       line: (a, b) => `${moneyShort(sourced(a, b))} sourced, ${moneyShort(influenced(a, b))} influenced`,
       note: (a, b) => byStatus.map(([k, f]) => `${k[0].toUpperCase() + k.slice(1)} ${moneyShort(f(a, b))}`).join(" / "),
+      none: "No deals yet", noneLine: (a, b) => `No marketing sourced or influenced deals created ${range(a, b)} so far.` +
+        (b > sf.exports.campaign_touches ? ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.` : ""),
       src: `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
       line: () => "Demo form fills on opsera.ai",
@@ -3139,6 +3182,13 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       const p = periods(q, m), cur = m.value(p.cur.start, p.cur.end), prev = p.prev ? m.value(p.prev.start, p.prev.end) : null;
       const ch = prev ? ((cur - prev) / prev) * 100 : null;
       const prevLabel = `${quarterName(p.ps)}${p.prev && p.prev.end < quarterEnd(p.ps) ? `, ${range(p.prev.start, p.prev.end)}` : ""}`;
+      // A quarter under way with nothing yet says so in words, next to the whole quarter before, not "$0" and "-100%" (agreed 17 Nov 2026)
+      if (m.none && !cur && p.cur.end < quarterEnd(q)) {
+        return `<article class="exec-card"><h3>${esc(m.label)}</h3><div class="exec-big exec-none value">${esc(m.none)}</div>
+          <p class="exec-line">${esc(m.noneLine(p.cur.start, p.cur.end))}</p>
+          ${barsFor([...(p.prev ? [{ label: `${quarterName(p.ps)}, full quarter`, v: m.value(p.ps, quarterEnd(p.ps)), fmt: m.fmt }] : []),
+            { label: `${quarterName(q)} to ${day(p.cur.end)}`, v: 0, fmt: () => "None yet", now: true }])}</article>`;
+      }
       return `<article class="exec-card"><h3>${esc(m.label)}</h3><div class="exec-big value">${esc(m.fmt(cur))}</div>
         ${ch == null ? "" : `<div class="exec-change ${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}% vs ${esc(quarterName(p.ps))}</div>`}
         <p class="exec-line">${esc(m.line(p.cur.start, p.cur.end))}${m.note ? `<span class="exec-note">${esc(typeof m.note === "function" ? m.note(p.cur.start, p.cur.end) : m.note)}</span>` : ""}</p>

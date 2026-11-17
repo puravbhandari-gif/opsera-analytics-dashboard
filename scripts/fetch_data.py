@@ -199,7 +199,7 @@ def check_ga_property(s):
     return prop.get("timeZone")
 
 
-def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=None):
+def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=None, prop=GA_PROPERTY_ID):
     rows, offset = [], 0
     while True:
         body = {
@@ -217,7 +217,7 @@ def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=Non
             filters.append({"filter": {"fieldName": "hostName", "inListFilter": {"values": SITE_HOSTS}}})
         if filters:
             body["dimensionFilter"] = filters[0] if len(filters) == 1 else {"andGroup": {"expressions": filters}}
-        res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{GA_PROPERTY_ID}:runReport", body)
+        res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport", body)
         for row in res.get("rows", []):
             rec = {d: v["value"] for d, v in zip(dims, row.get("dimensionValues", []))}
             for m, v in zip(metrics, row["metricValues"]):
@@ -407,18 +407,46 @@ def ai_landing_weekly(s, end):
 
 
 AI_BOT_EVENT = "ai_bot_visit"     # sent by the website's server for each AI bot visit (opsera-landing-page, lib/ai-bots.ts)
-AI_BOT_START = "2026-10-25"
+# 17 Nov 2026: the bot log sends to its own property, apart from people's visits (Purav). First events on 2 Nov 2026.
+AI_BOT_PROPERTY_ID = "561605648"
+AI_BOT_PROPERTY_NAME = "Opsera – AI bots"
+AI_BOT_START = "2026-11-02"
+# 17 Nov 2026: Google Analytics returns 13 Nov (2,409 by bot) only when the report starts before the property was made
+# (30 Oct 2026) and is split by a bot field. Asked from 30 Oct or later, 13 Nov comes back as 0. So ask from 25 Oct.
+AI_BOT_ASK_FROM = "2026-10-25"
+# Google Analytics' plain total (no bot split) leaves out some days the count by bot includes. The count by bot is the one
+# source (Purav, 17 Nov 2026); the plain total is never shown. Days already reported to Purav:
+AI_BOT_KNOWN_GAPS = ["2026-11-13"]
 
 
 def ai_bots(s, end):
     """AI bots reading the site, by day and bot, and the pages they read. Bots are not people: never add these to visits.
     If Google Analytics can't answer (say the bot fields aren't registered), the lists stay empty."""
-    out = {"from": AI_BOT_START, "to": end, "daily": [], "pages": []}
+    out = {"from": AI_BOT_START, "to": end, "source": f"Google Analytics property \"{AI_BOT_PROPERTY_NAME}\"", "daily": [], "pages": [], "plain_total_gaps": []}
+    bot = dict(event_names=[AI_BOT_EVENT], start=AI_BOT_ASK_FROM, prop=AI_BOT_PROPERTY_ID)
     try:
-        for r in ga_report(s, end, ["date", "customEvent:bot_name"], ["eventCount"], event_names=[AI_BOT_EVENT], start=AI_BOT_START):
+        for r in ga_report(s, end, ["date", "customEvent:bot_name"], ["eventCount"], **bot):
             out["daily"].append({"date": r["date"], "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
-        for r in ga_report(s, end, ["customEvent:page_path", "customEvent:bot_name"], ["eventCount"], event_names=[AI_BOT_EVENT], start=AI_BOT_START):
+        for r in ga_report(s, end, ["customEvent:page_path", "customEvent:bot_name"], ["eventCount"], **bot):
             out["pages"].append({"page": page_key(r["customEvent:page_path"]), "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
+        # Each run: does the plain total still disagree with the count by bot, and has a new day gone missing?
+        plain = {r["date"]: r["eventCount"] for r in ga_report(s, end, ["date"], ["eventCount"], **bot)}
+        split = {}
+        for r in out["daily"]:
+            split[r["date"]] = split.get(r["date"], 0) + r["visits"]
+        out["plain_total_gaps"] = sorted(d for d in set(split) | set(plain) if split.get(d, 0) != plain.get(d, 0))
+        for d in out["plain_total_gaps"]:
+            new = "" if d in AI_BOT_KNOWN_GAPS else "NEW, tell Purav: "
+            print(f"{'' if d in AI_BOT_KNOWN_GAPS else '::warning::'}AI bot visits, {new}{d}: the plain total says {plain.get(d, 0)}, the count by bot says {split.get(d, 0)}")
+        days = [(dt.date.fromisoformat(min(split)) + dt.timedelta(days=i)).isoformat() for i in range((dt.date.fromisoformat(end) - dt.date.fromisoformat(min(split))).days + 1)] if split else []
+        for d in days:
+            if not split.get(d):
+                print(f"::warning::AI bot visits, NEW, tell Purav: {d} has no bot visits in the count by bot")
+        if not out["plain_total_gaps"]:
+            print("AI bot visits: the plain total and the count by bot agree on every day")
+        if sum(r["visits"] for r in out["pages"]) != sum(split.values()):
+            print(f"::warning::AI bot visits: pages add up to {sum(r['visits'] for r in out['pages'])}, days by bot to {sum(split.values())}")
+        print(f"AI bot visits by bot, {AI_BOT_START} to {end}: {sum(split.values())}")
     except Exception as e:
         print(f"AI bot visits skipped: {str(e)[:200]}")
     out["daily"].sort(key=lambda r: (r["date"], r["bot"]))
