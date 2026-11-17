@@ -23,13 +23,14 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from privacy import customer_pattern
 import fetch_data as f   # the same Google sign-in, Search Console and Google Analytics helpers as the Monday update
 
 START, END = "2026-01-01", "2026-10-31"
 OUT = Path(__file__).resolve().parent.parent / "data" / "seo_aeo.json"
 PRODUCTS = f.PRODUCTS   # by page address (agreed 6 Nov 2026), shared with the demo requests split
 BRAND = re.compile(r"opsera|opserа|opsra|opersa|ospera|opsea", re.I)
-CUSTOMER = re.compile(r"honeywell", re.I)   # customer names stay off the public page
+CUSTOMER = customer_pattern()   # customer names stay off the public page; the list is private (privacy.py)
 RANKINGS = Path(__file__).resolve().parent.parent / "data" / "rankings.json"
 RANK_WEEK = "2026-10-26"   # the last week of October in the Rankings panel
 # Infrasity's pages on opsera.ai, from their content list (Published, on opsera.ai). Their posts on Medium, dev.to and daily.dev

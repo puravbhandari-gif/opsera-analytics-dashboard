@@ -16110,7 +16110,7 @@
   {
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "hubspot",
-   "sessionMedium": "email?w_email=harris.azerf@siemens.com",
+   "sessionMedium": "email",
    "sessions": 1,
    "totalUsers": 1,
    "engagedSessions": 1,

@@ -30,8 +30,8 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
   match more than one source (marketing, booking agency, SDR or AE outreach).
 Agreed with Purav on 9 Nov 2026 (replacing the 6 Nov flags): a deal that existed before the event it's credited to counts as
 influenced, never sourced, and is flagged "Deal existed before the event; counted as influenced" on the To review list.
-- Accounts in INFLUENCED_ONLY (the account name is never written): Honeywell Aerospace, sourced by GitHub Universe.
-- Any deal credited to an event that started after the deal was created (Insurity Forge and Gartner Xpo).
+- Accounts listed under "influenced_only" in hand-rules.json (names stay out of this repo).
+- Any deal credited to an event that started after the deal was created.
 Agreed with Purav on 17 Nov 2026, from David's comments on the Q3 deal sheet:
 - "Promoted to X2 Status" is a helper campaign, not a real source. When it is the Primary Campaign Source, the first real
   campaign (Attrib First, then Attrib Last) takes its place as the source.
@@ -70,7 +70,6 @@ FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls", "event_tokenomics": "DG-FY27-Q3-Tokenomics-Webinar-*.xls"}
 HELPERS = {"DG-FY27 Promoted to X2 Status"}   # helper campaigns: never the source (David, 17 Nov 2026)
 HAND_RULES = EXPORTS / "hand-rules.json"     # private: deal names stay out of the repo
-INFLUENCED_ONLY = {"Honeywell Aerospace"}   # existed before the event it's credited to (Purav, 9 Nov 2026)
 EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
 EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28),
                    "tokenomics": dt.date(2026, 9, 15)}
@@ -222,6 +221,7 @@ def main():
 
     hand = json.loads(HAND_RULES.read_text()) if HAND_RULES.exists() else {}
     by_demo_request = set(hand.get("sourced_by_demo_request", {}))
+    influenced_only = set(hand.get("influenced_only", {}))   # existed before the event it's credited to (Purav, 9 Nov 2026)
 
     BUCKETS = ("sourced", "influenced", "agency", "nocontact")
     STATUSES = ("won", "lost", "open")
@@ -276,7 +276,7 @@ def main():
             if not bucket:
                 campaign = next((c for c in others if AGENCY.search(c)), "")
                 bucket = "agency" if campaign else None
-        before_event = bucket in ("sourced", "influenced") and (o["Account Name"].strip() in INFLUENCED_ONLY or any(
+        before_event = bucket in ("sourced", "influenced") and (o["Account Name"].strip() in influenced_only or any(
             EVENT_CAMPAIGNS[k] == campaign and created < first for k, first in EVENT_FIRST_DAY.items()))
         if before_event:
             bucket = "influenced"

@@ -12,6 +12,8 @@ import sys
 from pathlib import Path
 from urllib.parse import quote, urlparse
 
+from privacy import clean, clean_tree
+
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
 
@@ -219,7 +221,7 @@ def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=Non
             body["dimensionFilter"] = filters[0] if len(filters) == 1 else {"andGroup": {"expressions": filters}}
         res = call(s, "POST", f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport", body)
         for row in res.get("rows", []):
-            rec = {d: v["value"] for d, v in zip(dims, row.get("dimensionValues", []))}
+            rec = {d: clean(v["value"]) for d, v in zip(dims, row.get("dimensionValues", []))}   # no visitor emails
             for m, v in zip(metrics, row["metricValues"]):
                 rec[m] = float(v["value"]) if "." in v["value"] else int(v["value"])
             if "date" in rec:
@@ -836,7 +838,7 @@ def lookup(s, end, gsc_site):
 
 def write(name, payload, meta, compact=False):
     DATA_DIR.mkdir(exist_ok=True)
-    (DATA_DIR / name).write_text(json.dumps({**meta, **payload}, **({"separators": (",", ":")} if compact else {"indent": 1})))
+    (DATA_DIR / name).write_text(json.dumps(clean_tree({**meta, **payload}), **({"separators": (",", ":")} if compact else {"indent": 1})))
 
 
 def main():
