@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-16T12:53+00:00",
+ "posts_pulled_at": "2026-11-17T04:33+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -90,8 +90,14 @@
   {
    "date": "2026-09-15",
    "group": "cant_tell",
-   "visits": 15,
-   "engaged": 8
+   "visits": 11,
+   "engaged": 5
+  },
+  {
+   "date": "2026-09-15",
+   "group": "estimated_company",
+   "visits": 4,
+   "engaged": 3
   },
   {
    "date": "2026-09-16",
@@ -102,26 +108,14 @@
   {
    "date": "2026-09-17",
    "group": "cant_tell",
-   "visits": 9,
-   "engaged": 2
-  },
-  {
-   "date": "2026-09-17",
-   "group": "estimated_kumar",
-   "visits": 12,
-   "engaged": 8
+   "visits": 21,
+   "engaged": 10
   },
   {
    "date": "2026-09-18",
    "group": "cant_tell",
-   "visits": 10,
+   "visits": 13,
    "engaged": 4
-  },
-  {
-   "date": "2026-09-18",
-   "group": "estimated_kumar",
-   "visits": 3,
-   "engaged": 0
   },
   {
    "date": "2026-09-19",
@@ -542,24 +536,15 @@
    "group": "estimated_company",
    "visits": 1,
    "engaged": 0
+  },
+  {
+   "date": "2026-11-16",
+   "group": "cant_tell",
+   "visits": 13,
+   "engaged": 8
   }
  ],
  "matches": [
-  {
-   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
-   "group": "estimated_kumar",
-   "visits": 21,
-   "engaged": 12,
-   "accounts": [
-    "kumar"
-   ],
-   "dates": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20"
-   ]
-  },
   {
    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
    "group": "cant_tell",
@@ -586,6 +571,20 @@
     "2026-10-27",
     "2026-10-28",
     "2026-10-29"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "cant_tell",
+   "visits": 15,
+   "engaged": 8,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-09-17",
+    "2026-09-18"
    ]
   },
   {
@@ -629,6 +628,31 @@
     "2026-10-17",
     "2026-10-18",
     "2026-10-19"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "estimated_kumar",
+   "visits": 6,
+   "engaged": 4,
+   "accounts": [
+    "kumar"
+   ],
+   "dates": [
+    "2026-09-19",
+    "2026-09-20"
+   ]
+  },
+  {
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
+   "group": "estimated_company",
+   "visits": 4,
+   "engaged": 3,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-09-15"
    ]
   },
   {
@@ -707,6 +731,12 @@
    "date": "2026-09-03",
    "page": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
    "post": "https://www.linkedin.com/posts/kumar-chivukula_forge-activity-7501292651950854144-GjP-"
+  },
+  {
+   "account": "company",
+   "date": "2026-09-15",
+   "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool",
+   "post": "https://www.linkedin.com/posts/opsera_every-salesforce-org-has-one-deployment-queue-activity-7505701998353186818-Uk-8"
   },
   {
    "account": "company",
@@ -823,8 +853,8 @@
    "post": "https://www.linkedin.com/posts/opsera_most-ai-coding-tools-start-with-the-prompt-activity-7527057941418606593-9tJK"
   }
  ],
- "untagged_total": 585,
+ "untagged_total": 598,
  "start_date": "2026-09-01",
- "end_date": "2026-11-15",
- "pulled_at": "2026-11-16T18:15+05:30"
+ "end_date": "2026-11-16",
+ "pulled_at": "2026-11-17T09:59+05:30"
 }

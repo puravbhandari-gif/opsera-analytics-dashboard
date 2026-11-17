@@ -1,11 +1,35 @@
 {
  "source": "opsera.ai sitemap, with each page's own publish date, and YouTube Analytics for public videos",
  "start_date": "2026-07-01",
- "checked": "2026-11-16",
- "youtube_pulled_at": "2026-11-16T18:17+05:30",
- "pages_checked": 314,
+ "checked": "2026-11-17",
+ "youtube_pulled_at": "2026-11-17T10:01+05:30",
+ "pages_checked": 316,
  "pages_without_date": 5,
  "items": [
+  {
+   "date": "2026-11-16",
+   "type": "YouTube video",
+   "title": "After PHP2Shell, Find Every PHP Runtime and Scope the Modernization",
+   "link": "https://www.youtube.com/watch?v=4cSX0l4pHUM"
+  },
+  {
+   "date": "2026-11-16",
+   "type": "YouTube video",
+   "title": "AI Tokenomics: Managing Enterprise AI Token Costs | Shaila Shankar & Kumar Chivukula",
+   "link": "https://www.youtube.com/watch?v=VuIhE0jl-l8"
+  },
+  {
+   "date": "2026-11-12",
+   "type": "Blog",
+   "title": "Smart Model Selection: Pick the Right AI Model per Task",
+   "link": "https://opsera.ai/blog/smart-model-selection"
+  },
+  {
+   "date": "2026-11-11",
+   "type": "Blog",
+   "title": "Software Factory vs Dark Factory: Human-in-the-Loop Wins",
+   "link": "https://opsera.ai/blog/software-factory-vs-dark-factory"
+  },
   {
    "date": "2026-11-04",
    "type": "YouTube video",

@@ -1,6 +1,6 @@
 {
  "source": "Kumar's public LinkedIn profile, read with Apify",
- "as_of": "2026-11-16",
+ "as_of": "2026-11-17",
  "months": [
   {
    "month": "2026-07",
@@ -24,7 +24,7 @@
   },
   {
    "month": "2026-11",
-   "own_posts": 0,
+   "own_posts": 1,
    "reposts": 0,
    "so_far": true
   }

@@ -1,7 +1,7 @@
 {
  "source": "Google News search feed, US English, headlines naming each company",
  "start_date": "2026-07-01",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "quarters": [
   {
    "quarter": "FY27 Q2",
@@ -18,10 +18,10 @@
    "quarter": "FY27 Q3",
    "counts": {
     "Opsera": 3,
-    "Harness": 14,
+    "Harness": 15,
     "CloudBees": 5,
     "Copado": 5,
-    "Gearset": 3,
+    "Gearset": 4,
     "LinearB": 0
    }
   },
@@ -32,7 +32,7 @@
     "Harness": 4,
     "CloudBees": 1,
     "Copado": 5,
-    "LinearB": 5,
+    "LinearB": 4,
     "Gearset": 0
    }
   }
@@ -65,13 +65,14 @@
   {
    "date": "2026-08-19",
    "counts": {
-    "Harness": 2
+    "Harness": 2,
+    "Gearset": 1
    }
   },
   {
    "date": "2026-08-20",
    "counts": {
-    "Harness": 1
+    "Harness": 2
    }
   },
   {
@@ -181,12 +182,6 @@
    "date": "2026-11-02",
    "counts": {
     "LinearB": 4
-   }
-  },
-  {
-   "date": "2026-11-03",
-   "counts": {
-    "LinearB": 1
    }
   },
   {

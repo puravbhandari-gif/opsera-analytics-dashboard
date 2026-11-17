@@ -27,8 +27,8 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-30,"Your webinar recording is ready: Copilot, Cursor, Claude Code: What 250K Developers Revealed",54,12,5,22.6,9.4
 2026-04-30,Did You Know: Pipeline Run View is redesigned for faster debugging,2677,126,7,4.7,0.3
 2026-05-04,"Opsera Release Notes | Smarter Pipelines, Richer Salesforce Workflows — What's New in Opsera ",193,37,3,19.6,1.6
-2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
 2026-05-04,"Opsera Release Notes | What Just Landed: Pipeline Notifications, Git Custodian Scans & Branch Auto-Triggers",2479,82,7,3.3,0.3
+2026-05-04,"Opsera Release Notes | JQL Filter Support for DORA Metrics, AQP Query Visibility & Golden Pipeline AI Insights",2536,77,3,3.0,0.1
 2026-05-05,"April Newsletter: The missing piece in AI-driven software, solved",63325,2614,305,4.2,0.5
 2026-05-06,An invitation just for {{ contact.firstname }},5834,93,4,1.6,0.1
 2026-05-11,"Opsera Release Notes | Copilot Cumulative Totals, Agent Activity Toggle & On-Premise Jira Linked Issues ",2536,145,9,5.7,0.4
@@ -133,7 +133,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-08-10,{{ contact.firstname }} - Dinner's on us on Thursday.,1274,27,0,2.1,0.0
 2026-08-12,Invitation only - {{ contact.firstname }} (Tomorrow),320,29,2,9.1,0.6
 2026-08-18,"Save the Date: Opsera Flutter 2026, The AI-SDLC Summit",5703,129,20,2.3,0.4
-2026-08-20,[Invite Only] Opsera Flutter 2026: The AI-SDLC Summit,30154,863,186,3.0,0.6
+2026-08-20,[Invite Only] Opsera Flutter 2026: The AI-SDLC Summit,30154,864,186,3.0,0.6
 2026-08-24,Did You Know | Your IDP Can Do More Than Show You Information — Meet IDP Agents,2421,73,2,3.0,0.1
 2026-08-24,"Opsera Release Notes | Multi-Command Maven Builds, Multi-Service Kubernetes Deployments & Targeted Monorepo Security Scans ",2257,110,6,4.9,0.3
 2026-08-24,"Opsera Release Notes | Jira-Driven OmniStudio Deployments, CSV Component Selection & Expanded OmniStudio Metadata ",167,15,0,9.0,0.0
@@ -239,14 +239,14 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-28,{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.,10422,443,20,4.3,0.2
 2026-10-29,Speaker invite for {{ contact.firstname }},130,15,0,11.5,0.0
 2026-10-29,NBA Basketball - private suite for Pacers/Rockets,62,0,0,0.0,0.0
-2026-11-02,{{ contact.firstname }} How's it going with Forge?,13,0,0,0.0,0.0
+2026-11-02,{{ contact.firstname }} How's it going with Forge?,14,0,0,0.0,0.0
 2026-11-02,{{ contact.firstname }} - Modernize legacy estates.,115,17,2,14.9,1.8
 2026-11-02,Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation,1335,33,0,2.5,0.0
 2026-11-02,Opsera Release Notes | Expanded Salesforce Metadata Support for Revenue Cloud and Platform Events,135,4,0,3.0,0.0
 2026-11-02,{{ contact.firstname }} - In just two weeks: Pacers v. Rockets,226,2,0,0.9,0.0
 2026-11-02,{{ contact.firstname }} - Thanks for connecting at GitHub Universe.,126,18,1,14.3,0.8
 2026-11-03,Legacy estate modernization in the AI era.,13951,400,67,2.9,0.5
-2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1051,139,5.0,0.7
+2026-11-04,{{ contact.firstname }} Patch PHP2Shell today.,21204,1052,139,5.0,0.7
 2026-11-04,Did You Know Modernization Can Run at AI Speed?,1467,16,3,1.1,0.2
 2026-11-05,Indiana Pacers - was yesterday a turning point?,343,19,1,5.6,0.3
 2026-11-05,{{ contact.firstname }} - Monday is game day! Hawks v. Lakers,117,1,0,0.9,0.0
@@ -255,8 +255,11 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-11-09,Nine days away - claim your spot.,311,20,0,6.5,0.0
 2026-11-10,"{{ contact.firstname }} Next Week. Pacers v. Rockets soon, at the Fieldhouse.",210,11,0,5.2,0.0
 2026-11-10,Invitation for {{ contact.firstname }} - Closed-door session.,14924,484,51,3.3,0.3
-2026-11-11,{{ contact.firstname }} Fix PHP vulnerabilities today.,14868,497,48,3.3,0.3
+2026-11-11,{{ contact.firstname }} Fix PHP vulnerabilities today.,14868,498,48,3.4,0.3
 2026-11-12,{{ contact.firstname }} - meet-up at HLTH USA?,2806,39,0,1.5,0.0
 2026-11-12,{{ contact.firstname }} - meet for coffee at HLTH USA?,4,0,0,0.0,0.0
 2026-11-13,"Missing the Pacers game tonight {{ personalization_token('contact.firstname', ',') }} ?",462,7,1,1.5,0.2
 2026-11-13,{{ contact.firstname }} - Coffee at HLTH next week?,2,0,0,0.0,0.0
+2026-11-16,"Just two days away, {{ personalization_token('contact.firstname', ',') }} ",457,15,0,3.3,0.0
+2026-11-16,Opsera Release Notes | Org Mapping for Full Control Over Salesforce Metadata After a Sandbox Refresh,135,3,0,2.2,0.0
+2026-11-16,Opsera Release Notes | Deploy to Multiple Environments from a Single Child Pipeline,1333,4,0,0.3,0.0

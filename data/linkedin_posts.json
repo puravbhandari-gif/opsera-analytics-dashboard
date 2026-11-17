@@ -1,7 +1,7 @@
 {
  "source": "Apify, harvestapi/linkedin-company-posts and harvestapi/linkedin-profile-posts",
  "start_date": "2026-09-01",
- "pulled_at": "2026-11-16T12:53+00:00",
+ "pulled_at": "2026-11-17T04:33+00:00",
  "posts": [
   {
    "account": "company",
@@ -60,7 +60,12 @@
    "post": "https://www.linkedin.com/posts/opsera_every-salesforce-org-has-one-deployment-queue-activity-7505701998353186818-Uk-8",
    "posted_utc": "2026-09-15T19:00:05.607Z",
    "date_pacific": "2026-09-15",
-   "opsera_pages": []
+   "opsera_pages": [
+    {
+     "link": "https://lnkd.in/dQ6tj-Ri",
+     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool"
+    }
+   ]
   },
   {
    "account": "company",
@@ -474,6 +479,13 @@
      "lands_on": "/blog/context-engineering-ai-coding"
     }
    ]
+  },
+  {
+   "account": "kumar",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-activity-7528147150900219904-MLzW",
+   "posted_utc": "2026-11-16T17:29:06.985Z",
+   "date_pacific": "2026-11-16",
+   "opsera_pages": []
   }
  ]
 }

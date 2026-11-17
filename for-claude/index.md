@@ -1,7 +1,7 @@
 # Opsera website analytics, in plain text
 
 The data behind the dashboard at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/, written for AI assistants such as Claude.
-Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled 2026-11-16.
+Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled 2026-11-17.
 
 ## How to answer questions
 
@@ -24,9 +24,9 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 ## Date ranges
 
 - Google Analytics and HubSpot: 2026-04-01 to 2026-11-15.
-- Search Console (Google search): 2026-04-01 to 2026-11-14. It runs about 2 days behind.
+- Search Console (Google search): 2026-04-01 to 2026-11-15. It runs about 2 days behind.
 - LinkedIn company page: 2026-07-01 to 2026-11-07. LinkedIn Kumar: 2026-07-01 to 2026-10-27, the last day still being counted when exported.
-- YouTube: 2026-04-01 to 2026-11-13.
+- YouTube: 2026-04-01 to 2026-11-14.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
 ## Customer journey tab
@@ -82,7 +82,7 @@ Visits count people who landed on the page from outside the site. Page files lis
 - [page_titles_blog.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_blog.csv): The title of each page: pages under /blog/. Source: Google Analytics. 274 rows.
 - [page_titles_knowledge_base.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_knowledge_base.csv): The title of each page: pages under /knowledge-base/. Source: Google Analytics. 80 rows.
 - [page_titles_main.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_main.csv): The title of each page: main pages 1 level deep (the homepage, /demo, /pricing and the like). Source: Google Analytics. 187 rows.
-- page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /a/auth/signup to /wp-json/wp/v2/posts/9141](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/9147 to /wp-json/wp/v2/resource/8544](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
+- page_titles_other, split to stay small: The title of each page: pages in other sections such as /newsroom/ and /changelog/. Source: Google Analytics. Parts: [part 1: /a/auth/signup to /wp-json/wp/v2/posts/9132](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part1.csv), [part 2: /wp-json/wp/v2/posts/9141 to /wp-json/wp/v2/resource/8544](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_other_part2.csv).
 - [page_titles_resources.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/page_titles_resources.csv): The title of each page: pages under /resources/. Source: Google Analytics. 98 rows.
 - [campaigns_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_month.csv): Every campaign (utm_campaign) with visits or form fills, by month. Source: Google Analytics. 286 rows.
 - [campaigns_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/campaigns_by_week.csv): Every campaign (utm_campaign) with visits or form fills, by week. Source: Google Analytics. 430 rows.
@@ -98,9 +98,9 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 
 - [google_search_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_month.csv): Google search tab, by month. Source: Search Console. A lower average spot is better. 8 rows.
 - [google_search_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_search_by_week.csv): Google search tab, by week. Source: Search Console. A lower average spot is better. 33 rows.
-- [google_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_top_searches.csv): The searches bringing the most Google clicks, 2026-04-01 to 2026-11-14. Source: Search Console. Google hides rare searches. 600 rows.
+- [google_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_top_searches.csv): The searches bringing the most Google clicks, 2026-04-01 to 2026-11-15. Source: Search Console. Google hides rare searches. 600 rows.
 - [google_rankings_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_by_week.csv): Average spot on Google, Monday-to-Sunday weeks, for the homepage, the 8 product pages and the top 20 blogs and resources by visits since 2026-09-30. 1 is the top. Source: Google Search Console, up to 2026-11-14. 516 rows.
-- [google_rankings_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_top_searches.csv): The top 10 searches for each key page, 2026-08-18 to 2026-11-14. Source: Google Search Console. 287 rows.
+- [google_rankings_top_searches.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_rankings_top_searches.csv): The top 10 searches for each key page, 2026-08-19 to 2026-11-14. Source: Google Search Console. 287 rows.
 
 ## AEO tab: visits from AI tools
 
@@ -120,8 +120,8 @@ Paid means sponsored posts. LinkedIn's own sheets disagree on reposts, so we lea
 - [linkedin_exec_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_month.csv): LinkedIn exec tab (Kumar Chivukula's profile), by month. Source: LinkedIn exports, dates in UTC. 4 rows.
 - [linkedin_exec_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_week.csv): LinkedIn exec tab (Kumar Chivukula's profile), by week. Source: LinkedIn exports, dates in UTC. 18 rows.
 - [linkedin_exec_exports.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_exports.csv): Each LinkedIn export of Kumar's profile as LinkedIn gave it. People reached doesn't add up across days. Source: LinkedIn exports. 4 rows.
-- [linkedin_exec_post_list.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_post_list.csv): Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify. 27 rows.
-- [linkedin_exec_posts_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_posts_by_month.csv): Kumar's own posts and reposts by month (UTC), 2 separate counts. Source: Kumar's public LinkedIn profile, read with Apify, checked 2026-11-16. 5 rows.
+- [linkedin_exec_post_list.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_post_list.csv): Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify. 28 rows.
+- [linkedin_exec_posts_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_posts_by_month.csv): Kumar's own posts and reposts by month (UTC), 2 separate counts. Source: Kumar's public LinkedIn profile, read with Apify, checked 2026-11-17. 5 rows.
 
 ## LinkedIn visits to opsera.ai
 
@@ -138,7 +138,7 @@ We never add Shorts and long videos together.
 
 - [youtube_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_by_month.csv): YouTube tab, by month. Source: YouTube Analytics. 8 rows.
 - [youtube_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_by_week.csv): YouTube tab, by week. Source: YouTube Analytics. 33 rows.
-- [youtube_videos.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_videos.csv): Each video's views and watch time, 2026-04-01 to 2026-11-13. Source: YouTube Analytics. 199 rows.
+- [youtube_videos.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/youtube_videos.csv): Each video's views and watch time, 2026-04-01 to 2026-11-14. Source: YouTube Analytics. 199 rows.
 
 ## Pipeline tab
 

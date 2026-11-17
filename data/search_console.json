@@ -1,9 +1,13 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-15",
- "pulled_at": "2026-11-16T18:15+05:30",
+ "end_date": "2026-11-16",
+ "pulled_at": "2026-11-17T09:59+05:30",
  "source": "Google Search Console, sc-domain:opsera.ai",
- "last_day_with_data": "2026-11-14",
+ "last_day_with_data": "2026-11-15",
+ "last_final_day": "2026-11-14",
+ "early_days": [
+  "2026-11-15"
+ ],
  "daily": [
   {
    "date": "2026-04-01",
@@ -1600,6 +1604,14 @@
    "times_shown": 15479,
    "click_rate_pct": 0.3,
    "avg_spot": 11.2
+  },
+  {
+   "date": "2026-11-15",
+   "clicks": 53,
+   "times_shown": 15072,
+   "click_rate_pct": 0.35,
+   "avg_spot": 11.0,
+   "early": true
   }
  ],
  "pages": [

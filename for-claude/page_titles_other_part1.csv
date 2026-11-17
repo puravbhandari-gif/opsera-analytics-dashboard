@@ -32,6 +32,7 @@ page,page_title
 /case-study/reflektion,Page not found — Opsera
 /company/about-us,Page not found - Opsera
 /company/careers,Page not found - Opsera
+/comparison/opsera-vs-copado,Page not found - Opsera
 /comparison/opsera-vs-flosum,Page not found - Opsera
 /comparison/opsera-vs-gearset,Page not found - Opsera
 /comparison/opsera-vs-harness,Page not found - Opsera
@@ -202,7 +203,7 @@ page,page_title
 /forge/modernization,Forge for legacy modernization — Opsera
 /forge/modernization-guide,What is legacy modernization? — Opsera
 /forge/modernization/cobol-to-csharp,COBOL to C# - Opsera Forge
-/forge/modernization/cobol-to-go,COBOL to Go — Opsera Forge
+/forge/modernization/cobol-to-go,COBOL to Go - Opsera Forge
 /forge/modernization/cobol-to-java,COBOL to Java — Opsera Forge
 /forge/modernization/cobol-to-python,COBOL to Python - Opsera Forge
 /forge/modernization/coldfusion-to-dotnet,ColdFusion to .NET - Opsera Forge
@@ -300,7 +301,7 @@ page,page_title
 /newsroom/opsera-salesforce-devops-platform-enables-secure-and-resilient-salesforce-releases,Opsera Salesforce DevOps Platform Enables Secure and Resilient Salesforce Releases - Opsera
 /newsroom/opsera-shares-devops-breakthroughs-and-ai-innovation-at-dreamforce-2025-announces-new-partnership-with-salesforce,"Opsera Shares DevOps Breakthroughs and AI Innovation at Dreamforce 2025, Announces New Partnership with Salesforce - Opsera"
 /newsroom/opsera-showcases-new-and-innovative-salesforce-devops-capabilities-powered-by-hummingbird-ai-at-dreamforce-2024,Opsera Showcases New and Innovative Salesforce DevOps Capabilities Powered by Hummingbird AI at Dreamforce 2024 - Opsera
-/newsroom/opsera-simplifies-building-of-devops-pipelines,Opsera Simplifies Building of DevOps Pipelines — Opsera
+/newsroom/opsera-simplifies-building-of-devops-pipelines,Opsera Simplifies Building of DevOps Pipelines - Opsera
 /newsroom/opsera-unified-insights-now-available-in-the-microsoft-marketplace,Opsera Unified Insights Now Available in the Microsoft Marketplace - Opsera
 /newsroom/opsera-unveils-appsec-ai-agents-to-power-the-shift-from-traditional-sdlc-to-ai-sdlc,Opsera Unveils AppSec AI Agents to Power the Shift from traditional SDLC to AI-SDLC - Opsera
 /newsroom/opsera-unveils-next-generation-ai-powered-devops-platform-with-hummingbird-ai-reasoning-agents-insights-in-a-box-and-github-mcp-integration,"Opsera Unveils Next-Generation AI-Powered DevOps Platform with Hummingbird AI Reasoning Agents, ‘Insights in a Box,’ and GitHub MCP Integration"
@@ -587,4 +588,3 @@ page,page_title
 /wp-json/wp/v2/posts/8712,Page not found — Opsera
 /wp-json/wp/v2/posts/9119,Page not found — Opsera
 /wp-json/wp/v2/posts/9132,Page not found — Opsera
-/wp-json/wp/v2/posts/9141,Page not found — Opsera

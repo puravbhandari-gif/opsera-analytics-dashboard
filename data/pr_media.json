@@ -1,7 +1,7 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-16",
+ "checked": "2026-11-17",
  "items": [
   {
    "date": "2026-11-15",
@@ -20,6 +20,18 @@
    "outlet": "CaseStudies.com",
    "title": "B2B Case Studies: How Opsera Uses Software & Services",
    "link": "https://www.casestudies.com/customer/opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
+  {
+   "date": "2026-11-12",
+   "outlet": "demoprise.com",
+   "title": "Opsera Unified DevOps Platform 2026: Overview - DemoPrise",
+   "link": "https://demoprise.com/products/opsera-unified-devops-platform",
    "type": "Mention",
    "topic": "Other",
    "quoted": "",
@@ -105,6 +117,18 @@
    "link": "https://voltagecontrol.com/blog/your-processes-are-human-shaped/",
    "type": "Mention",
    "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
+  {
+   "date": "2026-11-02",
+   "outlet": "Requstory",
+   "title": "Opsera: what they do, their teams and customer journey",
+   "link": "https://requstory.com/lab/companies/opsera-ai/",
+   "type": "Mention",
+   "topic": "Other",
    "quoted": "",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search",
@@ -436,6 +460,18 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Salesforce"
+  },
+  {
+   "date": "2026-09-14",
+   "outlet": "Consultancy.eu",
+   "title": "Why AI is rewriting the economics of digitisation in the SME market",
+   "link": "https://www.consultancy.eu/news/14273/why-ai-is-rewriting-the-economics-of-digitisation-in-the-sme-market",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-09-10",

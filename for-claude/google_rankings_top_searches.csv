@@ -1,14 +1,14 @@
 page,kind,search,clicks,times_shown,avg_spot
-/,Homepage,opsera,1379,4889,1.3
-/,Homepage,opsera ai,76,144,1.0
-/,Homepage,ospera,73,822,3.9
+/,Homepage,opsera,1363,4840,1.3
+/,Homepage,opsera ai,75,143,1.0
+/,Homepage,ospera,73,815,3.9
 /,Homepage,opsera forge,15,221,3.4
-/,Homepage,opsera company,8,70,1.4
+/,Homepage,opsera company,8,68,1.4
 /,Homepage,opsera inc,8,37,1.0
-/,Homepage,opsera.io,6,191,1.3
-/,Homepage,opsera logo,6,53,1.8
-/,Homepage,opsera.ai,6,48,1.3
-/,Homepage,opsera chennai,6,45,1.5
+/,Homepage,opsera.io,6,187,1.3
+/,Homepage,opsera logo,6,52,1.8
+/,Homepage,opsera.ai,6,47,1.3
+/,Homepage,opsera chennai,6,44,1.5
 /software-factory,Product,github software factory,1,2,29.5
 /software-factory,Product,software factory as a service,0,19,23.6
 /software-factory,Product,what is a governed software factory?,0,12,2.0
@@ -47,8 +47,8 @@ page,kind,search,clicks,times_shown,avg_spot
 /unified-insights,Product,plandek vs opsera unified insights for github for delivery analytics,0,34,3.9
 /unified-insights,Product,opsera unified insights for github vs linearb for engineering analytics,0,30,3.5
 /agents,Product,devsecops agent,5,24,1.8
-/agents,Product,opsera,1,270,2.1
-/agents,Product,devsecops agents,1,71,1.8
+/agents,Product,opsera,1,269,2.1
+/agents,Product,devsecops agents,1,70,1.8
 /agents,Product,opsera pricing,1,8,4.4
 /agents,Product,la configuration,1,1,1.0
 /agents,Product,ospera,0,93,2.2
@@ -77,10 +77,10 @@ page,kind,search,clicks,times_shown,avg_spot
 /salesforce-devops,Product,opsera official website,0,7,1.4
 /salesforce-devops,Product,site:opsera.ai,0,6,78.3
 /brickforge,Product,opsera forge,1,107,5.9
-/brickforge,Product,databricks forge,0,100,6.8
+/brickforge,Product,databricks forge,0,96,6.9
 /brickforge,Product,ospera,0,93,2.2
 /brickforge,Product,opsera,0,90,2.4
-/brickforge,Product,brickforge,0,71,6.0
+/brickforge,Product,brickforge,0,67,6.1
 /brickforge,Product,forge databricks,0,38,8.5
 /brickforge,Product,"""brickforge.xyz"" -site:brickforge.xyz",0,20,5.7
 /brickforge,Product,forge opsera,0,13,6.3
@@ -146,56 +146,46 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/factory-ai-alternatives,Blog,site:opsera.ai,1,8,5.1
 /blog/factory-ai-alternatives,Blog,factory alternatives,1,6,1.8
 /blog/factory-ai-alternatives,Blog,ifactory ai alternatives,0,12742,2.2
-/blog/ai-sdlc,Blog,ai sdlc,35,5012,7.6
-/blog/ai-sdlc,Blog,what is ai sdlc,6,996,8.3
-/blog/ai-sdlc,Blog,ai-sdlc,4,627,7.7
-/blog/ai-sdlc,Blog,aisdlc,3,877,6.7
+/blog/ai-sdlc,Blog,ai sdlc,35,5004,7.6
+/blog/ai-sdlc,Blog,what is ai sdlc,6,982,8.3
+/blog/ai-sdlc,Blog,ai-sdlc,4,612,7.6
+/blog/ai-sdlc,Blog,aisdlc,3,872,6.7
 /blog/ai-sdlc,Blog,sdlc ai,2,532,7.4
 /blog/ai-sdlc,Blog,ai sdlc framework,2,117,7.3
-/blog/ai-sdlc,Blog,ai sdlc workflow,2,105,7.6
-/blog/ai-sdlc,Blog,ai sdlc meaning,1,659,7.8
-/blog/ai-sdlc,Blog,ai sldc,1,166,6.6
+/blog/ai-sdlc,Blog,ai sdlc workflow,2,103,7.6
+/blog/ai-sdlc,Blog,ai sdlc meaning,1,648,7.8
+/blog/ai-sdlc,Blog,ai sldc,1,165,6.6
 /blog/ai-sdlc,Blog,ai in sdlc,1,62,10.4
-/blog/what-is-agentic-devops,Blog,agentic devops,45,1380,3.3
-/blog/what-is-agentic-devops,Blog,agentic ai devops,4,128,4.9
+/blog/what-is-agentic-devops,Blog,agentic devops,43,1358,3.3
+/blog/what-is-agentic-devops,Blog,agentic ai devops,4,127,4.9
 /blog/what-is-agentic-devops,Blog,what is agentic devops,3,70,1.4
-/blog/what-is-agentic-devops,Blog,agentic ai for devops,2,423,7.3
-/blog/what-is-agentic-devops,Blog,agentic ops,2,421,7.3
-/blog/what-is-agentic-devops,Blog,devops agentic ai,2,253,5.9
-/blog/what-is-agentic-devops,Blog,agentic ai for devops engineers,2,77,5.4
+/blog/what-is-agentic-devops,Blog,agentic ai for devops,2,421,7.3
+/blog/what-is-agentic-devops,Blog,agentic ops,2,417,7.3
+/blog/what-is-agentic-devops,Blog,devops agentic ai,2,252,5.9
+/blog/what-is-agentic-devops,Blog,agentic ai for devops engineers,2,74,5.3
 /blog/what-is-agentic-devops,Blog,agentic devops engineer,2,43,3.3
-/blog/what-is-agentic-devops,Blog,agentic devsecops,1,37,8.1
-/blog/what-is-agentic-devops,Blog,what is agentic devops?,0,453,2.0
+/blog/what-is-agentic-devops,Blog,what is agentic devops?,0,451,2.0
+/blog/what-is-agentic-devops,Blog,agentic ai in devops,0,262,6.3
 /blog/dora-2025-report-ai-software-development,Blog,dora 2025 report,2,78,8.8
 /blog/dora-2025-report-ai-software-development,Blog,site.dora.dev 2025 ai capabilities report software delivery,1,92,7.8
 /blog/dora-2025-report-ai-software-development,Blog,2025 dora report,1,29,9.9
-/blog/dora-2025-report-ai-software-development,Blog,dora report,0,375,15.3
-/blog/dora-2025-report-ai-software-development,Blog,dora 2025,0,341,15.0
+/blog/dora-2025-report-ai-software-development,Blog,dora report,0,373,15.0
+/blog/dora-2025-report-ai-software-development,Blog,dora 2025,0,339,14.9
 /blog/dora-2025-report-ai-software-development,Blog,google dora 2025 report ai software development findings productivity throughput stability,0,159,5.4
-/blog/dora-2025-report-ai-software-development,Blog,what is dora report,0,82,43.6
-/blog/dora-2025-report-ai-software-development,Blog,state of devops report,0,71,53.6
+/blog/dora-2025-report-ai-software-development,Blog,what is dora report,0,81,43.5
+/blog/dora-2025-report-ai-software-development,Blog,state of devops report,0,70,53.6
 /blog/dora-2025-report-ai-software-development,Blog,dora 2025 state of ai-assisted software development report findings,0,68,7.5
 /blog/dora-2025-report-ai-software-development,Blog,dora report 2025,0,64,14.8
-/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot adoption metrics,1,89,6.7
+/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot adoption metrics,1,86,6.8
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot report 2026 pdf,0,82,9.0
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,can leaders measuring copilot impact rely on opsera unified insights for github?,0,79,2.5
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,what do opsera unified insights for github reviews say about performance?,0,69,3.2
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot roi,0,63,27.1
-/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github adoption,0,61,16.4
-/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot statistics,0,41,23.0
+/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github adoption,0,57,16.9
+/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot statistics,0,40,23.1
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,github copilot adoption,0,37,40.2
 /blog/github-copilot-adoption-trends-insights-from-real-data,Blog,insights for github copilot,0,33,17.4
-/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,evaluate the ai platform company copilot on ai adoption,0,28,22.2
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,engineering ai benchmark report,2,63,6.4
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai development speed measurement benchmark 2026,0,1053,7.7
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai coding news september 2026,0,58,8.3
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai implementation benchmark study 2026,0,32,9.0
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai benchmark 2026,0,26,8.2
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,generative ai benchmark report,0,23,17.2
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai benchmark report,0,18,17.4
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai developing too fast to measure benchmarks 2026,0,11,10.5
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,does opsera track ai token spend and ai coding roi,0,10,4.2
-/resources/report/ai-coding-impact-2026-benchmark-report,Resource,benchmark ai 2026,0,10,8.3
+/blog/github-copilot-adoption-trends-insights-from-real-data,Blog,evaluate the ai platform company copilot on ai adoption,0,26,22.2
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,dora space,7,188,6.0
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,dora vs space,3,170,2.6
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,dora and space metrics,2,314,7.4
@@ -206,6 +196,16 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,dora metrics vs space,1,53,2.5
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,"dora, space",1,5,4.2
 /blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,Blog,space metrics,0,394,18.9
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,engineering ai benchmark report,2,63,6.4
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai development speed measurement benchmark 2026,0,1016,7.8
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai coding news september 2026,0,58,8.3
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai implementation benchmark study 2026,0,29,9.2
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,generative ai benchmark report,0,23,17.2
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai benchmark 2026,0,22,8.0
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai benchmark report,0,17,17.5
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai developing too fast to measure benchmarks 2026,0,11,10.5
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,does opsera track ai token spend and ai coding roi,0,10,4.2
+/resources/report/ai-coding-impact-2026-benchmark-report,Resource,ai coding benchmark 2026,0,9,6.3
 /blog/harness-engineering,Blog,what is harness engineering,1,4,8.0
 /blog/harness-engineering,Blog,harness engineering,0,112,12.1
 /blog/harness-engineering,Blog,"site.openai.com ""harness engineering""",0,112,8.8
@@ -225,17 +225,7 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor ide arr market share 2024 2025 trends,0,68,10.2
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor number of users,0,60,7.6
 /blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor data,0,55,9.8
-/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor user base,0,41,6.8
-/blog/devsecops-tools,Blog,devsecops tools,10,5268,12.8
-/blog/devsecops-tools,Blog,best devsecops tools,1,579,17.9
-/blog/devsecops-tools,Blog,devsecops security tools,1,555,12.9
-/blog/devsecops-tools,Blog,open source devsecops tools,1,451,17.9
-/blog/devsecops-tools,Blog,tools for devsecops,1,303,13.0
-/blog/devsecops-tools,Blog,devsecops pipelines,1,157,16.0
-/blog/devsecops-tools,Blog,devsecops ai tools,1,52,18.4
-/blog/devsecops-tools,Blog,kubernetes devsecops tools,1,19,16.1
-/blog/devsecops-tools,Blog,ci cd pipeline security tools,1,18,9.5
-/blog/devsecops-tools,Blog,devsecops ci/cd pipeline,1,13,8.4
+/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,Blog,cursor user base,0,40,6.8
 /blog/software-factory-model,Blog,software factory model,5,169,7.4
 /blog/software-factory-model,Blog,factory model in software development,3,22,5.3
 /blog/software-factory-model,Blog,software factory,2,334,16.1
@@ -246,6 +236,16 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/software-factory-model,Blog,site:opsera.ai,1,6,20.7
 /blog/software-factory-model,Blog,software factory ai,1,3,23.7
 /blog/software-factory-model,Blog,tiny software factory,1,3,16.0
+/blog/devsecops-tools,Blog,devsecops tools,10,5153,12.9
+/blog/devsecops-tools,Blog,best devsecops tools,1,573,17.7
+/blog/devsecops-tools,Blog,devsecops security tools,1,546,13.0
+/blog/devsecops-tools,Blog,open source devsecops tools,1,441,17.7
+/blog/devsecops-tools,Blog,tools for devsecops,1,296,13.3
+/blog/devsecops-tools,Blog,devsecops pipelines,1,155,15.9
+/blog/devsecops-tools,Blog,devsecops ai tools,1,52,18.4
+/blog/devsecops-tools,Blog,ci cd pipeline security tools,1,18,9.5
+/blog/devsecops-tools,Blog,devsecops ci/cd pipeline,1,13,8.4
+/blog/devsecops-tools,Blog,devops security tools,0,1279,23.8
 /blog/legacy-code-modernization,Blog,legacy code modernization,4,613,7.4
 /blog/legacy-code-modernization,Blog,code modernization,2,1017,9.0
 /blog/legacy-code-modernization,Blog,ai legacy code modernization,2,91,10.2
@@ -256,25 +256,25 @@ page,kind,search,clicks,times_shown,avg_spot
 /blog/legacy-code-modernization,Blog,legacy code migration,0,833,7.9
 /blog/legacy-code-modernization,Blog,code-modernization,0,323,6.9
 /blog/legacy-code-modernization,Blog,ai-powered legacy code modernization service,0,219,2.7
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,cicd pipeline,6,977,25.7
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,cicd pipeline,6,961,25.6
 /blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,cicd pipeline full form,3,28,11.8
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci cd pipeline,1,1789,27.6
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd pipelines,1,1680,20.2
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd practices,1,501,21.2
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,what is cicd pipeline,1,387,27.1
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd workflow,1,379,23.4
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd pipeline implementation,1,200,15.4
-/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,cicd pipeline stages,1,56,28.2
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci cd pipeline,1,1778,27.5
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd pipelines,1,1667,20.1
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd practices,1,494,21.2
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,what is cicd pipeline,1,384,27.0
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd workflow,1,378,23.4
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci/cd pipeline implementation,1,196,15.3
+/blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,cicd pipeline stages,1,55,28.0
 /blog/all-you-need-to-know-about-ci-cd-pipeline,Blog,ci cd pipeline explained,1,23,14.1
-/blog/sast-tools,Blog,sast tools,3,2660,15.7
-/blog/sast-tools,Blog,best sast tools,2,1083,16.1
-/blog/sast-tools,Blog,sast scanning tools,1,483,19.5
+/blog/sast-tools,Blog,sast tools,3,2633,15.8
+/blog/sast-tools,Blog,best sast tools,2,1064,16.2
+/blog/sast-tools,Blog,sast scanning tools,1,481,19.5
 /blog/sast-tools,Blog,sast tools examples,1,35,6.5
 /blog/sast-tools,Blog,top ai sast tools,1,15,12.3
-/blog/sast-tools,Blog,sast tool,0,803,18.1
+/blog/sast-tools,Blog,sast tool,0,799,18.1
 /blog/sast-tools,Blog,open source sast tools,0,456,13.8
-/blog/sast-tools,Blog,sast tools list,0,376,14.4
-/blog/sast-tools,Blog,top sast tools,0,336,10.7
+/blog/sast-tools,Blog,sast tools list,0,367,14.5
+/blog/sast-tools,Blog,top sast tools,0,326,10.8
 /blog/sast-tools,Blog,sast security tools,0,290,17.6
 /blog/snowflake-to-databricks-migration,Blog,snowflake migration to databricks,29,103,5.9
 /blog/snowflake-to-databricks-migration,Blog,migrate snowflake to databricks,28,116,6.9

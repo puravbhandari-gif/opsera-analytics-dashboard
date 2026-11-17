@@ -1,5 +1,5 @@
 {
- "written_on": "2026-11-16",
+ "written_on": "2026-11-17",
  "views": {
   "week": {
    "period": "9 to 15 Nov 2026",
@@ -136,14 +136,49 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": null,
-     "period": "2 to 8 Nov 2026",
-     "period_before": "26 Oct to 1 Nov 2026",
-     "notable": false,
-     "main": null,
+     "note": "15 Nov is Google's early figure and may change.",
+     "period": "9 to 15 Nov 2026",
+     "period_before": "2 to 8 Nov 2026",
+     "notable": true,
+     "main": {
+      "key": "clicks",
+      "label": "Clicks from Google search",
+      "value": "637",
+      "cur": 637,
+      "prev": 509,
+      "before": "509",
+      "change_pct": 25.1,
+      "good": true,
+      "min_change_pct": 15
+     },
      "why": null,
      "do": null,
-     "trend": []
+     "trend": [
+      {
+       "week": "5 to 11 Oct 2026",
+       "value": 597
+      },
+      {
+       "week": "12 to 18 Oct 2026",
+       "value": 431
+      },
+      {
+       "week": "19 to 25 Oct 2026",
+       "value": 466
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 482
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 509
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 637
+      }
+     ]
     },
     {
      "key": "aeo",
@@ -206,11 +241,11 @@
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "72",
-      "cur": 72,
+      "value": "71",
+      "cur": 71,
       "prev": 44,
       "before": "44",
-      "change_pct": 63.6,
+      "change_pct": 61.4,
       "good": true,
       "min_change_pct": 15
      },
@@ -239,7 +274,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 72
+       "value": 71
       }
      ]
     },
@@ -423,7 +458,7 @@
    "boxes": {
     "well": [
      "Demo requests up 400%",
-     "Visits from tagged campaigns up 63.6%",
+     "Visits from tagged campaigns up 61.4%",
      "Long video views up 52.4%"
     ],
     "attention": [
@@ -639,47 +674,47 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": "November has only 14 days so far, so this shows the last full month.",
-     "period": "1 to 31 Oct 2026",
-     "period_before": "1 to 30 Sep 2026",
+     "note": "15 Nov is Google's early figure and may change.",
+     "period": "1 to 15 Nov 2026",
+     "period_before": "1 to 31 Oct 2026",
      "notable": true,
      "main": {
-      "key": "times_shown",
-      "label": "Times Google showed our pages",
-      "value": "418,069",
-      "cur": 418069,
-      "prev": 539902,
-      "before": "539,902",
-      "change_pct": -22.6,
+      "key": "clicks",
+      "label": "Clicks from Google search",
+      "value": "1,207",
+      "cur": 1207,
+      "prev": 2247,
+      "before": "2,247",
+      "change_pct": -46.3,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Fewer people saw our pages in Google search.",
+     "why": null,
      "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 108702
-      },
-      {
        "week": "5 to 11 Oct 2026",
-       "value": 117113
+       "value": 597
       },
       {
        "week": "12 to 18 Oct 2026",
-       "value": 75691
+       "value": 431
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 81434
+       "value": 466
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 97831
+       "value": 482
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 101781
+       "value": 509
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 637
       }
      ]
     },
@@ -744,11 +779,11 @@
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "124",
-      "cur": 124,
+      "value": "123",
+      "cur": 123,
       "prev": 486,
       "before": "486",
-      "change_pct": -74.5,
+      "change_pct": -74.7,
       "good": false,
       "min_change_pct": 15
      },
@@ -777,7 +812,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 72
+       "value": 71
       }
      ]
     },
@@ -912,7 +947,7 @@
      "title": "YouTube",
      "tab": "youtube",
      "source": "YouTube Analytics",
-     "note": "November has only 13 days so far, so this shows the last full month.",
+     "note": "November has only 14 days so far, so this shows the last full month.",
      "period": "1 to 31 Oct 2026",
      "period_before": "1 to 30 Sep 2026",
      "notable": false,
@@ -929,7 +964,7 @@
      "Times the company page's posts were seen up 115.1%"
     ],
     "attention": [
-     "Visits from tagged campaigns down 74.5%",
+     "Visits from tagged campaigns down 74.7%",
      "Demo requests down 72.7%",
      "Visits without email robots down 54.3%"
     ],
@@ -1160,10 +1195,6 @@
      "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 108702
-      },
-      {
        "week": "5 to 11 Oct 2026",
        "value": 117113
       },
@@ -1182,6 +1213,10 @@
       {
        "week": "2 to 8 Nov 2026",
        "value": 101781
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 111839
       }
      ]
     },
@@ -1244,7 +1279,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 72
+       "value": 71
       }
      ]
     },
@@ -1584,7 +1619,7 @@
       "good": true,
       "min_change_pct": 10
      },
-     "why": "Unlabelled visits jumped to 2,892, likely robots.",
+     "why": "Unlabelled visits jumped to 2,891, likely robots.",
      "do": null,
      "trend": [
       {
@@ -1618,28 +1653,24 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": null,
-     "period": "15 Aug to 14 Nov 2026",
-     "period_before": "15 May to 14 Aug 2026",
+     "note": "15 Nov is Google's early figure and may change.",
+     "period": "16 Aug to 15 Nov 2026",
+     "period_before": "16 May to 15 Aug 2026",
      "notable": true,
      "main": {
       "key": "times_shown",
       "label": "Times Google showed our pages",
-      "value": "1,585,771",
-      "cur": 1585771,
-      "prev": 3260324,
-      "before": "3,260,324",
-      "change_pct": -51.4,
+      "value": "1,574,390",
+      "cur": 1574390,
+      "prev": 3278319,
+      "before": "3,278,319",
+      "change_pct": -52.0,
       "good": false,
       "min_change_pct": 15
      },
      "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 108702
-      },
       {
        "week": "5 to 11 Oct 2026",
        "value": 117113
@@ -1659,6 +1690,10 @@
       {
        "week": "2 to 8 Nov 2026",
        "value": 101781
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 111839
       }
      ]
     },
@@ -1901,17 +1936,17 @@
      "tab": "youtube",
      "source": "YouTube Analytics",
      "note": null,
-     "period": "14 Aug to 13 Nov 2026",
-     "period_before": "14 May to 13 Aug 2026",
+     "period": "15 Aug to 14 Nov 2026",
+     "period_before": "15 May to 14 Aug 2026",
      "notable": true,
      "main": {
       "key": "long_video_views",
       "label": "Long video views",
-      "value": "1,270",
-      "cur": 1270,
-      "prev": 983,
-      "before": "983",
-      "change_pct": 29.2,
+      "value": "1,258",
+      "cur": 1258,
+      "prev": 995,
+      "before": "995",
+      "change_pct": 26.4,
       "good": true,
       "min_change_pct": 15
      },
@@ -1953,7 +1988,7 @@
      "Visits without email robots up 31.6%"
     ],
     "attention": [
-     "Times Google showed our pages down 51.4%",
+     "Times Google showed our pages down 52%",
      "Marketing sourced deals (estimate) down 33.3%"
     ],
     "do": []
