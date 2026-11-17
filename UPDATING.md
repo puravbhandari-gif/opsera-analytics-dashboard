@@ -2,6 +2,12 @@
 
 Link: https://puravbhandari-gif.github.io/opsera-analytics-dashboard/
 
+## Names stay out of the repo
+
+Customer and person names never go in TODO.md or any file in this repo, which is public. Use a neutral label such as "the $30,000 deal". The real names go in the private file next to David's exports (~/Desktop/Data/salesforce-exports/hand-rules.json), never here (Purav, 17 Nov 2026).
+
+Every update runs `scripts/privacy_check.py` before anything is saved or published. It scans every file in `data/` for email addresses and for names on the private customer list, and stops the run if it finds one. The log names the file and field, never the value. The customer list lives in the `CUSTOMER_NAMES` secret (one name per line) and, on Purav's Mac, in the hand rules file; without the secret only emails are checked. Google Analytics values lose any email or `w_email=` part before saving (`scripts/privacy.py`), customer portals show as "Customer portals", and search terms with an email or a customer name are left out of the lists (the totals still count them).
+
 ## Every Monday, by itself
 
 Every Monday at about 8:00 in the morning India time, GitHub runs a small script for us. It:

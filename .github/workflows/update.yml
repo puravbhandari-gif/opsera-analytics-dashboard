@@ -60,6 +60,7 @@ jobs:
         if: github.event_name != 'push'
         env:
           GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+          CUSTOMER_NAMES: ${{ secrets.CUSTOMER_NAMES }}
         run: |
           python -m pip install -q -r requirements.txt
           python scripts/fetch_data.py
@@ -162,6 +163,14 @@ jobs:
         if: github.event_name != 'push'
         continue-on-error: true
         run: python scripts/build_for_claude.py
+
+      # Runs on every run, pushes included: an email address or a customer name in data/ stops everything after this,
+      # so nothing is saved or published (agreed 17 Nov 2026). The log says which file and field, never the value.
+      - name: Privacy check
+        env:
+          CUSTOMER_NAMES: ${{ secrets.CUSTOMER_NAMES }}
+          CUSTOMER_NAMES_PUBLIC_OK: ${{ secrets.CUSTOMER_NAMES_PUBLIC_OK }}
+        run: python scripts/privacy_check.py
 
       - name: Save new numbers to main
         if: github.event_name != 'push'

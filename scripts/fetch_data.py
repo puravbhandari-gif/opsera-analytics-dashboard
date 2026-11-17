@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 from urllib.parse import quote, urlparse
 
-from privacy import clean, clean_tree
+from privacy import clean, clean_tree, customer_pattern, has_email
 
 from google.auth.transport.requests import AuthorizedSession
 from google.oauth2 import service_account
@@ -159,6 +159,14 @@ def merge_slash_variants(rows):
     return sorted(out, key=lambda x: -x["clicks"])
 
 
+CUSTOMER = customer_pattern()
+
+
+def private_ok(search):
+    """A search term can be shown: no email address and no customer name."""
+    return "@" not in search and not has_email(search) and not CUSTOMER.search(search)
+
+
 def fetch_gsc(s, end):
     site = find_gsc_site(s)
     print(f"Search Console property: {site}")
@@ -176,8 +184,9 @@ def fetch_gsc(s, end):
             daily.append({**gsc_row(rows[0], "date"), "early": True})
             print(f"Search Console: {d} is Google's early number and may change.")
     pages = merge_slash_variants(gsc_query(s, site, START_DATE, end, ["page"]))
-    # searches that contain an email address are left out, because the page is public
-    searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"]) if "@" not in r["keys"][0]]
+    # searches that contain an email address or name a customer are left out, because the page is public (customer list
+    # agreed 17 Nov 2026). The daily totals come from their own report, so they still count every search.
+    searches = [gsc_row(r, "search") for r in gsc_query(s, site, START_DATE, end, ["query"]) if private_ok(r["keys"][0])]
     return {
         "source": f"Google Search Console, {site}",
         "last_day_with_data": daily[-1]["date"],
@@ -231,6 +240,25 @@ def ga_report(s, end, dims, metrics, event_names=None, start=START_DATE, flt=Non
         offset += 100000
         if offset >= res.get("rowCount", 0):
             return rows
+
+
+def merge_rows(rows):
+    """Rows that read the same after cleaning (each customer portal becomes "Customer portals") are added together.
+    People can be counted once per portal, so their total may be a little high; time on site is averaged by visits."""
+    out = {}
+    for r in rows:
+        k = tuple(v for v in r.values() if isinstance(v, str))
+        if k not in out:
+            out[k] = dict(r)
+            continue
+        m = out[k]
+        n = m["sessions"] + r["sessions"]
+        if "averageSessionDuration" in r:
+            m["averageSessionDuration"] = (m["averageSessionDuration"] * m["sessions"] + r["averageSessionDuration"] * r["sessions"]) / n if n else 0
+        for x, v in r.items():
+            if isinstance(v, (int, float)) and x != "averageSessionDuration":
+                m[x] += v
+    return list(out.values())
 
 
 def split_check(label, rows, total):
@@ -638,8 +666,8 @@ def fetch_ga(s, end):
     channels = sorted(ga_report(s, end, ["sessionDefaultChannelGroup"], base + ["averageSessionDuration"]),
                       key=lambda r: -r["sessions"])
     channel_daily = ga_report(s, end, ["date", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"])
-    sources = sorted(ga_report(s, end, ["sessionDefaultChannelGroup", "sessionSource", "sessionMedium"],
-                               base + ["averageSessionDuration"]), key=lambda r: -r["sessions"])
+    sources = sorted(merge_rows(ga_report(s, end, ["sessionDefaultChannelGroup", "sessionSource", "sessionMedium"],
+                                          base + ["averageSessionDuration"])), key=lambda r: -r["sessions"])
     views = {}
     for r in ga_report(s, end, ["pagePath"], ["screenPageViews"]):
         key = page_key(r["pagePath"])
@@ -749,7 +777,7 @@ def rankings(s, end, gsc_site):
     searches = {}
     for r in gsc_query(s, gsc_site, q_start, end, ["page", "query"]):
         p = page_key(urlparse(r["keys"][0]).path or "/")
-        if p in keys:
+        if p in keys and private_ok(r["keys"][1]):
             x = searches.setdefault(p, {}).setdefault(r["keys"][1], [0, 0, 0.0])
             x[0] += r["clicks"]; x[1] += r["impressions"]; x[2] += r["position"] * r["impressions"]
     titles = {}

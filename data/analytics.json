@@ -11563,6 +11563,15 @@
    "averageSessionDuration": 81.83640151851851
   },
   {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "Customer portals",
+   "sessionMedium": "referral",
+   "sessions": 27,
+   "totalUsers": 21,
+   "engagedSessions": 7,
+   "averageSessionDuration": 21.59907062962963
+  },
+  {
    "sessionDefaultChannelGroup": "AI Assistant",
    "sessionSource": "perplexity.ai",
    "sessionMedium": "ai-assistant",
@@ -11687,15 +11696,6 @@
    "totalUsers": 19,
    "engagedSessions": 11,
    "averageSessionDuration": 266.94770114285717
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "portal.honeywell.opsera.io",
-   "sessionMedium": "referral",
-   "sessions": 20,
-   "totalUsers": 17,
-   "engagedSessions": 6,
-   "averageSessionDuration": 21.43336385
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -12491,15 +12491,6 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "portal.honaero.opsera.io",
-   "sessionMedium": "referral",
-   "sessions": 4,
-   "totalUsers": 2,
-   "engagedSessions": 1,
-   "averageSessionDuration": 38.3599645
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "portal.opsera-uat.opsera.io",
    "sessionMedium": "referral",
    "sessions": 4,
@@ -12803,15 +12794,6 @@
    "totalUsers": 3,
    "engagedSessions": 2,
    "averageSessionDuration": 12.298934666666668
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "portal.workday.opsera.io",
-   "sessionMedium": "referral",
-   "sessions": 3,
-   "totalUsers": 2,
-   "engagedSessions": 0,
-   "averageSessionDuration": 0.35592399999999996
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -19516,7 +19498,7 @@
    "views": 2
   },
   {
-   "page": "/blog/github-copilot-adoption-trends-insights-from-real-data/​",
+   "page": "/blog/github-copilot-adoption-trends-insights-from-real-data/\u200b",
    "views": 2
   },
   {
@@ -20264,7 +20246,7 @@
    "views": 1
   },
   {
-   "page": "/gartner-symposium/poc →",
+   "page": "/gartner-symposium/poc \u2192",
    "views": 1
   },
   {
@@ -20520,11 +20502,11 @@
    "views": 1
   },
   {
-   "page": "/resources/report/ai-coding-impact-2026-benchmark-report/취약점",
+   "page": "/resources/report/ai-coding-impact-2026-benchmark-report/\ucde8\uc57d\uc810",
    "views": 1
   },
   {
-   "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+   "page": "/resources/report/ai-co\ue000ding-impact-2026-benchmark-report",
    "views": 1
   },
   {
@@ -20536,7 +20518,7 @@
    "views": 1
   },
   {
-   "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+   "page": "/resource\ue000s/report/ai-coding-impact-2026-benchmark\ue000-report",
    "views": 1
   },
   {
@@ -23963,7 +23945,7 @@
     "engaged": 1
    },
    {
-    "page": "/gartner-symposium/poc →",
+    "page": "/gartner-symposium/poc \u2192",
     "group": "untagged",
     "visits": 1,
     "engaged": 1
@@ -30891,7 +30873,7 @@
    },
    {
     "date": "2026-10-15",
-    "page": "/gartner-symposium/poc →",
+    "page": "/gartner-symposium/poc \u2192",
     "group": "untagged",
     "visits": 1,
     "engaged": 1
@@ -48771,7 +48753,7 @@
     "engaged": 1
    },
    {
-    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+    "page": "/resources/report/ai-co\ue000ding-impact-2026-benchmark-report",
     "tool": "claude",
     "visits": 1,
     "engaged": 1
@@ -49868,7 +49850,7 @@
   "bots": {
    "from": "2026-11-02",
    "to": "2026-11-16",
-   "source": "Google Analytics property \"Opsera – AI bots\"",
+   "source": "Google Analytics property \"Opsera \u2013 AI bots\"",
    "daily": [
     {
      "date": "2026-11-02",

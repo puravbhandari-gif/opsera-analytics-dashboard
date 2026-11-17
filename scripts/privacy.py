@@ -14,9 +14,19 @@ def has_email(s):
     return bool(EMAIL.search(s) or W_EMAIL.search(s))
 
 
+# A customer's own Opsera portal (portal.<company>.opsera.io) names the company, so it becomes one neutral label.
+# Our own portals (portal.opsera.io, sandbox, test and staging ones) keep their address (agreed 17 Nov 2026).
+PORTAL = re.compile(r"portal\.(?!(?:sandbox|opsera-uat|uat|dev|test|staging|demo)\.)[a-z0-9-]+\.opsera\.io", re.I)
+CUSTOMER_PORTALS = "Customer portals"
+
+
 def clean(s):
-    """A value without any email: 'email?w_email=a@b.com' becomes 'email'."""
-    if not isinstance(s, str) or not has_email(s):
+    """A value without any email or customer portal: 'email?w_email=a@b.com' becomes 'email'."""
+    if not isinstance(s, str):
+        return s
+    if PORTAL.fullmatch(s.strip()):
+        return CUSTOMER_PORTALS
+    if not has_email(s):
         return s
     s = W_EMAIL.sub("", s)
     s = EMAIL.sub("", s)
