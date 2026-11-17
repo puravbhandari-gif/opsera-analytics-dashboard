@@ -3049,7 +3049,6 @@ function tabArrows() {
 }
 function showTab(name) {
   if (name === "content-hubs") name = "hubs";   // the older link to the hub and spoke campaigns
-  if (name === "team" && tabRow.querySelector('[data-tab="team"]').hidden) name = "summary";   // Team metrics is hidden for now
   if (!$(`tab-${name}`)) name = "exec";   // the dashboard opens on the exec view (agreed 6 Nov 2026)
   view.tab = name; saveView();
   const execish = name === "exec" || name === "seo";   // the exec views have no team controls
