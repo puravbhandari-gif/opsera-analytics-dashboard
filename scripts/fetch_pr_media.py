@@ -73,7 +73,7 @@ ASKS = {"CIO News/TechTarget": ("Follow-up questions on a customer's modernizati
         "AITech365": ("Written Q&A with Kumar, draft ready for review", False),
         "The Information": ("The reporter wants to speak with Kumar", False)}
 # Opsera people: named in the "Opsera people" column when a piece is by them or quotes them (shown by name, agreed 4 Nov 2026)
-PEOPLE = ["Kumar Chivukula", "Patty Hatter", "Chandra Ranganathan", "Gilbert Martin", "Vishnu Vasudevan", "Ryan Cartwright"]
+PEOPLE = ["Kumar Chivukula", "Patty Hatter", "Chandra Ranganathan", "Vishnu Vasudevan", "Ryan Cartwright"]
 NAMES = {"Patricia Hatter": "Patty Hatter"}
 NEWS_QUERIES = ["Opsera", '"Kumar Chivukula"', '"Patty Hatter" Opsera']
 WEB_QUERIES = ['"Opsera" -site:opsera.ai -site:linkedin.com -site:indeed.com -site:glassdoor.com',

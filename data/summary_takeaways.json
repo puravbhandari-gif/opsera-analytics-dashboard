@@ -110,17 +110,17 @@
  },
  "month": {
   "period": "1 to 15 Nov 2026",
-  "period_before": "1 to 31 Oct 2026",
+  "period_before": "1 to 15 Oct 2026",
   "boxes": {
    "well": [
-    "COBOL Modernization visits rose to 113, up from 53.",
-    "Harness Engineering blog visits rose to 80, up from 45.",
-    "Change impact campaign kept 11 of 12 visitors engaged."
+    "Content visits rose 30.9% to 2,377.",
+    "COBOL Modernization visits rose to 113, up from 20.",
+    "AI tools sent 66 visits, up from 47."
    ],
    "attention": [
-    "Half of November brought 6 demo requests, against 22 in October.",
-    "Half of November brought 7 new contacts, against 82.",
-    "Gartner offer form fills slowed to 2, from 67."
+    "Demo requests fell 62.5% to 6, from 16.",
+    "New marketing contacts fell to 7, from 19.",
+    "Engaged visits fell 28.1% to 1,638."
    ],
    "do": [
     "Write more like Claude Code Alternatives: 51 of 123 engaged.",
@@ -138,58 +138,58 @@
    },
    "leads": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
+    "period_before": "1 to 15 Oct 2026",
     "main": "demo_requests",
-    "why": "Gartner offer form fills slowed to 2, from 67.",
+    "why": "Demo requests fell 62.5% to 6, from 16.",
     "do": ""
    },
    "journey": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
-    "main": "meetings_booked",
-    "why": "Half of November brought 7 new contacts, against 82.",
+    "period_before": "1 to 15 Oct 2026",
+    "main": "new_marketing_contacts",
+    "why": "New marketing contacts fell to 7, from 19.",
     "do": ""
    },
    "visits": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
-    "main": "visits_without_email_robots",
-    "why": "Half of November is set against all of October.",
+    "period_before": "1 to 15 Oct 2026",
+    "main": "engaged_visits",
+    "why": "Engaged visits fell 28.1% to 1,638.",
     "do": ""
    },
    "search": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
-    "main": "clicks",
-    "why": "Half of November is set against all of October.",
+    "period_before": "1 to 15 Oct 2026",
+    "main": "",
+    "why": "",
     "do": ""
    },
    "aeo": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
+    "period_before": "1 to 15 Oct 2026",
     "main": "ai_visits",
     "why": "ChatGPT sent 40 of the 66 AI visits.",
     "do": ""
    },
    "campaigns": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
+    "period_before": "1 to 15 Oct 2026",
     "main": "campaign_visits",
     "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
     "do": ""
    },
    "events": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
+    "period_before": "1 to 15 Oct 2026",
     "main": "",
     "why": "",
     "do": ""
    },
    "content": {
     "period": "1 to 15 Nov 2026",
-    "period_before": "1 to 31 Oct 2026",
+    "period_before": "1 to 15 Oct 2026",
     "main": "content_visits",
-    "why": "COBOL Modernization visits rose to 113, up from 53.",
+    "why": "COBOL Modernization visits rose to 113, up from 20.",
     "do": "Fix the COBOL page: only 17 of 113 visits engaged."
    },
    "linkedin": {

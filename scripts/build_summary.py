@@ -121,8 +121,12 @@ def periods_for(mode, start, last, full_month=True):
             NOTES.append(f"{MONTH_NAMES[d(last).month - 1]} has only {days} day{'s' if days > 1 else ''} so far, so this shows the last full month.")
             cur = (month_start(add_days(cur[0], -1)), add_days(cur[0], -1))
     p = month_start(add_days(cur[0], -1))
-    prev = (p, month_end(p))
-    return cur, (prev if prev[0] >= start else None), "in " + MONTH_NAMES[d(p).month - 1]
+    if cur[1] == month_end(cur[0]):   # a full month against the whole month before
+        prev, before = (p, month_end(p)), "in " + MONTH_NAMES[d(p).month - 1]
+    else:   # this month so far against the same days of the month before (agreed 17 Nov 2026), like the quarter view
+        prev = (p, min(add_days(p, (d(cur[1]) - d(cur[0])).days), month_end(p)))
+        before = "in the same days of " + MONTH_NAMES[d(p).month - 1]
+    return cur, (prev if prev[0] >= start else None), before
 
 
 def day_name(s):

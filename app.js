@@ -324,7 +324,7 @@ const lastFullDayPacific = (end, pulledAt) => {   // Google Analytics days follo
 };
 
 // The two periods each tab compares: the last full Monday-to-Sunday week against the week before,
-// or this month so far against the whole of last month.
+// or this month so far against the same days of last month.
 function periodsFor(mode, start, last) {
   if (mode === "cq" && view.fq) {   // a pinned full quarter against the whole quarter before
     const fy = Number(view.fq.slice(2, 4)), q = Number(view.fq.slice(-1));
@@ -367,11 +367,14 @@ function periodsFor(mode, start, last) {
     return { cur: cur.start >= start ? cur : null, prev: prev.start >= start ? prev : null,
       prevName: "Week before", none: "No full week before this one yet" };
   }
+  // this month so far against the same days of the month before (agreed 17 Nov 2026), like the quarter view
   const cur = { start: monthStart(last), end: last };
   const pStart = monthStart(addDays(cur.start, -1));
-  const prev = { start: pStart, end: monthEnd(pStart) };   // always the whole previous month
+  const days = Math.round((toDate(last) - toDate(cur.start)) / 864e5);
+  const pEnd = addDays(pStart, days) < monthEnd(pStart) && last < monthEnd(cur.start) ? addDays(pStart, days) : monthEnd(pStart);
+  const prev = { start: pStart, end: pEnd };
   return { cur, prev: prev.start >= start ? prev : null,
-    prevName: `${monthName(pStart)}, full month`,
+    prevName: pEnd === monthEnd(pStart) ? `${monthName(pStart)}, full month` : `${monthName(pStart)}, ${range(prev.start, prev.end)}`,
     none: `Comparison starts in ${MONTH_NAMES[(toDate(cur.start).getUTCMonth() + 1) % 12]}` };
 }
 
@@ -448,7 +451,7 @@ function fullPeriodsOnly(p, spec) {
   const days = (a, b) => Math.round((toDate(b) - toDate(a)) / 864e5) + 1;
   const monthDays = days(p.cur.start, monthEnd(p.cur.start));
   if (days(p.cur.start, p.cur.end) * 2 >= monthDays) return p;
-  const cur = p.prev, before = monthStart(addDays(cur.start, -1));
+  const cur = { start: p.prev.start, end: monthEnd(p.prev.start) }, before = monthStart(addDays(cur.start, -1));
   return { cur, prev: before >= monthStart(spec.start) ? { start: before, end: monthEnd(before) } : null,
     prevName: `${monthName(before)}, full month`, none: "No earlier full month in the export",
     why: `The export only covers ${range(p.cur.start, p.cur.end)} of ${monthName(p.cur.start)}, so this shows ${monthName(cur.start)}, the last full month.` };
@@ -996,8 +999,10 @@ function renderKumarLinks(ga) {
 
 // Microsoft Clarity (added 10 Nov 2026): 1 pull a day, each covering the 24 hours before it. Clarity's sessions are shown next to
 // Google Analytics visits for the same days, never added to them, so it's clear how much of the site Clarity sees.
-// Shown first (Susmitha, 10 Nov 2026): the homepage and the 3 product pages with the most visits, 10 Aug to 9 Nov 2026
-const CLARITY_FOCUS = [["/", "Homepage"], ["/forge", "Forge"], ["/platform", "Platform"], ["/unified-insights", "Unified Insights"]];
+// Shown first (Susmitha, 10 Nov 2026): the homepage and the 3 product pages with the most visits, 10 Aug to 9 Nov 2026.
+// 17 Nov 2026: /platform now redirects to the homepage, so Agentic DevOps took its place (Purav). It was the most visited
+// product or use case page after Forge and Unified Insights, 19 Oct to 15 Nov 2026 (199 visits in Google Analytics).
+const CLARITY_FOCUS = [["/", "Homepage"], ["/forge", "Forge"], ["/agentic-devops", "Agentic DevOps"], ["/unified-insights", "Unified Insights"]];
 const CLARITY_PROJECT = "zb2b12566l";
 // Clarity's own heat map links filter on URL=2;6;<regex> (copied from Clarity on 10 Nov 2026). This regex takes the page with or
 // without www, a trailing slash or a query, so each link opens that one page's heat map.
@@ -1005,7 +1010,9 @@ const clarityPageRegex = (page) => {
   const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   return `^https://(www\\.)?opsera\\.ai${page === "/" ? "/" : `${esc(page)}/?`}(\\?.*)?$`;
 };
-const clarityHeatmap = (page) => `https://clarity.microsoft.com/projects/view/${CLARITY_PROJECT}/heatmaps?date=Last%203%20days&heatmapType=0&heatmapDeviceType=2&URL=${encodeURIComponent(`2;6;${clarityPageRegex(page)}`)}`;
+// Opens the heat map on the same dates as the row: from 24 hours before the period's first pull to its last pull.
+// Clarity shows 1 device type at a time, so the link opens on PC (heatmapDeviceType=2).
+const clarityHeatmap = (page, days) => `https://clarity.microsoft.com/projects/view/${CLARITY_PROJECT}/heatmaps?date=Custom&start=${Date.parse(days[0].pulled_at) - 864e5}&end=${Date.parse(days[days.length - 1].pulled_at)}&heatmapType=0&heatmapDeviceType=2&URL=${encodeURIComponent(`2;6;${clarityPageRegex(page)}`)}`;
 function renderClarity(c, ga) {
   if (!c?.days?.length) return;
   $("visits-clarity-panel").hidden = false;
@@ -1036,7 +1043,7 @@ function renderClarity(c, ga) {
       { key: "scroll", label: "Scroll depth", num: true, fmt: (v) => (v == null ? "-" : `${v.toFixed(0)}%`), sort: false },
       { key: "rage", label: "Rage clicks", num: true, fmt: num, sort: false },
       { key: "dead", label: "Dead clicks", num: true, fmt: num, sort: false },
-      { key: "page", label: "Heat map", sort: false, fmt: (v) => `<a href="${clarityHeatmap(v)}" target="_blank" rel="noopener">Open in Clarity</a>`, csv: (r) => clarityHeatmap(r.page) },
+      { key: "page", label: "Heat map", sort: false, fmt: (v, r) => (r.sessions ? `<a href="${clarityHeatmap(v, days)}" target="_blank" rel="noopener">Open in Clarity</a>` : ""), csv: (r) => (r.sessions ? clarityHeatmap(r.page, days) : "") },
     ] });
     $("visits-clarity-cards").innerHTML = card("Clarity sessions", num(tot("sessions"))) +
       card("Average scroll depth", scroll == null ? "-" : `${scroll.toFixed(0)}%`, "How far down the page people got") +
@@ -2229,7 +2236,7 @@ function renderTeam(t) {
     return `<div class="card"><div class="label">${esc(m.label)}</div>
       <div class="value">${m.so_far == null ? "-" : num(m.so_far)}</div>
       <div class="sub">This month so far. Baseline: ${num(m.baseline)} a month (${baseLabel})</div>
-      <div class="sub">Goal: ${m.goal ? `${num(m.goal)} a month` : "To set"}</div>${along}${m.without_email_robots
+      <div class="sub">Goal: ${m.goal ? `${num(m.goal)} a month${m.without_email_robots ? ", counting all visits" : ""}` : "To set"}</div>${along}${m.without_email_robots
         ? `<div class="sub">Without email robots: ${num(m.without_email_robots.so_far)} so far. Baseline: ${num(m.without_email_robots.baseline)} a month</div>` : ""}</div>`;
   };
   const sources = (metrics) => {

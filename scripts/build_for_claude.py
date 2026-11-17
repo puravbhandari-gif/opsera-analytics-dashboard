@@ -517,7 +517,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - Form fills count the HubSpot form event in Google Analytics. We leave out job application forms everywhere.
 - Asset downloads are form fills on pages under /resources/report/, /resources/white-papers/, /resources/ebooks/ or /resources/comparison-guides/. They're part of "other forms".
 - Deals exist as weekly and monthly totals, and as 1 line per marketing deal in deals_one_line_each.csv, without company or person names. Closed Lost deals stay out, and there are no daily deal numbers.
-- When the dashboard compares periods, it compares the last full week with the week before, or this month so far with the whole of last month.
+- When the dashboard compares periods, it compares the last full week with the week before, or this month so far with the same days of last month.
 - A page in the page files is its address on opsera.ai, so `/pricing` is https://opsera.ai/pricing. Page titles are in the page_titles files.
 - We split page and page title files by part of the site: blog, resources, knowledge base and other. Big ones also split by quarter, month or week, as the file name says.
 - Questions about a campaign: use the campaign files (the utm_campaign in Google Analytics). Search Console counts Google clicks by page, so campaigns don't have them.

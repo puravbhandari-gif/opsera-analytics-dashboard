@@ -545,7 +545,7 @@
   },
   "month": {
    "period": "1 to 15 Nov 2026",
-   "period_before": "1 to 31 Oct 2026",
+   "period_before": "1 to 15 Oct 2026",
    "areas": [
     {
      "key": "pipeline",
@@ -603,20 +603,20 @@
      "source": "Google Analytics, form fills",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
       "key": "demo_requests",
       "label": "Demo requests",
       "value": "6",
       "cur": 6,
-      "prev": 22,
-      "before": "22",
-      "change_pct": -72.7,
+      "prev": 16,
+      "before": "16",
+      "change_pct": -62.5,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Gartner offer form fills slowed to 2, from 67.",
+     "why": "Demo requests fell 62.5% to 6, from 16.",
      "do": null,
      "trend": [
       {
@@ -652,37 +652,37 @@
      "source": "HubSpot, marketing contacts and meetings",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
-      "key": "meetings_booked",
-      "label": "Meetings booked with marketing contacts",
-      "value": "3",
-      "cur": 3,
-      "prev": 4,
-      "before": "4",
-      "change_pct": -25.0,
+      "key": "new_marketing_contacts",
+      "label": "New marketing contacts",
+      "value": "7",
+      "cur": 7,
+      "prev": 19,
+      "before": "19",
+      "change_pct": -63.2,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Half of November brought 7 new contacts, against 82.",
+     "why": "New marketing contacts fell to 7, from 19.",
      "do": null,
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
-       "value": 1
+       "value": 7
       },
       {
        "week": "12 to 18 Oct 2026",
-       "value": 0
+       "value": 6
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 0
+       "value": 51
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 1
+       "value": 12
       },
       {
        "week": "2 to 8 Nov 2026",
@@ -690,7 +690,7 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1
+       "value": 5
       }
      ]
     },
@@ -701,45 +701,45 @@
      "source": "Google Analytics",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
-      "key": "visits_without_email_robots",
-      "label": "Visits without email robots",
-      "value": "6,154",
-      "cur": 6154,
-      "prev": 13474,
-      "before": "13,474",
-      "change_pct": -54.3,
+      "key": "engaged_visits",
+      "label": "Engaged visits",
+      "value": "1,638",
+      "cur": 1638,
+      "prev": 2278,
+      "before": "2,278",
+      "change_pct": -28.1,
       "good": false,
       "min_change_pct": 10
      },
-     "why": "Half of November is set against all of October.",
+     "why": "Engaged visits fell 28.1% to 1,638.",
      "do": null,
      "trend": [
       {
        "week": "5 to 11 Oct 2026",
-       "value": 2848
+       "value": 1081
       },
       {
        "week": "12 to 18 Oct 2026",
-       "value": 2780
+       "value": 929
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 3283
+       "value": 886
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 2995
+       "value": 835
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 3145
+       "value": 881
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 2703
+       "value": 696
       }
      ]
     },
@@ -750,47 +750,12 @@
      "source": "Search Console",
      "note": "15 Nov is Google's early figure and may change.",
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
-     "notable": true,
-     "main": {
-      "key": "clicks",
-      "label": "Clicks from Google search",
-      "value": "1,207",
-      "cur": 1207,
-      "prev": 2247,
-      "before": "2,247",
-      "change_pct": -46.3,
-      "good": false,
-      "min_change_pct": 15
-     },
-     "why": "Half of November is set against all of October.",
+     "period_before": "1 to 15 Oct 2026",
+     "notable": false,
+     "main": null,
+     "why": null,
      "do": null,
-     "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 597
-      },
-      {
-       "week": "12 to 18 Oct 2026",
-       "value": 431
-      },
-      {
-       "week": "19 to 25 Oct 2026",
-       "value": 466
-      },
-      {
-       "week": "26 Oct to 1 Nov 2026",
-       "value": 482
-      },
-      {
-       "week": "2 to 8 Nov 2026",
-       "value": 509
-      },
-      {
-       "week": "9 to 15 Nov 2026",
-       "value": 637
-      }
-     ]
+     "trend": []
     },
     {
      "key": "aeo",
@@ -799,17 +764,17 @@
      "source": "Google Analytics, visits from AI tools",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
       "value": "66",
       "cur": 66,
-      "prev": 106,
-      "before": "106",
-      "change_pct": -37.7,
-      "good": false,
+      "prev": 47,
+      "before": "47",
+      "change_pct": 40.4,
+      "good": true,
       "min_change_pct": 15
      },
      "why": "ChatGPT sent 40 of the 66 AI visits.",
@@ -848,17 +813,17 @@
      "source": "Google Analytics, tagged campaign links",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
       "value": "123",
       "cur": 123,
-      "prev": 486,
-      "before": "486",
-      "change_pct": -74.7,
-      "good": false,
+      "prev": 92,
+      "before": "92",
+      "change_pct": 33.7,
+      "good": true,
       "min_change_pct": 15
      },
      "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
@@ -897,7 +862,7 @@
      "source": "HubSpot and Salesforce event campaigns",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": false,
      "main": null,
      "why": null,
@@ -911,20 +876,20 @@
      "source": "Google Analytics, landing pages",
      "note": null,
      "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 31 Oct 2026",
+     "period_before": "1 to 15 Oct 2026",
      "notable": true,
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
       "value": "2,377",
       "cur": 2377,
-      "prev": 3958,
-      "before": "3,958",
-      "change_pct": -39.9,
-      "good": false,
+      "prev": 1816,
+      "before": "1,816",
+      "change_pct": 30.9,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": "COBOL Modernization visits rose to 113, up from 53.",
+     "why": "COBOL Modernization visits rose to 113, up from 20.",
      "do": "Fix the COBOL page: only 17 of 113 visits engaged.",
      "trend": [
       {
@@ -1034,14 +999,14 @@
    "by_claude": true,
    "boxes": {
     "well": [
-     "COBOL Modernization visits rose to 113, up from 53.",
-     "Harness Engineering blog visits rose to 80, up from 45.",
-     "Change impact campaign kept 11 of 12 visitors engaged."
+     "Content visits rose 30.9% to 2,377.",
+     "COBOL Modernization visits rose to 113, up from 20.",
+     "AI tools sent 66 visits, up from 47."
     ],
     "attention": [
-     "Half of November brought 6 demo requests, against 22 in October.",
-     "Half of November brought 7 new contacts, against 82.",
-     "Gartner offer form fills slowed to 2, from 67."
+     "Demo requests fell 62.5% to 6, from 16.",
+     "New marketing contacts fell to 7, from 19.",
+     "Engaged visits fell 28.1% to 1,638."
     ],
     "do": [
      "Write more like Claude Code Alternatives: 51 of 123 engaged.",
