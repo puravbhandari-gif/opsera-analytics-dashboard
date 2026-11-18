@@ -109,3 +109,4 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published.
 - [ ] Ask David for a new opportunities export and a new DG-Demo Requests export; the 17 Nov folder had neither.
 - [x] 18 Nov: the Content tab reads blogs from Contentful (published and live on opsera.ai), not the sitemap. November so far: 9 blogs.
+- [ ] Jeetu Patel response hub: add the link to Kumar's Unite.ai article ("When AI Agents Finish the Work, Who Owns What Comes Next") once Catapult gets it published, and drop "not published yet".

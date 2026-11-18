@@ -88,11 +88,6 @@
      "group": "Channel",
      "name": "Customer email on the rebrand",
      "number": "Sent 16 Oct"
-    },
-    {
-     "group": "Format",
-     "name": "Insights relaunch press release",
-     "number": "Due 17 Nov"
     }
    ],
    "source": "Source: Relaunch press release, 28 Oct 2026",
@@ -312,6 +307,27 @@
    ],
    "source": "Source: PHP2Shell campaign, 26 Oct 2026",
    "numbers_note": "LinkedIn numbers from the company page export to 7 Nov and Kumar's post list; email numbers from HubSpot, as given on 6 Nov 2026. Visits from Google Analytics, opsera.ai only, from 26 Oct. Kumar's post reactions checked 17 Nov 2026."
+  },
+  {
+   "name": "Jeetu Patel response",
+   "note": "Asked by Susmitha on 11 Nov",
+   "hub": {
+    "kind": "Blog",
+    "title": "Evalsmaxxing Ships the Rewrite. Context Keeps It Alive.",
+    "link": "https://opsera.ai/blog/evalsmaxxing-ships-the-rewrite-context-keeps-it-alive",
+    "date": "2026-11-17",
+    "visits_path": "/blog/evalsmaxxing-ships-the-rewrite-context-keeps-it-alive",
+    "short_title": "Evalsmaxxing ships the rewrite"
+   },
+   "spokes": [
+    {
+     "group": "Channel",
+     "name": "Kumar's Unite.ai article",
+     "number": "With Catapult, not published yet"
+    }
+   ],
+   "source": "Source: Jeetu Patel response, 17 Nov 2026",
+   "numbers_note": "Kumar's article for Unite.ai, \"When AI Agents Finish the Work, Who Owns What Comes Next\", is with Catapult and not published yet (18 Nov 2026). Visits from Google Analytics, opsera.ai only, from 17 Nov."
   }
  ]
 }
