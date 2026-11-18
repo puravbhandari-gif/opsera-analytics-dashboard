@@ -101,7 +101,10 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.
 - [ ] Waiting on David (17 Nov): the $30K Q3 deal (Closed Lost, created 9 Sep) also started with a demo request after an SDR meeting. Sourced or influenced? Influenced for now.
 - [ ] Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
-- [ ] Waiting on David (17 Nov): the $500,000 Q3 deal credited to Gartner Xpo. David says partner deal registration plus a Software Forge page visit, but his 2 Nov export links those touches to the other deal at the same account. Influenced and credited to Gartner Xpo for now.
+- [x] The $500,000 Q3 deal credited to Gartner Xpo: David confirmed on 18 Nov the contact was scanned at Gartner Xpo, so the Gartner credit stands (influenced, deal existed before the event).
 - [ ] Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.
 - [ ] Set the CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK secrets in GitHub (Purav, before Monday 23 Nov). Until then the Monday check only looks for emails, and Monday's run can bring customer search terms back.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
+- [ ] Waiting on David (18 Nov): do partner deal registrations ("DG-F27 - Partner Deal Reg") count as marketing? Not counted for now (Purav). Counting them would move Q3 influenced from $730,000 to $3,230,000.
+- [ ] 18 Nov: building a "Who visits" panel from Warmly (industry, size, seniority, no names) and a daily Slack line for new content in #core-marketing-team (Purav).
+- [ ] Ask David for a new opportunities export and a new DG-Demo Requests export; the 17 Nov folder had neither.

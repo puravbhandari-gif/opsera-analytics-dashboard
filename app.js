@@ -500,6 +500,8 @@ $("period-mode").addEventListener("click", (e) => { const b = e.target.closest("
 $("period-mode").querySelectorAll("button").forEach((b) => b.classList.toggle("on", b.dataset.mode === periodMode));
 
 // Sums over a run of daily rows, for any period.
+// Any opsera.ai page address shown on the dashboard links to the live page (Susmitha, 18 Nov 2026)
+const opseraLink = (v) => (typeof v === "string" && v.startsWith("/") ? `<a href="https://opsera.ai${encodeURI(v)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v));
 const rangeSum = (rows, key) => (a, b) => rows.reduce((t, r) => (r.date >= a && r.date <= b ? t + (typeof key === "function" ? key(r) : r[key] || 0) : t), 0);
 
 // ---------- Tab 1: Google Search ----------
@@ -568,7 +570,7 @@ function renderSearch(d) {
   $("search-pages-source").textContent = `${src}, ${range(d.start_date, lastFinal)}.`;
   table($("search-pages"), {
     rows: d.pages.map((p) => ({ ...p, path: shortPage(p.page) })), search: "pages", sortKey: "clicks",
-    columns: cols({ key: "path", label: "Page", search: true, fmt: (v) => esc(v) }),
+    columns: cols({ key: "path", label: "Page", search: true, fmt: opseraLink }),
   });
   $("search-queries-source").textContent = `${src}, ${range(d.start_date, lastFinal)}.`;
   table($("search-queries"), { rows: d.searches, search: "searches", sortKey: "clicks",
@@ -674,7 +676,7 @@ function renderVisits(d) {
 
   $("visits-pages-source").textContent = `${src}, ${when}.`;
   table($("visits-pages"), { rows: d.pages, search: "pages", sortKey: "views", columns: [
-    { key: "page", label: "Page", search: true },
+    { key: "page", label: "Page", search: true, fmt: opseraLink },
     { key: "views", label: "Times viewed", num: true, fmt: num },
   ] });
 
@@ -721,7 +723,7 @@ function renderLeads(d) {
   ];
   table($("leads-core"), { rows: core, columns: [
     { key: "name", label: "Page", sort: false },
-    { key: "page", label: "Address", sort: false },
+    { key: "page", label: "Address", sort: false, fmt: opseraLink },
     { key: "status", label: "Form fills", sort: false },
   ] });
 
@@ -747,7 +749,7 @@ function renderLeads(d) {
   const rows = LEAD_ORDER.flatMap((k) => d.lines[k].pages.map((p) => ({ line: d.lines[k].label, page: p.page, count: p.count })));
   table($("leads-pages"), { rows, search: "pages", sortKey: "count", columns: [
     { key: "line", label: "Kind of form", search: true },
-    { key: "page", label: "Page", search: true },
+    { key: "page", label: "Page", search: true, fmt: opseraLink },
     { key: "count", label: "Form fills", num: true, fmt: num },
   ] });
 
@@ -1154,7 +1156,7 @@ function renderLinkedInVisits(ga) {
 
   const groupName = Object.fromEntries(GROUPS);
   table($("li-web-landing"), { rows: li.landing.map((r) => ({ ...r, from: groupName[r.group] })), search: "pages", sortKey: "visits", columns: [
-    { key: "page", label: "Landing page", search: true },
+    { key: "page", label: "Landing page", search: true, fmt: opseraLink },
     { key: "from", label: "From", search: true },
     { key: "visits", label: "Visits", num: true, fmt: num },
     { key: "engaged", label: "Engaged visits", num: true, fmt: num },
@@ -1513,7 +1515,7 @@ async function renderAiVisibility(ga) {
     $("aiv-pages").innerHTML = aivWait("Pages by week need 5 full weeks of visits.");
   } else {
     table($("aiv-pages"), { rows: pageRows, search: "pages", sortKey: "now", pageSize: 10, columns: [
-      { key: "page", label: "Landing page", search: true, fmt: (v) => (v === "(not set)" ? "Page not recorded by Google Analytics" : esc(v)) },
+      { key: "page", label: "Landing page", search: true, fmt: (v) => (v === "(not set)" ? "Page not recorded by Google Analytics" : opseraLink(v)) },
       { key: "now", label: `Week to ${day(lastWeek)}`, num: true, fmt: num },
       { key: "from", label: "From", sort: false, fmt: (v) => esc(v || "-") },
       { key: "avg", label: "4-week average", num: true, fmt: one },
@@ -1581,7 +1583,7 @@ async function renderAiVisibility(ga) {
     chart("aiv-bots-chart", (t) => ({ type: "line", whole: true, ytitle: "Bot visits in the week",
       data: { labels: bw.map(day), datasets: names.map((b, i) => line(b, bw.map((w) => wk[`${w}|${b}`] || 0), t.s[i])) } }));
     table($("aiv-bots-pages"), { rows: bots.pages, search: "pages", sortKey: "visits", pageSize: 10, columns: [
-      { key: "page", label: "Page", search: true }, { key: "bot", label: "Bot", search: true }, { key: "visits", label: "Bot visits", num: true, fmt: num },
+      { key: "page", label: "Page", search: true, fmt: opseraLink }, { key: "bot", label: "Bot", search: true }, { key: "visits", label: "Bot visits", num: true, fmt: num },
     ] });
   }
   const gaps = bots.plain_total_gaps || [];
@@ -1649,7 +1651,7 @@ function renderAeo(ga, hub) {
   ] });
   $("aeo-tools-source").textContent = `Sources: Google Analytics and HubSpot for contacts, ${range(start, last)} (Pacific time).`;
   table($("aeo-landing"), { rows: ai.landing.map((r) => ({ ...r, name: AI_TOOL_NAMES[r.tool] })), search: "pages", sortKey: "visits", columns: [
-    { key: "page", label: "Landing page", search: true },
+    { key: "page", label: "Landing page", search: true, fmt: opseraLink },
     { key: "name", label: "AI tool", search: true },
     { key: "visits", label: "Visits", num: true, fmt: num },
     { key: "engaged", label: "Engaged", num: true, fmt: num },
@@ -1665,6 +1667,23 @@ function renderLeadsHubspot(hub) {
   $("leads-hubspot-events").innerHTML = hub.events.map((e) => card(e.label, num(e.members),
     [e.note, e.joined_daily.length ? `Added ${e.joined_daily.length > 1 ? `${dayYear(e.joined_daily[0].date)} to ${dayYear(e.joined_daily[e.joined_daily.length - 1].date)}` : dayYear(e.joined_daily[0].date)}` : ""].filter(Boolean).join(". "))).join("");
   $("leads-hubspot-events-source").textContent = `Source: HubSpot lists, updated ${dayYear(hub.pulled_at.slice(0, 10))}.`;
+  renderDemoUseCase(hub);
+}
+
+// Demo requests by product, from the demo form's own "Primary use case" field in HubSpot (agreed 18 Nov 2026). Each HubSpot
+// value sits in 1 group, so the groups add up to the HubSpot demo requests. HubSpot counts people, Google Analytics counts form
+// fills, so the 2 totals differ and are never added together. The field started at the end of June 2026.
+const DEMO_USE_CASES = [["Forge", ["Forge", "Brickforge"]], ["Unified Insights", ["Unified Insights"]], ["Agents", ["Agents", "AgentForge"]],
+  ["Pipelines", ["Pipelines"]], ["Salesforce", ["Salesforce"]], ["Copilot", ["Copilot"]],
+  ["Other", ["Migration", "Appfire Flow Migration", "Gartner Xpo Meet", "Other"]], ["Not filled in", ["Not filled in"]]];
+const demoUseCase = (rows, values) => rangeSum(rows, (r) => (values.includes(r.use_case) ? r.count : 0));
+function renderDemoUseCase(hub) {
+  const rows = hub.demo_use_case_daily;
+  if (!rows) { $("leads-demo-usecase-panel").hidden = true; return; }
+  compare({ id: "leads-demo-usecase", start: "2026-07-01", last: hub.end_date,
+    source: (a, b) => `Source: HubSpot, people whose latest form was the demo form, by its "Primary use case" field, ${range(a, b)}. ` +
+      `Total ${num(rangeSum(rows, "count")(a, b))}. The field started at the end of June 2026. Google Analytics counts form fills, so its demo count differs.`,
+    metrics: DEMO_USE_CASES.map(([label, values]) => ({ label, value: demoUseCase(rows, values), fmt: num, noDelta: true })) });
 }
 
 // From LinkedIn to the demo form: homepage -> /demo -> demo form, for each LinkedIn line, never added together
@@ -1714,7 +1733,7 @@ function renderLinkedInEstimate(est, ga) {
   const who = { company: "Company page", kumar: "Kumar" };
   table($("li-est-matches"), { rows: est.matches.map((m) => ({ ...m, counted: name[m.group], linked: m.accounts.map((a) => who[a]).join(" and "),
     days: m.dates.length > 1 ? range(m.dates[0], m.dates[m.dates.length - 1]) : dayYear(m.dates[0]) })), sortKey: "visits", columns: [
-    { key: "page", label: "Landing page" },
+    { key: "page", label: "Landing page", fmt: opseraLink },
     { key: "days", label: "Visit days" },
     { key: "linked", label: "Linked by" },
     { key: "counted", label: "Counted as" },
@@ -3155,9 +3174,17 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       src: `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
       line: () => "Demo form fills on opsera.ai",
-      // by the page before /demo (agreed 10 Nov 2026); the rest came from the homepage, other pages or no page
-      note: leads.demo_by_product ? (a, b) => { const g = (k) => rangeSum(leads.demo_by_product, k)(a, b);
-        return `Forge ${num(g("forge"))} / Insights ${num(g("insights"))} / Other ${num(g("home") + g("other") + g("none"))}`; } : undefined,
+      // by the demo form's product field in HubSpot (agreed 18 Nov 2026), named as HubSpot's so it's never read as part of the Google count;
+      // before the field existed (end of June 2026), by the page before /demo (agreed 10 Nov 2026)
+      note: (a, b) => {
+        if (hub.demo_use_case_daily && a >= "2026-07-01") {
+          const rows = hub.demo_use_case_daily, g = (v) => demoUseCase(rows, v)(a, b), all = rangeSum(rows, "count")(a, b);
+          return `HubSpot's product field, ${num(all)} people: Forge ${num(g(["Forge", "Brickforge"]))} / Insights ${num(g(["Unified Insights"]))} / Other ${num(all - g(["Forge", "Brickforge"]) - g(["Unified Insights"]))}`;
+        }
+        if (!leads.demo_by_product) return "";
+        const g = (k) => rangeSum(leads.demo_by_product, k)(a, b);
+        return `Forge ${num(g("forge"))} / Insights ${num(g("insights"))} / Other ${num(g("home") + g("other") + g("none"))}`;
+      },
       src: "Google Analytics" },
     { label: "Meetings with marketing contacts", start: hub.start_date, last: hub.end_date, fmt: num, value: rangeSum(booked, "count"),
       line: () => "Booked by people from marketing", src: `HubSpot, updated ${dayYear(hub.pulled_at.slice(0, 10))}` },

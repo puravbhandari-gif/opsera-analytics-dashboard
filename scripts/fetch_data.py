@@ -113,8 +113,8 @@ def page_key(path):
 # ---------- Search Console ----------
 
 # Final numbers are the rule, so this list stays empty. A day listed here shows with Google's early number while
-# Google's final numbers stop the day before it. One-off for the week ending 15 Nov 2026 (Purav, 17 Nov 2026).
-EARLY_DAYS = ["2026-11-15"]
+# Google's final numbers stop the day before it. Used once, for 15 Nov 2026 (Purav, 17 Nov 2026); its final number matched.
+EARLY_DAYS = []
 
 def find_gsc_site(s):
     sites = call(s, "GET", "https://searchconsole.googleapis.com/webmasters/v3/sites").get("siteEntry", [])

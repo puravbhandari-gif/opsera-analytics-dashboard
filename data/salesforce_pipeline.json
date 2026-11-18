@@ -2,10 +2,11 @@
  "source": "Salesforce reports",
  "exports": {
   "opportunities": "2026-11-09",
-  "campaign_touches": "2026-11-02",
-  "meetings": "2026-11-09",
+  "campaign_touches": "2026-11-17",
+  "meetings": "2026-11-17",
   "meetings_older": [
-   "2026-10-27"
+   "2026-10-27",
+   "2026-11-09"
   ]
  },
  "opportunities_cover_from": "2026-04-01",
@@ -13,16 +14,16 @@
  "opportunities_to": "2026-11-06",
  "share_without_contact_pct": 70,
  "window_days": 90,
- "deals_join_date_unknown": 28,
- "deals_left_out_by_window": 3,
+ "deals_join_date_unknown": 27,
+ "deals_left_out_by_window": 5,
  "months": [
   {
    "month": "2026-04",
    "quarter": "FY27 Q1",
-   "sourced_deals": 13,
-   "sourced_value": 1337200,
-   "influenced_deals": 0,
-   "influenced_value": 0,
+   "sourced_deals": 11,
+   "sourced_value": 1087200,
+   "influenced_deals": 1,
+   "influenced_value": 150000,
    "agency_deals": 3,
    "agency_value": 400000,
    "nocontact_deals": 13
@@ -98,11 +99,11 @@
    "quarter": "FY27 Q4",
    "sourced_deals": 0,
    "sourced_value": 0,
-   "influenced_deals": 0,
-   "influenced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 200000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 7
+   "nocontact_deals": 6
   }
  ],
  "days": [
@@ -198,18 +199,18 @@
   },
   {
    "date": "2026-04-29",
-   "sourced_deals": 1,
-   "sourced_value": 150000,
-   "influenced_deals": 0,
-   "influenced_value": 0,
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 150000,
    "agency_deals": 0,
    "agency_value": 0,
    "nocontact_deals": 3
   },
   {
    "date": "2026-04-30",
-   "sourced_deals": 3,
-   "sourced_value": 286000,
+   "sourced_deals": 2,
+   "sourced_value": 186000,
    "influenced_deals": 0,
    "influenced_value": 0,
    "agency_deals": 1,
@@ -710,11 +711,11 @@
    "date": "2026-11-03",
    "sourced_deals": 0,
    "sourced_value": 0,
-   "influenced_deals": 0,
-   "influenced_value": 0,
+   "influenced_deals": 1,
+   "influenced_value": 200000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 2
+   "nocontact_deals": 1
   },
   {
    "date": "2026-11-04",
@@ -805,8 +806,8 @@
    "date": "2026-04-30",
    "won_deals": 0,
    "won_value": 0,
-   "lost_deals": 1,
-   "lost_value": 100000,
+   "lost_deals": 0,
+   "lost_value": 0,
    "open_deals": 2,
    "open_value": 186000
   },
@@ -1025,6 +1026,15 @@
    "lost_value": 0,
    "open_deals": 1,
    "open_value": 200000
+  },
+  {
+   "date": "2026-11-03",
+   "won_deals": 0,
+   "won_value": 0,
+   "lost_deals": 0,
+   "lost_value": 0,
+   "open_deals": 1,
+   "open_value": 200000
   }
  ],
  "campaigns": [
@@ -1089,10 +1099,10 @@
    "value": 250000
   },
   {
-   "bucket": "sourced",
-   "campaign": "DG-Contact Us",
-   "deals": 2,
-   "value": 250000
+   "bucket": "influenced",
+   "campaign": "Target-account campaign",
+   "deals": 1,
+   "value": 200000
   },
   {
    "bucket": "influenced",
@@ -1114,7 +1124,13 @@
   },
   {
    "bucket": "sourced",
-   "campaign": "DG-F27 - Partner Deal Reg",
+   "campaign": "DG-Contact Us",
+   "deals": 1,
+   "value": 150000
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "Campaign named after a company",
    "deals": 1,
    "value": 150000
   },
@@ -1192,6 +1208,49 @@
   }
  ],
  "to_review": [
+  {
+   "date": "2026-04-24",
+   "amount": 125000,
+   "stage": "1 Meeting",
+   "counted_as": "Booking agency",
+   "campaigns": [
+    "DG-2025-Lantern_Records",
+    "DG-FY26-27-CrestingWave-Meetings",
+    "Target-account campaign"
+   ],
+   "reasons": [
+    "Matches more than 1 source: booking agency, marketing"
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "amount": 150000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Sales",
+   "campaigns": [
+    "SDR-Meeting-Set",
+    "Target-account campaign"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
+  {
+   "date": "2026-04-30",
+   "amount": 150000,
+   "stage": "2 Demo",
+   "counted_as": "Marketing sourced (estimate)",
+   "campaigns": [
+    "DG-Contact Us",
+    "DG-FY22-Q3-Dreamforce 2022",
+    "DG-FY22-Q3-Dreamforce 2022 Book a Demo (Booth)",
+    "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "DG-SDR Outreach (Cold)"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
+   ]
+  },
   {
    "date": "2026-07-07",
    "amount": 100000,
@@ -1326,6 +1385,19 @@
    ],
    "reasons": [
     "Deal existed before the event; counted as influenced"
+   ]
+  },
+  {
+   "date": "2026-11-03",
+   "amount": 200000,
+   "stage": "1 Meeting",
+   "counted_as": "Marketing influenced",
+   "campaigns": [
+    "SDR-Meeting-Set",
+    "Target-account campaign"
+   ],
+   "reasons": [
+    "Matches more than 1 source: SDR or AE outreach, marketing"
    ]
   }
  ],
@@ -2070,11 +2142,11 @@
     "people": 2
    },
    {
-    "campaign": "DG-FY27-Q1-Agentic-Launch",
+    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
     "people": 2
    },
    {
-    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
+    "campaign": "DG-FY27-Q1-Agentic-Launch",
     "people": 2
    },
    {
@@ -2142,15 +2214,15 @@
     "people": 1
    },
    {
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "people": 1
+   },
+   {
     "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
     "campaign": "DG-FY27-Q1-DAIS-Healthcare",
-    "people": 1
-   },
-   {
-    "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
    {

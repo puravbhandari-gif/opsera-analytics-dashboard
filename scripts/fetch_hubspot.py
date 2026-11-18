@@ -276,6 +276,24 @@ def pacific_day(stamp):
     return dt.datetime.fromisoformat(stamp.replace("Z", "+00:00")).astimezone(PACIFIC).date().isoformat()
 
 
+# Demo requests by product (agreed 18 Nov 2026): the demo form ("Handraiser | Demo Request") asks for a primary use case,
+# kept on the contact as primary_use_case. A contact counts on the day of their latest form fill when that form is the demo
+# form, so someone who fills in another form later drops out. The field started at the end of June 2026; before that it's empty.
+DEMO_FORM = "handraiser | demo request"
+
+
+def demo_use_cases(s):
+    since = int(dt.datetime.fromisoformat(START_DATE).replace(tzinfo=dt.timezone.utc).timestamp() * 1000)
+    rows = search(s, "contacts", [{"propertyName": "recent_conversion_date", "operator": "GTE", "value": str(since)}],
+                  ["recent_conversion_date", "recent_conversion_event_name", "primary_use_case"])
+    days = collections.Counter()
+    for r in rows:
+        p = r.get("properties") or {}
+        if DEMO_FORM in (p.get("recent_conversion_event_name") or "").lower() and p.get("recent_conversion_date"):
+            days[(pacific_day(p["recent_conversion_date"]), p.get("primary_use_case") or "Not filled in")] += 1
+    return [{"date": d, "use_case": u, "count": n} for (d, u), n in sorted(days.items())]
+
+
 def linkedin_fields(p):
     hits = []
     if (p.get("hs_analytics_source") == "SOCIAL_MEDIA" and (p.get("hs_analytics_source_data_1") or "").lower() == "linkedin"):
@@ -638,6 +656,7 @@ def main():
         "event_rows": event_rows,
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
+        "demo_use_case_daily": demo_use_cases(s),
         "emails": public_emails(emails),
         "campaign_deals": campaign_deals,
         "all_pipeline": pipeline,

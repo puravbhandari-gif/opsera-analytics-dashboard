@@ -48,12 +48,16 @@ import sys
 from html.parser import HTMLParser
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from privacy import customer_pattern  # noqa: E402  (the private customer list)
+
 EXPORTS = Path(os.path.expanduser("~/Desktop/Data/salesforce-exports"))
 OUT = Path(__file__).resolve().parent.parent / "data" / "salesforce_pipeline.json"
 START = dt.date(2026, 4, 1)
 SALES = re.compile(r"sdr|\bae\b", re.I)                       # SDR-Meeting-Set, DG-SDR Outreach (Cold), AE Prospecting, AE Internal Referral
-# Not marketing either (agreed 28 Oct 2026): a test campaign, a lead-status flag and a bought LinkedIn contact list
-NOT_MARKETING = {"X2-Tracking-Test-Campaign", "DG-FY27 Promoted to X2 Status", "DG-FY27 Wiza LinkedIn Exports", "DG-2025-Lantern_Records"}
+# Not marketing either (agreed 28 Oct 2026): a test campaign, a lead-status flag and a bought LinkedIn contact list.
+# Partner deal registrations too, until David confirms (Purav, 18 Nov 2026).
+NOT_MARKETING = {"DG-F27 - Partner Deal Reg", "X2-Tracking-Test-Campaign", "DG-FY27 Promoted to X2 Status", "DG-FY27 Wiza LinkedIn Exports", "DG-2025-Lantern_Records"}
 AGENCY = re.compile(r"dogood|crestingwave", re.I)              # outside booking agency (David's "c")
 WINDOW_DAYS = 90
 NEAR_DAYS = 120   # joined 91 to 120 days before: just outside the window, for the To review list
@@ -136,8 +140,14 @@ def marketing(campaign):
     return bool(campaign) and not SALES.search(campaign) and not AGENCY.search(campaign) and campaign.strip() not in NOT_MARKETING
 
 
+COMPANY_NAMED = customer_pattern()
+
+
 def public(campaign):
-    return "Target-account campaign" if TARGET_ACCOUNTS.search(campaign) else campaign
+    """Target-account campaigns, and campaigns named after a customer or partner, are never named (18 Nov 2026)."""
+    if TARGET_ACCOUNTS.search(campaign):
+        return "Target-account campaign"
+    return "Campaign named after a company" if COMPANY_NAMED.search(campaign) else campaign
 
 
 def fiscal_quarter(d):
