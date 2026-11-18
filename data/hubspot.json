@@ -15565,5 +15565,114 @@
    "use_case": "Pipelines",
    "count": 1
   }
- ]
+ ],
+ "warmly_profile": {
+  "days": 90,
+  "from": "2026-08-20",
+  "companies": 1231,
+  "people": 1475,
+  "industry": [
+   [
+    "Software and IT",
+    274
+   ],
+   [
+    "Not known",
+    223
+   ],
+   [
+    "Financial services and insurance",
+    159
+   ],
+   [
+    "Manufacturing and industrial",
+    136
+   ],
+   [
+    "Business services and consulting",
+    127
+   ],
+   [
+    "Healthcare and life sciences",
+    90
+   ],
+   [
+    "Retail and consumer",
+    79
+   ],
+   [
+    "Media and telecom",
+    60
+   ],
+   [
+    "Energy, utilities and transport",
+    45
+   ],
+   [
+    "Government and education",
+    27
+   ],
+   [
+    "Other industries",
+    11
+   ]
+  ],
+  "size": [
+   [
+    "Not known",
+    582
+   ],
+   [
+    "1,000 to 5,000",
+    234
+   ],
+   [
+    "10,000 or more",
+    194
+   ],
+   [
+    "1 to 250 people",
+    99
+   ],
+   [
+    "5,000 to 10,000",
+    66
+   ],
+   [
+    "251 to 1,000",
+    56
+   ]
+  ],
+  "seniority": [
+   [
+    "Not known",
+    919
+   ],
+   [
+    "Senior",
+    135
+   ],
+   [
+    "Director",
+    112
+   ],
+   [
+    "Employee",
+    101
+   ],
+   [
+    "Manager",
+    87
+   ],
+   [
+    "VP",
+    66
+   ],
+   [
+    "Executive, owner or partner",
+    55
+   ]
+  ],
+  "to": "2026-11-18"
+ }
 }

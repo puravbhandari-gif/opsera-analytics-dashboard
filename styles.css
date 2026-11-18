@@ -444,3 +444,13 @@ body.exec-mode .top-controls, body.exec-mode .tabs-row, body.exec-mode footer { 
 
 /* Analysts box on the PR tab (10 Nov 2026) */
 .plain-list { margin: 8px 0 0; padding-left: 20px; line-height: 1.6; color: var(--ink-2); }
+
+/* Who visits: 3 short bar lists side by side (18 Nov 2026) */
+.who-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin: 16px 0; }
+.who-block h4 { margin: 0 0 10px; }
+.who-row { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(40px, 1fr) auto; gap: 8px; align-items: center; font-size: .9rem; margin: 4px 0; }
+.who-name { overflow-wrap: anywhere; }
+.who-bar { background: var(--border); border-radius: 4px; height: 8px; overflow: hidden; }
+.who-bar i { display: block; height: 100%; background: var(--accent, #3b5bdb); border-radius: 4px; }
+.who-n { font-variant-numeric: tabular-nums; text-align: right; }
+.who-unknown { margin: 10px 0 0; font-size: .85rem; }

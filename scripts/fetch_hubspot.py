@@ -294,6 +294,65 @@ def demo_use_cases(s):
     return [{"date": d, "use_case": u, "count": n} for (d, u), n in sorted(days.items())]
 
 
+# Who visits (agreed 18 Nov 2026): companies and people Warmly matched to a visit on opsera.ai in the last 90 days, counted by
+# industry group, company size and seniority. Counts only: no company, person or job title is kept. HubSpot's industry names
+# come from several enrichment tools, so each is put in a broad group by its words, checked in this order.
+WARMLY_DAYS = 90
+INDUSTRY_GROUPS = [
+    ("Software and IT", r"software|computer|internet|information technology|\bit\b|it services|technology|network|data|digital"),
+    ("Financial services and insurance", r"bank|financ|capital market|investment|insurance|credit card|lending|accounting|venture|fund"),
+    ("Healthcare and life sciences", r"hospital|health|medical|pharma|biotech|veterinar|mental"),
+    ("Energy, utilities and transport", r"oil|energy|utilit|renewable|electricity|environment|logistic|transport|airline|airport|maritime|truck|railroad|supply chain"),
+    ("Manufacturing and industrial", r"manufactur|machinery|industrial|chemical|electric|electronic|automotive|motor vehicle|aerospace|aviation & aerospace|defense|"
+                                     r"space|building material|construction|mining|metal|packaging|semiconductor|textile|engineering|plastics|paper"),
+    ("Retail and consumer", r"retail|consumer|apparel|fashion|cosmetic|food|beverage|supermarket|grocer|wholesale|sporting|luxury|tobacco|"
+                            r"department store|hospitality|leisure|travel|restaurant|wine|furniture|recreation"),
+    ("Media and telecom", r"media|broadcast|telecom|wireless|publishing|newspaper|entertainment|game|advertising|marketing|photograph|design|sport|"
+                          r"motion picture|animation|printing"),
+    ("Government and education", r"government|federal|education|e-learning|civic|law enforcement|public|librar|judiciary|non-profit"),
+    ("Business services and consulting", r"consult|business|facilit|staffing|human resource|outsourc|legal|law|training|research|translation|security|events|"
+                                         r"real estate|holding"),
+]
+SIZE_GROUPS = [("1 to 250 people", ("1 - 10", "11 - 50", "51 - 250")), ("251 to 1,000", ("251 - 1k",)), ("1,000 to 5,000", ("1k - 5k", "1k-5k")),
+               ("5,000 to 10,000", ("5k - 10k",)), ("10,000 or more", ("10k - 50k", "50k - 100k"))]   # any "100k - ..." is 10,000 or more
+SENIORITY_GROUPS = [("Executive, owner or partner", ("executive", "owner", "partner")), ("VP", ("vp",)), ("Director", ("director",)),
+                    ("Manager", ("manager",)), ("Senior", ("senior",)), ("Employee", ("employee",))]
+
+
+def industry_group(v):
+    v = (v or "").strip()
+    if not v:
+        return "Not known"
+    v = re.sub(r"\s*\(.*\)$|_SF$", "", v.split("_SF (")[0])
+    return next((g for g, rule in INDUSTRY_GROUPS if re.search(rule, v, re.I)), "Other industries")
+
+
+def size_group(v):
+    v = (v or "").strip()
+    if not v:
+        return "Not known"
+    if v.startswith("100k"):
+        return "10,000 or more"
+    return next((g for g, values in SIZE_GROUPS if v in values), "Not known")
+
+
+def seniority_group(v):
+    v = (v or "").strip().lower()
+    return next((g for g, values in SENIORITY_GROUPS if v in values), "Not known")
+
+
+def warmly_profile(s):
+    since_day = (dt.datetime.now(PACIFIC).date() - dt.timedelta(days=WARMLY_DAYS))
+    since = str(int(dt.datetime.combine(since_day, dt.time(), PACIFIC).timestamp() * 1000))
+    flt = [{"propertyName": "warmlylastseenat", "operator": "GTE", "value": since}]
+    companies = search(s, "companies", flt, ["industry", "hs_employee_range"])
+    people = search(s, "contacts", flt, ["hs_seniority"])
+    count = lambda rows, f, prop: collections.Counter(f((r.get("properties") or {}).get(prop)) for r in rows).most_common()
+    return {"days": WARMLY_DAYS, "from": since_day.isoformat(), "to": dt.datetime.now(PACIFIC).date().isoformat(), "companies": len(companies), "people": len(people),
+            "industry": count(companies, industry_group, "industry"), "size": count(companies, size_group, "hs_employee_range"),
+            "seniority": count(people, seniority_group, "hs_seniority")}
+
+
 def linkedin_fields(p):
     hits = []
     if (p.get("hs_analytics_source") == "SOCIAL_MEDIA" and (p.get("hs_analytics_source_data_1") or "").lower() == "linkedin"):
@@ -657,6 +716,7 @@ def main():
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
         "demo_use_case_daily": demo_use_cases(s),
+        "warmly_profile": warmly_profile(s),
         "emails": public_emails(emails),
         "campaign_deals": campaign_deals,
         "all_pipeline": pipeline,

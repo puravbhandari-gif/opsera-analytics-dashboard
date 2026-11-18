@@ -1668,6 +1668,7 @@ function renderLeadsHubspot(hub) {
     [e.note, e.joined_daily.length ? `Added ${e.joined_daily.length > 1 ? `${dayYear(e.joined_daily[0].date)} to ${dayYear(e.joined_daily[e.joined_daily.length - 1].date)}` : dayYear(e.joined_daily[0].date)}` : ""].filter(Boolean).join(". "))).join("");
   $("leads-hubspot-events-source").textContent = `Source: HubSpot lists, updated ${dayYear(hub.pulled_at.slice(0, 10))}.`;
   renderDemoUseCase(hub);
+  renderWhoVisits(hub);
 }
 
 // Demo requests by product, from the demo form's own "Primary use case" field in HubSpot (agreed 18 Nov 2026). Each HubSpot
@@ -1684,6 +1685,25 @@ function renderDemoUseCase(hub) {
     source: (a, b) => `Source: HubSpot, people whose latest form was the demo form, by its "Primary use case" field, ${range(a, b)}. ` +
       `Total ${num(rangeSum(rows, "count")(a, b))}. The field started at the end of June 2026. Google Analytics counts form fills, so its demo count differs.`,
     metrics: DEMO_USE_CASES.map(([label, values]) => ({ label, value: demoUseCase(rows, values), fmt: num, noDelta: true })) });
+}
+
+// Who visits (agreed 18 Nov 2026): companies and people Warmly matched to a visit in the last 90 days, from HubSpot. Each list
+// shows its own "Not known" share, since many records have no industry, size or seniority. Counts only, never a name.
+function renderWhoVisits(hub) {
+  const w = hub.warmly_profile;
+  if (!w) return;
+  $("visits-who-panel").hidden = false;
+  const block = (title, rows, total, unit) => {
+    const known = rows.filter(([k]) => k !== "Not known"), unknown = (rows.find(([k]) => k === "Not known") || [0, 0])[1];
+    const top = Math.max(...known.map(([, n]) => n), 1);
+    return `<div class="who-block"><h4>${esc(title)}</h4>` +
+      known.map(([k, n]) => `<div class="who-row"><span class="who-name">${esc(k)}</span><span class="who-bar"><i style="width:${(n / top) * 100}%"></i></span><span class="who-n">${num(n)}</span></div>`).join("") +
+      `<p class="muted who-unknown">Not known: ${num(unknown)} of ${num(total)} ${unit} (${Math.round((unknown / total) * 100)}%)</p></div>`;
+  };
+  $("visits-who").innerHTML = block("Industry", w.industry, w.companies, "companies") + block("Company size", w.size, w.companies, "companies") +
+    block("Seniority", w.seniority, w.people, "people");
+  $("visits-who-source").textContent = `Source: HubSpot, companies and people Warmly saw on opsera.ai from ${dayYear(w.from)} to ${dayYear(w.to || hub.pulled_at.slice(0, 10))} ` +
+    `(the last ${w.days} days, by their latest visit): ${num(w.companies)} companies and ${num(w.people)} people. Industries are grouped from the names HubSpot's data tools give. Warmly matches only some visits to a company.`;
 }
 
 // From LinkedIn to the demo form: homepage -> /demo -> demo form, for each LinkedIn line, never added together
@@ -2349,7 +2369,7 @@ function renderPublished(p) {
     { key: "type", label: "Type" },
     { key: "title", label: "Title", fmt: linked },
   ], p.checked, null, p.start_date);
-  $("content-published-source").textContent = `Source: opsera.ai sitemap with each page's own publish date, checked ${dayYear(p.checked)}, and YouTube Analytics for public videos. ` +
+  $("content-published-source").textContent = `Source: Contentful for blogs (published and live on opsera.ai), the opsera.ai sitemap with each page's own publish date for other pages, checked ${dayYear(p.checked)}, and YouTube Analytics for public videos. ` +
     `${num(p.pages_without_date)} of ${num(p.pages_checked)} pages show no publish date, so they aren't listed.`;
 }
 
@@ -2407,7 +2427,7 @@ function renderBlogTypes(p, bt, d) {
     $("content-btype-pieces-source").textContent = `Visits and engaged visits: Google Analytics, opsera.ai only, to ${dayYear(b < gaLast ? b : gaLast)} (Pacific time). Google clicks: Search Console, to ${dayYear(b < d.gsc_last_day ? b : d.gsc_last_day)}. Each piece counts from its publish date. All blogs means every blog published in the period.`;
   };
   compare({ id: "content-btype", start: p.start_date, last: p.checked,
-    source: (a, b) => `Source: opsera.ai sitemap with each blog's publish date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
+    source: (a, b) => `Source: Contentful, published blogs live on opsera.ai, by each blog's date, checked ${dayYear(p.checked)}, ${range(a, b)}. Types tagged by hand from each title, ${dayYear(bt.tagged)}.`,
     metrics: types.map((t) => ({ label: t, value: (a, b) => rows.filter((r) => r.t === t && r.date >= a && r.date <= b).length, fmt: num, noDelta: true,
       sub: (a, b) => line(t, a, b, false),
       // Month view also shows the fiscal quarter up to the month's end, so a month with few blogs doesn't read as empty (agreed 17 Nov 2026)

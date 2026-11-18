@@ -144,6 +144,8 @@ jobs:
       - name: List what we published this quarter (optional)
         if: github.event_name != 'push'
         continue-on-error: true
+        env:
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
         run: python scripts/fetch_published.py
 
       # Optional: if this fails, the Team metrics tab keeps last week's numbers and everything else still updates.

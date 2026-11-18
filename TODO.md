@@ -106,5 +106,6 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Set the CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK secrets in GitHub (Purav, before Monday 23 Nov). Until then the Monday check only looks for emails, and Monday's run can bring customer search terms back.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
 - [ ] Waiting on David (18 Nov): do partner deal registrations ("DG-F27 - Partner Deal Reg") count as marketing? Not counted for now (Purav). Counting them would move Q3 influenced from $730,000 to $3,230,000.
-- [ ] 18 Nov: building a "Who visits" panel from Warmly (industry, size, seniority, no names) and a daily Slack line for new content in #core-marketing-team (Purav).
+- [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published.
 - [ ] Ask David for a new opportunities export and a new DG-Demo Requests export; the 17 Nov folder had neither.
+- [x] 18 Nov: the Content tab reads blogs from Contentful (published and live on opsera.ai), not the sitemap. November so far: 9 blogs.

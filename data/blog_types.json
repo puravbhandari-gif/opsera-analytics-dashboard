@@ -1,6 +1,6 @@
 {
  "source": "Tagged by hand from each blog's title (agreed with Purav, 6 Nov 2026). Industry hot topics, for blogs written in response to news, added 9 Nov 2026.",
- "tagged": "2026-11-17",
+ "tagged": "2026-11-18",
  "types": [
   "Modernization guide",
   "AI engineering thought leadership",
@@ -57,6 +57,11 @@
   "cursor-alternatives": "Comparison",
   "smart-model-selection": "AI engineering thought leadership",
   "software-factory-vs-dark-factory": "Software factory",
-  "closing-the-security-gap-in-ai-modernization": "AI security"
+  "closing-the-security-gap-in-ai-modernization": "AI security",
+  "legacy-application-modernization": "Modernization guide",
+  "voice-of-the-builders": "AI engineering thought leadership",
+  "why-product-managers-are-becoming-builders": "AI engineering thought leadership",
+  "evalsmaxxing-ships-the-rewrite-context-keeps-it-alive": "Industry hot topics",
+  "grok-brings-speed-opsera-brings-context-and-control": "Industry hot topics"
  }
 }
