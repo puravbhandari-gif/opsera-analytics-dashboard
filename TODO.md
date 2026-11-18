@@ -103,7 +103,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
 - [x] The $500,000 Q3 deal credited to Gartner Xpo: David confirmed on 18 Nov the contact was scanned at Gartner Xpo, so the Gartner credit stands (influenced, deal existed before the event).
 - [ ] Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.
-- [ ] Set the CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK secrets in GitHub (Purav, before Monday 23 Nov). Until then the Monday check only looks for emails, and Monday's run can bring customer search terms back.
+- [x] CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK are set in GitHub (Purav, 18 Nov). The privacy check reads the full customer list on every run.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
 - [ ] Waiting on David (18 Nov): do partner deal registrations ("DG-F27 - Partner Deal Reg") count as marketing? Not counted for now (Purav). Counting them would move Q3 influenced from $730,000 to $3,230,000.
 - [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published.
