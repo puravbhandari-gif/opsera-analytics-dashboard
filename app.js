@@ -937,12 +937,12 @@ function renderLinkedIn(d) {
   $("li-k-top-seen-source").textContent = kSrc;
   $("li-k-top-eng-source").textContent = kSrc;
 
-  // Kumar's October: each export is its own period, shown one at a time, never added together
+  // Kumar's exports (October, then 18 Nov 2026): each export is its own period, shown one at a time, never added together
   const oct = d.kumar_october;
   const periods = Object.fromEntries(oct.periods.map((p) => [p.key, p]));
   // the buttons name each export by its dates
   $("li-ko-period").querySelectorAll("button").forEach((btn) => { if (periods[btn.dataset.p]) btn.textContent = periods[btn.dataset.p].label; });
-  let period = "7d";
+  let period = periods.nov7d ? "nov7d" : "7d";   // the newest export first
   const drawPeriod = () => {
     const p = periods[period];
     const counting = (p.still_counting || oct.still_counting).map(dayYear).join(" and ");

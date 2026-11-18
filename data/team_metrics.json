@@ -105,12 +105,12 @@
         "2026-08": 27490,
         "2026-09": 17569
        },
-       "so_far": 3730,
+       "so_far": 5898,
        "so_far_start": "2026-11-01",
-       "so_far_end": "2026-11-07",
-       "days_counted": 7,
+       "so_far_end": "2026-11-16",
+       "days_counted": 16,
        "goal": 35000,
-       "goal_share_pct": 10.7
+       "goal_share_pct": 16.9
       },
       {
        "metric": "linkedin_visits",
