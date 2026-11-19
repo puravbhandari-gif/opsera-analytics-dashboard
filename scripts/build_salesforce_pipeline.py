@@ -20,7 +20,8 @@ Agreed with Purav on 29 Oct 2026, from David's answers:
   the meetings export, matched by email (campaign touches) or name (primary contact); where no join date is known
   the campaign still counts, and the page says how many deals that is.
 - DoGood and CrestingWave are an outside booking agency: their own group, "Booking agency", not marketing.
-- Campaign IDs (from "All Campaigns with Campaign ID") are turned into names.
+- Campaign IDs (from "All Campaigns with Campaign ID") are turned into names. (From 19 Nov 2026, names come from HubSpot's
+  synced "Salesforce Campaigns" object first, saved as hubspot-campaign-names.json next to the exports.)
 - Events: people in each event's Salesforce campaign who then had a meeting set.
 - Anything based on Primary Campaign Source is an estimate (David: a starting point, not reliable on its own).
 - Deals with no contact linked are their own group, "No contact linked", not sales.
@@ -37,6 +38,9 @@ Agreed with Purav on 17 Nov 2026, from David's comments on the Q3 deal sheet:
   campaign (Attrib First, then Attrib Last) takes its place as the source.
 - Deals David named as started with a demo request form count as sourced by DG-Demo Requests. They're listed in
   hand-rules.json next to the exports, so no deal name is in this repo.
+Agreed with Purav on 19 Nov 2026, from David: deals are sales, partner or marketing sourced, and partner deals are never
+marketing sourced. Any deal with a partner listed on it (from the Opportunity QA report) counts as marketing influenced,
+even when its source is a marketing campaign, and goes on the To review list.
 """
 import collections
 import datetime as dt
@@ -56,8 +60,10 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "salesforce_pipeline.jso
 START = dt.date(2026, 4, 1)
 SALES = re.compile(r"sdr|\bae\b", re.I)                       # SDR-Meeting-Set, DG-SDR Outreach (Cold), AE Prospecting, AE Internal Referral
 # Not marketing either (agreed 28 Oct 2026): a test campaign, a lead-status flag and a bought LinkedIn contact list.
-# Partner deal registrations too, until David confirms (Purav, 18 Nov 2026).
-NOT_MARKETING = {"DG-F27 - Partner Deal Reg", "X2-Tracking-Test-Campaign", "DG-FY27 Promoted to X2 Status", "DG-FY27 Wiza LinkedIn Exports", "DG-2025-Lantern_Records"}
+# Partner deal registrations too, until David confirms (Purav, 18 Nov 2026). Customer and partner expansion, the third-party
+# vendor campaign and any campaign named after a partner (the "partners" list in hand-rules.json) aren't marketing either
+# (Purav, 18 Nov 2026, from David's Opportunity QA report).
+NOT_MARKETING = {"Current Customer Expansion", "Partner Account Expansion", "DG-FY27-3rd Party Vendor Other", "DG-F27 - Partner Deal Reg", "X2-Tracking-Test-Campaign", "DG-FY27 Promoted to X2 Status", "DG-FY27 Wiza LinkedIn Exports", "DG-2025-Lantern_Records"}
 AGENCY = re.compile(r"dogood|crestingwave", re.I)              # outside booking agency (David's "c")
 WINDOW_DAYS = 90
 NEAR_DAYS = 120   # joined 91 to 120 days before: just outside the window, for the To review list
@@ -68,13 +74,15 @@ EVENT_CAMPAIGNS = {"appsec_agents": "DG-FY27-Q1-Meet-the-Agents-Webinar", "ai_be
                    "tokenomics": "DG-FY27-Q3-Tokenomics-Webinar", "flutter": "DG-FY27-Q3-SC-Flutter-Summit",
                    "gartner": "DG-FY27-Q3-Gartner-Xpo", "github_universe": "DG-FY27-Q3-GitHub-Universe-2026"}
 TARGET_ACCOUNTS = re.compile(r"\b(abm|abx|microsite)\b", re.I)
-FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "touches": "Mktg#05 Multi-Attrib Opportunities-*.xls",
+FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "qa": "Opportunity QA-*.xls", "touches": "Mktg#05 Multi-Attrib Opportunities-*.xls",
          "meetings": "02a Campaigns with Meetings (members)-*.xls", "campaign_ids": "All Campaigns with Campaign ID-*.xls",
          "event_flutter": "DG-FY27-Q3-SC-Flutter-Summit-*.xls", "event_gartner": "DG-FY27-Q3-Gartner-Xpo-*.xls",
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls", "event_tokenomics": "DG-FY27-Q3-Tokenomics-Webinar-*.xls"}
 HELPERS = {"DG-FY27 Promoted to X2 Status"}   # helper campaigns: never the source (David, 17 Nov 2026)
 HAND_RULES = EXPORTS / "hand-rules.json"     # private: deal names stay out of the repo
+HUBSPOT_NAMES = EXPORTS / "hubspot-campaign-names.json"   # Salesforce campaign ID -> name, from HubSpot; private (partner names)
 EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
+PARTNER_ON_DEAL = "Partner on the deal; counted as influenced"
 EVENT_FIRST_DAY = {"flutter": dt.date(2026, 10, 1), "gartner": dt.date(2026, 10, 19), "github_universe": dt.date(2026, 10, 28),
                    "tokenomics": dt.date(2026, 9, 15)}
 
@@ -136,8 +144,17 @@ def day(s):
     return dt.datetime.strptime(s, "%m/%d/%Y").date() if s else None
 
 
+def partner_named():
+    names = json.loads(HAND_RULES.read_text()).get("partners", []) if HAND_RULES.exists() else []
+    return re.compile("|".join(re.escape(n) for n in names), re.I) if names else re.compile(r"(?!x)x")
+
+
+PARTNER_NAMED = partner_named()
+
+
 def marketing(campaign):
-    return bool(campaign) and not SALES.search(campaign) and not AGENCY.search(campaign) and campaign.strip() not in NOT_MARKETING
+    return bool(campaign) and not SALES.search(campaign) and not AGENCY.search(campaign) and campaign.strip() not in NOT_MARKETING \
+        and not PARTNER_NAMED.search(campaign)
 
 
 COMPANY_NAMED = customer_pattern()
@@ -194,6 +211,30 @@ def main():
         if older_from < opps_cover_from:
             opps += [o for o in older if o["Created Date"] and day(o["Created Date"]).isoformat() < opps_cover_from]
             opps_cover_from = older_from
+    # David's Opportunity QA report (from 18 Nov 2026) is the newer list of deals when it's newer than the opportunities export.
+    # It has no Attrib First Campaign, so that comes from the opportunities export for deals in both, matched by Opportunity ID;
+    # newer deals have none (agreed 18 Nov 2026).
+    try:
+        qa, qa_on = read("qa")
+    except SystemExit:
+        qa, qa_on = [], ""
+    # Any deal with a partner listed on it (Primary Partner, Partner or Partner Assist 1 in David's QA report) counts as
+    # marketing influenced, never sourced, even when its source is a marketing campaign (Purav, 19 Nov 2026).
+    partner_deals = {(o.get("Opp ID 18") or "")[:15] for o in qa
+                     if any((o.get(k) or "").strip() for k in ("Primary Partner", "Partner", "Partner Assist 1"))} - {""}
+    print(f"Partner deals (from the Opportunity QA report of {qa_on or 'none'}): {len(partner_deals)}")
+    no_first = 0
+    if qa_on > opps_on:
+        first = {o["Opportunity ID"][:15]: o.get("Attrib First Campaign", "") for o in opps if o.get("Opportunity ID")}
+        qa_from = min(day(o["Created Date"]) for o in qa if o["Created Date"]).replace(day=1).isoformat()
+        rows = []
+        for o in qa:
+            oid = (o.get("Opp ID 18") or "")[:15]
+            no_first += oid not in first
+            rows.append({**o, "Opportunity ID": oid, "Attrib First Campaign": first.get(oid, "")})
+        opps = rows + [o for o in opps if o["Created Date"] and day(o["Created Date"]).isoformat() < qa_from]
+        opps_on, opps_cover_from = qa_on, min(opps_cover_from, qa_from)
+        print(f"Using the Opportunity QA report of {qa_on}: {len(qa)} deals, {no_first} without an Attrib First Campaign (newer than the opportunities export).")
     touches, touches_on = read("touches")
     meets, meets_on = read("meetings")
     # The 9 Nov 2026 export covers fewer people than the 27 Oct one (it filters on meeting date), so older exports fill in:
@@ -213,6 +254,14 @@ def main():
                 meets.insert(0, m)   # older rows first, so the newest export's join date wins
     ids, _ = read("campaign_ids")
     id_names = {r["Campaign ID"][:15]: r["Campaign Name"] for r in ids if r.get("Campaign ID")}
+    # Campaign names come from HubSpot first (Purav, 19 Nov 2026): David syncs Salesforce campaigns into HubSpot's
+    # "Salesforce Campaigns" object, saved next to the exports as hubspot-campaign-names.json. The 28 Oct list fills any gap.
+    if HUBSPOT_NAMES.exists():
+        hs = json.loads(HUBSPOT_NAMES.read_text())
+        id_names |= {i[:15]: n for i, n in hs["names"].items() if n}
+        print(f"Campaign names: {len(hs['names'])} from HubSpot (pulled {hs['pulled_on']}), the 28 Oct list for the rest")
+    else:
+        print("Campaign names: hubspot-campaign-names.json is missing, so only the 28 Oct list is used")
     name = lambda v: id_names.get(v.strip()[:15], v) if CAMPAIGN_ID.match((v or "").strip()) else (v or "").strip()
 
     touched = collections.defaultdict(set)   # opportunity -> campaigns it touched (multi-attribution export)
@@ -290,6 +339,9 @@ def main():
             EVENT_CAMPAIGNS[k] == campaign and created < first for k, first in EVENT_FIRST_DAY.items()))
         if before_event:
             bucket = "influenced"
+        partner_deal = bucket == "sourced" and (o.get("Opportunity ID") or "")[:15] in partner_deals
+        if partner_deal:
+            bucket = "influenced"
         if not bucket:
             dropped_by_window += had_marketing
             if not has_contact:
@@ -298,7 +350,8 @@ def main():
                   {"SDR or AE outreach" for c in [primary, *others] if c and SALES.search(c)}
         reasons = ([f"Joined {', '.join(sorted(public(c) for c in near))} 91 to {NEAR_DAYS} days before the deal"] if near else []) + \
                   ([f"Matches more than 1 source: {', '.join(sorted(sources))}"] if len(sources) > 1 else []) + \
-                  ([EXISTED_BEFORE] if before_event else [])
+                  ([EXISTED_BEFORE] if before_event else []) + \
+                  ([PARTNER_ON_DEAL] if partner_deal else [])
         if reasons:
             review.append({"date": created.isoformat(), "amount": amount, "stage": o["Stage"],
                            "counted_as": {"sourced": "Marketing sourced (estimate)", "influenced": "Marketing influenced", "agency": "Booking agency",

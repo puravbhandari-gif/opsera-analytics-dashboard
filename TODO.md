@@ -105,8 +105,12 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.
 - [x] CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK are set in GitHub (Purav, 18 Nov). The privacy check reads the full customer list on every run.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
-- [ ] Waiting on David (18 Nov): do partner deal registrations ("DG-F27 - Partner Deal Reg") count as marketing? Not counted for now (Purav). Counting them would move Q3 influenced from $730,000 to $3,230,000.
+- [x] Partner deal registrations ("DG-F27 - Partner Deal Reg"): David confirmed on 19 Nov partner deals are never marketing sourced. Not counted as marketing.
 - [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published.
-- [ ] Ask David for a new opportunities export and a new DG-Demo Requests export; the 17 Nov folder had neither.
+- [x] 19 Nov: David's 18 Nov opportunities and DG-Demo Requests exports loaded. The opportunities export has open, won and lost deals despite its name.
+- [x] 19 Nov: any deal with a partner listed on it (from the Opportunity QA report) counts as marketing influenced, never sourced (Purav, from David). 4 deals moved; they show on the To review list.
+- [x] 19 Nov: Salesforce campaign names now come from HubSpot's synced "Salesforce Campaigns" object (Purav). The 28 Oct list only fills gaps. Pipeline and meetings stay on David's exports.
+- [ ] Waiting on David (19 Nov): confirm the campaign member sync into HubSpot is complete. HubSpot has 5,615 members and 30 with a meeting set, against 356 meeting rows in the 17 Nov export. Demo Requests members match (56), but HubSpot shows 13 with a meeting set against 10 in the export.
+- [ ] Waiting on David (19 Nov): add the Salesforce opportunity ID to HubSpot deals, so HubSpot deals can be matched to his exports. Until both are done, pipeline and meetings stay on his exports.
 - [x] 18 Nov: the Content tab reads blogs from Contentful (published and live on opsera.ai), not the sitemap. November so far: 9 blogs.
 - [ ] Jeetu Patel response hub: add the link to Kumar's Unite.ai article ("When AI Agents Finish the Work, Who Owns What Comes Next") once Catapult gets it published, and drop "not published yet".

@@ -65,7 +65,29 @@ EVENT_ROWS = [
      ["/events/github-universe", "/github-universe-happy-hour"], "No HubSpot list yet"),
 ]
 # Each 2026 event's Salesforce campaign, as HubSpot stores it on contacts in "Salesforce Campaign IDs"
-# (salesforcecampaignids, 18-character IDs). Names come from Salesforce's "All Campaigns with Campaign ID" list (29 Oct 2026).
+# (salesforcecampaignids, 18-character IDs). Since 19 Nov 2026 (Purav) the name comes from HubSpot's synced "Salesforce
+# Campaigns" object; the names below, from Salesforce's 29 Oct list, are only used if that lookup fails.
+SF_CAMPAIGN_OBJECT = "p7462438_salesforce_campaigns"
+
+
+def sf_campaign_names(s):
+    """Salesforce campaign ID (first 15 characters) -> name, from HubSpot's synced Salesforce Campaigns object."""
+    names, after = {}, None
+    while True:
+        r = s.get(f"{API}/crm/v3/objects/{SF_CAMPAIGN_OBJECT}", timeout=60,
+                  params={"limit": 100, "properties": "campaign_name,salesforceobjectid", **({"after": after} if after else {})})
+        if r.status_code != 200:
+            print(f"Salesforce campaign names from HubSpot failed ({r.status_code}); using the 29 Oct names instead")
+            return {}
+        j = r.json()
+        for c in j.get("results", []):
+            p = c.get("properties") or {}
+            if p.get("salesforceobjectid") and p.get("campaign_name"):
+                names[p["salesforceobjectid"][:15]] = p["campaign_name"]
+        after = (j.get("paging") or {}).get("next", {}).get("after")
+        if not after:
+            print(f"Salesforce campaign names: {len(names)} from HubSpot")
+            return names
 EVENT_SF_CAMPAIGNS = {
     "appsec_agents": ("DG-FY27-Q1-Meet-the-Agents-Webinar", "701UR00000nYKL4YAO"),
     "ai_benchmark": ("DG-FY27-Q1-AI-BM-Report-Webinar", "701UR00000oazZlYAI"),
@@ -620,6 +642,7 @@ def main():
                 return ids
     meeting_day = {m["id"]: pacific_day(m["properties"]["hs_meeting_start_time"]) for m in meetings}
     event_rows = []
+    hs_sf_names = sf_campaign_names(s)
     for key, name, kind, first_day, last_day, signup_lists, attended_lists, pages, note in EVENT_ROWS:
         signed = set().union(*[members_of(n) for n in signup_lists]) if signup_lists else None
         attended = set().union(*[members_of(n) for n in attended_lists]) if attended_lists else None
@@ -636,6 +659,7 @@ def main():
         # Meetings from the event's Salesforce campaign: its members (from the contact field) with a meeting after the event
         sf_name, sf_id = EVENT_SF_CAMPAIGNS.get(key, (None, None))
         if sf_id:
+            sf_name = hs_sf_names.get(sf_id[:15]) or sf_name
             members = {c["id"] for c in search(s, "contacts", [{"propertyName": "salesforcecampaignids", "operator": "CONTAINS_TOKEN", "value": sf_id}],
                                                 ["salesforcecampaignids"])}
             row.update({"sf_campaign": sf_name, "sf_members": len(members), "sf_meetings": None, "sf_people_with_meeting": None})
