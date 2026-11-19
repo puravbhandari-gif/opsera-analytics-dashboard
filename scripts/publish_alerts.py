@@ -11,15 +11,13 @@ weekly post). Run with --dry-run to print the lines instead of posting them.
 - No emojis. The webhook address is never printed.
 
 Agreed with Purav on 19 Nov 2026, after a blog he had already shared was posted again:
-- Before posting, read the last 7 days of #core-marketing-team (messages and thread replies, by anyone) and skip any piece
-  whose link is already there. Skipped pieces are marked as seen, so they never post later. This needs SLACK_BOT_TOKEN, a
-  Slack bot token with groups:history, and the bot must be in the channel. Without it, or if the read fails, nothing posts.
-- Never more than 5 lines in one run. The rest wait for the next run, and are checked against the channel again then.
+- The alert is the only thing that announces new blogs and videos; nobody posts them by hand. So it doesn't read the
+  channel: the already-posted list (data/publish_alerts_seen.json) is what stops repeats.
+- Never more than 5 lines in one run. The rest wait for the next run.
 - Never run by hand without asking Purav first.
 """
 import json
 import os
-import time
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -32,8 +30,6 @@ YOUTUBE_CHANNEL = "UCpnT0NdkrOWp8v3bodeCGhQ"
 SEEN = Path(__file__).resolve().parent.parent / "data" / "publish_alerts_seen.json"
 MAX_NEW = 10
 MAX_LINES = 5
-CHANNEL = "C09RQBZMMQ9"   # #core-marketing-team (private)
-LOOKBACK_DAYS = 7
 # Resource kinds in Contentful and where each one lives on opsera.ai (checked 18 Nov 2026)
 RESOURCE_PATHS = {"White paper": ("white-papers", "New white paper"), "Report": ("report", "New report"), "eBook": ("ebooks", "New eBook"),
                   "Webinar": ("webinars", "New webinar"), "Comparison guide": ("comparison-guides", "New comparison guide"),
@@ -80,46 +76,6 @@ def is_live(link):
         return False
 
 
-def link_key(url):
-    """One form per page, so the same link written differently still matches: no scheme, www, query or trailing slash,
-    and YouTube links reduced to the video id."""
-    url = url.strip().strip("<>").split("|")[0]
-    yt = re.search(r"(?:youtube\.com/(?:watch\?(?:.*&)?v=|shorts/|live/|embed/)|youtu\.be/)([A-Za-z0-9_-]{11})", url)
-    if yt:
-        return f"yt:{yt.group(1)}"
-    url = re.sub(r"^https?://(www\.)?", "", url.lower())
-    return re.split(r"[?#]", url)[0].rstrip("/")
-
-
-def shared_links():
-    """Every link posted in the channel in the last 7 days, by anyone, in messages and thread replies."""
-    token = os.environ.get("SLACK_BOT_TOKEN")
-    if not token:
-        sys.exit("SLACK_BOT_TOKEN is not set, so the channel can't be checked for links already shared. Nothing was posted.")
-    s = requests.Session()
-    s.headers["Authorization"] = f"Bearer {token}"
-
-    def get(method, **params):
-        r = s.get(f"https://slack.com/api/{method}", params=params, timeout=30)
-        j = r.json() if r.status_code == 200 else {"ok": False, "error": f"HTTP {r.status_code}"}
-        if not j.get("ok"):
-            sys.exit(f"Slack {method} failed ({j.get('error')}), so the channel couldn't be checked. Nothing was posted.")
-        return j
-
-    oldest = str(time.time() - LOOKBACK_DAYS * 86400)
-    messages, cursor = [], None
-    while True:
-        j = get("conversations.history", channel=CHANNEL, oldest=oldest, limit=200, **({"cursor": cursor} if cursor else {}))
-        messages += j.get("messages", [])
-        cursor = (j.get("response_metadata") or {}).get("next_cursor")
-        if not cursor:
-            break
-    for m in [m for m in messages if m.get("reply_count")]:
-        messages += get("conversations.replies", channel=CHANNEL, ts=m["ts"], limit=200).get("messages", [])[1:]
-    text = json.dumps(messages)   # links sit in text, blocks and unfurled attachments
-    return {link_key(u) for u in re.findall(r"https?://[^\s\"<>|\\]+", text)}
-
-
 def slack(lines):
     secret = os.environ.get("SLACK_WEBHOOK_URL") or ""
     found = re.search(r"https://hooks\.slack\.com/services/[A-Za-z0-9/_-]+", secret)
@@ -153,11 +109,7 @@ def main():
     if not live:
         print("Nothing new today.")
         return
-    shared = shared_links()   # stops the run if the channel can't be read
-    already = [p for p in live if link_key(p[3]) in shared]
-    to_post = [p for p in live if p not in already]
-    for _, label, title, _ in already:
-        print(f"Skipped, already linked in the channel in the last {LOOKBACK_DAYS} days: {label}: {title}")
+    to_post = live
     later = to_post[MAX_LINES:]
     to_post = to_post[:MAX_LINES]
     if later:
@@ -168,7 +120,7 @@ def main():
         return
     if lines:
         slack(lines)
-    SEEN.write_text(json.dumps({"seen": sorted(seen | {p[0] for p in already + to_post})}, indent=1) + "\n")
+    SEEN.write_text(json.dumps({"seen": sorted(seen | {p[0] for p in to_post})}, indent=1) + "\n")
 
 
 if __name__ == "__main__":
