@@ -23,6 +23,8 @@ jobs:
         env:
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          # reads the last 7 days of #core-marketing-team so links already shared are skipped (19 Nov 2026); without it nothing posts
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         run: |
           python3 -m pip install -q requests
           python3 scripts/publish_alerts.py
