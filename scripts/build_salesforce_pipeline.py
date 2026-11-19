@@ -48,6 +48,7 @@ import glob
 import json
 import os
 import re
+import statistics
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
@@ -391,6 +392,23 @@ def main():
         for c in p["campaigns"]:
             meet_campaigns[c] += 1
 
+    # Open deals by stage (Purav, 19 Nov 2026, from David: deals mostly stall at Demo). Every open deal created since START,
+    # sales, partner or marketing, as counts only. Age is days since the deal was created (the export's Age column),
+    # not days in its current stage, which the export doesn't have.
+    # the sales stages in order (1 Meeting to 5 Procurement), then the side tracks numbered "01", "03" (partner suspect, renewal)
+    stage_order = lambda x: (x[0].startswith("0"), int(re.match(r"\d+", x[0]).group()) if re.match(r"\d+", x[0]) else 99, x[0])
+    stage_ages = collections.defaultdict(list)
+    for o in opps:
+        created = day(o["Created Date"]) if o.get("Created Date") else None
+        if not created or created < START or "closed" in o["Stage"].lower():
+            continue
+        try:
+            stage_ages[o["Stage"]].append(int(float((o.get("Age") or "").replace(",", ""))))
+        except ValueError:
+            stage_ages[o["Stage"]].append(None)
+    open_by_stage = [{"stage": re.sub(r"^\d+\s*", "", s), "deals": len(v), "median_age": statistics.median([a for a in v if a is not None]) if any(a is not None for a in v) else None,
+                      "over_90_days": sum(1 for a in v if a is not None and a > 90)} for s, v in sorted(stage_ages.items(), key=stage_order)]
+
     out = {
         "source": "Salesforce reports",
         "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "meetings": meets_on, "meetings_older": sorted(meets_older)},
@@ -408,6 +426,7 @@ def main():
                                   for k, v in sorted(status_day.items())],
         "campaigns": [{"bucket": b, "campaign": c, "deals": v[0], "value": v[1]} for (b, c), v in sorted(by_campaign.items(), key=lambda x: -x[1][1])],
         "to_review": sorted(review, key=lambda r: r["date"]),
+        "open_by_stage": {"as_of": opps_on, "since": START.isoformat(), "stages": open_by_stage},
         "event_meetings": [{"key": k, "campaign": c, "people": len(event_people[c]),
                             "held": sum(1 for o in event_people[c].values() if o == "Meeting Held")} for k, c in EVENT_CAMPAIGNS.items()],
         "event_members": event_members(meets),

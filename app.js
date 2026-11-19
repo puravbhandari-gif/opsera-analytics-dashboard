@@ -789,6 +789,26 @@ function renderDemoOutcomes(sf, leads) {
     source: (a, b) => `Source: Salesforce campaign DG-Demo Requests, X-Factor, exported ${dayYear(sf.exported)}, ${range(a, b)}.`,
     metrics: [["x1", "X1 Sales Ready", "Given to every demo request automatically, so not a sign of quality"], ["x2", "X2 Hot Lead"], ["x3", "X3 Mid-Quality"], ["x4", "X4 Basic Lead", "Counted as disqualified above"]]
       .map(([k, label, sub]) => ({ label, value: rangeSum(sf.daily, k), fmt: num, noDelta: true, sub })) });
+  // Demo request to meeting to deal, against David's targets (agreed 19 Nov 2026). All from Salesforce exports, by request date.
+  const fx = sf.funnel_exports;
+  if (fx) {
+    const met = rangeSum(sf.daily, "meeting"), onDeal = rangeSum(sf.daily, "deal"), both = rangeSum(sf.daily, "deal_after_meeting");
+    const share = (n, d) => (a, b) => (d(a, b) ? (n(a, b) / d(a, b)) * 100 : null);
+    compare({ id: "leads-funnel", start: sf.start_date, last, fullPeriods: true,
+      source: (a, b) => `Sources: Salesforce campaign DG-Demo Requests (${dayYear(sf.exported)}), meetings exports (${fx.meetings.map(dayYear).join(", ")}), ` +
+        `campaign touches (${dayYear(fx.campaign_touches)}) and opportunities (${dayYear(fx.opportunities)}), requests made ${range(a, b)}. Each person counts once. ` +
+        // the exec page's Demo requests card counts Google Analytics form fills, a different source (Purav, 19 Nov 2026)
+        `The ${num(all(a, b))} demo ${all(a, b) === 1 ? "request" : "requests"} here come from Salesforce. The exec page's Demo requests card counts ` +
+        `${num(ga(a, b))} website form ${ga(a, b) === 1 ? "fill" : "fills"} from Google Analytics, so the two differ.`,
+      metrics: [
+        { label: "Demo requests", value: all, fmt: num, noDelta: true },
+        { label: "Meeting set", value: met, fmt: num, noDelta: true, sub: "A meeting set on or after the request" },
+        { label: "Share with a meeting", value: share(met, all), fmt: (v) => pct(v, 0), noDelta: true, sub: "Target: 40 to 50%" },
+        { label: "Meeting set and on a deal", value: both, fmt: num, noDelta: true },
+        { label: "Share of meetings to a deal", value: share(both, met), fmt: (v) => pct(v, 0), noDelta: true, sub: "Target: 50%" },
+        { label: "On a deal", value: onDeal, fmt: num, noDelta: true, sub: "A contact on a deal created on or after the request, with or without a meeting" },
+      ] });
+  }
   $("leads-demo-note").textContent = "Qualified means a meeting is set or sales is engaging. Not reviewed yet means open or assigned. Already a contact means the person was in Salesforce before. " +
     (sf.has_x_factor ? "Disqualified means Lead Status Disqualified or X-Factor X4 Basic Lead, whatever the Lead Status. Each request counts once."
       : "X-Factor isn't in the export yet, so some disqualified ones may still count elsewhere.");
@@ -2889,6 +2909,20 @@ function renderPipeline(sf) {
   ] });
   $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open, won and lost. ${num((sf.to_review || []).length)} deals. ` +
     "Existing customer and doubtful deals stay in the totals above. No company or person names.";
+
+  // Open deals by stage, a snapshot on the export date (agreed 19 Nov 2026). Sales, partner and marketing deals, counts only.
+  const st = sf.open_by_stage;
+  $("pipe-stages").closest(".panel").hidden = !st;
+  if (st) {
+    table($("pipe-stages"), { rows: st.stages, columns: [
+      { key: "stage", label: "Stage", sort: false },
+      { key: "deals", label: "Open deals", num: true, sort: false, fmt: num },
+      { key: "median_age", label: "Typical age (days)", num: true, sort: false, fmt: (v) => (v == null ? "-" : num(Math.round(v))) },
+      { key: "over_90_days", label: "Open more than 90 days", num: true, sort: false, fmt: num },
+    ] });
+    const total = st.stages.reduce((t, r) => t + r.deals, 0);
+    $("pipe-stages-source").textContent = `Source: Salesforce opportunities export of ${dayYear(st.as_of)}, open deals created ${dayYear(st.since)} to ${dayYear(addDays(st.as_of, -1))}. ${num(total)} deals. Typical age is the middle value.`;
+  }
 
   const older = sf.exports.meetings_older || [];
   const meetOlder = !older.length ? "" : older.length === 1 ? `. The ${dayYear(older[0])} export fills in people the newest one leaves out`

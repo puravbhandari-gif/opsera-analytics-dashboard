@@ -1519,6 +1519,54 @@
    ]
   }
  ],
+ "open_by_stage": {
+  "as_of": "2026-11-18",
+  "since": "2026-04-01",
+  "stages": [
+   {
+    "stage": "Meeting",
+    "deals": 43,
+    "median_age": 34,
+    "over_90_days": 3
+   },
+   {
+    "stage": "Demo",
+    "deals": 23,
+    "median_age": 56,
+    "over_90_days": 9
+   },
+   {
+    "stage": "POC",
+    "deals": 19,
+    "median_age": 70,
+    "over_90_days": 9
+   },
+   {
+    "stage": "Business Case",
+    "deals": 5,
+    "median_age": 70,
+    "over_90_days": 2
+   },
+   {
+    "stage": "Procurement",
+    "deals": 4,
+    "median_age": 128.5,
+    "over_90_days": 2
+   },
+   {
+    "stage": "Partner Suspect",
+    "deals": 3,
+    "median_age": 216,
+    "over_90_days": 3
+   },
+   {
+    "stage": "Renewal Evaluation",
+    "deals": 23,
+    "median_age": 126,
+    "over_90_days": 13
+   }
+  ]
+ },
  "event_meetings": [
   {
    "key": "appsec_agents",
@@ -2296,11 +2344,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022",
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
@@ -2332,7 +2380,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27 Forge Awareness and Outreach",
     "people": 1
    },
    {
@@ -2340,7 +2388,7 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27 Forge Awareness and Outreach",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
@@ -2348,11 +2396,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
+    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q2-CHI-CxO-Dinner",
+    "campaign": "DG-FY27-Q3-SF-CxO-Dinner",
     "people": 1
    },
    {

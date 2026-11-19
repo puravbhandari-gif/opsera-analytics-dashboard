@@ -526,6 +526,10 @@
         <p class="source" id="leads-demo-x-cmp-source"></p>
       </div>
       <p class="note" id="leads-demo-note"></p>
+      <h3 class="sub-title">From demo request to meeting to deal</h3>
+      <div class="cards compact" id="leads-funnel-cmp-cards"></div>
+      <p class="source" id="leads-funnel-cmp-source"></p>
+      <p class="note">David's targets: 40 to 50% of demo requests get a meeting, and 50% of meetings lead to a deal. Only SDRs fill in the meeting fields in Salesforce, so meetings set by AEs aren't counted, and the meeting share looks lower than it is. Some people reach a deal through an AE meeting, so "On a deal" can be higher than "Meeting set and on a deal".</p>
     </div>
 
     <details class="more">
@@ -597,6 +601,14 @@
       <h3 class="sub-title">Campaigns these people joined before their meeting</h3>
       <div id="pipe-meet-campaigns"></div>
       <p class="note">A person counts when they joined a marketing campaign on or before their meeting date (Salesforce's "Date 3 - Meeting Set"). Each person counts once in the months, but can be in several campaigns, so the campaign list adds up to more.</p>
+    </div>
+
+    <div class="panel">
+      <h3>Open deals by stage</h3>
+      <p class="muted">Every open deal created since 1 Apr, from sales, partners and marketing. Counts only.</p>
+      <div id="pipe-stages"></div>
+      <p class="source" id="pipe-stages-source"></p>
+      <p class="note">Age is days since the deal was created, not days in its current stage. Salesforce's export doesn't show when a deal entered its stage, so a deal that moved to Demo last week still shows its full age. Renewal evaluations and partner suspects sit outside the main sales stages, so they're listed last.</p>
     </div>
 
     <div class="panel">
@@ -1177,6 +1189,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=155"></script>
+<script src="app.js?v=156"></script>
 </body>
 </html>
