@@ -175,6 +175,7 @@
     <div class="panel" id="events-sf-panel" hidden>
       <h3>Salesforce campaign members, by status</h3>
       <p class="muted">Each event's member list exported from Salesforce by David, with the status Salesforce gives each person.</p>
+      <p class="muted">Meeting set after the event: only SDRs fill in the meeting fields in Salesforce, so meetings set by AEs aren't counted here.</p>
       <div id="events-sf-table"></div>
       <p class="source" id="events-sf-source"></p>
     </div>
@@ -324,6 +325,7 @@
       <summary>More detail</summary>
       <p class="note">Pieces are found each Monday with Apify, which searches Google News and Google, and in our newsroom. A page counts only when its own text names Opsera, leaving out its sidebar and related links. From 1 Jul 2026 every mention counts. Before then only bylines, interviews and podcasts with an Opsera person count.</p>
       <p class="note">Left out: job posts, directory and review listings, company profiles, social media posts and our own sites.</p>
+      <p class="note">Developer articles are Medium pieces by developers who built on Forge at an Opsera hackathon. They come by hand from the hackathon's submissions sheet and don't count as placements.</p>
       <p class="note">A press release shows once, with every site it ran on. A news story with its own headline is a mention. Opsera people names Kumar or another Opsera person who wrote the piece or is quoted in it.</p>
       <p class="note">Topic comes from the headline: Forge, AI-SDLC, modernization, security, Unified Insights, Salesforce or other. Outlet tier comes from the outlet's Ahrefs Domain Rating: top tier 85 and up, trade press 70 to 84, other below 70.</p>
       <p class="note">Visits, engaged visits and demo requests come from Google Analytics, which starts on 1 Apr 2026. Most sites only pass on their own name, so a visit counts for the newest piece on that site from its publish date. Pieces on YouTube or Spotify get no numbers, since those visits can't be told apart from our own channels.</p>
@@ -418,6 +420,16 @@
       <p class="source" id="visits-cmp-chart-source"></p>
     </div>
 
+    <div class="panel" id="visits-cta-panel" hidden>
+      <h3 id="visits-cta-title">Button clicks: Book a demo and other buttons</h3>
+      <p class="muted">Clicks on website buttons that send a click event to Google Analytics. Each kind of event has its own column: one "Book a demo" button can send 2 kinds, so the columns aren't added up.</p>
+      <h3 class="sub-title">Per button</h3>
+      <div id="visits-cta-buttons"></div>
+      <h3 class="sub-title">Per page</h3>
+      <div id="visits-cta-pages"></div>
+      <p class="source" id="visits-cta-source"></p>
+    </div>
+
     <div class="panel" id="visits-clarity-panel" hidden>
       <h3 id="visits-clarity-title">Heat map numbers</h3>
       <p class="muted">From Microsoft Clarity: how far people scroll, rage clicks (fast repeated clicks on one spot) and dead clicks (clicks on something that does nothing). The heat maps themselves are in Clarity.</p>
@@ -429,16 +441,6 @@
       <div class="cards compact" id="visits-clarity-cards"></div>
       <div id="visits-clarity-pages"></div>
       <p class="source" id="visits-clarity-source"></p>
-    </div>
-
-    <div class="panel" id="visits-cta-panel" hidden>
-      <h3 id="visits-cta-title">CTA clicks</h3>
-      <p class="muted">Clicks on website buttons that send a click event to Google Analytics. Each kind of event has its own column: one "Book a demo" button can send 2 kinds, so the columns aren't added up.</p>
-      <h3 class="sub-title">Per button</h3>
-      <div id="visits-cta-buttons"></div>
-      <h3 class="sub-title">Per page</h3>
-      <div id="visits-cta-pages"></div>
-      <p class="source" id="visits-cta-source"></p>
     </div>
 
     <div class="panel" id="visits-who-panel" hidden>
@@ -587,6 +589,7 @@
     </div>
     <div class="panel">
       <h3>Campaign-influenced meetings</h3>
+      <p class="muted">Only SDRs fill in the meeting fields in Salesforce, so meetings set by AEs aren't counted here.</p>
       <div class="cards compact" id="pipe-meet-cmp-cards"></div>
       <p class="source" id="pipe-meet-cmp-source"></p>
       <div id="pipe-meet-months"></div>
@@ -1174,6 +1177,6 @@
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script src="app.js?v=153"></script>
+<script src="app.js?v=155"></script>
 </body>
 </html>

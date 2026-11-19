@@ -4,6 +4,17 @@
  "checked": "2026-11-17",
  "items": [
   {
+   "date": "2026-11-17",
+   "outlet": "Unite.AI",
+   "title": "Opsera Expands Forge With Security and Governance for Legacy Application Modernization",
+   "link": "https://www.unite.ai/opsera-forge-security-governance-legacy-modernization/",
+   "type": "Mention",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Checked by hand"
+  },
+  {
    "date": "2026-11-15",
    "outlet": "BeBee",
    "title": "Senior Salesforce Developer - SFDC Sales Cloud - Opsera",
@@ -404,6 +415,72 @@
    "quoted": "",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "I Modernized a Legacy CRM's Support Desk in 3 hours with Opsera Forge",
+   "link": "https://medium.com/@manaligawande99/i-modernized-a-legacy-crms-support-desk-in-3-hours-with-opsera-forge-6f0fe8e6b801",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "SF Enterprise Hackathon 2.0",
+   "link": "https://medium.com/@divyansh.koolwal/sf-enterprise-hackathon-2-0-6130b9880f07",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "We taught a change-approval process to say no (built on Opsera Forge)",
+   "link": "https://medium.com/@ishamishra041996/we-taught-a-change-approval-process-to-say-no-built-on-opsera-forge-0195c785f013",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "We rebuilt a piece of the VA's 40-year-old hospital system in one day",
+   "link": "https://medium.com/@askarandmastybeats/we-rebuilt-a-piece-of-the-vas-40-year-old-hospital-system-in-one-day-823cb0a63f66",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "I found a one-line admin bypass in a helpdesk app, and then spent the day fixing it in the right way",
+   "link": "https://medium.com/@uzma.hmalla/i-found-a-one-line-admin-bypass-in-a-helpdesk-app-and-then-spent-the-day-fixing-it-in-the-right-a4795ed5dc3c",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
+  },
+  {
+   "date": "2026-09-23",
+   "outlet": "Medium",
+   "title": "Your open-source database has no mobile app. We built one at SF Enterprise Hackathon 2.0",
+   "link": "https://medium.com/@ismaelmehdidwork/your-open-source-database-has-no-mobile-app-we-built-one-at-sf-enterprise-hackathon-2-0-af923e3cafe7",
+   "type": "Developer article",
+   "topic": "Forge",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"
   },
   {
    "date": "2026-09-16",

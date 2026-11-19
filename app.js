@@ -1088,7 +1088,7 @@ function renderCta(d) {
       const pg = pages[r.page] || (pages[r.page] = { page: r.page, demo: 0, cta: 0, download: 0 });
       pg[r.kind] += r.clicks;
     }
-    $("visits-cta-title").textContent = `CTA clicks, ${range(p.start, p.end)}`;
+    $("visits-cta-title").textContent = `Button clicks: Book a demo and other buttons, ${range(p.start, p.end)}`;
     table($("visits-cta-buttons"), { rows: Object.values(buttons).map((b) => ({ ...b, pages: b.pages.size })), search: "buttons", sortKey: "clicks", pageSize: 15, columns: [
       { key: "button", label: "Button", search: true },
       { key: "kind", label: "Kind", search: true },
@@ -2514,8 +2514,8 @@ function openHubs() {
 
 // ---------- PR and media: every article, interview, byline, podcast and press mention, by quarter ----------
 
-const PR_TYPES = ["Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership", "Passing mention"];
-const PR_PLACED = PR_TYPES.slice(0, 5);   // briefings, partnership pages, passing mentions and drafts show in the list but aren't placements (agreed 6 Nov 2026)
+const PR_TYPES = ["Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership", "Passing mention", "Developer article"];
+const PR_PLACED = PR_TYPES.slice(0, 5);   // briefings, partnership pages, passing mentions, developer articles and drafts show in the list but aren't placements (agreed 6 Nov 2026)
 const prPlacement = (r) => PR_PLACED.includes(r.type) && !r.status;
 const PR_TOPICS = ["Forge", "AI-SDLC", "Modernization", "Security", "Unified Insights", "Salesforce", "Other"];
 const PR_TIERS = ["Top tier", "Trade press", "Other"];
@@ -2585,7 +2585,7 @@ function renderPrMedia(d, ga, ah, sov) {
     return card(`${label}, ${qName}`, num(cur), pp.prev ? `${pp.prevName}: ${num(prev)}` : pp.none, cmpDelta(cur, prev));
   }).join("");
   $("pr-cards-source").textContent = `${pp.why ? `${pp.why} ` : ""}Source: ${d.source}, checked ${dayYear(d.checked)}. ${qName}, ${range(pp.cur.start, pp.cur.end)}` +
-    `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it. Briefings, partnership pages, passing mentions, drafts and pieces still to review don't count as placements.`;
+    `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it. Briefings, partnership pages, passing mentions, developer articles, drafts and pieces still to review don't count as placements.`;
 
   // Filters: outlet, type, year, quarter, person, topic and outlet tier
   const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };

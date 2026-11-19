@@ -4,7 +4,9 @@ Opsera from any time. One row each, with the date, outlet, title, link, type, to
 named, and the PR agency that placed it. Agreed with Purav on 4 Nov 2026.
 
 Rows already in the file stay. Each run adds new ones from:
-- Google News and Google web search, read with Apify (needs APIFY_TOKEN, a GitHub secret)
+- Google News and Google web search, read with Apify (needs APIFY_TOKEN, a GitHub secret). One search looks for Medium
+  pages naming "Opsera Forge" (Purav, 19 Nov 2026). Medium blocks scripts from its pages, so each one is read from the
+  writer's public Medium feed. It counts only if it says "Opsera Forge", and lands as a developer article to review.
 - our newsroom (opsera.ai/newsroom): its press releases from 1 Jul 2026
 - a PR agency's list, if one is dropped into ~/Desktop/Data/pr-agency as .csv or .xlsx
   with the columns Date, Outlet, Title, Link, Type and Quoted (Quoted can be blank); the file's name,
@@ -12,7 +14,8 @@ Rows already in the file stay. Each run adds new ones from:
 - SamsonPR's own tracker, saved as SamsonPR-tracker-*.xlsx in the same folder (agreed 6 Nov 2026): every piece in its
   "Coverage Tracker 2026" tab is placed by SamsonPR, with its readership from "Circulation or UVM". Its "Account
   Activities" tab gives data/pr_opportunities.json: outlet, ask, status and deadline, with no reporter or customer names.
-- A few rows added by hand (MANUAL): briefings, partnerships and pieces still in draft. They show in the list but
+- A few rows added by hand (MANUAL): briefings, partnerships, pieces still in draft, and Medium articles developers
+  wrote about Opsera after a hackathon (DEVELOPER, from the hackathon submissions sheet). They show in the list but
   don't count as placements. Nor do pages marked by hand as naming Opsera only in passing (PASSING).
 
 A found page counts only if its own text says Opsera. Job posts, directory and review listings,
@@ -42,7 +45,7 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "pr_media.json"
 AGENCY = Path.home() / "Desktop" / "Data" / "pr-agency"
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_0) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 MAX_CHARGE_USD = 1   # each weekly run costs a few cents; this caps a run that goes wrong
-TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership", "Passing mention")
+TYPES = ("Press release", "Byline", "Interview", "Podcast", "Mention", "Briefing", "Partnership", "Passing mention", "Developer article")
 OPPORTUNITIES = Path(__file__).resolve().parent.parent / "data" / "pr_opportunities.json"
 # Added by hand (agreed 6 Nov 2026). Not placements: a briefing, a partnership listing and a piece still in draft.
 MANUAL = [
@@ -50,6 +53,16 @@ MANUAL = [
      "topic": "Other", "quoted": "Kumar Chivukula", "placed_by": "SamsonPR", "found_by": "SamsonPR tracker, Account Activities"},
     {"date": "2026-11-06", "outlet": "Forbes", "title": "PHP2Shell byline", "link": "", "type": "Byline", "status": "In draft",
      "topic": "Security", "quoted": "", "placed_by": "", "found_by": "Added by hand"},
+]
+# Medium articles developers wrote about building on Forge at SF Enterprise Hackathon 2.0, 23 Sep 2026 (Purav, 19 Nov 2026).
+# From the hackathon submissions sheet; each checked against the writer's Medium feed. Not placements.
+MANUAL += [
+    {"date": "2026-09-23", "outlet": "Medium", "title": "I Modernized a Legacy CRM's Support Desk in 3 hours with Opsera Forge", "link": "https://medium.com/@manaligawande99/i-modernized-a-legacy-crms-support-desk-in-3-hours-with-opsera-forge-6f0fe8e6b801", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
+    {"date": "2026-09-23", "outlet": "Medium", "title": "SF Enterprise Hackathon 2.0", "link": "https://medium.com/@divyansh.koolwal/sf-enterprise-hackathon-2-0-6130b9880f07", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
+    {"date": "2026-09-23", "outlet": "Medium", "title": "We taught a change-approval process to say no (built on Opsera Forge)", "link": "https://medium.com/@ishamishra041996/we-taught-a-change-approval-process-to-say-no-built-on-opsera-forge-0195c785f013", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
+    {"date": "2026-09-23", "outlet": "Medium", "title": "We rebuilt a piece of the VA's 40-year-old hospital system in one day", "link": "https://medium.com/@askarandmastybeats/we-rebuilt-a-piece-of-the-vas-40-year-old-hospital-system-in-one-day-823cb0a63f66", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
+    {"date": "2026-09-23", "outlet": "Medium", "title": "I found a one-line admin bypass in a helpdesk app, and then spent the day fixing it in the right way", "link": "https://medium.com/@uzma.hmalla/i-found-a-one-line-admin-bypass-in-a-helpdesk-app-and-then-spent-the-day-fixing-it-in-the-right-a4795ed5dc3c", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
+    {"date": "2026-09-23", "outlet": "Medium", "title": "Your open-source database has no mobile app. We built one at SF Enterprise Hackathon 2.0", "link": "https://medium.com/@ismaelmehdidwork/your-open-source-database-has-no-mobile-app-we-built-one-at-sf-enterprise-hackathon-2-0-af923e3cafe7", "type": "Developer article", "topic": "Forge", "quoted": "", "placed_by": "", "found_by": "Added by hand, from the SF Enterprise Hackathon 2.0 submissions sheet"},
 ]
 PARTNERSHIP = {"https://x.ai/news/partnernetworkannouncement", "https://x.ai/partners/marketplace"}   # the xAI partner network
 # Pages that name Opsera only in passing: kept in the list, not placements (Purav, 6 Nov 2026)
@@ -76,7 +89,7 @@ ASKS = {"CIO News/TechTarget": ("Follow-up questions on a customer's modernizati
 PEOPLE = ["Kumar Chivukula", "Patty Hatter", "Chandra Ranganathan", "Vishnu Vasudevan", "Ryan Cartwright"]
 NAMES = {"Patricia Hatter": "Patty Hatter"}
 NEWS_QUERIES = ["Opsera", '"Kumar Chivukula"', '"Patty Hatter" Opsera']
-WEB_QUERIES = ['"Opsera" -site:opsera.ai -site:linkedin.com -site:indeed.com -site:glassdoor.com',
+WEB_QUERIES = ['"Opsera" -site:opsera.ai -site:linkedin.com -site:indeed.com -site:glassdoor.com', '"Opsera Forge" site:medium.com',
                '"Kumar Chivukula" Opsera -site:opsera.ai -site:linkedin.com', '"Opsera" podcast', '"Opsera" interview']
 PEOPLE_QUERIES = ['"by Kumar Chivukula"', '"Kumar Chivukula" interview OR podcast', '"Patty Hatter" Opsera interview OR podcast',
                   'site:forbes.com/councils "Kumar Chivukula"']   # all time, for bylines, interviews and podcasts
@@ -107,7 +120,7 @@ JOB_WORDS = re.compile(r"\b(job|jobs|careers?|hiring|salary|salaries|vacanc|open
 OUTLETS = {"prnewswire.com": "PR Newswire", "globenewswire.com": "GlobeNewswire", "finance.yahoo.com": "Yahoo Finance",
            "markets.businessinsider.com": "Business Insider", "morningstar.com": "Morningstar", "sdtimes.com": "SD Times",
            "devopsdigest.com": "DEVOPSdigest", "aithority.com": "AiThority", "informationweek.com": "InformationWeek",
-           "leaddev.com": "LeadDev", "news.aakashg.com": "Product Growth", "cognitiveworld.com": "Cognitive World", "manilatimes.net": "The Manila Times", "devops.com": "DevOps.com"}
+           "leaddev.com": "LeadDev", "news.aakashg.com": "Product Growth", "cognitiveworld.com": "Cognitive World", "manilatimes.net": "The Manila Times", "devops.com": "DevOps.com", "medium.com": "Medium"}
 
 
 def stop(msg):
@@ -149,6 +162,36 @@ def read_page(url):
     text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text)))
     return text, (m.group(1) if m else None), (html.unescape(t.group(1)).strip() if t else None), \
         {"summary": html.unescape(d.group(1)) if d else "", "authors": " ".join(authors)}
+
+
+def is_medium(url):
+    return site(url) == "medium.com" or site(url).endswith(".medium.com")
+
+
+def medium_page(url):
+    """A Medium post read from its writer's or publication's public feed, since Medium blocks scripts from the page itself.
+    Returns what read_page returns, or Nones when the post isn't in the feed (feeds hold the newest 10 posts)."""
+    u = urlparse(url)
+    host, first = u.netloc.lower().removeprefix("www."), (u.path.strip("/").split("/") or [""])[0]
+    feed = f"https://{host}/feed" if host != "medium.com" else f"https://medium.com/feed/{first}"
+    post_id = u.path.rstrip("/").rsplit("-", 1)[-1]
+    try:
+        r = requests.get(feed, headers=HEADERS, timeout=30)
+    except requests.RequestException:
+        return None, None, None, {}
+    if r.status_code != 200:
+        return None, None, None, {}
+    for item in re.findall(r"<item>(.*?)</item>", r.text, re.S):
+        link = re.search(r"<link>(.*?)</link>", item)
+        if not link or not link.group(1).split("?")[0].rstrip("/").endswith(post_id):
+            continue
+        title = re.search(r"<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</title>", item, re.S)
+        when = re.search(r"<pubDate>(.*?)</pubDate>", item)
+        body = re.search(r"<content:encoded>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</content:encoded>", item, re.S)
+        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", body.group(1) if body else "")))
+        date = dt.datetime.strptime(when.group(1)[5:16], "%d %b %Y").date().isoformat() if when else None
+        return text, date, html.unescape(title.group(1)).strip() if title else None, {"summary": "", "authors": ""}
+    return None, None, None, {}
 
 
 def words(title):
@@ -335,16 +378,23 @@ def main():
     added, skipped = 0, {"left out": 0, "no Opsera on the page": 0, "before 1 Jul 2026 and not by an Opsera person": 0, "page wouldn't open": 0}
     for c in found:
         link = (c.get("link") or "").split("#")[0]
+        if is_medium(link):   # Medium adds tracking to its links; the same post keeps one row
+            link = link.split("?")[0]
         if not link or link in items or link in NOT_A_PIECE:
             continue
         if not (c.get("own") or c.get("checked_by_hand")) and left_out(link, c.get("title")):
             skipped["left out"] += 1
             continue
         text, page_date, page_title, extra = read_page(link)
+        if text is None and is_medium(link):
+            text, page_date, page_title, extra = medium_page(link)
         if text is None and c.get("checked_by_hand"):   # opened by hand in a browser: the site blocks scripts
             text, extra = "", {}
         elif text is None:
             skipped["page wouldn't open"] += 1
+            continue
+        if is_medium(link) and "Opsera Forge" not in text:
+            skipped["no Opsera on the page"] += 1
             continue
         if not c.get("checked_by_hand") and "Opsera" not in text:
             skipped["no Opsera on the page"] += 1
@@ -354,7 +404,7 @@ def main():
         if (not title or title.endswith(("...", "\u2026"))) and page_title:   # search results cut long titles short
             title = re.sub(r"\s+[|\-\u2013\u2014]\s+[^|\u2013\u2014]{2,40}$", "", page_title)   # drop " | Outlet" at the end
         title = title.translate(STRAIGHT)
-        t = c.get("type") or kind(link, title, text, release_titles, extra.get("authors", ""))
+        t = c.get("type") or ("Developer article" if is_medium(link) else kind(link, title, text, release_titles, extra.get("authors", "")))
         people = c.get("quoted") or quoted(f"{text} {extra.get('authors', '')}")
         if not date or (date < START and not (t in ("Byline", "Interview", "Podcast") and people)):
             skipped["before 1 Jul 2026 and not by an Opsera person"] += 1
@@ -404,7 +454,9 @@ def main():
             x["type"] = "Partnership"
         if x["link"] in PASSING:
             x["type"] = "Passing mention"
-        if not x["found_by"].startswith(("PR agency", "Added by hand", "SamsonPR")):
+        if x["type"] == "Developer article":   # a Medium find counts only if it says "Opsera Forge"
+            x["topic"] = "Forge"
+        elif not x["found_by"].startswith(("PR agency", "Added by hand", "SamsonPR")):
             x["topic"] = topic(x["title"])
     for x in items.values():   # a pickup found before its press release
         if x["type"] == "Mention" and x["found_by"] != "Checked by hand" and same_release(x["title"], release_titles):
