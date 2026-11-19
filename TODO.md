@@ -106,7 +106,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK are set in GitHub (Purav, 18 Nov). The privacy check reads the full customer list on every run.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
 - [x] Partner deal registrations ("DG-F27 - Partner Deal Reg"): David confirmed on 19 Nov partner deals are never marketing sourced. Not counted as marketing.
-- [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published.
+- [x] 18 Nov: "Who visits" panel and daily Slack alerts for new content (09:30 India time) published. Moved to 09:37 on 19 Nov after GitHub skipped the 09:30 run.
 - [x] 19 Nov: David's 18 Nov opportunities and DG-Demo Requests exports loaded. The opportunities export has open, won and lost deals despite its name.
 - [x] 19 Nov: any deal with a partner listed on it (from the Opportunity QA report) counts as marketing influenced, never sourced (Purav, from David). 4 deals moved; they show on the To review list.
 - [x] 19 Nov: Salesforce campaign names now come from HubSpot's synced "Salesforce Campaigns" object (Purav). The 28 Oct list only fills gaps. Pipeline and meetings stay on David's exports.

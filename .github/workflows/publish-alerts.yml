@@ -1,10 +1,11 @@
 name: New content alerts
 
-# Every morning at 09:30 India time: one Slack line in #core-marketing-team per new blog, resource page or YouTube video
+# Every morning at 09:37 India time: one Slack line in #core-marketing-team per new blog, resource page or YouTube video
 # (agreed 18 Nov 2026). Blogs and resource pages come from Contentful, videos from the public YouTube feed.
+# Moved from 09:30 to 09:37 on 19 Nov 2026 (Purav): GitHub skipped the on-the-hour run that morning, and drops busy on-the-hour runs.
 on:
   schedule:
-    - cron: "0 4 * * *"
+    - cron: "7 4 * * *"
   workflow_dispatch:
 
 permissions:
