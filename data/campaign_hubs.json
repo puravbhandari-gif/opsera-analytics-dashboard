@@ -224,8 +224,9 @@
     },
     {
      "group": "Format",
-     "name": "Tokenomics whitepaper",
-     "number": "Due 20 Nov"
+     "name": "Tokenomics white paper",
+     "link": "https://opsera.ai/resources/white-papers/tokenomics-the-currency-of-enterprise-ai",
+     "number": "Live 23 Nov"
     },
     {
      "group": "Channel",
@@ -328,6 +329,45 @@
    ],
    "source": "Source: Jeetu Patel response, 17 Nov 2026",
    "numbers_note": "Kumar's article for Unite.ai, \"When AI Agents Finish the Work, Who Owns What Comes Next\", is with Catapult and not published yet (18 Nov 2026). Visits from Google Analytics, opsera.ai only, from 17 Nov."
+  },
+  {
+   "name": "Outages",
+   "note": "Started 23 Nov",
+   "hub": {
+    "kind": "Blog",
+    "title": "Kumar's blog on outages",
+    "number": "Not published yet",
+    "short_title": "Kumar's outages blog"
+   },
+   "spokes": [
+    {
+     "group": "Format",
+     "name": "Kumar's video",
+     "number": "Not published yet"
+    },
+    {
+     "group": "Format",
+     "name": "Infrasity article (maybe)",
+     "number": "Not published yet"
+    },
+    {
+     "group": "Format",
+     "name": "Byline (maybe)",
+     "number": "Not published yet"
+    },
+    {
+     "group": "Channel",
+     "name": "Exec posts",
+     "number": "Not published yet"
+    },
+    {
+     "group": "Channel",
+     "name": "Media comments",
+     "number": "Not published yet"
+    }
+   ],
+   "source": "Source: Outages hub and spoke plan, 23 Nov 2026",
+   "numbers_note": "Each piece shows \"Not published yet\" until it goes live. Visits and links get added as each one publishes."
   }
  ]
 }

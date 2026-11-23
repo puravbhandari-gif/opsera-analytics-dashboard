@@ -2486,7 +2486,7 @@ function renderHubs(d, lk) {
     const svg = `<svg class="hub-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(h.name)} hub and spoke: the hub ${esc(kind.toLowerCase())}, ${hubNumber ? `${esc(hubNumber)}, ` : ""}with ${spokes.length} formats and channels">
       ${nodes.map((n) => `<line x1="${cx}" y1="${cy}" x2="${n.x.toFixed(1)}" y2="${n.y.toFixed(1)}" class="hub-line ${n.group === "Format" ? "f" : "c"}"/>`).join("")}
       <circle cx="${cx}" cy="${cy}" r="86" class="hub-core"/>
-      <text x="${cx}" y="${cy - 30}" class="hub-k">Hub ${esc(kind.toLowerCase())}, ${esc(day(h.hub.date))}</text>
+      <text x="${cx}" y="${cy - 30}" class="hub-k">Hub ${esc(kind.toLowerCase())}${h.hub.date ? `, ${esc(day(h.hub.date))}` : ""}</text>
       ${wrap(h.hub.short_title || h.hub.title, 22).slice(0, 3).map((l, i) => `<text x="${cx}" y="${cy - 8 + i * 17}" class="hub-t">${esc(l)}</text>`).join("")}
       ${hubNumber ? `<text x="${cx}" y="${cy + 52}" class="hub-n">${esc(hubNumber)}</text>` : ""}
       ${nodes.map((n) => { const lines = wrap(n.name, 20), nums = n.number ? wrap(n.number, 22) : [], bw = 150, bh = 26 + lines.length * 15 + nums.length * 15;
@@ -2500,7 +2500,7 @@ function renderHubs(d, lk) {
     const pieces = spokes.filter((s) => (s.links || []).length).map((s) => `<p class="hub-pieces"><strong>${esc(s.name)}:</strong> ${s.links.map((l) =>
       `<a href="${esc(l.link)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(", ")}</p>`).join("");
     // Phones: the same hub and spokes as a list, so every label stays readable
-    const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub ${esc(kind.toLowerCase())}, ${esc(dayYear(h.hub.date))}</span>
+    const list = `<div class="hub-list"><div class="hub-list-core"><span class="hub-list-k">Hub ${esc(kind.toLowerCase())}${h.hub.date ? `, ${esc(dayYear(h.hub.date))}` : ""}</span>
       ${h.hub.link ? `<a href="${esc(h.hub.link)}" target="_blank" rel="noopener">${esc(h.hub.title)}</a>` : `<span>${esc(h.hub.title)}</span>`}${hubNumber ? `<strong>${esc(hubNumber)}</strong>` : ""}</div>
       ${["Format", "Channel"].map((g) => `<p class="hub-list-g">${g === "Format" ? "Formats" : "Channels"}</p><ul>${spokes.filter((s) => s.group === g).map((s) =>
         `<li class="${g === "Format" ? "f" : "c"}"><span>${s.link ? `<a href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.name)}</a>` : esc(s.name)}</span>${s.number ? `<strong>${esc(s.number)}</strong>` : ""}</li>`).join("")}</ul>`).join("")}</div>`;
