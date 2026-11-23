@@ -2750,9 +2750,12 @@ function renderEvents(hub, leads, sf) {
         { key: "members", label: "Members", num: true, fmt: num },
         { key: "statuses", label: "By status", sort: false },
         { key: "met", label: "Meeting set after the event", num: true, fmt: num },
-        { key: "export", label: "Exported", fmt: (v) => dayYear(v) },
+        { key: "export", label: "Pulled", fmt: (v) => dayYear(v) },
       ] });
-    $("events-sf-source").textContent = `Source: Salesforce campaign member exports, matched by email to the meetings export (${dayYear(sf.exports.meetings)}). Counts only.`;
+    // members from HubSpot's synced Salesforce campaign members since 23 Nov 2026; meetings still from David's last meetings exports
+    $("events-sf-source").textContent = exp.some((e) => e.from === "HubSpot")
+      ? `Source: Salesforce campaign members as synced to HubSpot, matched by email to David's last Salesforce meetings export (${dayYear(sf.exports.meetings)}). Counts only.`
+      : `Source: Salesforce campaign member exports, matched by email to the meetings export (${dayYear(sf.exports.meetings)}). Counts only.`;
   }
   $("events-source").textContent = `Sources: HubSpot lists and calendar meetings, updated ${dayYear((hub.event_rows_pulled_at || hub.pulled_at).slice(0, 10))}. Event page form fills: Google Analytics, ${range(leads.start_date, leads.end_date)} (Pacific time).`;
 }
@@ -2842,6 +2845,11 @@ function renderPipeline(sf) {
   const days = [...new Set([sf.exports.opportunities, sf.exports.campaign_touches])].sort();   // the deal exports (meetings have their own line)
   const exports = days.length === 2 && days[0].slice(0, 7) === days[1].slice(0, 7) ? `${Number(days[0].slice(8))} and ${dayYear(days[1])}` : days.map(dayYear).join(" and ");
   const when = range(sf.opportunities_from, sf.opportunities_to);
+  // Since 23 Nov 2026 deals come from HubSpot (synced from Salesforce); campaign touches, join dates and partner flags
+  // stay on David's last exports, and no newer export will come
+  const hsDeals = sf.deals_source === "HubSpot";
+  const dealSrc = hsDeals ? `Salesforce deals as synced to HubSpot, pulled ${dayYear(sf.exports.opportunities)}` : null;
+  const touchGap = `Campaign touches come from David's last Salesforce export (${dayYear(sf.exports.campaign_touches)}), so newer deals show only the campaigns on the deal itself.`;
   // The cards follow the period switch, by the day each deal was created, against the period before
   const dealsLast = addDays(sf.exports.opportunities, -1), deals = (n) => `${num(n)} deal${n === 1 ? "" : "s"}`;
   const bucketMetric = (label, k) => {
@@ -2850,8 +2858,10 @@ function renderPipeline(sf) {
   };
   compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast, fullPeriods: true,
     source: (a, b) => { $("pipe-export-gap").textContent = b > sf.exports.campaign_touches   // deals after the last campaign export can't show their campaigns yet
-        ? `The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.` : "";
-      return `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`; },
+        ? (hsDeals ? touchGap : `The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.`) : "";
+      return hsDeals
+        ? `Source: ${dealSrc}, created ${range(a, b)}, open, won and lost. Data starts on ${dayYear(sf.opportunities_cover_from)}.`
+        : `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`; },
     metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
       { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
   $("pipe-undercount").textContent = "Marketing sourced is an estimate: it rests on Salesforce's Primary Campaign Source, a starting point that isn't reliable on its own. " +
@@ -2886,8 +2896,8 @@ function renderPipeline(sf) {
     drawTime();
   });
   drawTime();
-  $("pipe-time-source").textContent = `Source: Salesforce opportunities created ${when}, exported ${exports}. Sourced and influenced are never added together.` +
-    (sf.opportunities_to > sf.exports.campaign_touches ? ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so ${monthName(sf.opportunities_to)} may change when the next export arrives.` : "");
+  $("pipe-time-source").textContent = (hsDeals ? `Source: ${dealSrc}, created ${when}.` : `Source: Salesforce opportunities created ${when}, exported ${exports}.`) + " Sourced and influenced are never added together." +
+    (sf.opportunities_to > sf.exports.campaign_touches ? (hsDeals ? ` ${touchGap}` : ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so ${monthName(sf.opportunities_to)} may change when the next export arrives.`) : "");
 
   table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: { sourced: "Marketing sourced (estimate)", influenced: "Marketing influenced", agency: "Booking agency" }[c.bucket] })),
     search: "campaigns", sortKey: "value", columns: [
@@ -2907,7 +2917,7 @@ function renderPipeline(sf) {
     { key: "campaigns", label: "Campaigns", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.campaigns.join(" | ") },
     { key: "reasons", label: "Why it needs a check", fmt: (v) => v.map(esc).join("<br>"), csv: (r) => r.reasons.join(" | ") },
   ] });
-  $("pipe-review-source").textContent = `Source: Salesforce opportunities created ${when}, open, won and lost. ${num((sf.to_review || []).length)} deals. ` +
+  $("pipe-review-source").textContent = `Source: ${hsDeals ? dealSrc + "," : "Salesforce opportunities"} created ${when}, open, won and lost. ${num((sf.to_review || []).length)} deals. ` +
     "Existing customer and doubtful deals stay in the totals above. No company or person names.";
 
   // Open deals by stage, a snapshot on the export date (agreed 19 Nov 2026). Sales, partner and marketing deals, counts only.
@@ -2919,9 +2929,10 @@ function renderPipeline(sf) {
       { key: "deals", label: "Open deals", num: true, sort: false, fmt: num },
       { key: "median_age", label: "Typical age (days)", num: true, sort: false, fmt: (v) => (v == null ? "-" : num(Math.round(v))) },
       { key: "over_90_days", label: "Open more than 90 days", num: true, sort: false, fmt: num },
+      // days in stage from HubSpot are in the data but hidden (Purav, 23 Nov 2026): HubSpot's stage dates are unreliable
     ] });
     const total = st.stages.reduce((t, r) => t + r.deals, 0);
-    $("pipe-stages-source").textContent = `Source: Salesforce opportunities export of ${dayYear(st.as_of)}, open deals created ${dayYear(st.since)} to ${dayYear(addDays(st.as_of, -1))}. ${num(total)} deals. Typical age is the middle value.`;
+    $("pipe-stages-source").textContent = `Source: ${hsDeals ? dealSrc : `Salesforce opportunities export of ${dayYear(st.as_of)}`}, open deals created ${dayYear(st.since)} to ${dayYear(addDays(st.as_of, -1))}. ${num(total)} deals. Typical age is the middle value.`;
   }
 
   const older = sf.exports.meetings_older || [];
@@ -3224,8 +3235,8 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
       line: (a, b) => `${moneyShort(sourced(a, b))} sourced, ${moneyShort(influenced(a, b))} influenced`,
       note: (a, b) => byStatus.map(([k, f]) => `${k[0].toUpperCase() + k.slice(1)} ${moneyShort(f(a, b))}`).join(" / "),
       none: "No deals yet", noneLine: (a, b) => `No marketing sourced or influenced deals created ${range(a, b)} so far.` +
-        (b > sf.exports.campaign_touches ? ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.` : ""),
-      src: `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
+        (b > sf.exports.campaign_touches ? (sf.deals_source === "HubSpot" ? ` Campaign touches come from David's last Salesforce export (${dayYear(sf.exports.campaign_touches)}), so newer deals show only the campaigns on the deal itself.` : ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so this may change when the next export arrives.`) : ""),
+      src: sf.deals_source === "HubSpot" ? `Salesforce deals as synced to HubSpot (open, won and lost), pulled ${dayYear(sf.exports.opportunities)}` : `Salesforce opportunities (open, won and lost), exported ${dayYear(sf.exports.opportunities)}` },
     { label: "Demo requests", start: leads.start_date, last: lastFullDayPacific(leads.end_date, leads.pulled_at), fmt: num, value: rangeSum(leads.daily, "demo"),
       line: () => "Demo form fills on opsera.ai",
       // by the demo form's product field in HubSpot (agreed 18 Nov 2026), named as HubSpot's so it's never read as part of the Google count;

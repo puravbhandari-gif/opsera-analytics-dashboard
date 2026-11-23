@@ -1,8 +1,13 @@
 {
  "source": "Salesforce reports",
+ "deals_source": "HubSpot",
  "exports": {
-  "opportunities": "2026-11-18",
-  "campaign_touches": "2026-11-17",
+  "opportunities": "2026-11-23",
+  "campaign_touches": "2026-11-22",
+  "campaign_touches_older": [
+   "2026-11-02",
+   "2026-11-17"
+  ],
   "meetings": "2026-11-17",
   "meetings_older": [
    "2026-10-27",
@@ -11,8 +16,8 @@
  },
  "opportunities_cover_from": "2026-04-01",
  "opportunities_from": "2026-01-05",
- "opportunities_to": "2026-11-17",
- "share_without_contact_pct": 72,
+ "opportunities_to": "2026-11-20",
+ "share_without_contact_pct": 64,
  "window_days": 90,
  "deals_join_date_unknown": 38,
  "deals_left_out_by_window": 4,
@@ -37,7 +42,7 @@
    "influenced_value": 250000,
    "agency_deals": 1,
    "agency_value": 125000,
-   "nocontact_deals": 8
+   "nocontact_deals": 7
   },
   {
    "month": "2026-06",
@@ -81,7 +86,7 @@
    "influenced_value": 700000,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 20
+   "nocontact_deals": 19
   },
   {
    "month": "2026-10",
@@ -103,7 +108,7 @@
    "influenced_value": 200000,
    "agency_deals": 2,
    "agency_value": 350000,
-   "nocontact_deals": 21
+   "nocontact_deals": 22
   }
  ],
  "days": [
@@ -115,7 +120,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 6
+   "nocontact_deals": 4
   },
   {
    "date": "2026-04-07",
@@ -195,7 +200,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 1
+   "nocontact_deals": 3
   },
   {
    "date": "2026-04-29",
@@ -255,7 +260,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 5
+   "nocontact_deals": 4
   },
   {
    "date": "2026-05-29",
@@ -595,7 +600,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 2
+   "nocontact_deals": 1
   },
   {
    "date": "2026-09-22",
@@ -758,16 +763,6 @@
    "nocontact_deals": 1
   },
   {
-   "date": "2026-11-11",
-   "sourced_deals": 0,
-   "sourced_value": 0,
-   "influenced_deals": 0,
-   "influenced_value": 0,
-   "agency_deals": 0,
-   "agency_value": 0,
-   "nocontact_deals": 2
-  },
-  {
    "date": "2026-11-16",
    "sourced_deals": 0,
    "sourced_value": 0,
@@ -775,7 +770,7 @@
    "influenced_value": 0,
    "agency_deals": 0,
    "agency_value": 0,
-   "nocontact_deals": 15
+   "nocontact_deals": 17
   },
   {
    "date": "2026-11-17",
@@ -785,6 +780,16 @@
    "influenced_value": 0,
    "agency_deals": 1,
    "agency_value": 200000,
+   "nocontact_deals": 1
+  },
+  {
+   "date": "2026-11-20",
+   "sourced_deals": 0,
+   "sourced_value": 0,
+   "influenced_deals": 0,
+   "influenced_value": 0,
+   "agency_deals": 0,
+   "agency_value": 0,
    "nocontact_deals": 1
   }
  ],
@@ -1224,26 +1229,26 @@
    "value": 150000
   },
   {
-   "bucket": "sourced",
-   "campaign": "DG-FY27-Q2-CXO-Dinner",
-   "deals": 2,
-   "value": 150000
-  },
-  {
    "bucket": "influenced",
    "campaign": "DG-Demo Requests",
    "deals": 1,
    "value": 150000
   },
   {
-   "bucket": "influenced",
-   "campaign": "DG-FY27-Invited-to-Discord-Community",
-   "deals": 1,
+   "bucket": "sourced",
+   "campaign": "DG-FY27-Q2-CXO-Dinner",
+   "deals": 2,
    "value": 150000
   },
   {
    "bucket": "sourced",
    "campaign": "DG-Contact Us",
+   "deals": 1,
+   "value": 150000
+  },
+  {
+   "bucket": "influenced",
+   "campaign": "DG-FY27-Invited-to-Discord-Community",
    "deals": 1,
    "value": 150000
   },
@@ -1325,15 +1330,14 @@
   },
   {
    "date": "2026-04-30",
-   "amount": 150000,
-   "stage": "8 ClosedLost",
-   "counted_as": "Sales",
+   "amount": 36000,
+   "stage": "4 Business Case",
+   "counted_as": "Marketing influenced",
    "campaigns": [
-    "SDR-Meeting-Set",
-    "Target-account campaign"
+    "DG-FY27-Q1-Partner-Interest"
    ],
    "reasons": [
-    "Matches more than 1 source: SDR or AE outreach, marketing"
+    "Partner on the deal; counted as influenced"
    ]
   },
   {
@@ -1354,20 +1358,21 @@
   },
   {
    "date": "2026-04-30",
-   "amount": 36000,
-   "stage": "4 Business Case",
-   "counted_as": "Marketing influenced",
+   "amount": 150000,
+   "stage": "8 ClosedLost",
+   "counted_as": "Sales",
    "campaigns": [
-    "DG-FY27-Q1-Partner-Interest"
+    "SDR-Meeting-Set",
+    "Target-account campaign"
    ],
    "reasons": [
-    "Partner on the deal; counted as influenced"
+    "Matches more than 1 source: SDR or AE outreach, marketing"
    ]
   },
   {
    "date": "2026-05-20",
-   "amount": 150000,
-   "stage": "3 POC",
+   "amount": 100000,
+   "stage": "8 ClosedLost",
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
@@ -1387,8 +1392,8 @@
   },
   {
    "date": "2026-05-20",
-   "amount": 100000,
-   "stage": "8 ClosedLost",
+   "amount": 150000,
+   "stage": "3 POC",
    "counted_as": "Marketing influenced",
    "campaigns": [
     "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
@@ -1453,7 +1458,7 @@
   {
    "date": "2026-09-22",
    "amount": 700000,
-   "stage": "2 Demo",
+   "stage": "3 POC",
    "counted_as": "Marketing influenced",
    "campaigns": [
     "Campaign named after a company",
@@ -1520,50 +1525,64 @@
   }
  ],
  "open_by_stage": {
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-23",
   "since": "2026-04-01",
   "stages": [
    {
     "stage": "Meeting",
     "deals": 43,
-    "median_age": 34,
-    "over_90_days": 3
+    "median_age": 39,
+    "over_90_days": 4,
+    "median_days_in_stage": 39,
+    "in_stage_over_60_days": 6
    },
    {
     "stage": "Demo",
-    "deals": 23,
-    "median_age": 56,
-    "over_90_days": 9
+    "deals": 22,
+    "median_age": 58.5,
+    "over_90_days": 10,
+    "median_days_in_stage": 48.0,
+    "in_stage_over_60_days": 8
    },
    {
     "stage": "POC",
-    "deals": 19,
-    "median_age": 70,
-    "over_90_days": 9
+    "deals": 22,
+    "median_age": 61.0,
+    "over_90_days": 9,
+    "median_days_in_stage": 47.5,
+    "in_stage_over_60_days": 9
    },
    {
     "stage": "Business Case",
-    "deals": 5,
-    "median_age": 70,
-    "over_90_days": 2
+    "deals": 4,
+    "median_age": 124.0,
+    "over_90_days": 2,
+    "median_days_in_stage": 105.5,
+    "in_stage_over_60_days": 3
    },
    {
     "stage": "Procurement",
     "deals": 4,
-    "median_age": 128.5,
-    "over_90_days": 2
+    "median_age": 133.5,
+    "over_90_days": 2,
+    "median_days_in_stage": 49.5,
+    "in_stage_over_60_days": 1
    },
    {
     "stage": "Partner Suspect",
     "deals": 3,
-    "median_age": 216,
-    "over_90_days": 3
+    "median_age": 221,
+    "over_90_days": 3,
+    "median_days_in_stage": 221,
+    "in_stage_over_60_days": 3
    },
    {
     "stage": "Renewal Evaluation",
     "deals": 23,
-    "median_age": 126,
-    "over_90_days": 13
+    "median_age": 131,
+    "over_90_days": 13,
+    "median_days_in_stage": 131,
+    "in_stage_over_60_days": 22
    }
   ]
  },
@@ -1621,12 +1640,13 @@
   {
    "key": "flutter",
    "campaign": "DG-FY27-Q3-SC-Flutter-Summit",
-   "export": "2026-11-05",
+   "export": "2026-11-23",
+   "from": "HubSpot",
    "members": 211,
    "statuses": {
     "Approved": 77,
-    "Attended": 86,
-    "Waitlisted": 48
+    "Waitlisted": 48,
+    "Attended": 86
    },
    "people_with_meeting": 1,
    "held": 0
@@ -1634,7 +1654,8 @@
   {
    "key": "gartner",
    "campaign": "DG-FY27-Q3-Gartner-Xpo",
-   "export": "2026-11-02",
+   "export": "2026-11-23",
+   "from": "HubSpot",
    "members": 267,
    "statuses": {
     "Booth Scan": 267
@@ -1645,7 +1666,8 @@
   {
    "key": "github_universe",
    "campaign": "DG-FY27-Q3-GitHub-Universe-2026",
-   "export": "2026-11-02",
+   "export": "2026-11-23",
+   "from": "HubSpot",
    "members": 240,
    "statuses": {
     "Booth Scan": 133,
@@ -1657,7 +1679,8 @@
   {
    "key": "tokenomics",
    "campaign": "DG-FY27-Q3-Tokenomics-Webinar",
-   "export": "2026-11-04",
+   "export": "2026-11-23",
+   "from": "HubSpot",
    "members": 75,
    "statuses": {
     "Responded": 75
@@ -2308,11 +2331,11 @@
     "people": 2
    },
    {
-    "campaign": "DG-FY27-Q1-Agentic-Launch",
+    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
     "people": 2
    },
    {
-    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
+    "campaign": "DG-FY27-Q1-Agentic-Launch",
     "people": 2
    },
    {
@@ -2344,11 +2367,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "campaign": "DG-FY22-Q3-Dreamforce 2022",
     "people": 1
    },
    {
@@ -2384,11 +2407,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
     "people": 1
    },
    {

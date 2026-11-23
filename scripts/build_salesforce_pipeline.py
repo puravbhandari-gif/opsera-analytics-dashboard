@@ -50,6 +50,7 @@ import os
 import re
 import statistics
 import sys
+from zoneinfo import ZoneInfo
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -81,6 +82,10 @@ FILES = {"opportunities": "Open Oppty Opportunities-*.xls", "qa": "Opportunity Q
          "event_github_universe": "DG-FY27-Q3-GitHub-Universe-2026-*.xls", "event_tokenomics": "DG-FY27-Q3-Tokenomics-Webinar-*.xls"}
 HELPERS = {"DG-FY27 Promoted to X2 Status"}   # helper campaigns: never the source (David, 17 Nov 2026)
 HAND_RULES = EXPORTS / "hand-rules.json"     # private: deal names stay out of the repo
+FROZEN_OPPS_ON = "2026-11-22"   # David's last opportunities export; nothing newer will come (23 Nov 2026)
+HUBSPOT_DEALS = EXPORTS / "hubspot" / "deals.json"   # HubSpot deals snapshot, pulled through the HubSpot connection; private
+HUBSPOT_EVENT_MEMBERS = EXPORTS / "hubspot" / "event_members.json"
+EVENT_CAMPAIGN_IDS = {"flutter": "701UR00000vIfboYAC", "gartner": "701UR00000vaGzyYAE", "github_universe": "701UR00000vvO3BYAU", "tokenomics": "701UR00000tWqi9YAC"}
 HUBSPOT_NAMES = EXPORTS / "hubspot-campaign-names.json"   # Salesforce campaign ID -> name, from HubSpot; private (partner names)
 EXISTED_BEFORE = "Deal existed before the event; counted as influenced"
 PARTNER_ON_DEAL = "Partner on the deal; counted as influenced"
@@ -183,18 +188,72 @@ def event_members(meets):
         if e and when:
             set_on[e].append((when, m.get("Meeting Outcome") or "Not recorded"))
     out = []
+    # From 23 Nov 2026 members come from HubSpot's synced Salesforce campaign members (they matched the 4 exports exactly)
+    hs_members, hs_on = collections.defaultdict(list), ""
+    if HUBSPOT_EVENT_MEMBERS.exists():
+        snap = json.loads(HUBSPOT_EVENT_MEMBERS.read_text())
+        hs_on = snap["pulled"]
+        ids = {v[:15]: k for k, v in EVENT_CAMPAIGN_IDS.items()}
+        for m in snap["members"]:
+            k = ids.get((m.get("campaignid") or "")[:15])
+            if k:
+                hs_members[k].append({"Email": m.get("email") or "", "Member Status": m.get("status") or ""})
     for key, first in EVENT_FIRST_DAY.items():
-        try:
-            rows, stamp = read(f"event_{key}")
-        except SystemExit:
-            continue   # no export for this event yet
+        if hs_members.get(key):
+            rows, stamp = hs_members[key], hs_on
+        else:
+            try:
+                rows, stamp = read(f"event_{key}")
+            except SystemExit:
+                continue   # no members for this event yet
         emails = {(r.get("Email") or "").lower() for r in rows if r.get("Email")}
         met = {e: [o for d, o in set_on[e] if d >= first] for e in emails}
         met = {e: o for e, o in met.items() if o}
-        out.append({"key": key, "campaign": EVENT_CAMPAIGNS[key], "export": stamp, "members": len(rows),
+        out.append({"key": key, "campaign": EVENT_CAMPAIGNS[key], "export": stamp, "from": "HubSpot" if hs_members.get(key) else "export", "members": len(rows),
                     "statuses": dict(collections.Counter(r.get("Member Status") or "Not recorded" for r in rows)),
                     "people_with_meeting": len(met), "held": sum(1 for o in met.values() if "Meeting Held" in o)})
     return out
+
+
+def hubspot_opps(frozen):
+    """HubSpot deals in the shape of David's opportunities export. `frozen` is the export rows, used only where HubSpot is blank."""
+    snap = json.loads(HUBSPOT_DEALS.read_text())
+    stages = json.loads((EXPORTS / "hubspot" / "stages.json").read_text())
+    pulled = dt.date.fromisoformat(snap["pulled"])
+    old = {(o.get("Opportunity ID") or "")[:15]: o for o in frozen}
+    last_export = max((day(o["Created Date"]) for o in frozen if o.get("Created Date")), default=dt.date(2000, 1, 1)).isoformat()
+    last_export = max(last_export, FROZEN_OPPS_ON)
+    pacific = ZoneInfo("America/Los_Angeles")   # Salesforce dates are Pacific; HubSpot's are UTC
+    rows, extra = [], 0
+    for d in snap["deals"]:
+        oid = (d.get("hs_salesforceopportunityid") or "")[:15]
+        if not oid:
+            continue
+        f = old.get(oid, {})
+        created = dt.datetime.fromisoformat(d["createdate"].replace("Z", "+00:00")).astimezone(pacific).date()
+        # Only the deals David's report listed (Purav, 23 Nov 2026): HubSpot also has older renewals the report left out.
+        # Deals created after his last export can't be in it, so those all count.
+        if not f and created.isoformat() <= last_export:
+            extra += 1
+            continue
+        pick = lambda hs_key, ex_key: d.get(hs_key) or f.get(ex_key, "")
+        rows.append({
+            "Opportunity ID": oid,
+            "Opportunity Name": f.get("Opportunity Name") or d.get("dealname") or "",
+            "Account Name": f.get("Account Name", ""),
+            "Primary Campaign Source": pick("primary_campaign_source", "Primary Campaign Source"),
+            "Attrib First Campaign": pick("attrib_first_campaign", "Attrib First Campaign"),
+            "Attrib Last Campaign": pick("attrib_last_campaign", "Attrib Last Campaign"),
+            "Type": d.get("dealtype") or f.get("Type", ""),
+            "Stage": stages.get(d.get("dealstage") or "", f.get("Stage", "")),
+            "Created Date": created.strftime("%m/%d/%Y"),
+            "Amount": d.get("amount") or "0",
+            # HubSpot has the contact but not the name the join dates are keyed on; a placeholder still marks "has a contact"
+            "Primary Contact": f.get("Primary Contact") or ("(HubSpot contact)" if int(d.get("num_associated_contacts") or 0) else ""),
+            "Age": str((pulled - created).days),
+            "Entered stage": (d.get("hs_v2_date_entered_current_stage") or "")[:10],
+        })
+    return rows, snap["pulled"], extra
 
 
 def main():
@@ -236,7 +295,30 @@ def main():
         opps = rows + [o for o in opps if o["Created Date"] and day(o["Created Date"]).isoformat() < qa_from]
         opps_on, opps_cover_from = qa_on, min(opps_cover_from, qa_from)
         print(f"Using the Opportunity QA report of {qa_on}: {len(qa)} deals, {no_first} without an Attrib First Campaign (newer than the opportunities export).")
+    # From 23 Nov 2026 (Purav, after David asked to rely on HubSpot): deals come from HubSpot, synced from Salesforce.
+    # David's last exports stay frozen for what HubSpot can't give: a blank campaign field, deal and account names
+    # (they key the hand rules), the primary contact's name (it keys join dates), and the partner flags above.
+    hs_extra = 0
+    if HUBSPOT_DEALS.exists():
+        opps, opps_on, hs_extra = hubspot_opps(opps)
+        print(f"Deals from HubSpot (pulled {opps_on}): {len(opps)}; {hs_extra} older deals David's report didn't list are left out.")
     touches, touches_on = read("touches")
+    # The 22 Nov 2026 campaign-touch export only covers deals created from 3 Nov, so older exports fill in every deal
+    # the newest one leaves out (the same way older opportunity exports fill earlier months, agreed 9 Nov 2026).
+    # A deal in the newest export takes only its rows from there.
+    touches_older = []
+    for back in range(1, 10):
+        try:
+            older, older_on = read("touches", back)
+        except SystemExit:
+            break
+        have = {t.get("Opportunity ID") for t in touches}
+        add = [t for t in older if t.get("Opportunity ID") not in have]
+        if add:
+            touches += add
+            touches_older.append(older_on)
+    if touches_older:
+        print(f"Campaign touches: newest export {touches_on}, older exports {', '.join(sorted(touches_older))} fill in the deals it leaves out.")
     meets, meets_on = read("meetings")
     # The 9 Nov 2026 export covers fewer people than the 27 Oct one (it filters on meeting date), so older exports fill in:
     # a person's join date doesn't change, and without it a campaign counts by default (agreed 9 Nov 2026).
@@ -393,25 +475,33 @@ def main():
             meet_campaigns[c] += 1
 
     # Open deals by stage (Purav, 19 Nov 2026, from David: deals mostly stall at Demo). Every open deal created since START,
-    # sales, partner or marketing, as counts only. Age is days since the deal was created (the export's Age column),
-    # not days in its current stage, which the export doesn't have.
+    # sales, partner or marketing, as counts only. Age is days since the deal was created. Days in the current stage come
+    # from HubSpot's date each deal entered its stage (added 23 Nov 2026).
     # the sales stages in order (1 Meeting to 5 Procurement), then the side tracks numbered "01", "03" (partner suspect, renewal)
     stage_order = lambda x: (x[0].startswith("0"), int(re.match(r"\d+", x[0]).group()) if re.match(r"\d+", x[0]) else 99, x[0])
     stage_ages = collections.defaultdict(list)
+    stage_days = collections.defaultdict(list)   # days in the current stage, from HubSpot's date each deal entered it (23 Nov 2026)
+    as_of = dt.date.fromisoformat(opps_on)
     for o in opps:
         created = day(o["Created Date"]) if o.get("Created Date") else None
         if not created or created < START or "closed" in o["Stage"].lower():
             continue
+        if o.get("Entered stage"):
+            stage_days[o["Stage"]].append((as_of - dt.date.fromisoformat(o["Entered stage"])).days)
         try:
             stage_ages[o["Stage"]].append(int(float((o.get("Age") or "").replace(",", ""))))
         except ValueError:
             stage_ages[o["Stage"]].append(None)
     open_by_stage = [{"stage": re.sub(r"^\d+\s*", "", s), "deals": len(v), "median_age": statistics.median([a for a in v if a is not None]) if any(a is not None for a in v) else None,
-                      "over_90_days": sum(1 for a in v if a is not None and a > 90)} for s, v in sorted(stage_ages.items(), key=stage_order)]
+                      "over_90_days": sum(1 for a in v if a is not None and a > 90),
+                      "median_days_in_stage": statistics.median(stage_days[s]) if stage_days[s] else None,
+                      "in_stage_over_60_days": sum(1 for x in stage_days[s] if x > 60) if stage_days[s] else None}
+                     for s, v in sorted(stage_ages.items(), key=stage_order)]
 
     out = {
         "source": "Salesforce reports",
-        "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "meetings": meets_on, "meetings_older": sorted(meets_older)},
+        "deals_source": "HubSpot" if HUBSPOT_DEALS.exists() else "export",   # deals from HubSpot since 23 Nov 2026
+        "exports": {"opportunities": opps_on, "campaign_touches": touches_on, "campaign_touches_older": sorted(touches_older), "meetings": meets_on, "meetings_older": sorted(meets_older)},
         "opportunities_cover_from": max(opps_cover_from or "", START.isoformat()),   # deals before START are never counted
         "opportunities_from": min(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),
         "opportunities_to": max(day(o["Created Date"]) for o in opps if o["Created Date"]).isoformat(),

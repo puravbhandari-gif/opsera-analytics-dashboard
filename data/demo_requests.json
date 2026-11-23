@@ -1,16 +1,16 @@
 {
- "source": "Salesforce campaign DG-Demo Requests, Lead Status",
- "exported": "2026-11-18",
+ "source": "Salesforce campaign DG-Demo Requests as synced to HubSpot, Lead Status",
+ "exported": "2026-11-23",
  "start_date": "2026-04-01",
- "end_date": "2026-11-17",
+ "end_date": "2026-11-22",
  "statuses": {
   "Nurture": 32,
   "Assigned": 9,
   "Open": 7,
   "Contact": 4,
   "Disqualified": 2,
-  "Meeting Set": 1,
-  "Engaging": 1
+  "Engaging": 1,
+  "Meeting Set": 1
  },
  "has_x_factor": true,
  "x4_by_status": {
@@ -24,8 +24,8 @@
    "2026-11-09",
    "2026-11-17"
   ],
-  "campaign_touches": "2026-11-17",
-  "opportunities": "2026-11-18"
+  "campaign_touches": "2026-11-22",
+  "opportunities": "2026-11-22"
  },
  "daily": [
   {

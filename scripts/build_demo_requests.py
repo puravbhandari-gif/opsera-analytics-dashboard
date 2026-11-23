@@ -32,6 +32,8 @@ from pathlib import Path
 
 EXPORTS = Path(os.path.expanduser("~/Desktop/Data/salesforce-exports"))
 OUT = Path(__file__).resolve().parent.parent / "data" / "demo_requests.json"
+HUBSPOT_MEMBERS = EXPORTS / "hubspot" / "members_demo_and_meetings.json"   # pulled through the HubSpot connection; private
+DEMO_CAMPAIGN_ID = "7014Q000002aJSeQAM"
 GROUPS = {"Meeting Set": "qualified", "Engaging": "qualified", "Open": "open", "Assigned": "open", "Contact": "contact",
           "Nurture": "not_now", "Disqualified": "disqualified"}
 ORDER = ("qualified", "open", "contact", "not_now", "disqualified")
@@ -68,7 +70,8 @@ def funnel(rows):
     deals_by_email, deals_by_name = collections.defaultdict(list), collections.defaultdict(list)
     touches = newest("Mktg#05 Multi-Attrib Opportunities-*.xls")
     if touches:
-        for t in table(touches[-1]):
+        # every campaign-touch export, since the 22 Nov 2026 one only covers deals from 3 Nov (frozen exports, 23 Nov 2026)
+        for t in [t for f in touches for t in table(f)]:
             d = date_of(t.get("Opportunity: Created Date"))
             if d and t.get("Email"):
                 deals_by_email[t["Email"].lower()].append(d)
@@ -100,6 +103,21 @@ def main():
     rows = [[unescape(re.sub(r"<[^>]+>", "", c)).strip() for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", r, re.S)]
             for r in re.findall(r"<tr>(.*?)</tr>", text, re.S)]
     head, rows = rows[0], [dict(zip(rows[0], r)) for r in rows[1:]]
+    exported = re.search(r"(\d{4}-\d{2}-\d{2})-\d{2}-\d{2}-\d{2}\.xls$", path).group(1)
+    source = "Salesforce campaign DG-Demo Requests, Lead Status"
+    # From 23 Nov 2026 (Purav, after David asked to rely on HubSpot): the campaign's members come from HubSpot's synced
+    # Salesforce campaign members, which matched David's export person for person (56). The export is the fallback.
+    if HUBSPOT_MEMBERS.exists():
+        snap = json.loads(HUBSPOT_MEMBERS.read_text())
+        hs = [m for m in snap["members"] if (m.get("campaignid") or "")[:15] == DEMO_CAMPAIGN_ID[:15]]
+        if hs:
+            rows = [{"Member Type": m.get("type") or "", "Lead/Contact Status": m.get("lead_contact_status__c") or "",
+                     "X-Factor": m.get("x_factor__c") or "", "Email": m.get("email") or "",
+                     "First Name": m.get("firstname") or "", "Last Name": m.get("lastname") or "",
+                     "Member First Associated Date": dt.date.fromisoformat(m["added_to_campaign"]).strftime("%m/%d/%Y")}
+                    for m in hs if m.get("added_to_campaign")]
+            head = list(rows[0])
+            exported, source = snap["pulled"], "Salesforce campaign DG-Demo Requests as synced to HubSpot, Lead Status"
     status = lambda r: "Contact" if r["Member Type"] == "Contact" else r["Lead/Contact Status"]
     unknown = {status(r) for r in rows} - set(GROUPS)
     if unknown:   # a new Lead Status needs a group before the page can show it
@@ -118,9 +136,8 @@ def main():
         if xf(r) in X_FACTORS:
             days[d][xf(r)] += 1
         statuses[status(r)] += 1
-    exported = re.search(r"(\d{4}-\d{2}-\d{2})-\d{2}-\d{2}-\d{2}\.xls$", path).group(1)
     OUT.write_text(json.dumps({
-        "source": "Salesforce campaign DG-Demo Requests, Lead Status",
+        "source": source,
         "exported": exported, "start_date": min(days), "end_date": (dt.date.fromisoformat(exported) - dt.timedelta(days=1)).isoformat(),
         "statuses": dict(statuses.most_common()),
         "has_x_factor": "X-Factor" in head,

@@ -1,0 +1,40 @@
+name: Monday update check
+
+# GitHub skips or delays scheduled runs when it's busy: it dropped both Monday update runs on 23 Nov 2026.
+# Every Monday at 13:17 India time this checks whether today's update has saved its numbers. If it hasn't, it posts one
+# line to #core-marketing-team so the team knows the page still shows last week (agreed 23 Nov 2026). It changes nothing.
+on:
+  schedule:
+    - cron: "47 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50
+      - name: Warn in Slack if today's update hasn't run
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          today=$(date -u +%Y-%m-%d)
+          if git log --since="${today}T00:00:00Z" --format=%s | grep -qx "Update numbers ${today}"; then
+            echo "Today's update ran. Nothing to post."
+            exit 0
+          fi
+          python3 -m pip install -q requests
+          python3 - <<'PY'
+          import os, re, sys, requests
+          found = re.search(r"https://hooks\.slack\.com/services/[A-Za-z0-9/_-]+", os.environ.get("SLACK_WEBHOOK_URL") or "")
+          if not found:
+              sys.exit("SLACK_WEBHOOK_URL doesn't contain a Slack webhook address, so nothing was posted.")
+          text = ("The Monday dashboard update hasn't run yet today. GitHub skipped or delayed it, "
+                  "so the dashboard still shows last week's numbers.")
+          r = requests.post(found.group(0), json={"text": text}, timeout=30)
+          print("Posted the warning." if r.status_code == 200 else f"Slack returned {r.status_code}.")
+          PY

@@ -10,13 +10,13 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Pause or redirect the LinkedIn Gartner ad.
 - [ ] Copado page: add a switching section and a demo button.
 - [ ] Fix blogs showing up twice on Google, with and without "/" at the end.
-- [ ] Waiting on David and Yusra: HubSpot bot filtering, and connecting Luma.
+- [ ] Waiting on Yusra: HubSpot bot filtering, and connecting Luma.
 - [ ] Fix Notion permission so I can create the read-only connection.
 - [ ] Every Monday: ask Claude Code to write the Summary takeaways.
-- [ ] Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot.
 - [ ] Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform), which both Opsera and Kumar posted. It needs a redirect on the website.
 - [ ] Tag Kumar's "Visit my website" button.
-- [ ] Add "How did you hear about us" to the demo form (David).
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Add "How did you hear about us" to the demo form (David).
 - [ ] Add redirects for old links now showing Page not found. Each address, then the live page it should go to (checked 28 Oct 2026):
   - /resources/whitepapers to /resources
   - /resources/guides to /resources
@@ -33,10 +33,10 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 ## Dashboard
 
-- [ ] Influenced vs sourced pipeline, after syncing with David.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Influenced vs sourced pipeline, after syncing with David.
 - [ ] All pipeline: sourced, influenced and sales only.
-- [ ] Confirm with David: SDR outreach campaigns count as marketing or sales.
-- [ ] Ask David for event campaign members with meeting set dates, and campaign members with first associated dates.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Confirm with David: SDR outreach campaigns count as marketing or sales.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David for event campaign members with meeting set dates, and campaign members with first associated dates.
 - [ ] Talk to Grover about fixing the Salesforce rule for Primary Campaign Source.
 - [ ] Update Kumar's LinkedIn export every 2 weeks.
 - [x] 17 Nov: the website visits goal counts all visits, not visits without robots (Purav). The Team metrics tile says so. The exec "Website visitors" card stays without email robots, so the 2 differ: 6,641 against 6,154 for 1 to 15 Nov.
@@ -72,12 +72,10 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Content scorecard tab.
 - [x] Download button on every table.
 - [x] Monday Slack post with the top numbers and the dashboard link, in #core-marketing-team.
-- [ ] When David sends a new "DG-Demo Requests" export: save it to Desktop/Data/salesforce-exports and run `.venv/bin/python scripts/build_demo_requests.py`. It has X-Factor since the 5 Nov export.
-- [ ] David's Salesforce exports now come from Drive folder 1sZj8gazMtBLyhG0RfoMP22QwOqIvlOGw (from 9 Nov). Save them to Desktop/Data/salesforce-exports, then run build_salesforce_pipeline.py and build_demo_requests.py.
-- [ ] Ask David for a new "Mktg#05 Multi-Attrib Opportunities" export. The 2 Nov one has no campaign touches for the 8 deals created 3 to 6 Nov, and it carries half of Q3 influenced ($500,000 of $1.0M).
-- [ ] Ask David: the 9 Nov "02a Campaigns with Meetings (members)" has 415 rows against 809 on 27 Oct (it now filters on meeting date). The older export fills the gap for now. It isn't a full member list: Flutter, Tokenomics and GitHub Universe 2026 have no rows, and Gartner Xpo has 1.
-- [ ] Ask David for fresh member exports for Flutter (the 5 Nov one has Attended, Approved and Waitlisted only: 211 against 507 registered on Luma), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).
-- [ ] Ask David whether April deals from "Current Customer Expansion", "All Database" and partner campaigns belong under marketing. With lost deals counted, April shows 13 sourced deals ($1.34M) on the Pipeline tab.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David for a new "Mktg#05 Multi-Attrib Opportunities" export. The 2 Nov one has no campaign touches for the 8 deals created 3 to 6 Nov, and it carries half of Q3 influenced ($500,000 of $1.0M).
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David: the 9 Nov "02a Campaigns with Meetings (members)" has 415 rows against 809 on 27 Oct (it now filters on meeting date). The older export fills the gap for now. It isn't a full member list: Flutter, Tokenomics and GitHub Universe 2026 have no rows, and Gartner Xpo has 1.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David for fresh member exports for Flutter (the 5 Nov one has Attended, Approved and Waitlisted only: 211 against 507 registered on Luma), Gartner Xpo, GitHub Universe 2026 and Tokenomics (4 Nov).
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David whether April deals from "Current Customer Expansion", "All Database" and partner campaigns belong under marketing. With lost deals counted, April shows 13 sourced deals ($1.34M) on the Pipeline tab.
 - [ ] Fix the website buttons that link to localhost:3000 (events page and the roundtable webinar page): 10 clicks went to http://localhost:3000/events#notify and /events/roundtable-webinar.
 - [x] Microsoft Clarity check (due 13 Nov, done 17 Nov): Clarity records about 3 in 4 of Google Analytics' visits on weekdays (345, 382, 341 and 255 sessions against 505, 535, 436 and 351 visits) and under half at the weekend (95 against 202, 197 against 444). The heat map section says Clarity sees only part of the site.
 - [ ] AI visibility (top of the AEO tab, from 16 Nov): we have no Ahrefs API key (Purav, 16 Nov), so the AI answer checks are filled by hand. On 23 Nov, then every Monday, ask Claude Code to "refresh the AI answer checks". It fills data/ai_answers.json from Ahrefs Brand Radar, and the "N of the last 28 checks" counts show once 4 weeks of checks are in.
@@ -99,10 +97,10 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] GEroundtable counts (Purav, 17 Nov 2026): trade press is 5 on the Brand relaunch hub.
 - [x] 17 Nov: Content by type has a total line (blogs in the period and in the last full month), and Month view cards show this quarter so far and the last full quarter. 3 November blogs tagged. Counts checked against Contentful: Nov 4, Oct 14, Sep 22, Aug 1.
 - [ ] "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.
-- [ ] Waiting on David (17 Nov): the $30K Q3 deal (Closed Lost, created 9 Sep) also started with a demo request after an SDR meeting. Sourced or influenced? Influenced for now.
-- [ ] Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (17 Nov): the $30K Q3 deal (Closed Lost, created 9 Sep) also started with a demo request after an SDR meeting. Sourced or influenced? Influenced for now.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
 - [x] The $500,000 Q3 deal credited to Gartner Xpo: David confirmed on 18 Nov the contact was scanned at Gartner Xpo, so the Gartner credit stands (influenced, deal existed before the event).
-- [ ] Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Moved under the X2 rule, tell David (17 Nov): the FY27 Q2 deal of $150,000 created 10 Jun (primary source "Promoted to X2 Status", first campaign Demo Requests) is now sourced, not influenced. Q2 is sourced 12 deals $1,198,375 and influenced 7 deals $700,000; total unchanged at $1,898,375.
 - [x] CUSTOMER_NAMES and CUSTOMER_NAMES_PUBLIC_OK are set in GitHub (Purav, 18 Nov). The privacy check reads the full customer list on every run.
 - [ ] Decide how to clean old commits: they still hold a visitor email (17 Nov), customer portal addresses, customer search terms and 2 customer names in a script.
 - [x] Partner deal registrations ("DG-F27 - Partner Deal Reg"): David confirmed on 19 Nov partner deals are never marketing sourced. Not counted as marketing.
@@ -111,9 +109,13 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 19 Nov: David's 18 Nov opportunities and DG-Demo Requests exports loaded. The opportunities export has open, won and lost deals despite its name.
 - [x] 19 Nov, published: "From demo request to meeting to deal" cards on the Leads tab (against David's targets, 40 to 50% and 50%) and "Open deals by stage" on the Pipeline tab. Both from Salesforce exports; AE meetings and time in stage aren't in the exports, noted on the page. The section also says its count is from Salesforce, while the exec Demo requests card counts Google Analytics form fills.
 - [x] 19 Nov: any deal with a partner listed on it (from the Opportunity QA report) counts as marketing influenced, never sourced (Purav, from David). 4 deals moved; they show on the To review list.
+- [ ] Each Monday (from 30 Nov): refresh the HubSpot snapshots in ~/Desktop/Data/salesforce-exports/hubspot/ (deals, event members, demo request and meeting members) and hubspot-campaign-names.json through the HubSpot connection, then run build_salesforce_pipeline.py and build_demo_requests.py. David's last exports stay frozen for the 90-day rule, past meetings and partner flags (23 Nov). Show Purav only if a number breaks.
 - [x] 19 Nov: Salesforce campaign names now come from HubSpot's synced "Salesforce Campaigns" object (Purav). The 28 Oct list only fills gaps. Pipeline and meetings stay on David's exports.
-- [ ] Waiting on David (19 Nov): confirm the campaign member sync into HubSpot is complete. David (20 Nov): past campaign members only sync if he triggers it. HubSpot has 5,615 members and 30 with a meeting set, against 356 meeting rows in the 17 Nov export. Demo Requests members match (56), but HubSpot shows 13 with a meeting set against 10 in the export.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (19 Nov): confirm the campaign member sync into HubSpot is complete. David (20 Nov): past campaign members only sync if he triggers it. HubSpot has 5,615 members and 30 with a meeting set, against 356 meeting rows in the 17 Nov export. Demo Requests members match (56), but HubSpot shows 13 with a meeting set against 10 in the export.
 - [x] 20 Nov: David says the Salesforce opportunity ID now syncs to HubSpot deals, but only for deals created or changed since then. Pipeline stays on his exports (Purav).
-- [ ] Monday 23 Nov: count how many HubSpot deals carry the Salesforce opportunity ID (find the deal property first), against all HubSpot deals, and tell Purav. Change nothing on the dashboard.
+- [x] 23 Nov: 1,238 of 1,239 HubSpot deals carry the Salesforce opportunity ID (HubSpot's own field hs_salesforceopportunityid), all 219 created since 1 Apr. It was already there on 19 Nov; that day's check missed it. HubSpot also keeps the date each deal entered each stage. Pipeline stays on David's exports (Purav).
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. 23 Nov: David's 22 Nov "Mktg#05 Multi-Attrib Opportunities" only covers deals created from 3 Nov. Older touch exports now fill in the deals it leaves out (build_salesforce_pipeline.py); Q1 to Q4 unchanged. Ask David whether the report's date filter changed.
+- [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. 23 Nov: no DG-Demo Requests member since 2 Nov, in Salesforce (22 Nov export) and HubSpot (56 each), while the website logged demo form fills. Ask David whether new demo requests still reach the campaign.
+- [ ] 23 Nov weekly update on hold: Search Console's final numbers stop at 21 Nov, and GitHub dropped both Monday runs. Rerun when Google reaches 22 Nov.
 - [x] 18 Nov: the Content tab reads blogs from Contentful (published and live on opsera.ai), not the sitemap. November so far: 9 blogs.
 - [ ] Jeetu Patel response hub: add the link to Kumar's Unite.ai article ("When AI Agents Finish the Work, Who Owns What Comes Next") once Catapult gets it published, and drop "not published yet".
