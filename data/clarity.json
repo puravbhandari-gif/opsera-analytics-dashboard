@@ -22821,6 +22821,1423 @@
      "dead_sessions": 0
     }
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pulled_at": "2026-11-23T18:52+05:30",
+   "window": "the 24 hours before the pull",
+   "pages": [
+    {
+     "page": "/",
+     "sessions": 78,
+     "bot_sessions": 20,
+     "scroll_depth": 15.1,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 3,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/php2shell",
+     "sessions": 21,
+     "bot_sessions": 4,
+     "scroll_depth": 23.9,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/forge",
+     "sessions": 18,
+     "bot_sessions": 6,
+     "scroll_depth": 17.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/forge-ontology-ai-agents",
+     "sessions": 16,
+     "bot_sessions": 2,
+     "scroll_depth": 17.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/software-factory-pattern",
+     "sessions": 16,
+     "bot_sessions": 4,
+     "scroll_depth": 10.2,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/closing-the-security-gap-in-ai-modernization",
+     "sessions": 15,
+     "bot_sessions": 2,
+     "scroll_depth": 21.4,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/demo",
+     "sessions": 15,
+     "bot_sessions": 1,
+     "scroll_depth": 62.1,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/software-factory-model",
+     "sessions": 14,
+     "bot_sessions": 0,
+     "scroll_depth": 15.2,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 4,
+     "dead_sessions": 3
+    },
+    {
+     "page": "/about",
+     "sessions": 12,
+     "bot_sessions": 0,
+     "scroll_depth": 71.1,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 5,
+     "dead_sessions": 2
+    },
+    {
+     "page": "/blog/ai-sdlc",
+     "sessions": 9,
+     "bot_sessions": 0,
+     "scroll_depth": 13.6,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 5,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/blog/smart-model-selection",
+     "sessions": 9,
+     "bot_sessions": 1,
+     "scroll_depth": 5.2,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 1,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/blog/software-factory-benefits",
+     "sessions": 9,
+     "bot_sessions": 2,
+     "scroll_depth": 5.8,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog",
+     "sessions": 8,
+     "bot_sessions": 2,
+     "scroll_depth": 60.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/careers",
+     "sessions": 8,
+     "bot_sessions": 16,
+     "scroll_depth": 27.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources",
+     "sessions": 8,
+     "bot_sessions": 4,
+     "scroll_depth": 45.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/agentic-devops",
+     "sessions": 7,
+     "bot_sessions": 0,
+     "scroll_depth": 49.2,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 5,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/resources/white-papers/tokenomics-the-currency-of-enterprise-ai",
+     "sessions": 6,
+     "bot_sessions": 1,
+     "scroll_depth": 50.9,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/claude-code-alternative",
+     "sessions": 5,
+     "bot_sessions": 0,
+     "scroll_depth": 16.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/snowflake-to-databricks-migration",
+     "sessions": 5,
+     "bot_sessions": 0,
+     "scroll_depth": 23.8,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/customer-stories",
+     "sessions": 5,
+     "bot_sessions": 0,
+     "scroll_depth": 28.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/airbnb-agentic-coding-story",
+     "sessions": 4,
+     "bot_sessions": 0,
+     "scroll_depth": 52.2,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/what-is-agentic-devops",
+     "sessions": 4,
+     "bot_sessions": 0,
+     "scroll_depth": 74.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 1,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/blog/all-you-need-to-know-about-ci-cd-pipeline",
+     "sessions": 3,
+     "bot_sessions": 1,
+     "scroll_depth": 13.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/spec-driven-development",
+     "sessions": 3,
+     "bot_sessions": 0,
+     "scroll_depth": 61.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 3,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-harness",
+     "sessions": 3,
+     "bot_sessions": 0,
+     "scroll_depth": 53.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 4,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/salesforce-devops",
+     "sessions": 3,
+     "bot_sessions": 0,
+     "scroll_depth": 13.8,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 41.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/cobol-modernization",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 50.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/devsecops-tools",
+     "sessions": 2,
+     "bot_sessions": 1,
+     "scroll_depth": 44.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/factory-ai-alternatives",
+     "sessions": 2,
+     "bot_sessions": 1,
+     "scroll_depth": 62.7,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/software-factory",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 47.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/software-factory-as-a-service",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 45.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 71.3,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+     "sessions": 2,
+     "bot_sessions": 2,
+     "scroll_depth": 51.7,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 2,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/events",
+     "sessions": 2,
+     "bot_sessions": 2,
+     "scroll_depth": 37.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/forge/modernization/cobol-to-python",
+     "sessions": 2,
+     "bot_sessions": 0,
+     "scroll_depth": 61.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/partners",
+     "sessions": 2,
+     "bot_sessions": 1,
+     "scroll_depth": 97.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 3,
+     "dead_sessions": 2
+    },
+    {
+     "page": "/resources/comparison-guides",
+     "sessions": 2,
+     "bot_sessions": 1,
+     "scroll_depth": 100.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "sessions": 2,
+     "bot_sessions": 2,
+     "scroll_depth": 27.5,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/unified-insights",
+     "sessions": 2,
+     "bot_sessions": 4,
+     "scroll_depth": 43.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/agents",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 84.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
+     "sessions": 1,
+     "bot_sessions": 4,
+     "scroll_depth": 10.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/enterprise-benchmark",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 14.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 19.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/grok-brings-speed-opsera-brings-context-and-control",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 75.7,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/harness-engineering",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 64.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 1,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/blog/legacy-code-modernization",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 30.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/llms-are-probabilistic-ai-harness-makes-outcome-deterministic",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 99.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 8.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/opsera-io-blog-what-is-security-posture",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 74.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 1,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/blog/simplify-databricks-deployments-with-low-code-yaml-automation",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 14.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/software-factory-vs-dark-factory",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 23.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-outcomes",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 15.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/customer-stories/nortonlifelock",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 33.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/ecosystem/servicenow-itsm",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 38.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/forge/modernization",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 9.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/forge/modernization/cobol-to-csharp",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 68.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 3,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 20.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 12.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 14,
+     "dead_sessions": 1
+    },
+    {
+     "page": "/privacy",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 99.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/comparison-guides/factory-ai",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 14.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 100.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/devops-huddles/toolchain-automation-and-standardization",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 16.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/report",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 82.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/white-papers",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 60.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 35.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/white-papers/from-velocity-to-durable-value",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 34.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/solutions/data-and-analytics",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 37.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/solutions/dora-metrics",
+     "sessions": 1,
+     "bot_sessions": 1,
+     "scroll_depth": 100.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/terms-of-service",
+     "sessions": 1,
+     "bot_sessions": 0,
+     "scroll_depth": 2.0,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/=@",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/3-devops-predictions-for-2024",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/4-ways-to-automate-security-in-software-development",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/a-devops-journey-wisdom-from-the-special-operations-community",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins",
+     "sessions": 0,
+     "bot_sessions": 2,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/agentic-ai-security",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/ai-software-factory",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/automate-to-empower-how-toolchain-automation-can-empower-and-elevate-your-teams",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/best-devops-tools",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/cursor-alternatives",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/devops-for-data-ops-how-opsera-brings-order-to-databricks-software-delivery",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/devops-monitoring",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/devops-tool-chains-imperative-for-devops-success-choice-vs-standardization",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/dora-2025-report-ai-software-development",
+     "sessions": 0,
+     "bot_sessions": 3,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/dungeons-developers-which-generative-ai-hero-will-save-your-build",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/github-copilot-alternatives",
+     "sessions": 0,
+     "bot_sessions": 2,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/github-copilot-trends-and-measuring-impact",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/how-github-advanced-security-auto-remediation-transforms-appsec-and-developer-experience",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/the-high-speed-lane-cursor-opsera-agentic-devops",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/what-githubs-engineering-system-success-playbook-can-teach-you-about-scaling-and-securing-your-devops",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/devops-huddle",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/ecosystem/aqua",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/ecosystem/azure-aks",
+     "sessions": 0,
+     "bot_sessions": 10,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/ecosystem/gitlab-scm",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/ecosystem/jfrog",
+     "sessions": 0,
+     "bot_sessions": 9,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/copilot-cursor-claude-code-what-250k-developers-revealed",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/flutter-the-ai-sdlc-summit",
+     "sessions": 0,
+     "bot_sessions": 4,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/meet-the-opsera-appsec-agents-for-ai-builders",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/the-agentic-future-preparing-your-delivery-pipeline-for-2026",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/events/tokenomics-the-currency-of-enterprise-ai",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/forge/new-apps/healthcare-application-modernization",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/gartner",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/interactive-demo",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/jobs",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/knowledge-base/value-stream-management/flow-efficiency-metrics",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/newsroom",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/platform/continuous-orchestration",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/pricing",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-jellyfish",
+     "sessions": 0,
+     "bot_sessions": 2,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/devops-huddles/episode-17-top-5-salesforce-devops-challenges",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/2024-dora-webinar",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github-copilot",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/copilot-cursor-claude-code-what-250k-developers-revealed",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/devops-for-dataops-with-opsera",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/enforce-code-security-across-the-entire-software-development-lifecycle",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/high-performing-engineering-team-workshop",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/honeywells-software-modernization-and-github-transformation",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/how-workday-improved-their-security-posture-with-opsera-unified-devops-platform",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/leading-with-data-simplify-devops-and-elevate-devex",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/lessons-from-dora-2025-the-future-of-devops-powered-by-ai",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/linkedin-live-session-with-workday-aws-and-opsera",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/salesforce-devops-3-0-is-here",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/salesforce-devops-maturity-evolution",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/the-agentic-future-scaling-delivery-securing-code-and-driving-roi-in-2026",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/time-saved-productivity-and-software-development-loops",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/unleash-the-power-of-your-software",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/resources/webinars/unlock-devops-performance-success-with-dora-metrics",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/software-factory",
+     "sessions": 0,
+     "bot_sessions": 1,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    },
+    {
+     "page": "/webinar-salesforce-3-0",
+     "sessions": 0,
+     "bot_sessions": 2,
+     "scroll_depth": null,
+     "rage_clicks": 0,
+     "rage_sessions": 0,
+     "dead_clicks": 0,
+     "dead_sessions": 0
+    }
+   ]
   }
  ]
 }
