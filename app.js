@@ -285,7 +285,8 @@ function fillGtmControls() {
 }
 load("gtm_calendar.json").then((d) => {
   gtm.items = d.items;
-  gtm.source = `${d.source}, pulled ${dayYear(d.pulled_at.slice(0, 10))}`;
+  // frozen at 28 Oct 2026 (Purav, 23 Nov 2026): the Notion calendar isn't connected
+  gtm.source = `${d.source}, pulled ${dayYear(d.pulled_at.slice(0, 10))}${d.frozen ? ", frozen on that day" : ""}`;
   $("gtm-controls").hidden = false;
   fillGtmControls(); redrawDated();
 }).catch(() => {});   // no calendar file yet: the charts show no markers
@@ -2763,7 +2764,9 @@ function renderEvents(hub, leads, sf) {
 // Flutter 2026 on Luma: registered, confirmed and attended, and registrations by UTM source (added 9 Nov 2026)
 function renderLuma(l) {
   $("events-luma-panel").hidden = false;
-  $("events-luma-cards").innerHTML = card("Registered", num(l.registered), `${num(l.waitlist)} on the waitlist, ${num(l.declined)} declined`) +
+  // Luma's file is the number shown; Valentina reported a different total (Purav, 23 Nov 2026)
+  $("events-luma-cards").innerHTML = card("Registered", num(l.registered), `${num(l.waitlist)} on the waitlist, ${num(l.declined)} declined` +
+    (l.reported_registered && l.reported_registered !== l.registered ? `. Valentina reported ${num(l.reported_registered)}` : "")) +
     card("Confirmed", num(l.confirmed)) + card("Attended", num(l.attended), `${num(l.attended - l.attended_staff)} without Opsera staff`);
   $("events-luma-sources").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Where they registered from (UTM source)</th><th class="num" scope="col">Registered</th><th class="num" scope="col">Confirmed</th><th class="num" scope="col">Attended</th></tr></thead><tbody>${
     l.sources.map((s) => `<tr><td>${esc(s.source)}</td><td class="num">${num(s.registered)}</td><td class="num">${num(s.confirmed)}</td><td class="num">${num(s.attended)}</td></tr>`).join("")}</tbody></table></div>`;

@@ -49,7 +49,7 @@ def main():
     exported = re.search(r"(\d{4}-\d{2}-\d{2})-\d{2}-\d{2}-\d{2}\.csv$", path.name).group(1)
     OUT.write_text(json.dumps({
         "source": "Luma guest list for Flutter 2026, from Valentina", "exported": exported, "read": dt.date.today().isoformat(),
-        "registered": len(rows), "confirmed": status.get("approved", 0), "waitlist": status.get("pending_approval", 0),
+        "registered": len(rows), "reported_registered": 509,   # Valentina's own count; Luma's file is shown (Purav, 23 Nov 2026) "confirmed": status.get("approved", 0), "waitlist": status.get("pending_approval", 0),
         "declined": status.get("declined", 0), "attended": sum(checked(r) for r in rows),
         "attended_staff": sum(checked(r) and staff(r) for r in rows), "sources": sources,
     }, indent=1) + "\n")

@@ -80,12 +80,7 @@ jobs:
         run: python scripts/fetch_hubspot.py
 
       # Optional: if NOTION_TOKEN is missing or Notion fails, last week's calendar markers stay.
-      - name: Pull the GTM calendar from Notion (optional)
-        if: github.event_name != 'push'
-        continue-on-error: true
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-        run: python scripts/fetch_notion.py
+      # The GTM calendar from Notion is frozen at 28 Oct 2026 (Purav, 23 Nov 2026), so the Monday run no longer pulls it.
 
       # Optional: if APIFY_TOKEN is missing or Apify fails, only the estimate is skipped.
       # Everything else still updates, and the page shows the last estimate with its date.

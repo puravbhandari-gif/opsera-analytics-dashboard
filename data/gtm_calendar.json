@@ -202,5 +202,7 @@
    ],
    "date": "2026-12-10"
   }
- ]
+ ],
+ "frozen": true,
+ "frozen_note": "Frozen at 28 Oct 2026 (Purav, 23 Nov 2026): the Notion calendar isn't connected, so markers after that day don't show."
 }

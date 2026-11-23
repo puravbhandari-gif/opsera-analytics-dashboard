@@ -38,7 +38,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Confirm with David: SDR outreach campaigns count as marketing or sales.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David for event campaign members with meeting set dates, and campaign members with first associated dates.
 - [ ] Talk to Grover about fixing the Salesforce rule for Primary Campaign Source.
-- [ ] Update Kumar's LinkedIn export every 2 weeks.
+- [ ] Update Kumar's LinkedIn export every 2 weeks. Purav is sending one on 23 Nov (the last one stops at 30 Sep).
 - [x] 17 Nov: the website visits goal counts all visits, not visits without robots (Purav). The Team metrics tile says so. The exec "Website visitors" card stays without email robots, so the 2 differ: 6,641 against 6,154 for 1 to 15 Nov.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
@@ -51,11 +51,11 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Slack post for the week ending 15 Nov: posted on 17 Nov (run 44017397007) with Google's early figure for Sunday 15 Nov, a one-off Purav asked for before the staff meeting. The post and the Google search numbers on the dashboard say the figure is early and may change.
 - [ ] Replace the early 15 Nov Search Console number once Google finalizes it. Checked 17 Nov: Google's final numbers still stop at 14 Nov, so the early 53 clicks and the week's 637 stay. Check again on Wed 18 Nov: ask Claude Code to rerun the update without a Slack post, compare 637 with the final figure and tell Purav if it changed. Then empty EARLY_DAYS in scripts/fetch_data.py. Early numbers are not the rule: from Monday 23 Nov the Slack post uses final numbers only.
 - [x] Slack post for the week ending 8 Nov: posted on 10 Nov (run 42771216380), after the 9 Nov run stopped on purpose for missing Search Console data.
-- [ ] Flutter registered: Luma's file has 507 rows, Valentina reported 509. Ask Valentina which is right before quoting it.
+- [x] Flutter registered: the page shows Luma's 507, with a note saying Valentina reported 509 (Purav, 23 Nov).
 - [x] 17 Nov: Gilbert Martin is not Opsera staff (Purav). He is off the staff list in scripts/fetch_pr_media.py and his name is off the 2 PR rows from 2022. The DevOps.com row stays without a name; the SD Times row names Kumar only.
 - [ ] PR before 1 Jul: the weekly search covers 1 Jul onwards, so the Q2 PR count (8) comes from the agency list and manual rows only.
 - [ ] When Valentina sends a new Luma list for an event: save it to Desktop/Data and run `.venv/bin/python scripts/build_luma_flutter.py`.
-- [ ] When a new LinkedIn company export comes in: add its 3 files to convert_linkedin.py (like COMPANY_NOV2) and run it.
+- [ ] When a new LinkedIn company export comes in: add its 3 files to convert_linkedin.py (like COMPANY_NOV2) and run it. Purav sends the next one on Monday 30 Nov.
 - [ ] When new blogs go up: ask Claude Code to tag each one with a type in data/blog_types.json. Untagged blogs show as "Not tagged yet" on the Content tab.
 - [ ] Add publish dates to the guide pages (knowledge base and comparison guides), so they show in "Published this quarter".
 - [ ] When Kumar's newsletter launches, add subscribers, opens and clicks per issue to the dashboard.
@@ -90,7 +90,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 17 Nov: Desktop/Data/dashboard-brief-for-new-chat.md corrected: Brand relaunch, Flutter 2026, Tokenomics and PHP2Shell hub cards are live, and "Industry hot topics" is a blog type. GitHub Universe and Gartner Symposium cards are not built.
 
 - [x] 17 Nov: Susmitha's review of 16 Nov, published 17 Nov with the AI bot block (Purav: "publish everything together"). Team view sections are a row under the top buttons with scroll arrows (the dropdown is gone). Website visits leads with "All visits"; Engaged visits is the second option. Hub and spoke spokes link to the real piece where we hold the address (campaign_hubs.json: link for 1 piece, links for several). Pipeline cards and the exec pipeline card say "None yet" in words and show the last full quarter when a period has no marketing deals.
-- [ ] Hub spokes with no address, for Purav to fill. Brand relaunch: customer email, Insights relaunch press release. Flutter 2026: fireside chat, Luma registration, invite emails, campaign links, paid and partner promotion. Tokenomics: whitepaper, emails, campaign links, HubSpot list. PHP2Shell: one-pager, 2 brand LinkedIn posts, team LinkedIn posts, GitHub Universe email and booth, Catapult pitch, Forbes byline.
+- [x] Hub spokes with no address stay as they are (Purav, 23 Nov). Brand relaunch: customer email, Insights relaunch press release. Flutter 2026: fireside chat, Luma registration, invite emails, campaign links, paid and partner promotion. Tokenomics: whitepaper, emails, campaign links, HubSpot list. PHP2Shell: one-pager, 2 brand LinkedIn posts, team LinkedIn posts, GitHub Universe email and booth, Catapult pitch, Forbes byline.
 - [x] LinkedIn exports 18 Nov: company page now to 16 Nov, Kumar's profile to 18 Nov (18 Nov still being counted). Next company export from 17 Nov, Kumar's from 18 Nov.
 - [x] 17 Nov, Purav's decisions: both YouTube videos linked on the hubs (Tokenomics recording, PHP2Shell video). Kumar's PHP2Shell post is 17 reactions and the Flutter brand posts 22,563 times seen, both checked 17 Nov. The Pipeline tab and the exec pipeline card say the campaign export stops at 2 Nov when the period runs past it (the line goes away by itself when a newer export arrives).
 - [x] Team metrics is back in the sections row (Purav, 17 Nov, later); #team opens it again. Goals and numbers for the other 7 people are still to come.
@@ -109,6 +109,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 19 Nov: David's 18 Nov opportunities and DG-Demo Requests exports loaded. The opportunities export has open, won and lost deals despite its name.
 - [x] 19 Nov, published: "From demo request to meeting to deal" cards on the Leads tab (against David's targets, 40 to 50% and 50%) and "Open deals by stage" on the Pipeline tab. Both from Salesforce exports; AE meetings and time in stage aren't in the exports, noted on the page. The section also says its count is from Salesforce, while the exec Demo requests card counts Google Analytics form fills.
 - [x] 19 Nov: any deal with a partner listed on it (from the Opportunity QA report) counts as marketing influenced, never sourced (Purav, from David). 4 deals moved; they show on the To review list.
+- [x] GTM calendar markers frozen at 28 Oct; the Monday run no longer pulls Notion (Purav, 23 Nov).
 - [ ] Each Monday (from 30 Nov): refresh the HubSpot snapshots in ~/Desktop/Data/salesforce-exports/hubspot/ (deals, event members, demo request and meeting members) and hubspot-campaign-names.json through the HubSpot connection, then run build_salesforce_pipeline.py and build_demo_requests.py. David's last exports stay frozen for the 90-day rule, past meetings and partner flags (23 Nov). Show Purav only if a number breaks.
 - [x] 19 Nov: Salesforce campaign names now come from HubSpot's synced "Salesforce Campaigns" object (Purav). The 28 Oct list only fills gaps. Pipeline and meetings stay on David's exports.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (19 Nov): confirm the campaign member sync into HubSpot is complete. David (20 Nov): past campaign members only sync if he triggers it. HubSpot has 5,615 members and 30 with a meeting set, against 356 meeting rows in the 17 Nov export. Demo Requests members match (56), but HubSpot shows 13 with a meeting set against 10 in the export.
