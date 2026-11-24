@@ -2,11 +2,41 @@
  "source": "Contentful for blogs (published and live on opsera.ai), the opsera.ai sitemap with each page's own publish date for other pages, and YouTube Analytics for public videos",
  "blogs_not_live": 0,
  "start_date": "2026-07-01",
- "checked": "2026-11-18",
- "youtube_pulled_at": "2026-11-17T10:01+05:30",
+ "checked": "2026-11-24",
+ "youtube_pulled_at": "2026-11-24T10:45+05:30",
  "pages_checked": 81,
  "pages_without_date": 5,
  "items": [
+  {
+   "date": "2026-11-23",
+   "type": "White paper",
+   "title": "Tokenomics: The Currency of Enterprise AI",
+   "link": "https://opsera.ai/resources/white-papers/tokenomics-the-currency-of-enterprise-ai"
+  },
+  {
+   "date": "2026-11-19",
+   "type": "YouTube video",
+   "title": "Kumar Chivukula on the AI SDLC at GitHub Universe 2026",
+   "link": "https://www.youtube.com/watch?v=k1gbs62f0F0"
+  },
+  {
+   "date": "2026-11-19",
+   "type": "Blog",
+   "title": "Jurassic Park Wasn't Ready for Smart Dinosaurs. Is Your Enterprise Ready for Smart Agents?",
+   "link": "https://opsera.ai/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents"
+  },
+  {
+   "date": "2026-11-19",
+   "type": "Blog",
+   "title": "Between 10% and 10x: What Airbnb's Agentic Coding Story Teaches Us",
+   "link": "https://opsera.ai/blog/airbnb-agentic-coding-story"
+  },
+  {
+   "date": "2026-11-19",
+   "type": "YouTube video",
+   "title": "AI SDLC at Belcorp: Venkat Gopalan on the Software Factory and Forge",
+   "link": "https://www.youtube.com/watch?v=oUUdobK5AkI"
+  },
   {
    "date": "2026-11-17",
    "type": "Blog",
@@ -24,6 +54,12 @@
    "type": "Blog",
    "title": "Legacy Modernization: From One-Time Migration to Outcome-Driven Program",
    "link": "https://opsera.ai/blog/legacy-application-modernization"
+  },
+  {
+   "date": "2026-11-17",
+   "type": "Blog",
+   "title": "LLMs Are Probabilistic. The AI-Harness Makes the Outcome Deterministic.",
+   "link": "https://opsera.ai/blog/llms-are-probabilistic-ai-harness-makes-outcome-deterministic"
   },
   {
    "date": "2026-11-17",
@@ -336,12 +372,6 @@
    "type": "YouTube video",
    "title": "CI/CD Pipeline Parameters: Reuse One Pipeline Across Dev, QA, Staging and Production",
    "link": "https://www.youtube.com/watch?v=qLjkP1puaP4"
-  },
-  {
-   "date": "2026-07-29",
-   "type": "Blog",
-   "title": "Jurassic Park Wasn't Ready for Smart Dinosaurs. Is Your Enterprise Ready for Smart Agents?",
-   "link": "https://opsera.ai/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents"
   },
   {
    "date": "2026-07-28",

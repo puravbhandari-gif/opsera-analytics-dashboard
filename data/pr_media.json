@@ -1,8 +1,20 @@
 {
  "source": "Google News and Google search read with Apify, our newsroom, and PR agency lists",
  "start_date": "2026-07-01",
- "checked": "2026-11-17",
+ "checked": "2026-11-24",
  "items": [
+  {
+   "date": "2026-11-17",
+   "outlet": "Yahoo Finance",
+   "title": "Opsera Expands Forge to Help Enterprises Understand and Secure Legacy Applications as AI Accelerates Modernization",
+   "link": "https://finance.yahoo.com/technology/ai/articles/opsera-expands-forge-help-enterprises-144000898.html",
+   "type": "Press release",
+   "topic": "Forge",
+   "quoted": "Vishnu Vasudevan",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
   {
    "date": "2026-11-17",
    "outlet": "Unite.AI",
@@ -13,6 +25,30 @@
    "quoted": "",
    "placed_by": "",
    "found_by": "Checked by hand"
+  },
+  {
+   "date": "2026-11-17",
+   "outlet": "SD Times",
+   "title": "Opsera Expands Forge to Help Enterprises Understand and Secure Legacy Applications as AI Accelerates Modernization",
+   "link": "https://sdtimes.com/software-modernization/opsera-expands-forge-to-help-enterprises-understand-and-secure-legacy-applications-as-ai-accelerates-modernization/",
+   "type": "Press release",
+   "topic": "Forge",
+   "quoted": "Vishnu Vasudevan",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
+  {
+   "date": "2026-11-17",
+   "outlet": "PR Newswire",
+   "title": "Opsera Expands Forge to Help Enterprises Understand and Secure Legacy Applications as AI Accelerates Modernization",
+   "link": "https://www.prnewswire.com/news-releases/opsera-expands-forge-to-help-enterprises-understand-and-secure-legacy-applications-as-ai-accelerates-modernization-302942305.html",
+   "type": "Press release",
+   "topic": "Forge",
+   "quoted": "Vishnu Vasudevan",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-11-15",
@@ -392,6 +428,18 @@
    "found_by": "Apify (saved results)",
    "placed_by": "",
    "topic": "Other"
+  },
+  {
+   "date": "2026-10-03",
+   "outlet": "AI by Aakash",
+   "title": "OpenAI Dots Review: How It Stacks Up to Grok Bot",
+   "link": "https://www.aibyaakash.com/p/dots",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-02",

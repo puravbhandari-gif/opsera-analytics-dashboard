@@ -1,9 +1,9 @@
 {
- "written_on": "2026-11-17",
+ "written_on": "2026-11-24",
  "views": {
   "week": {
-   "period": "9 to 15 Nov 2026",
-   "period_before": "2 to 8 Nov 2026",
+   "period": "16 to 22 Nov 2026",
+   "period_before": "9 to 15 Nov 2026",
    "areas": [
     {
      "key": "pipeline",
@@ -11,12 +11,12 @@
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
      "note": null,
-     "period": "2 to 8 Nov 2026",
-     "period_before": "26 Oct to 1 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": false,
      "main": null,
      "why": null,
-     "do": "Link contacts to deals: 7 had no contact this week.",
+     "do": null,
      "trend": []
     },
     {
@@ -25,27 +25,23 @@
      "tab": "leads",
      "source": "Google Analytics, form fills",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
       "key": "demo_requests",
       "label": "Demo requests",
-      "value": "5",
-      "cur": 5,
-      "prev": 1,
-      "before": "1",
-      "change_pct": 400.0,
-      "good": true,
+      "value": "2",
+      "cur": 2,
+      "prev": 5,
+      "before": "5",
+      "change_pct": -60.0,
+      "good": false,
       "min_change_pct": 15
      },
-     "why": "Event form fills fell to 6, down from 11.",
+     "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 4
@@ -65,6 +61,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 5
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2
       }
      ]
     },
@@ -123,27 +123,23 @@
      "tab": "visits",
      "source": "Google Analytics",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "2,703",
-      "cur": 2703,
-      "prev": 3145,
-      "before": "3,145",
-      "change_pct": -14.1,
-      "good": false,
+      "value": "9,627",
+      "cur": 9627,
+      "prev": 2703,
+      "before": "2,703",
+      "change_pct": 256.2,
+      "good": true,
       "min_change_pct": 10
      },
-     "why": "Unlabelled visits fell to 352, down from 834.",
+     "why": "Unlabelled visits jumped to 6,125, likely robots.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2848
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 2780
@@ -163,6 +159,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 2703
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 9627
       }
      ]
     },
@@ -171,7 +171,7 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": "15 Nov is Google's early figure and may change.",
+     "note": null,
      "period": "9 to 15 Nov 2026",
      "period_before": "2 to 8 Nov 2026",
      "notable": true,
@@ -221,27 +221,23 @@
      "tab": "aeo",
      "source": "Google Analytics, visits from AI tools",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "26",
-      "cur": 26,
-      "prev": 37,
-      "before": "37",
-      "change_pct": -29.7,
-      "good": false,
+      "value": "44",
+      "cur": 44,
+      "prev": 26,
+      "before": "26",
+      "change_pct": 69.2,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent 16 of the 26 AI visits.",
+     "why": "Gemini sent the most: 20 of 44.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 22
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 17
@@ -261,6 +257,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 26
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 44
       }
      ]
     },
@@ -270,48 +270,13 @@
      "tab": "campaigns",
      "source": "Google Analytics, tagged campaign links",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
-     "notable": true,
-     "main": {
-      "key": "campaign_visits",
-      "label": "Visits from tagged campaigns",
-      "value": "71",
-      "cur": 71,
-      "prev": 44,
-      "before": "44",
-      "change_pct": 61.4,
-      "good": true,
-      "min_change_pct": 15
-     },
-     "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
-     "do": "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
-     "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
-      {
-       "week": "12 to 18 Oct 2026",
-       "value": 32
-      },
-      {
-       "week": "19 to 25 Oct 2026",
-       "value": 323
-      },
-      {
-       "week": "26 Oct to 1 Nov 2026",
-       "value": 72
-      },
-      {
-       "week": "2 to 8 Nov 2026",
-       "value": 44
-      },
-      {
-       "week": "9 to 15 Nov 2026",
-       "value": 71
-      }
-     ]
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
+     "notable": false,
+     "main": null,
+     "why": null,
+     "do": null,
+     "trend": []
     },
     {
      "key": "events",
@@ -319,8 +284,8 @@
      "tab": "events",
      "source": "HubSpot and Salesforce event campaigns",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": false,
      "main": null,
      "why": null,
@@ -333,27 +298,23 @@
      "tab": "content",
      "source": "Google Analytics, landing pages",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "1,155",
-      "cur": 1155,
-      "prev": 1075,
-      "before": "1,075",
-      "change_pct": 7.4,
+      "value": "4,772",
+      "cur": 4772,
+      "prev": 1155,
+      "before": "1,155",
+      "change_pct": 313.2,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Claude Code Alternatives visits rose to 71, up from 47.",
-     "do": "Write more like Claude Code Alternatives: 27 of 71 engaged.",
+     "why": null,
+     "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 761
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 673
@@ -373,6 +334,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1155
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 4772
       }
      ]
     },
@@ -382,31 +347,23 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "26 Oct to 1 Nov 2026",
-     "period_before": "19 to 25 Oct 2026",
+     "period": "9 to 15 Nov 2026",
+     "period_before": "2 to 8 Nov 2026",
      "notable": true,
      "main": {
       "key": "times_seen",
       "label": "Times the company page's posts were seen",
-      "value": "4,805",
-      "cur": 4805,
-      "prev": 9112,
-      "before": "9,112",
-      "change_pct": -47.3,
+      "value": "1,834",
+      "cur": 1834,
+      "prev": 3637,
+      "before": "3,637",
+      "change_pct": -49.6,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Followers gained fell to 8, down from 32.",
-     "do": "Post more like 26 Oct: 1,244 views, next best 668.",
+     "why": null,
+     "do": null,
      "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 6029
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 13505
-      },
       {
        "week": "5 to 11 Oct 2026",
        "value": 8013
@@ -422,6 +379,14 @@
       {
        "week": "26 Oct to 1 Nov 2026",
        "value": 4805
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 3637
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 1834
       }
      ]
     },
@@ -431,46 +396,46 @@
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
      "note": null,
-     "period": "19 to 25 Oct 2026",
-     "period_before": "12 to 18 Oct 2026",
+     "period": "9 to 15 Nov 2026",
+     "period_before": "2 to 8 Nov 2026",
      "notable": true,
      "main": {
-      "key": "engagements",
-      "label": "Engagements on Kumar's posts",
-      "value": "125",
-      "cur": 125,
-      "prev": 151,
-      "before": "151",
-      "change_pct": -17.2,
-      "good": false,
+      "key": "followers_gained",
+      "label": "Followers Kumar gained",
+      "value": "24",
+      "cur": 24,
+      "prev": 19,
+      "before": "19",
+      "change_pct": 26.3,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": "Kumar gained 37 followers, down from 51.",
+     "why": null,
      "do": null,
      "trend": [
       {
-       "week": "14 to 20 Sep 2026",
-       "value": 188
-      },
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 144
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 134
-      },
-      {
        "week": "5 to 11 Oct 2026",
-       "value": 100
+       "value": 55
       },
       {
        "week": "12 to 18 Oct 2026",
-       "value": 151
+       "value": 51
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 125
+       "value": 37
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 33
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 19
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 24
       }
      ]
     },
@@ -480,27 +445,23 @@
      "tab": "youtube",
      "source": "YouTube Analytics",
      "note": null,
-     "period": "2 to 8 Nov 2026",
-     "period_before": "26 Oct to 1 Nov 2026",
+     "period": "9 to 15 Nov 2026",
+     "period_before": "2 to 8 Nov 2026",
      "notable": true,
      "main": {
       "key": "long_video_views",
       "label": "Long video views",
-      "value": "125",
-      "cur": 125,
-      "prev": 82,
-      "before": "82",
-      "change_pct": 52.4,
+      "value": "163",
+      "cur": 163,
+      "prev": 125,
+      "before": "125",
+      "change_pct": 30.4,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Viewers watched 84 minutes of long videos.",
+     "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 82
-      },
       {
        "week": "5 to 11 Oct 2026",
        "value": 127
@@ -520,71 +481,62 @@
       {
        "week": "2 to 8 Nov 2026",
        "value": 125
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 163
       }
      ]
     }
    ],
-   "by_claude": true,
+   "by_claude": false,
    "boxes": {
     "well": [
-     "Demo requests rose to 5, up from 1.",
-     "Google search clicks grew 25.1% to 637.",
-     "Campaign visits grew 61.4% to 71."
+     "Content page visits up 313.2%",
+     "Visits without email robots up 256.2%",
+     "New marketing contacts up 150%"
     ],
     "attention": [
-     "Engaged visits fell 21.0% to 696.",
-     "Visits from other websites fell to 84, down from 211.",
-     "AI tool visits fell 29.7% to 26."
+     "Demo requests down 60%",
+     "Times the company page's posts were seen down 49.6%"
     ],
-    "do": [
-     "Write more like Claude Code Alternatives: 27 of 71 engaged.",
-     "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
-     "Link contacts to deals: 7 had no contact this week."
-    ]
+    "do": []
    }
   },
   "month": {
-   "period": "1 to 15 Nov 2026",
-   "period_before": "1 to 15 Oct 2026",
+   "period": "1 to 22 Nov 2026",
+   "period_before": "1 to 22 Oct 2026",
    "areas": [
     {
      "key": "pipeline",
      "title": "Pipeline",
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
-     "note": "November has only 8 days so far, so this shows the last full month.",
-     "period": "1 to 31 Oct 2026",
-     "period_before": "1 to 30 Sep 2026",
+     "note": null,
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "sourced_deals",
       "label": "Marketing sourced deals (estimate)",
-      "value": "3",
-      "cur": 3,
-      "prev": 1,
-      "before": "1",
-      "change_pct": 200.0,
-      "good": true,
+      "value": "2",
+      "cur": 2,
+      "prev": 8,
+      "before": "8",
+      "change_pct": -75.0,
+      "good": false,
       "min_change_pct": 15
      },
-     "why": "Their pipeline came to $200,000, down from $588,000.",
-     "do": "Link contacts to deals: 20 had no contact in October.",
+     "why": null,
+     "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 1
-      },
-      {
-       "week": "5 to 11 Oct 2026",
+       "week": "12 to 18 Oct 2026",
        "value": 2
       },
       {
-       "week": "12 to 18 Oct 2026",
-       "value": 0
-      },
-      {
        "week": "19 to 25 Oct 2026",
-       "value": 0
+       "value": 1
       },
       {
        "week": "26 Oct to 1 Nov 2026",
@@ -592,6 +544,14 @@
       },
       {
        "week": "2 to 8 Nov 2026",
+       "value": 2
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "16 to 22 Nov 2026",
        "value": 0
       }
      ]
@@ -602,27 +562,23 @@
      "tab": "leads",
      "source": "Google Analytics, form fills",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "demo_requests",
       "label": "Demo requests",
-      "value": "6",
-      "cur": 6,
-      "prev": 16,
-      "before": "16",
-      "change_pct": -62.5,
+      "value": "8",
+      "cur": 8,
+      "prev": 19,
+      "before": "19",
+      "change_pct": -57.9,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Demo requests fell 62.5% to 6, from 16.",
+     "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 4
@@ -642,6 +598,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 5
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2
       }
      ]
     },
@@ -700,46 +660,46 @@
      "tab": "visits",
      "source": "Google Analytics",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
-      "key": "engaged_visits",
-      "label": "Engaged visits",
-      "value": "1,638",
-      "cur": 1638,
-      "prev": 2278,
-      "before": "2,278",
-      "change_pct": -28.1,
-      "good": false,
+      "key": "visits_without_email_robots",
+      "label": "Visits without email robots",
+      "value": "15,781",
+      "cur": 15781,
+      "prev": 10057,
+      "before": "10,057",
+      "change_pct": 56.9,
+      "good": true,
       "min_change_pct": 10
      },
-     "why": "Engaged visits fell 28.1% to 1,638.",
+     "why": "Unlabelled visits jumped to 7,316, likely robots.",
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 1081
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 929
+       "value": 2780
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 886
+       "value": 3283
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 835
+       "value": 2995
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 881
+       "value": 3145
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 696
+       "value": 2703
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 9627
       }
      ]
     },
@@ -748,9 +708,9 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": "15 Nov is Google's early figure and may change.",
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "note": null,
+     "period": "1 to 21 Nov 2026",
+     "period_before": "1 to 21 Oct 2026",
      "notable": false,
      "main": null,
      "why": null,
@@ -763,27 +723,23 @@
      "tab": "aeo",
      "source": "Google Analytics, visits from AI tools",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "66",
-      "cur": 66,
-      "prev": 47,
-      "before": "47",
-      "change_pct": 40.4,
+      "value": "110",
+      "cur": 110,
+      "prev": 64,
+      "before": "64",
+      "change_pct": 71.9,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent 40 of the 66 AI visits.",
+     "why": "ChatGPT sent the most: 58 of 110.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 22
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 17
@@ -803,6 +759,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 26
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 44
       }
      ]
     },
@@ -812,27 +772,23 @@
      "tab": "campaigns",
      "source": "Google Analytics, tagged campaign links",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "123",
-      "cur": 123,
-      "prev": 92,
-      "before": "92",
-      "change_pct": 33.7,
-      "good": true,
+      "value": "197",
+      "cur": 197,
+      "prev": 396,
+      "before": "396",
+      "change_pct": -50.3,
+      "good": false,
       "min_change_pct": 15
      },
-     "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
+     "why": "harness-engineering brought the most: 29 visits, 13 of them engaged.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 32
@@ -852,6 +808,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 71
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 74
       }
      ]
     },
@@ -861,8 +821,8 @@
      "tab": "events",
      "source": "HubSpot and Salesforce event campaigns",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": false,
      "main": null,
      "why": null,
@@ -875,27 +835,23 @@
      "tab": "content",
      "source": "Google Analytics, landing pages",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "2,377",
-      "cur": 2377,
-      "prev": 1816,
-      "before": "1,816",
-      "change_pct": 30.9,
+      "value": "7,149",
+      "cur": 7149,
+      "prev": 2510,
+      "before": "2,510",
+      "change_pct": 184.8,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "COBOL Modernization visits rose to 113, up from 20.",
-     "do": "Fix the COBOL page: only 17 of 113 visits engaged.",
+     "why": null,
+     "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 761
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 673
@@ -915,6 +871,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1155
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 4772
       }
      ]
     },
@@ -923,32 +883,24 @@
      "title": "LinkedIn brand",
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
-     "note": "November has only 7 days so far, so this shows the last full month.",
-     "period": "1 to 31 Oct 2026",
-     "period_before": "1 to 30 Sep 2026",
+     "note": null,
+     "period": "1 to 16 Nov 2026",
+     "period_before": "1 to 16 Oct 2026",
      "notable": true,
      "main": {
       "key": "times_seen",
       "label": "Times the company page's posts were seen",
-      "value": "37,791",
-      "cur": 37791,
-      "prev": 17569,
-      "before": "17,569",
-      "change_pct": 115.1,
-      "good": true,
+      "value": "5,898",
+      "cur": 5898,
+      "prev": 23697,
+      "before": "23,697",
+      "change_pct": -75.1,
+      "good": false,
       "min_change_pct": 15
      },
-     "why": "Clicks grew 581.4% to 7,536.",
+     "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 6029
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 13505
-      },
       {
        "week": "5 to 11 Oct 2026",
        "value": 8013
@@ -964,6 +916,14 @@
       {
        "week": "26 Oct to 1 Nov 2026",
        "value": 4805
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 3637
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 1834
       }
      ]
     },
@@ -972,7 +932,7 @@
      "title": "LinkedIn exec",
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
-     "note": "Kumar's export ends on 27 Oct, so Month shows once it covers the whole month.",
+     "note": "Kumar's export ends on 18 Nov, so Month shows once it covers the whole month.",
      "period": null,
      "period_before": null,
      "notable": false,
@@ -986,33 +946,64 @@
      "title": "YouTube",
      "tab": "youtube",
      "source": "YouTube Analytics",
-     "note": "November has only 14 days so far, so this shows the last full month.",
-     "period": "1 to 31 Oct 2026",
-     "period_before": "1 to 30 Sep 2026",
-     "notable": false,
-     "main": null,
+     "note": null,
+     "period": "1 to 21 Nov 2026",
+     "period_before": "1 to 21 Oct 2026",
+     "notable": true,
+     "main": {
+      "key": "long_video_views",
+      "label": "Long video views",
+      "value": "490",
+      "cur": 490,
+      "prev": 274,
+      "before": "274",
+      "change_pct": 78.8,
+      "good": true,
+      "min_change_pct": 15
+     },
      "why": null,
      "do": null,
-     "trend": []
+     "trend": [
+      {
+       "week": "5 to 11 Oct 2026",
+       "value": 127
+      },
+      {
+       "week": "12 to 18 Oct 2026",
+       "value": 52
+      },
+      {
+       "week": "19 to 25 Oct 2026",
+       "value": 116
+      },
+      {
+       "week": "26 Oct to 1 Nov 2026",
+       "value": 82
+      },
+      {
+       "week": "2 to 8 Nov 2026",
+       "value": 125
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 163
+      }
+     ]
     }
    ],
-   "by_claude": true,
+   "by_claude": false,
    "boxes": {
     "well": [
-     "Content visits rose 30.9% to 2,377.",
-     "COBOL Modernization visits rose to 113, up from 20.",
-     "AI tools sent 66 visits, up from 47."
+     "Content page visits up 184.8%",
+     "Long video views up 78.8%",
+     "Visits from AI tools up 71.9%"
     ],
     "attention": [
-     "Demo requests fell 62.5% to 6, from 16.",
-     "New marketing contacts fell to 7, from 19.",
-     "Engaged visits fell 28.1% to 1,638."
+     "Times the company page's posts were seen down 75.1%",
+     "Marketing sourced deals (estimate) down 75%",
+     "New marketing contacts down 63.2%"
     ],
-    "do": [
-     "Write more like Claude Code Alternatives: 51 of 123 engaged.",
-     "Fix the COBOL page: only 17 of 113 visits engaged.",
-     "Link contacts to deals: 20 had no contact in October."
-    ]
+    "do": []
    }
   },
   "cq": {
@@ -1029,30 +1020,22 @@
      "period_before": "1 May to 31 Jul 2026",
      "notable": true,
      "main": {
-      "key": "sourced_deals",
-      "label": "Marketing sourced deals (estimate)",
-      "value": "6",
-      "cur": 6,
-      "prev": 11,
-      "before": "11",
-      "change_pct": -45.5,
-      "good": false,
+      "key": "sourced_value",
+      "label": "Marketing sourced pipeline (estimate)",
+      "value": "$2,093,000",
+      "cur": 2093000,
+      "prev": 1298375,
+      "before": "$1,298,375",
+      "change_pct": 61.2,
+      "good": true,
       "min_change_pct": 15
      },
      "why": null,
      "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 1
-      },
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 0
+       "value": 350000
       },
       {
        "week": "19 to 25 Oct 2026",
@@ -1064,6 +1047,14 @@
       },
       {
        "week": "2 to 8 Nov 2026",
+       "value": 150000
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "16 to 22 Nov 2026",
        "value": 0
       }
      ]
@@ -1092,10 +1083,6 @@
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 2
-      },
-      {
        "week": "12 to 18 Oct 2026",
        "value": 4
       },
@@ -1114,6 +1101,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 5
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2
       }
      ]
     },
@@ -1190,10 +1181,6 @@
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 2848
-      },
-      {
        "week": "12 to 18 Oct 2026",
        "value": 2780
       },
@@ -1212,6 +1199,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 2703
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 9627
       }
      ]
     },
@@ -1302,10 +1293,6 @@
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
-      {
        "week": "12 to 18 Oct 2026",
        "value": 32
       },
@@ -1324,6 +1311,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 71
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 74
       }
      ]
     },
@@ -1374,10 +1365,6 @@
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 761
-      },
-      {
        "week": "12 to 18 Oct 2026",
        "value": 673
       },
@@ -1396,6 +1383,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1155
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 4772
       }
      ]
     },
@@ -1419,7 +1410,7 @@
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
      "note": null,
-     "period": "1 Aug to 27 Oct 2026",
+     "period": "1 Aug to 31 Oct 2026",
      "period_before": null,
      "notable": false,
      "main": null,
@@ -1451,10 +1442,6 @@
      "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 2
-      },
-      {
        "week": "5 to 11 Oct 2026",
        "value": 1
       },
@@ -1473,6 +1460,10 @@
       {
        "week": "2 to 8 Nov 2026",
        "value": 3
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 0
       }
      ]
     }
@@ -1481,11 +1472,10 @@
    "boxes": {
     "well": [
      "Meetings booked with marketing contacts up 200%",
-     "Subscribers gained up 54.5%",
-     "Content page visits up 29.6%"
+     "Marketing sourced pipeline (estimate) up 61.2%",
+     "Subscribers gained up 54.5%"
     ],
     "attention": [
-     "Marketing sourced deals (estimate) down 45.5%",
      "Times Google showed our pages down 31.4%",
      "Visits from tagged campaigns down 26.5%"
     ],
@@ -1493,8 +1483,8 @@
    }
   },
   "quarter": {
-   "period": "16 Aug to 15 Nov 2026",
-   "period_before": "16 May to 15 Aug 2026",
+   "period": "23 Aug to 22 Nov 2026",
+   "period_before": "23 May to 22 Aug 2026",
    "areas": [
     {
      "key": "pipeline",
@@ -1502,34 +1492,26 @@
      "tab": "pipeline",
      "source": "Salesforce exports, marketing deals",
      "note": null,
-     "period": "9 Aug to 8 Nov 2026",
-     "period_before": "9 May to 8 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "sourced_value",
       "label": "Marketing sourced pipeline (estimate)",
-      "value": "$1,156,000",
-      "cur": 1156000,
-      "prev": 850000,
-      "before": "$850,000",
-      "change_pct": 36.0,
+      "value": "$1,893,000",
+      "cur": 1893000,
+      "prev": 1400000,
+      "before": "$1,400,000",
+      "change_pct": 35.2,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Influenced pipeline rose 21.2% to $1,030,000.",
-     "do": "Link contacts to deals: 63 had no contact in 3 months.",
+     "why": null,
+     "do": null,
      "trend": [
       {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 200000
-      },
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 0
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 0
+       "value": 350000
       },
       {
        "week": "19 to 25 Oct 2026",
@@ -1541,6 +1523,14 @@
       },
       {
        "week": "2 to 8 Nov 2026",
+       "value": 150000
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 0
+      },
+      {
+       "week": "16 to 22 Nov 2026",
        "value": 0
       }
      ]
@@ -1551,8 +1541,8 @@
      "tab": "leads",
      "source": "Google Analytics, form fills",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "demo_requests",
@@ -1565,13 +1555,9 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Event form fills rose to 127, up from 79.",
+     "why": "Event sign-ups: 126, up from 80.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 4
@@ -1591,6 +1577,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 5
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2
       }
      ]
     },
@@ -1649,27 +1639,23 @@
      "tab": "visits",
      "source": "Google Analytics",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "31,639",
-      "cur": 31639,
-      "prev": 24046,
-      "before": "24,046",
-      "change_pct": 31.6,
+      "value": "39,505",
+      "cur": 39505,
+      "prev": 24341,
+      "before": "24,341",
+      "change_pct": 62.3,
       "good": true,
       "min_change_pct": 10
      },
-     "why": "Unlabelled visits jumped to 2,891, likely robots.",
-     "do": "Filter out unlabelled visits, up from 583 to 2,891.",
+     "why": "Unlabelled visits jumped to 9,003, likely robots.",
+     "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 2848
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 2780
@@ -1689,6 +1675,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 2703
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 9627
       }
      ]
     },
@@ -1697,22 +1687,22 @@
      "title": "Google search",
      "tab": "search",
      "source": "Search Console",
-     "note": "15 Nov is Google's early figure and may change.",
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "note": null,
+     "period": "22 Aug to 21 Nov 2026",
+     "period_before": "22 May to 21 Aug 2026",
      "notable": true,
      "main": {
       "key": "times_shown",
       "label": "Times Google showed our pages",
-      "value": "1,574,390",
-      "cur": 1574390,
-      "prev": 3278319,
-      "before": "3,278,319",
-      "change_pct": -52.0,
+      "value": "1,486,781",
+      "cur": 1486781,
+      "prev": 3398551,
+      "before": "3,398,551",
+      "change_pct": -56.3,
       "good": false,
       "min_change_pct": 15
      },
-     "why": "Average spot slipped to 11.1, from 9.6.",
+     "why": null,
      "do": null,
      "trend": [
       {
@@ -1747,27 +1737,23 @@
      "tab": "aeo",
      "source": "Google Analytics, visits from AI tools",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "269",
-      "cur": 269,
-      "prev": 218,
-      "before": "218",
-      "change_pct": 23.4,
+      "value": "306",
+      "cur": 306,
+      "prev": 208,
+      "before": "208",
+      "change_pct": 47.1,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent 131 visits and Gemini 118.",
+     "why": "Visits from AI tools led to 2 demo form fills.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 22
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 17
@@ -1787,6 +1773,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 26
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 44
       }
      ]
     },
@@ -1796,27 +1786,23 @@
      "tab": "campaigns",
      "source": "Google Analytics, tagged campaign links",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "2,718",
-      "cur": 2718,
-      "prev": 2518,
-      "before": "2,518",
-      "change_pct": 7.9,
+      "value": "2,756",
+      "cur": 2756,
+      "prev": 2364,
+      "before": "2,364",
+      "change_pct": 16.6,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Tokenomics brought 1,834 visits, but only 247 engaged.",
+     "why": "DG-FY27-Q3-Tokenomics-Webinar brought the most: 1,834 visits, 247 of them engaged.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 32
@@ -1836,6 +1822,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 71
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 74
       }
      ]
     },
@@ -1845,11 +1835,20 @@
      "tab": "events",
      "source": "HubSpot and Salesforce event campaigns",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
-     "notable": false,
-     "main": null,
-     "why": "3 Flutter attendees booked a meeting after.",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
+     "notable": true,
+     "main": {
+      "key": "attended",
+      "label": "Flutter 2026: the AI-SDLC Summit: attended",
+      "value": "87",
+      "cur": 87,
+      "prev": null,
+      "before": null,
+      "change_pct": null,
+      "good": null
+     },
+     "why": "174 signed up. 3 had a meeting since.",
      "do": null,
      "trend": []
     },
@@ -1859,27 +1858,23 @@
      "tab": "content",
      "source": "Google Analytics, landing pages",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "23 Aug to 22 Nov 2026",
+     "period_before": "23 May to 22 Aug 2026",
      "notable": true,
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "9,479",
-      "cur": 9479,
-      "prev": 5985,
-      "before": "5,985",
-      "change_pct": 58.4,
+      "value": "13,878",
+      "cur": 13878,
+      "prev": 6080,
+      "before": "6,080",
+      "change_pct": 128.3,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Software Factory brought 482 visits, 167 engaged.",
-     "do": "Fix the PHP2Shell blog: 24 of 372 visits engaged.",
+     "why": null,
+     "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 761
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 673
@@ -1899,6 +1894,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1155
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 4772
       }
      ]
     },
@@ -1908,48 +1907,13 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "8 Aug to 7 Nov 2026",
+     "period": "17 Aug to 16 Nov 2026",
      "period_before": null,
-     "notable": true,
-     "main": {
-      "key": "times_seen",
-      "label": "Times the company page's posts were seen",
-      "value": "96,839",
-      "cur": 96839,
-      "prev": null,
-      "before": null,
-      "change_pct": null,
-      "good": null,
-      "min_change_pct": 15
-     },
-     "why": "The 1 Oct post was seen most: 5,745 times.",
-     "do": "Post more like 1 Oct: 5,745 views, next best 3,237.",
-     "trend": [
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 6029
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 13505
-      },
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 8013
-      },
-      {
-       "week": "12 to 18 Oct 2026",
-       "value": 4703
-      },
-      {
-       "week": "19 to 25 Oct 2026",
-       "value": 9112
-      },
-      {
-       "week": "26 Oct to 1 Nov 2026",
-       "value": 4805
-      }
-     ]
+     "notable": false,
+     "main": null,
+     "why": null,
+     "do": null,
+     "trend": []
     },
     {
      "key": "linkedin-exec",
@@ -1957,48 +1921,13 @@
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
      "note": null,
-     "period": "28 Jul to 27 Oct 2026",
+     "period": "19 Aug to 18 Nov 2026",
      "period_before": null,
-     "notable": true,
-     "main": {
-      "key": "followers_gained",
-      "label": "Followers Kumar gained",
-      "value": "574",
-      "cur": 574,
-      "prev": null,
-      "before": null,
-      "change_pct": null,
-      "good": null,
-      "min_change_pct": 15
-     },
-     "why": "Kumar gained 574 followers.",
+     "notable": false,
+     "main": null,
+     "why": null,
      "do": null,
-     "trend": [
-      {
-       "week": "14 to 20 Sep 2026",
-       "value": 82
-      },
-      {
-       "week": "21 to 27 Sep 2026",
-       "value": 46
-      },
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 60
-      },
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
-      {
-       "week": "12 to 18 Oct 2026",
-       "value": 51
-      },
-      {
-       "week": "19 to 25 Oct 2026",
-       "value": 37
-      }
-     ]
+     "trend": []
     },
     {
      "key": "youtube",
@@ -2006,27 +1935,23 @@
      "tab": "youtube",
      "source": "YouTube Analytics",
      "note": null,
-     "period": "15 Aug to 14 Nov 2026",
-     "period_before": "15 May to 14 Aug 2026",
+     "period": "22 Aug to 21 Nov 2026",
+     "period_before": "22 May to 21 Aug 2026",
      "notable": true,
      "main": {
       "key": "long_video_views",
       "label": "Long video views",
-      "value": "1,258",
-      "cur": 1258,
-      "prev": 995,
-      "before": "995",
-      "change_pct": 26.4,
+      "value": "1,415",
+      "cur": 1415,
+      "prev": 949,
+      "before": "949",
+      "change_pct": 49.1,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Subscribers gained rose to 19, up from 11.",
+     "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "28 Sep to 4 Oct 2026",
-       "value": 82
-      },
       {
        "week": "5 to 11 Oct 2026",
        "value": 127
@@ -2046,27 +1971,25 @@
       {
        "week": "2 to 8 Nov 2026",
        "value": 125
+      },
+      {
+       "week": "9 to 15 Nov 2026",
+       "value": 163
       }
      ]
     }
    ],
-   "by_claude": true,
+   "by_claude": false,
    "boxes": {
     "well": [
-     "Meetings booked rose to 20, up from 5.",
-     "Content visits grew 58.4% to 9,479.",
-     "Event form fills rose to 127, up from 79."
+     "Meetings booked with marketing contacts up 300%",
+     "Content page visits up 128.3%",
+     "Visits without email robots up 62.3%"
     ],
     "attention": [
-     "Google showed our pages 52.0% less often.",
-     "Unlabelled visits jumped to 2,891, likely robots.",
-     "Contact form fills fell to 19, down from 29."
+     "Times Google showed our pages down 56.3%"
     ],
-    "do": [
-     "Link contacts to deals: 63 had no contact in 3 months.",
-     "Filter out unlabelled visits, up from 583 to 2,891.",
-     "Fix the PHP2Shell blog: 24 of 372 visits engaged."
-    ]
+    "do": []
    }
   }
  }

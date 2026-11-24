@@ -105,3 +105,6 @@ period_start,period_end,period_not_finished,ai_tool,visits,engaged_visits,saw_de
 2026-11-09,2026-11-15,no,ChatGPT,16,8,2,0,0,0,0,0,0
 2026-11-09,2026-11-15,no,Gemini,9,4,0,0,0,0,0,0,0
 2026-11-09,2026-11-15,no,Perplexity,1,0,0,0,0,0,0,0,0
+2026-11-16,2026-11-22,no,ChatGPT,18,4,0,0,0,0,0,0,0
+2026-11-16,2026-11-22,no,Gemini,20,8,0,0,0,0,0,0,0
+2026-11-16,2026-11-22,no,Claude,6,3,0,0,0,0,0,0,0

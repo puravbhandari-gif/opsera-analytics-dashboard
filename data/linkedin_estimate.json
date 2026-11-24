@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-17T04:33+00:00",
+ "posts_pulled_at": "2026-11-24T05:18+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -540,8 +540,50 @@
   {
    "date": "2026-11-16",
    "group": "cant_tell",
-   "visits": 13,
-   "engaged": 8
+   "visits": 19,
+   "engaged": 12
+  },
+  {
+   "date": "2026-11-17",
+   "group": "cant_tell",
+   "visits": 22,
+   "engaged": 10
+  },
+  {
+   "date": "2026-11-18",
+   "group": "cant_tell",
+   "visits": 18,
+   "engaged": 7
+  },
+  {
+   "date": "2026-11-19",
+   "group": "cant_tell",
+   "visits": 12,
+   "engaged": 7
+  },
+  {
+   "date": "2026-11-20",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 3
+  },
+  {
+   "date": "2026-11-21",
+   "group": "cant_tell",
+   "visits": 2,
+   "engaged": 2
+  },
+  {
+   "date": "2026-11-22",
+   "group": "cant_tell",
+   "visits": 4,
+   "engaged": 2
+  },
+  {
+   "date": "2026-11-23",
+   "group": "cant_tell",
+   "visits": 8,
+   "engaged": 6
   }
  ],
  "matches": [
@@ -598,6 +640,21 @@
    "dates": [
     "2026-11-09",
     "2026-11-10"
+   ]
+  },
+  {
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "group": "cant_tell",
+   "visits": 14,
+   "engaged": 5,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-20"
    ]
   },
   {
@@ -851,10 +908,34 @@
    "date": "2026-11-13",
    "page": "/blog/context-engineering-ai-coding",
    "post": "https://www.linkedin.com/posts/opsera_most-ai-coding-tools-start-with-the-prompt-activity-7527057941418606593-9tJK"
+  },
+  {
+   "account": "company",
+   "date": "2026-11-17",
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "post": "https://www.linkedin.com/posts/opsera_closing-the-security-gap-in-ai-modernization-activity-7528512989235204096-5jV1"
+  },
+  {
+   "account": "company",
+   "date": "2026-11-17",
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "post": "https://www.linkedin.com/posts/opsera_closing-the-security-gap-in-ai-modernization-activity-7528512989235204096-5jV1"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-11-17",
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_closing-the-security-gap-in-ai-modernization-activity-7528514101765963777-swkl"
+  },
+  {
+   "account": "kumar",
+   "date": "2026-11-17",
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "post": "https://www.linkedin.com/posts/kumar-chivukula_closing-the-security-gap-in-ai-modernization-activity-7528514101765963777-swkl"
   }
  ],
- "untagged_total": 598,
+ "untagged_total": 678,
  "start_date": "2026-09-01",
- "end_date": "2026-11-16",
- "pulled_at": "2026-11-17T09:59+05:30"
+ "end_date": "2026-11-23",
+ "pulled_at": "2026-11-24T10:42+05:30"
 }

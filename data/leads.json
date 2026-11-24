@@ -1,18 +1,18 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-16",
- "pulled_at": "2026-11-17T09:59+05:30",
+ "end_date": "2026-11-23",
+ "pulled_at": "2026-11-24T10:42+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
  "lines": {
   "demo": {
    "label": "Demo requests",
-   "count": 78,
+   "count": 80,
    "pages": [
     {
      "page": "/demo",
-     "count": 78
+     "count": 80
     }
    ]
   },
@@ -88,15 +88,15 @@
   },
   "other": {
    "label": "Other forms",
-   "count": 294,
+   "count": 318,
    "pages": [
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "count": 102
+     "count": 104
     },
     {
      "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-     "count": 56
+     "count": 58
     },
     {
      "page": "/resources/white-papers/from-velocity-to-durable-value",
@@ -139,15 +139,35 @@
      "count": 3
     },
     {
+     "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+     "count": 3
+    },
+    {
      "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
      "count": 3
+    },
+    {
+     "page": "/partners",
+     "count": 3
+    },
+    {
+     "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+     "count": 3
+    },
+    {
+     "page": "/resources/webinars/leading-with-data-simplify-devops-and-elevate-devex",
+     "count": 2
+    },
+    {
+     "page": "/resources/webinars/unlock-devops-performance-success-with-dora-metrics",
+     "count": 2
     },
     {
      "page": "/resources/devops-huddles/episode-23-architecting-for-success-salesforce-devops-with-opsera",
      "count": 2
     },
     {
-     "page": "/resources/webinars/software-security-in-the-age-of-ai-opsera-and-lineaje-deliver-trusted-automated-solutions",
+     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
      "count": 2
     },
     {
@@ -155,11 +175,23 @@
      "count": 2
     },
     {
-     "page": "/partners",
+     "page": "/resources/webinars/high-performing-engineering-team-workshop",
      "count": 2
     },
     {
-     "page": "/resources/webinars/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+     "page": "/resources/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform",
+     "count": 2
+    },
+    {
+     "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+     "count": 2
+    },
+    {
+     "page": "/resources/webinars/devops-for-dataops-with-opsera",
+     "count": 2
+    },
+    {
+     "page": "/resources/white-papers/tokenomics-the-currency-of-enterprise-ai",
      "count": 2
     },
     {
@@ -191,10 +223,6 @@
      "count": 1
     },
     {
-     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
-     "count": 1
-    },
-    {
      "page": "/solutions/salesforce-devops-platform",
      "count": 1
     },
@@ -219,23 +247,11 @@
      "count": 1
     },
     {
-     "page": "/resources/webinars/high-performing-engineering-team-workshop",
-     "count": 1
-    },
-    {
-     "page": "/resources/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform",
-     "count": 1
-    },
-    {
      "page": "/resources/devops-huddles/episode-16-source-code-migration-made-easy",
      "count": 1
     },
     {
      "page": "/resources/devops-huddles/episode-17-top-5-salesforce-devops-challenges",
-     "count": 1
-    },
-    {
-     "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
      "count": 1
     },
     {
@@ -251,11 +267,31 @@
      "count": 1
     },
     {
-     "page": "/resources/webinars/devops-for-dataops-with-opsera",
+     "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
      "count": 1
     },
     {
-     "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+     "page": "/resources/webinars/2024-dora-webinar",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github-copilot",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/copilot-cursor-claude-code-what-250k-developers-revealed",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/honeywells-software-modernization-and-github-transformation",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/salesforce-devops-3-0-is-here",
+     "count": 1
+    },
+    {
+     "page": "/resources/webinars/the-agentic-future-scaling-delivery-securing-code-and-driving-roi-in-2026",
      "count": 1
     }
    ]
@@ -1701,6 +1737,46 @@
    "gartner_offer": 0,
    "events": 0,
    "other": 1
+  },
+  {
+   "date": "2026-11-17",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
+  },
+  {
+   "date": "2026-11-18",
+   "demo": 1,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 2
+  },
+  {
+   "date": "2026-11-21",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-11-22",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 1
+  },
+  {
+   "date": "2026-11-23",
+   "demo": 0,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 20
   }
  ],
  "removed_form_pages": [
@@ -2162,6 +2238,22 @@
    "insights": 0,
    "home": 0,
    "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-11-17",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
+   "none": 0
+  },
+  {
+   "date": "2026-11-18",
+   "forge": 0,
+   "insights": 0,
+   "home": 1,
+   "other": 0,
    "none": 0
   }
  ]

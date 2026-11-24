@@ -250,38 +250,53 @@ period_start,period_end,period_not_finished,campaign,visits,engaged_visits,form_
 2026-10-01,2026-10-31,no,the-agentic-future-scaling-delivery-securing-code-and,1,0,0,0
 2026-10-01,2026-10-31,no,top 1 miami,1,0,0,0
 2026-10-01,2026-10-31,no,transform-your-devops-strategy-with-hummingbird-ai-s,1,1,0,0
-2026-11-01,2026-11-15,yes,harness-engineering,19,7,0,0
-2026-11-01,2026-11-15,yes,43702534-DG-FY27-Gartner-MQ,12,7,0,0
-2026-11-01,2026-11-15,yes,change_impact_analysis_for_code,12,11,0,0
-2026-11-01,2026-11-15,yes,VIP_experiences,11,5,0,0
-2026-11-01,2026-11-15,yes,meta-ai-series,10,6,0,0
-2026-11-01,2026-11-15,yes,tool-comparison,8,0,0,0
-2026-11-01,2026-11-15,yes,kumar,6,5,0,0
-2026-11-01,2026-11-15,yes,16485134-Release Notes,5,0,0,0
-2026-11-01,2026-11-15,yes,16665947-DG-FY26-Q2-Deepview-Newsletter,4,0,0,0
-2026-11-01,2026-11-15,yes,brand-page,3,0,0,0
-2026-11-01,2026-11-15,yes,ontologies-series,3,3,0,0
-2026-11-01,2026-11-15,yes,Search-AgilevsDevops-2021-02-23,2,0,0,0
-2026-11-01,2026-11-15,yes,appdevprofile,2,0,0,0
-2026-11-01,2026-11-15,yes,best_ai_software_factories,2,1,0,0
-2026-11-01,2026-11-15,yes,influencer/,2,0,0,0
-2026-11-01,2026-11-15,yes,latest-ai-blockchain-crypto-trends-insights-and-news-headlines-for-july-4-2025,2,0,0,0
-2026-11-01,2026-11-15,yes,top 1 miami,2,0,0,0
-2026-11-01,2026-11-15,yes,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
-2026-11-01,2026-11-15,yes,36176271-DG-FY26-Q4-AI-BM-Report,1,0,0,0
-2026-11-01,2026-11-15,yes,36500047-DG-FY27-Q1-AI-Adoption-Webinar,1,0,0,0
-2026-11-01,2026-11-15,yes,39712174-DG-FY27-Q1-Agentic-Launch,1,0,0,0
-2026-11-01,2026-11-15,yes,53487406-DG-FY27-Q3-Event-Dreamforce,1,1,0,0
-2026-11-01,2026-11-15,yes,BuiltIn,1,1,0,0
-2026-11-01,2026-11-15,yes,Github Better Together,1,0,0,0
-2026-11-01,2026-11-15,yes,ai_news_stories,1,0,0,0
-2026-11-01,2026-11-15,yes,devops_huddle,1,1,0,0
-2026-11-01,2026-11-15,yes,external-news,1,0,0,0
-2026-11-01,2026-11-15,yes,google-brings-ai-to-assistant-and-pixel-8,1,0,0,0
-2026-11-01,2026-11-15,yes,influencer,1,0,0,0
-2026-11-01,2026-11-15,yes,listing_profile,1,0,0,0
-2026-11-01,2026-11-15,yes,php2shell,1,1,0,0
-2026-11-01,2026-11-15,yes,profile,1,1,0,0
-2026-11-01,2026-11-15,yes,pulse_article,1,0,0,0
-2026-11-01,2026-11-15,yes,top 1 ios,1,0,0,0
-2026-11-01,2026-11-15,yes,top 1 sanfrancisco,1,0,0,0
+2026-11-01,2026-11-22,yes,harness-engineering,29,13,0,0
+2026-11-01,2026-11-22,yes,43702534-DG-FY27-Gartner-MQ,18,9,0,0
+2026-11-01,2026-11-22,yes,forge-security-launch,17,5,0,0
+2026-11-01,2026-11-22,yes,kumar,14,10,0,0
+2026-11-01,2026-11-22,yes,change_impact_analysis_for_code,13,11,0,0
+2026-11-01,2026-11-22,yes,VIP_experiences,11,5,0,0
+2026-11-01,2026-11-22,yes,ontologies-series,11,10,0,0
+2026-11-01,2026-11-22,yes,meta-ai-series,10,6,0,0
+2026-11-01,2026-11-22,yes,tool-comparison,10,0,0,0
+2026-11-01,2026-11-22,yes,16485134-Release Notes,5,0,0,0
+2026-11-01,2026-11-22,yes,16665947-DG-FY26-Q2-Deepview-Newsletter,4,0,0,0
+2026-11-01,2026-11-22,yes,Search-AgilevsDevops-2021-02-23,4,0,0,0
+2026-11-01,2026-11-22,yes,brand-page,4,1,0,0
+2026-11-01,2026-11-22,yes,36500047-DG-FY27-Q1-AI-Adoption-Webinar,2,0,0,0
+2026-11-01,2026-11-22,yes,Opsera - Remarketing - Display,2,0,0,0
+2026-11-01,2026-11-22,yes,appdevprofile,2,0,0,0
+2026-11-01,2026-11-22,yes,belcorp-venkat-gopalan-ai-sdlc,2,1,0,0
+2026-11-01,2026-11-22,yes,best_ai_software_factories,2,1,0,0
+2026-11-01,2026-11-22,yes,g2_Fall23,2,0,0,0
+2026-11-01,2026-11-22,yes,influencer/,2,0,0,0
+2026-11-01,2026-11-22,yes,latest-ai-blockchain-crypto-trends-insights-and-news-headlines-for-july-4-2025,2,0,0,0
+2026-11-01,2026-11-22,yes,php2shell-modernizing-application-security,2,1,0,0
+2026-11-01,2026-11-22,yes,top 1 miami,2,0,0,0
+2026-11-01,2026-11-22,yes,34235716-DG-FY26-Q4-Trends-Webinar,1,1,0,0
+2026-11-01,2026-11-22,yes,36176271-DG-FY26-Q4-AI-BM-Report,1,0,0,0
+2026-11-01,2026-11-22,yes,39712174-DG-FY27-Q1-Agentic-Launch,1,0,0,0
+2026-11-01,2026-11-22,yes,53487406-DG-FY27-Q3-Event-Dreamforce,1,1,0,0
+2026-11-01,2026-11-22,yes,BuiltIn,1,1,0,0
+2026-11-01,2026-11-22,yes,Display-US-Demo-2021-03-24,1,0,0,0
+2026-11-01,2026-11-22,yes,Github Better Together,1,0,0,0
+2026-11-01,2026-11-22,yes,Insights - VSM,1,0,0,0
+2026-11-01,2026-11-22,yes,Webinar - DORA metrics - 08/09,1,0,0,0
+2026-11-01,2026-11-22,yes,ai_news_stories,1,0,0,0
+2026-11-01,2026-11-22,yes,best_gitHub_copilot_alternatives,1,0,0,0
+2026-11-01,2026-11-22,yes,best_software_factory_tools,1,0,0,0
+2026-11-01,2026-11-22,yes,devops_huddle,1,1,0,0
+2026-11-01,2026-11-22,yes,external-news,1,0,0,0
+2026-11-01,2026-11-22,yes,github-universe-2026,1,1,0,0
+2026-11-01,2026-11-22,yes,google-brings-ai-to-assistant-and-pixel-8,1,0,0,0
+2026-11-01,2026-11-22,yes,influencer,1,0,0,0
+2026-11-01,2026-11-22,yes,listing,1,0,0,0
+2026-11-01,2026-11-22,yes,listing_profile,1,0,0,0
+2026-11-01,2026-11-22,yes,php2shell,1,1,0,0
+2026-11-01,2026-11-22,yes,profile,1,1,0,0
+2026-11-01,2026-11-22,yes,public_index,1,0,0,0
+2026-11-01,2026-11-22,yes,pulse_article,1,0,0,0
+2026-11-01,2026-11-22,yes,the-10-billion-code-review,1,0,0,0
+2026-11-01,2026-11-22,yes,top 1 ios,1,0,0,0
+2026-11-01,2026-11-22,yes,top 1 sanfrancisco,1,0,0,0
+2026-11-01,2026-11-22,yes,top_ai_code_generation_tools,1,0,0,0

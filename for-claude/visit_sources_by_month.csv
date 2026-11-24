@@ -71,12 +71,13 @@ period_start,period_end,period_not_finished,came_from,visits,engaged_visits
 2026-10-01,2026-10-31,no,Paid search ads,4,1
 2026-10-01,2026-10-31,no,Other websites,406,188
 2026-10-01,2026-10-31,no,Unlabelled,1435,62
-2026-11-01,2026-11-15,yes,"AI tools (ChatGPT, Gemini, Perplexity)",66,25
-2026-11-01,2026-11-15,yes,"Direct (typed in, or unknown)",3267,474
-2026-11-01,2026-11-15,yes,Email,93,10
-2026-11-01,2026-11-15,yes,Search engines (mostly Google),1581,789
-2026-11-01,2026-11-15,yes,Social media (LinkedIn and others),122,58
-2026-11-01,2026-11-15,yes,Video sites,4,1
-2026-11-01,2026-11-15,yes,Paid search ads,3,0
-2026-11-01,2026-11-15,yes,Other websites,307,92
-2026-11-01,2026-11-15,yes,Unlabelled,1191,191
+2026-11-01,2026-11-22,yes,"AI tools (ChatGPT, Gemini, Perplexity)",110,40
+2026-11-01,2026-11-22,yes,"Direct (typed in, or unknown)",5518,905
+2026-11-01,2026-11-22,yes,Email,396,58
+2026-11-01,2026-11-22,yes,Search engines (mostly Google),2504,1228
+2026-11-01,2026-11-22,yes,Social media (LinkedIn and others),218,108
+2026-11-01,2026-11-22,yes,Video sites,11,5
+2026-11-01,2026-11-22,yes,Paid search ads,8,0
+2026-11-01,2026-11-22,yes,Paid social ads,1,0
+2026-11-01,2026-11-22,yes,Other websites,387,135
+2026-11-01,2026-11-22,yes,Unlabelled,7316,590

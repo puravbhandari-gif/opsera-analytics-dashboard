@@ -1,4 +1,5 @@
 page,page_title
+"/""/about/""",Page not found - Opsera
 /a/auth/signup,Page not found - Opsera
 "/about, https:/opsera.ai/about",Page not found - Opsera
 /agents/vibeshift,"VIBEshift transforms your vibe code into secure, scalable, enterprise-ready applications."
@@ -32,6 +33,7 @@ page,page_title
 /case-study/reflektion,Page not found — Opsera
 /company/about-us,Page not found - Opsera
 /company/careers,Page not found - Opsera
+/comparison/opsera-vs-cloudbees,Page not found - Opsera
 /comparison/opsera-vs-copado,Page not found - Opsera
 /comparison/opsera-vs-flosum,Page not found - Opsera
 /comparison/opsera-vs-gearset,Page not found - Opsera
@@ -46,6 +48,7 @@ page,page_title
 /customer-stories/accelerating-ai-driven-software-delivery-with-opsera,Accelerating AI-Driven Software Delivery with Opsera
 /customer-stories/accelerating-ai-maturity-with-ltm,Accelerating AI Maturity with LTM - Opsera
 /customer-stories/accelerating-delivery-by-transforming-security-from-tax-to-enabler-at-cisco,Page not found - Opsera
+/customer-stories/belcorp-legacy-modernization-with-forge,Belcorp + Opsera Forge: Legacy Modernization in 3 Hours - Opsera
 /customer-stories/cisco,Accelerating Delivery By Transforming Security From Tax to Enabler at Cisco - Opsera
 /customer-stories/city-of-hope,City of Hope - Opsera
 /customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise,Driving Copilot Adoption at a Leading Industrial Enterprise - Opsera
@@ -58,8 +61,10 @@ page,page_title
 /customer-stories/keywest-networks,KeyWest Networks - Opsera
 /customer-stories/log4j-cybersecurity-vulnerability-solved,How a Fortune 100 company solved Log4j vulnerability with help from Opsera - Opsera
 /customer-stories/nortonlifelock,NortonLifelock - Opsera
+/customer-stories/nortonlifelock-accelerates-salesforce-ci-cd-delivery,Opsera - The context-aware software factory
 /customer-stories/opsera-helps-fortune-500-enterprise-reclaim-10000-engineering-hours-and-unlocks-millions-with-unified-insights,"Protected: Opsera Helps Fortune 500 Enterprise Reclaim 10,000 Engineering Hours and Unlocks Millions with Unified Insights - Opsera"
 /customer-stories/reflektion,Reflektion - Opsera
+/customer-stories/reflektion-case-study,Opsera - The context-aware software factory
 /documentation/salesforce-pipelines-user-guide,Page not found - Opsera
 /ebook/security-at-the-speed-of-software,Page not found - Opsera
 /ecosystem/amazon-ecs,Amazon ECS - Opsera
@@ -125,7 +130,7 @@ page,page_title
 /ecosystem/qualys,Qualys - Opsera
 /ecosystem/red-hat-openshift,Page not found - Opsera
 /ecosystem/rundeck,Page not found - Opsera
-/ecosystem/sauce-labs,Sauce Labs - Opsera
+/ecosystem/sauce-labs,Page not found - Opsera
 /ecosystem/selenium,Selenium - Opsera
 /ecosystem/servicenow-itsm,ServiceNow ITSM - Opsera
 /ecosystem/slack,Slack - Opsera
@@ -226,13 +231,14 @@ page,page_title
 /https:/opsera.ai/privacy,Page not found - Opsera
 /https:/opsera.ai/resources/webinars/cio-roundtable-learnings-and-trends-for-2024,Page not found - Opsera
 /huddle/episode-16-source-code-migration-made-easy,Page not found - Opsera
+/huddle/episode-18-measuring-github-copilot,Page not found - Opsera
 /huddle/episode-19-measuring-downstream-impact-with-dora,Page not found — Opsera
 /huddle/troubleshoot-pipelines-faster-unified-logs-and-build-manifests,Page not found - Opsera
 /integrations/monitoring,Page not found - Opsera
 /jobs/director-product-marketing,Page not found - Opsera
 /jobs/pre-sales-solution-engineer,Page not found - Opsera
 /learn/ZGV2c2Vjb3,Page not found — Opsera
-/learn/agile-devops-cicd-difference,Page not found — Opsera
+/learn/agile-devops-cicd-difference,Page not found - Opsera
 /learn/beginners-devops-toolchain,Page not found - Opsera
 /learn/continuous-testing-devops,Page not found - Opsera
 /learn/integrate-security-to-devops-toolchain,Page not found - Opsera
@@ -259,7 +265,7 @@ page,page_title
 /newsroom/opsera-announces-new-patents-for-ai-powered-cloud-native-unified-devops-platform,"Opsera Announces New Patents for AI-powered, Cloud-Native Unified DevOps Platform - Opsera"
 /newsroom/opsera-announces-new-patents-to-accelerate-engineering-teams-devops-performance,Opsera Announces New Patents to Accelerate Engineering Teams’ DevOps Performance - Opsera
 /newsroom/opsera-announces-partnership-with-mindtree-to-accelerate-devops-initiatives,Opsera Announces Partnership with Mindtree to Accelerate DevOps Initiatives — Opsera
-/newsroom/opsera-announces-salesforce-devops-3-0-capabilities-to-speed-deployment-time-and-maximize-current-investments-in-salesforce-development,Opsera Announces Salesforce DevOps 3.0 Capabilities to Speed Deployment Time and Maximize Current Investments in Salesforce Development - Opsera
+/newsroom/opsera-announces-salesforce-devops-3-0-capabilities-to-speed-deployment-time-and-maximize-current-investments-in-salesforce-development,Opsera Announces Salesforce DevOps 3.0 Capabilities - Opsera
 /newsroom/opsera-announces-series-a-plus-round-to-power-new-generative-ai-initiatives,Opsera Announces Series A Plus Round to Power New Generative AI Initiatives — Opsera
 /newsroom/opsera-announces-strategic-partnership-with-koantek-to-accelerate-databricks-adoption-with-automated-scalable-devops-for-data-ai-workloads,"Opsera Announces Strategic Partnership with Koantek to Accelerate Databricks Adoption with Automated, Scalable DevOps for Data & AI Workloads - Opsera"
 /newsroom/opsera-comes-out-of-stealth-with-4-3-million-in-funding,Opsera Comes Out of Stealth With $4.3 Million In Funding - Opsera
@@ -336,6 +342,7 @@ page,page_title
 /platform/unified-insights,Unified Insights - Opsera
 /platform/unified-insights/ai-value-dashboard,AI Value Dashboards - Opsera
 /platform/unified-insights/dora-metrics,DORA Metrics - Opsera
+/privacy/terms-conditions,Page not found - Opsera
 /privacy/terms-of-service,Page not found - Opsera
 /resources/report/ai-coding-impact-2026-benchmark-report,Page not found - Opsera
 /search/{search_term_string},Search Results for “{search_term_string}” - Opsera
@@ -344,7 +351,7 @@ page,page_title
 /solutions/databricks,Page not found - Opsera
 /solutions/devsecops,DevSecOps - Opsera
 /solutions/dora-metrics,DORA Metrics - Opsera
-/solutions/gitcustodian,Gitcustodian - Opsera
+/solutions/gitcustodian,Page not found - Opsera
 /solutions/leadership-dashboard,Advanced Insights with DORA and DevEx - Opsera
 /solutions/opsera-github,Opsera Github - Opsera
 /solutions/platform-engineering,Platform Engineering - Opsera
@@ -362,6 +369,8 @@ page,page_title
 /webinars/integrate-your-existing-tools-accelerate-your-salesforce-app-releases,Page not found — Opsera
 /webinars/leading-with-data-to-simplify-devops-and-elevate-devex,Page not found - Opsera
 /webinars/linkedin-live-session-with-workday-aws-and-opsera,Page not found - Opsera
+/webinars/optimize-all-stages-of-devops-lifecycle-with-a-value-stream-management-platform,Page not found - Opsera
+/webinars/unlock-devops-performance-success-with-dora-metrics,Page not found - Opsera
 /wp-admin/post.php,Page not found — Opsera
 /wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_Aruna20Pattabiraman-150x150.jpg,Page not found — Opsera
 /wp-content/uploads/2025/02/618ac04d623bfe50bb750450_34.jpg,Page not found — Opsera
@@ -375,6 +384,7 @@ page,page_title
 /wp-content/uploads/2025/07/5f3a4cc9b3a3c780263afb1f_Instana_logo.png,Page not found — Opsera
 /wp-content/uploads/2025/07/6250593797074e7e37c8db9e_OctopusDeploy-logo-RGB.png,Page not found — Opsera
 /wp-content/uploads/2025/07/67896319e97fdac5edcfbce4_devops-huddle-ep-23-speakers.png,Page not found - Opsera
+/wp-content/uploads/2025/07/680285944ca62b27b931a316_webinar-measuring-ai-code-assistants-speakers-tile.png,Page not found - Opsera
 /wp-content/uploads/2025/07/6837416771b377f26f759584_opsera-delivery-with-databricks-tile.png,Page not found — Opsera
 /wp-content/uploads/2025/07/Abhay.webp,Page not found - Opsera
 /wp-content/uploads/2025/07/Eric-Robertson.webp,Page not found - Opsera
@@ -573,18 +583,3 @@ page,page_title
 /wp-json/wp/v2/posts/8044,Page not found — Opsera
 /wp-json/wp/v2/posts/805,Page not found — Opsera
 /wp-json/wp/v2/posts/8067,Page not found — Opsera
-/wp-json/wp/v2/posts/809,Page not found — Opsera
-/wp-json/wp/v2/posts/8107,Page not found — Opsera
-/wp-json/wp/v2/posts/821,Page not found — Opsera
-/wp-json/wp/v2/posts/831,Page not found — Opsera
-/wp-json/wp/v2/posts/8324,Page not found — Opsera
-/wp-json/wp/v2/posts/835,Page not found — Opsera
-/wp-json/wp/v2/posts/8357,Page not found — Opsera
-/wp-json/wp/v2/posts/837,Page not found — Opsera
-/wp-json/wp/v2/posts/8400,Page not found — Opsera
-/wp-json/wp/v2/posts/8492,Page not found — Opsera
-/wp-json/wp/v2/posts/8550,Page not found — Opsera
-/wp-json/wp/v2/posts/8569,Page not found — Opsera
-/wp-json/wp/v2/posts/8712,Page not found — Opsera
-/wp-json/wp/v2/posts/9119,Page not found — Opsera
-/wp-json/wp/v2/posts/9132,Page not found — Opsera
