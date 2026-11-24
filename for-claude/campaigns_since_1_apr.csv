@@ -1,5 +1,5 @@
 campaign,visits_ga,engaged_visits_ga,form_fills_ga,emails_sent_hubspot,email_sends,email_opens,email_clicks,deals_hubspot,deal_amount_usd
-DG-FY26-Q4-Holiday-Newsletter,2309,54,0,2,132915,4643,622,0,0
+DG-FY26-Q4-Holiday-Newsletter,2309,54,0,2,132915,4644,622,0,0
 DG-FY27-Q3-Tokenomics-Webinar,1834,247,76,3,111141,1691,196,0,0
 Competitors,848,232,7,0,0,0,0,0,0
 Brand - Search - M+D,750,421,9,0,0,0,0,0,0
@@ -19,7 +19,7 @@ brand-page,41,26,1,0,0,0,0,0,0
 DG-FY27-Q3-Event-Gartner-Symposium,31,2,0,1,2631,17,8,0,0
 harness-engineering,29,13,0,0,0,0,0,0,0
 universe26,24,8,0,0,0,0,0,0,0
-DG-Webinar-DevOpsHuddle-Ep16-03-14,19,12,1,1,304,90,40,1,100000
+DG-Webinar-DevOpsHuddle-Ep16-03-14,19,12,1,1,308,90,40,1,100000
 forge-security-launch,19,6,0,0,0,0,0,0,0
 meta-ai-series,17,7,0,0,0,0,0,0,0
 change_impact_analysis_for_code,17,13,0,0,0,0,0,0,0
@@ -31,10 +31,10 @@ php2shell,12,7,0,0,0,0,0,0,0
 VIP_experiences,11,5,0,0,0,0,0,0,0
 tool-comparison,10,0,0,0,0,0,0,0,0
 github-universe-2026,9,7,0,0,0,0,0,0,0
+external-news,6,0,0,0,0,0,0,0,0
 pulse_article,5,0,0,0,0,0,0,0,0
 appdevprofile,5,0,0,0,0,0,0,0,0
-external-news,5,0,0,0,0,0,0,0,0
-Release Notes,5,0,0,55,76947,3042,187,0,0
+Release Notes,5,0,0,55,76947,3050,187,0,0
 DG-FY27-Q1-Agentic-Launch,4,2,0,0,0,0,0,0,0
 arcade_demos,4,3,2,0,0,0,0,0,0
 DG-FY26-Q2-Event-DAIS,4,3,0,3,518,23,4,0,0
@@ -223,9 +223,9 @@ best_gitHub_copilot_alternatives,1,0,0,0,0,0,0,0,0
 best_software_factory_tools,1,0,0,0,0,0,0,0,0
 top_ai_code_generation_tools,1,0,0,0,0,0,0,0,0
 Webinar - DORA metrics - 08/09,1,0,0,0,0,0,0,0,0
-DG-2025-Q2-Whitepaper-Databricks,0,0,0,2,1591,285,58,0,0
+DG-2025-Q2-Whitepaper-Databricks,0,0,0,2,1592,285,58,0,0
 DG-FY27-Architecture-Agent-Workshop,0,0,0,3,12445,1075,374,0,0
-DG-FY27-Invited-to-Discord-Community,0,0,0,3,8351,657,456,0,0
+DG-FY27-Invited-to-Discord-Community,0,0,0,3,8353,657,456,0,0
 DG-FY27-Q2-Cursor-Workshop,0,0,0,2,5375,494,49,0,0
 DG-FY27-Q2-VIBEShift-Workshop,0,0,0,1,51,6,3,0,0
 DG-FY27-Q2-Forge-J2EE,0,0,0,5,3355,101,61,0,0

@@ -1,5 +1,5 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
-2026-11-01,2026-11-23,yes,/blog/software-factory-pattern,1011,110,0,0,41,2081
+2026-11-01,2026-11-23,yes,/blog/software-factory-pattern,1012,110,0,0,41,2081
 2026-11-01,2026-11-23,yes,/blog/closing-the-security-gap-in-ai-modernization,938,68,0,0,3,226
 2026-11-01,2026-11-23,yes,/blog/forge-ontology-ai-agents,927,64,0,0,6,349
 2026-11-01,2026-11-23,yes,/blog/software-factory-benefits,497,39,0,0,6,643
@@ -22,7 +22,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/legacy-code-modernization,55,15,0,0,24,4209
 2026-11-01,2026-11-23,yes,/blog/snowflake-to-databricks-migration,47,5,0,0,126,1485
 2026-11-01,2026-11-23,yes,/blog/cursor-alternatives,46,8,0,0,8,9532
-2026-11-01,2026-11-23,yes,/blog/sast-tools,38,6,0,0,9,11174
+2026-11-01,2026-11-23,yes,/blog/sast-tools,39,6,0,0,9,11174
 2026-11-01,2026-11-23,yes,/blog/13-code-quality-metrics-that-you-must-track,37,8,0,0,18,6718
 2026-11-01,2026-11-23,yes,/blog/all-you-need-to-know-about-ci-cd-pipeline,35,6,0,0,13,23543
 2026-11-01,2026-11-23,yes,/blog/software-factory-as-a-service,30,19,0,0,27,775

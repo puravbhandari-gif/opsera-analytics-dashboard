@@ -18,10 +18,10 @@
    "quarter": "FY27 Q3",
    "counts": {
     "Opsera": 1,
-    "Harness": 17,
+    "Harness": 22,
     "CloudBees": 2,
-    "Copado": 6,
-    "Gearset": 1,
+    "Copado": 5,
+    "Gearset": 2,
     "LinearB": 0
    }
   },
@@ -65,7 +65,8 @@
   {
    "date": "2026-08-19",
    "counts": {
-    "Harness": 2
+    "Harness": 3,
+    "Gearset": 1
    }
   },
   {
@@ -125,11 +126,17 @@
   {
    "date": "2026-10-08",
    "counts": {
-    "Harness": 6
+    "Harness": 8
    }
   },
   {
    "date": "2026-10-09",
+   "counts": {
+    "Harness": 1
+   }
+  },
+  {
+   "date": "2026-10-13",
    "counts": {
     "Harness": 1
    }
@@ -143,13 +150,19 @@
   {
    "date": "2026-10-21",
    "counts": {
-    "Copado": 2
+    "Copado": 1
    }
   },
   {
    "date": "2026-10-22",
    "counts": {
     "Gearset": 1
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "counts": {
+    "Harness": 1
    }
   },
   {

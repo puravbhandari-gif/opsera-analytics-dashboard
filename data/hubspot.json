@@ -1,8 +1,8 @@
 {
  "source": "HubSpot",
  "start_date": "2026-04-01",
- "end_date": "2026-11-15",
- "pulled_at": "2026-11-17T10:01+05:30",
+ "end_date": "2026-11-23",
+ "pulled_at": "2026-11-24T16:28+05:30",
  "contacts_daily": [
   {
    "date": "2026-04-01",
@@ -2341,6 +2341,55 @@
    "channel": "search",
    "demo": true,
    "count": 1
+  },
+  {
+   "date": "2026-11-18",
+   "line": "form",
+   "channel": "search",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-18",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
+  },
+  {
+   "date": "2026-11-21",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-22",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-23",
+   "line": "form",
+   "channel": "direct",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-23",
+   "line": "form",
+   "channel": "other",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-11-23",
+   "line": "form",
+   "channel": "search",
+   "demo": true,
+   "count": 1
   }
  ],
  "ai_contacts_daily": [
@@ -2397,12 +2446,18 @@
    "tool": "chatgpt",
    "demo": false,
    "count": 1
+  },
+  {
+   "date": "2026-11-23",
+   "tool": "copilot",
+   "demo": false,
+   "count": 1
   }
  ],
  "first_forms": [
   [
    "AI Coding Impact 2026 Benchmark Report - Opsera: DG-FY26-Q4-AI-BM-Report",
-   89
+   90
   ],
   [
    "Contact - Opsera: Website | Contact Us",
@@ -2465,6 +2520,10 @@
    7
   ],
   [
+   "Book a demo - Opsera: Handraiser | Demo Request",
+   7
+  ],
+  [
    "Opsera at GitHub Universe 2026: GitHub Universe 2026 | Book a Meeting ",
    7
   ],
@@ -2473,11 +2532,11 @@
    5
   ],
   [
-   "Book a demo - Opsera: Handraiser | Demo Request",
-   5
+   "Meet the Opsera AppSec Agents for AI Builders - Opsera: DG-FY27-Q1-Meet-the-Agents-Webinar",
+   4
   ],
   [
-   "Meet the Opsera AppSec Agents for AI Builders - Opsera: DG-FY27-Q1-Meet-the-Agents-Webinar",
+   "Partners - Opsera: Partners Form",
    4
   ],
   [
@@ -2486,10 +2545,6 @@
   ],
   [
    "Hummingbird AI - Opsera: Website | Hummingbird AI interest",
-   3
-  ],
-  [
-   "Partners - Opsera: Partners Form",
    3
   ],
   [
@@ -2513,11 +2568,11 @@
    2
   ],
   [
-   "DG-FY27-Q3-Tokenomics-Webinar",
-   1
+   "Opsera a Leader in 2026 Gartner Magic Quadrant - Opsera: DG-FY27-Gartner-MQ",
+   2
   ],
   [
-   "GitHub Copilot Metrics: 14-Day Free Trial | Opsera: DG-2024-Q2-Github-Copilot-Free Trial",
+   "DG-FY27-Q3-Tokenomics-Webinar",
    1
   ]
  ],
@@ -3051,7 +3106,7 @@
    "date": "2026-11-16",
    "line": "luma",
    "channel": "events",
-   "kind": "upcoming",
+   "kind": "booked",
    "demo": false,
    "count": 1
   },
@@ -3059,7 +3114,7 @@
    "date": "2026-11-17",
    "line": "form",
    "channel": "events",
-   "kind": "upcoming",
+   "kind": "booked",
    "demo": false,
    "count": 1
   },
@@ -3067,12 +3122,20 @@
    "date": "2026-11-20",
    "line": "form",
    "channel": "events",
-   "kind": "upcoming",
+   "kind": "booked",
    "demo": false,
    "count": 1
   },
   {
-   "date": "2026-11-24",
+   "date": "2026-11-20",
+   "line": "luma",
+   "channel": "events",
+   "kind": "booked",
+   "demo": false,
+   "count": 2
+  },
+  {
+   "date": "2026-11-25",
    "line": "form",
    "channel": "events",
    "kind": "upcoming",
@@ -3112,8 +3175,24 @@
    "count": 1
   },
   {
+   "date": "2026-12-22",
+   "line": "form",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
    "date": "2026-12-25",
    "line": "luma",
+   "channel": "events",
+   "kind": "upcoming",
+   "demo": false,
+   "count": 1
+  },
+  {
+   "date": "2026-12-29",
+   "line": "form",
    "channel": "events",
    "kind": "upcoming",
    "demo": false,
@@ -3160,7 +3239,7 @@
    "count": 1
   }
  ],
- "meetings_all_calendar": 907,
+ "meetings_all_calendar": 925,
  "deals_weekly": [
   {
    "start": "2026-04-27",
@@ -3323,8 +3402,21 @@
  ],
  "deals_quarters": [
   {
-   "start": "2026-08-16",
-   "end": "2026-11-15",
+   "start": "2026-08-24",
+   "end": "2026-11-23",
+   "channel": "search",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
+  },
+  {
+   "start": "2026-08-24",
+   "end": "2026-11-23",
    "channel": "search",
    "demo": false,
    "tool": null,
@@ -3336,35 +3428,22 @@
    "lost_amount": 30000.0
   },
   {
-   "start": "2026-08-16",
-   "end": "2026-11-15",
-   "channel": "search",
-   "demo": true,
-   "tool": null,
-   "open_count": 1,
-   "open_amount": 150000.0,
-   "won_count": 0,
-   "won_amount": 0.0,
-   "lost_count": 0,
-   "lost_amount": 0.0
-  },
-  {
-   "start": "2026-05-16",
-   "end": "2026-08-15",
-   "channel": "other",
-   "demo": true,
-   "tool": null,
-   "open_count": 1,
-   "open_amount": 150000.0,
-   "won_count": 0,
-   "won_amount": 0.0,
-   "lost_count": 0,
-   "lost_amount": 0.0
-  },
-  {
-   "start": "2026-05-16",
-   "end": "2026-08-15",
+   "start": "2026-05-24",
+   "end": "2026-08-23",
    "channel": "direct",
+   "demo": true,
+   "tool": null,
+   "open_count": 1,
+   "open_amount": 150000.0,
+   "won_count": 0,
+   "won_amount": 0.0,
+   "lost_count": 0,
+   "lost_amount": 0.0
+  },
+  {
+   "start": "2026-05-24",
+   "end": "2026-08-23",
+   "channel": "other",
    "demo": true,
    "tool": null,
    "open_count": 1,
@@ -3394,7 +3473,11 @@
   ],
   [
    "3 POC",
-   2
+   1
+  ],
+  [
+   "1 Meeting",
+   1
   ]
  ],
  "existing_deals": {
@@ -3436,7 +3519,7 @@
    "month": "2026-08",
    "amount": 150000,
    "status": "Open",
-   "stage": "3 POC",
+   "stage": "1 Meeting",
    "came_from": "Direct",
    "first_page": "/",
    "first_form": "Schedule a Demo",
@@ -3582,14 +3665,14 @@
     "/events/copilot-cursor-claude-code-what-250k-developers-revealed"
    ],
    "note": "Sign-ups include people who asked for the recording",
-   "signed_up": 485,
+   "signed_up": 486,
    "attended": null,
-   "meetings_after": 24,
+   "meetings_after": 25,
    "people_with_meeting": 8,
-   "meetings_upcoming": 5,
+   "meetings_upcoming": 7,
    "sf_campaign": "DG-FY27-Q1-AI-Adoption-Webinar",
-   "sf_members": 451,
-   "sf_meetings": 23,
+   "sf_members": 452,
+   "sf_meetings": 24,
    "sf_people_with_meeting": 7
   },
   {
@@ -3625,7 +3708,7 @@
    "note": "Sign-ups may overlap with the event page form",
    "signed_up": 83,
    "attended": null,
-   "meetings_after": 4,
+   "meetings_after": 6,
    "people_with_meeting": 2,
    "meetings_upcoming": 6,
    "sf_campaign": "DG-FY27-Q3-Tokenomics-Webinar",
@@ -3645,13 +3728,13 @@
    "note": "Signed up and attended are HubSpot lists from an early copy of the Luma list (2 Sep) and the attendee import. Luma's full list is in Flutter 2026 on Luma above. Includes the fireside chat with Sheila Jordan",
    "signed_up": 174,
    "attended": 87,
-   "meetings_after": 6,
-   "people_with_meeting": 5,
-   "meetings_upcoming": 8,
+   "meetings_after": 9,
+   "people_with_meeting": 6,
+   "meetings_upcoming": 7,
    "sf_campaign": "DG-FY27-Q3-SC-Flutter-Summit",
    "sf_members": 211,
-   "sf_meetings": 4,
-   "sf_people_with_meeting": 3
+   "sf_meetings": 7,
+   "sf_people_with_meeting": 4
   },
   {
    "key": "gartner",
@@ -3726,7 +3809,7 @@
    "start": null,
    "contactFirstTouch": 4,
    "contactFirstTouch_also_flutter_guests": 0,
-   "influencedContacts": 829,
+   "influencedContacts": 917,
    "influencedContacts_also_flutter_guests": 10
   },
   {
@@ -3779,6 +3862,427 @@
   }
  ],
  "campaigns_checked": 244,
+ "demo_use_case_daily": [
+  {
+   "date": "2026-04-13",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-04-15",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-04-21",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-04-29",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-05-08",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-05-09",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-05-10",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-05-29",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-06-08",
+   "use_case": "Not filled in",
+   "count": 2
+  },
+  {
+   "date": "2026-06-10",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-06-12",
+   "use_case": "Not filled in",
+   "count": 2
+  },
+  {
+   "date": "2026-06-17",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-06-20",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-06-25",
+   "use_case": "Not filled in",
+   "count": 1
+  },
+  {
+   "date": "2026-06-30",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-07-04",
+   "use_case": "Unified Insights",
+   "count": 1
+  },
+  {
+   "date": "2026-07-05",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-07-08",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-07-09",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-07-13",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-07-17",
+   "use_case": "Agents",
+   "count": 1
+  },
+  {
+   "date": "2026-07-22",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-07-27",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-07-30",
+   "use_case": "Unified Insights",
+   "count": 1
+  },
+  {
+   "date": "2026-07-31",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-08-05",
+   "use_case": "Copilot",
+   "count": 1
+  },
+  {
+   "date": "2026-08-06",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-08-12",
+   "use_case": "Unified Insights",
+   "count": 1
+  },
+  {
+   "date": "2026-08-15",
+   "use_case": "Other",
+   "count": 1
+  },
+  {
+   "date": "2026-08-17",
+   "use_case": "Unified Insights",
+   "count": 1
+  },
+  {
+   "date": "2026-08-22",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-08-25",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-08-26",
+   "use_case": "Salesforce",
+   "count": 1
+  },
+  {
+   "date": "2026-09-04",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-09-10",
+   "use_case": "Appfire Flow Migration",
+   "count": 1
+  },
+  {
+   "date": "2026-09-16",
+   "use_case": "Agents",
+   "count": 1
+  },
+  {
+   "date": "2026-09-23",
+   "use_case": "Salesforce",
+   "count": 1
+  },
+  {
+   "date": "2026-09-28",
+   "use_case": "Copilot",
+   "count": 1
+  },
+  {
+   "date": "2026-09-28",
+   "use_case": "Migration",
+   "count": 1
+  },
+  {
+   "date": "2026-10-01",
+   "use_case": "Agents",
+   "count": 1
+  },
+  {
+   "date": "2026-10-01",
+   "use_case": "Forge",
+   "count": 3
+  },
+  {
+   "date": "2026-10-01",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-10-02",
+   "use_case": "Agents",
+   "count": 1
+  },
+  {
+   "date": "2026-10-04",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-10-06",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-10-06",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-10-13",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-10-13",
+   "use_case": "Gartner Xpo Meet",
+   "count": 1
+  },
+  {
+   "date": "2026-10-14",
+   "use_case": "Agents",
+   "count": 1
+  },
+  {
+   "date": "2026-10-15",
+   "use_case": "Gartner Xpo Meet",
+   "count": 1
+  },
+  {
+   "date": "2026-10-19",
+   "use_case": "Forge",
+   "count": 2
+  },
+  {
+   "date": "2026-10-26",
+   "use_case": "Unified Insights",
+   "count": 1
+  },
+  {
+   "date": "2026-10-29",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-10-31",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-02",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-11",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-13",
+   "use_case": "Appfire Flow Migration",
+   "count": 1
+  },
+  {
+   "date": "2026-11-15",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-17",
+   "use_case": "Pipelines",
+   "count": 1
+  },
+  {
+   "date": "2026-11-18",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-19",
+   "use_case": "Forge",
+   "count": 1
+  },
+  {
+   "date": "2026-11-23",
+   "use_case": "Agents",
+   "count": 1
+  }
+ ],
+ "warmly_profile": {
+  "days": 90,
+  "from": "2026-08-20",
+  "companies": 1231,
+  "people": 1475,
+  "industry": [
+   [
+    "Software and IT",
+    274
+   ],
+   [
+    "Not known",
+    223
+   ],
+   [
+    "Financial services and insurance",
+    159
+   ],
+   [
+    "Manufacturing and industrial",
+    136
+   ],
+   [
+    "Business services and consulting",
+    127
+   ],
+   [
+    "Healthcare and life sciences",
+    90
+   ],
+   [
+    "Retail and consumer",
+    79
+   ],
+   [
+    "Media and telecom",
+    60
+   ],
+   [
+    "Energy, utilities and transport",
+    45
+   ],
+   [
+    "Government and education",
+    27
+   ],
+   [
+    "Other industries",
+    11
+   ]
+  ],
+  "size": [
+   [
+    "Not known",
+    582
+   ],
+   [
+    "1,000 to 5,000",
+    234
+   ],
+   [
+    "10,000 or more",
+    194
+   ],
+   [
+    "1 to 250 people",
+    99
+   ],
+   [
+    "5,000 to 10,000",
+    66
+   ],
+   [
+    "251 to 1,000",
+    56
+   ]
+  ],
+  "seniority": [
+   [
+    "Not known",
+    919
+   ],
+   [
+    "Senior",
+    135
+   ],
+   [
+    "Director",
+    112
+   ],
+   [
+    "Employee",
+    101
+   ],
+   [
+    "Manager",
+    87
+   ],
+   [
+    "VP",
+    66
+   ],
+   [
+    "Executive, owner or partner",
+    55
+   ]
+  ],
+  "to": "2026-11-18"
+ },
  "emails": {
   "error": null,
   "left_out_target_accounts": 43,
@@ -3993,7 +4497,7 @@
     "sent_on": "2026-04-15",
     "subject": "Successful AI DevOps Transformation In 90 Days",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 822,
+    "sends": 823,
     "opens": 139,
     "clicks": 25,
     "open_rate_pct": 17.0,
@@ -4012,10 +4516,10 @@
     "sent_on": "2026-04-15",
     "subject": "\u00a0AI Coding Is Fast. Can Your Pipelines Handle It?",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 1004,
+    "sends": 1009,
     "opens": 157,
     "clicks": 38,
-    "open_rate_pct": 15.9,
+    "open_rate_pct": 15.8,
     "click_rate_pct": 3.8,
     "campaign": "",
     "words": [
@@ -4958,7 +5462,7 @@
     "subject": "Opsera is a Gartner\u00ae Magic Quadrant\u2122 Leader, see what\u2019s next",
     "kind": "BATCH_EMAIL",
     "sends": 69590,
-    "opens": 2029,
+    "opens": 2030,
     "clicks": 317,
     "open_rate_pct": 3.0,
     "click_rate_pct": 0.5,
@@ -5146,10 +5650,10 @@
     "sent_on": "2026-06-07",
     "subject": "An invitation just for {{ contact.firstname }}",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 1986,
+    "sends": 1988,
     "opens": 554,
     "clicks": 450,
-    "open_rate_pct": 28.4,
+    "open_rate_pct": 28.3,
     "click_rate_pct": 23.0,
     "campaign": "DG-FY27-Invited-to-Discord-Community",
     "words": [
@@ -8341,11 +8845,11 @@
     "sent_on": "2026-10-15",
     "subject": "Thanks for signing up to see Opsera in action!",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 304,
+    "sends": 308,
     "opens": 90,
     "clicks": 40,
-    "open_rate_pct": 32.6,
-    "click_rate_pct": 14.5,
+    "open_rate_pct": 32.1,
+    "click_rate_pct": 14.3,
     "campaign": "DG-Webinar-DevOpsHuddle-Ep16-03-14",
     "words": [
      "923fa396",
@@ -9472,10 +9976,10 @@
     "sent_on": "2026-11-02",
     "subject": "{{ contact.firstname }} How's it going with Forge?",
     "kind": "AUTOMATED_EMAIL",
-    "sends": 14,
-    "opens": 0,
+    "sends": 33,
+    "opens": 1,
     "clicks": 0,
-    "open_rate_pct": 0.0,
+    "open_rate_pct": 3.0,
     "click_rate_pct": 0.0,
     "campaign": "",
     "words": [
@@ -9812,7 +10316,7 @@
     "subject": "Invitation for {{ contact.firstname }} - Closed-door session.",
     "kind": "BATCH_EMAIL",
     "sends": 14924,
-    "opens": 484,
+    "opens": 486,
     "clicks": 51,
     "open_rate_pct": 3.3,
     "click_rate_pct": 0.3,
@@ -9835,8 +10339,8 @@
     "subject": "{{ contact.firstname }} Fix PHP vulnerabilities today.",
     "kind": "BATCH_EMAIL",
     "sends": 14868,
-    "opens": 498,
-    "clicks": 48,
+    "opens": 499,
+    "clicks": 49,
     "open_rate_pct": 3.4,
     "click_rate_pct": 0.3,
     "campaign": "",
@@ -9942,10 +10446,10 @@
     "sent_on": "2026-11-16",
     "subject": "Just two days away, {{ personalization_token('contact.firstname', ',') }}\u00a0",
     "kind": "BATCH_EMAIL",
-    "sends": 457,
-    "opens": 15,
+    "sends": 456,
+    "opens": 21,
     "clicks": 0,
-    "open_rate_pct": 3.3,
+    "open_rate_pct": 4.6,
     "click_rate_pct": 0.0,
     "campaign": "",
     "words": [
@@ -9968,9 +10472,9 @@
     "subject": "Opsera Release Notes | Org Mapping for Full Control Over Salesforce Metadata After a Sandbox Refresh",
     "kind": "BATCH_EMAIL",
     "sends": 135,
-    "opens": 3,
+    "opens": 5,
     "clicks": 0,
-    "open_rate_pct": 2.2,
+    "open_rate_pct": 3.7,
     "click_rate_pct": 0.0,
     "campaign": "Release Notes",
     "words": [
@@ -9996,9 +10500,9 @@
     "subject": "Opsera Release Notes | Deploy to Multiple Environments from a Single Child Pipeline",
     "kind": "BATCH_EMAIL",
     "sends": 1333,
-    "opens": 4,
+    "opens": 10,
     "clicks": 0,
-    "open_rate_pct": 0.3,
+    "open_rate_pct": 0.8,
     "click_rate_pct": 0.0,
     "campaign": "Release Notes",
     "words": [
@@ -10014,6 +10518,74 @@
      "7f2346e9",
      "e5a0205d",
      "d3442983"
+    ]
+   },
+   {
+    "sent_on": "2026-11-18",
+    "subject": "{{ contact.firstname }} PHP2Shell flaws exploited in attacks.",
+    "kind": "BATCH_EMAIL",
+    "sends": 14790,
+    "opens": 283,
+    "clicks": 8,
+    "open_rate_pct": 1.9,
+    "click_rate_pct": 0.1,
+    "campaign": "",
+    "words": [
+     "88abb3bb",
+     "ef5001d2",
+     "73d5d200",
+     "4303b923",
+     "6976b5ba",
+     "9c901c9c",
+     "4a912d5d",
+     "18b1878a"
+    ]
+   },
+   {
+    "sent_on": "2026-11-18",
+    "subject": "{{ contact.firstname }} A couple of seats left for tonight's game.",
+    "kind": "BATCH_EMAIL",
+    "sends": 454,
+    "opens": 10,
+    "clicks": 0,
+    "open_rate_pct": 2.2,
+    "click_rate_pct": 0.0,
+    "campaign": "",
+    "words": [
+     "b645a05d",
+     "5b33a4e1",
+     "fb343bd2",
+     "40293d93",
+     "4303b923",
+     "6976b5ba",
+     "cf15988d",
+     "e9b35e81",
+     "124aec70",
+     "acf38390",
+     "396efb6a",
+     "4249d707"
+    ]
+   },
+   {
+    "sent_on": "2026-11-19",
+    "subject": "Opsera Newsletter: Outages are having a month",
+    "kind": "BATCH_EMAIL",
+    "sends": 30418,
+    "opens": 823,
+    "clicks": 59,
+    "open_rate_pct": 2.7,
+    "click_rate_pct": 0.2,
+    "campaign": "",
+    "words": [
+     "4794261f",
+     "a8ec83b6",
+     "6a99dc1a",
+     "40293d93",
+     "3687395b",
+     "c69b2faf",
+     "406f344d",
+     "daecdd5c",
+     "d67a0605"
     ]
    }
   ]
@@ -10065,6 +10637,19 @@
   "rows": [
    {
     "date": "2026-04-01",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 718000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
     "status": "Lost",
     "stage": "8 ClosedLost",
     "pipeline": "Salesforce - Direct",
@@ -10078,16 +10663,94 @@
    },
    {
     "date": "2026-04-01",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 50000,
+    "product": "Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 333333,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
     "status": "Lost",
     "stage": "8 ClosedLost",
     "pipeline": "Salesforce - Direct",
     "amount": 5650,
     "product": "Unified Insights",
     "lead_source": "Events",
-    "primary_campaign": "",
+    "primary_campaign": "701UR00000LMNI1YAP",
+    "first_campaign": "701UR00000LMNI1YAP",
+    "last_campaign": "701UR00000LMNI1YAP",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "Direct",
+    "primary_campaign": "701UR00000lDhCDYA0",
+    "first_campaign": "701UR00000lDhCDYA0",
+    "last_campaign": "701UR00000lDhCDYA0",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 12824,
+    "product": "Copilot",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-01",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 25000,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000KhzHpYAJ",
+    "first_campaign": "701UR00000KhzHpYAJ",
+    "last_campaign": "701UR00000KhzHpYAJ",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-07",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000QP6jCYAT",
+    "first_campaign": "701UR00000QP6jCYAT",
+    "last_campaign": "701UR00000QP6jCYAT",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-04-07",
@@ -10116,6 +10779,58 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-04-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "701UR00000BUxXNYA1",
+    "last_campaign": "701UR00000BUxXNYA1",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-13",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000nMDP2YAO",
+    "first_campaign": "701UR00000nMDP2YAO",
+    "last_campaign": "701UR00000nMDP2YAO",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-14",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Agents",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-14",
+    "status": "Open",
+    "stage": "01 Partner Suspect",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
     "date": "2026-04-15",
     "status": "Open",
     "stage": "5 Procurement",
@@ -10126,6 +10841,32 @@
     "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "701UR00000BUxXNYA1",
     "last_campaign": "701UR00000BUxXNYA1",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-16",
+    "status": "Open",
+    "stage": "01 Partner Suspect",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-24",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 125000,
+    "product": "Pipelines",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000QRCB1YAP",
+    "first_campaign": "701UR00000JorFtYAJ",
+    "last_campaign": "701UR00000QRCB1YAP",
     "bucket": "Marketing sourced"
    },
    {
@@ -10148,8 +10889,8 @@
     "pipeline": "Salesforce - Direct",
     "amount": 125000,
     "product": "Forge, Unified Insights",
-    "lead_source": "cognism",
-    "primary_campaign": "701UR00000GQv9WYAT",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "701UR00000GQv9WYAT",
     "last_campaign": "701UR00000GQv9WYAT",
     "bucket": "Marketing sourced"
@@ -10161,11 +10902,115 @@
     "pipeline": "Salesforce - Renewal",
     "amount": 76050,
     "product": "Not named in the deal",
-    "lead_source": "Paid Social",
-    "primary_campaign": "",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000ks9VFYAY",
+    "first_campaign": "701UR00000ks9VFYAY",
+    "last_campaign": "701UR00000ks9VFYAY",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-28",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 182603,
+    "product": "Platform",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-28",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 96779,
+    "product": "Salesforce DevOps, Platform",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-28",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 96216,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-29",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-29",
+    "status": "Open",
+    "stage": "01 Partner Suspect",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-29",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Pipelines",
+    "lead_source": "Partners",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "701UR00000mHkqpYAC",
+    "last_campaign": "701UR00000mHkqpYAC",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-29",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Salesforce DevOps",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-04-30",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "701UR00000oLnVZYA0",
+    "last_campaign": "701UR00000oLnVZYA0",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-04-30",
@@ -10187,7 +11032,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 36000,
     "product": "Not named in the deal",
-    "lead_source": "Third Party Vendors",
+    "lead_source": "Partners",
     "primary_campaign": "701UR00000mechJYAQ",
     "first_campaign": "701UR00000mechJYAQ",
     "last_campaign": "701UR00000mechJYAQ",
@@ -10200,7 +11045,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 371339,
     "product": "Forge",
-    "lead_source": "AE Outreach",
+    "lead_source": "Partners",
     "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "701UR00000mlOjCYAU",
     "last_campaign": "701UR00000mlOjCYAU",
@@ -10213,7 +11058,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "BrickForge",
-    "lead_source": "Contact Us / Demo Request",
+    "lead_source": "Events",
     "primary_campaign": "7014Q000002aJSjQAM",
     "first_campaign": "7014Q000002aJSjQAM",
     "last_campaign": "7014Q000002aJSjQAM",
@@ -10227,10 +11072,10 @@
     "amount": 150000,
     "product": "Salesforce DevOps",
     "lead_source": "Contact Us / Demo Request",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
+    "primary_campaign": "7014Q000002aJSjQAM",
+    "first_campaign": "7014Q000002aJSjQAM",
+    "last_campaign": "7014Q000002aJSjQAM",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-05-08",
@@ -10246,16 +11091,55 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-05-08",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 48375,
+    "product": "Pipelines",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000ottC3YAI",
+    "first_campaign": "701UR00000ottC3YAI",
+    "last_campaign": "701UR00000ottC3YAI",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-08",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
     "date": "2026-05-18",
     "status": "Won",
     "stage": "7 ClosedWon",
     "pipeline": "Salesforce - Direct",
     "amount": 360000,
     "product": "Forge",
-    "lead_source": "Not set",
-    "primary_campaign": "701UR00000qTFtmYAG",
+    "lead_source": "Partners",
+    "primary_campaign": "701jh000001H2wvAAC",
     "first_campaign": "701UR00000qTFtmYAG",
     "last_campaign": "701UR00000qTFtmYAG",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-19",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 125000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000nMDP2YAO",
+    "first_campaign": "701UR00000nMDP2YAO",
+    "last_campaign": "701UR00000nMDP2YAO",
     "bucket": "Marketing sourced"
    },
    {
@@ -10265,7 +11149,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "Forge",
-    "lead_source": "Not set",
+    "lead_source": "Existing Customer",
     "primary_campaign": "701UR00000m5YjoYAE",
     "first_campaign": "701UR00000m5YjoYAE",
     "last_campaign": "701UR00000m5YjoYAE",
@@ -10278,10 +11162,23 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Salesforce DevOps",
-    "lead_source": "Not set",
+    "lead_source": "Existing Customer",
     "primary_campaign": "701UR00000m5YjoYAE",
     "first_campaign": "701UR00000m5YjoYAE",
     "last_campaign": "701UR00000m5YjoYAE",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-20",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Salesforce DevOps, Forge, Platform",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "701UR00000GQv9WYAT",
+    "last_campaign": "701UR00000GQv9WYAT",
     "bucket": "Marketing sourced"
    },
    {
@@ -10291,7 +11188,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 50000,
     "product": "Not named in the deal",
-    "lead_source": "Not set",
+    "lead_source": "Existing Customer",
     "primary_campaign": "701UR00000ottC3YAI",
     "first_campaign": "701UR00000ottC3YAI",
     "last_campaign": "701UR00000ottC3YAI",
@@ -10300,14 +11197,209 @@
    {
     "date": "2026-05-21",
     "status": "Open",
-    "stage": "2 Demo",
+    "stage": "1 Meeting",
     "pipeline": "Salesforce - Direct",
     "amount": 75000,
     "product": "Salesforce DevOps",
-    "lead_source": "Not set",
+    "lead_source": "AE Outreach+Unassigned",
     "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "701UR00000mlOjCYAU",
     "last_campaign": "701UR00000mlOjCYAU",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-26",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-26",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partners",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-26",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-26",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-26",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-29",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-05-29",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "Partners",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-01",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 50000,
+    "product": "Forge",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Salesforce DevOps",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 50000,
+    "product": "Forge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000qVfPHYA0",
+    "first_campaign": "701UR00000qVfPHYA0",
+    "last_campaign": "701UR00000qVfPHYA0",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Open",
+    "stage": "4 Business Case",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-03",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 73750,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-05",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10317,7 +11409,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "Forge",
-    "lead_source": "Not set",
+    "lead_source": "Referrals",
     "primary_campaign": "701UR00000qVfPHYA0",
     "first_campaign": "701UR00000qVfPHYA0",
     "last_campaign": "701UR00000qVfPHYA0",
@@ -10330,8 +11422,8 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Forge, Unified Insights",
-    "lead_source": "Not set",
-    "primary_campaign": "701UR00000nwQKXYA2",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
     "first_campaign": "7014Q000002aJSeQAM",
     "last_campaign": "701UR00000nwQKXYA2",
     "bucket": "Marketing sourced"
@@ -10343,11 +11435,11 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Forge",
-    "lead_source": "Events",
-    "primary_campaign": "",
+    "lead_source": "Referrals",
+    "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-06-11",
@@ -10356,8 +11448,99 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Unified Insights",
-    "lead_source": "Events",
+    "lead_source": "Referrals",
     "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-11",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 250000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-11",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 45360,
+    "product": "Unified Insights, Platform, Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-24",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 497070,
+    "product": "Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-25",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 74175,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-25",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 74799,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-06-30",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 336000,
+    "product": "Not named in the deal",
+    "lead_source": "Partners",
+    "primary_campaign": "701UR00000qTFtmYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-01",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Agents",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10370,7 +11553,7 @@
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
     "bucket": "Marketing sourced"
@@ -10382,7 +11565,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "BrickForge",
-    "lead_source": "cognism",
+    "lead_source": "SDR-Outreach",
     "primary_campaign": "701UR00000QP6jCYAT",
     "first_campaign": "",
     "last_campaign": "",
@@ -10396,9 +11579,22 @@
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10409,10 +11605,23 @@
     "amount": 125000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
+    "primary_campaign": "701UR00000rYkErYAK",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-10",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Forge",
+    "lead_source": "LinkedIn",
+    "primary_campaign": "701UR00000iAoewYAC",
+    "first_campaign": "701UR00000mAat3YAC",
+    "last_campaign": "701UR00000iAoewYAC",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-07-10",
@@ -10428,6 +11637,32 @@
     "bucket": "Marketing sourced"
    },
    {
+    "date": "2026-07-10",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 74850,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-10",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 73752,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
     "date": "2026-07-13",
     "status": "Lost",
     "stage": "8 ClosedLost",
@@ -10435,7 +11670,7 @@
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "701UR00000sUXFaYAO",
+    "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
     "bucket": "Marketing sourced"
@@ -10443,14 +11678,66 @@
    {
     "date": "2026-07-13",
     "status": "Open",
-    "stage": "2 Demo",
+    "stage": "1 Meeting",
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-15",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 350000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-15",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 73750,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-15",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Tech. Partner",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-15",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 0,
+    "product": "Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10464,6 +11751,19 @@
     "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-07-17",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10487,7 +11787,7 @@
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "primary_campaign": "701UR00000rYkErYAK",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
     "bucket": "Marketing sourced"
@@ -10499,10 +11799,75 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "BrickForge",
-    "lead_source": "Purchased List",
+    "lead_source": "SDR-Outreach",
     "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "701UR00000rYkErYAK",
     "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-03",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000000vySaAAI",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-04",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Unified Insights",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-04",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-10",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-11",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 125000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10512,8 +11877,34 @@
     "pipeline": "Salesforce - Direct",
     "amount": 268000,
     "product": "Forge",
-    "lead_source": "SDR-Outreach",
+    "lead_source": "Existing Customer",
     "primary_campaign": "701UR00000qIvczYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-12",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "BrickForge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000rYkErYAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-12",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10521,14 +11912,27 @@
    {
     "date": "2026-08-13",
     "status": "Open",
-    "stage": "3 POC",
+    "stage": "1 Meeting",
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Copilot",
-    "lead_source": "Marketing",
-    "primary_campaign": "701UR00000nwQKXYA2",
+    "lead_source": "Contact Us / Demo Request",
+    "primary_campaign": "7014Q000002aJSeQAM",
     "first_campaign": "7014Q000002aJSeQAM",
     "last_campaign": "701UR00000nwQKXYA2",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-18",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
     "bucket": "Marketing sourced"
    },
    {
@@ -10539,10 +11943,192 @@
     "amount": 100000,
     "product": "BrickForge",
     "lead_source": "Events",
-    "primary_campaign": "",
+    "primary_campaign": "701UR00000rYkErYAK",
+    "first_campaign": "701UR00000rYkErYAK",
+    "last_campaign": "701UR00000rYkErYAK",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-21",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-21",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Not named in the deal",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-21",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-25",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000000vySaAAI",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 0,
+    "product": "Salesforce DevOps",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 446176,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 156443,
+    "product": "Platform",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 94500,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 113400,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 45360,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 1858245,
+    "product": "Salesforce DevOps",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-26",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 134533,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-08-27",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "Platform, Pipelines",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-09-01",
@@ -10551,8 +12137,47 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Unified Insights",
-    "lead_source": "cognism",
+    "lead_source": "SDR-Outreach",
     "primary_campaign": "701UR00000QP6jCYAT",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 2500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000mHkqpYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-08",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Referrals",
+    "primary_campaign": "701UR00000qTFtmYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-09",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10564,11 +12189,37 @@
     "pipeline": "Salesforce - Direct",
     "amount": 30000,
     "product": "Unified Insights, Pipelines",
-    "lead_source": "Marketing",
-    "primary_campaign": "",
+    "lead_source": "Contact Us / Demo Request",
+    "primary_campaign": "7014Q000002aJSeQAM",
+    "first_campaign": "7014Q000002aJSeQAM",
+    "last_campaign": "7014Q000002aJSeQAM",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-09",
+    "status": "Open",
+    "stage": "4 Business Case",
+    "pipeline": "Salesforce - Direct",
+    "amount": 2500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-09",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 1000000,
+    "product": "Forge, Platform",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-09-11",
@@ -10577,11 +12228,37 @@
     "pipeline": "Salesforce - Direct",
     "amount": 100000,
     "product": "Not named in the deal",
-    "lead_source": "Marketing",
-    "primary_campaign": "",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-11",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 250000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-11",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 188000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-09-15",
@@ -10590,11 +12267,24 @@
     "pipeline": "Salesforce - Direct",
     "amount": 0,
     "product": "Not named in the deal",
-    "lead_source": "Marketing",
-    "primary_campaign": "",
+    "lead_source": "SDR-Outreach",
+    "primary_campaign": "701UR00000oLnVZYA0",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-22",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 700000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001HDukAAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-09-23",
@@ -10604,10 +12294,10 @@
     "amount": 100000,
     "product": "Forge",
     "lead_source": "Events",
-    "primary_campaign": "",
-    "first_campaign": "",
-    "last_campaign": "",
-    "bucket": "Sales only"
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "7014Q000002aJd5QAE",
+    "last_campaign": "7014Q000002aJd5QAE",
+    "bucket": "Marketing sourced"
    },
    {
     "date": "2026-09-24",
@@ -10616,8 +12306,190 @@
     "pipeline": "Salesforce - Direct",
     "amount": 588000,
     "product": "Not named in the deal",
-    "lead_source": "Purchased List",
+    "lead_source": "Existing Customer",
     "primary_campaign": "701UR00000pYaGbYAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-24",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 497070,
+    "product": "Pipelines",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-24",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "Salesforce DevOps, Forge",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-24",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 300000,
+    "product": "Not named in the deal",
+    "lead_source": "Referrals",
+    "primary_campaign": "701UR00000qTFtmYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-24",
+    "status": "Open",
+    "stage": "5 Procurement",
+    "pipeline": "Salesforce - Direct",
+    "amount": 107000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-28",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 375000,
+    "product": "Forge, Unified Insights",
+    "lead_source": "Referrals",
+    "primary_campaign": "701UR00000qTFtmYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-28",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 750000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-28",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge, Platform",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge, Platform",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 74400,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-09-29",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 74400,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10629,8 +12501,73 @@
     "pipeline": "Salesforce - Direct",
     "amount": 200000,
     "product": "Forge, Pipelines",
-    "lead_source": "cognism",
-    "primary_campaign": "701UR00000ntYrIYAU",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Salesforce DevOps, Forge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-06",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Salesforce DevOps",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10642,7 +12579,7 @@
     "pipeline": "Salesforce - Direct",
     "amount": 0,
     "product": "Unified Insights",
-    "lead_source": "Marketing",
+    "lead_source": "Partners",
     "primary_campaign": "701UR00000oPGjAYAW",
     "first_campaign": "",
     "last_campaign": "",
@@ -10655,8 +12592,8 @@
     "pipeline": "Salesforce - Direct",
     "amount": 0,
     "product": "Forge",
-    "lead_source": "Zoominfo",
-    "primary_campaign": "701UR00000QjG85YAF",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000mlOjCYAU",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10668,8 +12605,8 @@
     "pipeline": "Salesforce - Direct",
     "amount": 150000,
     "product": "Salesforce DevOps",
-    "lead_source": "Marketing",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "lead_source": "Contact Us / Demo Request",
+    "primary_campaign": "7014Q000002aJSeQAM",
     "first_campaign": "7014Q000002aJSeQAM",
     "last_campaign": "7014Q000002aJSeQAM",
     "bucket": "Marketing sourced"
@@ -10685,6 +12622,214 @@
     "primary_campaign": "701UR00000QP6jCYAT",
     "first_campaign": "701UR00000QP6jCYAT",
     "last_campaign": "701UR00000QP6jCYAT",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-07",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 100000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 250000,
+    "product": "Unified Insights",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-08",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Platform",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "5 Procurement",
+    "pipeline": "Salesforce - Direct",
+    "amount": 991875,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "4 Business Case",
+    "pipeline": "Salesforce - Direct",
+    "amount": 1700000,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 1248000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 1000000,
+    "product": "Not named in the deal",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000000vySaAAI",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Referrals",
+    "primary_campaign": "7014Q000002aJSeQAM",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Not named in the deal",
+    "lead_source": "Referrals",
+    "primary_campaign": "7014Q000002aJSeQAM",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-15",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Not named in the deal",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-22",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 0,
+    "product": "Salesforce DevOps, Platform",
+    "lead_source": "AE Outreach+Unassigned",
+    "primary_campaign": "701UR00000mlOjCYAU",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-10-23",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Direct",
+    "amount": 0,
+    "product": "Not named in the deal",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000v6SqPYAU",
+    "first_campaign": "701UR00000v6SqPYAU",
+    "last_campaign": "701UR00000v6SqPYAU",
     "bucket": "Marketing sourced"
    },
    {
@@ -10707,8 +12852,73 @@
     "pipeline": "Salesforce - Direct",
     "amount": 200000,
     "product": "Forge",
-    "lead_source": "Marketing",
-    "primary_campaign": "701UR00000oLnVZYA0",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701jh000001H7CdAAK",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-03",
+    "status": "Won",
+    "stage": "7 ClosedWon",
+    "pipeline": "Salesforce - Direct",
+    "amount": 75000,
+    "product": "Forge",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701jh000001H2wvAAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-03",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 500000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701jh000001HDukAAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-04",
+    "status": "Open",
+    "stage": "2 Demo",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-04",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Events",
+    "primary_campaign": "701UR00000wNPynYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-04",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 400000,
+    "product": "Forge",
+    "lead_source": "Referrals",
+    "primary_campaign": "701UR00000qTFtmYAG",
     "first_campaign": "",
     "last_campaign": "",
     "bucket": "Marketing sourced"
@@ -10721,10 +12931,270 @@
     "amount": 0,
     "product": "Forge",
     "lead_source": "Events",
-    "primary_campaign": "",
+    "primary_campaign": "701UR00000wNPynYAG",
     "first_campaign": "",
     "last_campaign": "",
-    "bucket": "Sales only"
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-06",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 50000,
+    "product": "Salesforce DevOps",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 50000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Lost",
+    "stage": "8 ClosedLost",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 198720,
+    "product": "Unified Insights",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "03 Renewal Evaluation",
+    "pipeline": "Salesforce - Renewal",
+    "amount": 75000,
+    "product": "Forge, Platform",
+    "lead_source": "Existing Customer",
+    "primary_campaign": "701UR00000BUxXNYA1",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 150000,
+    "product": "Forge",
+    "lead_source": "Partner Deal Reg",
+    "primary_campaign": "701UR00000oTvaoYAC",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-16",
+    "status": "Open",
+    "stage": "3 POC",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Partners",
+    "primary_campaign": "701UR00000qTFtmYAG",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
+   },
+   {
+    "date": "2026-11-17",
+    "status": "Open",
+    "stage": "1 Meeting",
+    "pipeline": "Salesforce - Direct",
+    "amount": 200000,
+    "product": "Forge",
+    "lead_source": "Third Party Vendors",
+    "primary_campaign": "701UR00000cNIUbYAO",
+    "first_campaign": "",
+    "last_campaign": "",
+    "bucket": "Marketing sourced"
    }
   ]
  },
@@ -10732,7 +13202,7 @@
   "error": null,
   "rows": [
    {
-    "people": 96909,
+    "people": 97844,
     "kind": "Active",
     "updated_on": "2026-11-02",
     "words": [
@@ -10742,7 +13212,7 @@
     ]
    },
    {
-    "people": 85689,
+    "people": 86110,
     "kind": "Active",
     "updated_on": "2026-07-02",
     "words": [
@@ -10754,7 +13224,7 @@
     ]
    },
    {
-    "people": 82537,
+    "people": 82306,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -10766,7 +13236,7 @@
     ]
    },
    {
-    "people": 67409,
+    "people": 67686,
     "kind": "Active",
     "updated_on": "2026-07-17",
     "words": [
@@ -10774,7 +13244,7 @@
     ]
    },
    {
-    "people": 63693,
+    "people": 64238,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -10788,7 +13258,7 @@
     ]
    },
    {
-    "people": 56631,
+    "people": 56753,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -10802,7 +13272,18 @@
     ]
    },
    {
-    "people": 53838,
+    "people": 55276,
+    "kind": "Active",
+    "updated_on": "2026-11-24",
+    "words": [
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "6d48538c"
+    ]
+   },
+   {
+    "people": 54076,
     "kind": "Active",
     "updated_on": "2026-06-08",
     "words": [
@@ -10811,7 +13292,7 @@
     ]
    },
    {
-    "people": 53666,
+    "people": 53387,
     "kind": "Active",
     "updated_on": "2026-04-27",
     "words": [
@@ -10821,7 +13302,7 @@
     ]
    },
    {
-    "people": 50751,
+    "people": 51021,
     "kind": "Active",
     "updated_on": "2026-04-22",
     "words": [
@@ -10830,7 +13311,7 @@
     ]
    },
    {
-    "people": 46475,
+    "people": 46648,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10842,7 +13323,7 @@
     ]
    },
    {
-    "people": 36385,
+    "people": 36466,
     "kind": "Active",
     "updated_on": "2026-10-16",
     "words": [
@@ -10852,7 +13333,7 @@
     ]
    },
    {
-    "people": 33849,
+    "people": 33965,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -10865,7 +13346,7 @@
     ]
    },
    {
-    "people": 32850,
+    "people": 32802,
     "kind": "Active",
     "updated_on": "2026-05-21",
     "words": [
@@ -10875,7 +13356,7 @@
     ]
    },
    {
-    "people": 31772,
+    "people": 31889,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -10884,7 +13365,7 @@
     ]
    },
    {
-    "people": 25883,
+    "people": 26767,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -10896,7 +13377,7 @@
     ]
    },
    {
-    "people": 24479,
+    "people": 24432,
     "kind": "Active",
     "updated_on": "2026-04-23",
     "words": [
@@ -10909,7 +13390,17 @@
     ]
    },
    {
-    "people": 20648,
+    "people": 21893,
+    "kind": "Active",
+    "updated_on": "2026-11-23",
+    "words": [
+     "7d1fb3a2",
+     "0cfb455b",
+     "0cfb5881"
+    ]
+   },
+   {
+    "people": 21396,
     "kind": "Active",
     "updated_on": "2026-08-17",
     "words": [
@@ -10919,7 +13410,7 @@
     ]
    },
    {
-    "people": 19863,
+    "people": 19862,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -10929,7 +13420,7 @@
     ]
    },
    {
-    "people": 19296,
+    "people": 19301,
     "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
@@ -10941,7 +13432,7 @@
     ]
    },
    {
-    "people": 18207,
+    "people": 18201,
     "kind": "Active",
     "updated_on": "2026-11-04",
     "words": [
@@ -10952,7 +13443,7 @@
     ]
    },
    {
-    "people": 15536,
+    "people": 15514,
     "kind": "Active",
     "updated_on": "2026-04-29",
     "words": [
@@ -10964,7 +13455,7 @@
     ]
    },
    {
-    "people": 12601,
+    "people": 13524,
     "kind": "Active",
     "updated_on": "2026-06-23",
     "words": [
@@ -10973,7 +13464,7 @@
     ]
    },
    {
-    "people": 12601,
+    "people": 13524,
     "kind": "Active",
     "updated_on": "2026-06-19",
     "words": [
@@ -10983,7 +13474,7 @@
     ]
    },
    {
-    "people": 11789,
+    "people": 11831,
     "kind": "Active",
     "updated_on": "2026-04-21",
     "words": [
@@ -10995,7 +13486,7 @@
     ]
    },
    {
-    "people": 11281,
+    "people": 11211,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -11004,7 +13495,7 @@
     ]
    },
    {
-    "people": 10427,
+    "people": 10597,
     "kind": "Active",
     "updated_on": "2026-08-19",
     "words": [
@@ -11017,26 +13508,7 @@
     ]
    },
    {
-    "people": 9710,
-    "kind": "Active",
-    "updated_on": "2026-05-29",
-    "words": [
-     "f2200e9f",
-     "831eb2f4"
-    ]
-   },
-   {
-    "people": 9703,
-    "kind": "Active",
-    "updated_on": "2026-07-06",
-    "words": [
-     "f2200e9f",
-     "28999611",
-     "37968efd"
-    ]
-   },
-   {
-    "people": 9596,
+    "people": 10320,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -11046,7 +13518,26 @@
     ]
    },
    {
-    "people": 9594,
+    "people": 10043,
+    "kind": "Active",
+    "updated_on": "2026-05-29",
+    "words": [
+     "f2200e9f",
+     "831eb2f4"
+    ]
+   },
+   {
+    "people": 9723,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "f2200e9f",
+     "28999611",
+     "37968efd"
+    ]
+   },
+   {
+    "people": 9608,
     "kind": "Active",
     "updated_on": "2026-09-09",
     "words": [
@@ -11057,20 +13548,7 @@
     ]
    },
    {
-    "people": 8473,
-    "kind": "Active",
-    "updated_on": "2026-10-19",
-    "words": [
-     "22dc7932",
-     "78ebc7f6",
-     "13254bc4",
-     "37968efd",
-     "d6e12155",
-     "cedcb8f0"
-    ]
-   },
-   {
-    "people": 8447,
+    "people": 8516,
     "kind": "Active",
     "updated_on": "2026-09-18",
     "words": [
@@ -11084,6 +13562,19 @@
     ]
    },
    {
+    "people": 8495,
+    "kind": "Active",
+    "updated_on": "2026-10-19",
+    "words": [
+     "22dc7932",
+     "78ebc7f6",
+     "13254bc4",
+     "37968efd",
+     "d6e12155",
+     "cedcb8f0"
+    ]
+   },
+   {
     "people": 8420,
     "kind": "Active",
     "updated_on": "2026-04-23",
@@ -11093,7 +13584,7 @@
     ]
    },
    {
-    "people": 8149,
+    "people": 8353,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -11101,6 +13592,16 @@
      "4f516a81",
      "87e1198f",
      "a229d2ec"
+    ]
+   },
+   {
+    "people": 7035,
+    "kind": "Active",
+    "updated_on": "2026-10-30",
+    "words": [
+     "7d1fb3a2",
+     "bed023b3",
+     "37e24810"
     ]
    },
    {
@@ -11115,7 +13616,7 @@
     ]
    },
    {
-    "people": 6779,
+    "people": 6829,
     "kind": "Active",
     "updated_on": "2026-09-21",
     "words": [
@@ -11127,7 +13628,7 @@
     ]
    },
    {
-    "people": 6551,
+    "people": 6655,
     "kind": "Active",
     "updated_on": "2026-11-03",
     "words": [
@@ -11139,7 +13640,7 @@
     ]
    },
    {
-    "people": 6482,
+    "people": 6513,
     "kind": "Active",
     "updated_on": "2026-07-27",
     "words": [
@@ -11151,7 +13652,7 @@
     ]
    },
    {
-    "people": 6177,
+    "people": 6173,
     "kind": "Active",
     "updated_on": "2026-09-30",
     "words": [
@@ -11162,7 +13663,7 @@
     ]
    },
    {
-    "people": 5950,
+    "people": 5959,
     "kind": "Active",
     "updated_on": "2026-09-24",
     "words": [
@@ -11175,7 +13676,7 @@
     ]
    },
    {
-    "people": 5830,
+    "people": 5819,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -11186,7 +13687,7 @@
     ]
    },
    {
-    "people": 5765,
+    "people": 5786,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -11198,7 +13699,7 @@
     ]
    },
    {
-    "people": 5557,
+    "people": 5589,
     "kind": "Active",
     "updated_on": "2026-09-04",
     "words": [
@@ -11209,7 +13710,7 @@
     ]
    },
    {
-    "people": 5325,
+    "people": 5365,
     "kind": "Active",
     "updated_on": "2026-04-24",
     "words": [
@@ -11221,7 +13722,7 @@
     ]
    },
    {
-    "people": 5031,
+    "people": 5051,
     "kind": "Active",
     "updated_on": "2026-07-27",
     "words": [
@@ -11231,7 +13732,7 @@
     ]
    },
    {
-    "people": 4916,
+    "people": 4949,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -11245,7 +13746,7 @@
     ]
    },
    {
-    "people": 4823,
+    "people": 4898,
     "kind": "Active",
     "updated_on": "2026-06-22",
     "words": [
@@ -11253,6 +13754,18 @@
      "8c6e32a8",
      "63e1d819",
      "5a45cc6a"
+    ]
+   },
+   {
+    "people": 4882,
+    "kind": "Active",
+    "updated_on": "2026-06-24",
+    "words": [
+     "4bf4922d",
+     "d55997bc",
+     "a229d2ec",
+     "d22f9095",
+     "cedcb8f0"
     ]
    },
    {
@@ -11267,19 +13780,7 @@
     ]
    },
    {
-    "people": 4794,
-    "kind": "Active",
-    "updated_on": "2026-06-24",
-    "words": [
-     "4bf4922d",
-     "d55997bc",
-     "a229d2ec",
-     "d22f9095",
-     "cedcb8f0"
-    ]
-   },
-   {
-    "people": 4670,
+    "people": 4756,
     "kind": "Active",
     "updated_on": "2026-10-01",
     "words": [
@@ -11303,7 +13804,7 @@
     ]
    },
    {
-    "people": 4243,
+    "people": 4257,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -11327,7 +13828,7 @@
     ]
    },
    {
-    "people": 3794,
+    "people": 3817,
     "kind": "Active",
     "updated_on": "2026-06-05",
     "words": [
@@ -11339,7 +13840,7 @@
     ]
    },
    {
-    "people": 3764,
+    "people": 3765,
     "kind": "Active",
     "updated_on": "2026-10-08",
     "words": [
@@ -11350,7 +13851,29 @@
     ]
    },
    {
-    "people": 3524,
+    "people": 3670,
+    "kind": "Active",
+    "updated_on": "2026-06-30",
+    "words": [
+     "2ae5e1c3",
+     "e82bd96f",
+     "7afe4abf",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 3670,
+    "kind": "Active",
+    "updated_on": "2026-06-25",
+    "words": [
+     "50deaba7",
+     "e82bd96f",
+     "7afe4abf",
+     "d1c5907e"
+    ]
+   },
+   {
+    "people": 3590,
     "kind": "Active",
     "updated_on": "2026-06-24",
     "words": [
@@ -11375,29 +13898,17 @@
     ]
    },
    {
-    "people": 3414,
+    "people": 3186,
     "kind": "Active",
-    "updated_on": "2026-06-30",
+    "updated_on": "2026-08-12",
     "words": [
-     "2ae5e1c3",
-     "e82bd96f",
-     "7afe4abf",
-     "d1c5907e"
+     "e4350540",
+     "fce32734",
+     "40293d93"
     ]
    },
    {
-    "people": 3414,
-    "kind": "Active",
-    "updated_on": "2026-06-25",
-    "words": [
-     "50deaba7",
-     "e82bd96f",
-     "7afe4abf",
-     "d1c5907e"
-    ]
-   },
-   {
-    "people": 3188,
+    "people": 3184,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -11410,13 +13921,28 @@
     ]
    },
    {
-    "people": 3174,
+    "people": 3012,
     "kind": "Active",
-    "updated_on": "2026-08-12",
+    "updated_on": "2026-06-24",
     "words": [
-     "e4350540",
-     "fce32734",
-     "40293d93"
+     "4bf4922d",
+     "294fc75c",
+     "a229d2ec",
+     "d22f9095",
+     "8c6e32a8"
+    ]
+   },
+   {
+    "people": 3012,
+    "kind": "Active",
+    "updated_on": "2026-07-06",
+    "words": [
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "63e1d819",
+     "a229d2ec",
+     "d472dc59"
     ]
    },
    {
@@ -11497,7 +14023,18 @@
     ]
    },
    {
-    "people": 2626,
+    "people": 2621,
+    "kind": "Active",
+    "updated_on": "2026-08-21",
+    "words": [
+     "886f1733",
+     "7afe4abf",
+     "2fae3ec5",
+     "2ff4499c"
+    ]
+   },
+   {
+    "people": 2601,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -11508,17 +14045,17 @@
     ]
    },
    {
-    "people": 2619,
+    "people": 2597,
     "kind": "Active",
-    "updated_on": "2026-09-02",
+    "updated_on": "2026-06-12",
     "words": [
-     "89b29c10",
-     "e44f21fd",
-     "876fffdd",
-     "32608848",
-     "8a8753c7",
-     "0f5781a6",
-     "96e6b96b"
+     "cedcb8f0",
+     "0c4afe69",
+     "a7a31e55",
+     "866c8a43",
+     "0f29c2a6",
+     "be1a3784",
+     "949b51e3"
     ]
    },
    {
@@ -11535,21 +14072,21 @@
     ]
    },
    {
-    "people": 2570,
+    "people": 2593,
     "kind": "Active",
-    "updated_on": "2026-06-12",
+    "updated_on": "2026-09-02",
     "words": [
-     "cedcb8f0",
-     "0c4afe69",
-     "a7a31e55",
-     "866c8a43",
-     "0f29c2a6",
-     "be1a3784",
-     "949b51e3"
+     "89b29c10",
+     "e44f21fd",
+     "876fffdd",
+     "32608848",
+     "8a8753c7",
+     "0f5781a6",
+     "96e6b96b"
     ]
    },
    {
-    "people": 2534,
+    "people": 2541,
     "kind": "Active",
     "updated_on": "2026-07-10",
     "words": [
@@ -11562,7 +14099,18 @@
     ]
    },
    {
-    "people": 2495,
+    "people": 2540,
+    "kind": "Active",
+    "updated_on": "2026-05-29",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "e4c35bdc",
+     "337a0cca"
+    ]
+   },
+   {
+    "people": 2502,
     "kind": "Active",
     "updated_on": "2026-10-12",
     "words": [
@@ -11593,18 +14141,7 @@
     ]
    },
    {
-    "people": 2460,
-    "kind": "Active",
-    "updated_on": "2026-08-21",
-    "words": [
-     "886f1733",
-     "7afe4abf",
-     "2fae3ec5",
-     "2ff4499c"
-    ]
-   },
-   {
-    "people": 2419,
+    "people": 2435,
     "kind": "Active",
     "updated_on": "2026-09-10",
     "words": [
@@ -11614,7 +14151,7 @@
     ]
    },
    {
-    "people": 2404,
+    "people": 2414,
     "kind": "Active",
     "updated_on": "2026-06-10",
     "words": [
@@ -11624,17 +14161,6 @@
      "28999611",
      "e1ee7746",
      "ba85df6a"
-    ]
-   },
-   {
-    "people": 2396,
-    "kind": "Active",
-    "updated_on": "2026-05-29",
-    "words": [
-     "f2200e9f",
-     "831eb2f4",
-     "e4c35bdc",
-     "337a0cca"
     ]
    },
    {
@@ -11652,7 +14178,7 @@
     ]
    },
    {
-    "people": 2357,
+    "people": 2365,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -11680,38 +14206,13 @@
     ]
    },
    {
-    "people": 2263,
+    "people": 2261,
     "kind": "Active",
     "updated_on": "2026-05-22",
     "words": [
      "7812e25a",
      "cedcb8f0",
      "67c2444a"
-    ]
-   },
-   {
-    "people": 2126,
-    "kind": "Active",
-    "updated_on": "2026-06-24",
-    "words": [
-     "4bf4922d",
-     "294fc75c",
-     "a229d2ec",
-     "d22f9095",
-     "8c6e32a8"
-    ]
-   },
-   {
-    "people": 2126,
-    "kind": "Active",
-    "updated_on": "2026-07-06",
-    "words": [
-     "4bf4922d",
-     "8c6e32a8",
-     "0c4afe69",
-     "63e1d819",
-     "a229d2ec",
-     "d472dc59"
     ]
    },
    {
@@ -11727,6 +14228,19 @@
     ]
    },
    {
+    "people": 2006,
+    "kind": "Active",
+    "updated_on": "2026-09-08",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5",
+     "29b19c8a",
+     "06d73a77"
+    ]
+   },
+   {
     "people": 2000,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -11737,7 +14251,7 @@
     ]
    },
    {
-    "people": 1971,
+    "people": 1972,
     "kind": "Active",
     "updated_on": "2026-10-09",
     "words": [
@@ -11745,6 +14259,16 @@
      "00af55d7",
      "8c6e32a8",
      "37968efd"
+    ]
+   },
+   {
+    "people": 1970,
+    "kind": "Active",
+    "updated_on": "2026-08-19",
+    "words": [
+     "8c6e32a8",
+     "3ff21de3",
+     "f5674cd4"
     ]
    },
    {
@@ -11759,7 +14283,7 @@
     ]
    },
    {
-    "people": 1780,
+    "people": 1856,
     "kind": "Active",
     "updated_on": "2026-06-09",
     "words": [
@@ -11772,7 +14296,18 @@
     ]
    },
    {
-    "people": 1727,
+    "people": 1765,
+    "kind": "Active",
+    "updated_on": "2026-10-09",
+    "words": [
+     "1c8bcfa6",
+     "e44f21fd",
+     "876fffdd",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 1725,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -11783,17 +14318,6 @@
      "ba85df6a",
      "a8e99c47",
      "3b1787cc"
-    ]
-   },
-   {
-    "people": 1724,
-    "kind": "Active",
-    "updated_on": "2026-10-09",
-    "words": [
-     "1c8bcfa6",
-     "e44f21fd",
-     "876fffdd",
-     "cedcb8f0"
     ]
    },
    {
@@ -11824,7 +14348,19 @@
     ]
    },
    {
-    "people": 1454,
+    "people": 1480,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "f9befe96",
+     "0cfb5881",
+     "0f29c2a6",
+     "e82bd96f",
+     "4303b923"
+    ]
+   },
+   {
+    "people": 1449,
     "kind": "Active",
     "updated_on": "2026-07-24",
     "words": [
@@ -11833,7 +14369,7 @@
     ]
    },
    {
-    "people": 1440,
+    "people": 1427,
     "kind": "Active",
     "updated_on": "2026-04-08",
     "words": [
@@ -11845,7 +14381,7 @@
     ]
    },
    {
-    "people": 1394,
+    "people": 1396,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -11857,7 +14393,7 @@
     ]
    },
    {
-    "people": 1389,
+    "people": 1391,
     "kind": "Active",
     "updated_on": "2026-06-27",
     "words": [
@@ -11880,7 +14416,7 @@
     ]
    },
    {
-    "people": 1297,
+    "people": 1299,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -11902,7 +14438,31 @@
     ]
    },
    {
-    "people": 1244,
+    "people": 1275,
+    "kind": "Active",
+    "updated_on": "2026-09-02",
+    "words": [
+     "c09344de",
+     "827a7e1d",
+     "0f29c2a6",
+     "1e801cec",
+     "cedcb8f0",
+     "89e7fa47",
+     "3e63f834"
+    ]
+   },
+   {
+    "people": 1249,
+    "kind": "Active",
+    "updated_on": "2026-10-19",
+    "words": [
+     "1c8bcfa6",
+     "2edc649c",
+     "cedcb8f0"
+    ]
+   },
+   {
+    "people": 1241,
     "kind": "Active",
     "updated_on": "2026-08-04",
     "words": [
@@ -11914,17 +14474,7 @@
     ]
    },
    {
-    "people": 1238,
-    "kind": "Active",
-    "updated_on": "2026-10-19",
-    "words": [
-     "1c8bcfa6",
-     "2edc649c",
-     "cedcb8f0"
-    ]
-   },
-   {
-    "people": 1177,
+    "people": 1178,
     "kind": "Active",
     "updated_on": "2026-10-16",
     "words": [
@@ -11932,7 +14482,7 @@
     ]
    },
    {
-    "people": 1128,
+    "people": 1138,
     "kind": "Active",
     "updated_on": "2026-08-21",
     "words": [
@@ -11945,7 +14495,7 @@
     ]
    },
    {
-    "people": 1127,
+    "people": 1128,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -11963,44 +14513,28 @@
     ]
    },
    {
-    "people": 1108,
+    "people": 1063,
     "kind": "Active",
-    "updated_on": "2026-09-02",
+    "updated_on": "2026-06-02",
     "words": [
-     "c09344de",
-     "827a7e1d",
-     "0f29c2a6",
-     "1e801cec",
-     "cedcb8f0",
-     "89e7fa47",
-     "3e63f834"
+     "26bb595d",
+     "d472dc59",
+     "d6a2e186",
+     "0dc48142"
     ]
    },
    {
-    "people": 1107,
+    "people": 1061,
     "kind": "Active",
-    "updated_on": "2026-09-08",
+    "updated_on": "2026-10-13",
     "words": [
-     "8c6e32a8",
-     "b6f40207",
-     "fcefccca",
-     "d872e2a5",
-     "29b19c8a",
-     "06d73a77"
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
     ]
    },
    {
-    "people": 1091,
-    "kind": "Active",
-    "updated_on": "2026-08-19",
-    "words": [
-     "8c6e32a8",
-     "3ff21de3",
-     "f5674cd4"
-    ]
-   },
-   {
-    "people": 1076,
+    "people": 1052,
     "kind": "Active",
     "updated_on": "2026-04-13",
     "words": [
@@ -12012,24 +14546,15 @@
     ]
    },
    {
-    "people": 1066,
+    "people": 1013,
     "kind": "Active",
-    "updated_on": "2026-06-02",
+    "updated_on": "2026-04-08",
     "words": [
-     "26bb595d",
-     "d472dc59",
-     "d6a2e186",
-     "0dc48142"
-    ]
-   },
-   {
-    "people": 1053,
-    "kind": "Active",
-    "updated_on": "2026-10-13",
-    "words": [
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
+     "e82bd96f",
+     "4303b923",
+     "7a968ed4",
+     "0c4afe69",
+     "1a947346"
     ]
    },
    {
@@ -12042,18 +14567,6 @@
      "425d3ac5",
      "fc97cde5",
      "c8f069e0"
-    ]
-   },
-   {
-    "people": 988,
-    "kind": "Active",
-    "updated_on": "2026-04-08",
-    "words": [
-     "e82bd96f",
-     "4303b923",
-     "7a968ed4",
-     "0c4afe69",
-     "1a947346"
     ]
    },
    {
@@ -12083,18 +14596,7 @@
     ]
    },
    {
-    "people": 959,
-    "kind": "Active",
-    "updated_on": "2026-08-21",
-    "words": [
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "6d48538c"
-    ]
-   },
-   {
-    "people": 957,
+    "people": 945,
     "kind": "Active",
     "updated_on": "2026-10-12",
     "words": [
@@ -12102,6 +14604,15 @@
      "2edc649c",
      "40293d93",
      "c54cb882"
+    ]
+   },
+   {
+    "people": 930,
+    "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "e5a4f945",
+     "e367307e"
     ]
    },
    {
@@ -12117,28 +14628,7 @@
     ]
    },
    {
-    "people": 916,
-    "kind": "Active",
-    "updated_on": "2026-09-01",
-    "words": [
-     "e5a4f945",
-     "e367307e"
-    ]
-   },
-   {
-    "people": 914,
-    "kind": "Active",
-    "updated_on": "2026-04-23",
-    "words": [
-     "f9befe96",
-     "0cfb5881",
-     "0f29c2a6",
-     "e82bd96f",
-     "4303b923"
-    ]
-   },
-   {
-    "people": 895,
+    "people": 892,
     "kind": "Active",
     "updated_on": "2026-07-31",
     "words": [
@@ -12164,7 +14654,7 @@
     ]
    },
    {
-    "people": 852,
+    "people": 853,
     "kind": "Active",
     "updated_on": "2026-09-21",
     "words": [
@@ -12176,7 +14666,7 @@
     ]
    },
    {
-    "people": 839,
+    "people": 838,
     "kind": "Active",
     "updated_on": "2026-10-28",
     "words": [
@@ -12187,7 +14677,7 @@
     ]
    },
    {
-    "people": 834,
+    "people": 827,
     "kind": "Active",
     "updated_on": "2026-06-02",
     "words": [
@@ -12200,7 +14690,7 @@
     ]
    },
    {
-    "people": 810,
+    "people": 815,
     "kind": "Active",
     "updated_on": "2026-07-13",
     "words": [
@@ -12222,13 +14712,14 @@
     ]
    },
    {
-    "people": 711,
+    "people": 662,
     "kind": "Active",
-    "updated_on": "2026-10-30",
+    "updated_on": "2026-07-24",
     "words": [
-     "7d1fb3a2",
-     "bed023b3",
-     "37e24810"
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
     ]
    },
    {
@@ -12249,18 +14740,7 @@
     ]
    },
    {
-    "people": 641,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "39a21e9b",
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
-    ]
-   },
-   {
-    "people": 639,
+    "people": 649,
     "kind": "Static",
     "updated_on": "2026-11-12",
     "words": [
@@ -12270,6 +14750,17 @@
      "8cae6ffc",
      "1b6e7dc9",
      "34d03e9c"
+    ]
+   },
+   {
+    "people": 643,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "39a21e9b",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
     ]
    },
    {
@@ -12330,6 +14821,17 @@
     ]
    },
    {
+    "people": 510,
+    "kind": "Active",
+    "updated_on": "2026-07-16",
+    "words": [
+     "89b29c10",
+     "ac8c5c51",
+     "95cd8075",
+     "3757b0a1"
+    ]
+   },
+   {
     "people": 508,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -12340,12 +14842,22 @@
     ]
    },
    {
-    "people": 507,
+    "people": 508,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
      "c09344de",
      "7881bafe"
+    ]
+   },
+   {
+    "people": 507,
+    "kind": "Active",
+    "updated_on": "2026-11-02",
+    "words": [
+     "89b29c10",
+     "e548412c",
+     "ac8c5c51"
     ]
    },
    {
@@ -12381,7 +14893,7 @@
     ]
    },
    {
-    "people": 485,
+    "people": 486,
     "kind": "Active",
     "updated_on": "2026-05-20",
     "words": [
@@ -12425,7 +14937,7 @@
     ]
    },
    {
-    "people": 455,
+    "people": 456,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -12459,28 +14971,6 @@
     ]
    },
    {
-    "people": 438,
-    "kind": "Active",
-    "updated_on": "2026-07-24",
-    "words": [
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "9b759fb9"
-    ]
-   },
-   {
-    "people": 433,
-    "kind": "Active",
-    "updated_on": "2026-07-16",
-    "words": [
-     "89b29c10",
-     "ac8c5c51",
-     "95cd8075",
-     "3757b0a1"
-    ]
-   },
-   {
     "people": 430,
     "kind": "Active",
     "updated_on": "2026-08-11",
@@ -12492,13 +14982,15 @@
     ]
    },
    {
-    "people": 429,
+    "people": 427,
     "kind": "Active",
-    "updated_on": "2026-11-02",
+    "updated_on": "2026-06-30",
     "words": [
-     "89b29c10",
-     "e548412c",
-     "ac8c5c51"
+     "886f1733",
+     "7afe4abf",
+     "54eed4d0",
+     "0c4afe69",
+     "2fae3ec5"
     ]
    },
    {
@@ -12550,18 +15042,6 @@
     ]
    },
    {
-    "people": 391,
-    "kind": "Active",
-    "updated_on": "2026-06-30",
-    "words": [
-     "886f1733",
-     "7afe4abf",
-     "54eed4d0",
-     "0c4afe69",
-     "2fae3ec5"
-    ]
-   },
-   {
     "people": 381,
     "kind": "Active",
     "updated_on": "2026-08-31",
@@ -12605,7 +15085,7 @@
     ]
    },
    {
-    "people": 369,
+    "people": 370,
     "kind": "Active",
     "updated_on": "2026-08-11",
     "words": [
@@ -12634,7 +15114,7 @@
     ]
    },
    {
-    "people": 355,
+    "people": 358,
     "kind": "Active",
     "updated_on": "2026-04-01",
     "words": [
@@ -12643,6 +15123,16 @@
      "aefd3536",
      "3eaa09b2",
      "4058c747"
+    ]
+   },
+   {
+    "people": 348,
+    "kind": "Active",
+    "updated_on": "2026-08-11",
+    "words": [
+     "c09344de",
+     "9151aa80",
+     "094b363d"
     ]
    },
    {
@@ -12667,17 +15157,7 @@
     ]
    },
    {
-    "people": 346,
-    "kind": "Active",
-    "updated_on": "2026-08-11",
-    "words": [
-     "c09344de",
-     "9151aa80",
-     "094b363d"
-    ]
-   },
-   {
-    "people": 343,
+    "people": 344,
     "kind": "Active",
     "updated_on": "2026-10-29",
     "words": [
@@ -12727,34 +15207,6 @@
     ]
    },
    {
-    "people": 321,
-    "kind": "Active",
-    "updated_on": "2026-06-22",
-    "words": [
-     "31ed74bb",
-     "82416065"
-    ]
-   },
-   {
-    "people": 321,
-    "kind": "Active",
-    "updated_on": "2026-08-27",
-    "words": [
-     "31ed74bb",
-     "420372be"
-    ]
-   },
-   {
-    "people": 321,
-    "kind": "Active",
-    "updated_on": "2026-07-01",
-    "words": [
-     "0746795c",
-     "7a968ed4",
-     "420372be"
-    ]
-   },
-   {
     "people": 320,
     "kind": "Active",
     "updated_on": "2026-05-08",
@@ -12793,6 +15245,17 @@
     ]
    },
    {
+    "people": 315,
+    "kind": "Active",
+    "updated_on": "2026-08-31",
+    "words": [
+     "6db76eef",
+     "9b0f2144",
+     "a4bdaa19",
+     "cedcb8f0"
+    ]
+   },
+   {
     "people": 312,
     "kind": "Active",
     "updated_on": "2026-07-20",
@@ -12805,18 +15268,7 @@
     ]
    },
    {
-    "people": 306,
-    "kind": "Active",
-    "updated_on": "2026-08-31",
-    "words": [
-     "6db76eef",
-     "9b0f2144",
-     "a4bdaa19",
-     "cedcb8f0"
-    ]
-   },
-   {
-    "people": 302,
+    "people": 303,
     "kind": "Active",
     "updated_on": "2026-08-26",
     "words": [
@@ -12857,7 +15309,7 @@
     ]
    },
    {
-    "people": 282,
+    "people": 279,
     "kind": "Active",
     "updated_on": "2026-06-05",
     "words": [
@@ -12893,6 +15345,15 @@
    },
    {
     "people": 258,
+    "kind": "Static",
+    "updated_on": "2026-11-23",
+    "words": [
+     "89b29c10",
+     "5e7cc513"
+    ]
+   },
+   {
+    "people": 258,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -12924,7 +15385,16 @@
     ]
    },
    {
-    "people": 238,
+    "people": 249,
+    "kind": "Active",
+    "updated_on": "2026-10-30",
+    "words": [
+     "7d1fb3a2",
+     "21a84740"
+    ]
+   },
+   {
+    "people": 240,
     "kind": "Active",
     "updated_on": "2026-04-15",
     "words": [
@@ -13038,7 +15508,7 @@
     ]
    },
    {
-    "people": 216,
+    "people": 215,
     "kind": "Active",
     "updated_on": "2026-10-16",
     "words": [
@@ -13062,7 +15532,18 @@
     ]
    },
    {
-    "people": 197,
+    "people": 202,
+    "kind": "Active",
+    "updated_on": "2026-05-01",
+    "words": [
+     "3dddb9fd",
+     "00e27e4b",
+     "37968efd",
+     "aa62e8bc"
+    ]
+   },
+   {
+    "people": 201,
     "kind": "Active",
     "updated_on": "2026-06-03",
     "words": [
@@ -13072,7 +15553,19 @@
     ]
    },
    {
-    "people": 195,
+    "people": 200,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4bf4922d",
+     "cedcb8f0",
+     "0c4afe69",
+     "04d092fd",
+     "67826267"
+    ]
+   },
+   {
+    "people": 198,
     "kind": "Active",
     "updated_on": "2026-06-15",
     "words": [
@@ -13084,14 +15577,15 @@
     ]
    },
    {
-    "people": 195,
+    "people": 197,
     "kind": "Active",
-    "updated_on": "2026-05-01",
+    "updated_on": "2026-08-27",
     "words": [
-     "3dddb9fd",
-     "00e27e4b",
-     "37968efd",
-     "aa62e8bc"
+     "4bf4922d",
+     "8c6e32a8",
+     "0c4afe69",
+     "04d092fd",
+     "67826267"
     ]
    },
    {
@@ -13118,27 +15612,26 @@
     ]
    },
    {
-    "people": 191,
+    "people": 190,
     "kind": "Active",
-    "updated_on": "2026-08-27",
+    "updated_on": "2026-07-06",
     "words": [
-     "4bf4922d",
+     "f2200e9f",
      "8c6e32a8",
-     "0c4afe69",
-     "04d092fd",
-     "67826267"
+     "63e1d819",
+     "5a45cc6a",
+     "f691d28a"
     ]
    },
    {
-    "people": 191,
-    "kind": "Active",
-    "updated_on": "2026-10-08",
+    "people": 189,
+    "kind": "Static",
+    "updated_on": "2026-11-23",
     "words": [
-     "4bf4922d",
-     "cedcb8f0",
-     "0c4afe69",
-     "04d092fd",
-     "67826267"
+     "4a250888",
+     "bdf0855a",
+     "c980019c",
+     "cedcb8f0"
     ]
    },
    {
@@ -13167,7 +15660,7 @@
     ]
    },
    {
-    "people": 171,
+    "people": 172,
     "kind": "Active",
     "updated_on": "2026-04-14",
     "words": [
@@ -13178,7 +15671,7 @@
     ]
    },
    {
-    "people": 166,
+    "people": 167,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -13196,7 +15689,7 @@
     ]
    },
    {
-    "people": 162,
+    "people": 161,
     "kind": "Active",
     "updated_on": "2026-05-01",
     "words": [
@@ -13220,23 +15713,25 @@
     ]
    },
    {
-    "people": 155,
+    "people": 159,
+    "kind": "Active",
+    "updated_on": "2026-11-18",
+    "words": [
+     "f2200e9f",
+     "63e1d819",
+     "abf095df",
+     "06755279",
+     "cfdb2d7c",
+     "7d1fb3a2"
+    ]
+   },
+   {
+    "people": 156,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
      "c00af369",
      "e367307e"
-    ]
-   },
-   {
-    "people": 154,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "416aec5d",
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
     ]
    },
    {
@@ -13261,7 +15756,18 @@
     ]
    },
    {
-    "people": 146,
+    "people": 153,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "416aec5d",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
+    ]
+   },
+   {
+    "people": 149,
     "kind": "Active",
     "updated_on": "2026-09-18",
     "words": [
@@ -13366,7 +15872,7 @@
     ]
    },
    {
-    "people": 131,
+    "people": 132,
     "kind": "Active",
     "updated_on": "2026-05-28",
     "words": [
@@ -13375,6 +15881,17 @@
      "4d34ee21",
      "a229d2ec",
      "328f4c1e"
+    ]
+   },
+   {
+    "people": 130,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "1c8bcfa6",
+     "877f0914",
+     "4bd02db4",
+     "cf381ba3"
     ]
    },
    {
@@ -13389,18 +15906,7 @@
     ]
    },
    {
-    "people": 128,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "1c8bcfa6",
-     "877f0914",
-     "4bd02db4",
-     "cf381ba3"
-    ]
-   },
-   {
-    "people": 126,
+    "people": 127,
     "kind": "Active",
     "updated_on": "2026-06-02",
     "words": [
@@ -13408,18 +15914,6 @@
      "a3f90171",
      "621caf0e",
      "0dc48142"
-    ]
-   },
-   {
-    "people": 124,
-    "kind": "Active",
-    "updated_on": "2026-07-06",
-    "words": [
-     "f2200e9f",
-     "8c6e32a8",
-     "63e1d819",
-     "5a45cc6a",
-     "f691d28a"
     ]
    },
    {
@@ -13433,6 +15927,15 @@
      "7a968ed4",
      "281ded9a",
      "fec3a7d4"
+    ]
+   },
+   {
+    "people": 120,
+    "kind": "Active",
+    "updated_on": "2026-08-26",
+    "words": [
+     "c09344de",
+     "227104ea"
     ]
    },
    {
@@ -13452,15 +15955,6 @@
     ]
    },
    {
-    "people": 119,
-    "kind": "Active",
-    "updated_on": "2026-08-26",
-    "words": [
-     "c09344de",
-     "227104ea"
-    ]
-   },
-   {
     "people": 118,
     "kind": "Active",
     "updated_on": "2026-09-24",
@@ -13473,7 +15967,17 @@
     ]
    },
    {
-    "people": 107,
+    "people": 112,
+    "kind": "Static",
+    "updated_on": "2026-11-23",
+    "words": [
+     "5d885105",
+     "9dd7e26e",
+     "205a0a01"
+    ]
+   },
+   {
+    "people": 111,
     "kind": "Active",
     "updated_on": "2026-06-03",
     "words": [
@@ -13485,7 +15989,18 @@
     ]
    },
    {
-    "people": 105,
+    "people": 106,
+    "kind": "Static",
+    "updated_on": "2026-11-02",
+    "words": [
+     "89b29c10",
+     "e548412c",
+     "ac8c5c51",
+     "d290c23b"
+    ]
+   },
+   {
+    "people": 106,
     "kind": "Active",
     "updated_on": "2026-04-24",
     "words": [
@@ -13510,16 +16025,6 @@
    {
     "people": 102,
     "kind": "Active",
-    "updated_on": "2026-08-07",
-    "words": [
-     "898aec7c",
-     "cedcb8f0",
-     "4460277f"
-    ]
-   },
-   {
-    "people": 101,
-    "kind": "Active",
     "updated_on": "2026-06-22",
     "words": [
      "63e1d819",
@@ -13529,6 +16034,16 @@
      "e1fc8517",
      "875f385d",
      "7dc29488"
+    ]
+   },
+   {
+    "people": 102,
+    "kind": "Active",
+    "updated_on": "2026-08-07",
+    "words": [
+     "898aec7c",
+     "cedcb8f0",
+     "4460277f"
     ]
    },
    {
@@ -13590,6 +16105,15 @@
    {
     "people": 89,
     "kind": "Active",
+    "updated_on": "2026-09-01",
+    "words": [
+     "39a21e9b",
+     "e367307e"
+    ]
+   },
+   {
+    "people": 89,
+    "kind": "Active",
     "updated_on": "2026-06-09",
     "words": [
      "f2200e9f",
@@ -13627,15 +16151,6 @@
    {
     "people": 87,
     "kind": "Active",
-    "updated_on": "2026-09-01",
-    "words": [
-     "39a21e9b",
-     "e367307e"
-    ]
-   },
-   {
-    "people": 87,
-    "kind": "Active",
     "updated_on": "2026-07-20",
     "words": [
      "4460277f",
@@ -13665,17 +16180,7 @@
     ]
    },
    {
-    "people": 78,
-    "kind": "Active",
-    "updated_on": "2026-09-21",
-    "words": [
-     "cedcb8f0",
-     "d35ec4c9",
-     "c42af02a"
-    ]
-   },
-   {
-    "people": 78,
+    "people": 79,
     "kind": "Active",
     "updated_on": "2026-10-26",
     "words": [
@@ -13685,6 +16190,16 @@
      "06755279",
      "cfdb2d7c",
      "875f385d"
+    ]
+   },
+   {
+    "people": 78,
+    "kind": "Active",
+    "updated_on": "2026-09-21",
+    "words": [
+     "cedcb8f0",
+     "d35ec4c9",
+     "c42af02a"
     ]
    },
    {
@@ -13732,7 +16247,7 @@
     ]
    },
    {
-    "people": 70,
+    "people": 71,
     "kind": "Active",
     "updated_on": "2026-09-01",
     "words": [
@@ -13763,7 +16278,7 @@
     ]
    },
    {
-    "people": 69,
+    "people": 70,
     "kind": "Active",
     "updated_on": "2026-06-12",
     "words": [
@@ -13775,7 +16290,18 @@
     ]
    },
    {
-    "people": 67,
+    "people": 69,
+    "kind": "Active",
+    "updated_on": "2026-10-08",
+    "words": [
+     "4303b923",
+     "edbf0fe3",
+     "d35ec4c9",
+     "addf1e8f"
+    ]
+   },
+   {
+    "people": 68,
     "kind": "Active",
     "updated_on": "2026-06-25",
     "words": [
@@ -13786,17 +16312,6 @@
      "89b29c10",
      "fce32734",
      "40293d93"
-    ]
-   },
-   {
-    "people": 66,
-    "kind": "Active",
-    "updated_on": "2026-10-08",
-    "words": [
-     "4303b923",
-     "edbf0fe3",
-     "d35ec4c9",
-     "addf1e8f"
     ]
    },
    {
@@ -13811,13 +16326,22 @@
     ]
    },
    {
-    "people": 63,
+    "people": 64,
     "kind": "Active",
     "updated_on": "2026-09-18",
     "words": [
      "39a21e9b",
      "e367307e",
      "c09344de"
+    ]
+   },
+   {
+    "people": 63,
+    "kind": "Active",
+    "updated_on": "2026-04-23",
+    "words": [
+     "402a547c",
+     "0cfb5881"
     ]
    },
    {
@@ -13839,23 +16363,23 @@
     ]
    },
    {
+    "people": 59,
+    "kind": "Active",
+    "updated_on": "2026-04-17",
+    "words": [
+     "f2200e9f",
+     "5a45cc6a",
+     "63e1d819",
+     "f691d28a"
+    ]
+   },
+   {
     "people": 58,
     "kind": "Static",
     "updated_on": "2026-04-06",
     "words": [
      "783a58fa",
      "37e24810"
-    ]
-   },
-   {
-    "people": 56,
-    "kind": "Active",
-    "updated_on": "2026-09-18",
-    "words": [
-     "c00af369",
-     "ab320c6c",
-     "e367307e",
-     "c09344de"
     ]
    },
    {
@@ -13908,6 +16432,17 @@
      "0f5ea3e3",
      "57b20f7d",
      "8a8753c7"
+    ]
+   },
+   {
+    "people": 52,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "c00af369",
+     "ab320c6c",
+     "e367307e",
+     "c09344de"
     ]
    },
    {
@@ -14076,17 +16611,6 @@
     ]
    },
    {
-    "people": 44,
-    "kind": "Active",
-    "updated_on": "2026-04-17",
-    "words": [
-     "f2200e9f",
-     "5a45cc6a",
-     "63e1d819",
-     "f691d28a"
-    ]
-   },
-   {
     "people": 43,
     "kind": "Static",
     "updated_on": "2026-10-22",
@@ -14129,6 +16653,15 @@
     ]
    },
    {
+    "people": 40,
+    "kind": "Active",
+    "updated_on": "2026-08-14",
+    "words": [
+     "c09344de",
+     "54a9a29f"
+    ]
+   },
+   {
     "people": 39,
     "kind": "Active",
     "updated_on": "2026-06-15",
@@ -14162,15 +16695,6 @@
    {
     "people": 36,
     "kind": "Active",
-    "updated_on": "2026-04-23",
-    "words": [
-     "402a547c",
-     "0cfb5881"
-    ]
-   },
-   {
-    "people": 36,
-    "kind": "Active",
     "updated_on": "2026-09-30",
     "words": [
      "416aec5d",
@@ -14188,16 +16712,6 @@
      "c97160d1",
      "99863551",
      "b6032c0f"
-    ]
-   },
-   {
-    "people": 35,
-    "kind": "Active",
-    "updated_on": "2026-07-10",
-    "words": [
-     "4460277f",
-     "609a6d33",
-     "88f674e1"
     ]
    },
    {
@@ -14234,6 +16748,16 @@
      "205a0a01",
      "8e447707",
      "27cd3c84"
+    ]
+   },
+   {
+    "people": 34,
+    "kind": "Active",
+    "updated_on": "2026-07-10",
+    "words": [
+     "4460277f",
+     "609a6d33",
+     "88f674e1"
     ]
    },
    {
@@ -14307,26 +16831,6 @@
      "acf38390",
      "17c6537c",
      "57b20f7d"
-    ]
-   },
-   {
-    "people": 29,
-    "kind": "Active",
-    "updated_on": "2026-08-14",
-    "words": [
-     "c09344de",
-     "54a9a29f"
-    ]
-   },
-   {
-    "people": 28,
-    "kind": "Static",
-    "updated_on": "2026-11-02",
-    "words": [
-     "89b29c10",
-     "e548412c",
-     "ac8c5c51",
-     "d290c23b"
     ]
    },
    {
@@ -14416,6 +16920,15 @@
     ]
    },
    {
+    "people": 23,
+    "kind": "Active",
+    "updated_on": "2026-11-04",
+    "words": [
+     "416aec5d",
+     "c075320c"
+    ]
+   },
+   {
     "people": 22,
     "kind": "Static",
     "updated_on": "2026-04-03",
@@ -14424,15 +16937,6 @@
      "205a0a01",
      "7afe4abf",
      "b9bd7cb5"
-    ]
-   },
-   {
-    "people": 22,
-    "kind": "Active",
-    "updated_on": "2026-11-04",
-    "words": [
-     "416aec5d",
-     "c075320c"
     ]
    },
    {
@@ -14578,15 +17082,6 @@
     ]
    },
    {
-    "people": 14,
-    "kind": "Active",
-    "updated_on": "2026-10-30",
-    "words": [
-     "7d1fb3a2",
-     "21a84740"
-    ]
-   },
-   {
     "people": 13,
     "kind": "Active",
     "updated_on": "2026-10-14",
@@ -14682,16 +17177,6 @@
     ]
    },
    {
-    "people": 10,
-    "kind": "Active",
-    "updated_on": "2026-09-18",
-    "words": [
-     "416aec5d",
-     "e367307e",
-     "c09344de"
-    ]
-   },
-   {
     "people": 9,
     "kind": "Active",
     "updated_on": "2026-07-23",
@@ -14701,6 +17186,16 @@
      "82416065",
      "40293d93",
      "c5181aa0"
+    ]
+   },
+   {
+    "people": 9,
+    "kind": "Active",
+    "updated_on": "2026-09-18",
+    "words": [
+     "416aec5d",
+     "e367307e",
+     "c09344de"
     ]
    },
    {
@@ -14877,6 +17372,17 @@
    {
     "people": 5,
     "kind": "Active",
+    "updated_on": "2026-09-04",
+    "words": [
+     "8c6e32a8",
+     "b6f40207",
+     "fcefccca",
+     "d872e2a5"
+    ]
+   },
+   {
+    "people": 5,
+    "kind": "Active",
     "updated_on": "2026-08-20",
     "words": [
      "31ed74bb",
@@ -14967,17 +17473,6 @@
    {
     "people": 4,
     "kind": "Active",
-    "updated_on": "2026-09-04",
-    "words": [
-     "8c6e32a8",
-     "b6f40207",
-     "fcefccca",
-     "d872e2a5"
-    ]
-   },
-   {
-    "people": 4,
-    "kind": "Active",
     "updated_on": "2026-04-06",
     "words": [
      "bdf0855a",
@@ -14993,6 +17488,15 @@
      "cedcb8f0",
      "31ed74bb",
      "4bf4922d"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-06-22",
+    "words": [
+     "31ed74bb",
+     "82416065"
     ]
    },
    {
@@ -15014,6 +17518,25 @@
      "44d713c9",
      "174d9c62",
      "33f35170"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-08-27",
+    "words": [
+     "31ed74bb",
+     "420372be"
+    ]
+   },
+   {
+    "people": 3,
+    "kind": "Active",
+    "updated_on": "2026-07-01",
+    "words": [
+     "0746795c",
+     "7a968ed4",
+     "420372be"
     ]
    },
    {
@@ -15050,6 +17573,16 @@
    {
     "people": 2,
     "kind": "Active",
+    "updated_on": "2026-06-11",
+    "words": [
+     "9c7f8847",
+     "5c8ff3a6",
+     "c6270703"
+    ]
+   },
+   {
+    "people": 2,
+    "kind": "Active",
     "updated_on": "2026-06-17",
     "words": [
      "bd2b9bd6",
@@ -15074,19 +17607,6 @@
     ]
    },
    {
-    "people": 2,
-    "kind": "Active",
-    "updated_on": "2026-08-20",
-    "words": [
-     "f2200e9f",
-     "831eb2f4",
-     "2448ca2f",
-     "1bcf29d8",
-     "60345894",
-     "9b759fb9"
-    ]
-   },
-   {
     "people": 1,
     "kind": "Active",
     "updated_on": "2026-05-04",
@@ -15097,16 +17617,6 @@
      "29b19c8a",
      "4ae004bd",
      "bed023b3"
-    ]
-   },
-   {
-    "people": 1,
-    "kind": "Active",
-    "updated_on": "2026-06-11",
-    "words": [
-     "9c7f8847",
-     "5c8ff3a6",
-     "c6270703"
     ]
    },
    {
@@ -15143,6 +17653,19 @@
      "7a968ed4",
      "0c4afe69",
      "bed023b3"
+    ]
+   },
+   {
+    "people": 1,
+    "kind": "Active",
+    "updated_on": "2026-08-20",
+    "words": [
+     "f2200e9f",
+     "831eb2f4",
+     "2448ca2f",
+     "1bcf29d8",
+     "60345894",
+     "9b759fb9"
     ]
    },
    {
@@ -15268,411 +17791,5 @@
     ]
    }
   ]
- },
- "demo_use_case_daily": [
-  {
-   "date": "2026-04-13",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-04-15",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-04-21",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-04-29",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-05-08",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-05-09",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-05-10",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-05-29",
-   "use_case": "Pipelines",
-   "count": 1
-  },
-  {
-   "date": "2026-06-08",
-   "use_case": "Not filled in",
-   "count": 2
-  },
-  {
-   "date": "2026-06-10",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-06-12",
-   "use_case": "Not filled in",
-   "count": 2
-  },
-  {
-   "date": "2026-06-17",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-06-20",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-06-25",
-   "use_case": "Not filled in",
-   "count": 1
-  },
-  {
-   "date": "2026-06-30",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-07-04",
-   "use_case": "Unified Insights",
-   "count": 1
-  },
-  {
-   "date": "2026-07-05",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-07-08",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-07-09",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-07-13",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-07-17",
-   "use_case": "Agents",
-   "count": 1
-  },
-  {
-   "date": "2026-07-22",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-07-27",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-07-30",
-   "use_case": "Unified Insights",
-   "count": 1
-  },
-  {
-   "date": "2026-07-31",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-08-05",
-   "use_case": "Copilot",
-   "count": 1
-  },
-  {
-   "date": "2026-08-06",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-08-12",
-   "use_case": "Unified Insights",
-   "count": 1
-  },
-  {
-   "date": "2026-08-15",
-   "use_case": "Other",
-   "count": 1
-  },
-  {
-   "date": "2026-08-17",
-   "use_case": "Unified Insights",
-   "count": 1
-  },
-  {
-   "date": "2026-08-22",
-   "use_case": "Pipelines",
-   "count": 1
-  },
-  {
-   "date": "2026-08-25",
-   "use_case": "Pipelines",
-   "count": 1
-  },
-  {
-   "date": "2026-08-26",
-   "use_case": "Salesforce",
-   "count": 1
-  },
-  {
-   "date": "2026-09-04",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-09-10",
-   "use_case": "Appfire Flow Migration",
-   "count": 1
-  },
-  {
-   "date": "2026-09-16",
-   "use_case": "Agents",
-   "count": 1
-  },
-  {
-   "date": "2026-09-23",
-   "use_case": "Salesforce",
-   "count": 1
-  },
-  {
-   "date": "2026-09-28",
-   "use_case": "Copilot",
-   "count": 1
-  },
-  {
-   "date": "2026-09-28",
-   "use_case": "Migration",
-   "count": 1
-  },
-  {
-   "date": "2026-10-01",
-   "use_case": "Agents",
-   "count": 1
-  },
-  {
-   "date": "2026-10-01",
-   "use_case": "Forge",
-   "count": 3
-  },
-  {
-   "date": "2026-10-01",
-   "use_case": "Pipelines",
-   "count": 1
-  },
-  {
-   "date": "2026-10-02",
-   "use_case": "Agents",
-   "count": 1
-  },
-  {
-   "date": "2026-10-04",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-10-06",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-10-06",
-   "use_case": "Pipelines",
-   "count": 1
-  },
-  {
-   "date": "2026-10-13",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-10-13",
-   "use_case": "Gartner Xpo Meet",
-   "count": 1
-  },
-  {
-   "date": "2026-10-14",
-   "use_case": "Agents",
-   "count": 1
-  },
-  {
-   "date": "2026-10-15",
-   "use_case": "Gartner Xpo Meet",
-   "count": 1
-  },
-  {
-   "date": "2026-10-19",
-   "use_case": "Forge",
-   "count": 2
-  },
-  {
-   "date": "2026-10-26",
-   "use_case": "Unified Insights",
-   "count": 1
-  },
-  {
-   "date": "2026-10-29",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-10-31",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-11-02",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-11-11",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-11-13",
-   "use_case": "Appfire Flow Migration",
-   "count": 1
-  },
-  {
-   "date": "2026-11-15",
-   "use_case": "Forge",
-   "count": 1
-  },
-  {
-   "date": "2026-11-17",
-   "use_case": "Pipelines",
-   "count": 1
-  }
- ],
- "warmly_profile": {
-  "days": 90,
-  "from": "2026-08-20",
-  "companies": 1231,
-  "people": 1475,
-  "industry": [
-   [
-    "Software and IT",
-    274
-   ],
-   [
-    "Not known",
-    223
-   ],
-   [
-    "Financial services and insurance",
-    159
-   ],
-   [
-    "Manufacturing and industrial",
-    136
-   ],
-   [
-    "Business services and consulting",
-    127
-   ],
-   [
-    "Healthcare and life sciences",
-    90
-   ],
-   [
-    "Retail and consumer",
-    79
-   ],
-   [
-    "Media and telecom",
-    60
-   ],
-   [
-    "Energy, utilities and transport",
-    45
-   ],
-   [
-    "Government and education",
-    27
-   ],
-   [
-    "Other industries",
-    11
-   ]
-  ],
-  "size": [
-   [
-    "Not known",
-    582
-   ],
-   [
-    "1,000 to 5,000",
-    234
-   ],
-   [
-    "10,000 or more",
-    194
-   ],
-   [
-    "1 to 250 people",
-    99
-   ],
-   [
-    "5,000 to 10,000",
-    66
-   ],
-   [
-    "251 to 1,000",
-    56
-   ]
-  ],
-  "seniority": [
-   [
-    "Not known",
-    919
-   ],
-   [
-    "Senior",
-    135
-   ],
-   [
-    "Director",
-    112
-   ],
-   [
-    "Employee",
-    101
-   ],
-   [
-    "Manager",
-    87
-   ],
-   [
-    "VP",
-    66
-   ],
-   [
-    "Executive, owner or partner",
-    55
-   ]
-  ],
-  "to": "2026-11-18"
  }
 }

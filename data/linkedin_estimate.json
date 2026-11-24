@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-24T10:32+00:00",
+ "posts_pulled_at": "2026-11-24T11:00+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -937,5 +937,5 @@
  "untagged_total": 679,
  "start_date": "2026-09-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T15:55+05:30"
+ "pulled_at": "2026-11-24T16:24+05:30"
 }

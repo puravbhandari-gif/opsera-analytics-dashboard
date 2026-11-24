@@ -8,8 +8,8 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-04-09,Boost Your DevOps Workflow with Opsera's Latest Features 🚀,1,1,0,100.0,0.0
 2026-04-10,Your recording is ready: Meet the Opsera AppSec Agents workshop,21,7,1,33.3,4.8
 2026-04-15, Success with AI Requires Much More than Adoption,769,146,33,19.0,4.3
-2026-04-15,Successful AI DevOps Transformation In 90 Days,822,139,25,17.0,3.1
-2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1004,157,38,15.9,3.8
+2026-04-15,Successful AI DevOps Transformation In 90 Days,823,139,25,17.0,3.1
+2026-04-15, AI Coding Is Fast. Can Your Pipelines Handle It?,1009,157,38,15.8,3.8
 2026-04-15,Watch the Recording: Meet the Opsera AppSec Agents workshop,19581,669,146,3.5,0.8
 2026-04-20,A gift card for your feedback on Opsera.,273,12,2,4.4,0.7
 2026-04-20,"What's New in Unified Insights: New Dashboards, Enhanced AI & Smarter Analytics ",2608,80,3,3.1,0.1
@@ -47,7 +47,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-06-01,"Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",2450,119,13,4.9,0.5
 2026-06-01,[Invite Only] Breakfast before DAIS? June 16,146,6,1,4.2,0.7
 2026-06-01,AI token economics forum.,80,2,0,2.5,0.0
-2026-06-02,"Opsera is a Gartner® Magic Quadrant™ Leader, see what’s next",69590,2029,317,3.0,0.5
+2026-06-02,"Opsera is a Gartner® Magic Quadrant™ Leader, see what’s next",69590,2030,317,3.0,0.5
 2026-06-02,[Invite Only] Breakfast before DAIS? June 16,376,20,14,5.3,3.7
 2026-06-02,"Opsera Release Notes | Bulk Pipeline Operations, Oracle Integration Cloud CI/CD & Bitbucket-to-GitHub LFS Migration",1,1,0,100.0,0.0
 2026-06-02,"Opsera Release Notes | Vlocity CI/CD Governance, Parallel PR Validation & Bulk Pipeline Operations ",1,1,0,100.0,0.0
@@ -55,7 +55,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-06-03,Thank you for your Forge demo request.,40,9,0,22.5,0.0
 2026-06-03,15 seats. Palo Alto. Token waste.,2064,40,1,1.9,0.0
 2026-06-05,See AI-Driven DevOps Live in Action,20,2,1,11.1,5.6
-2026-06-07,An invitation just for {{ contact.firstname }},1986,554,450,28.4,23.0
+2026-06-07,An invitation just for {{ contact.firstname }},1988,554,450,28.3,23.0
 2026-06-08,"Opsera Release Notes | Automated Variable Sharing, Salesforce CLI Upgrade & Data 360 Metadata Support",182,46,7,25.3,3.8
 2026-06-08,Invitation Only - Limited Seats - Token efficiency forum.,2450,39,2,1.7,0.1
 2026-06-15,{{ contact.firstname }} - Dinner's on me.,70,1,0,1.4,0.0
@@ -189,7 +189,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-14,"{{ contact.firstname }} - NBA private suite, Hawks v. Lakers",734,24,4,3.4,0.6
 2026-10-14,"{{ contact.firstname }} - Join us in our NBA private suite, Hawks v. Lakers",139,2,0,1.4,0.0
 2026-10-15,Your request to Opsera.,1,1,0,100.0,0.0
-2026-10-15,Thanks for signing up to see Opsera in action!,304,90,40,32.6,14.5
+2026-10-15,Thanks for signing up to see Opsera in action!,308,90,40,32.1,14.3
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,60,7,0,11.9,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
 2026-10-15,{{ contact.firstname }} - Accelerate modernization and refactoring.,12,0,0,0.0,0.0
@@ -239,7 +239,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-28,{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.,10422,443,20,4.3,0.2
 2026-10-29,Speaker invite for {{ contact.firstname }},130,15,0,11.5,0.0
 2026-10-29,NBA Basketball - private suite for Pacers/Rockets,62,0,0,0.0,0.0
-2026-11-02,{{ contact.firstname }} How's it going with Forge?,14,0,0,0.0,0.0
+2026-11-02,{{ contact.firstname }} How's it going with Forge?,33,1,0,3.0,0.0
 2026-11-02,{{ contact.firstname }} - Modernize legacy estates.,115,17,2,14.9,1.8
 2026-11-02,Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation,1335,33,0,2.5,0.0
 2026-11-02,Opsera Release Notes | Expanded Salesforce Metadata Support for Revenue Cloud and Platform Events,135,4,0,3.0,0.0
@@ -254,12 +254,15 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-11-06,Your free code modernization trial awaits.,48,7,0,14.6,0.0
 2026-11-09,Nine days away - claim your spot.,311,20,0,6.5,0.0
 2026-11-10,"{{ contact.firstname }} Next Week. Pacers v. Rockets soon, at the Fieldhouse.",210,11,0,5.2,0.0
-2026-11-10,Invitation for {{ contact.firstname }} - Closed-door session.,14924,484,51,3.3,0.3
-2026-11-11,{{ contact.firstname }} Fix PHP vulnerabilities today.,14868,498,48,3.4,0.3
+2026-11-10,Invitation for {{ contact.firstname }} - Closed-door session.,14924,486,51,3.3,0.3
+2026-11-11,{{ contact.firstname }} Fix PHP vulnerabilities today.,14868,499,49,3.4,0.3
 2026-11-12,{{ contact.firstname }} - meet-up at HLTH USA?,2806,39,0,1.5,0.0
 2026-11-12,{{ contact.firstname }} - meet for coffee at HLTH USA?,4,0,0,0.0,0.0
 2026-11-13,"Missing the Pacers game tonight {{ personalization_token('contact.firstname', ',') }} ?",462,7,1,1.5,0.2
 2026-11-13,{{ contact.firstname }} - Coffee at HLTH next week?,2,0,0,0.0,0.0
-2026-11-16,"Just two days away, {{ personalization_token('contact.firstname', ',') }} ",457,15,0,3.3,0.0
-2026-11-16,Opsera Release Notes | Org Mapping for Full Control Over Salesforce Metadata After a Sandbox Refresh,135,3,0,2.2,0.0
-2026-11-16,Opsera Release Notes | Deploy to Multiple Environments from a Single Child Pipeline,1333,4,0,0.3,0.0
+2026-11-16,"Just two days away, {{ personalization_token('contact.firstname', ',') }} ",456,21,0,4.6,0.0
+2026-11-16,Opsera Release Notes | Org Mapping for Full Control Over Salesforce Metadata After a Sandbox Refresh,135,5,0,3.7,0.0
+2026-11-16,Opsera Release Notes | Deploy to Multiple Environments from a Single Child Pipeline,1333,10,0,0.8,0.0
+2026-11-18,{{ contact.firstname }} PHP2Shell flaws exploited in attacks.,14790,283,8,1.9,0.1
+2026-11-18,{{ contact.firstname }} A couple of seats left for tonight's game.,454,10,0,2.2,0.0
+2026-11-19,Opsera Newsletter: Outages are having a month,30418,823,59,2.7,0.2

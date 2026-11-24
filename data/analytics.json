@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T15:55+05:30",
+ "pulled_at": "2026-11-24T16:24+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -10,8 +10,8 @@
   "engagedSessions": 30703
  },
  "split_sums": {
-  "daily": 80605,
-  "channels": 81004
+  "daily": 80609,
+  "channels": 81006
  },
  "daily": [
   {
@@ -1432,8 +1432,8 @@
   },
   {
    "date": "2026-11-23",
-   "sessions": 432,
-   "totalUsers": 381,
+   "sessions": 436,
+   "totalUsers": 385,
    "engagedSessions": 127
   }
  ],
@@ -1441,9 +1441,9 @@
   {
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 29172,
-   "totalUsers": 26273,
+   "totalUsers": 26275,
    "engagedSessions": 8955,
-   "averageSessionDuration": 66.86694885167283
+   "averageSessionDuration": 66.86694885167284
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -1457,7 +1457,7 @@
    "sessions": 10352,
    "totalUsers": 9466,
    "engagedSessions": 1334,
-   "averageSessionDuration": 29.381267647217925
+   "averageSessionDuration": 29.38126764721793
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -1468,10 +1468,10 @@
   },
   {
    "sessionDefaultChannelGroup": "Referral",
-   "sessions": 3907,
-   "totalUsers": 2533,
+   "sessions": 3909,
+   "totalUsers": 2534,
    "engagedSessions": 2045,
-   "averageSessionDuration": 164.20444289787562
+   "averageSessionDuration": 164.1204293686365
   },
   {
    "sessionDefaultChannelGroup": "Organic Social",
@@ -1868,6 +1868,12 @@
    "engagedSessions": 55
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 191,
+   "engagedSessions": 35
+  },
+  {
    "date": "2026-09-23",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 190,
@@ -1878,12 +1884,6 @@
    "sessionDefaultChannelGroup": "Direct",
    "sessions": 189,
    "engagedSessions": 56
-  },
-  {
-   "date": "2026-11-23",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 189,
-   "engagedSessions": 35
   },
   {
    "date": "2026-10-07",
@@ -2420,6 +2420,12 @@
    "engagedSessions": 83
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 140,
+   "engagedSessions": 67
+  },
+  {
    "date": "2026-06-24",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 139,
@@ -2436,12 +2442,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 139,
    "engagedSessions": 71
-  },
-  {
-   "date": "2026-11-23",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 139,
-   "engagedSessions": 67
   },
   {
    "date": "2026-07-02",
@@ -5534,6 +5534,12 @@
    "engagedSessions": 11
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 21,
+   "engagedSessions": 9
+  },
+  {
    "date": "2026-04-01",
    "sessionDefaultChannelGroup": "Paid Search",
    "sessions": 20,
@@ -5619,12 +5625,6 @@
   },
   {
    "date": "2026-11-11",
-   "sessionDefaultChannelGroup": "Referral",
-   "sessions": 20,
-   "engagedSessions": 9
-  },
-  {
-   "date": "2026-11-23",
    "sessionDefaultChannelGroup": "Referral",
    "sessions": 20,
    "engagedSessions": 9
@@ -11480,7 +11480,7 @@
    "sessionSource": "(direct)",
    "sessionMedium": "(none)",
    "sessions": 29172,
-   "totalUsers": 26273,
+   "totalUsers": 26275,
    "engagedSessions": 8955,
    "averageSessionDuration": 66.86694885167283
   },
@@ -12367,6 +12367,15 @@
    "averageSessionDuration": 185.89493681818183
   },
   {
+   "sessionDefaultChannelGroup": "Referral",
+   "sessionSource": "thenextgentechinsider.com",
+   "sessionMedium": "referral",
+   "sessions": 11,
+   "totalUsers": 11,
+   "engagedSessions": 0,
+   "averageSessionDuration": 0
+  },
+  {
    "sessionDefaultChannelGroup": "Unassigned",
    "sessionSource": "atl_11-09-26",
    "sessionMedium": "(not set)",
@@ -12383,15 +12392,6 @@
    "totalUsers": 2,
    "engagedSessions": 4,
    "averageSessionDuration": 117.14530199999999
-  },
-  {
-   "sessionDefaultChannelGroup": "Referral",
-   "sessionSource": "thenextgentechinsider.com",
-   "sessionMedium": "referral",
-   "sessions": 10,
-   "totalUsers": 10,
-   "engagedSessions": 0,
-   "averageSessionDuration": 0
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -16619,7 +16619,7 @@
   },
   {
    "page": "/forge",
-   "views": 2218
+   "views": 2219
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
@@ -16643,7 +16643,7 @@
   },
   {
    "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-   "views": 1122
+   "views": 1123
   },
   {
    "page": "/careers/devops-evangelist",
@@ -16651,7 +16651,7 @@
   },
   {
    "page": "/blog/software-factory-pattern",
-   "views": 1050
+   "views": 1051
   },
   {
    "page": "/solutions",
@@ -16903,7 +16903,7 @@
   },
   {
    "page": "/blog/sast-tools",
-   "views": 230
+   "views": 231
   },
   {
    "page": "/salesforce-devops",
@@ -34802,7 +34802,7 @@
    {
     "date": "2026-11-23",
     "group": "untagged",
-    "landed_home": 2,
+    "landed_home": 3,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 1,
@@ -46817,14 +46817,14 @@
   {
    "date": "2026-11-23",
    "channel": "all",
-   "visits": 431,
+   "visits": 435,
    "demo_page": 18,
    "demo_form": 0
   },
   {
    "date": "2026-11-23",
    "channel": "direct",
-   "visits": 189,
+   "visits": 191,
    "demo_page": 4,
    "demo_form": 0
   },
@@ -46845,7 +46845,7 @@
   {
    "date": "2026-11-23",
    "channel": "search",
-   "visits": 131,
+   "visits": 132,
    "demo_page": 4,
    "demo_form": 0
   }
@@ -52636,7 +52636,7 @@
     {
      "date": "2026-11-23",
      "bot": "Amazonbot",
-     "visits": 66
+     "visits": 69
     },
     {
      "date": "2026-11-23",
@@ -52656,7 +52656,7 @@
     {
      "date": "2026-11-23",
      "bot": "Claude-User",
-     "visits": 36
+     "visits": 37
     },
     {
      "date": "2026-11-23",
@@ -52676,12 +52676,12 @@
     {
      "date": "2026-11-23",
      "bot": "PerplexityBot",
-     "visits": 202
+     "visits": 212
     },
     {
      "date": "2026-11-23",
      "bot": "meta-externalagent",
-     "visits": 1583
+     "visits": 1597
     }
    ],
    "pages": [
@@ -52693,7 +52693,7 @@
     {
      "page": "/",
      "bot": "Amazonbot",
-     "visits": 1575
+     "visits": 1578
     },
     {
      "page": "/demo",
@@ -52968,7 +52968,7 @@
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
      "bot": "PerplexityBot",
-     "visits": 46
+     "visits": 47
     },
     {
      "page": "/careers",
@@ -53011,14 +53011,14 @@
      "visits": 39
     },
     {
-     "page": "/newsroom",
-     "bot": "OAI-SearchBot",
+     "page": "/events/flutter-the-ai-sdlc-summit",
+     "bot": "meta-externalagent",
      "visits": 38
     },
     {
-     "page": "/events/flutter-the-ai-sdlc-summit",
-     "bot": "meta-externalagent",
-     "visits": 37
+     "page": "/newsroom",
+     "bot": "OAI-SearchBot",
+     "visits": 38
     },
     {
      "page": "/resources",
@@ -53371,6 +53371,11 @@
      "visits": 27
     },
     {
+     "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
      "page": "/customer-stories/accelerating-ai-maturity-with-ltm",
      "bot": "meta-externalagent",
      "visits": 27
@@ -53481,7 +53486,7 @@
      "visits": 26
     },
     {
-     "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
+     "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
      "bot": "meta-externalagent",
      "visits": 26
     },
@@ -53571,17 +53576,17 @@
      "visits": 25
     },
     {
+     "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
+     "bot": "meta-externalagent",
+     "visits": 25
+    },
+    {
      "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
      "bot": "meta-externalagent",
      "visits": 25
     },
     {
      "page": "/blog/software-factory-compliance-tools",
-     "bot": "meta-externalagent",
-     "visits": 25
-    },
-    {
-     "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
      "bot": "meta-externalagent",
      "visits": 25
     },
@@ -53671,6 +53676,11 @@
      "visits": 24
     },
     {
+     "page": "/blog/cobol-modernization",
+     "bot": "meta-externalagent",
+     "visits": 24
+    },
+    {
      "page": "/blog/devops-security-challenges",
      "bot": "PerplexityBot",
      "visits": 24
@@ -53683,11 +53693,6 @@
     {
      "page": "/blog/forge-ontology-ai-agents",
      "bot": "OAI-SearchBot",
-     "visits": 24
-    },
-    {
-     "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
-     "bot": "meta-externalagent",
      "visits": 24
     },
     {
@@ -53766,17 +53771,17 @@
      "visits": 23
     },
     {
-     "page": "/blog/cobol-modernization",
-     "bot": "meta-externalagent",
-     "visits": 23
-    },
-    {
      "page": "/blog/g2-users-recognize-opsera-in-five-key-categories",
      "bot": "meta-externalagent",
      "visits": 23
     },
     {
      "page": "/blog/sast-tools",
+     "bot": "meta-externalagent",
+     "visits": 23
+    },
+    {
+     "page": "/blog/shift-left-security",
      "bot": "meta-externalagent",
      "visits": 23
     },
@@ -53807,6 +53812,11 @@
     },
     {
      "page": "/knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-del",
+     "bot": "meta-externalagent",
+     "visits": 23
+    },
+    {
+     "page": "/knowledge-base/quality-risk/time-to-detect-vulnerability-ttdv",
      "bot": "meta-externalagent",
      "visits": 23
     },
@@ -53866,11 +53876,6 @@
      "visits": 22
     },
     {
-     "page": "/blog/shift-left-security",
-     "bot": "meta-externalagent",
-     "visits": 22
-    },
-    {
      "page": "/blog/software-factory-benefits",
      "bot": "OAI-SearchBot",
      "visits": 22
@@ -53911,11 +53916,6 @@
      "visits": 22
     },
     {
-     "page": "/knowledge-base/quality-risk/time-to-detect-vulnerability-ttdv",
-     "bot": "meta-externalagent",
-     "visits": 22
-    },
-    {
      "page": "/partners",
      "bot": "PerplexityBot",
      "visits": 22
@@ -53934,6 +53934,11 @@
      "page": "/salesforce-devops",
      "bot": "PerplexityBot",
      "visits": 22
+    },
+    {
+     "page": "/blog/ai-sdlc",
+     "bot": "PerplexityBot",
+     "visits": 21
     },
     {
      "page": "/blog/ai-sdlc-2",
@@ -54006,11 +54011,6 @@
      "visits": 20
     },
     {
-     "page": "/blog/ai-sdlc",
-     "bot": "PerplexityBot",
-     "visits": 20
-    },
-    {
      "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
      "bot": "PerplexityBot",
      "visits": 20
@@ -54033,6 +54033,11 @@
     {
      "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
      "bot": "meta-externalagent",
+     "visits": 20
+    },
+    {
+     "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
+     "bot": "PerplexityBot",
      "visits": 20
     },
     {
@@ -54076,6 +54081,11 @@
      "visits": 19
     },
     {
+     "page": "/blog/8090-ai-alternatives",
+     "bot": "PerplexityBot",
+     "visits": 19
+    },
+    {
      "page": "/blog/introducing-opsera-continuous-orchestration-for-next-gen-devops",
      "bot": "PerplexityBot",
      "visits": 19
@@ -54101,19 +54111,9 @@
      "visits": 19
     },
     {
-     "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
-     "bot": "PerplexityBot",
-     "visits": 19
-    },
-    {
      "page": "/resources/comparison-guides/opsera-vs-dx",
      "bot": "meta-externalagent",
      "visits": 19
-    },
-    {
-     "page": "/blog/8090-ai-alternatives",
-     "bot": "PerplexityBot",
-     "visits": 18
     },
     {
      "page": "/blog/ai-sdlc",
@@ -54158,6 +54158,11 @@
     {
      "page": "/knowledge-base/category/ai-code-assistant-comparisons",
      "bot": "Bytespider",
+     "visits": 18
+    },
+    {
+     "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
+     "bot": "PerplexityBot",
      "visits": 18
     },
     {
@@ -54207,11 +54212,6 @@
     },
     {
      "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
-     "bot": "PerplexityBot",
-     "visits": 17
-    },
-    {
-     "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
      "bot": "PerplexityBot",
      "visits": 17
     },
@@ -54331,6 +54331,11 @@
      "visits": 16
     },
     {
+     "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
+     "bot": "meta-externalagent",
+     "visits": 16
+    },
+    {
      "page": "/knowledge-base/value-stream-management/flow-efficiency-metrics",
      "bot": "PerplexityBot",
      "visits": 16
@@ -54368,6 +54373,11 @@
     {
      "page": "/blog/blog-devops-automation",
      "bot": "PerplexityBot",
+     "visits": 15
+    },
+    {
+     "page": "/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly",
+     "bot": "meta-externalagent",
      "visits": 15
     },
     {
@@ -54446,6 +54456,11 @@
      "visits": 15
     },
     {
+     "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
+     "bot": "PerplexityBot",
+     "visits": 15
+    },
+    {
      "page": "/blog/using-data-to-encourage-copilot-adoption-in-your-organization",
      "bot": "meta-externalagent",
      "visits": 15
@@ -54507,11 +54522,6 @@
     },
     {
      "page": "/knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv",
-     "bot": "meta-externalagent",
-     "visits": 15
-    },
-    {
-     "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
      "bot": "meta-externalagent",
      "visits": 15
     },
@@ -54598,11 +54608,6 @@
     {
      "page": "/blog/blitzy-alternatives",
      "bot": "PerplexityBot",
-     "visits": 14
-    },
-    {
-     "page": "/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly",
-     "bot": "meta-externalagent",
      "visits": 14
     },
     {
@@ -54736,6 +54741,11 @@
      "visits": 14
     },
     {
+     "page": "/blog/seamless-secrets-how-opsera-is-making-customer-data-more-secure-than-ever",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
      "page": "/blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops",
      "bot": "meta-externalagent",
      "visits": 14
@@ -54758,11 +54768,6 @@
     {
      "page": "/blog/the-hidden-costs-of-salesforce-implementations-devops-scoping",
      "bot": "meta-externalagent",
-     "visits": 14
-    },
-    {
-     "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
-     "bot": "PerplexityBot",
      "visits": 14
     },
     {
@@ -54797,6 +54802,11 @@
     },
     {
      "page": "/blog/you-got-the-insights-so-now-what",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
+     "page": "/careers",
      "bot": "meta-externalagent",
      "visits": 14
     },
@@ -55276,11 +55286,6 @@
      "visits": 13
     },
     {
-     "page": "/blog/seamless-secrets-how-opsera-is-making-customer-data-more-secure-than-ever",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
      "page": "/blog/smart-model-selection",
      "bot": "PerplexityBot",
      "visits": 13
@@ -55323,11 +55328,6 @@
     {
      "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
      "bot": "PerplexityBot",
-     "visits": 13
-    },
-    {
-     "page": "/careers",
-     "bot": "meta-externalagent",
      "visits": 13
     },
     {
@@ -55511,6 +55511,11 @@
      "visits": 13
     },
     {
+     "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-5",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55607,6 +55612,11 @@
     },
     {
      "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
+     "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55717,6 +55727,11 @@
     },
     {
      "page": "/blog/continuous-orchestration-for-next-gen-devops",
+     "bot": "PerplexityBot",
+     "visits": 12
+    },
+    {
+     "page": "/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accele",
      "bot": "PerplexityBot",
      "visits": 12
     },
@@ -55887,6 +55902,11 @@
     },
     {
      "page": "/blog/what-is-devsecops",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/why-you-should-automate-code-reviews",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56081,11 +56101,6 @@
      "visits": 12
     },
     {
-     "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
      "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-p",
      "bot": "meta-externalagent",
      "visits": 12
@@ -56152,11 +56167,6 @@
     },
     {
      "page": "/resources/videos/keywest-networks-testimonial",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56248,11 +56258,6 @@
     {
      "page": "/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool",
      "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
-     "page": "/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accele",
-     "bot": "PerplexityBot",
      "visits": 11
     },
     {
@@ -56358,11 +56363,6 @@
     {
      "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
      "bot": "PerplexityBot",
-     "visits": 11
-    },
-    {
-     "page": "/blog/why-you-should-automate-code-reviews",
-     "bot": "meta-externalagent",
      "visits": 11
     },
     {
@@ -56513,6 +56513,11 @@
     {
      "page": "/blog/software-factory-pattern",
      "bot": "meta-externalagent",
+     "visits": 10
+    },
+    {
+     "page": "/blog/software-factory-vs-dark-factory",
+     "bot": "Claude-User",
      "visits": 10
     },
     {
@@ -56718,11 +56723,6 @@
     {
      "page": "/blog/salesforce-dx-a-complete-guide",
      "bot": "meta-externalagent",
-     "visits": 9
-    },
-    {
-     "page": "/blog/software-factory-vs-dark-factory",
-     "bot": "Claude-User",
      "visits": 9
     },
     {
@@ -57136,6 +57136,11 @@
      "visits": 7
     },
     {
+     "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
+     "bot": "PerplexityBot",
+     "visits": 7
+    },
+    {
      "page": "/blog/the-new-devops-standard-moving-from-manual-templates-to-high-velocity-ai-agents",
      "bot": "Bytespider",
      "visits": 7
@@ -57291,6 +57296,11 @@
      "visits": 6
     },
     {
+     "page": "/blog/achieving-zero-downtime-deployments-at-scale-with-opsera-save-up-to-700-hours-and-cut-deployme",
+     "bot": "PerplexityBot",
+     "visits": 6
+    },
+    {
      "page": "/blog/ai-code-security",
      "bot": "Bytespider",
      "visits": 6
@@ -57371,11 +57381,6 @@
      "visits": 6
     },
     {
-     "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
-     "bot": "PerplexityBot",
-     "visits": 6
-    },
-    {
      "page": "/blog/the-role-of-ai-in-modern-software-development",
      "bot": "PerplexityBot",
      "visits": 6
@@ -57443,6 +57448,11 @@
     {
      "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer",
      "bot": "meta-externalagent",
+     "visits": 6
+    },
+    {
+     "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
+     "bot": "PerplexityBot",
      "visits": 6
     },
     {
@@ -57543,11 +57553,6 @@
     {
      "page": "/blog/8090-ai-alternatives",
      "bot": "Claude-User",
-     "visits": 5
-    },
-    {
-     "page": "/blog/achieving-zero-downtime-deployments-at-scale-with-opsera-save-up-to-700-hours-and-cut-deployme",
-     "bot": "PerplexityBot",
      "visits": 5
     },
     {
@@ -57828,11 +57833,6 @@
     {
      "page": "/knowledge-base/incident-analysis/incident-frequency",
      "bot": "Bytespider",
-     "visits": 5
-    },
-    {
-     "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
-     "bot": "PerplexityBot",
      "visits": 5
     },
     {

@@ -74,38 +74,34 @@
      "tab": "journey",
      "source": "HubSpot, marketing contacts and meetings",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
-      "key": "new_marketing_contacts",
-      "label": "New marketing contacts",
+      "key": "meetings_booked",
+      "label": "Meetings booked with marketing contacts",
       "value": "5",
       "cur": 5,
-      "prev": 2,
-      "before": "2",
-      "change_pct": 150.0,
+      "prev": 1,
+      "before": "1",
+      "change_pct": 400.0,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Direct visits and Google search each brought 2 contacts.",
+     "why": null,
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 7
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 6
+       "value": 0
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 51
+       "value": 0
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 12
+       "value": 1
       },
       {
        "week": "2 to 8 Nov 2026",
@@ -113,6 +109,10 @@
       },
       {
        "week": "9 to 15 Nov 2026",
+       "value": 1
+      },
+      {
+       "week": "16 to 22 Nov 2026",
        "value": 5
       }
      ]
@@ -580,38 +580,34 @@
      "tab": "journey",
      "source": "HubSpot, marketing contacts and meetings",
      "note": null,
-     "period": "1 to 15 Nov 2026",
-     "period_before": "1 to 15 Oct 2026",
+     "period": "1 to 23 Nov 2026",
+     "period_before": "1 to 23 Oct 2026",
      "notable": true,
      "main": {
-      "key": "new_marketing_contacts",
-      "label": "New marketing contacts",
-      "value": "7",
-      "cur": 7,
-      "prev": 19,
-      "before": "19",
-      "change_pct": -63.2,
-      "good": false,
+      "key": "meetings_booked",
+      "label": "Meetings booked with marketing contacts",
+      "value": "8",
+      "cur": 8,
+      "prev": 3,
+      "before": "3",
+      "change_pct": 166.7,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": "New marketing contacts fell to 7, from 19.",
+     "why": "The most new contacts came from direct visits: 6 of 14.",
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 7
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 6
+       "value": 0
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 51
+       "value": 0
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 12
+       "value": 1
       },
       {
        "week": "2 to 8 Nov 2026",
@@ -619,6 +615,10 @@
       },
       {
        "week": "9 to 15 Nov 2026",
+       "value": 1
+      },
+      {
+       "week": "16 to 22 Nov 2026",
        "value": 5
       }
      ]
@@ -635,8 +635,8 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "10,665",
-      "cur": 10665,
+      "value": "10,669",
+      "cur": 10669,
       "prev": 10366,
       "before": "10,366",
       "change_pct": 2.9,
@@ -747,11 +747,11 @@
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "199",
-      "cur": 199,
+      "value": "200",
+      "cur": 200,
       "prev": 414,
       "before": "414",
-      "change_pct": -51.9,
+      "change_pct": -51.7,
       "good": false,
       "min_change_pct": 15
      },
@@ -810,11 +810,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "3,918",
-      "cur": 3918,
+      "value": "3,921",
+      "cur": 3921,
       "prev": 2624,
       "before": "2,624",
-      "change_pct": 49.3,
+      "change_pct": 49.4,
       "good": true,
       "min_change_pct": 15
      },
@@ -963,14 +963,14 @@
    "by_claude": false,
    "boxes": {
     "well": [
+     "Meetings booked with marketing contacts up 166.7%",
      "Long video views up 78.8%",
-     "Visits from AI tools up 65.2%",
-     "Content page visits up 49.3%"
+     "Visits from AI tools up 65.2%"
     ],
     "attention": [
      "Times the company page's posts were seen down 75.1%",
      "Marketing sourced deals (estimate) down 75%",
-     "New marketing contacts down 63.2%"
+     "Demo requests down 57.9%"
     ],
     "do": []
    }
@@ -1101,10 +1101,6 @@
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 1
-      },
-      {
        "week": "12 to 18 Oct 2026",
        "value": 0
       },
@@ -1123,6 +1119,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 5
       }
      ]
     },
@@ -1306,7 +1306,7 @@
       "change_pct": null,
       "good": null
      },
-     "why": "174 signed up. 3 had a meeting since.",
+     "why": "174 signed up. 4 had a meeting since.",
      "do": null,
      "trend": []
     },
@@ -1559,27 +1559,23 @@
      "tab": "journey",
      "source": "HubSpot, marketing contacts and meetings",
      "note": null,
-     "period": "16 Aug to 15 Nov 2026",
-     "period_before": "16 May to 15 Aug 2026",
+     "period": "24 Aug to 23 Nov 2026",
+     "period_before": "24 May to 23 Aug 2026",
      "notable": true,
      "main": {
       "key": "meetings_booked",
       "label": "Meetings booked with marketing contacts",
-      "value": "20",
-      "cur": 20,
-      "prev": 5,
-      "before": "5",
+      "value": "24",
+      "cur": 24,
+      "prev": 6,
+      "before": "6",
       "change_pct": 300.0,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Events brought 196 of 358 new contacts.",
+     "why": "The most new contacts came from events: 195 of 358.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 1
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 0
@@ -1599,6 +1595,10 @@
       {
        "week": "9 to 15 Nov 2026",
        "value": 1
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 5
       }
      ]
     },
@@ -1614,8 +1614,8 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "34,277",
-      "cur": 34277,
+      "value": "34,281",
+      "cur": 34281,
       "prev": 24379,
       "before": "24,379",
       "change_pct": 40.6,
@@ -1761,11 +1761,11 @@
      "main": {
       "key": "campaign_visits",
       "label": "Visits from tagged campaigns",
-      "value": "2,755",
-      "cur": 2755,
+      "value": "2,756",
+      "cur": 2756,
       "prev": 2360,
       "before": "2,360",
-      "change_pct": 16.7,
+      "change_pct": 16.8,
       "good": true,
       "min_change_pct": 15
      },
@@ -1817,7 +1817,7 @@
       "change_pct": null,
       "good": null
      },
-     "why": "174 signed up. 3 had a meeting since.",
+     "why": "174 signed up. 4 had a meeting since.",
      "do": null,
      "trend": []
     },
@@ -1833,8 +1833,8 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "10,609",
-      "cur": 10609,
+      "value": "10,612",
+      "cur": 10612,
       "prev": 6102,
       "before": "6,102",
       "change_pct": 73.9,
