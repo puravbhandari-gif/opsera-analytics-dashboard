@@ -4,13 +4,13 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/forge-ontology-ai-agents,927,64,0,0,6,349
 2026-11-01,2026-11-23,yes,/blog/software-factory-benefits,497,39,0,0,6,643
 2026-11-01,2026-11-23,yes,/blog/smart-model-selection,473,35,0,0,12,414
-2026-11-01,2026-11-23,yes,/blog/claude-code-alternative,197,87,0,0,135,23561
+2026-11-01,2026-11-23,yes,/blog/claude-code-alternative,198,87,0,0,135,23561
 2026-11-01,2026-11-23,yes,/blog/cobol-modernization,134,26,0,0,26,8293
 2026-11-01,2026-11-23,yes,/blog/spec-driven-development,120,37,0,0,71,7904
 2026-11-01,2026-11-23,yes,/blog/harness-engineering,114,29,0,0,21,3058
 2026-11-01,2026-11-23,yes,/blog/ai-sdlc,111,38,0,0,43,9585
 2026-11-01,2026-11-23,yes,/blog/software-factory,107,28,0,0,36,8985
-2026-11-01,2026-11-23,yes,/blog/software-factory-model,105,22,0,0,27,3575
+2026-11-01,2026-11-23,yes,/blog/software-factory-model,106,22,0,0,27,3575
 2026-11-01,2026-11-23,yes,/blog/software-factory-vs-dark-factory,102,44,0,0,43,1295
 2026-11-01,2026-11-23,yes,/blog/github-copilot-adoption-trends-insights-from-real-data,96,4,0,0,10,3167
 2026-11-01,2026-11-23,yes,/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,77,21,0,0,38,2342
@@ -22,11 +22,11 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/legacy-code-modernization,55,15,0,0,24,4209
 2026-11-01,2026-11-23,yes,/blog/snowflake-to-databricks-migration,47,5,0,0,126,1485
 2026-11-01,2026-11-23,yes,/blog/cursor-alternatives,46,8,0,0,8,9532
-2026-11-01,2026-11-23,yes,/blog/sast-tools,39,6,0,0,9,11174
+2026-11-01,2026-11-23,yes,/blog/sast-tools,40,6,0,0,9,11174
 2026-11-01,2026-11-23,yes,/blog/13-code-quality-metrics-that-you-must-track,37,8,0,0,18,6718
 2026-11-01,2026-11-23,yes,/blog/all-you-need-to-know-about-ci-cd-pipeline,35,6,0,0,13,23543
+2026-11-01,2026-11-23,yes,/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption,30,0,0,0,2,127
 2026-11-01,2026-11-23,yes,/blog/software-factory-as-a-service,30,19,0,0,27,775
-2026-11-01,2026-11-23,yes,/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption,29,0,0,0,2,127
 2026-11-01,2026-11-23,yes,/blog/what-is-code-smell,27,2,0,0,5,8308
 2026-11-01,2026-11-23,yes,/blog/enterprise-benchmark,26,13,0,0,4,285
 2026-11-01,2026-11-23,yes,/blog/measure-ai-roi-software-development,26,5,0,0,5,835
@@ -35,7 +35,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/how-to-measure-code-churn,19,6,0,0,2,1024
 2026-11-01,2026-11-23,yes,/blog/ai-agent-guardrails-ontologies,17,3,0,0,3,124
 2026-11-01,2026-11-23,yes,/blog/beyond-php2shell-invisible-threats-systemic-gaps,17,3,0,0,2,133
-2026-11-01,2026-11-23,yes,/blog/github-copilot-alternatives,16,3,0,0,7,907
+2026-11-01,2026-11-23,yes,/blog/github-copilot-alternatives,17,4,0,0,7,907
 2026-11-01,2026-11-23,yes,/blog/10-must-have-salesforce-devops-tools-and-how-to-orchestrate-them-right,15,1,0,0,8,3622
 2026-11-01,2026-11-23,yes,/blog/blitzy-alternatives,15,6,0,0,7,597
 2026-11-01,2026-11-23,yes,/blog/github-copilot-trends-and-measuring-impact,15,2,0,0,3,763
@@ -155,6 +155,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/opsera-is-included-as-an-honorable-mention-in-the-2023-gartner-r-magic-quadrant-tm-for-devops-platforms,3,0,0,0,0,37
 2026-11-01,2026-11-23,yes,/blog/opsera-is-one-of-the-10-hottest-devops-startups,3,0,0,0,0,72
 2026-11-01,2026-11-23,yes,/blog/opsera-named-high-performer-in-fall-2023-g2-reports-for-enterprise-continuous-delivery-continuous-integration-configuration-management-and-build-automation,3,0,0,0,0,6
+2026-11-01,2026-11-23,yes,/blog/opsera-offers-aws-native-integrations-streamline-and-automate-your-software-delivery-faster,3,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/blog/opsera-recognized-in-spring-2024-g2-reports,3,0,0,0,0,1
 2026-11-01,2026-11-23,yes,/blog/release-roundup-august-2024,3,0,0,0,0,51
 2026-11-01,2026-11-23,yes,/blog/the-company-that-invented-modern-devops-just-learned-a-hard-lesson-about-ai-generated-code,3,0,0,0,0,52
@@ -191,7 +192,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/blog/learn-how-healthcare-and-life-science-companies-are-accelerating-their-devops-to-meet-ongoing-demands,2,0,0,0,0,113
 2026-11-01,2026-11-23,yes,/blog/opsera-2021-recap,2,0,0,0,1,158
 2026-11-01,2026-11-23,yes,/blog/opsera-announces-partnership-with-mindtree-to-accelerate-devops-initiatives,2,0,0,0,0,21
-2026-11-01,2026-11-23,yes,/blog/opsera-offers-aws-native-integrations-streamline-and-automate-your-software-delivery-faster,2,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/blog/release-roundup-june-2024,2,0,0,0,0,65
 2026-11-01,2026-11-23,yes,/blog/secure-software-factory,2,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/blog/securing-your-secrets-in-opseras-devops-orchestration-platform,2,0,0,0,0,124

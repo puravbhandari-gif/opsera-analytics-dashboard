@@ -33,6 +33,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/ecosystem/spinnaker,8,0,0,0,0,2
 2026-11-01,2026-11-23,yes,/forge/modernization/powerbuilder-to-java,8,2,0,0,2,246
 2026-11-01,2026-11-23,yes,/learn/beginners-devops-toolchain,8,0,0,0,0,0
+2026-11-01,2026-11-23,yes,/solutions/copilot-dashboard,8,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilot,7,0,0,0,0,63
 2026-11-01,2026-11-23,yes,/customer-stories/infoblox-uses-opsera-unified-devops-platform-to-cut-tool-sprawl-by-two-thirds,7,0,0,0,0,81
 2026-11-01,2026-11-23,yes,/ebook/security-at-the-speed-of-software,7,0,0,0,0,0
@@ -42,7 +43,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/ecosystem/splunk,7,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/ecosystem/veracode,7,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/forge/modernization/powerbuilder-to-dotnet,7,2,0,0,1,150
-2026-11-01,2026-11-23,yes,/solutions/copilot-dashboard,7,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/solutions/dora-metrics,7,1,0,0,0,0
 2026-11-01,2026-11-23,yes,/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights,6,0,0,0,0,5
 2026-11-01,2026-11-23,yes,/documentation/salesforce-pipelines-user-guide,6,0,0,0,0,0

@@ -196,9 +196,9 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-16,2026-11-22,no,/knowledge-base/quality-risk/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,1,0,0,0,0,0
 2026-11-16,2026-11-22,no,/knowledge-base/value-stream-management/flow-efficiency-metrics,1,0,0,0,0,16
 2026-11-23,2026-11-23,yes,/knowledge-base/ai-code-assistant-comparisons/amazon-q-vs-cursor,2,0,0,0,0,0
+2026-11-23,2026-11-23,yes,/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor,2,0,0,0,0,0
 2026-11-23,2026-11-23,yes,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor/),1,0,0,0,0,0
 2026-11-23,2026-11-23,yes,/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer,1,1,0,0,0,0
-2026-11-23,2026-11-23,yes,/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor,1,0,0,0,0,0
 2026-11-23,2026-11-23,yes,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,1,1,0,0,0,0
 2026-11-23,2026-11-23,yes,/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,1,0,0,0,0,0
 2026-11-23,2026-11-23,yes,/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-engineering-velocity,1,0,0,0,0,0

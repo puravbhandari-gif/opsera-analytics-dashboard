@@ -239,7 +239,7 @@ sent_on,subject,sends,opens,clicks,open_rate_pct,click_rate_pct
 2026-10-28,{{ contact.firstname }} - PHP2Shell vulnerabilities at GitHub Universe.,10422,443,20,4.3,0.2
 2026-10-29,Speaker invite for {{ contact.firstname }},130,15,0,11.5,0.0
 2026-10-29,NBA Basketball - private suite for Pacers/Rockets,62,0,0,0.0,0.0
-2026-11-02,{{ contact.firstname }} How's it going with Forge?,33,1,0,3.0,0.0
+2026-11-02,{{ contact.firstname }} How's it going with Forge?,34,1,0,2.9,0.0
 2026-11-02,{{ contact.firstname }} - Modernize legacy estates.,115,17,2,14.9,1.8
 2026-11-02,Opsera Release Notes | Step-Level Branch Control in Dynamic Settings & Smarter Pull Request Validation,1335,33,0,2.5,0.0
 2026-11-02,Opsera Release Notes | Expanded Salesforce Metadata Support for Revenue Cloud and Platform Events,135,4,0,3.0,0.0
