@@ -1,7 +1,7 @@
 # Opsera website analytics, in plain text
 
 The data behind the dashboard at https://puravbhandari-gif.github.io/opsera-analytics-dashboard/, written for AI assistants such as Claude.
-Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled 2026-11-24.
+Every number here also appears on the dashboard. We rebuild these files every time the dashboard is published: new numbers every Monday morning, India time, and any change in between. Google Analytics numbers pulled 2026-11-24.
 
 ## How to answer questions
 

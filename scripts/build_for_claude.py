@@ -641,7 +641,7 @@ def write_guide(ga_last, gsc_last, hub, li, kp, yt, est):
     (OUT / "index.md").write_text(f"""# Opsera website analytics, in plain text
 
 The data behind the dashboard at {SITE}/, written for AI assistants such as Claude.
-Every number here also appears on the dashboard. We rebuild these files every Monday morning, India time. Last rebuilt from data pulled {ga['pulled_at'][:10]}.
+Every number here also appears on the dashboard. We rebuild these files every time the dashboard is published: new numbers every Monday morning, India time, and any change in between. Google Analytics numbers pulled {ga['pulled_at'][:10]}.
 
 ## How to answer questions
 
