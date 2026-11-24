@@ -12,10 +12,6 @@ on:
         description: "Also post this Monday-to-Sunday week to Slack: its Sunday, e.g. 2026-11-01 (leave empty for no post)"
         required: false
         default: ""
-      slack_without_all_visits:
-        description: "Leave the Website visits line (with robots) out of the Slack post: yes or no"
-        required: false
-        default: "no"
       slack_note:
         description: "One extra line in the Slack post, after visits without email robots (leave empty for none)"
         required: false
@@ -226,6 +222,5 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           WEEK_ENDING: ${{ inputs.slack_week }}
-          SLACK_WITHOUT_ALL_VISITS: ${{ inputs.slack_without_all_visits }}
           SLACK_NOTE: ${{ inputs.slack_note }}
         run: python scripts/post_slack.py
