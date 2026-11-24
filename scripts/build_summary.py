@@ -384,6 +384,14 @@ def content(mode):
             by[pg][0] += v; by[pg][1] += e
         elif prev and prev[0] <= date <= prev[1]:
             by[pg][2] += v
+    for day, pg, _, r in lk.get("newsletter_robots", []):   # newsletter link checkers aren't content visits (24 Nov 2026)
+        if not is_content[pg]:
+            continue
+        date = add_days(lk["start_date"], day)
+        if cur[0] <= date <= cur[1]:
+            by[pg][0] -= r
+        elif prev and prev[0] <= date <= prev[1]:
+            by[pg][2] -= r
     title = lambda i: re.sub(r"\s*[|—–-]\s*Opsera\s*$", "", lk["titles"][i] or lk["pages"][i]).strip()
     top = sorted(((k, x) for k, x in by.items() if x[0]), key=lambda kv: -kv[1][0])[:3]
     details = [("top", f"The top piece was \"{title(k)}\": {n(x[0])} visits" + (f", {n(x[1])} of them engaged." if x[1] else "."))

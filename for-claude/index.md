@@ -9,7 +9,7 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - Weeks run Monday to Sunday. Months are calendar months. `period_not_finished` is "yes" for a week or month still under way.
 - Google Analytics and HubSpot dates follow US Pacific time. LinkedIn exports use UTC.
 - Never add numbers from different sources together (for example Google Analytics visits and Search Console clicks). Each file and column says its source.
-- "Without email robots" leaves out visits by email link checkers: visits with no engagement landing on email subscription pages (/hs/preferences-center), from Cupertino, Palo Alto, Garner or Sunnyvale, or from Safari on a Mac desktop. All visits stays as Google Analytics counts it.
+- "Without email robots" leaves out visits by email link checkers: visits with no engagement landing on email subscription pages (/hs/preferences-center), from Cupertino, Palo Alto, Garner or Sunnyvale, from Safari on a Mac desktop, or from the newsletter (utm_source dg_newsletter). All visits stays as Google Analytics counts it. Content visits also leave out the newsletter's visits with no engagement.
 - "Visits" are Google Analytics sessions. "Engaged visits" are visits where someone stayed 10+ seconds, saw 2+ pages or filled a form. They leave out most email robots.
 - Form fills count the HubSpot form event in Google Analytics. We leave out job application forms everywhere.
 - Asset downloads are form fills on pages under /resources/report/, /resources/white-papers/, /resources/ebooks/ or /resources/comparison-guides/. They're part of "other forms".

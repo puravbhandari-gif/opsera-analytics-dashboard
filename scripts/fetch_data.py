@@ -310,6 +310,9 @@ PAID_GROUPS = {"Paid Search", "Paid Social", "Display", "Cross-network", "Paid O
 # Only the visits in that group that weren't engaged count as robots, so engaged people stay in.
 ROBOT_PAGES = "/hs/preferences-center"
 ROBOT_CITIES = ["Cupertino", "Palo Alto", "Garner", "Sunnyvale"]
+# Newsletter link checkers (agreed 24 Nov 2026): the 19 Nov newsletter (utm_source dg_newsletter) brought about 5,700 visits
+# averaging 3 seconds. Its visits that weren't engaged count as robots too, in "without email robots" and in content visits.
+NEWSLETTER_SOURCES = ["dg_newsletter"]
 
 
 def email_robots(s, end):
@@ -319,6 +322,7 @@ def email_robots(s, end):
         {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "BEGINS_WITH", "value": ROBOT_PAGES}}},
         {"andGroup": {"expressions": [{"filter": {"fieldName": "city", "inListFilter": {"values": ROBOT_CITIES}}}, exact("country", "United States")]}},
         {"andGroup": {"expressions": [exact("browser", "Safari"), exact("operatingSystem", "Macintosh"), exact("deviceCategory", "desktop")]}},
+        {"filter": {"fieldName": "sessionSource", "inListFilter": {"values": NEWSLETTER_SOURCES}}},
     ]}}
     rows = ga_report(s, end, ["date"], ["sessions", "engagedSessions"], flt=signs)
     return [{"date": r["date"], "visits": r["sessions"], "engaged": r["engagedSessions"], "robots": r["sessions"] - r["engagedSessions"]}
@@ -815,6 +819,13 @@ def lookup(s, end, gsc_site):
         k = (day(r["date"]), index(pages, page_of(r["landingPage"])), index(channels, r["sessionDefaultChannelGroup"]))
         v = visits.setdefault(k, [0, 0])
         v[0] += r["sessions"]; v[1] += r["engagedSessions"]
+    # Newsletter robots by page (see NEWSLETTER_SOURCES): visits from the newsletter that weren't engaged. The Content tab
+    # and the Summary's content visits take them off; the Look up tab and All visits keep them.
+    newsletter_robots = {}
+    news = {"filter": {"fieldName": "sessionSource", "inListFilter": {"values": NEWSLETTER_SOURCES}}}
+    for r in ga_report(s, end, ["date", "landingPage", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"], flt=news):
+        k = (day(r["date"]), index(pages, page_of(r["landingPage"])), index(channels, r["sessionDefaultChannelGroup"]))
+        newsletter_robots[k] = newsletter_robots.get(k, 0) + r["sessions"] - r["engagedSessions"]
     camp_visits = {}
     for r in ga_report(s, end, ["date", "sessionCampaignName", "sessionSource", "sessionMedium"], ["sessions", "engagedSessions"]):
         name = r["sessionCampaignName"]
@@ -858,6 +869,7 @@ def lookup(s, end, gsc_site):
         "asset_pages": list(ASSET_PAGES),
         "visits": [[*k, *v] for k, v in sorted(visits.items())],
         "campaign_visits": [[*k, *v] for k, v in sorted(camp_visits.items())],
+        "newsletter_robots": [[*k, v] for k, v in sorted(newsletter_robots.items()) if v],
         "page_campaign_visits": [[*k, *v] for k, v in sorted(both.items())],
         "forms": [[*k, v] for k, v in sorted(forms.items())],
         "gsc": [[*k, *v] for k, v in sorted(gsc.items())],

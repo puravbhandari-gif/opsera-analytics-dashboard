@@ -2993,6 +2993,9 @@ function renderContent(d, hub) {
     const row = (i) => stats[i] || (stats[i] = { visits: 0, engaged: 0, forms: 0, clicks: 0, from: {} });
     d.visits.forEach((r) => { if (r[0] >= a && r[0] <= b) { const s2 = row(r[1]); s2.visits += r[3]; s2.engaged += r[4];
       const ch = channelName(d.channels[r[2]]); s2.from[ch] = (s2.from[ch] || 0) + r[3]; } });
+    // newsletter link checkers (24 Nov 2026): non-engaged visits from dg_newsletter don't count as content visits
+    (d.newsletter_robots || []).forEach((r) => { if (r[0] >= a && r[0] <= b) { const s2 = row(r[1]); s2.visits -= r[3];
+      const ch = channelName(d.channels[r[2]]); s2.from[ch] = (s2.from[ch] || 0) - r[3]; } });
     d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) row(r[1]).forms += r[3]; });
     d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) row(r[1]).clicks += r[2]; });
     // deals by the month they were created: every month the period touches
@@ -3027,7 +3030,7 @@ function renderContent(d, hub) {
     ] });
     const left = rows.length - shown.length;
     $("content-status").textContent = left ? `Not showing ${num(left)} piece${left === 1 ? "" : "s"} with no visits, form fills, Google clicks or deals in this period.` : "";
-    $("content-source").textContent = `Source: Google Analytics for visits, where they came from and form fills, ${range(cur.start, cur.end)} (Pacific time).`;
+    $("content-source").textContent = `Source: Google Analytics for visits, where they came from and form fills, ${range(cur.start, cur.end)} (Pacific time). Visits leave out newsletter link checkers (dg_newsletter visits with no engagement).`;
     $("content-gsc-source").textContent = `Google clicks: Search Console, ${range(gcur.start, gcur.end)}.`;
     $("content-deals-source").textContent = `Deals: HubSpot marketing deals created in ${[...months].map((m) => month(m)).join(", ")}, updated ${dayYear(hub.pulled_at.slice(0, 10))}. ${num(deals.length)} deal${deals.length === 1 ? "" : "s"} in those months, ${num(shown.reduce((t2, r) => t2 + r.deals, 0))} of them traced to a piece here. Since ${dayYear(hub.start_date)}: ${num((hub.deal_lines || []).length)} deals, ${num(shown.reduce((t2, r) => t2 + r.dealsAll, 0))} traced to a piece.`;
   };

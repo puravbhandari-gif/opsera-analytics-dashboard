@@ -129,16 +129,16 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "9,627",
-      "cur": 9627,
+      "value": "4,136",
+      "cur": 4136,
       "prev": 2703,
       "before": "2,703",
-      "change_pct": 256.2,
+      "change_pct": 53.0,
       "good": true,
       "min_change_pct": 10
      },
-     "why": "Unlabelled visits jumped to 6,125, likely robots.",
-     "do": "Filter out unlabelled visits, up from 352 to 6,125.",
+     "why": "Engaged visits doubled to 1,428, up from 696.",
+     "do": null,
      "trend": [
       {
        "week": "12 to 18 Oct 2026",
@@ -162,7 +162,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 9627
+       "value": 4136
       }
      ]
     },
@@ -304,16 +304,16 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "4,772",
-      "cur": 4772,
+      "value": "1,404",
+      "cur": 1404,
       "prev": 1155,
       "before": "1,155",
-      "change_pct": 313.2,
+      "change_pct": 21.6,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Software Factory Pattern led: 937 visits, only 87 engaged.",
-     "do": "Write more like Software Factory Pattern: 87 engaged visits.",
+     "why": "Software Factory Pattern led: 109 visits, 87 engaged.",
+     "do": "Write more like Software Factory Pattern: 87 of 109 engaged.",
      "trend": [
       {
        "week": "12 to 18 Oct 2026",
@@ -337,7 +337,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 4772
+       "value": 1404
       }
      ]
     },
@@ -492,19 +492,18 @@
    "by_claude": true,
    "boxes": {
     "well": [
-     "Engaged visits grew 105.2% to 1,428.",
-     "AI tools sent 44 visits, up from 26.",
-     "Software Factory Pattern blog got 87 engaged visits."
+     "Visits without robots grew 53.0% to 4,136.",
+     "Engaged visits doubled to 1,428, up from 696.",
+     "AI tools sent 44 visits, up from 26."
     ],
     "attention": [
-     "Unlabelled visits jumped to 6,125, likely robots.",
      "Demo requests fell to 2, down from 5.",
+     "Unlabelled visits jumped to 6,125, mostly newsletter robots.",
      "Company page posts were seen 49.6% less."
     ],
     "do": [
-     "Filter out unlabelled visits, up from 352 to 6,125.",
-     "Link contacts to deals: 19 have no contact.",
-     "Write more like Software Factory Pattern: 87 engaged visits."
+     "Write more like Software Factory Pattern: 87 of 109 engaged.",
+     "Link contacts to deals: 19 have no contact."
     ]
    }
   },
@@ -671,11 +670,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "15,781",
-      "cur": 15781,
+      "value": "10,290",
+      "cur": 10290,
       "prev": 10057,
       "before": "10,057",
-      "change_pct": 56.9,
+      "change_pct": 2.3,
       "good": true,
       "min_change_pct": 10
      },
@@ -704,7 +703,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 9627
+       "value": 4136
       }
      ]
     },
@@ -846,11 +845,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "7,149",
-      "cur": 7149,
+      "value": "3,781",
+      "cur": 3781,
       "prev": 2510,
       "before": "2,510",
-      "change_pct": 184.8,
+      "change_pct": 50.6,
       "good": true,
       "min_change_pct": 15
      },
@@ -879,7 +878,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 4772
+       "value": 1404
       }
      ]
     },
@@ -999,9 +998,9 @@
    "by_claude": false,
    "boxes": {
     "well": [
-     "Content page visits up 184.8%",
      "Long video views up 78.8%",
-     "Visits from AI tools up 71.9%"
+     "Visits from AI tools up 71.9%",
+     "Content page visits up 50.6%"
     ],
     "attention": [
      "Times the company page's posts were seen down 75.1%",
@@ -1207,7 +1206,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 9627
+       "value": 4136
       }
      ]
     },
@@ -1391,7 +1390,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 4772
+       "value": 1404
       }
      ]
     },
@@ -1650,11 +1649,11 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "39,505",
-      "cur": 39505,
+      "value": "34,014",
+      "cur": 34014,
       "prev": 24341,
       "before": "24,341",
-      "change_pct": 62.3,
+      "change_pct": 39.7,
       "good": true,
       "min_change_pct": 10
      },
@@ -1683,7 +1682,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 9627
+       "value": 4136
       }
      ]
     },
@@ -1869,11 +1868,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "13,878",
-      "cur": 13878,
+      "value": "10,510",
+      "cur": 10510,
       "prev": 6080,
       "before": "6,080",
-      "change_pct": 128.3,
+      "change_pct": 72.9,
       "good": true,
       "min_change_pct": 15
      },
@@ -1902,7 +1901,7 @@
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 4772
+       "value": 1404
       }
      ]
     },
@@ -1988,8 +1987,8 @@
    "boxes": {
     "well": [
      "Meetings booked with marketing contacts up 300%",
-     "Content page visits up 128.3%",
-     "Visits without email robots up 62.3%"
+     "Content page visits up 72.9%",
+     "Long video views up 49.1%"
     ],
     "attention": [
      "Times Google showed our pages down 56.3%"

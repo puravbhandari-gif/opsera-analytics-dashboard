@@ -1,16 +1,16 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T10:42+05:30",
+ "pulled_at": "2026-11-24T11:58+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
   "sessions": 81633,
-  "totalUsers": 63126,
+  "totalUsers": 63129,
   "engagedSessions": 30703
  },
  "split_sums": {
-  "daily": 80543,
+  "daily": 80552,
   "channels": 80941
  },
  "daily": [
@@ -1432,9 +1432,9 @@
   },
   {
    "date": "2026-11-23",
-   "sessions": 370,
-   "totalUsers": 332,
-   "engagedSessions": 112
+   "sessions": 379,
+   "totalUsers": 340,
+   "engagedSessions": 113
   }
  ],
  "channels": [
@@ -1443,14 +1443,14 @@
    "sessions": 29133,
    "totalUsers": 26265,
    "engagedSessions": 8955,
-   "averageSessionDuration": 66.88810137692651
+   "averageSessionDuration": 66.88827451645899
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 25729,
    "totalUsers": 16033,
    "engagedSessions": 13206,
-   "averageSessionDuration": 172.15355027264954
+   "averageSessionDuration": 172.15541524241127
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -2090,6 +2090,12 @@
    "engagedSessions": 87
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Direct",
+   "sessions": 161,
+   "engagedSessions": 31
+  },
+  {
    "date": "2026-07-28",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 160,
@@ -2130,12 +2136,6 @@
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 156,
    "engagedSessions": 87
-  },
-  {
-   "date": "2026-11-23",
-   "sessionDefaultChannelGroup": "Direct",
-   "sessions": 156,
-   "engagedSessions": 31
   },
   {
    "date": "2026-06-23",
@@ -2792,6 +2792,12 @@
    "engagedSessions": 68
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Organic Search",
+   "sessions": 118,
+   "engagedSessions": 59
+  },
+  {
    "date": "2026-04-13",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 117,
@@ -2853,12 +2859,6 @@
   },
   {
    "date": "2026-11-04",
-   "sessionDefaultChannelGroup": "Organic Search",
-   "sessions": 115,
-   "engagedSessions": 58
-  },
-  {
-   "date": "2026-11-23",
    "sessionDefaultChannelGroup": "Organic Search",
    "sessions": 115,
    "engagedSessions": 58
@@ -5846,6 +5846,12 @@
    "engagedSessions": 7
   },
   {
+   "date": "2026-11-23",
+   "sessionDefaultChannelGroup": "Referral",
+   "sessions": 18,
+   "engagedSessions": 7
+  },
+  {
    "date": "2026-04-24",
    "sessionDefaultChannelGroup": "Paid Search",
    "sessions": 17,
@@ -5940,12 +5946,6 @@
    "sessionDefaultChannelGroup": "Email",
    "sessions": 17,
    "engagedSessions": 1
-  },
-  {
-   "date": "2026-11-23",
-   "sessionDefaultChannelGroup": "Referral",
-   "sessions": 17,
-   "engagedSessions": 7
   },
   {
    "date": "2026-04-21",
@@ -11482,7 +11482,7 @@
    "sessions": 29133,
    "totalUsers": 26265,
    "engagedSessions": 8955,
-   "averageSessionDuration": 66.88810137692651
+   "averageSessionDuration": 66.88827451645899
   },
   {
    "sessionDefaultChannelGroup": "Organic Search",
@@ -11491,7 +11491,7 @@
    "sessions": 24348,
    "totalUsers": 15215,
    "engagedSessions": 12462,
-   "averageSessionDuration": 171.7080173969936
+   "averageSessionDuration": 171.7099881464186
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -11545,7 +11545,7 @@
    "sessions": 1125,
    "totalUsers": 608,
    "engagedSessions": 564,
-   "averageSessionDuration": 180.65281144355552
+   "averageSessionDuration": 180.65281144355555
   },
   {
    "sessionDefaultChannelGroup": "Unassigned",
@@ -11596,10 +11596,10 @@
    "sessionDefaultChannelGroup": "Referral",
    "sessionSource": "teams.public.onecdn.static.microsoft",
    "sessionMedium": "referral",
-   "sessions": 254,
+   "sessions": 255,
    "totalUsers": 138,
    "engagedSessions": 103,
-   "averageSessionDuration": 208.4360475511811
+   "averageSessionDuration": 207.6186512862745
   },
   {
    "sessionDefaultChannelGroup": "Referral",
@@ -16591,7 +16591,7 @@
  "pages": [
   {
    "page": "/",
-   "views": 24667
+   "views": 24669
   },
   {
    "page": "/about",
@@ -16619,7 +16619,7 @@
   },
   {
    "page": "/forge",
-   "views": 2211
+   "views": 2212
   },
   {
    "page": "/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained",
@@ -16755,7 +16755,7 @@
   },
   {
    "page": "/unified-insights",
-   "views": 502
+   "views": 503
   },
   {
    "page": "/blog/smart-model-selection",
@@ -16922,11 +16922,11 @@
    "views": 224
   },
   {
-   "page": "/events/copilot-cursor-claude-code-what-250k-developers-revealed",
-   "views": 219
+   "page": "/blog/how-to-measure-code-churn",
+   "views": 220
   },
   {
-   "page": "/blog/how-to-measure-code-churn",
+   "page": "/events/copilot-cursor-claude-code-what-250k-developers-revealed",
    "views": 219
   },
   {
@@ -17506,6 +17506,10 @@
    "views": 42
   },
   {
+   "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
+   "views": 42
+  },
+  {
    "page": "/blog/devops-monitoring",
    "views": 42
   },
@@ -17514,15 +17518,15 @@
    "views": 41
   },
   {
-   "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
-   "views": 41
-  },
-  {
    "page": "/blog/npm-supply-chain-attacks",
    "views": 41
   },
   {
    "page": "/resources/webinars/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera",
+   "views": 40
+  },
+  {
+   "page": "/ecosystem/octopus-deploy",
    "views": 40
   },
   {
@@ -17542,15 +17546,15 @@
    "views": 39
   },
   {
-   "page": "/ecosystem/octopus-deploy",
-   "views": 39
-  },
-  {
    "page": "/blog/github-copilot-trends-and-measuring-impact",
    "views": 39
   },
   {
    "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
+   "views": 38
+  },
+  {
+   "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
    "views": 38
   },
   {
@@ -17567,10 +17571,6 @@
   },
   {
    "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
-   "views": 37
-  },
-  {
-   "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework",
    "views": 37
   },
   {
@@ -17802,6 +17802,10 @@
    "views": 29
   },
   {
+   "page": "/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights",
+   "views": 29
+  },
+  {
    "page": "/ecosystem/veracode",
    "views": 29
   },
@@ -17835,10 +17839,6 @@
   },
   {
    "page": "/blog/top-devsecops-tools-and-how-to-orchestrate-them-with-opsera",
-   "views": 28
-  },
-  {
-   "page": "/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights",
    "views": 28
   },
   {
@@ -17974,6 +17974,10 @@
    "views": 24
   },
   {
+   "page": "/resources/comparison-guides/8090",
+   "views": 24
+  },
+  {
    "page": "/resources/report/ai-coding-impact-2025-benchmark-report",
    "views": 24
   },
@@ -17999,10 +18003,6 @@
   },
   {
    "page": "/forge/database-migration",
-   "views": 23
-  },
-  {
-   "page": "/resources/comparison-guides/8090",
    "views": 23
   },
   {
@@ -46804,14 +46804,14 @@
   {
    "date": "2026-11-23",
    "channel": "all",
-   "visits": 369,
+   "visits": 378,
    "demo_page": 16,
    "demo_form": 0
   },
   {
    "date": "2026-11-23",
    "channel": "direct",
-   "visits": 156,
+   "visits": 161,
    "demo_page": 3,
    "demo_form": 0
   },
@@ -46832,7 +46832,7 @@
   {
    "date": "2026-11-23",
    "channel": "search",
-   "visits": 109,
+   "visits": 112,
    "demo_page": 4,
    "demo_form": 0
   }
@@ -52623,17 +52623,17 @@
     {
      "date": "2026-11-23",
      "bot": "Amazonbot",
-     "visits": 54
+     "visits": 58
     },
     {
      "date": "2026-11-23",
      "bot": "Bytespider",
-     "visits": 190
+     "visits": 193
     },
     {
      "date": "2026-11-23",
      "bot": "CCBot",
-     "visits": 3
+     "visits": 4
     },
     {
      "date": "2026-11-23",
@@ -52658,109 +52658,109 @@
     {
      "date": "2026-11-23",
      "bot": "OAI-SearchBot",
-     "visits": 153
+     "visits": 154
     },
     {
      "date": "2026-11-23",
      "bot": "PerplexityBot",
-     "visits": 170
+     "visits": 175
     },
     {
      "date": "2026-11-23",
      "bot": "meta-externalagent",
-     "visits": 1231
+     "visits": 1338
     }
    ],
    "pages": [
     {
      "page": "/",
      "bot": "meta-externalagent",
-     "visits": 1747
+     "visits": 1752
     },
     {
      "page": "/",
      "bot": "Amazonbot",
-     "visits": 1563
+     "visits": 1567
     },
     {
      "page": "/demo",
      "bot": "meta-externalagent",
-     "visits": 1216
+     "visits": 1220
     },
     {
      "page": "/agents",
      "bot": "meta-externalagent",
-     "visits": 1196
+     "visits": 1200
     },
     {
      "page": "/unified-insights",
      "bot": "meta-externalagent",
-     "visits": 1190
+     "visits": 1194
     },
     {
      "page": "/brickforge",
      "bot": "meta-externalagent",
-     "visits": 1187
+     "visits": 1191
     },
     {
      "page": "/agentic-devops",
      "bot": "meta-externalagent",
-     "visits": 1177
+     "visits": 1181
     },
     {
      "page": "/salesforce-devops",
      "bot": "meta-externalagent",
-     "visits": 1174
+     "visits": 1178
     },
     {
      "page": "/customer-stories",
      "bot": "meta-externalagent",
-     "visits": 1173
+     "visits": 1177
     },
     {
      "page": "/software-factory",
      "bot": "meta-externalagent",
-     "visits": 1170
+     "visits": 1174
     },
     {
      "page": "/about",
      "bot": "meta-externalagent",
-     "visits": 1169
+     "visits": 1173
     },
     {
      "page": "/privacy",
      "bot": "meta-externalagent",
-     "visits": 1169
+     "visits": 1173
     },
     {
      "page": "/blog",
      "bot": "meta-externalagent",
-     "visits": 1168
+     "visits": 1172
     },
     {
      "page": "/partners",
      "bot": "meta-externalagent",
-     "visits": 1168
+     "visits": 1172
     },
     {
      "page": "/terms-of-service",
      "bot": "meta-externalagent",
-     "visits": 1167
+     "visits": 1171
     },
     {
      "page": "/forge",
      "bot": "meta-externalagent",
-     "visits": 1164
+     "visits": 1168
     },
     {
      "page": "/forge/modernization",
      "bot": "meta-externalagent",
-     "visits": 1160
+     "visits": 1164
     },
     {
      "page": "/events",
      "bot": "meta-externalagent",
-     "visits": 840
+     "visits": 844
     },
     {
      "page": "/",
@@ -52770,7 +52770,7 @@
     {
      "page": "/",
      "bot": "OAI-SearchBot",
-     "visits": 513
+     "visits": 514
     },
     {
      "page": "/customer-stories",
@@ -52978,14 +52978,14 @@
      "visits": 43
     },
     {
-     "page": "/resources/comparison-guides/opsera-vs-linearb",
-     "bot": "OAI-SearchBot",
+     "page": "/gartner-symposium",
+     "bot": "meta-externalagent",
      "visits": 42
     },
     {
-     "page": "/gartner-symposium",
-     "bot": "meta-externalagent",
-     "visits": 41
+     "page": "/resources/comparison-guides/opsera-vs-linearb",
+     "bot": "OAI-SearchBot",
+     "visits": 42
     },
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
@@ -53193,6 +53193,11 @@
      "visits": 30
     },
     {
+     "page": "/blog/accelerating-innovation-safely-ai-coding-assistants-in-healthcare",
+     "bot": "meta-externalagent",
+     "visits": 29
+    },
+    {
      "page": "/blog/back-to-back-g2-users-name-opsera-a-high-performer-again-in-summer-2026",
      "bot": "meta-externalagent",
      "visits": 29
@@ -53218,6 +53223,11 @@
      "visits": 29
     },
     {
+     "page": "/customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-o",
+     "bot": "meta-externalagent",
+     "visits": 29
+    },
+    {
      "page": "/resources/white-papers/from-velocity-to-durable-value",
      "bot": "OAI-SearchBot",
      "visits": 29
@@ -53228,12 +53238,12 @@
      "visits": 29
     },
     {
-     "page": "/blog/accelerating-innovation-safely-ai-coding-assistants-in-healthcare",
+     "page": "/blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success",
      "bot": "meta-externalagent",
      "visits": 28
     },
     {
-     "page": "/blog/from-ai-adoption-to-ai-driven-business-outcomes-4-important-findings-to-drive-success",
+     "page": "/blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops",
      "bot": "meta-externalagent",
      "visits": 28
     },
@@ -53253,7 +53263,7 @@
      "visits": 28
     },
     {
-     "page": "/customer-stories/a-fortune-500-manufacturer-opsera-turning-deployment-speedinto-reliable-business-o",
+     "page": "/customer-stories/cisco",
      "bot": "meta-externalagent",
      "visits": 28
     },
@@ -53273,17 +53283,32 @@
      "visits": 28
     },
     {
+     "page": "/resources/comparison-guides/opsera-vs-swarmia",
+     "bot": "meta-externalagent",
+     "visits": 28
+    },
+    {
+     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
+     "bot": "meta-externalagent",
+     "visits": 28
+    },
+    {
+     "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
+     "page": "/blog/application-modernization-strategy",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
      "page": "/blog/factory-ai-alternatives",
      "bot": "meta-externalagent",
      "visits": 27
     },
     {
      "page": "/blog/i-ran-an-ai-security-scan-on-a-notoriously-vulnerable-app-heres-what-happened",
-     "bot": "meta-externalagent",
-     "visits": 27
-    },
-    {
-     "page": "/blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops",
      "bot": "meta-externalagent",
      "visits": 27
     },
@@ -53304,11 +53329,6 @@
     },
     {
      "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
-     "bot": "meta-externalagent",
-     "visits": 27
-    },
-    {
-     "page": "/customer-stories/cisco",
      "bot": "meta-externalagent",
      "visits": 27
     },
@@ -53343,6 +53363,11 @@
      "visits": 27
     },
     {
+     "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-ou",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
      "page": "/newsroom/opsera-and-cursor-partner-to-embed-autonomous-ai-agents-directly-into-ai-sdlc-workflows-fo",
      "bot": "meta-externalagent",
      "visits": 27
@@ -53358,24 +53383,9 @@
      "visits": 27
     },
     {
-     "page": "/resources/comparison-guides/opsera-vs-swarmia",
-     "bot": "meta-externalagent",
-     "visits": 27
-    },
-    {
-     "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
-     "bot": "meta-externalagent",
-     "visits": 27
-    },
-    {
      "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivit",
      "bot": "meta-externalagent",
      "visits": 27
-    },
-    {
-     "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
-     "bot": "meta-externalagent",
-     "visits": 26
     },
     {
      "page": "/blog/agentic-ai-security",
@@ -53384,11 +53394,6 @@
     },
     {
      "page": "/blog/ai-code-security",
-     "bot": "meta-externalagent",
-     "visits": 26
-    },
-    {
-     "page": "/blog/application-modernization-strategy",
      "bot": "meta-externalagent",
      "visits": 26
     },
@@ -53439,11 +53444,6 @@
     },
     {
      "page": "/knowledge-base/quality-risk/patch-management-efficiency",
-     "bot": "meta-externalagent",
-     "visits": 26
-    },
-    {
-     "page": "/newsroom/new-opsera-report-reveals-how-ai-is-transforming-software-delivery-and-driving-business-ou",
      "bot": "meta-externalagent",
      "visits": 26
     },
@@ -53558,6 +53558,11 @@
      "visits": 25
     },
     {
+     "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilo",
+     "bot": "meta-externalagent",
+     "visits": 25
+    },
+    {
      "page": "/customer-stories/driving-copilot-adoption-at-a-leading-industrial-enterprise",
      "bot": "meta-externalagent",
      "visits": 25
@@ -53658,11 +53663,6 @@
      "visits": 24
     },
     {
-     "page": "/customer-stories/a-leading-biotechnology-innovator-opsera-unlocking-the-real-value-of-github-copilo",
-     "bot": "meta-externalagent",
-     "visits": 24
-    },
-    {
      "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
      "bot": "meta-externalagent",
      "visits": 24
@@ -53670,6 +53670,11 @@
     {
      "page": "/forge",
      "bot": "ChatGPT-User",
+     "visits": 24
+    },
+    {
+     "page": "/knowledge-base",
+     "bot": "meta-externalagent",
      "visits": 24
     },
     {
@@ -53748,11 +53753,6 @@
      "visits": 23
     },
     {
-     "page": "/knowledge-base",
-     "bot": "meta-externalagent",
-     "visits": 23
-    },
-    {
      "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
      "bot": "meta-externalagent",
      "visits": 23
@@ -53823,6 +53823,11 @@
      "visits": 22
     },
     {
+     "page": "/blog/healthcare-data-modernization",
+     "bot": "meta-externalagent",
+     "visits": 22
+    },
+    {
      "page": "/blog/operationalizing-ai-productivity-scaling-and-governing-the-ai-driven-lifecycle",
      "bot": "meta-externalagent",
      "visits": 22
@@ -53849,6 +53854,11 @@
     },
     {
      "page": "/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-ins",
+     "bot": "meta-externalagent",
+     "visits": 22
+    },
+    {
+     "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
      "bot": "meta-externalagent",
      "visits": 22
     },
@@ -53888,6 +53898,11 @@
      "visits": 22
     },
     {
+     "page": "/resources/report/gartner-market-guide-for-developer-productivity-insight-platforms",
+     "bot": "meta-externalagent",
+     "visits": 22
+    },
+    {
      "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivit",
      "bot": "OAI-SearchBot",
      "visits": 22
@@ -53923,11 +53938,6 @@
      "visits": 21
     },
     {
-     "page": "/blog/healthcare-data-modernization",
-     "bot": "meta-externalagent",
-     "visits": 21
-    },
-    {
      "page": "/blog/legacy-code-modernization",
      "bot": "PerplexityBot",
      "visits": 21
@@ -53955,11 +53965,6 @@
     {
      "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
      "bot": "OAI-SearchBot",
-     "visits": 21
-    },
-    {
-     "page": "/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera",
-     "bot": "meta-externalagent",
      "visits": 21
     },
     {
@@ -54024,11 +54029,6 @@
     },
     {
      "page": "/knowledge-base/uncategorized/cycle-time-mastery-from-first-commit-to-production",
-     "bot": "meta-externalagent",
-     "visits": 20
-    },
-    {
-     "page": "/resources/report/gartner-market-guide-for-developer-productivity-insight-platforms",
      "bot": "meta-externalagent",
      "visits": 20
     },
@@ -54158,6 +54158,11 @@
      "visits": 17
     },
     {
+     "page": "/blog/ci-cd-business-benefits",
+     "bot": "PerplexityBot",
+     "visits": 17
+    },
+    {
      "page": "/blog/claude-code-alternative",
      "bot": "meta-externalagent",
      "visits": 17
@@ -54213,7 +54218,7 @@
      "visits": 16
     },
     {
-     "page": "/blog/ci-cd-business-benefits",
+     "page": "/blog/change-failure-rate",
      "bot": "PerplexityBot",
      "visits": 16
     },
@@ -54343,11 +54348,6 @@
      "visits": 15
     },
     {
-     "page": "/blog/change-failure-rate",
-     "bot": "PerplexityBot",
-     "visits": 15
-    },
-    {
      "page": "/blog/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 15
@@ -54418,6 +54418,11 @@
      "visits": 15
     },
     {
+     "page": "/blog/using-data-to-encourage-copilot-adoption-in-your-organization",
+     "bot": "meta-externalagent",
+     "visits": 15
+    },
+    {
      "page": "/blog/what-is-a-modern-ci-cd-pipeline",
      "bot": "OAI-SearchBot",
      "visits": 15
@@ -54468,6 +54473,11 @@
      "visits": 15
     },
     {
+     "page": "/knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv",
+     "bot": "meta-externalagent",
+     "visits": 15
+    },
+    {
      "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
      "bot": "meta-externalagent",
      "visits": 15
@@ -54500,6 +54510,11 @@
     {
      "page": "/privacy",
      "bot": "PerplexityBot",
+     "visits": 15
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-copado",
+     "bot": "meta-externalagent",
      "visits": 15
     },
     {
@@ -54613,6 +54628,11 @@
      "visits": 14
     },
     {
+     "page": "/blog/g2-recognizes-opsera-in-six-categories-of-software-development",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
      "page": "/blog/how-devops-platform-can-secure-you-against-log4j-vulnerabilities",
      "bot": "meta-externalagent",
      "visits": 14
@@ -54695,11 +54715,6 @@
     {
      "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
      "bot": "PerplexityBot",
-     "visits": 14
-    },
-    {
-     "page": "/blog/using-data-to-encourage-copilot-adoption-in-your-organization",
-     "bot": "meta-externalagent",
      "visits": 14
     },
     {
@@ -54793,11 +54808,6 @@
      "visits": 14
     },
     {
-     "page": "/knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv",
-     "bot": "meta-externalagent",
-     "visits": 14
-    },
-    {
      "page": "/knowledge-base/value-stream-management/flow-efficiency-metrics",
      "bot": "meta-externalagent",
      "visits": 14
@@ -54814,6 +54824,11 @@
     },
     {
      "page": "/newsroom/opsera-announces-new-devops-for-dataops-solution-with-the-databricks-data-intelligence-pla",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
+     "page": "/newsroom/opsera-announces-new-patents-for-ai-powered-cloud-native-unified-devops-platform",
      "bot": "meta-externalagent",
      "visits": 14
     },
@@ -54879,11 +54894,6 @@
     },
     {
      "page": "/resources/comparison-guides/opsera-vs-cloudbees",
-     "bot": "meta-externalagent",
-     "visits": 14
-    },
-    {
-     "page": "/resources/comparison-guides/opsera-vs-copado",
      "bot": "meta-externalagent",
      "visits": 14
     },
@@ -54964,6 +54974,11 @@
     },
     {
      "page": "/resources/webinars/unlock-devops-performance-success-with-dora-metrics",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
+     "page": "/resources/white-papers/opsera-leading-the-charge-accelerating-secure-automated-and-cost-efficient-s",
      "bot": "meta-externalagent",
      "visits": 14
     },
@@ -55073,6 +55088,11 @@
      "visits": 13
     },
     {
+     "page": "/blog/everything-you-need-to-know-about-salesforce-backup-solutions",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/blog/five-devops-predictions-for-2023",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55083,12 +55103,12 @@
      "visits": 13
     },
     {
-     "page": "/blog/g2-recognizes-opsera-in-six-categories-of-software-development",
+     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
      "bot": "meta-externalagent",
      "visits": 13
     },
     {
-     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
+     "page": "/blog/how-opseras-dataops-pipeline-wizard-accelerates-reliable-data-delivery",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55139,6 +55159,11 @@
     },
     {
      "page": "/blog/opsera-raises-20m-in-series-b-funding",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
+     "page": "/blog/opsera-recognized-in-spring-2024-g2-reports",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55209,6 +55234,11 @@
     },
     {
      "page": "/blog/value-stream-management-a-guide-to-getting-more-out-of-your-software-delivery",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
+     "page": "/blog/want-better-developer-experience-start-by-removing-the-roadblocks",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55303,6 +55333,11 @@
      "visits": 13
     },
     {
+     "page": "/knowledge-base/category/ci-cd-platform-analytics",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/knowledge-base/category/core-reliability-metrics",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55343,6 +55378,11 @@
      "visits": 13
     },
     {
+     "page": "/newsroom/opsera-achieves-soc-2-type-ii-compliance",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/newsroom/opsera-adds-salesforce-to-devops-orchestration-platform",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55354,11 +55394,6 @@
     },
     {
      "page": "/newsroom/opsera-and-octopus-deploy-partner-to-help-organizations-accelerate-devops-adoption-and-ove",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
-     "page": "/newsroom/opsera-announces-new-patents-for-ai-powered-cloud-native-unified-devops-platform",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55473,6 +55508,11 @@
      "visits": 13
     },
     {
+     "page": "/resources/videos/reflektion-testimonial",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55503,17 +55543,17 @@
      "visits": 13
     },
     {
-     "page": "/resources/white-papers/opsera-leading-the-charge-accelerating-secure-automated-and-cost-efficient-s",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
      "page": "/terms-of-service",
      "bot": "PerplexityBot",
      "visits": 13
     },
     {
      "page": "/blog/13-code-quality-metrics-that-you-must-track",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/2022-recap-opsera-year-3",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55618,11 +55658,6 @@
      "visits": 12
     },
     {
-     "page": "/blog/everything-you-need-to-know-about-salesforce-backup-solutions",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
      "page": "/blog/forge-ontology-ai-agents",
      "bot": "meta-externalagent",
      "visits": 12
@@ -55638,12 +55673,17 @@
      "visits": 12
     },
     {
-     "page": "/blog/how-opseras-dataops-pipeline-wizard-accelerates-reliable-data-delivery",
+     "page": "/blog/how-to-measure-code-churn",
      "bot": "meta-externalagent",
      "visits": 12
     },
     {
      "page": "/blog/introducing-opsera-continuous-orchestration-for-next-gen-devops",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/opsera-2021-recap",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55664,11 +55704,6 @@
     },
     {
      "page": "/blog/opsera-is-one-of-the-10-hottest-devops-startups",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/blog/opsera-recognized-in-spring-2024-g2-reports",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55708,6 +55743,11 @@
      "visits": 12
     },
     {
+     "page": "/blog/software-factory-benefits",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
      "page": "/blog/solving-merge-conflicts-in-salesforce",
      "bot": "meta-externalagent",
      "visits": 12
@@ -55719,6 +55759,11 @@
     },
     {
      "page": "/blog/taking-control-of-github-security-how-opseras-advanced-security-dashboard-helps-you-manage-ris",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/the-code-warriors-a-tale-of-devops-and-devsecops-evolution",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55750,11 +55795,6 @@
     {
      "page": "/blog/using-data-to-encourage-copilot-adoption-in-your-organization",
      "bot": "PerplexityBot",
-     "visits": 12
-    },
-    {
-     "page": "/blog/want-better-developer-experience-start-by-removing-the-roadblocks",
-     "bot": "meta-externalagent",
      "visits": 12
     },
     {
@@ -55868,17 +55908,17 @@
      "visits": 12
     },
     {
+     "page": "/forge/modernization/security-modernization",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
      "page": "/knowledge-base/ai-code-assistant-analytics/amazon-q-developer",
      "bot": "meta-externalagent",
      "visits": 12
     },
     {
      "page": "/knowledge-base/category/ci-cd-health",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/knowledge-base/category/ci-cd-platform-analytics",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55924,11 +55964,6 @@
     },
     {
      "page": "/newsroom/devops-orchestration-platform-opsera-raises-15m",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/newsroom/opsera-achieves-soc-2-type-ii-compliance",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55984,6 +56019,11 @@
     },
     {
      "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-p",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56068,11 +56108,6 @@
      "visits": 12
     },
     {
-     "page": "/resources/videos/reflektion-testimonial",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
      "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 12
@@ -56133,11 +56168,6 @@
      "visits": 12
     },
     {
-     "page": "/blog/2022-recap-opsera-year-3",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
      "page": "/blog/ai-first-devops-at-aws-reinvent-2025-recap",
      "bot": "meta-externalagent",
      "visits": 11
@@ -56193,6 +56223,11 @@
      "visits": 11
     },
     {
+     "page": "/blog/enterprise-benchmark",
+     "bot": "Bytespider",
+     "visits": 11
+    },
+    {
      "page": "/blog/forge-ontology-ai-agents",
      "bot": "Bytespider",
      "visits": 11
@@ -56223,17 +56258,7 @@
      "visits": 11
     },
     {
-     "page": "/blog/how-to-measure-code-churn",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
      "page": "/blog/improving-salesforce-devops-efficiency",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
-     "page": "/blog/opsera-2021-recap",
      "bot": "meta-externalagent",
      "visits": 11
     },
@@ -56248,18 +56273,8 @@
      "visits": 11
     },
     {
-     "page": "/blog/software-factory-benefits",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
      "page": "/blog/software-factory-compliance-tools",
      "bot": "PerplexityBot",
-     "visits": 11
-    },
-    {
-     "page": "/blog/the-code-warriors-a-tale-of-devops-and-devsecops-evolution",
-     "bot": "meta-externalagent",
      "visits": 11
     },
     {
@@ -56280,6 +56295,11 @@
     {
      "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
      "bot": "meta-externalagent",
+     "visits": 11
+    },
+    {
+     "page": "/blog/value-stream-management-a-guide-to-getting-more-out-of-your-software-delivery",
+     "bot": "PerplexityBot",
      "visits": 11
     },
     {
@@ -56305,11 +56325,6 @@
     {
      "page": "/ecosystem/prisma-container-security",
      "bot": "PerplexityBot",
-     "visits": 11
-    },
-    {
-     "page": "/forge/modernization/security-modernization",
-     "bot": "meta-externalagent",
      "visits": 11
     },
     {
@@ -56360,11 +56375,6 @@
     {
      "page": "/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory",
      "bot": "Bytespider",
-     "visits": 11
-    },
-    {
-     "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-p",
-     "bot": "meta-externalagent",
      "visits": 11
     },
     {
@@ -56443,11 +56453,6 @@
      "visits": 10
     },
     {
-     "page": "/blog/enterprise-benchmark",
-     "bot": "Bytespider",
-     "visits": 10
-    },
-    {
      "page": "/blog/from-chaos-to-copilot-what-teams-get-wrong-about-github-copilot-adoption",
      "bot": "meta-externalagent",
      "visits": 10
@@ -56495,11 +56500,6 @@
     {
      "page": "/blog/the-new-opsera-brand",
      "bot": "meta-externalagent",
-     "visits": 10
-    },
-    {
-     "page": "/blog/value-stream-management-a-guide-to-getting-more-out-of-your-software-delivery",
-     "bot": "PerplexityBot",
      "visits": 10
     },
     {
@@ -56808,6 +56808,11 @@
      "visits": 9
     },
     {
+     "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
+     "bot": "PerplexityBot",
+     "visits": 9
+    },
+    {
      "page": "/resources/comparison-guides/opsera-vs-gearset",
      "bot": "PerplexityBot",
      "visits": 9
@@ -57018,11 +57023,6 @@
      "visits": 8
     },
     {
-     "page": "/resources/comparison-guides/opsera-vs-dx-atlassian",
-     "bot": "PerplexityBot",
-     "visits": 8
-    },
-    {
      "page": "/resources/white-papers/how-organizations-can-drive-github-copilot-adoption-by-measuring-success-ins",
      "bot": "PerplexityBot",
      "visits": 8
@@ -57090,6 +57090,11 @@
     {
      "page": "/blog/opsera-is-a-gartner-magic-quadrant-leader-heres-what-that-means-for-engineering-leaders",
      "bot": "Claude-User",
+     "visits": 7
+    },
+    {
+     "page": "/blog/reducing-mean-time-to-recovery-mttr",
+     "bot": "PerplexityBot",
      "visits": 7
     },
     {
@@ -57340,11 +57345,6 @@
     {
      "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
      "bot": "Bytespider",
-     "visits": 6
-    },
-    {
-     "page": "/blog/reducing-mean-time-to-recovery-mttr",
-     "bot": "PerplexityBot",
      "visits": 6
     },
     {
@@ -58033,6 +58033,11 @@
      "visits": 4
     },
     {
+     "page": "/blog/dora-2025-report-ai-software-development/%22",
+     "bot": "meta-externalagent",
+     "visits": 4
+    },
+    {
      "page": "/blog/dreamforce-2024-preview-new-and-exciting-salesforce-features-from-opsera",
      "bot": "PerplexityBot",
      "visits": 4
@@ -58690,11 +58695,6 @@
     {
      "page": "/blog/devsecops-automation",
      "bot": "OAI-SearchBot",
-     "visits": 3
-    },
-    {
-     "page": "/blog/dora-2025-report-ai-software-development/%22",
-     "bot": "meta-externalagent",
      "visits": 3
     },
     {
@@ -60559,6 +60559,11 @@
     },
     {
      "page": "/blog/you-got-the-insights-so-now-what",
+     "bot": "Bytespider",
+     "visits": 2
+    },
+    {
+     "page": "/blog/you-got-the-insights-so-now-what",
      "bot": "OAI-SearchBot",
      "visits": 2
     },
@@ -61335,6 +61340,11 @@
     {
      "page": "/partners/koantek",
      "bot": "PerplexityBot",
+     "visits": 2
+    },
+    {
+     "page": "/platform/forge",
+     "bot": "meta-externalagent",
      "visits": 2
     },
     {
@@ -63499,6 +63509,11 @@
     },
     {
      "page": "/blog/opsera-2021-recap",
+     "bot": "Bytespider",
+     "visits": 1
+    },
+    {
+     "page": "/blog/opsera-2021-recap",
      "bot": "Claude-User",
      "visits": 1
     },
@@ -64540,11 +64555,6 @@
     {
      "page": "/blog/you-got-the-insights-so-now-what",
      "bot": "Amazonbot",
-     "visits": 1
-    },
-    {
-     "page": "/blog/you-got-the-insights-so-now-what",
-     "bot": "Bytespider",
      "visits": 1
     },
     {
@@ -67433,11 +67443,6 @@
      "visits": 1
     },
     {
-     "page": "/platform/forge",
-     "bot": "meta-externalagent",
-     "visits": 1
-    },
-    {
      "page": "/platform/hummingbird-ai",
      "bot": "PerplexityBot",
      "visits": 1
@@ -68384,6 +68389,11 @@
     },
     {
      "page": "/solutions/data-and-analytics",
+     "bot": "CCBot",
+     "visits": 1
+    },
+    {
+     "page": "/solutions/data-and-analytics",
      "bot": "ChatGPT-User",
      "visits": 1
     },
@@ -68719,7 +68729,7 @@
  "google_search_visits": [
   {
    "kind": "new",
-   "visits": 14881,
+   "visits": 14883,
    "engaged": 8890
   },
   {
@@ -70165,8 +70175,8 @@
   },
   {
    "date": "2026-11-17",
-   "visits": 9,
-   "engaged": 4,
+   "visits": 11,
+   "engaged": 6,
    "robots": 5
   },
   {
@@ -70177,15 +70187,15 @@
   },
   {
    "date": "2026-11-19",
-   "visits": 160,
-   "engaged": 64,
-   "robots": 96
+   "visits": 5739,
+   "engaged": 394,
+   "robots": 5345
   },
   {
    "date": "2026-11-20",
-   "visits": 26,
-   "engaged": 4,
-   "robots": 22
+   "visits": 171,
+   "engaged": 9,
+   "robots": 162
   },
   {
    "date": "2026-11-21",
@@ -70195,15 +70205,15 @@
   },
   {
    "date": "2026-11-22",
-   "visits": 5,
-   "engaged": 2,
-   "robots": 3
+   "visits": 113,
+   "engaged": 8,
+   "robots": 105
   },
   {
    "date": "2026-11-23",
-   "visits": 16,
-   "engaged": 7,
-   "robots": 9
+   "visits": 68,
+   "engaged": 12,
+   "robots": 56
   }
  ],
  "google_ads_daily": [
