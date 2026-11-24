@@ -6,9 +6,9 @@
   "period_before": "9 to 15 Nov 2026",
   "boxes": {
    "well": [
+    "Meetings booked rose to 5, up from 1.",
     "Visits without robots grew 53.0% to 4,136.",
-    "Engaged visits doubled to 1,428, up from 696.",
-    "AI tools sent 44 visits, up from 26."
+    "Engaged visits doubled to 1,428, up from 696."
    ],
    "attention": [
     "Demo requests fell to 2, down from 5.",
@@ -36,10 +36,10 @@
     "do": ""
    },
    "journey": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
-    "main": "new_marketing_contacts",
-    "why": "Direct visits and Google search each brought 2 contacts.",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
+    "main": "meetings_booked",
+    "why": "Events brought all 5 meetings.",
     "do": ""
    },
    "visits": {

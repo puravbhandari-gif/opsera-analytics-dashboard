@@ -88,7 +88,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Events brought all 5 meetings.",
      "do": null,
      "trend": [
       {
@@ -457,9 +457,9 @@
    "by_claude": true,
    "boxes": {
     "well": [
+     "Meetings booked rose to 5, up from 1.",
      "Visits without robots grew 53.0% to 4,136.",
-     "Engaged visits doubled to 1,428, up from 696.",
-     "AI tools sent 44 visits, up from 26."
+     "Engaged visits doubled to 1,428, up from 696."
     ],
     "attention": [
      "Demo requests fell to 2, down from 5.",
