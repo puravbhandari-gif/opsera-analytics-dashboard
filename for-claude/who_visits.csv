@@ -1,0 +1,21 @@
+group,value,count
+industry,Software and IT,259
+industry,Not known,229
+industry,Financial services and insurance,144
+industry,Manufacturing and industrial,130
+industry,Business services and consulting,109
+industry,Healthcare and life sciences,91
+industry,Retail and consumer,78
+industry,Media and telecom,61
+industry,Other industries,42
+industry,"Energy, utilities and transport",42
+industry,Government and education,21
+size,Not known,1133
+size,1 to 250 people,73
+seniority,Not known,898
+seniority,Senior,116
+seniority,Director,105
+seniority,Employee,100
+seniority,Manager,82
+seniority,VP,55
+seniority,"Executive, owner or partner",48

@@ -99,6 +99,7 @@ def message():
         "",
         f"Week before: {week_name(prev['start'], prev['end'])}. Google Analytics days follow US Pacific time.",
         f"Dashboard: {DASHBOARD}",
+        f"Ask Claude about these numbers: paste {DASHBOARD}for-claude/index.md into Claude.",
     ])
 
 

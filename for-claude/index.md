@@ -29,6 +29,41 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - YouTube: 2026-04-01 to 2026-11-21.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
+## Exec view (Marketing at a glance)
+
+The front page. Its cards take their numbers from the files below: marketing pipeline from marketing_pipeline_by_month (the only place sourced and influenced are added together), demo requests from leads, meetings with marketing contacts from customer_journey_summary, website visitors (visits without email robots) from website_visits, content published from content_published and PR placements from pr_coverage. Each card shows the fiscal quarter so far against the quarter before: the whole quarter, or the same days while this one isn't over.
+
+- [content_published.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/content_published.csv): Exec view, content published: each blog, report, video and other piece published since 2026-07-01, checked 2026-11-24. Sources: Contentful, the opsera.ai sitemap and YouTube. 71 rows.
+
+## Takeaways tab
+
+The Going well, Needs attention and Do this week boxes, and one card per area. Claude Code writes the lines each Monday from the numbers; every line is checked against them.
+
+- [takeaways_boxes.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/takeaways_boxes.csv): Takeaways tab: the Going well, Needs attention and Do this week lines for each view, written 2026-11-24. Sources: as each card says. 23 rows.
+- [takeaways_cards.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/takeaways_cards.csv): Takeaways tab: one card per area with its main number, the period before, why it matters and what to do. Blank means nothing notable. 48 rows.
+
+## Hub and spoke campaigns tab
+
+- [hub_campaigns.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/hub_campaigns.csv): Hub and spoke campaigns tab: each campaign's hub piece and its spokes, with the number the tab shows. Sources: as the tab says for each campaign. 40 rows.
+
+## PR and media tab
+
+Articles about Opsera, Catapult's quarterly report, open media opportunities and share of voice. Never add news mentions to website numbers.
+
+- [pr_catapult_report.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pr_catapult_report.csv): PR and media tab: Catapult's report for 1 Aug to 31 Oct 2026, as they reported it. 6 rows.
+- [pr_coverage.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pr_coverage.csv): PR and media tab: each article since 2026-07-01, checked 2026-11-24. "To review" means not confirmed yet. Visits: Google Analytics. Domain rating: Ahrefs. 87 rows.
+- [pr_opportunities.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pr_opportunities.csv): PR and media tab: open media opportunities from SamsonPR's tracker, read 2026-11-06. 7 rows.
+- [pr_share_of_voice.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pr_share_of_voice.csv): PR and media tab: news mentions of Opsera and 5 competitors by fiscal quarter, from 2026-07-01. Source: Google News, checked 2026-11-24. 18 rows.
+
+## SEO and AEO view
+
+Google search and AI tool visits for each product (overall, Forge and Insights), from January 2026.
+
+- [seo_aeo_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/seo_aeo_by_month.csv): SEO and AEO view: each product by month. Sources: Search Console for clicks, Google Analytics for AI visits, 2026-01-01 to 2026-10-31. 30 rows.
+- [seo_aeo_keywords.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/seo_aeo_keywords.csv): SEO and AEO view: top searches for each product. Source: Search Console. 30 rows.
+- [seo_aeo_top_pages.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/seo_aeo_top_pages.csv): SEO and AEO view: top pages for each product. Sources: Search Console for clicks, Google Analytics for AI visits, 2026-01-01 to 2026-10-31. 30 rows.
+- [seo_aeo_tracked_pages.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/seo_aeo_tracked_pages.csv): SEO and AEO view: Google spot for tracked pages, first week against week of 2026-10-26. Source: Search Console. 46 rows.
+
 ## Customer journey tab
 
 How marketing turns website visits into demo requests, meetings and deals. The funnel has 6 steps. Google Analytics counts visits, demo page views and demo form fills. HubSpot counts new contacts, meetings and deals. A contact is someone who first filled in the demo form. Meetings and deals count only after sign-up, never with existing customers. A later step can be bigger than the step before because the 2 tools count differently. For Google search, every step ends on Search Console's last day, and the first 2 columns are Search Console. "All channels" visits match the Website visits tab.
@@ -44,6 +79,9 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 - [website_visits_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/website_visits_by_week.csv): Website visits tab, by week. Source: Google Analytics. 35 rows.
 - [visit_sources_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/visit_sources_by_month.csv): Where visits came from (Google Analytics channel groups), by month. Source: Google Analytics. 82 rows.
 - [visit_sources_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/visit_sources_by_week.csv): Where visits came from (Google Analytics channel groups), by week. Source: Google Analytics. 299 rows.
+- [button_clicks.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/button_clicks.csv): Website visits tab: clicks on Book a demo and other buttons, by day and page. Source: Google Analytics. 322 rows.
+- heat_map_by_day, split to stay small: Website visits tab, heat map numbers: each day covers the 24 hours before the pull. Source: Microsoft Clarity. Parts: [2026-11-09, part 1](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-09_part1.csv), [2026-11-09, part 2](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-09_part2.csv), [2026-11-16, part 1](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part1.csv), [2026-11-16, part 2](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part2.csv), [2026-11-16, part 3](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part3.csv), [2026-11-23](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-23.csv).
+- [who_visits.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/who_visits.csv): Website visits tab, Who visits: 1206 companies and 1404 people Warmly matched to visits, 2026-08-26 to 2026-11-24. Counts only. Source: HubSpot (Warmly). 20 rows.
 
 ## Leads tab
 
@@ -51,6 +89,7 @@ Demo requests are form fills on /demo. Contact forms are on /contact. The Gartne
 
 - [leads_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_month.csv): Leads tab: form fills by kind of form, by month. Source: Google Analytics (HubSpot form event). 8 rows.
 - [leads_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_by_week.csv): Leads tab: form fills by kind of form, by week. Source: Google Analytics (HubSpot form event). 35 rows.
+- [leads_demo_by_product.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/leads_demo_by_product.csv): Leads tab: demo requests by the product chosen on the form, by day. Source: Google Analytics (HubSpot form event). 59 rows.
 
 ## Events tab
 
@@ -58,12 +97,14 @@ Each webinar, roundtable and event since 1 Apr, and the HubSpot sign-up lists, e
 
 - [events_one_row_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/events_one_row_each.csv): Each webinar, roundtable and event since 1 Apr 2026. Sign-ups, attended and meetings come from HubSpot; event page form fills from Google Analytics. Never add the two together. Blank means no data. 8 rows.
 - [hubspot_event_lists.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/hubspot_event_lists.csv): Event sign-up lists in HubSpot, each on its own (never added together). Source: HubSpot. 4 rows.
+- [luma_flutter.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/luma_flutter.csv): Events tab: Flutter 2026 guests on Luma by source tag, exported 2026-11-09. Valentina reported 509 registered. Source: Luma. 14 rows.
 
 ## Campaigns tab
 
 Each campaign's link-tag visits and HubSpot emails and deals (the campaigns file below the Look up section), and Google Ads by campaign.
 
 - [google_ads_by_campaign.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/google_ads_by_campaign.csv): Google Ads spend and ad clicks (counted by Google Ads) with visits and demo requests (counted by Google Analytics), per campaign per month. Brand search visits and demo requests from 16 Jun 2026 are too low because of a tracking problem. Source: Google Analytics, opsera.ai 2026, linked to Google Ads. 12 rows.
+- [hubspot_marketing_emails.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/hubspot_marketing_emails.csv): HubSpot marketing emails since 1 Apr 2026 with sends, opens and clicks. The subject line shows; emails aimed at named target accounts are left out. Source: HubSpot. 267 rows.
 
 ## Pages, campaigns and assets (the Look up tab)
 
@@ -104,6 +145,8 @@ One row per blog post, report, white paper, eBook, guide (knowledge base article
 
 ## AEO tab: visits from AI tools
 
+- [aeo_ai_answers.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/aeo_ai_answers.csv): AEO tab, AI visibility: whether ChatGPT and Google AI Mode name Opsera for 10 questions, checked daily 2026-10-26 to 2026-11-23. Source: Ahrefs Brand Radar. 20 rows.
+- [aeo_ai_bots_by_day.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/aeo_ai_bots_by_day.csv): AEO tab: AI bots reading opsera.ai by day. Never add these to people visits. Source: Google Analytics, AI bots property. 209 rows.
 - [aeo_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/aeo_by_month.csv): AEO tab: visits from each AI tool and what came next, by month. Sources: Google Analytics, HubSpot. 34 rows.
 - [aeo_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/aeo_by_week.csv): AEO tab: visits from each AI tool and what came next, by week. Sources: Google Analytics, HubSpot. 111 rows.
 
@@ -142,11 +185,14 @@ We never add Shorts and long videos together.
 
 ## Pipeline tab
 
-Marketing sourced and influenced pipeline from Salesforce exports (counts and totals only), and campaign-influenced meetings. Updated when new exports arrive, not on Mondays.
+Marketing sourced and influenced pipeline: Salesforce deals as synced to HubSpot, counts and totals only. Older campaign touches, past meetings and partner flags come from Salesforce exports frozen on 22 Nov 2026. Deals with a partner listed count as influenced, never sourced. Fiscal quarters: Q1 is Feb to Apr, Q2 May to Jul, Q3 Aug to Oct, Q4 Nov to Jan.
 
 - [marketing_pipeline_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_by_month.csv): Marketing sourced (an estimate: it rests on Primary Campaign Source) and influenced pipeline, and deals with no contact linked as their own group (not sales), (open and won) by month, and the outside booking agency (DoGood, CrestingWave) on its own. Sourced: the Primary Campaign Source is a marketing campaign. Influenced: not sourced, but another campaign on the deal is. A campaign counts only if the person joined it within 90 days before the deal; 38 deals have no known join date and still count. SDR and AE outreach count as sales. Undercounted: 64% of opportunities have no contact attached. Source: Salesforce opportunities created 2026-01-05 to 2026-11-20, exported 2026-10-27, 2026-11-02, 2026-11-09, 2026-11-17, 2026-11-22, 2026-11-23. 8 rows.
 - [marketing_pipeline_campaigns.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_campaigns.csv): The campaign behind each marketing sourced or influenced deal, 1 campaign per deal. Source: Salesforce opportunities created 2026-01-05 to 2026-11-20, exported 2026-10-27, 2026-11-02, 2026-11-09, 2026-11-17, 2026-11-22, 2026-11-23. 32 rows.
 - [marketing_pipeline_meetings.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/marketing_pipeline_meetings.csv): Campaign-influenced meetings: people with a meeting since 1 Apr 2026 who joined a marketing campaign on or before it, each counted once. Source: Salesforce campaign members, exported 2026-11-17. 7 rows.
+- [pipeline_demo_request_funnel.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pipeline_demo_request_funnel.csv): Pipeline tab, from demo request to meeting to deal: each demo request day by status, 2026-04-01 to 2026-11-22. Source: Salesforce campaign DG-Demo Requests as synced to HubSpot. 45 rows.
+- [pipeline_event_campaign_members.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pipeline_event_campaign_members.csv): Pipeline tab: event campaign members in Salesforce by status. Source: HubSpot's copy of Salesforce campaign members. 4 rows.
+- [pipeline_open_deals_by_stage.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/pipeline_open_deals_by_stage.csv): Pipeline tab: open deals created since 2026-04-01 by stage, as of 2026-11-23. Age is days since the deal was created. Source: Salesforce deals as synced to HubSpot. 7 rows.
 - [deals_one_line_each.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/deals_one_line_each.csv): How each marketing deal came in: 1 line per deal, open, won or lost, with no company or person. Source: HubSpot. The product comes from words in the deal name. 6 rows.
 
 ## Team metrics tab

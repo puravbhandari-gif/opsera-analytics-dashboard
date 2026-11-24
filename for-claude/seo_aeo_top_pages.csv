@@ -1,0 +1,31 @@
+product,page,clicks,times_shown,written_by,ai_tool_visits
+overall,/,6993,145742,Opsera,87
+overall,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,1593,1071882,Insights knowledge base,10
+overall,/careers,891,32162,Opsera,17
+overall,/ecosystem/twistlock,713,56769,Opsera,0
+overall,/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory,463,8312,Opsera,13
+overall,/about,451,39194,Opsera,2
+overall,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,319,55777,Insights knowledge base,7
+overall,/platform/hummingbird-ai,309,25944,Opsera,2
+overall,/resources/report/ai-coding-impact-2026-benchmark-report,303,66474,Opsera,71
+overall,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,268,259416,Opsera,69
+forge,/newsroom/opsera-launches-forge-the-first-intent-and-context-aware-enterprise-software-factory,463,8312,Opsera,13
+forge,/blog/software-factory,249,32779,Infrasity,3
+forge,/blog/why-we-built-forge-the-software-factory-the-ai-era-actually-needs,204,20927,Opsera,8
+forge,/blog/factory-ai-alternatives,106,10939,Infrasity,2
+forge,/brickforge,67,3355,Opsera,3
+forge,/forge,67,2611,Opsera,9
+forge,/blog/spec-driven-development,48,5639,Opsera,10
+forge,/resources/webinars/(a customer's modernization webinar),46,2371,Opsera,0
+forge,/blog/legacy-code-modernization,45,9764,Infrasity,5
+forge,/blog/software-factory-model,40,2574,Infrasity,0
+insights,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained,1593,1071882,Insights knowledge base,10
+insights,/knowledge-base/change-and-quality-metrics/what-is-defect-escape-rate-der-and-why-it-matters-a-comprehensive-guide,319,55777,Insights knowledge base,7
+insights,/resources/report/ai-coding-impact-2026-benchmark-report,303,66474,Opsera,71
+insights,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,268,259416,Opsera,69
+insights,/blog/13-code-quality-metrics-that-you-must-track,268,139892,Opsera,2
+insights,/blog/how-to-measure-code-churn,259,39987,Opsera,6
+insights,/platform/unified-insights,104,23689,Opsera,4
+insights,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer,84,34337,Insights knowledge base,1
+insights,/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,65,13499,Opsera,2
+insights,/blog/github-copilot-adoption-trends-insights-from-real-data,61,119495,Opsera,24

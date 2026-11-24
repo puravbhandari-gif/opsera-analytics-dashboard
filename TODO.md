@@ -33,6 +33,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 ## Dashboard
 
+- [x] Done 24 Nov: for-claude covers every tab and view, and rebuilds on every publish. The Monday Slack post links it for asking Claude.
 - [x] Done 24 Nov: the dashboard's HubSpot key can read companies again, so Who visits updates.
 - [ ] Before Sep 2027: move fetch_hubspot.py from HubSpot's v3 and v4 APIs to the date-based versions (v4 associations unsupported from 30 Mar 2027).
 - [x] Done 24 Nov: newsletter link checkers (dg_newsletter visits with no engagement) count as robots in visits without email robots and content visits. All visits keeps them, since the goal counts all visits.

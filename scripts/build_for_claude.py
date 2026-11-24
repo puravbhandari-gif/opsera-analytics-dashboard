@@ -478,9 +478,146 @@ def main():
               "", "", m["source"]] for p in team["people"] for sec in p["sections"] for m in sec["metrics"] if m.get("without_email_robots")]
           + [[p["name"], "", "Metrics coming", "", "", "", "", "", "", ""] for p in team["people"] if not p["sections"]],
           f"Team metrics tab: each person's metrics, with the baseline ({team['baseline']['label']}), this month so far and the goal")
+    extra_tabs()   # Takeaways, Hub and spoke, PR, SEO and AEO, and panels inside tabs (agreed 24 Nov 2026)
     write_guide(ga_last, gsc_last, hub, li, kp, yt, est)
     for name, n, size, *_ in files:
         print(f"{name:52} {n:6} rows {size / 1000:6.1f} KB")
+
+
+def extra_tabs():
+    """The tabs and panels added after the first plain-text files (24 Nov 2026), so the guide covers every tab.
+    Each file copies numbers the page shows, from the same data file. No customer or person names beyond what the page shows."""
+    opt = lambda f: load(f) if (DATA / f).exists() else {}
+    # Takeaways tab and the plain-text summary
+    sm = opt("summary.json")
+    names = {"week": "last full week", "month": "this month so far", "cq": "last full fiscal quarter", "quarter": "last 3 months"}
+    boxes, cards = [], []
+    for key, v in (sm.get("views") or {}).items():
+        for b, label in (("well", "Going well"), ("attention", "Needs attention"), ("do", "Do this week")):
+            boxes += [[names.get(key, key), v["period"], v.get("period_before") or "", label, t] for t in (v.get("boxes") or {}).get(b, [])]
+        for a in v["areas"]:
+            m = a.get("main") or {}
+            cards.append([names.get(key, key), a["title"], a.get("period") or "", a.get("period_before") or "", m.get("label", ""), m.get("cur", ""),
+                          m.get("prev", ""), m.get("change_pct", ""), a.get("why") or "", a.get("do") or "", a.get("source") or ""])
+    if boxes:
+        write("takeaways_boxes", ["view", "period", "period_before", "box", "line"], boxes,
+              f"Takeaways tab: the Going well, Needs attention and Do this week lines for each view, written {sm.get('written_on')}. Sources: as each card says")
+        write("takeaways_cards", ["view", "area", "period", "period_before", "main_number", "value", "value_before", "change_pct", "why", "what_to_do", "source"], cards,
+              "Takeaways tab: one card per area with its main number, the period before, why it matters and what to do. Blank means nothing notable")
+    pub = opt("published.json")
+    if pub.get("items"):
+        write("content_published", ["date", "type", "title", "link"], [[i["date"], i["type"], i["title"], i["link"]] for i in pub["items"]],
+              f"Exec view, content published: each blog, report, video and other piece published since {pub.get('start_date')}, checked {pub.get('checked')}. Sources: Contentful, the opsera.ai sitemap and YouTube")
+    # Hub and spoke campaigns tab
+    hubs = opt("campaign_hubs.json").get("campaigns", [])
+    rows = []
+    for c in hubs:
+        h = c["hub"]
+        rows.append([c["name"], "hub", h.get("kind", ""), h.get("title", ""), h.get("date", ""), h.get("number", ""), h.get("link", ""), c.get("note") or ""])
+        for sp in c["spokes"]:
+            links = "; ".join(f"{x['label']}: {x['link']}" for x in sp.get("links", [])) or sp.get("link", "")
+            rows.append([c["name"], "spoke", sp.get("group", ""), sp.get("name", ""), "", sp.get("number", ""), links, ""])
+    if rows:
+        write("hub_campaigns", ["campaign", "hub_or_spoke", "kind_or_group", "title", "date", "number", "links", "note"], rows,
+              "Hub and spoke campaigns tab: each campaign's hub piece and its spokes, with the number the tab shows. Sources: as the tab says for each campaign")
+    # PR and media tab
+    pr, ga_pr, ah = opt("pr_media.json"), opt("pr_media_ga.json").get("by_link", {}), opt("pr_media_ahrefs.json").get("by_domain", {})
+    dom = lambda u: (u.split("/")[2] if "//" in u else "").removeprefix("www.")
+    rows = []
+    for i in pr.get("items", []):
+        g, a = ga_pr.get(i["link"], {}), ah.get(dom(i["link"]), {})
+        rows.append([i["date"], i["outlet"], i["title"], i["link"], i.get("type", ""), i.get("topic", ""), i.get("quoted", ""), i.get("placed_by", ""),
+                     i.get("status", ""), g.get("visits", ""), g.get("engaged", ""), g.get("demos", ""), a.get("domain_rating", ""), a.get("tier", "")])
+    if rows:
+        write("pr_coverage", ["date", "outlet", "title", "link", "type", "topic", "opsera_person_quoted", "placed_by", "status", "visits_to_opsera_ai",
+                              "engaged_visits", "demo_requests", "ahrefs_domain_rating", "tier"], rows,
+              f"PR and media tab: each article since {pr.get('start_date')}, checked {pr.get('checked')}. \"To review\" means not confirmed yet. Visits: Google Analytics. Domain rating: Ahrefs")
+    cat = opt("pr_catapult.json")
+    if cat.get("items"):
+        write("pr_catapult_report", ["quarter", "measure", "value", "detail"], [[cat["quarter"], x["label"], x["value"], x.get("detail", "")] for x in cat["items"]]
+              + [[cat["quarter"], "Analysts", "", t] for t in cat.get("analysts", [])], f"PR and media tab: Catapult's report for {cat.get('range')}, as they reported it")
+    opp = opt("pr_opportunities.json")
+    if opp.get("items"):
+        write("pr_opportunities", ["outlet", "ask", "status", "follow_up", "deadline"], [[x["outlet"], x["ask"], x["status"], x.get("follow_up", ""), x.get("deadline", "")]
+              for x in opp["items"]], f"PR and media tab: open media opportunities from SamsonPR's tracker, read {opp.get('read')}")
+    sov = opt("share_of_voice.json")
+    if sov.get("quarters"):
+        write("pr_share_of_voice", ["fiscal_quarter", "company", "news_mentions"], [[q["quarter"], k, v] for q in sov["quarters"] for k, v in q["counts"].items()],
+              f"PR and media tab: news mentions of Opsera and 5 competitors by fiscal quarter, from {sov.get('start_date')}. Source: Google News, checked {sov.get('checked')}")
+    # SEO and AEO view
+    seo = opt("seo_aeo.json")
+    by_month, kw, top, tracked = [], [], [], []
+    for prod, d in (seo.get("products") or {}).items():
+        ai = {m["month"]: m["visits"] for m in d.get("ai_months", [])}
+        by_month += [[prod, m["month"], m["clicks"], m["times_shown"], ai.get(m["month"], "")] for m in d.get("months", [])]
+        kw += [[prod, k["keyword"], k["clicks"], k["times_shown"], k.get("avg_spot", "")] for k in d.get("keywords", [])]
+        top += [[prod, t["page"], t["clicks"], t["times_shown"], t.get("by", ""), t.get("ai_visits", "")] for t in d.get("top_pages", [])]
+        tracked += [[prod, t["page"], t.get("group", ""), t.get("first_week", ""), t.get("first_spot", ""), t.get("spot", ""), t.get("by", "")] for t in d.get("tracked", [])]
+    src = f"Search Console for clicks, Google Analytics for AI visits, {seo.get('start_date')} to {seo.get('end_date')}"
+    if by_month:
+        write("seo_aeo_by_month", ["product", "month", "google_clicks", "times_google_showed_us", "ai_tool_visits"], by_month, f"SEO and AEO view: each product by month. Sources: {src}")
+        write("seo_aeo_keywords", ["product", "search", "clicks", "times_shown", "average_spot"], kw, f"SEO and AEO view: top searches for each product. Source: Search Console")
+        write("seo_aeo_top_pages", ["product", "page", "clicks", "times_shown", "written_by", "ai_tool_visits"], top, f"SEO and AEO view: top pages for each product. Sources: {src}")
+        write("seo_aeo_tracked_pages", ["product", "page", "group", "first_week", "first_spot", "latest_spot", "written_by"], tracked,
+              f"SEO and AEO view: Google spot for tracked pages, first week against week of {seo.get('rankings_week')}. Source: Search Console")
+    # AEO tab: AI answers and AI bots
+    ans = opt("ai_answers.json")
+    rows = []
+    for q in ans.get("prompts", []):
+        for a in ans.get("assistants", []):
+            c = q["checks"].get(a["key"], "")
+            rows.append([q["question"], a["name"], len(c), c.count("1"), "yes" if c.endswith("1") else "no"])
+    if rows:
+        write("aeo_ai_answers", ["question", "ai_tool", "days_checked", "days_opsera_named", "named_on_last_check"], rows,
+              f"AEO tab, AI visibility: whether ChatGPT and Google AI Mode name Opsera for 10 questions, checked daily {ans.get('first_check')} to {ans.get('last_check')}. Source: Ahrefs Brand Radar")
+    bots = (load("analytics.json").get("ai") or {}).get("bots") or {}
+    if bots.get("daily"):
+        write("aeo_ai_bots_by_day", ["date", "bot", "visits"], [[r["date"], r["bot"], r["visits"]] for r in bots["daily"]],
+              "AEO tab: AI bots reading opsera.ai by day. Never add these to people visits. Source: Google Analytics, AI bots property")
+    # Website visits tab panels
+    ga = load("analytics.json")
+    if ga.get("cta_clicks"):
+        write("button_clicks", ["date", "kind", "page", "button", "clicks"], [[r["date"], r["kind"], r["page"], r["button"], r["clicks"]] for r in ga["cta_clicks"]],
+              "Website visits tab: clicks on Book a demo and other buttons, by day and page. Source: Google Analytics")
+    cl = opt("clarity.json")
+    if cl.get("days"):
+        write("heat_map_by_day", ["pulled_on", "page", "sessions", "bot_sessions", "scroll_depth_pct", "rage_clicks", "dead_clicks"],
+              [[d["date"], p["page"], p["sessions"], p["bot_sessions"], p["scroll_depth"], p["rage_clicks"], p["dead_clicks"]] for d in cl["days"] for p in d["pages"]],
+              "Website visits tab, heat map numbers: each day covers the 24 hours before the pull. Source: Microsoft Clarity")
+    wp = (load("hubspot.json").get("warmly_profile") or {})
+    if wp:
+        write("who_visits", ["group", "value", "count"], [[g, v, n] for g in ("industry", "size", "seniority") for v, n in wp.get(g, [])],
+              f"Website visits tab, Who visits: {wp.get('companies')} companies and {wp.get('people')} people Warmly matched to visits, {wp.get('from')} to {wp.get('to')}. Counts only. Source: HubSpot (Warmly)")
+    # Events tab: Luma
+    lu = opt("luma_flutter.json")
+    if lu.get("sources"):
+        write("luma_flutter", ["source_tag", "registered", "confirmed", "attended"], [["All", lu["registered"], lu["confirmed"], lu["attended"]]]
+              + [[x["source"], x["registered"], x["confirmed"], x["attended"]] for x in lu["sources"]],
+              f"Events tab: Flutter 2026 guests on Luma by source tag, exported {lu.get('exported')}. Valentina reported {lu.get('reported_registered')} registered. Source: Luma")
+    # Leads tab: demo requests by product
+    dp = load("leads.json").get("demo_by_product") or []
+    if dp:
+        write("leads_demo_by_product", ["date", "forge", "insights", "homepage", "other", "not_chosen"], [[r["date"], r["forge"], r["insights"], r["home"], r["other"], r["none"]] for r in dp],
+              "Leads tab: demo requests by the product chosen on the form, by day. Source: Google Analytics (HubSpot form event)")
+    # Pipeline tab panels
+    sp = load("salesforce_pipeline.json")
+    ob = sp.get("open_by_stage") or {}
+    if ob.get("stages"):
+        write("pipeline_open_deals_by_stage", ["stage", "open_deals", "median_age_days", "older_than_90_days"],
+              [[s["stage"], s["deals"], s["median_age"], s["over_90_days"]] for s in ob["stages"]],
+              f"Pipeline tab: open deals created since {ob.get('since')} by stage, as of {ob.get('as_of')}. Age is days since the deal was created. Source: Salesforce deals as synced to HubSpot")
+    em = sp.get("event_members") or []
+    if em:
+        st = sorted({k for e in em for k in e.get("statuses", {})})
+        write("pipeline_event_campaign_members", ["campaign", "members", *[s.lower().replace(" ", "_") for s in st], "people_with_meeting", "meetings_held"],
+              [[e["campaign"], e["members"], *[e.get("statuses", {}).get(s, 0) for s in st], e.get("people_with_meeting", ""), e.get("held", "")] for e in em],
+              "Pipeline tab: event campaign members in Salesforce by status. Source: HubSpot's copy of Salesforce campaign members")
+    dr = opt("demo_requests.json")
+    if dr.get("daily"):
+        write("pipeline_demo_request_funnel", ["date", "qualified", "open", "contact", "not_now", "disqualified", "meeting", "deal", "deal_after_meeting"],
+              [[r["date"], r.get("qualified", 0), r.get("open", 0), r.get("contact", 0), r.get("not_now", 0), r.get("disqualified", 0), r.get("meeting", 0), r.get("deal", 0),
+                r.get("deal_after_meeting", 0)] for r in dr["daily"]],
+              f"Pipeline tab, from demo request to meeting to deal: each demo request day by status, {dr.get('start_date')} to {dr.get('end_date')}. Source: Salesforce campaign DG-Demo Requests as synced to HubSpot")
 
 
 def write_guide(ga_last, gsc_last, hub, li, kp, yt, est):
@@ -532,6 +669,32 @@ Every number here also appears on the dashboard. We rebuild these files every Mo
 - YouTube: {yt['start_date']} to {yt.get('last_day_with_data')}.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
+## Exec view (Marketing at a glance)
+
+The front page. Its cards take their numbers from the files below: marketing pipeline from marketing_pipeline_by_month (the only place sourced and influenced are added together), demo requests from leads, meetings with marketing contacts from customer_journey_summary, website visitors (visits without email robots) from website_visits, content published from content_published and PR placements from pr_coverage. Each card shows the fiscal quarter so far against the quarter before: the whole quarter, or the same days while this one isn't over.\n\n{listing('content_published')}
+
+## Takeaways tab
+
+The Going well, Needs attention and Do this week boxes, and one card per area. Claude Code writes the lines each Monday from the numbers; every line is checked against them.
+
+{listing('takeaways')}
+
+## Hub and spoke campaigns tab
+
+{listing('hub_campaigns')}
+
+## PR and media tab
+
+Articles about Opsera, Catapult's quarterly report, open media opportunities and share of voice. Never add news mentions to website numbers.
+
+{listing('pr_')}
+
+## SEO and AEO view
+
+Google search and AI tool visits for each product (overall, Forge and Insights), from January 2026.
+
+{listing('seo_aeo')}
+
 ## Customer journey tab
 
 How marketing turns website visits into demo requests, meetings and deals. The funnel has 6 steps. Google Analytics counts visits, demo page views and demo form fills. HubSpot counts new contacts, meetings and deals. A contact is someone who first filled in the demo form. Meetings and deals count only after sign-up, never with existing customers. A later step can be bigger than the step before because the 2 tools count differently. For Google search, every step ends on Search Console's last day, and the first 2 columns are Search Console. "All channels" visits match the Website visits tab.
@@ -542,6 +705,9 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 
 {listing('website_visits')}
 {listing('visit_sources')}
+{listing('button_clicks')}
+{listing('heat_map')}
+{listing('who_visits')}
 
 ## Leads tab
 
@@ -555,12 +721,14 @@ Each webinar, roundtable and event since 1 Apr, and the HubSpot sign-up lists, e
 
 {listing('events_one_row_each')}
 {listing('hubspot_event_lists')}
+{listing('luma')}
 
 ## Campaigns tab
 
 Each campaign's link-tag visits and HubSpot emails and deals (the campaigns file below the Look up section), and Google Ads by campaign.
 
 {listing('google_ads')}
+{listing('hubspot_marketing')}
 
 ## Pages, campaigns and assets (the Look up tab)
 
@@ -611,9 +779,10 @@ We never add Shorts and long videos together.
 
 ## Pipeline tab
 
-Marketing sourced and influenced pipeline from Salesforce exports (counts and totals only), and campaign-influenced meetings. Updated when new exports arrive, not on Mondays.
+Marketing sourced and influenced pipeline: Salesforce deals as synced to HubSpot, counts and totals only. Older campaign touches, past meetings and partner flags come from Salesforce exports frozen on 22 Nov 2026. Deals with a partner listed count as influenced, never sourced. Fiscal quarters: Q1 is Feb to Apr, Q2 May to Jul, Q3 Aug to Oct, Q4 Nov to Jan.
 
 {listing('marketing_pipeline')}
+{listing('pipeline_')}
 {listing('deals_one_line_each')}
 
 ## Team metrics tab

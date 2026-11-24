@@ -159,15 +159,14 @@ jobs:
         continue-on-error: true
         run: python scripts/build_summary.py
 
-      # Optional: if this fails, the plain-text files keep last week's numbers and everything else still updates.
+      # Optional: if this fails, the plain-text files keep their last numbers and everything else still updates.
+      # Runs on every publish, pushes included, so for-claude always matches what the page shows (agreed 24 Nov 2026).
       - name: Write the plain-text files for AI assistants (optional)
-        if: github.event_name != 'push'
         continue-on-error: true
         run: python scripts/build_for_claude.py
 
       # Optional: the plain-text summary and file links inside index.html, for AI tools that don't run JavaScript (24 Nov 2026).
       - name: Write the plain-text summary into the page (optional)
-        if: github.event_name != 'push'
         continue-on-error: true
         run: python scripts/build_ai_summary.py
 
