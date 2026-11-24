@@ -1,7 +1,7 @@
 {
  "source": "Google Analytics, opsera.ai 2026, matched to LinkedIn posts found through Apify",
  "window_days": 3,
- "posts_pulled_at": "2026-11-24T05:18+00:00",
+ "posts_pulled_at": "2026-11-24T10:32+00:00",
  "daily": [
   {
    "date": "2026-09-01",
@@ -582,7 +582,7 @@
   {
    "date": "2026-11-23",
    "group": "cant_tell",
-   "visits": 8,
+   "visits": 9,
    "engaged": 6
   }
  ],
@@ -934,8 +934,8 @@
    "post": "https://www.linkedin.com/posts/kumar-chivukula_closing-the-security-gap-in-ai-modernization-activity-7528514101765963777-swkl"
   }
  ],
- "untagged_total": 678,
+ "untagged_total": 679,
  "start_date": "2026-09-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T10:42+05:30"
+ "pulled_at": "2026-11-24T15:55+05:30"
 }

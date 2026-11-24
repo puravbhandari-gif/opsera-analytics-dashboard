@@ -51,6 +51,18 @@
    "status": "To review"
   },
   {
+   "date": "2026-11-17",
+   "outlet": "Cubbie.com",
+   "title": "Opsera",
+   "link": "https://www.cubbie.com/opsera",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
+  {
    "date": "2026-11-15",
    "outlet": "BeBee",
    "title": "Senior Salesforce Developer - SFDC Sales Cloud - Opsera",
@@ -193,6 +205,18 @@
   },
   {
    "date": "2026-10-30",
+   "outlet": "Rollbar",
+   "title": "Warp Factories Alternatives",
+   "link": "https://rollbar.com/blog/warp-factories-alternatives/",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
+  },
+  {
+   "date": "2026-10-30",
    "outlet": "CMOtech",
    "title": "Opsera relaunches as AI-native software factory platform",
    "link": "https://cmotech.news/story/opsera-relaunches-as-ai-native-software-factory-platform",
@@ -250,6 +274,18 @@
    "type": "Press release",
    "topic": "Forge",
    "quoted": "Kumar Chivukula"
+  },
+  {
+   "date": "2026-10-29",
+   "outlet": "AiThority",
+   "title": "Pave Survey Finds U.S. Employees Are Building AI Apps Faster Than Companies Can Support Them",
+   "link": "https://aithority.com/machine-learning/pave-survey-finds-u-s-employees-are-building-ai-apps-faster-than-companies-can-support-them/",
+   "type": "Mention",
+   "topic": "AI-SDLC",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-28",
@@ -340,6 +376,18 @@
    "quoted": "",
    "placed_by": "",
    "found_by": "Apify, Google News and Google search"
+  },
+  {
+   "date": "2026-10-24",
+   "outlet": "Y Combinator",
+   "title": "Shreyas Kaps - Founder of Ashr",
+   "link": "https://www.ycombinator.com/founders/2584088-shreyas-kaps",
+   "type": "Mention",
+   "topic": "Other",
+   "quoted": "",
+   "placed_by": "",
+   "found_by": "Apify, Google News and Google search",
+   "status": "To review"
   },
   {
    "date": "2026-10-24",

@@ -37,6 +37,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-29",
+   "to": "2026-10-29"
+  },
+  "https://aithority.com/machine-learning/pave-survey-finds-u-s-employees-are-building-ai-apps-faster-than-companies-can-support-them/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-29",
    "to": "2026-11-23"
   },
   "https://apis.io/scopes/opsera/opsera-scopes/": {
@@ -121,6 +128,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-09-14",
+   "to": "2026-11-23"
+  },
+  "https://www.cubbie.com/opsera": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-11-17",
    "to": "2026-11-23"
   },
   "https://demoprise.com/products/opsera-unified-devops-platform": {
@@ -348,8 +362,8 @@
    "to": "2026-11-17"
   },
   "https://www.prnewswire.com/news-releases/opsera-expands-forge-to-help-enterprises-understand-and-secure-legacy-applications-as-ai-accelerates-modernization-302942305.html": {
-   "visits": 9,
-   "engaged": 6,
+   "visits": 10,
+   "engaged": 7,
    "demos": 0,
    "from": "2026-11-17",
    "to": "2026-11-23"
@@ -373,6 +387,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-08",
+   "to": "2026-11-23"
+  },
+  "https://rollbar.com/blog/warp-factories-alternatives/": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-30",
    "to": "2026-11-23"
   },
   "https://salesforcedevops.net/index.php/2022/02/18/do-more-with-less-kumar-chivukula-of-opsera-keenan-vision-podcast-episode-5-feb-18-2022/": {
@@ -492,6 +513,13 @@
    "engaged": 0,
    "demos": 0,
    "from": "2026-10-22",
+   "to": "2026-11-23"
+  },
+  "https://www.ycombinator.com/founders/2584088-shreyas-kaps": {
+   "visits": 0,
+   "engaged": 0,
+   "demos": 0,
+   "from": "2026-10-24",
    "to": "2026-11-23"
   },
   "https://yespress.io/kumar-chivukula": {
