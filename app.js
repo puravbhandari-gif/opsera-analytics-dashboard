@@ -963,7 +963,7 @@ function renderLinkedIn(d) {
   const periods = Object.fromEntries(oct.periods.map((p) => [p.key, p]));
   // the buttons name each export by its dates
   $("li-ko-period").querySelectorAll("button").forEach((btn) => { if (periods[btn.dataset.p]) btn.textContent = periods[btn.dataset.p].label; });
-  let period = periods.nov7d ? "nov7d" : "7d";   // the newest export first
+  let period = periods.nov2_7d ? "nov2_7d" : periods.nov7d ? "nov7d" : "7d";   // the newest export first
   const drawPeriod = () => {
     const p = periods[period];
     const counting = (p.still_counting || oct.still_counting).map(dayYear).join(" and ");
@@ -1009,7 +1009,7 @@ function renderLinkedIn(d) {
 }
 
 // Kumar's own posts and reposts: counted by month from his profile, two separate lines, never added together
-// Visits from Kumar's tagged links (utm_campaign=kumar), split into his posts and his profile button (added 9 Nov 2026)
+// Visits from Kumar's tagged links (utm_content=kumar on his posts, utm_campaign=kumar on his profile button), split into the two (added 9 Nov 2026)
 function renderKumarLinks(ga) {
   const rows = ga.kumar_links || [], last = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const q = periodsFor("cq", ga.start_date, last).cur;
@@ -1146,10 +1146,12 @@ function renderKumarPosts(kp) {
   $("li-k2-posts-table-source").textContent = src;
 }
 
-// Visits to opsera.ai from all of LinkedIn: company page, Kumar and untagged, three lines never added together
+// Who a LinkedIn visit came from, the same 5 groups on every panel (agreed 24 Nov 2026; the rule is linkedin_group in fetch_data.py)
+const LI_GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["people", "Other Opsera people"], ["ads", "LinkedIn ads"], ["untagged", "LinkedIn, account unknown"]];
+// Visits to opsera.ai from all of LinkedIn by who sent them, lines never added together
 function renderLinkedInVisits(ga) {
   const li = ga.linkedin;
-  const GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["untagged", "Untagged"]];
+  const GROUPS = LI_GROUPS;
   const src = "Source: Google Analytics, visits on opsera.ai only";
   const when = (a, b) => `${range(a, b)} (Pacific time)`;
   compare({ id: "li-web", together: true, start: ga.start_date, last: lastFullDayPacific(ga.end_date, ga.pulled_at),
@@ -1173,7 +1175,7 @@ function renderLinkedInVisits(ga) {
   $("li-web-groups-source").textContent = `Sources: Google Analytics and HubSpot form fills, ${when(ga.start_date, ga.end_date)}.`;
   const otherTags = li.tags.filter((r) => r.group === "untagged" && !["(referral)", "(not set)", ""].includes(r.sessionCampaignName));
   $("li-web-other-tags").textContent = otherTags.length
-    ? `Untagged also holds ${num(otherTags.reduce((t2, r) => t2 + r.visits, 0))} visits with other tags. The LinkedIn sources and tags table below lists them all.` : "";
+    ? `Account unknown also holds ${num(otherTags.reduce((t2, r) => t2 + r.visits, 0))} visits with other tags. The LinkedIn sources and tags table below lists them all.` : "";
 
   const groupName = Object.fromEntries(GROUPS);
   table($("li-web-landing"), { rows: li.landing.map((r) => ({ ...r, from: groupName[r.group] })), search: "pages", sortKey: "visits", columns: [
@@ -1730,7 +1732,7 @@ function renderWhoVisits(hub) {
 // From LinkedIn to the demo form: homepage -> /demo -> demo form, for each LinkedIn line, never added together
 function renderLinkedInPath(ga) {
   const rows = ga.linkedin.demo_path;
-  const GROUPS = [["company", "Company page"], ["kumar", "Kumar"], ["untagged", "Untagged"]];
+  const GROUPS = LI_GROUPS;
   const src = "Sources: Google Analytics and the HubSpot demo form on /demo";
   const start = ga.start_date, last = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const share = (part, whole) => (whole ? `${num(part)} (${Math.round((part / whole) * 100)}%)` : num(part));
@@ -2526,6 +2528,134 @@ function renderHubs(d, lk) {
   $("hubs-pick").onclick = (e) => { const b = e.target.closest("button"); if (b) { pick(b.dataset.campaign); saveView(); } };
   pick(view.campaign);
 }
+// ---------- LinkedIn to website (asked for 24 Nov 2026): post -> visit -> product page -> /demo -> demo form, by account ----------
+// data/linkedin_to_site.json, from scripts/build_linkedin_to_site.py. Visits are matched to posts by the UTM tags on the post's link.
+// LinkedIn's numbers (times seen, clicks) and Google Analytics' numbers (visits and steps) sit side by side, never added together,
+// and the brand page and Kumar are never added together either.
+function renderLinkedinSite(d) {
+  const end = d.end_date;
+  const periods = { d90: { label: "Last 90 days", start: addDays(end, -89) }, quarter: { label: `This quarter (${quarterName(end)})`, start: quarterStart(end) } };
+  const pick = (k) => {
+    const p = periods[k] || periods.d90, a = p.start;
+    view.lis = k in periods ? k : "d90";
+    $("lis-period").innerHTML = Object.entries(periods).map(([key, x]) => `<button type="button" data-k="${key}" aria-pressed="${key === view.lis}">${x.label}</button>`).join("");
+    const inP = (date) => date >= a && date <= end;
+    const isProfile = (tag) => / \/ profile-button$/.test(tag);
+    // visits and steps by group and tag, in the period
+    const sums = {};
+    const row = (g, t) => sums[`${g}|${t}`] || (sums[`${g}|${t}`] = { group: g, tag: t, visits: 0, engaged: 0, product: 0, demo: 0, form: 0 });
+    d.landed.forEach(([date, g, t, , v, e]) => { if (inP(date)) { const r = row(g, t); r.visits += v; r.engaged += e; } });
+    d.steps.forEach(([date, g, t, pr, de, fo]) => { if (inP(date)) { const r = row(g, t); r.product += pr; r.demo += de; r.form += fo; } });
+    const all = Object.values(sums);
+    const add = (rows) => rows.reduce((t, r) => ({ visits: t.visits + r.visits, engaged: t.engaged + r.engaged, product: t.product + r.product, demo: t.demo + r.demo, form: t.form + r.form }),
+      { visits: 0, engaged: 0, product: 0, demo: 0, form: 0 });
+    const postTags = (g) => all.filter((r) => r.group === g && !isProfile(r.tag));
+    const from = (g) => (d.tags_from[g] > a ? d.tags_from[g] : a);
+    const posts = d.posts.filter((p) => inP(p.date));
+    const tagged = (g) => posts.filter((p) => p.account === g && p.date >= d.tags_from[g]);
+    const sumOf = (list, k) => (list.some((p) => p[k] != null) ? list.reduce((t, p) => t + (p[k] || 0), 0) : null);
+
+    $("lis-tags-note").textContent = `Tagged links started on ${dayYear(d.tags_from.brand)} for the brand page and ${dayYear(d.tags_from.kumar)} for Kumar. ` +
+      "Before that, and for any link without tags, visits count as \"LinkedIn, account unknown\".";
+    const funnel = (title, g) => {
+      const tp = tagged(g), s = add(postTags(g));
+      const kumar = g === "kumar";
+      return `<div class="panel"><h3>${title}</h3><p class="muted">Posts from ${dayYear(from(g))}, when tagged links started, to ${dayYear(end)}: ${num(tp.length)} post${tp.length === 1 ? "" : "s"}</p>
+        <div class="funnel">${funnelHtml([
+          { label: "Seen", src: kumar ? "LinkedIn, times seen" : "LinkedIn, times seen", value: sumOf(tp, "seen") },
+          { label: "Clicked", src: kumar ? "LinkedIn, visits to links" : "LinkedIn, every click on the post", value: sumOf(tp, "clicks"),
+            note: kumar ? "LinkedIn gives link clicks only for his 3 latest posts." : "LinkedIn counts every click, such as opening the post or a photo, not only the link." },
+          { label: "Landed on opsera.ai", src: "Google Analytics, visits", value: s.visits, higherNote: "Higher than clicks: LinkedIn's clicks miss some visits" },
+          { label: "Opened a product page", src: "Google Analytics", value: s.product },
+          { label: "Opened /demo", src: "Google Analytics", value: s.demo },
+          { label: "Sent the demo form", src: "Google Analytics", value: s.form },
+        ])}</div></div>`;
+    };
+    const tot = add(all);
+    $("lis-funnels").innerHTML = funnel("Brand page posts", "brand") + funnel("Kumar's posts", "kumar") +
+      `<div class="panel"><h3>All LinkedIn traffic</h3><p class="muted">Every visit from LinkedIn, tagged or not, ${range(a, end)}</p>
+        <div class="funnel">${funnelHtml([
+          { label: "Landed on opsera.ai", src: "Google Analytics, visits", value: tot.visits },
+          { label: "Opened a product page", src: "Google Analytics", value: tot.product },
+          { label: "Opened /demo", src: "Google Analytics", value: tot.demo },
+          { label: "Sent the demo form", src: "Google Analytics", value: tot.form },
+        ])}</div><p class="muted">Times seen and clicks aren't shown here: the brand page and Kumar are never added together.</p></div>`;
+    $("lis-funnels-source").textContent = `Seen and clicked: LinkedIn exports, the brand page to ${dayYear(d.linkedin_ends.brand)} and Kumar to ${dayYear(d.linkedin_ends.kumar)}, as counted on each post since it went out. ` +
+      `Visits and steps: Google Analytics, ${range(a, end)} (Pacific time), by the day of the visit. Product pages are the ones in the site menu: Software Factory, Forge, Unified Insights, Agents, Agentic DevOps, Salesforce DevOps and BrickForge.`;
+
+    const GROUPS = [["brand", false, "Brand page posts"], ["brand", true, "Brand page profile button"], ["kumar", false, "Kumar's posts"], ["kumar", true, "Kumar's profile button"],
+      ["vishnu", null, "Other Opsera people"], ["ads", null, "LinkedIn ads"], ["unknown", null, "LinkedIn, account unknown"]];
+    const groupRows = GROUPS.map(([g, prof, label]) => ({ label, ...add(all.filter((r) => r.group === g && (prof == null || isProfile(r.tag) === prof))) }));
+    groupRows.push({ label: "All LinkedIn", ...tot });
+    const pct = (x, y) => (y ? `${Math.round((x / y) * 100)}%` : "-");
+    table($("lis-groups"), { rows: groupRows, pageSize: 10, columns: [
+      { key: "label", label: "From", sort: false },
+      { key: "visits", label: "Visits", num: true, fmt: num }, { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "product", label: "Opened a product page", num: true, fmt: (v, r) => `${num(v)} <span class="muted">${pct(v, r.visits)}</span>` },
+      { key: "demo", label: "Opened /demo", num: true, fmt: num }, { key: "form", label: "Sent the demo form", num: true, fmt: num }] });
+    $("lis-groups-source").textContent = `Source: Google Analytics, ${range(a, end)}. "Other Opsera people" are links tagged for Vishnu. "Account unknown" is LinkedIn traffic without our tags, including posts from before tagged links started. The rows add up to All LinkedIn.`;
+
+    // posts: each post with its link; visits come from its tag, shared when posts use the same tag
+    const shareCount = {};
+    posts.forEach((p) => p.links.forEach((l) => { if (l.tag) shareCount[l.tag] = (shareCount[l.tag] || 0) + 1; }));
+    const tagSum = (tag) => { const r = all.filter((x) => x.tag === tag); return r.length ? add(r) : { visits: 0, product: 0, demo: 0, form: 0 }; };
+    const postRows = posts.map((p) => {
+      const tags = [...new Set(p.links.map((l) => l.tag).filter(Boolean))];
+      const s = add(tags.map(tagSum).map((x) => ({ engaged: 0, ...x })));
+      const shared = tags.filter((t) => shareCount[t] > 1);
+      const linkText = !p.links.length ? (p.scraped ? "No link" : "Not read") : p.links.map((l) => `${esc(l.page)} <span class="muted">${l.tag ? esc(l.tag) : "no tag"}</span>`).join("<br>");
+      return { date: p.date, account: d.accounts[p.account], title: p.title, post: p.post, seen: p.seen, clicks: p.clicks, link: linkText,
+        visits: tags.length ? s.visits : null, product: tags.length ? s.product : null, demo: tags.length ? s.demo : null, form: tags.length ? s.form : null,
+        note: [shared.length ? `Tag shared by ${shareCount[shared[0]]} posts; visits are for all of them` : "",
+          ...tags.filter((t2) => /^brand-page \/ /.test(t2) && !isProfile(t2)).map((t2) => `Tag ${t2} doesn't follow the usual pattern (campaign brand-page is for the profile button); no visits matched it`)]
+          .filter(Boolean).join(". ") };
+    });
+    table($("lis-posts"), { rows: postRows, search: "posts", sortKey: "date", pageSize: 15, columns: [
+      { key: "date", label: "Posted", fmt: (v) => dayYear(v) }, { key: "account", label: "Account", search: true },
+      { key: "title", label: "Post", search: true, fmt: (v, r) => (r.post ? `<a href="${esc(r.post)}" target="_blank" rel="noopener">${esc(v)}</a>` : esc(v)) },
+      { key: "seen", label: "Seen", num: true, fmt: num }, { key: "clicks", label: "Clicks", num: true, fmt: num },
+      { key: "link", label: "Link in the post", sort: false, fmt: (v) => v },
+      { key: "visits", label: "Visits", num: true, fmt: num }, { key: "product", label: "Product page", num: true, fmt: num },
+      { key: "demo", label: "/demo", num: true, fmt: num }, { key: "form", label: "Demo form", num: true, fmt: num },
+      { key: "note", label: "Note", sort: false }] });
+    $("lis-posts-source").textContent = `Posts from ${dayYear(a)}. Seen and clicks: LinkedIn exports (brand page clicks are every click on the post; Kumar's are visits to links, only for his 3 latest posts). ` +
+      `Links: read from each post with Apify. Visits and steps: Google Analytics, matched by the link's tags, ${range(a, end)}. "-" means no tagged link or no number from LinkedIn.`;
+
+    // where they went: the pages each tag's visits landed on, and the other pages they opened
+    const byTag = {};
+    d.landed.forEach(([date, g, t, page, v]) => { if (inP(date) && t) { const x = byTag[t] || (byTag[t] = { group: g, land: {}, open: {} }); x.land[page] = (x.land[page] || 0) + v; } });
+    d.opened.forEach(([date, g, t, page, v]) => { if (inP(date) && byTag[t]) byTag[t].open[page] = (byTag[t].open[page] || 0) + v; });
+    const top = (o, skip = {}) => Object.entries(o).filter(([k]) => !(k in skip)).sort((x, y) => y[1] - x[1]).slice(0, 5).map(([k, v]) => `${esc(k)} <span class="muted">${num(v)}</span>`).join("<br>") || "-";
+    const whereRows = Object.entries(byTag).map(([t, x]) => ({ account: d.accounts[x.group] + (isProfile(t) ? ", profile button" : ""), tag: t,
+      visits: Object.values(x.land).reduce((s, v) => s + v, 0), landed: top(x.land), next: top(x.open, x.land) }));
+    table($("lis-where"), { rows: whereRows, sortKey: "visits", pageSize: 15, columns: [
+      { key: "account", label: "From" }, { key: "tag", label: "Tag (campaign / content)" }, { key: "visits", label: "Visits", num: true, fmt: num },
+      { key: "landed", label: "Landed on", sort: false, fmt: (v) => v }, { key: "next", label: "Then opened", sort: false, fmt: (v) => v }] });
+    $("lis-where-source").textContent = `Source: Google Analytics, ${range(a, end)}. Up to 5 pages each. "Then opened" counts visits that opened each page, leaving out the landing pages, so a visit can show under more than 1 page.`;
+
+    // new posts missing a tag: only posts from when the account started tagging links
+    const missing = d.posts.filter((p) => p.date >= d.tags_from[p.account] && p.links.some((l) => !l.tagged));
+    // from 25 Nov 2026 every post gets its own tag (agreed 24 Nov 2026), so a new post sharing a tag is flagged too
+    const ONE_TAG_FROM = "2026-11-25", tagCount = {};
+    d.posts.forEach((p) => new Set(p.links.map((l) => l.tag).filter(Boolean)).forEach((t2) => { tagCount[t2] = (tagCount[t2] || 0) + 1; }));
+    const sharing = d.posts.filter((p) => p.date >= ONE_TAG_FROM && p.links.some((l) => l.tag && tagCount[l.tag] > 1));
+    const sharedHtml = sharing.map((p) => `<p class="lis-flag">${dayYear(p.date)}, ${esc(d.accounts[p.account])}: <a href="${esc(p.post)}" target="_blank" rel="noopener">${esc(p.title)}</a>. ` +
+      `Its tag is also on another post, so their visits can't be told apart. From 25 Nov 2026 each post gets its own tag.</p>`).join("");
+    $("lis-missing").innerHTML = sharedHtml + (missing.length ? missing.map((p) => `<p class="lis-flag">${dayYear(p.date)}, ${esc(d.accounts[p.account])}: <a href="${esc(p.post)}" target="_blank" rel="noopener">${esc(p.title)}</a>. ` +
+      `${p.links.filter((l) => !l.tagged).length} of its ${p.links.length} links to opsera.ai has no tags, so its visits count as account unknown.</p>`).join("")
+      : sharing.length ? "" : `<p class="muted">Every post since tagged links started has tags on its opsera.ai links.</p>`);
+    saveView();
+  };
+  $("lis-period").onclick = (e) => { const b = e.target.closest("button"); if (b) pick(b.dataset.k); };
+  pick(view.lis || "d90");
+}
+let lisLoad = null;
+function openLinkedinSite() {
+  if (!lisLoad) lisLoad = load("linkedin_to_site.json").then(renderLinkedinSite)
+    .catch((err) => { $("lis-funnels").innerHTML = `<p class="muted">LinkedIn to website isn't available right now: ${esc(err.message)}</p>`; });
+  return lisLoad;
+}
+
 let hubsLoad = null;
 function openHubs() {
   if (!hubsLoad) hubsLoad = Promise.all([load("campaign_hubs.json"), load("lookup.json")]).then(([h, lk]) => renderHubs(h, lk))
@@ -3173,6 +3303,7 @@ function showTab(name) {
   if (name === "todo") openTodo();
   if (name === "content") openContent();
   if (name === "hubs") openHubs();
+  if (name === "linkedin-site") openLinkedinSite();
   if (name === "pr") openPrMedia();
   if (name === "search") openRankings();
   if (name === "campaigns") openCampaigns();

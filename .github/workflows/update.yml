@@ -96,6 +96,14 @@ jobs:
           APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
         run: python scripts/fetch_linkedin_posts.py
 
+      # Optional: the LinkedIn to website tab (24 Nov 2026). If this fails, the tab keeps last week's numbers.
+      - name: LinkedIn to website, posts to the demo form (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        env:
+          GOOGLE_SA_KEY: ${{ secrets.GOOGLE_SA_KEY }}
+        run: python scripts/build_linkedin_to_site.py
+
       # Optional: if this fails, the LinkedIn exec tab keeps last week's post counts and their date.
       - name: Count Kumar's own posts and reposts (optional)
         if: github.event_name != 'push'

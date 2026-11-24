@@ -456,3 +456,8 @@ body.exec-mode .top-controls, body.exec-mode .tabs-row, body.exec-mode footer { 
 .who-bar i { display: block; height: 100%; background: var(--accent, #3b5bdb); border-radius: 4px; }
 .who-n { font-variant-numeric: tabular-nums; text-align: right; }
 .who-unknown { margin: 10px 0 0; font-size: .85rem; }
+
+/* LinkedIn to website (24 Nov 2026) */
+.lis-funnels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.lis-funnels .panel h3 { margin: 0 0 4px; }
+.lis-flag { margin: 4px 0; }

@@ -66,8 +66,14 @@ COMPANY_NOV3 = {   # 2 to 16 Nov 2026, exported 18 Nov (Purav asked for 3 ranges
     "visitors": "opsera_visitors_1794988192056.xls",
 }
 COMPANY_NOV3_RANGE = ("2026-11-02", "2026-11-16")
+COMPANY_NOV4 = {   # 8 to 22 Nov 2026, exported 24 Nov (4 identical content files; 2 visitor files with the same daily numbers, the later one kept)
+    "content": "opsera_content_1795527889412.xls",
+    "followers": "opsera_followers_1795527915532.xls",
+    "visitors": "opsera_visitors_1795527901635.xls",
+}
+COMPANY_NOV4_RANGE = ("2026-11-08", "2026-11-22")
 COMPANY_DELAY_DAYS = 2   # LinkedIn: "Data is delayed by up to 2 days"
-EXPORTED_ON = {"company": "2026-11-18"}
+EXPORTED_ON = {"company": "2026-11-24"}
 KUMAR = "AggregateAnalytics_Kumar Chivukula_2026-07-01_2026-09-30.xlsx"
 START, END = "2026-07-01", "2026-09-30"
 KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, never added together
@@ -78,6 +84,9 @@ KUMAR_OCTOBER = [   # (key, label, start, end); each export is its own period, n
     ("nov7d", "12 to 18 Nov", "2026-11-12", "2026-11-18"),
     ("nov14d", "5 to 18 Nov", "2026-11-05", "2026-11-18"),
     ("nov", "22 Oct to 18 Nov", "2026-10-22", "2026-11-18"),
+    # Exported 24 Nov 2026 (each downloaded 3 times, all identical): the 2-week file carries the daily run on
+    ("nov2_7d", "18 to 24 Nov", "2026-11-18", "2026-11-24"),
+    ("nov2_14d", "11 to 24 Nov", "2026-11-11", "2026-11-24"),
 ]
 
 
@@ -249,7 +258,22 @@ def kumar(name=KUMAR, start=START, end=END):
     by_eng = [{"name": post_name(r[0]), "link": r[0], "published": iso(r[1]), "engagements": int(r[2])} for r in top if r[0]]
     by_seen = [{"name": post_name(r[4]), "link": r[4], "published": iso(r[5]), "seen": int(r[6])} for r in top if len(r) > 6 and r[4]]
 
+    # Each recent post with "Visits to links", the clicks on the link in the post (exports from 24 Nov 2026 have this sheet column)
+    recent = []
+    if "MOST RECENT POSTS" in wb.sheetnames:
+        rows = sheet("MOST RECENT POSTS")
+        head = rows[0] if rows else []
+        col = {h: i for i, h in enumerate(head)}
+        for r in rows[1:]:
+            if not r[0]:
+                continue
+            visits = r[col["Visits to links"]] if "Visits to links" in col and col["Visits to links"] < len(r) else None
+            recent.append({"name": post_name(r[0]), "link": r[0], "published": iso(r[1]), "type": r[col.get("Post type", 2)],
+                           "seen": int(r[col["Impressions"]]) if r[col.get("Impressions", 3)] not in (None, "") else None,
+                           "link_visits": int(visits) if visits not in (None, "") else None})
+
     return {
+        "recent_posts": recent,
         "source": "LinkedIn export, Kumar Chivukula's profile",
         "start_date": start, "end_date": end,
         "seen": seen, "reached": reached, "total_followers": int(fol[0][1]), "total_followers_date": end,
@@ -260,7 +284,7 @@ def kumar(name=KUMAR, start=START, end=END):
 
 def main():
     oct_files = {key: f"AggregateAnalytics_Kumar Chivukula_{a}_{b}.xlsx" for key, _, a, b in KUMAR_OCTOBER}
-    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), *COMPANY_NOV.values(), *(v for k, v in COMPANY_NOV2.items() if k != "content_start"), *COMPANY_NOV3.values(), KUMAR, *oct_files.values()]
+    missing = [n for n in [*COMPANY.values(), *COMPANY_OCTOBER.values(), *COMPANY_LATE.values(), *COMPANY_NOV.values(), *(v for k, v in COMPANY_NOV2.items() if k != "content_start"), *COMPANY_NOV3.values(), *COMPANY_NOV4.values(), KUMAR, *oct_files.values()]
                if not (SRC / n).exists()]
     if missing:
         stop(f"Can't find these in {SRC}: {missing}")
@@ -274,7 +298,8 @@ def main():
     # days, each newer export winning where they overlap
     q3 = company()
     exports = [company(COMPANY_OCTOBER, *COMPANY_OCTOBER_RANGE), company(COMPANY_LATE, *COMPANY_LATE_RANGE), company(COMPANY_NOV, *COMPANY_NOV_RANGE),
-               company(COMPANY_NOV2, *COMPANY_NOV2_RANGE), company(COMPANY_NOV3, *COMPANY_NOV3_RANGE)]
+               company(COMPANY_NOV2, *COMPANY_NOV2_RANGE), company(COMPANY_NOV3, *COMPANY_NOV3_RANGE),
+               company(COMPANY_NOV4, *COMPANY_NOV4_RANGE)]
     latest_co = exports[-1]
     co = {**q3, "end_date": latest_co["end_date"], "breakdowns": latest_co["breakdowns"], "breakdowns_as_of": EXPORTED_ON["company"]}
     for key in ("daily", "followers_daily", "visitors_daily"):
@@ -294,10 +319,10 @@ def main():
     # Kumar: July to September, then 1 to 22 Oct and 21 to 27 Oct joined into one run of days
     # then 22 Oct to 18 Nov (exported 18 Nov 2026) carries the run on, each newer export winning where they overlap
     by = {p["key"]: p for p in october}
-    latest = by["nov"]
+    latest = by["nov2_14d"]
     k = kumar()
     k_daily, k_followers = by["oct"]["daily"], by["oct"]["followers_daily"]
-    for older, newer in ((by["oct"], by["7d"]), (by["7d"], by["nov"])):
+    for older, newer in ((by["oct"], by["7d"]), (by["7d"], by["nov"]), (by["nov"], by["nov2_14d"])):
         k_daily = join("Kumar's days", k_daily, newer["daily"], "date", set(older["still_counting"]))
         k_followers = join("Kumar's followers", k_followers, newer["followers_daily"], "date", set(older["still_counting"]))
     k_daily, k_followers = k["daily"] + k_daily, k["followers_daily"] + k_followers

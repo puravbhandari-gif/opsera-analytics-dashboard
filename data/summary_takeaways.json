@@ -12,8 +12,7 @@
    ],
    "attention": [
     "Demo requests fell to 2, down from 5.",
-    "Unlabelled visits jumped to 6,125, mostly newsletter robots.",
-    "Company page posts were seen 49.6% less."
+    "Unlabelled visits jumped to 6,125, mostly newsletter robots."
    ],
    "do": [
     "Write more like Software Factory Pattern: 87 of 109 engaged.",
@@ -85,17 +84,17 @@
     "do": "Write more like Software Factory Pattern: 87 of 109 engaged."
    },
    "linkedin": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "times_seen",
-    "why": "Clicks fell 74.7% to 174.",
+    "why": "The 18 Nov Flutter awards post was seen 1,615 times.",
     "do": ""
    },
    "linkedin-exec": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
-    "main": "followers_gained",
-    "why": "Engagements fell to 12, down from 21.",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
+    "main": "times_seen",
+    "why": "Engagements on Kumar's posts rose to 188, up from 12.",
     "do": ""
    },
    "youtube": {

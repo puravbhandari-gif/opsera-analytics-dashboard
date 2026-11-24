@@ -5,7 +5,7 @@
   "source": "LinkedIn export, Opsera company page",
   "dates_note": "LinkedIn gives these dates in UTC",
   "start_date": "2026-07-01",
-  "end_date": "2026-11-16",
+  "end_date": "2026-11-22",
   "daily": [
    {
     "date": "2026-07-01",
@@ -2034,9 +2034,9 @@
    },
    {
     "date": "2026-11-13",
-    "seen_unpaid": 309,
+    "seen_unpaid": 311,
     "seen_paid": 0,
-    "seen_total": 309,
+    "seen_total": 311,
     "clicks_unpaid": 39,
     "clicks_paid": 0,
     "clicks_total": 39,
@@ -2088,6 +2088,96 @@
     "reactions_unpaid": 5,
     "reactions_paid": 0,
     "reactions_total": 5,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-11-17",
+    "seen_unpaid": 305,
+    "seen_paid": 0,
+    "seen_total": 305,
+    "clicks_unpaid": 59,
+    "clicks_paid": 0,
+    "clicks_total": 59,
+    "reactions_unpaid": 5,
+    "reactions_paid": 0,
+    "reactions_total": 5,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-11-18",
+    "seen_unpaid": 797,
+    "seen_paid": 0,
+    "seen_total": 797,
+    "clicks_unpaid": 191,
+    "clicks_paid": 0,
+    "clicks_total": 191,
+    "reactions_unpaid": 20,
+    "reactions_paid": 0,
+    "reactions_total": 20,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-11-19",
+    "seen_unpaid": 907,
+    "seen_paid": 0,
+    "seen_total": 907,
+    "clicks_unpaid": 184,
+    "clicks_paid": 0,
+    "clicks_total": 184,
+    "reactions_unpaid": 25,
+    "reactions_paid": 0,
+    "reactions_total": 25,
+    "comments_unpaid": 4,
+    "comments_paid": 0,
+    "comments_total": 4
+   },
+   {
+    "date": "2026-11-20",
+    "seen_unpaid": 232,
+    "seen_paid": 0,
+    "seen_total": 232,
+    "clicks_unpaid": 11,
+    "clicks_paid": 0,
+    "clicks_total": 11,
+    "reactions_unpaid": 3,
+    "reactions_paid": 0,
+    "reactions_total": 3,
+    "comments_unpaid": 1,
+    "comments_paid": 0,
+    "comments_total": 1
+   },
+   {
+    "date": "2026-11-21",
+    "seen_unpaid": 73,
+    "seen_paid": 0,
+    "seen_total": 73,
+    "clicks_unpaid": 6,
+    "clicks_paid": 0,
+    "clicks_total": 6,
+    "reactions_unpaid": 0,
+    "reactions_paid": 0,
+    "reactions_total": 0,
+    "comments_unpaid": 0,
+    "comments_paid": 0,
+    "comments_total": 0
+   },
+   {
+    "date": "2026-11-22",
+    "seen_unpaid": 71,
+    "seen_paid": 0,
+    "seen_total": 71,
+    "clicks_unpaid": 18,
+    "clicks_paid": 0,
+    "clicks_total": 18,
+    "reactions_unpaid": 0,
+    "reactions_paid": 0,
+    "reactions_total": 0,
     "comments_unpaid": 0,
     "comments_paid": 0,
     "comments_total": 0
@@ -7477,179 +7567,6 @@
     ]
    },
    {
-    "title": "Most AI coding tools start with the prompt and the open files. The architecture, business rules and ...",
-    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7527057941418606593",
-    "created": "2026-11-13",
-    "paid": false,
-    "video": false,
-    "seen": 414,
-    "clicks": 18,
-    "likes": 19,
-    "comments": 0,
-    "words": [
-     "fb532132",
-     "1a59fc07",
-     "ef46255c",
-     "652b04df",
-     "0c4afe69",
-     "b40eb21c",
-     "dfe6493b",
-     "0f29c2a6",
-     "d35ec4c9",
-     "3ee74090",
-     "67c36cc2",
-     "2ab24e4b",
-     "9ccfbbe0",
-     "30f451e1",
-     "3178ca1a",
-     "10106d8d",
-     "24bc4a3b",
-     "13254bc4",
-     "c630015f",
-     "c38eecc4",
-     "cb18332c",
-     "d20a71a6",
-     "f9316cf4",
-     "0391d612",
-     "4492b3e9",
-     "80f867d9",
-     "a515afbf",
-     "ee7a3c2c",
-     "ba4fbee2",
-     "b0afc98d",
-     "491e0a9c",
-     "73eb1dac",
-     "30fc573a",
-     "523ab9a9",
-     "225772e1",
-     "eb5f499b",
-     "5d689621",
-     "0094fd1a",
-     "056c1458",
-     "b6f40207",
-     "8c87107c",
-     "c35ba42b",
-     "2f91a723",
-     "e85c3338",
-     "e7252e76",
-     "a80d1b92",
-     "540ca757",
-     "a45c1691",
-     "cd0c4a3b",
-     "acaa9d0d",
-     "094ef704",
-     "c35f4cf7",
-     "92ee8396",
-     "1120045a",
-     "094b363d",
-     "fb7f6c5e",
-     "67ee9e45",
-     "a27c87b7",
-     "929a15ab",
-     "27cb3b23",
-     "481721cf",
-     "3845ff3e",
-     "85cc96fd",
-     "17db1627",
-     "2f69f5a5",
-     "af0f65dc",
-     "c487dc2b",
-     "a947e23c",
-     "7c783614",
-     "a91a3339",
-     "dcc341b0",
-     "320e0125",
-     "42278e90",
-     "171233ea",
-     "dedea8e2",
-     "5cd05048",
-     "6a482af4"
-    ]
-   },
-   {
-    "title": "AI Harness engineering is everything around an AI coding model except the model. The context it work...",
-    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7525603851215859712",
-    "created": "2026-11-09",
-    "paid": false,
-    "video": false,
-    "seen": 619,
-    "clicks": 25,
-    "likes": 20,
-    "comments": 0,
-    "words": [
-     "b51a41eb",
-     "c5725fb0",
-     "bd022a20",
-     "bed2118c",
-     "1a59fc07",
-     "b08b665a",
-     "38adcbf0",
-     "b40eb21c",
-     "8c87107c",
-     "4492b3e9",
-     "95cd8075",
-     "ef46255c",
-     "f0743965",
-     "5791c4f4",
-     "af0f65dc",
-     "80f867d9",
-     "f9316cf4",
-     "edbf0fe3",
-     "7b7a7318",
-     "0f29c2a6",
-     "d397b280",
-     "2af42a8f",
-     "e3d02375",
-     "ab3a8a0a",
-     "fb532132",
-     "e8512e28",
-     "bcf819ee",
-     "bacd0480",
-     "ba2719ef",
-     "4fe7f1a6",
-     "94970b95",
-     "60d56f8c",
-     "29b19c8a",
-     "01c3ac8d",
-     "f4a407c2",
-     "58dd75e4",
-     "cd0c4a3b",
-     "729d01bd",
-     "623cd25c",
-     "fd8fc87a",
-     "b55426cf",
-     "140c8eed",
-     "0faa4b2a",
-     "225772e1",
-     "3845ff3e",
-     "09784e5b",
-     "07f017af",
-     "adc649b8",
-     "147aa128",
-     "c7441a0f",
-     "c43edf70",
-     "41293f26",
-     "ee4a05ee",
-     "64ff7b9f",
-     "7cdd4142",
-     "e5243301",
-     "afe4cf71",
-     "ad2e48cd",
-     "b9962aec",
-     "e90b99b6",
-     "3687395b",
-     "89b29c10",
-     "20dc1db0",
-     "b567c124",
-     "ff79b33c",
-     "f9c53a55",
-     "47ddd94f",
-     "dedea8e2",
-     "5cd05048",
-     "0eb0d89b"
-    ]
-   },
-   {
     "title": "Reuters reported Meta\u2019s AI-assisted code changes rose 220% this year, while features reaching users ...",
     "link": "https://www.linkedin.com/feed/update/urn:li:activity:7524516238358929408",
     "created": "2026-11-06",
@@ -7861,6 +7778,405 @@
      "5cd05048",
      "dce43c66",
      "4058a02d"
+    ]
+   },
+   {
+    "title": "A moment to celebrate the teams behind the progress \ud83d\udc4f One of the highlights of our first-ever Flutte...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7528865033968291840",
+    "created": "2026-11-18",
+    "paid": false,
+    "video": false,
+    "seen": 1615,
+    "clicks": 348,
+    "likes": 44,
+    "comments": 5,
+    "words": [
+     "0c5bcd9d",
+     "e9c3f10a",
+     "b40eb21c",
+     "140c8eed",
+     "dced8a09",
+     "cb084e46",
+     "ba2719ef",
+     "63c8e73c",
+     "a91a3339",
+     "4881d841",
+     "f6dc9f15",
+     "175c54d9",
+     "ead87d82",
+     "16e2c1f2",
+     "a5858f0c",
+     "3687395b",
+     "a4bdaa19",
+     "27c0dc1f",
+     "0f29c2a6",
+     "64cd285c",
+     "963335ee",
+     "4fcb0451",
+     "55563696",
+     "f4a407c2",
+     "42278e90",
+     "f9c53a55",
+     "145ba714",
+     "43516251",
+     "5b4a9e17",
+     "d822d4ff",
+     "c1c66c7b",
+     "54a9a29f",
+     "cdfca31a",
+     "157170b8",
+     "24117267",
+     "ac46aa56",
+     "c4bed626",
+     "89916cf9",
+     "0c4afe69",
+     "a2fd7d0c",
+     "43eca75c",
+     "aeb5d04d",
+     "92f1f329",
+     "d4edb997",
+     "8161b4a5",
+     "613edf78",
+     "4b84c247",
+     "6b98ed8f",
+     "959ce80d",
+     "b9fdb16d",
+     "7268ef08",
+     "5ba5dd37",
+     "8ec42aec",
+     "4fc75ca9",
+     "ba95848e",
+     "0b62a00b",
+     "02402a87",
+     "fde2324a",
+     "bb90b938",
+     "6de25c81",
+     "fc042b10",
+     "b36ea682",
+     "d02dd9c2",
+     "cbf90a0c",
+     "a9c9fc38",
+     "885a9a2d",
+     "50b8d09c",
+     "17f496fb",
+     "5b98d260",
+     "a2825d2f",
+     "165985e3",
+     "acf38390",
+     "00f0e6aa",
+     "96eaf3b3",
+     "e46b4575",
+     "fcfe8c80",
+     "f0dfd78b",
+     "094ef704",
+     "00e7903e",
+     "8ec274c9",
+     "c39bf2a3",
+     "729c7aa9",
+     "694c43df"
+    ]
+   },
+   {
+    "title": "Opsera is expanding Forge to help enterprises understand and secure legacy applications as AI accele...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7528512989235204096",
+    "created": "2026-11-17",
+    "paid": false,
+    "video": false,
+    "seen": 257,
+    "clicks": 4,
+    "likes": 7,
+    "comments": 0,
+    "words": [
+     "3687395b",
+     "8492febf",
+     "89b29c10",
+     "3871a3fa",
+     "cf381ba3",
+     "0ec63aab",
+     "0f29c2a6",
+     "5bec03d0",
+     "bccda55e",
+     "73c45b02",
+     "a4707039",
+     "db819b62",
+     "b40eb21c",
+     "b52f0137",
+     "5c293d41",
+     "da2bd281",
+     "d67a0605",
+     "c69b2faf",
+     "406f344d",
+     "f7eb271e",
+     "094b363d",
+     "16d31d31",
+     "b1407af4",
+     "c2acf240",
+     "1471d28b",
+     "2622055e",
+     "e1fc8517",
+     "8ddb46a1",
+     "4afa6757",
+     "f5ce03fb",
+     "0bd3a98b",
+     "1959cefc",
+     "e85541e0",
+     "e5185c1a",
+     "e5cb3ac7",
+     "3dddb9fd",
+     "51540388",
+     "8ffc4fb2",
+     "2859956d",
+     "fd8fc87a",
+     "b0d11833",
+     "f4bd82be",
+     "9bf472c4",
+     "34323e76",
+     "cfb64eb1",
+     "95cd8075",
+     "6916d126",
+     "9c901c9c",
+     "bdf33b90",
+     "e422e7e3",
+     "f9316cf4",
+     "056c1458",
+     "c4f576bc",
+     "96b42c44",
+     "bfad8c1a",
+     "28b19af7",
+     "cfdb2d7c",
+     "2d8caab7",
+     "b39bd973",
+     "c92cc9bb",
+     "af0f65dc",
+     "140c8eed",
+     "2305f67d",
+     "669e12db",
+     "3530569c",
+     "d822d4ff",
+     "bdeaa8d7",
+     "6d48538c",
+     "74036ad3",
+     "e8fd9bd1",
+     "af29ebcd",
+     "1bf51169",
+     "1271ab5c",
+     "147aa128",
+     "f32b96ea",
+     "d3be3f67",
+     "2ab24e4b",
+     "ee7a3c2c",
+     "fe044378",
+     "34fe8642",
+     "eb06bc2f",
+     "c1eb85bd",
+     "a9df99c5",
+     "c73174df",
+     "0c4afe69",
+     "035a2ccf",
+     "29ca850c",
+     "0559e30b",
+     "540ca757",
+     "fe693f15",
+     "278c8c6d",
+     "6fe8c6fb",
+     "f0743965",
+     "cec76752",
+     "c6270703",
+     "d3442983",
+     "04a101fa",
+     "166f6876",
+     "be2af3eb",
+     "5b6c4f70",
+     "5c6e1222",
+     "9ce94d7a",
+     "c63b1e20",
+     "92c82452",
+     "45b8a265",
+     "9871aa85",
+     "28999611",
+     "59eac2bf",
+     "66fdf298",
+     "420372be",
+     "c09344de",
+     "cedfa3c5",
+     "213b65cb",
+     "dedea8e2",
+     "5cd05048",
+     "9b2b831c",
+     "8e8ca9df"
+    ]
+   },
+   {
+    "title": "Most AI coding tools start with the prompt and the open files. The architecture, business rules and ...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7527057941418606593",
+    "created": "2026-11-13",
+    "paid": false,
+    "video": false,
+    "seen": 473,
+    "clicks": 18,
+    "likes": 19,
+    "comments": 0,
+    "words": [
+     "fb532132",
+     "1a59fc07",
+     "ef46255c",
+     "652b04df",
+     "0c4afe69",
+     "b40eb21c",
+     "dfe6493b",
+     "0f29c2a6",
+     "d35ec4c9",
+     "3ee74090",
+     "67c36cc2",
+     "2ab24e4b",
+     "9ccfbbe0",
+     "30f451e1",
+     "3178ca1a",
+     "10106d8d",
+     "24bc4a3b",
+     "13254bc4",
+     "c630015f",
+     "c38eecc4",
+     "cb18332c",
+     "d20a71a6",
+     "f9316cf4",
+     "0391d612",
+     "4492b3e9",
+     "80f867d9",
+     "a515afbf",
+     "ee7a3c2c",
+     "ba4fbee2",
+     "b0afc98d",
+     "491e0a9c",
+     "73eb1dac",
+     "30fc573a",
+     "523ab9a9",
+     "225772e1",
+     "eb5f499b",
+     "5d689621",
+     "0094fd1a",
+     "056c1458",
+     "b6f40207",
+     "8c87107c",
+     "c35ba42b",
+     "2f91a723",
+     "e85c3338",
+     "e7252e76",
+     "a80d1b92",
+     "540ca757",
+     "a45c1691",
+     "cd0c4a3b",
+     "acaa9d0d",
+     "094ef704",
+     "c35f4cf7",
+     "92ee8396",
+     "1120045a",
+     "094b363d",
+     "fb7f6c5e",
+     "67ee9e45",
+     "a27c87b7",
+     "929a15ab",
+     "27cb3b23",
+     "481721cf",
+     "3845ff3e",
+     "85cc96fd",
+     "17db1627",
+     "2f69f5a5",
+     "af0f65dc",
+     "c487dc2b",
+     "a947e23c",
+     "7c783614",
+     "a91a3339",
+     "dcc341b0",
+     "320e0125",
+     "42278e90",
+     "171233ea",
+     "dedea8e2",
+     "5cd05048",
+     "6a482af4"
+    ]
+   },
+   {
+    "title": "AI Harness engineering is everything around an AI coding model except the model. The context it work...",
+    "link": "https://www.linkedin.com/feed/update/urn:li:activity:7525603851215859712",
+    "created": "2026-11-09",
+    "paid": false,
+    "video": false,
+    "seen": 648,
+    "clicks": 25,
+    "likes": 20,
+    "comments": 0,
+    "words": [
+     "b51a41eb",
+     "c5725fb0",
+     "bd022a20",
+     "bed2118c",
+     "1a59fc07",
+     "b08b665a",
+     "38adcbf0",
+     "b40eb21c",
+     "8c87107c",
+     "4492b3e9",
+     "95cd8075",
+     "ef46255c",
+     "f0743965",
+     "5791c4f4",
+     "af0f65dc",
+     "80f867d9",
+     "f9316cf4",
+     "edbf0fe3",
+     "7b7a7318",
+     "0f29c2a6",
+     "d397b280",
+     "2af42a8f",
+     "e3d02375",
+     "ab3a8a0a",
+     "fb532132",
+     "e8512e28",
+     "bcf819ee",
+     "bacd0480",
+     "ba2719ef",
+     "4fe7f1a6",
+     "94970b95",
+     "60d56f8c",
+     "29b19c8a",
+     "01c3ac8d",
+     "f4a407c2",
+     "58dd75e4",
+     "cd0c4a3b",
+     "729d01bd",
+     "623cd25c",
+     "fd8fc87a",
+     "b55426cf",
+     "140c8eed",
+     "0faa4b2a",
+     "225772e1",
+     "3845ff3e",
+     "09784e5b",
+     "07f017af",
+     "adc649b8",
+     "147aa128",
+     "c7441a0f",
+     "c43edf70",
+     "41293f26",
+     "ee4a05ee",
+     "64ff7b9f",
+     "7cdd4142",
+     "e5243301",
+     "afe4cf71",
+     "ad2e48cd",
+     "b9962aec",
+     "e90b99b6",
+     "3687395b",
+     "89b29c10",
+     "20dc1db0",
+     "b567c124",
+     "ff79b33c",
+     "f9c53a55",
+     "47ddd94f",
+     "dedea8e2",
+     "5cd05048",
+     "0eb0d89b"
     ]
    }
   ],
@@ -8420,16 +8736,40 @@
    {
     "date": "2026-11-16",
     "gained": 2
+   },
+   {
+    "date": "2026-11-17",
+    "gained": 3
+   },
+   {
+    "date": "2026-11-18",
+    "gained": 3
+   },
+   {
+    "date": "2026-11-19",
+    "gained": 1
+   },
+   {
+    "date": "2026-11-20",
+    "gained": 1
+   },
+   {
+    "date": "2026-11-21",
+    "gained": 0
+   },
+   {
+    "date": "2026-11-22",
+    "gained": 0
    }
   ],
   "breakdowns": {
    "job_function": {
     "label": "Job function",
-    "adds_up_to": 10840,
+    "adds_up_to": 10856,
     "top": [
      {
       "name": "Engineering",
-      "followers": 3326
+      "followers": 3329
      },
      {
       "name": "Information Technology",
@@ -8437,27 +8777,27 @@
      },
      {
       "name": "Business Development",
-      "followers": 1115
+      "followers": 1114
      },
      {
       "name": "Sales",
-      "followers": 839
+      "followers": 841
      },
      {
       "name": "Operations",
-      "followers": 657
+      "followers": 661
      },
      {
       "name": "Human Resources",
-      "followers": 483
+      "followers": 488
      },
      {
       "name": "Product Management",
-      "followers": 357
+      "followers": 362
      },
      {
       "name": "Consulting",
-      "followers": 324
+      "followers": 322
      },
      {
       "name": "Program and Project Management",
@@ -8465,75 +8805,75 @@
      },
      {
       "name": "Marketing",
-      "followers": 257
+      "followers": 253
      }
     ]
    },
    "seniority": {
     "label": "Seniority",
-    "adds_up_to": 11474,
+    "adds_up_to": 11488,
     "top": [
      {
       "name": "Senior",
-      "followers": 4666
+      "followers": 4673
      },
      {
       "name": "Entry",
-      "followers": 3713
+      "followers": 3729
      },
      {
       "name": "Manager",
-      "followers": 879
+      "followers": 877
      },
      {
       "name": "Director",
-      "followers": 862
+      "followers": 863
      },
      {
       "name": "VP",
-      "followers": 472
+      "followers": 469
      },
      {
       "name": "Owner",
-      "followers": 344
+      "followers": 346
      },
      {
       "name": "CXO",
-      "followers": 258
+      "followers": 257
      },
      {
       "name": "Training",
-      "followers": 164
+      "followers": 158
      },
      {
       "name": "Partner",
-      "followers": 102
+      "followers": 101
      },
      {
       "name": "Unpaid",
-      "followers": 14
+      "followers": 15
      }
     ]
    },
    "location": {
     "label": "Location",
-    "adds_up_to": 10847,
+    "adds_up_to": 10852,
     "top": [
      {
       "name": "Greater Bengaluru Area, India",
-      "followers": 1805
+      "followers": 1802
      },
      {
       "name": "Greater Chennai Area, India",
-      "followers": 1137
+      "followers": 1138
      },
      {
       "name": "San Francisco Bay Area",
-      "followers": 1128
+      "followers": 1133
      },
      {
       "name": "Greater Delhi Area, India",
-      "followers": 806
+      "followers": 804
      },
      {
       "name": "Greater Hyderabad Area, India",
@@ -8541,19 +8881,19 @@
      },
      {
       "name": "Mumbai Metropolitan Region, India",
-      "followers": 402
+      "followers": 401
      },
      {
       "name": "Pune/Pimpri-Chinchwad Area, India",
-      "followers": 381
+      "followers": 380
      },
      {
       "name": "New York City Metropolitan Area",
-      "followers": 280
+      "followers": 281
      },
      {
       "name": "Noida, India",
-      "followers": 228
+      "followers": 227
      },
      {
       "name": "Greater Kolkata Area, India",
@@ -8563,31 +8903,31 @@
    },
    "industry": {
     "label": "Industry",
-    "adds_up_to": 12595,
+    "adds_up_to": 12608,
     "top": [
      {
       "name": "IT Services and IT Consulting",
-      "followers": 2762
+      "followers": 2759
      },
      {
       "name": "Software Development",
-      "followers": 2150
+      "followers": 2149
      },
      {
       "name": "Technology, Information and Internet",
-      "followers": 597
+      "followers": 599
      },
      {
       "name": "Business Consulting and Services",
-      "followers": 464
+      "followers": 466
      },
      {
       "name": "Computer and Network Security",
-      "followers": 339
+      "followers": 345
      },
      {
       "name": "Financial Services",
-      "followers": 325
+      "followers": 326
      },
      {
       "name": "Higher Education",
@@ -8595,11 +8935,11 @@
      },
      {
       "name": "Staffing and Recruiting",
-      "followers": 217
+      "followers": 219
      },
      {
       "name": "Banking",
-      "followers": 198
+      "followers": 200
      },
      {
       "name": "Computer Networking Products",
@@ -8609,39 +8949,39 @@
    },
    "company_size": {
     "label": "Company size",
-    "adds_up_to": 10720,
+    "adds_up_to": 10740,
     "top": [
      {
       "name": "10001+",
-      "followers": 3329
+      "followers": 3339
      },
      {
       "name": "51-200",
-      "followers": 1576
+      "followers": 1571
      },
      {
       "name": "1001-5000",
-      "followers": 1452
+      "followers": 1454
      },
      {
       "name": "11-50",
-      "followers": 1135
+      "followers": 1138
      },
      {
       "name": "201-500",
-      "followers": 952
+      "followers": 953
      },
      {
       "name": "501-1000",
-      "followers": 791
+      "followers": 792
      },
      {
       "name": "2-10",
-      "followers": 733
+      "followers": 740
      },
      {
       "name": "5001-10000",
-      "followers": 640
+      "followers": 641
      },
      {
       "name": "1",
@@ -9484,11 +9824,48 @@
     "views_total": 124,
     "views_overview": 69,
     "views_jobs": 13
+   },
+   {
+    "date": "2026-11-17",
+    "views_total": 96,
+    "views_overview": 50,
+    "views_jobs": 11
+   },
+   {
+    "date": "2026-11-18",
+    "views_total": 93,
+    "views_overview": 51,
+    "views_jobs": 10
+   },
+   {
+    "date": "2026-11-19",
+    "views_total": 98,
+    "views_overview": 65,
+    "views_jobs": 10
+   },
+   {
+    "date": "2026-11-20",
+    "views_total": 64,
+    "views_overview": 26,
+    "views_jobs": 2
+   },
+   {
+    "date": "2026-11-21",
+    "views_total": 25,
+    "views_overview": 10,
+    "views_jobs": 4
+   },
+   {
+    "date": "2026-11-22",
+    "views_total": 13,
+    "views_overview": 9,
+    "views_jobs": 1
    }
   ],
-  "breakdowns_as_of": "2026-11-18"
+  "breakdowns_as_of": "2026-11-24"
  },
  "kumar": {
+  "recent_posts": [],
   "source": "LinkedIn export, Kumar Chivukula's profile",
   "start_date": "2026-07-01",
   "end_date": "2026-09-30",
@@ -10806,6 +11183,7 @@
    {
     "key": "7d",
     "label": "21 to 27 Oct",
+    "recent_posts": [],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-10-21",
     "end_date": "2026-10-27",
@@ -11119,6 +11497,7 @@
    {
     "key": "14d",
     "label": "9 to 22 Oct",
+    "recent_posts": [],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-10-09",
     "end_date": "2026-10-22",
@@ -11633,6 +12012,7 @@
    {
     "key": "oct",
     "label": "1 to 22 Oct",
+    "recent_posts": [],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-10-01",
     "end_date": "2026-10-22",
@@ -12249,6 +12629,32 @@
    {
     "key": "nov7d",
     "label": "12 to 18 Nov",
+    "recent_posts": [
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "type": "Article",
+      "seen": 503,
+      "link_visits": null
+     },
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "type": "Image",
+      "seen": 1256,
+      "link_visits": null
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "type": "Article",
+      "seen": 713,
+      "link_visits": 3
+     }
+    ],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-11-12",
     "end_date": "2026-11-18",
@@ -12646,6 +13052,32 @@
    {
     "key": "nov14d",
     "label": "5 to 18 Nov",
+    "recent_posts": [
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "type": "Article",
+      "seen": 503,
+      "link_visits": null
+     },
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "type": "Image",
+      "seen": 1256,
+      "link_visits": null
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "type": "Article",
+      "seen": 713,
+      "link_visits": 3
+     }
+    ],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-11-05",
     "end_date": "2026-11-18",
@@ -13154,6 +13586,32 @@
    {
     "key": "nov",
     "label": "22 Oct to 18 Nov",
+    "recent_posts": [
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "type": "Article",
+      "seen": 503,
+      "link_visits": null
+     },
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "type": "Image",
+      "seen": 1256,
+      "link_visits": null
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "type": "Article",
+      "seen": 713,
+      "link_visits": 3
+     }
+    ],
     "source": "LinkedIn export, Kumar Chivukula's profile",
     "start_date": "2026-10-22",
     "end_date": "2026-11-18",
@@ -13808,17 +14266,963 @@
     "still_counting": [
      "2026-11-18"
     ]
+   },
+   {
+    "key": "nov2_7d",
+    "label": "18 to 24 Nov",
+    "recent_posts": [
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "type": "Article",
+      "seen": 838,
+      "link_visits": 5
+     },
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "type": "Newsletter",
+      "seen": 1189,
+      "link_visits": null
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "type": "Article",
+      "seen": 912,
+      "link_visits": null
+     }
+    ],
+    "source": "LinkedIn export, Kumar Chivukula's profile",
+    "start_date": "2026-11-18",
+    "end_date": "2026-11-24",
+    "seen": 3481,
+    "reached": 1537,
+    "total_followers": 6539,
+    "total_followers_date": "2026-11-24",
+    "daily": [
+     {
+      "date": "2026-11-18",
+      "seen": 575,
+      "engagements": 21
+     },
+     {
+      "date": "2026-11-19",
+      "seen": 651,
+      "engagements": 22
+     },
+     {
+      "date": "2026-11-20",
+      "seen": 984,
+      "engagements": 39
+     },
+     {
+      "date": "2026-11-21",
+      "seen": 501,
+      "engagements": 23
+     },
+     {
+      "date": "2026-11-22",
+      "seen": 312,
+      "engagements": 9
+     },
+     {
+      "date": "2026-11-23",
+      "seen": 267,
+      "engagements": 5
+     },
+     {
+      "date": "2026-11-24",
+      "seen": 191,
+      "engagements": 2
+     }
+    ],
+    "followers_daily": [
+     {
+      "date": "2026-11-18",
+      "gained": 4
+     },
+     {
+      "date": "2026-11-19",
+      "gained": 8
+     },
+     {
+      "date": "2026-11-20",
+      "gained": 7
+     },
+     {
+      "date": "2026-11-21",
+      "gained": 8
+     },
+     {
+      "date": "2026-11-22",
+      "gained": 3
+     },
+     {
+      "date": "2026-11-23",
+      "gained": 6
+     },
+     {
+      "date": "2026-11-24",
+      "gained": 2
+     }
+    ],
+    "top_by_engagements": [
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "engagements": 39
+     },
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "engagements": 39
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "engagements": 22
+     },
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "engagements": 18
+     },
+     {
+      "name": "Socksmq gartnersym modernization",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_socksmq-gartnersym-modernization-ugcPost-7518549659309481984-5g9W",
+      "published": "2026-10-21",
+      "engagements": 2
+     },
+     {
+      "name": "Well be at github universe in san francisco",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-share-7520896291522899968-K6oy",
+      "published": "2026-10-27",
+      "engagements": 1
+     }
+    ],
+    "top_by_seen": [
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "seen": 1189
+     },
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "seen": 838
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "seen": 550
+     },
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "seen": 427
+     },
+     {
+      "name": "Socksmq gartnersym modernization",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_socksmq-gartnersym-modernization-ugcPost-7518549659309481984-5g9W",
+      "published": "2026-10-21",
+      "seen": 111
+     },
+     {
+      "name": "Well be at github universe in san francisco",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-share-7520896291522899968-K6oy",
+      "published": "2026-10-27",
+      "seen": 49
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "seen": 48
+     },
+     {
+      "name": "Flutter",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_flutter-share-7519084446353104896-bfLZ",
+      "published": "2026-10-22",
+      "seen": 28
+     },
+     {
+      "name": "Tokenconsumption contextdrift tokenconsumption",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_tokenconsumption-contextdrift-tokenconsumption-ugcPost-7487924469387137024-vlm0",
+      "published": "2026-07-28",
+      "seen": 25
+     },
+     {
+      "name": "Agenticdevops developerproductivity developerexpereince",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_agenticdevops-developerproductivity-developerexpereince-share-7422749628451901440-Eib3",
+      "published": "2026-01-30",
+      "seen": 21
+     },
+     {
+      "name": "Today opsera launched a headless devops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_today-opsera-launched-a-headless-devops-share-7506284297285181441-Vx-1",
+      "published": "2026-09-17",
+      "seen": 20
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7501292649060970496-yy1B",
+      "published": "2026-09-03",
+      "seen": 19
+     },
+     {
+      "name": "With flutter 2026 just a couple of days away",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_with-flutter-2026-just-a-couple-of-days-away-share-7510806383777296384-eNaQ",
+      "published": "2026-09-30",
+      "seen": 15
+     },
+     {
+      "name": "Gartneritsymposium forge opsera",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartneritsymposium-forge-opsera-share-7517085116087668736-_j5x",
+      "published": "2026-10-17",
+      "seen": 14
+     },
+     {
+      "name": "Im thrilled to announce that opsera has",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_im-thrilled-to-announce-that-opsera-has-share-7460375482711293952-o3n0",
+      "published": "2026-05-13",
+      "seen": 12
+     },
+     {
+      "name": "Sheila jordan and sesh tirumala take the",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_sheila-jordan-and-sesh-tirumala-take-the-share-7509464931487047680-4G6e",
+      "published": "2026-09-26",
+      "seen": 11
+     },
+     {
+      "name": "Agents",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_agents-share-7437171311392661505-bI92",
+      "published": "2026-03-10",
+      "seen": 9
+     },
+     {
+      "name": "Forge forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-forge-forge-share-7453111296146751488-ov3m",
+      "published": "2026-04-23",
+      "seen": 8
+     },
+     {
+      "name": "Brickforge at databricks summit",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_brickforge-at-databricks-summit-ugcPost-7473868272426196992-AXVr",
+      "published": "2026-06-20",
+      "seen": 8
+     },
+     {
+      "name": "Gartner published its first magic quadrant",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartner-published-its-first-magic-quadrant-share-7475955453571592192-V26c",
+      "published": "2026-06-25",
+      "seen": 8
+     },
+     {
+      "name": "Very excited to see aakash guptata speak",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_very-excited-to-see-aakash-guptata-speak-share-7509305213204320256-Ibhc",
+      "published": "2026-09-25",
+      "seen": 8
+     },
+     {
+      "name": "Home",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_home-share-7470877562164912128-lykW",
+      "published": "2026-06-11",
+      "seen": 7
+     },
+     {
+      "name": "Devops ai cursor",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_devops-ai-cursor-share-7457118913118609408-h00y",
+      "published": "2026-05-04",
+      "seen": 6
+     },
+     {
+      "name": "Flutter2026 forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_flutter2026-forge-forge-share-7515475260394098688-_0kA",
+      "published": "2026-10-13",
+      "seen": 6
+     },
+     {
+      "name": "Parnership github dora",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_parnership-github-dora-share-7371047769073070080-8h0z",
+      "published": "2025-09-09",
+      "seen": 5
+     },
+     {
+      "name": "Softwarefactory forge token",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_softwarefactory-forge-token-share-7483610473297387520-oKOs",
+      "published": "2026-07-17",
+      "seen": 5
+     },
+     {
+      "name": "Forge github gitlab",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-github-gitlab-share-7477427286527328256-xyva",
+      "published": "2026-06-29",
+      "seen": 5
+     },
+     {
+      "name": "Dataops aidevops databricks",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_dataops-aidevops-databricks-share-7336444115712098304-_xq_",
+      "published": "2025-06-05",
+      "seen": 4
+     },
+     {
+      "name": "Aiinvestments airoi aiimpact",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_aiinvestments-airoi-aiimpact-share-7475227450302431233-y_6j",
+      "published": "2026-06-23",
+      "seen": 2
+     },
+     {
+      "name": "Gartnerapps forge governance",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartnerapps-forge-governance-share-7472346394301751298-msZV",
+      "published": "2026-06-15",
+      "seen": 2
+     },
+     {
+      "name": "Opsera hummingbirdai teamwork",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-hummingbirdai-teamwork-share-7115372341454401536-Q6bg",
+      "published": "2023-10-04",
+      "seen": 2
+     },
+     {
+      "name": "Devops continuousorchestration cicd",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_devops-continuousorchestration-cicd-share-6947098159017775104-G9Gf",
+      "published": "2022-06-27",
+      "seen": 2
+     },
+     {
+      "name": "Opsera aipowereddevops innovation",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-aipowereddevops-innovation-share-7313195975953510400-3VoL",
+      "published": "2025-04-02",
+      "seen": 2
+     },
+     {
+      "name": "Claude claude opsera",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_claude-claude-opsera-share-7467658842869493761-36TH",
+      "published": "2026-06-03",
+      "seen": 2
+     },
+     {
+      "name": "Ai softwaresupplychain devsecops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ai-softwaresupplychain-devsecops-share-7321258319648636929-MJxH",
+      "published": "2025-04-25",
+      "seen": 2
+     },
+     {
+      "name": "Aisdlc sdlc aitransformation",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_aisdlc-sdlc-aitransformation-share-7478462146335485952-GUWl",
+      "published": "2026-07-02",
+      "seen": 2
+     },
+     {
+      "name": "Your api now fluent in ai",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_your-api-now-fluent-in-ai-share-7363645502174752768-OzNX",
+      "published": "2025-08-20",
+      "seen": 2
+     },
+     {
+      "name": "The ai velocity is staggering we now talk",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_the-ai-velocity-is-staggering-we-now-talk-share-7493679147131596801-dctL",
+      "published": "2026-08-13",
+      "seen": 1
+     },
+     {
+      "name": "Forge forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-forge-forge-share-7482831058158112768-HgaG",
+      "published": "2026-07-14",
+      "seen": 1
+     },
+     {
+      "name": "204a opsera aireasoningagents",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_204a-opsera-aireasoningagents-share-7387212145203175424-My0H",
+      "published": "2025-10-24",
+      "seen": 1
+     },
+     {
+      "name": "Last week at flutter 2026 sheila jordan",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-week-at-flutter-2026-sheila-jordan-share-7513440175360806912-kfsu",
+      "published": "2026-10-07",
+      "seen": 1
+     },
+     {
+      "name": "Opsera flutter 2026 the ai sdlc summit",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-flutter-2026-the-ai-sdlc-summit-share-7505324032888590337-QKiM",
+      "published": "2026-09-14",
+      "seen": 1
+     },
+     {
+      "name": "Opsera forge secure software factory intent",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-forge-secure-software-factory-intent-ugcPost-7460291463105392640-8pU4",
+      "published": "2026-05-13",
+      "seen": 1
+     },
+     {
+      "name": "Airoi tokenmaxxing enterpriseai",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_airoi-tokenmaxxing-enterpriseai-share-7498212238827241472-nTuR",
+      "published": "2026-08-26",
+      "seen": 1
+     }
+    ],
+    "still_counting": [
+     "2026-11-24"
+    ]
+   },
+   {
+    "key": "nov2_14d",
+    "label": "11 to 24 Nov",
+    "recent_posts": [
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "type": "Article",
+      "seen": 838,
+      "link_visits": 5
+     },
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "type": "Newsletter",
+      "seen": 1189,
+      "link_visits": null
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "type": "Article",
+      "seen": 912,
+      "link_visits": null
+     }
+    ],
+    "source": "LinkedIn export, Kumar Chivukula's profile",
+    "start_date": "2026-11-11",
+    "end_date": "2026-11-24",
+    "seen": 5835,
+    "reached": 2402,
+    "total_followers": 6539,
+    "total_followers_date": "2026-11-24",
+    "daily": [
+     {
+      "date": "2026-11-11",
+      "seen": 180,
+      "engagements": 4
+     },
+     {
+      "date": "2026-11-12",
+      "seen": 152,
+      "engagements": 1
+     },
+     {
+      "date": "2026-11-13",
+      "seen": 109,
+      "engagements": 4
+     },
+     {
+      "date": "2026-11-14",
+      "seen": 77,
+      "engagements": 1
+     },
+     {
+      "date": "2026-11-15",
+      "seen": 90,
+      "engagements": 0
+     },
+     {
+      "date": "2026-11-16",
+      "seen": 628,
+      "engagements": 34
+     },
+     {
+      "date": "2026-11-17",
+      "seen": 1118,
+      "engagements": 40
+     },
+     {
+      "date": "2026-11-18",
+      "seen": 575,
+      "engagements": 21
+     },
+     {
+      "date": "2026-11-19",
+      "seen": 651,
+      "engagements": 22
+     },
+     {
+      "date": "2026-11-20",
+      "seen": 984,
+      "engagements": 39
+     },
+     {
+      "date": "2026-11-21",
+      "seen": 501,
+      "engagements": 23
+     },
+     {
+      "date": "2026-11-22",
+      "seen": 312,
+      "engagements": 9
+     },
+     {
+      "date": "2026-11-23",
+      "seen": 267,
+      "engagements": 5
+     },
+     {
+      "date": "2026-11-24",
+      "seen": 191,
+      "engagements": 2
+     }
+    ],
+    "followers_daily": [
+     {
+      "date": "2026-11-11",
+      "gained": 2
+     },
+     {
+      "date": "2026-11-12",
+      "gained": 4
+     },
+     {
+      "date": "2026-11-13",
+      "gained": 8
+     },
+     {
+      "date": "2026-11-14",
+      "gained": 2
+     },
+     {
+      "date": "2026-11-15",
+      "gained": 2
+     },
+     {
+      "date": "2026-11-16",
+      "gained": 6
+     },
+     {
+      "date": "2026-11-17",
+      "gained": 7
+     },
+     {
+      "date": "2026-11-18",
+      "gained": 4
+     },
+     {
+      "date": "2026-11-19",
+      "gained": 8
+     },
+     {
+      "date": "2026-11-20",
+      "gained": 7
+     },
+     {
+      "date": "2026-11-21",
+      "gained": 8
+     },
+     {
+      "date": "2026-11-22",
+      "gained": 3
+     },
+     {
+      "date": "2026-11-23",
+      "gained": 6
+     },
+     {
+      "date": "2026-11-24",
+      "gained": 2
+     }
+    ],
+    "top_by_engagements": [
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "engagements": 75
+     },
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "engagements": 39
+     },
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "engagements": 39
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "engagements": 36
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "engagements": 6
+     },
+     {
+      "name": "Socksmq gartnersym modernization",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_socksmq-gartnersym-modernization-ugcPost-7518549659309481984-5g9W",
+      "published": "2026-10-21",
+      "engagements": 4
+     },
+     {
+      "name": "Well be at github universe in san francisco",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-share-7520896291522899968-K6oy",
+      "published": "2026-10-27",
+      "engagements": 3
+     },
+     {
+      "name": "Today opsera launched a headless devops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_today-opsera-launched-a-headless-devops-share-7506284297285181441-Vx-1",
+      "published": "2026-09-17",
+      "engagements": 1
+     },
+     {
+      "name": "Flutter",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_flutter-share-7519084446353104896-bfLZ",
+      "published": "2026-10-22",
+      "engagements": 1
+     },
+     {
+      "name": "Agenticdevops developerproductivity developerexpereince",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_agenticdevops-developerproductivity-developerexpereince-share-7422749628451901440-Eib3",
+      "published": "2026-01-30",
+      "engagements": 1
+     }
+    ],
+    "top_by_seen": [
+     {
+      "name": "Ill be at hlth usa in las vegas this week",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ill-be-at-hlth-usa-in-las-vegas-this-week-share-7528147149977567234-bnYY",
+      "published": "2026-11-16",
+      "seen": 1607
+     },
+     {
+      "name": "Give your coding agent the same task twice",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_give-your-coding-agent-the-same-task-twice-ugcPost-7529118481418682368-Cfdb",
+      "published": "2026-11-20",
+      "seen": 1189
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7528514098792157184-ZVT9",
+      "published": "2026-11-17",
+      "seen": 912
+     },
+     {
+      "name": "Forbes technology council has published my",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forbes-technology-council-has-published-my-share-7529064648294330368-QPGU",
+      "published": "2026-11-20",
+      "seen": 838
+     },
+     {
+      "name": "Socksmq gartnersym modernization",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_socksmq-gartnersym-modernization-ugcPost-7518549659309481984-5g9W",
+      "published": "2026-10-21",
+      "seen": 319
+     },
+     {
+      "name": "Last weeks php2shell disclosure should change",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-weeks-php2shell-disclosure-should-change-share-7520897048578138112-UkcX",
+      "published": "2026-10-28",
+      "seen": 170
+     },
+     {
+      "name": "Well be at github universe in san francisco",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_well-be-at-github-universe-in-san-francisco-share-7520896291522899968-K6oy",
+      "published": "2026-10-27",
+      "seen": 122
+     },
+     {
+      "name": "Today opsera launched a headless devops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_today-opsera-launched-a-headless-devops-share-7506284297285181441-Vx-1",
+      "published": "2026-09-17",
+      "seen": 71
+     },
+     {
+      "name": "Flutter",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_flutter-share-7519084446353104896-bfLZ",
+      "published": "2026-10-22",
+      "seen": 60
+     },
+     {
+      "name": "Agenticdevops developerproductivity developerexpereince",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_agenticdevops-developerproductivity-developerexpereince-share-7422749628451901440-Eib3",
+      "published": "2026-01-30",
+      "seen": 60
+     },
+     {
+      "name": "Gartneritsymposium forge opsera",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartneritsymposium-forge-opsera-share-7517085116087668736-_j5x",
+      "published": "2026-10-17",
+      "seen": 44
+     },
+     {
+      "name": "Tokenconsumption contextdrift tokenconsumption",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_tokenconsumption-contextdrift-tokenconsumption-ugcPost-7487924469387137024-vlm0",
+      "published": "2026-07-28",
+      "seen": 43
+     },
+     {
+      "name": "Im thrilled to announce that opsera has",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_im-thrilled-to-announce-that-opsera-has-share-7460375482711293952-o3n0",
+      "published": "2026-05-13",
+      "seen": 41
+     },
+     {
+      "name": "Forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-share-7501292649060970496-yy1B",
+      "published": "2026-09-03",
+      "seen": 41
+     },
+     {
+      "name": "Agents",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_agents-share-7437171311392661505-bI92",
+      "published": "2026-03-10",
+      "seen": 39
+     },
+     {
+      "name": "With flutter 2026 just a couple of days away",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_with-flutter-2026-just-a-couple-of-days-away-share-7510806383777296384-eNaQ",
+      "published": "2026-09-30",
+      "seen": 33
+     },
+     {
+      "name": "Sheila jordan and sesh tirumala take the",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_sheila-jordan-and-sesh-tirumala-take-the-share-7509464931487047680-4G6e",
+      "published": "2026-09-26",
+      "seen": 24
+     },
+     {
+      "name": "Forge forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-forge-forge-share-7453111296146751488-ov3m",
+      "published": "2026-04-23",
+      "seen": 22
+     },
+     {
+      "name": "Gartner published its first magic quadrant",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartner-published-its-first-magic-quadrant-share-7475955453571592192-V26c",
+      "published": "2026-06-25",
+      "seen": 18
+     },
+     {
+      "name": "Forge github gitlab",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-github-gitlab-share-7477427286527328256-xyva",
+      "published": "2026-06-29",
+      "seen": 17
+     },
+     {
+      "name": "Flutter2026 forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_flutter2026-forge-forge-share-7515475260394098688-_0kA",
+      "published": "2026-10-13",
+      "seen": 17
+     },
+     {
+      "name": "Very excited to see aakash guptata speak",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_very-excited-to-see-aakash-guptata-speak-share-7509305213204320256-Ibhc",
+      "published": "2026-09-25",
+      "seen": 13
+     },
+     {
+      "name": "Home",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_home-share-7470877562164912128-lykW",
+      "published": "2026-06-11",
+      "seen": 12
+     },
+     {
+      "name": "Claude claude opsera",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_claude-claude-opsera-share-7467658842869493761-36TH",
+      "published": "2026-06-03",
+      "seen": 12
+     },
+     {
+      "name": "Last week at flutter 2026 sheila jordan",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_last-week-at-flutter-2026-sheila-jordan-share-7513440175360806912-kfsu",
+      "published": "2026-10-07",
+      "seen": 11
+     },
+     {
+      "name": "Brickforge at databricks summit",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_brickforge-at-databricks-summit-ugcPost-7473868272426196992-AXVr",
+      "published": "2026-06-20",
+      "seen": 10
+     },
+     {
+      "name": "Devops ai cursor",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_devops-ai-cursor-share-7457118913118609408-h00y",
+      "published": "2026-05-04",
+      "seen": 9
+     },
+     {
+      "name": "Opsera aipowereddevops innovation",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-aipowereddevops-innovation-share-7313195975953510400-3VoL",
+      "published": "2025-04-02",
+      "seen": 9
+     },
+     {
+      "name": "Dataops aidevops databricks",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_dataops-aidevops-databricks-share-7336444115712098304-_xq_",
+      "published": "2025-06-05",
+      "seen": 9
+     },
+     {
+      "name": "Your api now fluent in ai",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_your-api-now-fluent-in-ai-share-7363645502174752768-OzNX",
+      "published": "2025-08-20",
+      "seen": 7
+     },
+     {
+      "name": "Softwarefactory forge token",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_softwarefactory-forge-token-share-7483610473297387520-oKOs",
+      "published": "2026-07-17",
+      "seen": 6
+     },
+     {
+      "name": "Parnership github dora",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_parnership-github-dora-share-7371047769073070080-8h0z",
+      "published": "2025-09-09",
+      "seen": 5
+     },
+     {
+      "name": "Devops continuousorchestration cicd",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_devops-continuousorchestration-cicd-share-6947098159017775104-G9Gf",
+      "published": "2022-06-27",
+      "seen": 5
+     },
+     {
+      "name": "Gartnerapps forge governance",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_gartnerapps-forge-governance-share-7472346394301751298-msZV",
+      "published": "2026-06-15",
+      "seen": 4
+     },
+     {
+      "name": "Fifaworldcup developerproductivity dpip",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_fifaworldcup-developerproductivity-dpip-ugcPost-7480651142083846144-z8oN",
+      "published": "2026-07-08",
+      "seen": 3
+     },
+     {
+      "name": "This is something every enterprise leader",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_this-is-something-every-enterprise-leader-ugcPost-7481001600916811776-_zEO",
+      "published": "2026-07-09",
+      "seen": 3
+     },
+     {
+      "name": "Opsera flutter 2026 the ai sdlc summit",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-flutter-2026-the-ai-sdlc-summit-share-7505324032888590337-QKiM",
+      "published": "2026-09-14",
+      "seen": 3
+     },
+     {
+      "name": "Keynote speakers flutter 2026",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_keynote-speakers-flutter-2026-ugcPost-7508221029652041728-k6Pp",
+      "published": "2026-09-23",
+      "seen": 2
+     },
+     {
+      "name": "Governance compliance architecturalintegrity",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_governance-compliance-architecturalintegrity-share-7467261974964301824-8kSz",
+      "published": "2026-06-01",
+      "seen": 2
+     },
+     {
+      "name": "Aisdlc sdlc aitransformation",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_aisdlc-sdlc-aitransformation-share-7478462146335485952-GUWl",
+      "published": "2026-07-02",
+      "seen": 2
+     },
+     {
+      "name": "Aiinvestments airoi aiimpact",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_aiinvestments-airoi-aiimpact-share-7475227450302431233-y_6j",
+      "published": "2026-06-23",
+      "seen": 2
+     },
+     {
+      "name": "Opsera hummingbirdai teamwork",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-hummingbirdai-teamwork-share-7115372341454401536-Q6bg",
+      "published": "2023-10-04",
+      "seen": 2
+     },
+     {
+      "name": "Ai softwaresupplychain devsecops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_ai-softwaresupplychain-devsecops-share-7321258319648636929-MJxH",
+      "published": "2025-04-25",
+      "seen": 2
+     },
+     {
+      "name": "Opsera forge secure software factory intent",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_opsera-forge-secure-software-factory-intent-ugcPost-7460291463105392640-8pU4",
+      "published": "2026-05-13",
+      "seen": 2
+     },
+     {
+      "name": "Devopsdozen2020",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_devopsdozen2020-share-6759658788791439361-yAYb",
+      "published": "2021-01-26",
+      "seen": 2
+     },
+     {
+      "name": "Forge forge forge",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_forge-forge-forge-share-7482831058158112768-HgaG",
+      "published": "2026-07-14",
+      "seen": 2
+     },
+     {
+      "name": "Dora github devops",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_dora-github-devops-share-7252074377037389825-mpNp",
+      "published": "2024-10-16",
+      "seen": 1
+     },
+     {
+      "name": "204a opsera aireasoningagents",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_204a-opsera-aireasoningagents-share-7387212145203175424-My0H",
+      "published": "2025-10-24",
+      "seen": 1
+     },
+     {
+      "name": "The ai velocity is staggering we now talk",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_the-ai-velocity-is-staggering-we-now-talk-share-7493679147131596801-dctL",
+      "published": "2026-08-13",
+      "seen": 1
+     },
+     {
+      "name": "Hummingbird teamwork opsera",
+      "link": "https://www.linkedin.com/posts/kumar-chivukula_hummingbird-teamwork-opsera-share-7392008980132319232-a0hJ",
+      "published": "2025-11-06",
+      "seen": 1
+     }
+    ],
+    "still_counting": [
+     "2026-11-24"
+    ]
    }
   ],
   "still_counting": [
    "2026-10-22",
    "2026-10-27",
-   "2026-11-18"
+   "2026-11-18",
+   "2026-11-24"
   ]
  },
  "kumar_all": {
   "start_date": "2026-07-01",
-  "end_date": "2026-11-18",
+  "end_date": "2026-11-24",
   "daily": [
    {
     "date": "2026-07-01",
@@ -14522,8 +15926,38 @@
    },
    {
     "date": "2026-11-18",
-    "seen": 242,
-    "engagements": 15
+    "seen": 575,
+    "engagements": 21
+   },
+   {
+    "date": "2026-11-19",
+    "seen": 651,
+    "engagements": 22
+   },
+   {
+    "date": "2026-11-20",
+    "seen": 984,
+    "engagements": 39
+   },
+   {
+    "date": "2026-11-21",
+    "seen": 501,
+    "engagements": 23
+   },
+   {
+    "date": "2026-11-22",
+    "seen": 312,
+    "engagements": 9
+   },
+   {
+    "date": "2026-11-23",
+    "seen": 267,
+    "engagements": 5
+   },
+   {
+    "date": "2026-11-24",
+    "seen": 191,
+    "engagements": 2
    }
   ],
   "followers_daily": [
@@ -15089,11 +16523,35 @@
    },
    {
     "date": "2026-11-18",
+    "gained": 4
+   },
+   {
+    "date": "2026-11-19",
+    "gained": 8
+   },
+   {
+    "date": "2026-11-20",
+    "gained": 7
+   },
+   {
+    "date": "2026-11-21",
+    "gained": 8
+   },
+   {
+    "date": "2026-11-22",
+    "gained": 3
+   },
+   {
+    "date": "2026-11-23",
+    "gained": 6
+   },
+   {
+    "date": "2026-11-24",
     "gained": 2
    }
   ],
   "still_counting": [
-   "2026-11-18"
+   "2026-11-24"
   ]
  }
 }

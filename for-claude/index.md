@@ -25,7 +25,7 @@ Every number here also appears on the dashboard. We rebuild these files every ti
 
 - Google Analytics and HubSpot: 2026-04-01 to 2026-11-23.
 - Search Console (Google search): 2026-04-01 to 2026-11-22. It runs about 2 days behind.
-- LinkedIn company page: 2026-07-01 to 2026-11-16. LinkedIn Kumar: 2026-07-01 to 2026-11-18, the last day still being counted when exported.
+- LinkedIn company page: 2026-07-01 to 2026-11-22. LinkedIn Kumar: 2026-07-01 to 2026-11-24, the last day still being counted when exported.
 - YouTube: 2026-04-01 to 2026-11-21.
 - Kahoots and Infrasity: July to September 2026, as they reported it.
 
@@ -39,7 +39,7 @@ The front page. Its cards take their numbers from the files below: marketing pip
 
 The Going well, Needs attention and Do this week boxes, and one card per area. Claude Code writes the lines each Monday from the numbers; every line is checked against them.
 
-- [takeaways_boxes.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/takeaways_boxes.csv): Takeaways tab: the Going well, Needs attention and Do this week lines for each view, written 2026-11-24. Sources: as each card says. 23 rows.
+- [takeaways_boxes.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/takeaways_boxes.csv): Takeaways tab: the Going well, Needs attention and Do this week lines for each view, written 2026-11-24. Sources: as each card says. 22 rows.
 - [takeaways_cards.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/takeaways_cards.csv): Takeaways tab: one card per area with its main number, the period before, why it matters and what to do. Blank means nothing notable. 48 rows.
 
 ## Hub and spoke campaigns tab
@@ -79,7 +79,7 @@ How marketing turns website visits into demo requests, meetings and deals. The f
 - [website_visits_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/website_visits_by_week.csv): Website visits tab, by week. Source: Google Analytics. 35 rows.
 - [visit_sources_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/visit_sources_by_month.csv): Where visits came from (Google Analytics channel groups), by month. Source: Google Analytics. 82 rows.
 - [visit_sources_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/visit_sources_by_week.csv): Where visits came from (Google Analytics channel groups), by week. Source: Google Analytics. 299 rows.
-- [button_clicks.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/button_clicks.csv): Website visits tab: clicks on Book a demo and other buttons, by day and page. Source: Google Analytics. 322 rows.
+- [button_clicks.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/button_clicks.csv): Website visits tab: clicks on Book a demo and other buttons, by day and page. Source: Google Analytics. 323 rows.
 - heat_map_by_day, split to stay small: Website visits tab, heat map numbers: each day covers the 24 hours before the pull. Source: Microsoft Clarity. Parts: [2026-11-09, part 1](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-09_part1.csv), [2026-11-09, part 2](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-09_part2.csv), [2026-11-16, part 1](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part1.csv), [2026-11-16, part 2](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part2.csv), [2026-11-16, part 3](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-16_part3.csv), [2026-11-23](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/heat_map_by_day_2026-11-23.csv).
 - [who_visits.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/who_visits.csv): Website visits tab, Who visits: 1206 companies and 1404 people Warmly matched to visits, 2026-08-26 to 2026-11-24. Counts only. Source: HubSpot (Warmly). 20 rows.
 
@@ -156,22 +156,30 @@ Paid means sponsored posts. LinkedIn's own sheets disagree on reposts, so we lea
 
 - [linkedin_brand_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_by_month.csv): LinkedIn brand tab (Opsera company page), by month. Source: LinkedIn exports, dates in UTC. 5 rows.
 - [linkedin_brand_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_by_week.csv): LinkedIn brand tab (Opsera company page), by week. Source: LinkedIn exports, dates in UTC. 21 rows.
-- [linkedin_brand_posts.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_posts.csv): Each Opsera company page post. Source: LinkedIn exports. 69 rows.
+- [linkedin_brand_posts.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_brand_posts.csv): Each Opsera company page post. Source: LinkedIn exports. 71 rows.
 
 ## LinkedIn exec tab (Kumar Chivukula)
 
 - [linkedin_exec_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_month.csv): LinkedIn exec tab (Kumar Chivukula's profile), by month. Source: LinkedIn exports, dates in UTC. 5 rows.
-- [linkedin_exec_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_week.csv): LinkedIn exec tab (Kumar Chivukula's profile), by week. Source: LinkedIn exports, dates in UTC. 21 rows.
-- [linkedin_exec_exports.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_exports.csv): Each LinkedIn export of Kumar's profile as LinkedIn gave it. People reached doesn't add up across days. Source: LinkedIn exports. 7 rows.
+- [linkedin_exec_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_by_week.csv): LinkedIn exec tab (Kumar Chivukula's profile), by week. Source: LinkedIn exports, dates in UTC. 22 rows.
+- [linkedin_exec_exports.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_exports.csv): Each LinkedIn export of Kumar's profile as LinkedIn gave it. People reached doesn't add up across days. Source: LinkedIn exports. 9 rows.
 - [linkedin_exec_post_list.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_post_list.csv): Each of Kumar's own LinkedIn posts since 1 Jul 2026 with reactions and comments. Source: his public profile, read with Apify. 31 rows.
 - [linkedin_exec_posts_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_exec_posts_by_month.csv): Kumar's own posts and reposts by month (UTC), 2 separate counts. Source: Kumar's public LinkedIn profile, read with Apify, checked 2026-11-24. 5 rows.
 
+## LinkedIn to website tab
+
+From a LinkedIn post to the demo form, by account. Visits are matched to posts by the UTM tags on the post's link: utm_content brand-post (or utm_campaign brand-page, the profile button) is the brand page, utm_content kumar (or utm_campaign kumar) is Kumar, utm_content vishnu is other Opsera people, paid mediums are LinkedIn ads, and everything else is "LinkedIn, account unknown". Tagged links started on 27 Oct 2026 for the brand page and 17 Nov 2026 for Kumar. Product pages are the site menu's: /software-factory, /forge, /unified-insights, /agents, /agentic-devops, /salesforce-devops and /brickforge. Times seen and clicks come from LinkedIn, visits and steps from Google Analytics: never add them together, and never add the brand page and Kumar together. Brand page clicks are every click on a post; Kumar's are visits to links, only for his 3 latest posts.
+
+- [linkedin_to_site_posts.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_to_site_posts.csv): LinkedIn to website tab: each brand page and Kumar post with times seen and clicks (LinkedIn) and the opsera.ai links in it with their tags (read with Apify). 83 rows.
+- [linkedin_to_site_steps.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_to_site_steps.csv): LinkedIn to website tab: visits from LinkedIn that opened a product page, /demo and sent the demo form, by day, account and tag. Source: Google Analytics. 59 rows.
+- [linkedin_to_site_visits.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_to_site_visits.csv): LinkedIn to website tab: visits from LinkedIn by day, account, tag (campaign / content) and landing page, 2026-07-26 to 2026-11-23. Source: Google Analytics. 549 rows.
+
 ## LinkedIn visits to opsera.ai
 
-Company page means links tagged utm_campaign=brand-page. Kumar means utm_source=linkedin with utm_campaign=kumar. Untagged is everything else from LinkedIn. We never add the 3 together. The estimate is a best guess, kept apart from the tagged numbers.
+The same rule as the LinkedIn to website tab: utm_content brand-post (or utm_campaign brand-page, the profile button) is the company page, utm_content kumar (or utm_campaign kumar) is Kumar, utm_content vishnu is other Opsera people, paid mediums are LinkedIn ads, and everything else is "LinkedIn, account unknown". We never add the groups together. The estimate is a best guess, kept apart from the tagged numbers.
 
-- [linkedin_visits_to_site_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_visits_to_site_by_month.csv): Visits to opsera.ai from LinkedIn: company page links, Kumar's links and untagged, by month. Source: Google Analytics. 24 rows.
-- [linkedin_visits_to_site_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_visits_to_site_by_week.csv): Visits to opsera.ai from LinkedIn: company page links, Kumar's links and untagged, by week. Source: Google Analytics. 105 rows.
+- [linkedin_visits_to_site_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_visits_to_site_by_month.csv): Visits to opsera.ai from LinkedIn by who sent them: company page, Kumar, other Opsera people, LinkedIn ads and account unknown, by month. Source: Google Analytics. 40 rows.
+- [linkedin_visits_to_site_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_visits_to_site_by_week.csv): Visits to opsera.ai from LinkedIn by who sent them: company page, Kumar, other Opsera people, LinkedIn ads and account unknown, by week. Source: Google Analytics. 175 rows.
 - [linkedin_untagged_estimate_by_month.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_untagged_estimate_by_month.csv): Best guess at who sent the untagged LinkedIn visits, by month. Source: Google Analytics matched to LinkedIn posts found with Apify. 9 rows.
 - [linkedin_untagged_estimate_by_week.csv](https://puravbhandari-gif.github.io/opsera-analytics-dashboard/for-claude/linkedin_untagged_estimate_by_week.csv): Best guess at who sent the untagged LinkedIn visits, by week. Source: Google Analytics matched to LinkedIn posts found with Apify. 39 rows.
 

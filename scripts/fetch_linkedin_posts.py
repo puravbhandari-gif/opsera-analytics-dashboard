@@ -82,6 +82,13 @@ def resolve(url, seen=None):
     return final
 
 
+def utm_of(url):
+    """The UTM tags on the address people end up on, so a post's visits can be matched in Google Analytics (24 Nov 2026)."""
+    from urllib.parse import parse_qs
+    q = parse_qs(urlparse(url).query)
+    return {k: v[0] for k, v in q.items() if k.startswith("utm_")}
+
+
 def opsera_path(url):
     u = urlparse(url)
     if not (u.netloc == "opsera.ai" or u.netloc.endswith(".opsera.ai")):
@@ -109,7 +116,7 @@ def main():
             final = cache.setdefault(link, resolve(link))
             path = opsera_path(final)
             if path:
-                pages.append({"link": link, "lands_on": path})
+                pages.append({"link": link, "lands_on": path, "utm": utm_of(final)})
         return pages
     def pacific(stamp):
         return dt.datetime.fromisoformat(stamp.replace("Z", "+00:00")).astimezone(PACIFIC).date().isoformat()

@@ -312,11 +312,11 @@ def main():
               [period_cols(p) + [total(ka["daily"], "seen", p["start"], p["end"]), total(ka["daily"], "engagements", p["start"], p["end"]),
                                  total(ka["followers_daily"], "gained", p["start"], p["end"])] for p in periods(kind, ka["start_date"], k_last)],
               f"LinkedIn exec tab (Kumar Chivukula's profile), by {kind}. Source: LinkedIn exports, dates in UTC")
-        groups = [("company", "Company page"), ("kumar", "Kumar"), ("untagged", "Untagged")]
+        groups = [("company", "Company page"), ("kumar", "Kumar"), ("people", "Other Opsera people"), ("ads", "LinkedIn ads"), ("untagged", "LinkedIn, account unknown")]
         write(f"linkedin_visits_to_site_by_{kind}", PERIOD_HEAD + ["from", "visits", "engaged_visits"],
               [period_cols(p) + [name, total(ga["linkedin"]["daily"], "visits", p["start"], p["end"], lambda r: r["group"] == g),
                                  total(ga["linkedin"]["daily"], "engaged", p["start"], p["end"], lambda r: r["group"] == g)] for p in ps for g, name in groups],
-              f"Visits to opsera.ai from LinkedIn: company page links, Kumar's links and untagged, by {kind}. Source: Google Analytics")
+              f"Visits to opsera.ai from LinkedIn by who sent them: company page, Kumar, other Opsera people, LinkedIn ads and account unknown, by {kind}. Source: Google Analytics")
         est_last = last_full_day_pacific(est.get("end_date") or ga["end_date"], est.get("pulled_at") or ga["pulled_at"])
         egroups = [("estimated_company", "Estimated: company page"), ("estimated_kumar", "Estimated: Kumar"), ("cant_tell", "Can't tell")]
         write(f"linkedin_untagged_estimate_by_{kind}", PERIOD_HEAD + ["estimate", "visits"],
@@ -574,6 +574,20 @@ def extra_tabs():
     if bots.get("daily"):
         write("aeo_ai_bots_by_day", ["date", "bot", "visits"], [[r["date"], r["bot"], r["visits"]] for r in bots["daily"]],
               "AEO tab: AI bots reading opsera.ai by day. Never add these to people visits. Source: Google Analytics, AI bots property")
+    # LinkedIn to website tab
+    lts = opt("linkedin_to_site.json")
+    if lts.get("landed"):
+        acc = lts["accounts"]
+        write("linkedin_to_site_visits", ["date", "account", "tag", "landing_page", "visits", "engaged_visits"],
+              [[r[0], acc[r[1]], r[2], r[3], r[4], r[5]] for r in lts["landed"]],
+              f"LinkedIn to website tab: visits from LinkedIn by day, account, tag (campaign / content) and landing page, {lts['start_date']} to {lts['end_date']}. Source: Google Analytics")
+        write("linkedin_to_site_steps", ["date", "account", "tag", "opened_a_product_page", "opened_demo", "sent_demo_form"],
+              [[r[0], acc[r[1]], r[2], r[3], r[4], r[5]] for r in lts["steps"]],
+              "LinkedIn to website tab: visits from LinkedIn that opened a product page, /demo and sent the demo form, by day, account and tag. Source: Google Analytics")
+        write("linkedin_to_site_posts", ["posted", "account", "post", "link", "times_seen", "clicks", "clicks_mean", "links_in_post"],
+              [[p["date"], acc[p["account"]], p["title"], p["post"], p["seen"] if p["seen"] is not None else "", p["clicks"] if p["clicks"] is not None else "", p["clicks_note"],
+                "; ".join(f"{l['page']} ({l['tag'] or 'no tag'})" for l in p["links"]) or ("no link" if p["scraped"] else "not read")] for p in lts["posts"]],
+              "LinkedIn to website tab: each brand page and Kumar post with times seen and clicks (LinkedIn) and the opsera.ai links in it with their tags (read with Apify)")
     # Website visits tab panels
     ga = load("analytics.json")
     if ga.get("cta_clicks"):
@@ -764,9 +778,15 @@ Paid means sponsored posts. LinkedIn's own sheets disagree on reposts, so we lea
 
 {listing('linkedin_exec')}
 
+## LinkedIn to website tab
+
+From a LinkedIn post to the demo form, by account. Visits are matched to posts by the UTM tags on the post's link: utm_content brand-post (or utm_campaign brand-page, the profile button) is the brand page, utm_content kumar (or utm_campaign kumar) is Kumar, utm_content vishnu is other Opsera people, paid mediums are LinkedIn ads, and everything else is "LinkedIn, account unknown". Tagged links started on 27 Oct 2026 for the brand page and 17 Nov 2026 for Kumar. Product pages are the site menu's: /software-factory, /forge, /unified-insights, /agents, /agentic-devops, /salesforce-devops and /brickforge. Times seen and clicks come from LinkedIn, visits and steps from Google Analytics: never add them together, and never add the brand page and Kumar together. Brand page clicks are every click on a post; Kumar's are visits to links, only for his 3 latest posts.
+
+{listing('linkedin_to_site')}
+
 ## LinkedIn visits to opsera.ai
 
-Company page means links tagged utm_campaign=brand-page. Kumar means utm_source=linkedin with utm_campaign=kumar. Untagged is everything else from LinkedIn. We never add the 3 together. The estimate is a best guess, kept apart from the tagged numbers.
+The same rule as the LinkedIn to website tab: utm_content brand-post (or utm_campaign brand-page, the profile button) is the company page, utm_content kumar (or utm_campaign kumar) is Kumar, utm_content vishnu is other Opsera people, paid mediums are LinkedIn ads, and everything else is "LinkedIn, account unknown". We never add the groups together. The estimate is a best guess, kept apart from the tagged numbers.
 
 {listing('linkedin_visits_to_site')}
 {listing('linkedin_untagged_estimate')}

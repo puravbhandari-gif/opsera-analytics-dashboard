@@ -59,11 +59,22 @@ LINKEDIN_SOURCES = r"(?i)^(linkedin\.com|lnkd\.in|linkedin)$"
 LINKEDIN_LIKE = r"(?i)linkedin|lnkd"
 
 
-def linkedin_group(source, campaign):
-    if campaign.lower() == "brand-page":
+def linkedin_group(source, campaign, medium="", content=""):
+    """Who a LinkedIn visit came from, by its UTM tags. One rule for every panel (agreed 24 Nov 2026):
+    utm_content brand-post, or utm_campaign brand-page (the profile button) -> company page
+    utm_content kumar, or utm_campaign kumar (his profile button)           -> Kumar
+    utm_content vishnu                                                       -> other Opsera people
+    a paid medium                                                            -> LinkedIn ads
+    anything else                                                            -> untagged (shown as "LinkedIn, account unknown")"""
+    campaign, medium, content = campaign.lower(), medium.lower(), content.lower()
+    if medium in ("cpc", "paidsocial", "paid", "ppc"):
+        return "ads"
+    if content == "brand-post" or campaign == "brand-page":
         return "company"
-    if source.lower() == "linkedin" and campaign.lower() == "kumar":
+    if content == "kumar" or campaign == "kumar":
         return "kumar"
+    if content == "vishnu":
+        return "people"
     return "untagged"
 NEW_SITE_LIVE = "2026-09-30"
 
@@ -489,9 +500,12 @@ def ai_bots(s, end):
 
 
 def kumar_links(s, end):
-    """Visits from links Kumar shares, tagged utm_campaign=kumar, by day: his profile button (utm_content=profile-button)
-    and his posts (any other utm_content). Added 9 Nov 2026."""
-    flt = {"filter": {"fieldName": "sessionCampaignName", "stringFilter": {"matchType": "EXACT", "value": "kumar", "caseSensitive": False}}}
+    """Visits from links Kumar shares, by day: his profile button (utm_campaign=kumar, utm_content=profile-button)
+    and his posts (utm_content=kumar, or any other utm_content with utm_campaign=kumar). Added 9 Nov 2026."""
+    # his posts carry utm_content=kumar (from 17 Nov 2026); his profile button utm_campaign=kumar (agreed 24 Nov 2026)
+    flt = {"orGroup": {"expressions": [
+        {"filter": {"fieldName": "sessionCampaignName", "stringFilter": {"matchType": "EXACT", "value": "kumar", "caseSensitive": False}}},
+        {"filter": {"fieldName": "sessionManualAdContent", "stringFilter": {"matchType": "EXACT", "value": "kumar", "caseSensitive": False}}}]}}
     rows = ga_report(s, end, ["date", "sessionManualAdContent"], ["sessions", "engagedSessions"], flt=flt)
     return [{"date": r["date"], "where": "profile" if r["sessionManualAdContent"].lower() == "profile-button" else "posts",
              "visits": r["sessions"], "engaged": r["engagedSessions"]} for r in sorted(rows, key=lambda r: r["date"])]
@@ -509,37 +523,38 @@ def google_search_visits(s, end):
 def linkedin_visits(s, end):
     li = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "FULL_REGEXP", "value": LINKEDIN_SOURCES, "caseSensitive": False}}}
     like = {"filter": {"fieldName": "sessionSource", "stringFilter": {"matchType": "PARTIAL_REGEXP", "value": LINKEDIN_LIKE, "caseSensitive": False}}}
-    tag_dims = ["sessionSource", "sessionMedium", "sessionCampaignName"]
+    tag_dims = ["sessionSource", "sessionMedium", "sessionCampaignName", "sessionManualAdContent"]
+    grp = lambda r: linkedin_group(r["sessionSource"], r["sessionCampaignName"], r["sessionMedium"], r["sessionManualAdContent"])
     daily = {}
     for r in ga_report(s, end, ["date"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
-        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        g = grp(r)
         row = daily.setdefault((r["date"], g), {"date": r["date"], "group": g, "visits": 0, "engaged": 0})
         row["visits"] += r["sessions"]
         row["engaged"] += r["engagedSessions"]
     landing = {}
     for r in ga_report(s, end, ["landingPage"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
-        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        g = grp(r)
         page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
         row = landing.setdefault((page, g), {"page": page, "group": g, "visits": 0, "engaged": 0})
         row["visits"] += r["sessions"]
         row["engaged"] += r["engagedSessions"]
     landing_daily = {}
     for r in ga_report(s, end, ["date", "landingPage"] + tag_dims, ["sessions", "engagedSessions"], flt=li):
-        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        g = grp(r)
         page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
         row = landing_daily.setdefault((r["date"], page, g), {"date": r["date"], "page": page, "group": g, "visits": 0, "engaged": 0})
         row["visits"] += r["sessions"]
         row["engaged"] += r["engagedSessions"]
-    tags = [{**{k: r[k] for k in tag_dims}, "content": r["sessionManualAdContent"], "group": linkedin_group(r["sessionSource"], r["sessionCampaignName"]),
+    tags = [{**{k: r[k] for k in tag_dims if k != "sessionManualAdContent"}, "content": r["sessionManualAdContent"], "group": grp(r),
              "visits": r["sessions"], "engaged": r["engagedSessions"]}
-            for r in ga_report(s, end, tag_dims + ["sessionManualAdContent"], ["sessions", "engagedSessions"], flt=li)]
+            for r in ga_report(s, end, tag_dims, ["sessions", "engagedSessions"], flt=li)]
     forms = {}
     for r in ga_report(s, end, ["date", "pagePath"] + tag_dims, ["eventCount"], event_names=[FORM_EVENT], start=LEADS_START, flt=li):
         page = page_key(r["pagePath"])
         if page.startswith(LEFT_OUT_PAGES):
             continue
         line = next((k for k, _, match in LEAD_LINES if match(page)), "other")
-        g = linkedin_group(r["sessionSource"], r["sessionCampaignName"])
+        g = grp(r)
         asset = (page + "/").startswith(ASSET_PAGES)   # a report, white paper, ebook or comparison guide download
         row = forms.setdefault((r["date"], g, line, asset), {"date": r["date"], "group": g, "line": line, "asset": asset, "count": 0})
         row["count"] += r["eventCount"]
@@ -550,16 +565,16 @@ def linkedin_visits(s, end):
                                            "any_demo": 0, "any_demo_form": 0})
     for r in ga_report(s, end, ["date", "landingPage"] + tag_dims, ["sessions"], flt=li):
         if page_key(r["landingPage"]) == "/":
-            step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))["landed_home"] += r["sessions"]
+            step(r["date"], grp(r))["landed_home"] += r["sessions"]
     for r in ga_report(s, end, ["date", "landingPage", "pagePath"] + tag_dims, ["sessions"], flt=li):
         if page_key(r["pagePath"]) == "/demo":
-            row = step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))
+            row = step(r["date"], grp(r))
             row["any_demo"] += r["sessions"]
             if page_key(r["landingPage"]) == "/":
                 row["home_then_demo"] += r["sessions"]
     for r in ga_report(s, end, ["date", "landingPage", "pagePath"] + tag_dims, ["eventCount"], event_names=[FORM_EVENT], flt=li):
         if page_key(r["pagePath"]) == "/demo":
-            row = step(r["date"], linkedin_group(r["sessionSource"], r["sessionCampaignName"]))
+            row = step(r["date"], grp(r))
             row["any_demo_form"] += r["eventCount"]
             if page_key(r["landingPage"]) == "/":
                 row["home_demo_form"] += r["eventCount"]

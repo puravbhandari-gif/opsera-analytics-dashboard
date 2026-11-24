@@ -1,7 +1,7 @@
 {
  "start_date": "2026-04-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T18:22+05:30",
+ "pulled_at": "2026-11-24T20:31+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286)",
  "time_zone": "America/Los_Angeles",
  "totals": {
@@ -1457,7 +1457,7 @@
    "sessions": 10352,
    "totalUsers": 9466,
    "engagedSessions": 1334,
-   "averageSessionDuration": 29.38126764721793
+   "averageSessionDuration": 29.381267647217925
   },
   {
    "sessionDefaultChannelGroup": "Email",
@@ -22484,9 +22484,15 @@
    },
    {
     "date": "2026-04-20",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-04-20",
     "group": "untagged",
-    "visits": 20,
-    "engaged": 17
+    "visits": 19,
+    "engaged": 16
    },
    {
     "date": "2026-04-21",
@@ -22502,15 +22508,27 @@
    },
    {
     "date": "2026-04-23",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-04-23",
     "group": "untagged",
-    "visits": 46,
+    "visits": 45,
     "engaged": 30
    },
    {
     "date": "2026-04-24",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-04-24",
     "group": "untagged",
-    "visits": 28,
-    "engaged": 11
+    "visits": 27,
+    "engaged": 10
    },
    {
     "date": "2026-04-25",
@@ -22526,9 +22544,15 @@
    },
    {
     "date": "2026-04-27",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-04-27",
     "group": "untagged",
-    "visits": 21,
-    "engaged": 7
+    "visits": 18,
+    "engaged": 6
    },
    {
     "date": "2026-04-28",
@@ -22562,9 +22586,15 @@
    },
    {
     "date": "2026-05-04",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-05-04",
     "group": "untagged",
-    "visits": 51,
-    "engaged": 19
+    "visits": 50,
+    "engaged": 18
    },
    {
     "date": "2026-05-05",
@@ -22640,8 +22670,14 @@
    },
    {
     "date": "2026-05-18",
+    "group": "ads",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-05-18",
     "group": "untagged",
-    "visits": 38,
+    "visits": 36,
     "engaged": 22
    },
    {
@@ -22934,27 +22970,51 @@
    },
    {
     "date": "2026-07-07",
+    "group": "ads",
+    "visits": 26,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-07",
     "group": "untagged",
-    "visits": 40,
-    "engaged": 11
+    "visits": 14,
+    "engaged": 10
+   },
+   {
+    "date": "2026-07-08",
+    "group": "ads",
+    "visits": 11,
+    "engaged": 2
    },
    {
     "date": "2026-07-08",
     "group": "untagged",
-    "visits": 25,
-    "engaged": 9
+    "visits": 14,
+    "engaged": 7
+   },
+   {
+    "date": "2026-07-09",
+    "group": "ads",
+    "visits": 7,
+    "engaged": 1
    },
    {
     "date": "2026-07-09",
     "group": "untagged",
-    "visits": 71,
-    "engaged": 50
+    "visits": 64,
+    "engaged": 49
+   },
+   {
+    "date": "2026-07-10",
+    "group": "ads",
+    "visits": 5,
+    "engaged": 1
    },
    {
     "date": "2026-07-10",
     "group": "untagged",
-    "visits": 17,
-    "engaged": 9
+    "visits": 12,
+    "engaged": 8
    },
    {
     "date": "2026-07-11",
@@ -22964,81 +23024,159 @@
    },
    {
     "date": "2026-07-12",
+    "group": "ads",
+    "visits": 6,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-12",
     "group": "untagged",
-    "visits": 12,
-    "engaged": 4
+    "visits": 6,
+    "engaged": 3
+   },
+   {
+    "date": "2026-07-13",
+    "group": "ads",
+    "visits": 7,
+    "engaged": 1
    },
    {
     "date": "2026-07-13",
     "group": "untagged",
-    "visits": 32,
-    "engaged": 21
+    "visits": 25,
+    "engaged": 20
+   },
+   {
+    "date": "2026-07-14",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 1
    },
    {
     "date": "2026-07-14",
     "group": "untagged",
-    "visits": 36,
-    "engaged": 27
+    "visits": 33,
+    "engaged": 26
+   },
+   {
+    "date": "2026-07-15",
+    "group": "ads",
+    "visits": 8,
+    "engaged": 2
    },
    {
     "date": "2026-07-15",
     "group": "untagged",
-    "visits": 31,
-    "engaged": 15
+    "visits": 23,
+    "engaged": 13
+   },
+   {
+    "date": "2026-07-16",
+    "group": "ads",
+    "visits": 6,
+    "engaged": 2
    },
    {
     "date": "2026-07-16",
     "group": "untagged",
-    "visits": 14,
-    "engaged": 5
+    "visits": 8,
+    "engaged": 3
+   },
+   {
+    "date": "2026-07-17",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
    },
    {
     "date": "2026-07-17",
     "group": "untagged",
-    "visits": 19,
+    "visits": 16,
     "engaged": 13
    },
    {
     "date": "2026-07-18",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "date": "2026-07-18",
     "group": "untagged",
-    "visits": 11,
+    "visits": 7,
     "engaged": 4
    },
    {
     "date": "2026-07-19",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-07-19",
     "group": "untagged",
-    "visits": 11,
-    "engaged": 8
+    "visits": 7,
+    "engaged": 6
+   },
+   {
+    "date": "2026-07-20",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-07-20",
     "group": "untagged",
-    "visits": 14,
-    "engaged": 10
+    "visits": 13,
+    "engaged": 9
+   },
+   {
+    "date": "2026-07-21",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
    },
    {
     "date": "2026-07-21",
     "group": "untagged",
-    "visits": 18,
+    "visits": 17,
     "engaged": 13
    },
    {
     "date": "2026-07-22",
+    "group": "ads",
+    "visits": 8,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-22",
     "group": "untagged",
-    "visits": 9,
-    "engaged": 2
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-23",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
    },
    {
     "date": "2026-07-23",
     "group": "untagged",
-    "visits": 9,
+    "visits": 8,
     "engaged": 6
    },
    {
     "date": "2026-07-24",
+    "group": "ads",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-24",
     "group": "untagged",
-    "visits": 48,
-    "engaged": 32
+    "visits": 46,
+    "engaged": 31
    },
    {
     "date": "2026-07-25",
@@ -23048,33 +23186,63 @@
    },
    {
     "date": "2026-07-26",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-07-26",
     "group": "untagged",
-    "visits": 16,
+    "visits": 13,
     "engaged": 10
    },
    {
     "date": "2026-07-27",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
+    "date": "2026-07-27",
     "group": "untagged",
-    "visits": 26,
-    "engaged": 18
+    "visits": 22,
+    "engaged": 16
+   },
+   {
+    "date": "2026-07-28",
+    "group": "ads",
+    "visits": 9,
+    "engaged": 2
    },
    {
     "date": "2026-07-28",
     "group": "untagged",
-    "visits": 31,
-    "engaged": 14
+    "visits": 22,
+    "engaged": 12
+   },
+   {
+    "date": "2026-07-29",
+    "group": "ads",
+    "visits": 2,
+    "engaged": 0
    },
    {
     "date": "2026-07-29",
     "group": "untagged",
-    "visits": 18,
+    "visits": 16,
     "engaged": 11
    },
    {
     "date": "2026-07-30",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-30",
     "group": "untagged",
-    "visits": 13,
-    "engaged": 6
+    "visits": 10,
+    "engaged": 5
    },
    {
     "date": "2026-07-31",
@@ -23090,33 +23258,63 @@
    },
    {
     "date": "2026-08-02",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-02",
     "group": "untagged",
-    "visits": 11,
+    "visits": 8,
     "engaged": 7
    },
    {
     "date": "2026-08-03",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-08-03",
     "group": "untagged",
-    "visits": 12,
-    "engaged": 9
+    "visits": 11,
+    "engaged": 8
+   },
+   {
+    "date": "2026-08-04",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 0
    },
    {
     "date": "2026-08-04",
     "group": "untagged",
-    "visits": 18,
+    "visits": 14,
     "engaged": 10
    },
    {
     "date": "2026-08-05",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-05",
     "group": "untagged",
-    "visits": 37,
+    "visits": 33,
     "engaged": 21
    },
    {
     "date": "2026-08-06",
+    "group": "ads",
+    "visits": 6,
+    "engaged": 2
+   },
+   {
+    "date": "2026-08-06",
     "group": "untagged",
-    "visits": 29,
-    "engaged": 19
+    "visits": 23,
+    "engaged": 17
    },
    {
     "date": "2026-08-07",
@@ -23132,26 +23330,50 @@
    },
    {
     "date": "2026-08-09",
+    "group": "ads",
+    "visits": 7,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-09",
     "group": "untagged",
-    "visits": 23,
+    "visits": 16,
     "engaged": 10
    },
    {
     "date": "2026-08-10",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-10",
     "group": "untagged",
-    "visits": 36,
+    "visits": 33,
     "engaged": 25
    },
    {
     "date": "2026-08-11",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-11",
     "group": "untagged",
-    "visits": 21,
+    "visits": 20,
     "engaged": 13
    },
    {
     "date": "2026-08-12",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-12",
     "group": "untagged",
-    "visits": 10,
+    "visits": 7,
     "engaged": 2
    },
    {
@@ -23162,9 +23384,15 @@
    },
    {
     "date": "2026-08-14",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-08-14",
     "group": "untagged",
-    "visits": 15,
-    "engaged": 13
+    "visits": 14,
+    "engaged": 12
    },
    {
     "date": "2026-08-15",
@@ -23204,8 +23432,14 @@
    },
    {
     "date": "2026-08-21",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-08-21",
     "group": "untagged",
-    "visits": 4,
+    "visits": 3,
     "engaged": 2
    },
    {
@@ -23432,8 +23666,14 @@
    },
    {
     "date": "2026-09-28",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-09-28",
     "group": "untagged",
-    "visits": 4,
+    "visits": 3,
     "engaged": 1
    },
    {
@@ -23673,7 +23913,7 @@
    {
     "date": "2026-10-27",
     "group": "company",
-    "visits": 1,
+    "visits": 2,
     "engaged": 1
    },
    {
@@ -23685,26 +23925,44 @@
    {
     "date": "2026-10-27",
     "group": "untagged",
-    "visits": 20,
+    "visits": 19,
     "engaged": 11
    },
    {
     "date": "2026-10-28",
+    "group": "company",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-28",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 5
+   },
+   {
+    "date": "2026-10-29",
+    "group": "company",
+    "visits": 3,
+    "engaged": 3
+   },
+   {
+    "date": "2026-10-29",
     "group": "untagged",
     "visits": 7,
     "engaged": 5
    },
    {
-    "date": "2026-10-29",
-    "group": "untagged",
-    "visits": 10,
-    "engaged": 8
+    "date": "2026-10-30",
+    "group": "company",
+    "visits": 3,
+    "engaged": 3
    },
    {
     "date": "2026-10-30",
     "group": "untagged",
-    "visits": 8,
-    "engaged": 6
+    "visits": 5,
+    "engaged": 3
    },
    {
     "date": "2026-10-31",
@@ -23768,9 +24026,15 @@
    },
    {
     "date": "2026-11-06",
+    "group": "company",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-06",
     "group": "untagged",
-    "visits": 6,
-    "engaged": 3
+    "visits": 3,
+    "engaged": 2
    },
    {
     "date": "2026-11-07",
@@ -23792,6 +24056,12 @@
    },
    {
     "date": "2026-11-09",
+    "group": "company",
+    "visits": 13,
+    "engaged": 3
+   },
+   {
+    "date": "2026-11-09",
     "group": "kumar",
     "visits": 2,
     "engaged": 2
@@ -23799,44 +24069,74 @@
    {
     "date": "2026-11-09",
     "group": "untagged",
-    "visits": 22,
-    "engaged": 7
-   },
-   {
-    "date": "2026-11-10",
-    "group": "untagged",
     "visits": 9,
     "engaged": 4
    },
    {
+    "date": "2026-11-10",
+    "group": "company",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
+    "date": "2026-11-10",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 2
+   },
+   {
+    "date": "2026-11-11",
+    "group": "company",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
     "date": "2026-11-11",
     "group": "untagged",
-    "visits": 8,
-    "engaged": 5
+    "visits": 5,
+    "engaged": 3
+   },
+   {
+    "date": "2026-11-12",
+    "group": "company",
+    "visits": 4,
+    "engaged": 4
    },
    {
     "date": "2026-11-12",
     "group": "untagged",
-    "visits": 6,
-    "engaged": 5
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-13",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
    },
    {
     "date": "2026-11-13",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 3
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-11-14",
+    "group": "company",
+    "visits": 1,
+    "engaged": 0
    },
    {
     "date": "2026-11-14",
     "group": "untagged",
-    "visits": 4,
+    "visits": 3,
     "engaged": 1
    },
    {
     "date": "2026-11-16",
     "group": "company",
-    "visits": 1,
-    "engaged": 1
+    "visits": 3,
+    "engaged": 3
    },
    {
     "date": "2026-11-16",
@@ -23847,20 +24147,62 @@
    {
     "date": "2026-11-16",
     "group": "untagged",
-    "visits": 19,
-    "engaged": 12
+    "visits": 17,
+    "engaged": 10
+   },
+   {
+    "date": "2026-11-17",
+    "group": "company",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-17",
+    "group": "kumar",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-17",
+    "group": "people",
+    "visits": 6,
+    "engaged": 2
    },
    {
     "date": "2026-11-17",
     "group": "untagged",
-    "visits": 22,
-    "engaged": 10
+    "visits": 11,
+    "engaged": 7
+   },
+   {
+    "date": "2026-11-18",
+    "group": "company",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
+    "date": "2026-11-18",
+    "group": "people",
+    "visits": 4,
+    "engaged": 0
    },
    {
     "date": "2026-11-18",
     "group": "untagged",
-    "visits": 18,
-    "engaged": 7
+    "visits": 12,
+    "engaged": 5
+   },
+   {
+    "date": "2026-11-19",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-19",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
    },
    {
     "date": "2026-11-19",
@@ -23870,9 +24212,15 @@
    },
    {
     "date": "2026-11-19",
+    "group": "people",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-19",
     "group": "untagged",
-    "visits": 12,
-    "engaged": 7
+    "visits": 7,
+    "engaged": 6
    },
    {
     "date": "2026-11-20",
@@ -23882,21 +24230,33 @@
    },
    {
     "date": "2026-11-20",
-    "group": "untagged",
-    "visits": 8,
-    "engaged": 3
-   },
-   {
-    "date": "2026-11-21",
-    "group": "kumar",
-    "visits": 1,
-    "engaged": 0
-   },
-   {
-    "date": "2026-11-21",
-    "group": "untagged",
+    "group": "people",
     "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-20",
+    "group": "untagged",
+    "visits": 6,
     "engaged": 2
+   },
+   {
+    "date": "2026-11-21",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-21",
+    "group": "kumar",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-21",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-11-22",
@@ -23906,23 +24266,35 @@
    },
    {
     "date": "2026-11-22",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-22",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 2
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-23",
+    "group": "people",
+    "visits": 2,
+    "engaged": 1
    },
    {
     "date": "2026-11-23",
     "group": "untagged",
-    "visits": 10,
-    "engaged": 7
+    "visits": 8,
+    "engaged": 6
    }
   ],
   "landing": [
    {
     "page": "/",
     "group": "untagged",
-    "visits": 604,
-    "engaged": 373
+    "visits": 592,
+    "engaged": 363
    },
    {
     "page": "/careers/customer-success-engineer-devops",
@@ -23939,7 +24311,7 @@
    {
     "page": "(not set)",
     "group": "untagged",
-    "visits": 280,
+    "visits": 272,
     "engaged": 23
    },
    {
@@ -23962,9 +24334,9 @@
    },
    {
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
-    "visits": 168,
-    "engaged": 30
+    "group": "ads",
+    "visits": 158,
+    "engaged": 25
    },
    {
     "page": "/blog/the-high-speed-lane-cursor-opsera-agentic-devops",
@@ -24011,8 +24383,8 @@
    {
     "page": "/",
     "group": "company",
-    "visits": 27,
-    "engaged": 20
+    "visits": 32,
+    "engaged": 25
    },
    {
     "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
@@ -24057,12 +24429,6 @@
     "engaged": 8
    },
    {
-    "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
-    "group": "untagged",
-    "visits": 20,
-    "engaged": 8
-   },
-   {
     "page": "/events/copilot-cursor-claude-code-what-250k-developers-revealed",
     "group": "untagged",
     "visits": 19,
@@ -24075,16 +24441,16 @@
     "engaged": 14
    },
    {
-    "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+    "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
     "group": "untagged",
-    "visits": 16,
-    "engaged": 9
+    "visits": 18,
+    "engaged": 8
    },
    {
-    "page": "/blog/harness-engineering",
+    "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
     "group": "untagged",
     "visits": 15,
-    "engaged": 6
+    "engaged": 8
    },
    {
     "page": "/",
@@ -24093,22 +24459,16 @@
     "engaged": 10
    },
    {
+    "page": "/blog/harness-engineering",
+    "group": "company",
+    "visits": 14,
+    "engaged": 5
+   },
+   {
     "page": "/blog/the-60-billion-signal-ai-is-redefining-enterprise-software-delivery",
     "group": "untagged",
     "visits": 14,
     "engaged": 4
-   },
-   {
-    "page": "/resources/white-papers/from-velocity-to-durable-value",
-    "group": "untagged",
-    "visits": 14,
-    "engaged": 4
-   },
-   {
-    "page": "/blog/closing-the-security-gap-in-ai-modernization",
-    "group": "untagged",
-    "visits": 14,
-    "engaged": 5
    },
    {
     "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
@@ -24123,6 +24483,12 @@
     "engaged": 7
    },
    {
+    "page": "/resources/white-papers/from-velocity-to-durable-value",
+    "group": "untagged",
+    "visits": 13,
+    "engaged": 3
+   },
+   {
     "page": "/blog/the-new-devops-standard-moving-from-manual-templates-to-high-velocity-ai-agents",
     "group": "untagged",
     "visits": 13,
@@ -24131,7 +24497,7 @@
    {
     "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
     "group": "untagged",
-    "visits": 12,
+    "visits": 11,
     "engaged": 6
    },
    {
@@ -24153,6 +24519,12 @@
     "engaged": 5
    },
    {
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "untagged",
+    "visits": 10,
+    "engaged": 5
+   },
+   {
     "page": "/about",
     "group": "untagged",
     "visits": 9,
@@ -24165,10 +24537,10 @@
     "engaged": 4
    },
    {
-    "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
     "group": "untagged",
-    "visits": 9,
-    "engaged": 5
+    "visits": 7,
+    "engaged": 3
    },
    {
     "page": "/blog/frontier-ai-software-readiness-benchmark",
@@ -24178,12 +24550,6 @@
    },
    {
     "page": "/blog/the-developer-productivity-world-cup",
-    "group": "untagged",
-    "visits": 7,
-    "engaged": 2
-   },
-   {
-    "page": "/resources/comparison-guides/opsera-vs-copado",
     "group": "untagged",
     "visits": 7,
     "engaged": 2
@@ -24201,7 +24567,19 @@
     "engaged": 2
    },
    {
+    "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+    "group": "untagged",
+    "visits": 6,
+    "engaged": 5
+   },
+   {
     "page": "/blog/ai-made-your-developers-faster-it-also-made-your-pipeline-slower",
+    "group": "untagged",
+    "visits": 5,
+    "engaged": 1
+   },
+   {
+    "page": "/resources/comparison-guides/opsera-vs-copado",
     "group": "untagged",
     "visits": 5,
     "engaged": 1
@@ -24213,16 +24591,16 @@
     "engaged": 2
    },
    {
+    "page": "(not set)",
+    "group": "company",
+    "visits": 5,
+    "engaged": 0
+   },
+   {
     "page": "/blog/frontier-benchmark-aug-2026",
     "group": "untagged",
     "visits": 5,
     "engaged": 4
-   },
-   {
-    "page": "/demo",
-    "group": "untagged",
-    "visits": 5,
-    "engaged": 2
    },
    {
     "page": "/events",
@@ -24231,26 +24609,26 @@
     "engaged": 4
    },
    {
-    "page": "/blog/software-factory-vs-dark-factory",
-    "group": "untagged",
-    "visits": 5,
-    "engaged": 1
-   },
-   {
-    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
-    "group": "untagged",
-    "visits": 5,
-    "engaged": 5
-   },
-   {
     "page": "(not set)",
-    "group": "company",
+    "group": "people",
     "visits": 4,
     "engaged": 0
    },
    {
+    "page": "/",
+    "group": "ads",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "people",
+    "visits": 4,
+    "engaged": 1
+   },
+   {
     "page": "/blog/context-engineering-ai-coding",
-    "group": "untagged",
+    "group": "company",
     "visits": 4,
     "engaged": 2
    },
@@ -24291,6 +24669,12 @@
     "engaged": 1
    },
    {
+    "page": "/demo",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 2
+   },
+   {
     "page": "/blog",
     "group": "untagged",
     "visits": 4,
@@ -24298,9 +24682,15 @@
    },
    {
     "page": "/blog/measure-ai-roi-software-development",
-    "group": "untagged",
+    "group": "company",
     "visits": 3,
     "engaged": 1
+   },
+   {
+    "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+    "group": "company",
+    "visits": 3,
+    "engaged": 0
    },
    {
     "page": "/for/bill",
@@ -24333,6 +24723,18 @@
     "engaged": 3
    },
    {
+    "page": "(not set)",
+    "group": "ads",
+    "visits": 3,
+    "engaged": 0
+   },
+   {
+    "page": "/",
+    "group": "people",
+    "visits": 3,
+    "engaged": 2
+   },
+   {
     "page": "/blog/91-have-adopted-ai-heres-why-only-6-can-show-the-roi",
     "group": "untagged",
     "visits": 3,
@@ -24346,7 +24748,7 @@
    },
    {
     "page": "/events/github-universe",
-    "group": "untagged",
+    "group": "company",
     "visits": 3,
     "engaged": 1
    },
@@ -24355,12 +24757,6 @@
     "group": "untagged",
     "visits": 3,
     "engaged": 1
-   },
-   {
-    "page": "/php2shell",
-    "group": "untagged",
-    "visits": 3,
-    "engaged": 3
    },
    {
     "page": "/platform",
@@ -24375,7 +24771,7 @@
     "engaged": 1
    },
    {
-    "page": "/events/roundtable-webinar",
+    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
     "group": "untagged",
     "visits": 3,
     "engaged": 3
@@ -24399,6 +24795,18 @@
     "engaged": 0
    },
    {
+    "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+    "group": "people",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/software-factory-vs-dark-factory",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
     "page": "/blog/the-sql-migration-audit-we-scanned-the-tools-you-trust",
     "group": "untagged",
     "visits": 2,
@@ -24412,7 +24820,7 @@
    },
    {
     "page": "/case-study",
-    "group": "untagged",
+    "group": "company",
     "visits": 2,
     "engaged": 2
    },
@@ -24471,10 +24879,22 @@
     "engaged": 1
    },
    {
+    "page": "/php2shell",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
     "page": "/resources",
     "group": "untagged",
     "visits": 2,
     "engaged": 2
+   },
+   {
+    "page": "/resources/comparison-guides/opsera-vs-copado",
+    "group": "ads",
+    "visits": 2,
+    "engaged": 1
    },
    {
     "page": "/resources/webinars/the-agentic-future-scaling-delivery-securing-code-and-driving-roi-in-2026",
@@ -24489,19 +24909,31 @@
     "engaged": 1
    },
    {
+    "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
+    "group": "company",
+    "visits": 2,
+    "engaged": 2
+   },
+   {
     "page": "/ty-event-registration",
     "group": "untagged",
     "visits": 2,
     "engaged": 1
    },
    {
-    "page": "/agentic-devops",
-    "group": "untagged",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "company",
     "visits": 2,
-    "engaged": 2
+    "engaged": 1
    },
    {
-    "page": "/forge/modernization",
+    "page": "/blog/software-factory-vs-dark-factory",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "page": "/events/roundtable-webinar",
     "group": "untagged",
     "visits": 2,
     "engaged": 2
@@ -24514,9 +24946,21 @@
    },
    {
     "page": "/salesforce-devops",
-    "group": "untagged",
+    "group": "company",
     "visits": 2,
     "engaged": 2
+   },
+   {
+    "page": "/agentic-devops",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/agentic-devops",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
    },
    {
     "page": "/agents-dev",
@@ -24561,14 +25005,32 @@
     "engaged": 1
    },
    {
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "kumar",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
     "page": "/blog/enterprise-benchmark",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
    {
     "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
     "group": "untagged",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "page": "/blog/harness-engineering",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
+    "group": "people",
     "visits": 1,
     "engaged": 0
    },
@@ -24597,6 +25059,12 @@
     "engaged": 1
    },
    {
+    "page": "/blog/software-factory-vs-dark-factory",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
     "page": "/blog/the-company-that-invented-modern-devops-just-learned-a-hard-lesson-about-ai-generated-code",
     "group": "untagged",
     "visits": 1,
@@ -24615,6 +25083,12 @@
     "engaged": 0
    },
    {
+    "page": "/demo",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
     "page": "/devops-huddle",
     "group": "untagged",
     "visits": 1,
@@ -24627,7 +25101,19 @@
     "engaged": 1
    },
    {
+    "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/events/github-universe",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/events/roundtable-webinar",
     "group": "company",
     "visits": 1,
     "engaged": 1
@@ -24687,6 +25173,18 @@
     "engaged": 1
    },
    {
+    "page": "/forge/modernization",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "page": "/forge/modernization",
+    "group": "untagged",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/forge/new-apps/healthcare-application-modernization",
     "group": "untagged",
     "visits": 1,
@@ -24735,8 +25233,14 @@
     "engaged": 1
    },
    {
+    "page": "/php2shell",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/resources/blog",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -24771,6 +25275,12 @@
     "engaged": 0
    },
    {
+    "page": "/resources/white-papers/from-velocity-to-durable-value",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
     "page": "/resources/white-papers/tokenomics-the-currency-of-enterprise-ai",
     "group": "untagged",
     "visits": 1,
@@ -24778,7 +25288,7 @@
    },
    {
     "page": "/salesforce-devops",
-    "group": "company",
+    "group": "untagged",
     "visits": 1,
     "engaged": 1
    },
@@ -25510,7 +26020,7 @@
    {
     "date": "2026-04-20",
     "page": "/resources/comparison-guides/opsera-vs-copado",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -25657,7 +26167,7 @@
    {
     "date": "2026-04-23",
     "page": "/resources/comparison-guides/opsera-vs-copado",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -25671,7 +26181,7 @@
    {
     "date": "2026-04-24",
     "page": "/",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -25804,16 +26314,30 @@
    {
     "date": "2026-04-27",
     "page": "(not set)",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-04-27",
+    "page": "(not set)",
     "group": "untagged",
-    "visits": 6,
+    "visits": 5,
+    "engaged": 1
+   },
+   {
+    "date": "2026-04-27",
+    "page": "/",
+    "group": "ads",
+    "visits": 2,
     "engaged": 1
    },
    {
     "date": "2026-04-27",
     "page": "/",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 2
+    "visits": 2,
+    "engaged": 1
    },
    {
     "date": "2026-04-27",
@@ -26042,9 +26566,16 @@
    {
     "date": "2026-05-04",
     "page": "/",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-05-04",
+    "page": "/",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 2
+    "visits": 3,
+    "engaged": 1
    },
    {
     "date": "2026-05-04",
@@ -26714,8 +27245,15 @@
    {
     "date": "2026-05-18",
     "page": "(not set)",
+    "group": "ads",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-05-18",
+    "page": "(not set)",
     "group": "untagged",
-    "visits": 4,
+    "visits": 3,
     "engaged": 0
    },
    {
@@ -26763,7 +27301,7 @@
    {
     "date": "2026-05-18",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -28457,7 +28995,7 @@
    {
     "date": "2026-07-07",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 26,
     "engaged": 1
    },
@@ -28506,9 +29044,16 @@
    {
     "date": "2026-07-08",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "ads",
+    "visits": 11,
+    "engaged": 2
+   },
+   {
+    "date": "2026-07-08",
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
     "group": "untagged",
-    "visits": 12,
-    "engaged": 3
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-07-09",
@@ -28597,7 +29142,7 @@
    {
     "date": "2026-07-09",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 7,
     "engaged": 1
    },
@@ -28646,7 +29191,7 @@
    {
     "date": "2026-07-10",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 5,
     "engaged": 1
    },
@@ -28702,7 +29247,7 @@
    {
     "date": "2026-07-12",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 6,
     "engaged": 1
    },
@@ -28751,9 +29296,16 @@
    {
     "date": "2026-07-13",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
+    "group": "ads",
+    "visits": 7,
+    "engaged": 1
+   },
+   {
+    "date": "2026-07-13",
+    "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
     "group": "untagged",
-    "visits": 8,
-    "engaged": 2
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-07-14",
@@ -28807,7 +29359,7 @@
    {
     "date": "2026-07-14",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 1
    },
@@ -28863,7 +29415,7 @@
    {
     "date": "2026-07-15",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 8,
     "engaged": 2
    },
@@ -28905,7 +29457,7 @@
    {
     "date": "2026-07-16",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 6,
     "engaged": 2
    },
@@ -28940,7 +29492,7 @@
    {
     "date": "2026-07-17",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 0
    },
@@ -28968,7 +29520,7 @@
    {
     "date": "2026-07-18",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 4,
     "engaged": 0
    },
@@ -28989,7 +29541,7 @@
    {
     "date": "2026-07-19",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 4,
     "engaged": 2
    },
@@ -29031,7 +29583,7 @@
    {
     "date": "2026-07-20",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -29066,7 +29618,7 @@
    {
     "date": "2026-07-21",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -29080,7 +29632,7 @@
    {
     "date": "2026-07-22",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 8,
     "engaged": 1
    },
@@ -29101,7 +29653,7 @@
    {
     "date": "2026-07-23",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -29150,7 +29702,7 @@
    {
     "date": "2026-07-24",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 2,
     "engaged": 1
    },
@@ -29199,7 +29751,7 @@
    {
     "date": "2026-07-26",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 0
    },
@@ -29255,21 +29807,28 @@
    {
     "date": "2026-07-27",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 1
    },
    {
     "date": "2026-07-27",
     "page": "/resources/white-papers/from-velocity-to-durable-value",
-    "group": "untagged",
-    "visits": 3,
+    "group": "ads",
+    "visits": 1,
     "engaged": 1
+   },
+   {
+    "date": "2026-07-27",
+    "page": "/resources/white-papers/from-velocity-to-durable-value",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 0
    },
    {
     "date": "2026-07-28",
     "page": "(not set)",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -29318,7 +29877,7 @@
    {
     "date": "2026-07-28",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 8,
     "engaged": 2
    },
@@ -29381,7 +29940,7 @@
    {
     "date": "2026-07-29",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 2,
     "engaged": 0
    },
@@ -29437,7 +29996,7 @@
    {
     "date": "2026-07-30",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 1
    },
@@ -29577,7 +30136,7 @@
    {
     "date": "2026-08-02",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 0
    },
@@ -29619,7 +30178,7 @@
    {
     "date": "2026-08-03",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -29668,7 +30227,7 @@
    {
     "date": "2026-08-04",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 4,
     "engaged": 0
    },
@@ -29731,7 +30290,7 @@
    {
     "date": "2026-08-05",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 4,
     "engaged": 0
    },
@@ -29780,7 +30339,7 @@
    {
     "date": "2026-08-06",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 6,
     "engaged": 2
    },
@@ -29857,7 +30416,7 @@
    {
     "date": "2026-08-09",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 7,
     "engaged": 0
    },
@@ -29899,7 +30458,7 @@
    {
     "date": "2026-08-10",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 0
    },
@@ -29948,7 +30507,7 @@
    {
     "date": "2026-08-11",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -29976,7 +30535,7 @@
    {
     "date": "2026-08-12",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 3,
     "engaged": 0
    },
@@ -30074,7 +30633,7 @@
    {
     "date": "2026-08-14",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -30284,7 +30843,7 @@
    {
     "date": "2026-08-21",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -31166,7 +31725,7 @@
    {
     "date": "2026-09-28",
     "page": "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -31936,8 +32495,15 @@
    {
     "date": "2026-10-27",
     "page": "/events/github-universe",
+    "group": "company",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-10-27",
+    "page": "/events/github-universe",
     "group": "untagged",
-    "visits": 2,
+    "visits": 1,
     "engaged": 1
    },
    {
@@ -31985,7 +32551,7 @@
    {
     "date": "2026-10-28",
     "page": "/events/github-universe",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
@@ -31999,9 +32565,16 @@
    {
     "date": "2026-10-29",
     "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-29",
+    "page": "/",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 3
+    "visits": 3,
+    "engaged": 2
    },
    {
     "date": "2026-10-29",
@@ -32013,7 +32586,7 @@
    {
     "date": "2026-10-29",
     "page": "/case-study",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32027,7 +32600,14 @@
    {
     "date": "2026-10-29",
     "page": "/php2shell",
-    "group": "untagged",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-10-30",
+    "page": "/",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32035,13 +32615,13 @@
     "date": "2026-10-30",
     "page": "/",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 3
+    "visits": 3,
+    "engaged": 2
    },
    {
     "date": "2026-10-30",
     "page": "/case-study",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32055,7 +32635,7 @@
    {
     "date": "2026-10-30",
     "page": "/salesforce-devops",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32223,7 +32803,7 @@
    {
     "date": "2026-11-06",
     "page": "/blog/measure-ai-roi-software-development",
-    "group": "untagged",
+    "group": "company",
     "visits": 3,
     "engaged": 1
    },
@@ -32307,16 +32887,23 @@
    {
     "date": "2026-11-09",
     "page": "/blog/enterprise-benchmark",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
    {
     "date": "2026-11-09",
     "page": "/blog/harness-engineering",
+    "group": "company",
+    "visits": 11,
+    "engaged": 2
+   },
+   {
+    "date": "2026-11-09",
+    "page": "/blog/harness-engineering",
     "group": "untagged",
-    "visits": 12,
-    "engaged": 3
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-11-09",
@@ -32328,7 +32915,7 @@
    {
     "date": "2026-11-09",
     "page": "/events/roundtable-webinar",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32356,14 +32943,14 @@
    {
     "date": "2026-11-10",
     "page": "/blog/harness-engineering",
-    "group": "untagged",
+    "group": "company",
     "visits": 2,
     "engaged": 2
    },
    {
     "date": "2026-11-10",
     "page": "/blog/software-factory-vs-dark-factory",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
@@ -32384,21 +32971,28 @@
    {
     "date": "2026-11-11",
     "page": "(not set)",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
    {
     "date": "2026-11-11",
     "page": "/",
+    "group": "company",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-11",
+    "page": "/",
     "group": "untagged",
-    "visits": 4,
-    "engaged": 4
+    "visits": 3,
+    "engaged": 3
    },
    {
     "date": "2026-11-11",
     "page": "/blog/context-engineering-ai-coding",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32419,14 +33013,14 @@
    {
     "date": "2026-11-12",
     "page": "/blog/context-engineering-ai-coding",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
    {
     "date": "2026-11-12",
     "page": "/blog/software-factory-vs-dark-factory",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32440,14 +33034,14 @@
    {
     "date": "2026-11-12",
     "page": "/events/ai-budget-burning-how-to-convert-ai-spend-into-tangible-business-results",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
    {
     "date": "2026-11-12",
     "page": "/resources/blog",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32461,7 +33055,7 @@
    {
     "date": "2026-11-13",
     "page": "/blog/context-engineering-ai-coding",
-    "group": "untagged",
+    "group": "company",
     "visits": 2,
     "engaged": 1
    },
@@ -32496,7 +33090,7 @@
    {
     "date": "2026-11-14",
     "page": "/blog/context-engineering-ai-coding",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 0
    },
@@ -32511,8 +33105,8 @@
     "date": "2026-11-16",
     "page": "/",
     "group": "company",
-    "visits": 1,
-    "engaged": 1
+    "visits": 2,
+    "engaged": 2
    },
    {
     "date": "2026-11-16",
@@ -32525,8 +33119,8 @@
     "date": "2026-11-16",
     "page": "/",
     "group": "untagged",
-    "visits": 13,
-    "engaged": 8
+    "visits": 12,
+    "engaged": 7
    },
    {
     "date": "2026-11-16",
@@ -32538,7 +33132,7 @@
    {
     "date": "2026-11-16",
     "page": "/blog/harness-engineering",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32559,36 +33153,78 @@
    {
     "date": "2026-11-17",
     "page": "(not set)",
-    "group": "untagged",
-    "visits": 2,
+    "group": "people",
+    "visits": 1,
     "engaged": 0
    },
    {
     "date": "2026-11-17",
-    "page": "/",
-    "group": "untagged",
-    "visits": 3,
-    "engaged": 2
-   },
-   {
-    "date": "2026-11-17",
-    "page": "/blog/closing-the-security-gap-in-ai-modernization",
-    "group": "untagged",
-    "visits": 10,
-    "engaged": 5
-   },
-   {
-    "date": "2026-11-17",
-    "page": "/blog/software-factory-vs-dark-factory",
+    "page": "(not set)",
     "group": "untagged",
     "visits": 1,
     "engaged": 0
    },
    {
     "date": "2026-11-17",
+    "page": "/",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/",
+    "group": "untagged",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "company",
+    "visits": 2,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "kumar",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "people",
+    "visits": 3,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "untagged",
+    "visits": 4,
+    "engaged": 3
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/blog/software-factory-vs-dark-factory",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-17",
+    "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+    "group": "company",
+    "visits": 2,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-17",
     "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
     "group": "untagged",
-    "visits": 3,
+    "visits": 1,
     "engaged": 1
    },
    {
@@ -32608,8 +33244,15 @@
    {
     "date": "2026-11-18",
     "page": "(not set)",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-18",
+    "page": "(not set)",
     "group": "untagged",
-    "visits": 2,
+    "visits": 1,
     "engaged": 0
    },
    {
@@ -32622,15 +33265,22 @@
    {
     "date": "2026-11-18",
     "page": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
-    "group": "untagged",
+    "group": "people",
     "visits": 2,
     "engaged": 0
    },
    {
     "date": "2026-11-18",
     "page": "/blog/closing-the-security-gap-in-ai-modernization",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-18",
+    "page": "/blog/closing-the-security-gap-in-ai-modernization",
     "group": "untagged",
-    "visits": 3,
+    "visits": 2,
     "engaged": 0
    },
    {
@@ -32657,15 +33307,22 @@
    {
     "date": "2026-11-18",
     "page": "/resources/white-papers/from-enterprise-intent-to-governed-autonomous-change",
-    "group": "untagged",
+    "group": "company",
     "visits": 2,
     "engaged": 2
    },
    {
     "date": "2026-11-19",
     "page": "(not set)",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-19",
+    "page": "(not set)",
     "group": "untagged",
-    "visits": 2,
+    "visits": 1,
     "engaged": 0
    },
    {
@@ -32685,14 +33342,14 @@
    {
     "date": "2026-11-19",
     "page": "/agentic-devops",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
    {
     "date": "2026-11-19",
     "page": "/blog/jurassic-park-wasnt-ready-for-smart-dinosaurs-is-your-enterprise-ready-for-smart-agents",
-    "group": "untagged",
+    "group": "people",
     "visits": 1,
     "engaged": 0
    },
@@ -32706,14 +33363,21 @@
    {
     "date": "2026-11-19",
     "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
+    "group": "company",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-19",
+    "page": "/customer-stories/belcorp-legacy-modernization-with-forge",
     "group": "untagged",
-    "visits": 2,
+    "visits": 1,
     "engaged": 1
    },
    {
     "date": "2026-11-19",
     "page": "/demo",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -32727,7 +33391,7 @@
    {
     "date": "2026-11-20",
     "page": "(not set)",
-    "group": "untagged",
+    "group": "people",
     "visits": 1,
     "engaged": 0
    },
@@ -32776,7 +33440,14 @@
    {
     "date": "2026-11-20",
     "page": "/forge/modernization",
-    "group": "untagged",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-21",
+    "page": "/",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -32791,8 +33462,8 @@
     "date": "2026-11-21",
     "page": "/",
     "group": "untagged",
-    "visits": 2,
-    "engaged": 2
+    "visits": 1,
+    "engaged": 1
    },
    {
     "date": "2026-11-22",
@@ -32804,9 +33475,16 @@
    {
     "date": "2026-11-22",
     "page": "/",
+    "group": "people",
+    "visits": 1,
+    "engaged": 1
+   },
+   {
+    "date": "2026-11-22",
+    "page": "/",
     "group": "untagged",
-    "visits": 3,
-    "engaged": 2
+    "visits": 2,
+    "engaged": 1
    },
    {
     "date": "2026-11-22",
@@ -32818,14 +33496,21 @@
    {
     "date": "2026-11-23",
     "page": "/",
+    "group": "people",
+    "visits": 1,
+    "engaged": 0
+   },
+   {
+    "date": "2026-11-23",
+    "page": "/",
     "group": "untagged",
-    "visits": 3,
+    "visits": 2,
     "engaged": 1
    },
    {
     "date": "2026-11-23",
     "page": "/agentic-devops",
-    "group": "untagged",
+    "group": "people",
     "visits": 1,
     "engaged": 1
    },
@@ -33037,7 +33722,7 @@
    },
    {
     "date": "2026-04-24",
-    "group": "untagged",
+    "group": "ads",
     "landed_home": 1,
     "home_then_demo": 0,
     "home_demo_form": 0,
@@ -33046,8 +33731,17 @@
    },
    {
     "date": "2026-04-27",
+    "group": "ads",
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-04-27",
     "group": "untagged",
-    "landed_home": 4,
+    "landed_home": 2,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -33082,8 +33776,17 @@
    },
    {
     "date": "2026-05-04",
+    "group": "ads",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-05-04",
     "group": "untagged",
-    "landed_home": 4,
+    "landed_home": 3,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34486,8 +35189,17 @@
    },
    {
     "date": "2026-10-29",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-29",
     "group": "untagged",
-    "landed_home": 4,
+    "landed_home": 3,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 1,
@@ -34495,11 +35207,20 @@
    },
    {
     "date": "2026-10-30",
-    "group": "untagged",
-    "landed_home": 4,
+    "group": "company",
+    "landed_home": 1,
     "home_then_demo": 1,
     "home_demo_form": 0,
     "any_demo": 2,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-10-30",
+    "group": "untagged",
+    "landed_home": 3,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
     "any_demo_form": 0
    },
    {
@@ -34648,8 +35369,17 @@
    },
    {
     "date": "2026-11-11",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-11",
     "group": "untagged",
-    "landed_home": 4,
+    "landed_home": 3,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34685,7 +35415,7 @@
    {
     "date": "2026-11-16",
     "group": "company",
-    "landed_home": 1,
+    "landed_home": 2,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34703,7 +35433,16 @@
    {
     "date": "2026-11-16",
     "group": "untagged",
-    "landed_home": 13,
+    "landed_home": 12,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-17",
+    "group": "people",
+    "landed_home": 1,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34712,7 +35451,7 @@
    {
     "date": "2026-11-17",
     "group": "untagged",
-    "landed_home": 3,
+    "landed_home": 2,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 1,
@@ -34729,6 +35468,15 @@
    },
    {
     "date": "2026-11-19",
+    "group": "ads",
+    "landed_home": 0,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 1,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-19",
     "group": "kumar",
     "landed_home": 1,
     "home_then_demo": 0,
@@ -34742,7 +35490,7 @@
     "landed_home": 3,
     "home_then_demo": 0,
     "home_demo_form": 0,
-    "any_demo": 1,
+    "any_demo": 0,
     "any_demo_form": 0
    },
    {
@@ -34765,6 +35513,15 @@
    },
    {
     "date": "2026-11-21",
+    "group": "company",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-21",
     "group": "kumar",
     "landed_home": 1,
     "home_then_demo": 0,
@@ -34775,7 +35532,7 @@
    {
     "date": "2026-11-21",
     "group": "untagged",
-    "landed_home": 2,
+    "landed_home": 1,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34792,8 +35549,26 @@
    },
    {
     "date": "2026-11-22",
+    "group": "people",
+    "landed_home": 1,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-22",
     "group": "untagged",
-    "landed_home": 3,
+    "landed_home": 2,
+    "home_then_demo": 0,
+    "home_demo_form": 0,
+    "any_demo": 0,
+    "any_demo_form": 0
+   },
+   {
+    "date": "2026-11-23",
+    "group": "people",
+    "landed_home": 1,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 0,
@@ -34802,7 +35577,7 @@
    {
     "date": "2026-11-23",
     "group": "untagged",
-    "landed_home": 3,
+    "landed_home": 2,
     "home_then_demo": 0,
     "home_demo_form": 0,
     "any_demo": 1,
@@ -34833,7 +35608,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic Quadrant 2026",
     "content": "MQ Ad 2",
-    "group": "untagged",
+    "group": "ads",
     "visits": 67,
     "engaged": 16
    },
@@ -34869,7 +35644,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "harness-engineering",
     "content": "brand-post",
-    "group": "untagged",
+    "group": "company",
     "visits": 29,
     "engaged": 13
    },
@@ -34878,7 +35653,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic Quadrant 2026",
     "content": "MQ Ad 3",
-    "group": "untagged",
+    "group": "ads",
     "visits": 28,
     "engaged": 2
    },
@@ -34905,7 +35680,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic Quadrant 2026",
     "content": "MQ Ad 5",
-    "group": "untagged",
+    "group": "ads",
     "visits": 21,
     "engaged": 1
    },
@@ -34914,7 +35689,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic Quadrant 2026",
     "content": "MQ Ad 4",
-    "group": "untagged",
+    "group": "ads",
     "visits": 19,
     "engaged": 2
    },
@@ -34923,7 +35698,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "forge-security-launch",
     "content": "vishnu",
-    "group": "untagged",
+    "group": "people",
     "visits": 17,
     "engaged": 5
    },
@@ -34932,7 +35707,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic Quadrant 2026",
     "content": "MQ Ad 1",
-    "group": "untagged",
+    "group": "ads",
     "visits": 16,
     "engaged": 1
    },
@@ -34950,7 +35725,7 @@
     "sessionMedium": "paidsocial",
     "sessionCampaignName": "37269766-DG-FY27-Q1-Amazon-Q-Webinar",
     "content": "(not set)",
-    "group": "untagged",
+    "group": "ads",
     "visits": 9,
     "engaged": 4
    },
@@ -34959,7 +35734,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "meta-ai-series",
     "content": "brand-post",
-    "group": "untagged",
+    "group": "company",
     "visits": 9,
     "engaged": 5
    },
@@ -34977,7 +35752,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "github-universe-2026",
     "content": "brand-post",
-    "group": "untagged",
+    "group": "company",
     "visits": 8,
     "engaged": 6
    },
@@ -35004,7 +35779,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic+Quadrant+2026",
     "content": "MQ+Ad+2",
-    "group": "untagged",
+    "group": "ads",
     "visits": 4,
     "engaged": 3
    },
@@ -35022,7 +35797,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic+Quadrant+2026",
     "content": "MQ+Ad+1",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -35031,7 +35806,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic+Quadrant+2026",
     "content": "MQ+Ad+3",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 1
    },
@@ -35040,7 +35815,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic+Quadrant+2026",
     "content": "MQ+Ad+4",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -35049,7 +35824,7 @@
     "sessionMedium": "cpc",
     "sessionCampaignName": "Magic+Quadrant+2026",
     "content": "MQ+Ad+5",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -35058,7 +35833,7 @@
     "sessionMedium": "paidsocial",
     "sessionCampaignName": "ABM Salesforce",
     "content": "W1-ABM-Jenkins",
-    "group": "untagged",
+    "group": "ads",
     "visits": 1,
     "engaged": 0
    },
@@ -35085,7 +35860,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "forge-security-launch",
     "content": "brand-post",
-    "group": "untagged",
+    "group": "company",
     "visits": 1,
     "engaged": 1
    },
@@ -35094,7 +35869,7 @@
     "sessionMedium": "social",
     "sessionCampaignName": "forge-security-launch",
     "content": "kumar",
-    "group": "untagged",
+    "group": "kumar",
     "visits": 1,
     "engaged": 0
    }
@@ -35123,7 +35898,7 @@
    },
    {
     "date": "2026-04-27",
-    "group": "untagged",
+    "group": "ads",
     "line": "other",
     "asset": true,
     "count": 2
@@ -35179,17 +35954,24 @@
    },
    {
     "date": "2026-07-24",
-    "group": "untagged",
+    "group": "ads",
     "line": "other",
     "asset": true,
     "count": 1
    },
    {
     "date": "2026-07-27",
+    "group": "ads",
+    "line": "other",
+    "asset": true,
+    "count": 3
+   },
+   {
+    "date": "2026-07-27",
     "group": "untagged",
     "line": "other",
     "asset": true,
-    "count": 4
+    "count": 1
    },
    {
     "date": "2026-08-26",
@@ -52636,12 +53418,12 @@
     {
      "date": "2026-11-23",
      "bot": "Amazonbot",
-     "visits": 69
+     "visits": 72
     },
     {
      "date": "2026-11-23",
      "bot": "Bytespider",
-     "visits": 224
+     "visits": 251
     },
     {
      "date": "2026-11-23",
@@ -52656,12 +53438,12 @@
     {
      "date": "2026-11-23",
      "bot": "Claude-User",
-     "visits": 37
+     "visits": 39
     },
     {
      "date": "2026-11-23",
      "bot": "ClaudeBot",
-     "visits": 25
+     "visits": 26
     },
     {
      "date": "2026-11-23",
@@ -52671,17 +53453,17 @@
     {
      "date": "2026-11-23",
      "bot": "OAI-SearchBot",
-     "visits": 180
+     "visits": 181
     },
     {
      "date": "2026-11-23",
      "bot": "PerplexityBot",
-     "visits": 212
+     "visits": 213
     },
     {
      "date": "2026-11-23",
      "bot": "meta-externalagent",
-     "visits": 1597
+     "visits": 1611
     }
    ],
    "pages": [
@@ -52693,7 +53475,7 @@
     {
      "page": "/",
      "bot": "Amazonbot",
-     "visits": 1575
+     "visits": 1581
     },
     {
      "page": "/demo",
@@ -52741,17 +53523,17 @@
      "visits": 1183
     },
     {
+     "page": "/partners",
+     "bot": "meta-externalagent",
+     "visits": 1183
+    },
+    {
      "page": "/privacy",
      "bot": "meta-externalagent",
      "visits": 1183
     },
     {
      "page": "/blog",
-     "bot": "meta-externalagent",
-     "visits": 1182
-    },
-    {
-     "page": "/partners",
      "bot": "meta-externalagent",
      "visits": 1182
     },
@@ -52778,7 +53560,7 @@
     {
      "page": "/",
      "bot": "Bytespider",
-     "visits": 798
+     "visits": 807
     },
     {
      "page": "/",
@@ -52813,7 +53595,7 @@
     {
      "page": "/blog",
      "bot": "Bytespider",
-     "visits": 269
+     "visits": 271
     },
     {
      "page": "/unified-insights",
@@ -52888,17 +53670,17 @@
     {
      "page": "/forge",
      "bot": "Bytespider",
-     "visits": 134
+     "visits": 136
     },
     {
      "page": "/unified-insights",
      "bot": "Bytespider",
-     "visits": 132
+     "visits": 134
     },
     {
      "page": "/agentic-devops",
      "bot": "Bytespider",
-     "visits": 114
+     "visits": 115
     },
     {
      "page": "/",
@@ -52908,32 +53690,32 @@
     {
      "page": "/",
      "bot": "Claude-User",
-     "visits": 105
+     "visits": 106
     },
     {
      "page": "/brickforge",
+     "bot": "Bytespider",
+     "visits": 98
+    },
+    {
+     "page": "/agents",
      "bot": "Bytespider",
      "visits": 96
     },
     {
      "page": "/salesforce-devops",
      "bot": "Bytespider",
-     "visits": 95
-    },
-    {
-     "page": "/agents",
-     "bot": "Bytespider",
-     "visits": 94
+     "visits": 96
     },
     {
      "page": "/forge/modernization",
      "bot": "Bytespider",
-     "visits": 85
+     "visits": 86
     },
     {
      "page": "/software-factory",
      "bot": "Bytespider",
-     "visits": 70
+     "visits": 71
     },
     {
      "page": "/blog/harness-engineering",
@@ -52968,12 +53750,12 @@
     {
      "page": "/resources/report/ai-coding-impact-2026-benchmark-report",
      "bot": "PerplexityBot",
-     "visits": 46
+     "visits": 47
     },
     {
      "page": "/careers",
      "bot": "Claude-User",
-     "visits": 43
+     "visits": 44
     },
     {
      "page": "/knowledge-base/delivery-flow-performance/value-stream-management-explained-from-idea-to-customer-va",
@@ -53011,14 +53793,14 @@
      "visits": 39
     },
     {
-     "page": "/newsroom",
-     "bot": "OAI-SearchBot",
+     "page": "/events/flutter-the-ai-sdlc-summit",
+     "bot": "meta-externalagent",
      "visits": 38
     },
     {
-     "page": "/events/flutter-the-ai-sdlc-summit",
-     "bot": "meta-externalagent",
-     "visits": 37
+     "page": "/newsroom",
+     "bot": "OAI-SearchBot",
+     "visits": 38
     },
     {
      "page": "/resources",
@@ -53071,6 +53853,11 @@
      "visits": 35
     },
     {
+     "page": "/forge",
+     "bot": "ClaudeBot",
+     "visits": 35
+    },
+    {
      "page": "/forge/modernization",
      "bot": "ClaudeBot",
      "visits": 35
@@ -53084,11 +53871,6 @@
      "page": "/newsroom",
      "bot": "PerplexityBot",
      "visits": 35
-    },
-    {
-     "page": "/forge",
-     "bot": "ClaudeBot",
-     "visits": 34
     },
     {
      "page": "/newsroom/opsera-raises-15-million-series-a-funding-to-lead-continuous-orchestration-of-devops-and-s",
@@ -53331,6 +54113,11 @@
      "visits": 27
     },
     {
+     "page": "/blog/application-modernization",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
      "page": "/blog/application-modernization-strategy",
      "bot": "meta-externalagent",
      "visits": 27
@@ -53367,6 +54154,11 @@
     },
     {
      "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
+     "bot": "meta-externalagent",
+     "visits": 27
+    },
+    {
+     "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
      "bot": "meta-externalagent",
      "visits": 27
     },
@@ -53421,17 +54213,17 @@
      "visits": 26
     },
     {
+     "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
+     "bot": "meta-externalagent",
+     "visits": 26
+    },
+    {
      "page": "/blog/ai-code-security",
      "bot": "meta-externalagent",
      "visits": 26
     },
     {
      "page": "/blog/ai-software-factory",
-     "bot": "meta-externalagent",
-     "visits": 26
-    },
-    {
-     "page": "/blog/application-modernization",
      "bot": "meta-externalagent",
      "visits": 26
     },
@@ -53481,7 +54273,7 @@
      "visits": 26
     },
     {
-     "page": "/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights",
+     "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
      "bot": "meta-externalagent",
      "visits": 26
     },
@@ -53493,6 +54285,16 @@
     {
      "page": "/devops-huddle",
      "bot": "Bytespider",
+     "visits": 26
+    },
+    {
+     "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-e",
+     "bot": "meta-externalagent",
+     "visits": 26
+    },
+    {
+     "page": "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-enginee",
+     "bot": "meta-externalagent",
      "visits": 26
     },
     {
@@ -53521,13 +54323,13 @@
      "visits": 26
     },
     {
-     "page": "/agentic-devops",
-     "bot": "PerplexityBot",
-     "visits": 25
+     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive",
+     "bot": "meta-externalagent",
+     "visits": 26
     },
     {
-     "page": "/blog/ai-agents-are-building-faster-than-you-can-govern",
-     "bot": "meta-externalagent",
+     "page": "/agentic-devops",
+     "bot": "PerplexityBot",
      "visits": 25
     },
     {
@@ -53571,6 +54373,11 @@
      "visits": 25
     },
     {
+     "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
+     "bot": "meta-externalagent",
+     "visits": 25
+    },
+    {
      "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
      "bot": "meta-externalagent",
      "visits": 25
@@ -53581,7 +54388,7 @@
      "visits": 25
     },
     {
-     "page": "/blog/what-agentic-devops-really-means-for-engineering-teams-in-2026",
+     "page": "/blog/spec-driven-development",
      "bot": "meta-externalagent",
      "visits": 25
     },
@@ -53607,16 +54414,6 @@
     },
     {
      "page": "/events/ai-adopted-roi-missing",
-     "bot": "meta-externalagent",
-     "visits": 25
-    },
-    {
-     "page": "/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-e",
-     "bot": "meta-externalagent",
-     "visits": 25
-    },
-    {
-     "page": "/knowledge-base/core-devex-metrics/pull-request-cycle-time-mastering-the-metric-that-defines-enginee",
      "bot": "meta-externalagent",
      "visits": 25
     },
@@ -53651,11 +54448,6 @@
      "visits": 25
     },
     {
-     "page": "/resources/webinars/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive",
-     "bot": "meta-externalagent",
-     "visits": 25
-    },
-    {
      "page": "/blog/8090-ai-alternatives",
      "bot": "meta-externalagent",
      "visits": 24
@@ -53667,6 +54459,11 @@
     },
     {
      "page": "/blog/ai-sdlc",
+     "bot": "meta-externalagent",
+     "visits": 24
+    },
+    {
+     "page": "/blog/cobol-modernization",
      "bot": "meta-externalagent",
      "visits": 24
     },
@@ -53683,16 +54480,6 @@
     {
      "page": "/blog/forge-ontology-ai-agents",
      "bot": "OAI-SearchBot",
-     "visits": 24
-    },
-    {
-     "page": "/blog/opsera-and-cursor-partner-to-transform-the-enterprise-from-sdlc-to-ai-sdlc",
-     "bot": "meta-externalagent",
-     "visits": 24
-    },
-    {
-     "page": "/blog/spec-driven-development",
-     "bot": "meta-externalagent",
      "visits": 24
     },
     {
@@ -53766,17 +54553,17 @@
      "visits": 23
     },
     {
-     "page": "/blog/cobol-modernization",
-     "bot": "meta-externalagent",
-     "visits": 23
-    },
-    {
      "page": "/blog/g2-users-recognize-opsera-in-five-key-categories",
      "bot": "meta-externalagent",
      "visits": 23
     },
     {
      "page": "/blog/sast-tools",
+     "bot": "meta-externalagent",
+     "visits": 23
+    },
+    {
+     "page": "/blog/shift-left-security",
      "bot": "meta-externalagent",
      "visits": 23
     },
@@ -53807,6 +54594,11 @@
     },
     {
      "page": "/knowledge-base/delivery-flow-performance/deployment-frequency-a-clear-window-into-your-software-del",
+     "bot": "meta-externalagent",
+     "visits": 23
+    },
+    {
+     "page": "/knowledge-base/quality-risk/time-to-detect-vulnerability-ttdv",
      "bot": "meta-externalagent",
      "visits": 23
     },
@@ -53866,11 +54658,6 @@
      "visits": 22
     },
     {
-     "page": "/blog/shift-left-security",
-     "bot": "meta-externalagent",
-     "visits": 22
-    },
-    {
      "page": "/blog/software-factory-benefits",
      "bot": "OAI-SearchBot",
      "visits": 22
@@ -53911,11 +54698,6 @@
      "visits": 22
     },
     {
-     "page": "/knowledge-base/quality-risk/time-to-detect-vulnerability-ttdv",
-     "bot": "meta-externalagent",
-     "visits": 22
-    },
-    {
      "page": "/partners",
      "bot": "PerplexityBot",
      "visits": 22
@@ -53934,6 +54716,11 @@
      "page": "/salesforce-devops",
      "bot": "PerplexityBot",
      "visits": 22
+    },
+    {
+     "page": "/blog/ai-sdlc",
+     "bot": "PerplexityBot",
+     "visits": 21
     },
     {
      "page": "/blog/ai-sdlc-2",
@@ -54006,11 +54793,6 @@
      "visits": 20
     },
     {
-     "page": "/blog/ai-sdlc",
-     "bot": "PerplexityBot",
-     "visits": 20
-    },
-    {
      "page": "/blog/github-copilot-adoption-trends-insights-from-real-data",
      "bot": "PerplexityBot",
      "visits": 20
@@ -54033,6 +54815,11 @@
     {
      "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-amazon-q-developer",
      "bot": "meta-externalagent",
+     "visits": 20
+    },
+    {
+     "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
+     "bot": "PerplexityBot",
      "visits": 20
     },
     {
@@ -54076,6 +54863,11 @@
      "visits": 19
     },
     {
+     "page": "/blog/8090-ai-alternatives",
+     "bot": "PerplexityBot",
+     "visits": 19
+    },
+    {
      "page": "/blog/introducing-opsera-continuous-orchestration-for-next-gen-devops",
      "bot": "PerplexityBot",
      "visits": 19
@@ -54101,19 +54893,9 @@
      "visits": 19
     },
     {
-     "page": "/knowledge-base/ai-code-assistant-comparisons/github-copilot-vs-cursor",
-     "bot": "PerplexityBot",
-     "visits": 19
-    },
-    {
      "page": "/resources/comparison-guides/opsera-vs-dx",
      "bot": "meta-externalagent",
      "visits": 19
-    },
-    {
-     "page": "/blog/8090-ai-alternatives",
-     "bot": "PerplexityBot",
-     "visits": 18
     },
     {
      "page": "/blog/ai-sdlc",
@@ -54158,6 +54940,11 @@
     {
      "page": "/knowledge-base/category/ai-code-assistant-comparisons",
      "bot": "Bytespider",
+     "visits": 18
+    },
+    {
+     "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
+     "bot": "PerplexityBot",
      "visits": 18
     },
     {
@@ -54211,7 +54998,7 @@
      "visits": 17
     },
     {
-     "page": "/knowledge-base/tool-specific-analysis/cursor-ai-explained",
+     "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
      "bot": "PerplexityBot",
      "visits": 17
     },
@@ -54327,7 +55114,7 @@
     },
     {
      "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
-     "bot": "PerplexityBot",
+     "bot": "meta-externalagent",
      "visits": 16
     },
     {
@@ -54368,6 +55155,11 @@
     {
      "page": "/blog/blog-devops-automation",
      "bot": "PerplexityBot",
+     "visits": 15
+    },
+    {
+     "page": "/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly",
+     "bot": "meta-externalagent",
      "visits": 15
     },
     {
@@ -54446,6 +55238,11 @@
      "visits": 15
     },
     {
+     "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
+     "bot": "PerplexityBot",
+     "visits": 15
+    },
+    {
      "page": "/blog/using-data-to-encourage-copilot-adoption-in-your-organization",
      "bot": "meta-externalagent",
      "visits": 15
@@ -54507,11 +55304,6 @@
     },
     {
      "page": "/knowledge-base/security-and-devsecops-metrics/time-to-mitigate-vulnerability-ttmv",
-     "bot": "meta-externalagent",
-     "visits": 15
-    },
-    {
-     "page": "/knowledge-base/tool-specific-analysis/gemini-code-assist-a-complete-developers-guide",
      "bot": "meta-externalagent",
      "visits": 15
     },
@@ -54598,11 +55390,6 @@
     {
      "page": "/blog/blitzy-alternatives",
      "bot": "PerplexityBot",
-     "visits": 14
-    },
-    {
-     "page": "/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly",
-     "bot": "meta-externalagent",
      "visits": 14
     },
     {
@@ -54736,6 +55523,11 @@
      "visits": 14
     },
     {
+     "page": "/blog/seamless-secrets-how-opsera-is-making-customer-data-more-secure-than-ever",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
      "page": "/blog/ship-faster-shift-everywhere-stay-secure-the-future-of-ai-powered-devsecops",
      "bot": "meta-externalagent",
      "visits": 14
@@ -54761,8 +55553,8 @@
      "visits": 14
     },
     {
-     "page": "/blog/troubleshoot-ci-cd-pipelines-faster-challenges-how-to-overcome-them",
-     "bot": "PerplexityBot",
+     "page": "/blog/top-takeaways-from-opseras-webinar-on-software-development-loops",
+     "bot": "meta-externalagent",
      "visits": 14
     },
     {
@@ -54801,6 +55593,11 @@
      "visits": 14
     },
     {
+     "page": "/careers",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
      "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
      "bot": "OAI-SearchBot",
      "visits": 14
@@ -54822,6 +55619,11 @@
     },
     {
      "page": "/events/github-universe",
+     "bot": "meta-externalagent",
+     "visits": 14
+    },
+    {
+     "page": "/forge/database-migration",
      "bot": "meta-externalagent",
      "visits": 14
     },
@@ -55276,11 +56078,6 @@
      "visits": 13
     },
     {
-     "page": "/blog/seamless-secrets-how-opsera-is-making-customer-data-more-secure-than-ever",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
      "page": "/blog/smart-model-selection",
      "bot": "PerplexityBot",
      "visits": 13
@@ -55292,11 +56089,6 @@
     },
     {
      "page": "/blog/the-secret-life-of-a-build-how-ai-watches-learns-and-helps-it-improve",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
-     "page": "/blog/top-takeaways-from-opseras-webinar-on-software-development-loops",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55323,11 +56115,6 @@
     {
      "page": "/blog/why-you-should-stop-relying-on-jenkins-plugins",
      "bot": "PerplexityBot",
-     "visits": 13
-    },
-    {
-     "page": "/careers",
-     "bot": "meta-externalagent",
      "visits": 13
     },
     {
@@ -55362,11 +56149,6 @@
     },
     {
      "page": "/events/tokenomics-the-currency-of-enterprise-ai",
-     "bot": "meta-externalagent",
-     "visits": 13
-    },
-    {
-     "page": "/forge/database-migration",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55511,6 +56293,11 @@
      "visits": 13
     },
     {
+     "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-5",
      "bot": "meta-externalagent",
      "visits": 13
@@ -55556,7 +56343,17 @@
      "visits": 13
     },
     {
+     "page": "/resources",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
      "page": "/resources/comparison-guides/blitzy",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
+     "page": "/resources/comparison-guides/opsera-vs-gearset",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55607,6 +56404,11 @@
     },
     {
      "page": "/resources/webinars/beyond-the-hype-how-to-measure-the-true-impact-of-ai-code-assistants-like-github",
+     "bot": "meta-externalagent",
+     "visits": 13
+    },
+    {
+     "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 13
     },
@@ -55721,6 +56523,11 @@
      "visits": 12
     },
     {
+     "page": "/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accele",
+     "bot": "PerplexityBot",
+     "visits": 12
+    },
+    {
      "page": "/blog/devops-observability-what-is-it-and-how-to-implement-it",
      "bot": "meta-externalagent",
      "visits": 12
@@ -55747,6 +56554,11 @@
     },
     {
      "page": "/blog/how-devops-accelerates-digitization-for-covid-era-success",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/how-the-collaboration-between-ciso-and-engineering-is-disrupting-the-software-industry",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -55887,6 +56699,11 @@
     },
     {
      "page": "/blog/what-is-devsecops",
+     "bot": "meta-externalagent",
+     "visits": 12
+    },
+    {
+     "page": "/blog/why-you-should-automate-code-reviews",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56081,11 +56898,6 @@
      "visits": 12
     },
     {
-     "page": "/newsroom/opsera-launches-novel-approach-to-devops-with-continuous-orchestration-2",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
      "page": "/newsroom/opsera-listed-as-an-honorable-mention-in-the-2024-gartner-r-magic-quadrant-tm-for-devops-p",
      "bot": "meta-externalagent",
      "visits": 12
@@ -56116,12 +56928,7 @@
      "visits": 12
     },
     {
-     "page": "/resources",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/resources/comparison-guides/opsera-vs-gearset",
+     "page": "/resources/comparison-guides/opsera-vs-harness",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56152,11 +56959,6 @@
     },
     {
      "page": "/resources/videos/keywest-networks-testimonial",
-     "bot": "meta-externalagent",
-     "visits": 12
-    },
-    {
-     "page": "/resources/webinars/cio-roundtable-learnings-and-trends-for-2024",
      "bot": "meta-externalagent",
      "visits": 12
     },
@@ -56251,11 +57053,6 @@
      "visits": 11
     },
     {
-     "page": "/blog/developer-and-customer-satisfaction-matter-human-centric-insights-from-google-and-doras-accele",
-     "bot": "PerplexityBot",
-     "visits": 11
-    },
-    {
      "page": "/blog/devsecops-automation",
      "bot": "meta-externalagent",
      "visits": 11
@@ -56296,11 +57093,6 @@
      "visits": 11
     },
     {
-     "page": "/blog/how-the-collaboration-between-ciso-and-engineering-is-disrupting-the-software-industry",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
      "page": "/blog/improving-salesforce-devops-efficiency",
      "bot": "meta-externalagent",
      "visits": 11
@@ -56312,6 +57104,11 @@
     },
     {
      "page": "/blog/securing-your-secrets-in-opseras-devops-orchestration-platform",
+     "bot": "meta-externalagent",
+     "visits": 11
+    },
+    {
+     "page": "/blog/software-factory-as-a-service",
      "bot": "meta-externalagent",
      "visits": 11
     },
@@ -56358,11 +57155,6 @@
     {
      "page": "/blog/what-gartner-just-revealed-about-enterprise-ai-failure",
      "bot": "PerplexityBot",
-     "visits": 11
-    },
-    {
-     "page": "/blog/why-you-should-automate-code-reviews",
-     "bot": "meta-externalagent",
      "visits": 11
     },
     {
@@ -56436,11 +57228,6 @@
      "visits": 11
     },
     {
-     "page": "/resources/comparison-guides/opsera-vs-harness",
-     "bot": "meta-externalagent",
-     "visits": 11
-    },
-    {
      "page": "/resources/comparison-guides/opsera-vs-jenkins",
      "bot": "meta-externalagent",
      "visits": 11
@@ -56506,13 +57293,13 @@
      "visits": 10
     },
     {
-     "page": "/blog/software-factory-as-a-service",
+     "page": "/blog/software-factory-pattern",
      "bot": "meta-externalagent",
      "visits": 10
     },
     {
-     "page": "/blog/software-factory-pattern",
-     "bot": "meta-externalagent",
+     "page": "/blog/software-factory-vs-dark-factory",
+     "bot": "Claude-User",
      "visits": 10
     },
     {
@@ -56718,11 +57505,6 @@
     {
      "page": "/blog/salesforce-dx-a-complete-guide",
      "bot": "meta-externalagent",
-     "visits": 9
-    },
-    {
-     "page": "/blog/software-factory-vs-dark-factory",
-     "bot": "Claude-User",
      "visits": 9
     },
     {
@@ -56942,6 +57724,11 @@
     },
     {
      "page": "/blog/sast-tools",
+     "bot": "Bytespider",
+     "visits": 8
+    },
+    {
+     "page": "/blog/sast-tools",
      "bot": "ChatGPT-User",
      "visits": 8
     },
@@ -57126,13 +57913,13 @@
      "visits": 7
     },
     {
-     "page": "/blog/sast-tools",
-     "bot": "Bytespider",
+     "page": "/blog/spec-driven-development",
+     "bot": "Claude-User",
      "visits": 7
     },
     {
-     "page": "/blog/spec-driven-development",
-     "bot": "Claude-User",
+     "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
+     "bot": "PerplexityBot",
      "visits": 7
     },
     {
@@ -57291,6 +58078,11 @@
      "visits": 6
     },
     {
+     "page": "/blog/achieving-zero-downtime-deployments-at-scale-with-opsera-save-up-to-700-hours-and-cut-deployme",
+     "bot": "PerplexityBot",
+     "visits": 6
+    },
+    {
      "page": "/blog/ai-code-security",
      "bot": "Bytespider",
      "visits": 6
@@ -57356,6 +58148,11 @@
      "visits": 6
     },
     {
+     "page": "/blog/npm-supply-chain-attacks",
+     "bot": "Bytespider",
+     "visits": 6
+    },
+    {
      "page": "/blog/opsera-joins-the-claude-marketplace-bringing-agentic-devops-to-your-ai-workflow",
      "bot": "Bytespider",
      "visits": 6
@@ -57368,11 +58165,6 @@
     {
      "page": "/blog/software-factory-compliance-tools",
      "bot": "Bytespider",
-     "visits": 6
-    },
-    {
-     "page": "/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now",
-     "bot": "PerplexityBot",
      "visits": 6
     },
     {
@@ -57443,6 +58235,11 @@
     {
      "page": "/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-amazon-q-developer",
      "bot": "meta-externalagent",
+     "visits": 6
+    },
+    {
+     "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
+     "bot": "PerplexityBot",
      "visits": 6
     },
     {
@@ -57546,11 +58343,6 @@
      "visits": 5
     },
     {
-     "page": "/blog/achieving-zero-downtime-deployments-at-scale-with-opsera-save-up-to-700-hours-and-cut-deployme",
-     "bot": "PerplexityBot",
-     "visits": 5
-    },
-    {
      "page": "/blog/ai-first-devops-at-aws-reinvent-2025-recap",
      "bot": "Bytespider",
      "visits": 5
@@ -57563,6 +58355,11 @@
     {
      "page": "/blog/ai-software-factory",
      "bot": "Bytespider",
+     "visits": 5
+    },
+    {
+     "page": "/blog/change-failure-rate",
+     "bot": "OAI-SearchBot",
      "visits": 5
     },
     {
@@ -57642,11 +58439,6 @@
     },
     {
      "page": "/blog/introducing-opsera-ai-agents-the-next-frontier-of-agentic-devsecops",
-     "bot": "Bytespider",
-     "visits": 5
-    },
-    {
-     "page": "/blog/npm-supply-chain-attacks",
      "bot": "Bytespider",
      "visits": 5
     },
@@ -57747,6 +58539,11 @@
     },
     {
      "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
+     "bot": "Bytespider",
+     "visits": 5
+    },
+    {
+     "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
      "bot": "PerplexityBot",
      "visits": 5
     },
@@ -57828,11 +58625,6 @@
     {
      "page": "/knowledge-base/incident-analysis/incident-frequency",
      "bot": "Bytespider",
-     "visits": 5
-    },
-    {
-     "page": "/knowledge-base/tool-specific-analysis/amazon-q-developer",
-     "bot": "PerplexityBot",
      "visits": 5
     },
     {
@@ -58023,11 +58815,6 @@
     {
      "page": "/blog/airbnb-agentic-coding-story",
      "bot": "PerplexityBot",
-     "visits": 4
-    },
-    {
-     "page": "/blog/change-failure-rate",
-     "bot": "OAI-SearchBot",
      "visits": 4
     },
     {
@@ -58278,11 +59065,6 @@
     {
      "page": "/customer-stories/accelerating-ai-driven-software-delivery-with-opsera",
      "bot": "ChatGPT-User",
-     "visits": 4
-    },
-    {
-     "page": "/customer-stories/forge-fortune-1000-retailer-legacy-modernization",
-     "bot": "Bytespider",
      "visits": 4
     },
     {
@@ -60508,6 +61290,11 @@
     {
      "page": "/blog/the-remote-workforce-may-persist-post-covid",
      "bot": "PerplexityBot",
+     "visits": 2
+    },
+    {
+     "page": "/blog/the-role-of-ai-in-modern-software-development",
+     "bot": "Bytespider",
      "visits": 2
     },
     {
@@ -64278,11 +65065,6 @@
     {
      "page": "/blog/the-role-of-ai-in-modern-software-development",
      "bot": "Amazonbot",
-     "visits": 1
-    },
-    {
-     "page": "/blog/the-role-of-ai-in-modern-software-development",
-     "bot": "Bytespider",
      "visits": 1
     },
     {
@@ -68706,9 +69488,7 @@
      "visits": 1
     }
    ],
-   "plain_total_gaps": [
-    "2026-11-23"
-   ]
+   "plain_total_gaps": []
   },
   "sources": [
    {
@@ -68839,6 +69619,12 @@
    "where": "profile",
    "visits": 2,
    "engaged": 1
+  },
+  {
+   "date": "2026-11-17",
+   "where": "posts",
+   "visits": 1,
+   "engaged": 0
   },
   {
    "date": "2026-11-19",
@@ -75209,6 +75995,13 @@
    "kind": "cta",
    "page": "/partners",
    "button": "Become a partner",
+   "clicks": 1
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "cta",
+   "page": "/partners",
+   "button": "Book a demo",
    "clicks": 1
   },
   {

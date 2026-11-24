@@ -186,7 +186,7 @@
   {
    "date": "2026-09-28",
    "group": "cant_tell",
-   "visits": 4,
+   "visits": 3,
    "engaged": 1
   },
   {
@@ -378,7 +378,7 @@
   {
    "date": "2026-10-27",
    "group": "cant_tell",
-   "visits": 7,
+   "visits": 6,
    "engaged": 5
   },
   {
@@ -390,7 +390,7 @@
   {
    "date": "2026-10-28",
    "group": "cant_tell",
-   "visits": 5,
+   "visits": 4,
    "engaged": 4
   },
   {
@@ -402,8 +402,8 @@
   {
    "date": "2026-10-29",
    "group": "cant_tell",
-   "visits": 9,
-   "engaged": 7
+   "visits": 6,
+   "engaged": 4
   },
   {
    "date": "2026-10-29",
@@ -414,8 +414,8 @@
   {
    "date": "2026-10-30",
    "group": "cant_tell",
-   "visits": 8,
-   "engaged": 6
+   "visits": 5,
+   "engaged": 3
   },
   {
    "date": "2026-10-31",
@@ -460,12 +460,6 @@
    "engaged": 2
   },
   {
-   "date": "2026-11-06",
-   "group": "estimated_company",
-   "visits": 3,
-   "engaged": 1
-  },
-  {
    "date": "2026-11-07",
    "group": "cant_tell",
    "visits": 3,
@@ -480,50 +474,38 @@
   {
    "date": "2026-11-09",
    "group": "cant_tell",
-   "visits": 10,
-   "engaged": 4
+   "visits": 8,
+   "engaged": 3
   },
   {
    "date": "2026-11-09",
    "group": "estimated_company",
-   "visits": 12,
-   "engaged": 3
+   "visits": 1,
+   "engaged": 1
   },
   {
    "date": "2026-11-10",
    "group": "cant_tell",
-   "visits": 7,
-   "engaged": 2
-  },
-  {
-   "date": "2026-11-10",
-   "group": "estimated_company",
-   "visits": 2,
+   "visits": 6,
    "engaged": 2
   },
   {
    "date": "2026-11-11",
    "group": "cant_tell",
-   "visits": 8,
-   "engaged": 5
+   "visits": 5,
+   "engaged": 3
   },
   {
    "date": "2026-11-12",
    "group": "cant_tell",
-   "visits": 6,
-   "engaged": 5
+   "visits": 2,
+   "engaged": 1
   },
   {
    "date": "2026-11-13",
    "group": "cant_tell",
    "visits": 2,
    "engaged": 2
-  },
-  {
-   "date": "2026-11-13",
-   "group": "estimated_company",
-   "visits": 2,
-   "engaged": 1
   },
   {
    "date": "2026-11-14",
@@ -532,58 +514,52 @@
    "engaged": 1
   },
   {
-   "date": "2026-11-14",
-   "group": "estimated_company",
-   "visits": 1,
-   "engaged": 0
-  },
-  {
    "date": "2026-11-16",
    "group": "cant_tell",
-   "visits": 19,
-   "engaged": 12
+   "visits": 17,
+   "engaged": 10
   },
   {
    "date": "2026-11-17",
    "group": "cant_tell",
-   "visits": 22,
-   "engaged": 10
+   "visits": 11,
+   "engaged": 7
   },
   {
    "date": "2026-11-18",
    "group": "cant_tell",
-   "visits": 18,
-   "engaged": 7
+   "visits": 12,
+   "engaged": 5
   },
   {
    "date": "2026-11-19",
    "group": "cant_tell",
-   "visits": 12,
-   "engaged": 7
+   "visits": 7,
+   "engaged": 6
   },
   {
    "date": "2026-11-20",
    "group": "cant_tell",
-   "visits": 8,
-   "engaged": 3
+   "visits": 6,
+   "engaged": 2
   },
   {
    "date": "2026-11-21",
    "group": "cant_tell",
-   "visits": 2,
-   "engaged": 2
+   "visits": 1,
+   "engaged": 1
   },
   {
    "date": "2026-11-22",
    "group": "cant_tell",
-   "visits": 4,
-   "engaged": 2
+   "visits": 3,
+   "engaged": 1
   },
   {
    "date": "2026-11-23",
    "group": "cant_tell",
-   "visits": 10,
-   "engaged": 7
+   "visits": 8,
+   "engaged": 6
   }
  ],
  "matches": [
@@ -630,34 +606,6 @@
    ]
   },
   {
-   "page": "/blog/harness-engineering",
-   "group": "estimated_company",
-   "visits": 14,
-   "engaged": 5,
-   "accounts": [
-    "company"
-   ],
-   "dates": [
-    "2026-11-09",
-    "2026-11-10"
-   ]
-  },
-  {
-   "page": "/blog/closing-the-security-gap-in-ai-modernization",
-   "group": "cant_tell",
-   "visits": 14,
-   "engaged": 5,
-   "accounts": [
-    "company",
-    "kumar"
-   ],
-   "dates": [
-    "2026-11-17",
-    "2026-11-18",
-    "2026-11-20"
-   ]
-  },
-  {
    "page": "/",
    "group": "estimated_kumar",
    "visits": 10,
@@ -688,6 +636,21 @@
    ]
   },
   {
+   "page": "/blog/closing-the-security-gap-in-ai-modernization",
+   "group": "cant_tell",
+   "visits": 7,
+   "engaged": 3,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-20"
+   ]
+  },
+  {
    "page": "/blog/why-salesforce-orgs-need-a-headless-devops-platform",
    "group": "estimated_kumar",
    "visits": 6,
@@ -713,45 +676,6 @@
    ]
   },
   {
-   "page": "/events/github-universe",
-   "group": "cant_tell",
-   "visits": 3,
-   "engaged": 1,
-   "accounts": [
-    "company",
-    "kumar"
-   ],
-   "dates": [
-    "2026-10-27",
-    "2026-10-28"
-   ]
-  },
-  {
-   "page": "/blog/measure-ai-roi-software-development",
-   "group": "estimated_company",
-   "visits": 3,
-   "engaged": 1,
-   "accounts": [
-    "company"
-   ],
-   "dates": [
-    "2026-11-06"
-   ]
-  },
-  {
-   "page": "/blog/context-engineering-ai-coding",
-   "group": "estimated_company",
-   "visits": 3,
-   "engaged": 1,
-   "accounts": [
-    "company"
-   ],
-   "dates": [
-    "2026-11-13",
-    "2026-11-14"
-   ]
-  },
-  {
    "page": "/gartner-symposium",
    "group": "estimated_company",
    "visits": 1,
@@ -773,6 +697,31 @@
    ],
    "dates": [
     "2026-10-21"
+   ]
+  },
+  {
+   "page": "/events/github-universe",
+   "group": "cant_tell",
+   "visits": 1,
+   "engaged": 1,
+   "accounts": [
+    "company",
+    "kumar"
+   ],
+   "dates": [
+    "2026-10-27"
+   ]
+  },
+  {
+   "page": "/blog/harness-engineering",
+   "group": "estimated_company",
+   "visits": 1,
+   "engaged": 1,
+   "accounts": [
+    "company"
+   ],
+   "dates": [
+    "2026-11-09"
    ]
   }
  ],
@@ -934,8 +883,8 @@
    "post": "https://www.linkedin.com/posts/kumar-chivukula_closing-the-security-gap-in-ai-modernization-activity-7528514101765963777-swkl"
   }
  ],
- "untagged_total": 680,
+ "untagged_total": 612,
  "start_date": "2026-09-01",
  "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T18:22+05:30"
+ "pulled_at": "2026-11-24T20:31+05:30"
 }

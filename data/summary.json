@@ -312,27 +312,23 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
       "key": "times_seen",
       "label": "Times the company page's posts were seen",
-      "value": "1,834",
-      "cur": 1834,
-      "prev": 3637,
-      "before": "3,637",
-      "change_pct": -49.6,
-      "good": false,
+      "value": "2,591",
+      "cur": 2591,
+      "prev": 1836,
+      "before": "1,836",
+      "change_pct": 41.1,
+      "good": true,
       "min_change_pct": 15
      },
-     "why": "Clicks fell 74.7% to 174.",
+     "why": "The 18 Nov Flutter awards post was seen 1,615 times.",
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 8013
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 4703
@@ -351,7 +347,11 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1834
+       "value": 1836
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2591
       }
      ]
     },
@@ -361,46 +361,46 @@
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
      "note": null,
-     "period": "9 to 15 Nov 2026",
-     "period_before": "2 to 8 Nov 2026",
+     "period": "16 to 22 Nov 2026",
+     "period_before": "9 to 15 Nov 2026",
      "notable": true,
      "main": {
-      "key": "followers_gained",
-      "label": "Followers Kumar gained",
-      "value": "24",
-      "cur": 24,
-      "prev": 19,
-      "before": "19",
-      "change_pct": 26.3,
+      "key": "times_seen",
+      "label": "Times Kumar's posts were seen",
+      "value": "4,769",
+      "cur": 4769,
+      "prev": 1141,
+      "before": "1,141",
+      "change_pct": 318.0,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Engagements fell to 12, down from 21.",
+     "why": "Engagements on Kumar's posts rose to 188, up from 12.",
      "do": null,
      "trend": [
       {
-       "week": "5 to 11 Oct 2026",
-       "value": 55
-      },
-      {
        "week": "12 to 18 Oct 2026",
-       "value": 51
+       "value": 4381
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 37
+       "value": 4071
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 33
+       "value": 2875
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 19
+       "value": 1267
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 24
+       "value": 1141
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 4769
       }
      ]
     },
@@ -463,8 +463,7 @@
     ],
     "attention": [
      "Demo requests fell to 2, down from 5.",
-     "Unlabelled visits jumped to 6,125, mostly newsletter robots.",
-     "Company page posts were seen 49.6% less."
+     "Unlabelled visits jumped to 6,125, mostly newsletter robots."
     ],
     "do": [
      "Write more like Software Factory Pattern: 87 of 109 engaged.",
@@ -853,27 +852,23 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "1 to 16 Nov 2026",
-     "period_before": "1 to 16 Oct 2026",
+     "period": "1 to 22 Nov 2026",
+     "period_before": "1 to 22 Oct 2026",
      "notable": true,
      "main": {
       "key": "times_seen",
       "label": "Times the company page's posts were seen",
-      "value": "5,898",
-      "cur": 5898,
-      "prev": 23697,
-      "before": "23,697",
-      "change_pct": -75.1,
+      "value": "8,285",
+      "cur": 8285,
+      "prev": 30304,
+      "before": "30,304",
+      "change_pct": -72.7,
       "good": false,
       "min_change_pct": 15
      },
      "why": null,
      "do": null,
      "trend": [
-      {
-       "week": "5 to 11 Oct 2026",
-       "value": 8013
-      },
       {
        "week": "12 to 18 Oct 2026",
        "value": 4703
@@ -892,7 +887,11 @@
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1834
+       "value": 1836
+      },
+      {
+       "week": "16 to 22 Nov 2026",
+       "value": 2591
       }
      ]
     },
@@ -901,7 +900,7 @@
      "title": "LinkedIn exec",
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
-     "note": "Kumar's export ends on 18 Nov, so Month shows once it covers the whole month.",
+     "note": "Kumar's export ends on 24 Nov, so Month shows once it covers the whole month.",
      "period": null,
      "period_before": null,
      "notable": false,
@@ -968,8 +967,8 @@
      "Visits from AI tools up 66.7%"
     ],
     "attention": [
-     "Times the company page's posts were seen down 75.1%",
      "Marketing sourced deals (estimate) down 75%",
+     "Times the company page's posts were seen down 72.7%",
      "Demo requests down 52.6%"
     ],
     "do": []
@@ -1876,7 +1875,7 @@
      "tab": "linkedin",
      "source": "LinkedIn company page exports",
      "note": null,
-     "period": "17 Aug to 16 Nov 2026",
+     "period": "23 Aug to 22 Nov 2026",
      "period_before": null,
      "notable": false,
      "main": null,
@@ -1890,7 +1889,7 @@
      "tab": "linkedin-exec",
      "source": "Kumar's LinkedIn exports",
      "note": null,
-     "period": "19 Aug to 18 Nov 2026",
+     "period": "25 Aug to 24 Nov 2026",
      "period_before": null,
      "notable": false,
      "main": null,

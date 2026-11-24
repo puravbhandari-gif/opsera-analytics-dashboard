@@ -18,7 +18,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/gVyqf7eu",
-     "lands_on": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era"
+     "lands_on": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+     "utm": {}
     }
    ]
   },
@@ -30,7 +31,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/gVyqf7eu",
-     "lands_on": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era"
+     "lands_on": "/blog/the-anchor-problem-modernizing-legacy-systems-in-the-ai-era",
+     "utm": {}
     }
    ]
   },
@@ -63,7 +65,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dQ6tj-Ri",
-     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool"
+     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool",
+     "utm": {}
     }
    ]
   },
@@ -75,7 +78,8 @@
    "opsera_pages": [
     {
      "link": "https://softwareforge.ai",
-     "lands_on": "/forge"
+     "lands_on": "/forge",
+     "utm": {}
     }
    ]
   },
@@ -87,7 +91,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/ghp-PGrg",
-     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool"
+     "lands_on": "/blog/why-salesforce-orgs-need-a-headless-devops-platform-not-another-ai-code-gen-tool",
+     "utm": {}
     }
    ]
   },
@@ -239,14 +244,16 @@
    "opsera_pages": [
     {
      "link": "https://opsera.ai/",
-     "lands_on": "/"
+     "lands_on": "/",
+     "utm": {}
     }
    ],
    "comment_pages": [
     {
      "link": "https://opsera.ai/",
      "lands_on": "/",
-     "date_pacific": "2026-10-12"
+     "date_pacific": "2026-10-12",
+     "utm": {}
     }
    ]
   },
@@ -272,7 +279,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/d8e9_BM3",
-     "lands_on": "/gartner-symposium"
+     "lands_on": "/gartner-symposium",
+     "utm": {}
     }
    ]
   },
@@ -284,7 +292,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/gBzn2Rqq",
-     "lands_on": "/gartner-symposium"
+     "lands_on": "/gartner-symposium",
+     "utm": {}
     }
    ]
   },
@@ -296,7 +305,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/d8e9_BM3",
-     "lands_on": "/gartner-symposium"
+     "lands_on": "/gartner-symposium",
+     "utm": {}
     }
    ]
   },
@@ -310,7 +320,8 @@
     {
      "link": "https://opsera.ai/gartner-symposium/free-modernization",
      "lands_on": "/gartner-symposium/free-modernization",
-     "date_pacific": "2026-10-20"
+     "date_pacific": "2026-10-20",
+     "utm": {}
     }
    ]
   },
@@ -364,7 +375,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dUZSwChK",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "github-universe-2026",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -376,7 +393,8 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dZf4R4Ny",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {}
     }
    ]
   },
@@ -388,7 +406,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dUZSwChK",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "github-universe-2026",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -400,11 +424,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dyk86gvb",
-     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
+     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+     "utm": {}
     },
     {
      "link": "https://opsera.ai/blog/beyond-php2shell-invisible-threats-systemic-gaps",
-     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps"
+     "lands_on": "/blog/beyond-php2shell-invisible-threats-systemic-gaps",
+     "utm": {}
     }
    ]
   },
@@ -416,7 +442,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dUZSwChK",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "github-universe-2026",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -428,7 +460,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dUZSwChK",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "github-universe-2026",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -440,7 +478,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/d6wtyHFC",
-     "lands_on": "/events/github-universe"
+     "lands_on": "/events/github-universe",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "brand-page",
+      "utm_content": "github-universe"
+     }
     }
    ]
   },
@@ -452,7 +496,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dvggqaqP",
-     "lands_on": "/blog/measure-ai-roi-software-development"
+     "lands_on": "/blog/measure-ai-roi-software-development",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "meta-ai-series",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -464,7 +514,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/dHQCZYxA",
-     "lands_on": "/blog/harness-engineering"
+     "lands_on": "/blog/harness-engineering",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "harness-engineering",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -476,7 +532,13 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/g5XUxniW",
-     "lands_on": "/blog/context-engineering-ai-coding"
+     "lands_on": "/blog/context-engineering-ai-coding",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "meta-ai-series",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -495,11 +557,23 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/gPAM-Mh5",
-     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization"
+     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "forge-security-launch",
+      "utm_content": "brand-post"
+     }
     },
     {
      "link": "https://opsera.ai/blog/closing-the-security-gap-in-ai-modernization?utm_source=linkedin&utm_medium=social&utm_campaign=forge-security-launch&utm_content=brand-post",
-     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization"
+     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "forge-security-launch",
+      "utm_content": "brand-post"
+     }
     }
    ]
   },
@@ -511,11 +585,18 @@
    "opsera_pages": [
     {
      "link": "https://lnkd.in/gB6nszjT",
-     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization"
+     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization",
+     "utm": {
+      "utm_source": "linkedin",
+      "utm_medium": "social",
+      "utm_campaign": "forge-security-launch",
+      "utm_content": "kumar"
+     }
     },
     {
      "link": "https://opsera.ai/blog/closing-the-security-gap-in-ai-modernization",
-     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization"
+     "lands_on": "/blog/closing-the-security-gap-in-ai-modernization",
+     "utm": {}
     }
    ]
   },
