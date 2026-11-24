@@ -1,39 +1,39 @@
 {
  "written_by": "Claude Code",
- "written_on": "2026-11-17",
+ "written_on": "2026-11-24",
  "week": {
-  "period": "9 to 15 Nov 2026",
-  "period_before": "2 to 8 Nov 2026",
+  "period": "16 to 22 Nov 2026",
+  "period_before": "9 to 15 Nov 2026",
   "boxes": {
    "well": [
-    "Demo requests rose to 5, up from 1.",
-    "Google search clicks grew 25.1% to 637.",
-    "Campaign visits grew 61.4% to 71."
+    "Engaged visits grew 105.2% to 1,428.",
+    "AI tools sent 44 visits, up from 26.",
+    "Software Factory Pattern blog got 87 engaged visits."
    ],
    "attention": [
-    "Engaged visits fell 21.0% to 696.",
-    "Visits from other websites fell to 84, down from 211.",
-    "AI tool visits fell 29.7% to 26."
+    "Unlabelled visits jumped to 6,125, likely robots.",
+    "Demo requests fell to 2, down from 5.",
+    "Company page posts were seen 49.6% less."
    ],
    "do": [
-    "Write more like Claude Code Alternatives: 27 of 71 engaged.",
-    "Repeat the harness-engineering campaign: 7 of 19 visits engaged.",
-    "Link contacts to deals: 7 had no contact this week."
+    "Filter out unlabelled visits, up from 352 to 6,125.",
+    "Link contacts to deals: 19 have no contact.",
+    "Write more like Software Factory Pattern: 87 engaged visits."
    ]
   },
   "areas": {
    "pipeline": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "",
     "why": "",
-    "do": "Link contacts to deals: 7 had no contact this week."
+    "do": "Link contacts to deals: 19 have no contact."
    },
    "leads": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "demo_requests",
-    "why": "Event form fills fell to 6, down from 11.",
+    "why": "",
     "do": ""
    },
    "journey": {
@@ -44,66 +44,66 @@
     "do": ""
    },
    "visits": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "visits_without_email_robots",
-    "why": "Unlabelled visits fell to 352, down from 834.",
-    "do": ""
+    "why": "Unlabelled visits jumped to 6,125, likely robots.",
+    "do": "Filter out unlabelled visits, up from 352 to 6,125."
    },
    "search": {
     "period": "9 to 15 Nov 2026",
     "period_before": "2 to 8 Nov 2026",
     "main": "clicks",
-    "why": "Sunday's figure is Google's early number and may change.",
+    "why": "",
     "do": ""
    },
    "aeo": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "ai_visits",
-    "why": "ChatGPT sent 16 of the 26 AI visits.",
+    "why": "Gemini sent the most: 20 of 44.",
     "do": ""
    },
    "campaigns": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
-    "main": "campaign_visits",
-    "why": "The harness-engineering campaign led with 19 visits, 7 engaged.",
-    "do": "Repeat the harness-engineering campaign: 7 of 19 visits engaged."
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
+    "main": "",
+    "why": "",
+    "do": ""
    },
    "events": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "",
     "why": "",
     "do": ""
    },
    "content": {
-    "period": "9 to 15 Nov 2026",
-    "period_before": "2 to 8 Nov 2026",
+    "period": "16 to 22 Nov 2026",
+    "period_before": "9 to 15 Nov 2026",
     "main": "content_visits",
-    "why": "Claude Code Alternatives visits rose to 71, up from 47.",
-    "do": "Write more like Claude Code Alternatives: 27 of 71 engaged."
+    "why": "Software Factory Pattern led: 937 visits, only 87 engaged.",
+    "do": "Write more like Software Factory Pattern: 87 engaged visits."
    },
    "linkedin": {
-    "period": "26 Oct to 1 Nov 2026",
-    "period_before": "19 to 25 Oct 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "times_seen",
-    "why": "Followers gained fell to 8, down from 32.",
-    "do": "Post more like 26 Oct: 1,244 views, next best 668."
+    "why": "Clicks fell 74.7% to 174.",
+    "do": ""
    },
    "linkedin-exec": {
-    "period": "19 to 25 Oct 2026",
-    "period_before": "12 to 18 Oct 2026",
-    "main": "engagements",
-    "why": "Kumar gained 37 followers, down from 51.",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
+    "main": "followers_gained",
+    "why": "Engagements fell to 12, down from 21.",
     "do": ""
    },
    "youtube": {
-    "period": "2 to 8 Nov 2026",
-    "period_before": "26 Oct to 1 Nov 2026",
+    "period": "9 to 15 Nov 2026",
+    "period_before": "2 to 8 Nov 2026",
     "main": "long_video_views",
-    "why": "Viewers watched 84 minutes of long videos.",
+    "why": "",
     "do": ""
    }
   }

@@ -16,7 +16,7 @@
      "notable": false,
      "main": null,
      "why": null,
-     "do": null,
+     "do": "Link contacts to deals: 19 have no contact.",
      "trend": []
     },
     {
@@ -138,7 +138,7 @@
       "min_change_pct": 10
      },
      "why": "Unlabelled visits jumped to 6,125, likely robots.",
-     "do": null,
+     "do": "Filter out unlabelled visits, up from 352 to 6,125.",
      "trend": [
       {
        "week": "12 to 18 Oct 2026",
@@ -186,7 +186,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Sunday's figure is Google's early number and may change.",
+     "why": null,
      "do": null,
      "trend": [
       {
@@ -312,8 +312,8 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
-     "do": null,
+     "why": "Software Factory Pattern led: 937 visits, only 87 engaged.",
+     "do": "Write more like Software Factory Pattern: 87 engaged visits.",
      "trend": [
       {
        "week": "12 to 18 Oct 2026",
@@ -361,7 +361,7 @@
       "good": false,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Clicks fell 74.7% to 174.",
      "do": null,
      "trend": [
       {
@@ -410,7 +410,7 @@
       "good": true,
       "min_change_pct": 15
      },
-     "why": null,
+     "why": "Engagements fell to 12, down from 21.",
      "do": null,
      "trend": [
       {
@@ -489,18 +489,23 @@
      ]
     }
    ],
-   "by_claude": false,
+   "by_claude": true,
    "boxes": {
     "well": [
-     "Content page visits up 313.2%",
-     "Visits without email robots up 256.2%",
-     "New marketing contacts up 150%"
+     "Engaged visits grew 105.2% to 1,428.",
+     "AI tools sent 44 visits, up from 26.",
+     "Software Factory Pattern blog got 87 engaged visits."
     ],
     "attention": [
-     "Demo requests down 60%",
-     "Times the company page's posts were seen down 49.6%"
+     "Unlabelled visits jumped to 6,125, likely robots.",
+     "Demo requests fell to 2, down from 5.",
+     "Company page posts were seen 49.6% less."
     ],
-    "do": []
+    "do": [
+     "Filter out unlabelled visits, up from 352 to 6,125.",
+     "Link contacts to deals: 19 have no contact.",
+     "Write more like Software Factory Pattern: 87 engaged visits."
+    ]
    }
   },
   "month": {
