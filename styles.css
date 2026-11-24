@@ -212,7 +212,9 @@ details.more > summary:hover { color: var(--ink); }
 }
 
 /* A note for AI assistants reading the page's HTML. Kept off screen, so nobody sees it. */
-.for-ai { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+/* Plain-text summary for AI tools that read the page without JavaScript (24 Nov 2026). Hidden once JavaScript runs. */
+.js .ai-summary { display: none; }
+.ai-summary { max-width: 900px; margin: 24px auto; padding: 0 16px; line-height: 1.5; }
 
 /* Team metrics: how far along each goal is */
 .goal-bar { height: 6px; background: var(--sunk); border-radius: 999px; margin: 10px 0 4px; overflow: hidden; }

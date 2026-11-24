@@ -161,6 +161,12 @@ jobs:
         continue-on-error: true
         run: python scripts/build_for_claude.py
 
+      # Optional: the plain-text summary and file links inside index.html, for AI tools that don't run JavaScript (24 Nov 2026).
+      - name: Write the plain-text summary into the page (optional)
+        if: github.event_name != 'push'
+        continue-on-error: true
+        run: python scripts/build_ai_summary.py
+
       # Runs on every run, pushes included: an email address or a customer name in data/ stops everything after this,
       # so nothing is saved or published (agreed 17 Nov 2026). The log says which file and field, never the value.
       - name: Privacy check
@@ -174,7 +180,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data for-claude
+          git add data for-claude index.html
           git diff --cached --quiet || git commit -m "Update numbers $(date -u +%Y-%m-%d)"
           git pull --rebase -q origin main
           git push

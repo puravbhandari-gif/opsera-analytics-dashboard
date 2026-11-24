@@ -51,6 +51,12 @@ def main():
 
     for p in sorted(DATA.glob("*.json")):
         walk(json.loads(p.read_text()), p.name, "")
+    # The plain-text summary in index.html for AI tools (24 Nov 2026): its text, without links, tags or page addresses
+    page = (DATA.parent / "index.html").read_text()
+    block = re.search(r"<!-- ai-summary:start -->(.*?)<!-- ai-summary:end -->", page, re.S)
+    if block:
+        text = re.sub(r'<a href="[^"]*">[^<]*</a>|<[^>]+>', " ", block.group(1))
+        walk([t for t in re.split(r"\s{2,}|\n", text) if t.strip()], "index.html", "ai-summary")
     print(f"Privacy check: {len(list(DATA.glob('*.json')))} files, {len(names)} customer names checked.")
     if found:
         # Where only, never the value itself: the run log is visible to anyone with access to the repo
