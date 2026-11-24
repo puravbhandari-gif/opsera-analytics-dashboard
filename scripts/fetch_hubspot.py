@@ -363,6 +363,18 @@ def seniority_group(v):
     return next((g for g, values in SENIORITY_GROUPS if v in values), "Not known")
 
 
+def warmly_profile_or_last(s):
+    """Who visits needs HubSpot company access. If HubSpot refuses it (403 since 24 Nov 2026: the key can't read companies),
+    keep last week's Who visits numbers so the rest of HubSpot still updates (agreed 24 Nov 2026)."""
+    try:
+        return warmly_profile(s)
+    except SystemExit:
+        old = OUT.read_text() if OUT.exists() else ""
+        last = json.loads(old).get("warmly_profile") if old else None
+        print("Who visits failed: HubSpot refused the company request. Keeping last week's Who visits numbers; the rest of HubSpot updates.")
+        return last
+
+
 def warmly_profile(s):
     since_day = (dt.datetime.now(PACIFIC).date() - dt.timedelta(days=WARMLY_DAYS))
     since = str(int(dt.datetime.combine(since_day, dt.time(), PACIFIC).timestamp() * 1000))
@@ -740,7 +752,7 @@ def main():
         "campaigns": campaigns,
         "campaigns_checked": len(all_campaigns),
         "demo_use_case_daily": demo_use_cases(s),
-        "warmly_profile": warmly_profile(s),
+        "warmly_profile": warmly_profile_or_last(s),
         "emails": public_emails(emails),
         "campaign_deals": campaign_deals,
         "all_pipeline": pipeline,

@@ -33,6 +33,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 ## Dashboard
 
+- [ ] Purav: give the dashboard's HubSpot key read access to companies (Settings, Integrations, Private apps). Until then Who visits keeps its 17 Nov numbers; the rest of HubSpot updates.
 - [x] Done 24 Nov: newsletter link checkers (dg_newsletter visits with no engagement) count as robots in visits without email robots and content visits. All visits keeps them, since the goal counts all visits.
 - [x] Done 24 Nov: the main link now carries a plain-text summary of the key numbers and links to all for-claude files, for AI tools that don't run JavaScript. scripts/build_ai_summary.py rewrites it each Monday; the privacy check scans it.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Influenced vs sourced pipeline, after syncing with David.

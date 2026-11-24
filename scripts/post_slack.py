@@ -87,8 +87,11 @@ def message():
     return "\n".join([
         f"Opsera marketing numbers, week of {week_name(cur['start'], cur['end'])}",
         "",
-        line("Website visits", *visits, "Google Analytics, includes robots"),
+        # For one post (agreed 24 Nov 2026): SLACK_WITHOUT_ALL_VISITS=yes leaves out the line with robots, and SLACK_NOTE adds
+        # a line after "without email robots". The scheduled Monday post keeps both lines and has no note.
+        *([] if os.environ.get("SLACK_WITHOUT_ALL_VISITS") == "yes" else [line("Website visits", *visits, "Google Analytics, includes robots")]),
         line("Website visits without email robots", *without, "Google Analytics"),
+        *([os.environ["SLACK_NOTE"].strip()] if os.environ.get("SLACK_NOTE", "").strip() else []),
         line("Engaged visits", *engaged, "Google Analytics"),
         line("Demo requests", *demos, "Google Analytics, demo form"),
         line("Clicks from Google search", *clicks, "Search Console"),
