@@ -560,6 +560,12 @@
    "group": "cant_tell",
    "visits": 8,
    "engaged": 6
+  },
+  {
+   "date": "2026-11-24",
+   "group": "cant_tell",
+   "visits": 2,
+   "engaged": 0
   }
  ],
  "matches": [
@@ -883,8 +889,8 @@
    "post": "https://www.linkedin.com/posts/kumar-chivukula_closing-the-security-gap-in-ai-modernization-activity-7528514101765963777-swkl"
   }
  ],
- "untagged_total": 612,
+ "untagged_total": 614,
  "start_date": "2026-09-01",
- "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T20:31+05:30"
+ "end_date": "2026-11-24",
+ "pulled_at": "2026-11-25T11:13+05:30"
 }

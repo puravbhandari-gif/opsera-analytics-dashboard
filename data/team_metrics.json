@@ -28,7 +28,7 @@
         "2026-08": 8432,
         "2026-09": 8179
        },
-       "so_far": 16905,
+       "so_far": 16902,
        "so_far_start": "2026-11-01",
        "so_far_end": "2026-11-23",
        "days_counted": 23,
@@ -36,20 +36,20 @@
        "goal_share_pct": 112.7,
        "without_email_robots": {
         "baseline": 7840.7,
-        "so_far": 10687
+        "so_far": 10685
        }
       },
       {
        "metric": "search_and_ai_visits",
        "label": "Visits from search engines and AI tools",
        "source": "Google Analytics",
-       "baseline": 3636.0,
+       "baseline": 3632.0,
        "baseline_by_month": {
-        "2026-07": 3748,
-        "2026-08": 3448,
-        "2026-09": 3712
+        "2026-07": 3742,
+        "2026-08": 3445,
+        "2026-09": 3709
        },
-       "so_far": 2765,
+       "so_far": 2751,
        "so_far_start": "2026-11-01",
        "so_far_end": "2026-11-23",
        "days_counted": 23,

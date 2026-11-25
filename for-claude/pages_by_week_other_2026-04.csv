@@ -10,7 +10,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-01,2026-04-05,no,/platform/unified-insights,5,4,0,0,2,425
 2026-04-01,2026-04-05,no,/platform/hummingbird-ai,3,2,1,0,5,297
 2026-04-01,2026-04-05,no,/solutions/salesforce-devops-platform,3,3,0,0,3,576
-2026-04-01,2026-04-05,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,3,0,0,0,0,0
+2026-04-01,2026-04-05,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,3,0,0,0,0,0
 2026-04-01,2026-04-05,no,/ecosystem/amazon-eks,2,0,0,0,0,0
 2026-04-01,2026-04-05,no,/ecosystem/checkmarx,2,0,0,0,0,11
 2026-04-01,2026-04-05,no,/ecosystem/gitlab-scm,2,1,0,0,2,66
@@ -118,7 +118,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-06,2026-04-12,no,/partners/lineaje,1,0,0,0,1,83
 2026-04-06,2026-04-12,no,/solutions/data-and-analytics,1,1,0,0,0,197
 2026-04-06,2026-04-12,no,/solutions/dora-metrics,1,1,0,0,0,1325
-2026-04-06,2026-04-12,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,1,0,0,0,0,0
+2026-04-06,2026-04-12,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,1,0,0,0,0,0
 2026-04-06,2026-04-12,no,/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera,0,0,0,0,1,18
 2026-04-06,2026-04-12,no,/jobs/devops-evangelist,0,0,0,0,1,41
 2026-04-06,2026-04-12,no,/platform/devsecops-devops-governance,0,0,0,0,1,736
@@ -272,7 +272,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-27,2026-05-03,no,/ecosystem/sonatype-nexus,11,4,0,0,4,1105
 2026-04-27,2026-05-03,no,/solutions/sdlc,11,7,0,0,8,891
 2026-04-27,2026-05-03,no,/ecosystem/argo-cd,9,4,0,0,1,2557
-2026-04-27,2026-05-03,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,7,0,0,0,0,0
+2026-04-27,2026-05-03,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,7,0,0,0,0,0
 2026-04-27,2026-05-03,no,/solutions/salesforce-devops-platform,6,3,0,0,3,860
 2026-04-27,2026-05-03,no,/platform/hummingbird-ai,5,4,0,0,5,391
 2026-04-27,2026-05-03,no,/platform/unified-insights,5,3,0,0,4,807

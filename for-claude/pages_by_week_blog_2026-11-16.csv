@@ -71,7 +71,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-16,2026-11-22,no,/blog/the-java-modernization-reckoning-whats-driving-enterprises-to-act-now,3,0,0,0,1,200
 2026-11-16,2026-11-22,no,/blog/what-githubs-engineering-system-success-playbook-can-teach-you-about-scaling-and-securing-your-devops,3,0,0,0,0,685
 2026-11-16,2026-11-22,no,/blog/you-cant-improve-what-you-cant-measure-13-kpis-necessary-for-every-devops-leader,3,1,0,0,1,199
-2026-11-16,2026-11-22,no,/blog/Y3Vyc29yLW,2,2,0,0,0,0
 2026-11-16,2026-11-22,no,/blog/ai-agents-are-building-faster-than-you-can-govern,2,0,0,0,0,17
 2026-11-16,2026-11-22,no,/blog/ai-code-security,2,0,0,0,0,141
 2026-11-16,2026-11-22,no,/blog/ai-made-your-developers-faster-it-also-made-your-pipeline-slower,2,0,0,0,1,22
@@ -106,6 +105,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-16,2026-11-22,no,/blog/what-is-a-modern-ci-cd-pipeline,2,0,0,0,0,1573
 2026-11-16,2026-11-22,no,/blog/what-is-devsecops,2,0,0,0,0,330
 2026-11-16,2026-11-22,no,/blog/why-leadership-teams-need-a-unified-view-of-devops-performance,2,0,0,0,0,31
+2026-11-16,2026-11-22,no,/blog/y3vyc29ylw,2,2,0,0,0,0
 2026-11-16,2026-11-22,no,/blog/2022-recap-opsera-year-3,1,0,0,0,0,20
 2026-11-16,2026-11-22,no,/blog/2022-trends-the-no-code-devops-orchestration-boom,1,0,0,0,0,1
 2026-11-16,2026-11-22,no,/blog/9-ways-you-can-improve-security-posture,1,0,0,0,0,1033
@@ -113,7 +113,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-16,2026-11-22,no,/blog/ace-your-devops-game-with-this-ultimate-list-of-plugins-in-jenkins,1,0,0,0,0,83
 2026-11-16,2026-11-22,no,/blog/adopting-no-code-devops-a-more-effective-devops-team,1,0,0,0,0,1
 2026-11-16,2026-11-22,no,/blog/ai-code-generation-research-report,1,0,0,0,0,0
-2026-11-16,2026-11-22,no,/blog/c29mdHdhcm,1,1,0,0,0,0
+2026-11-16,2026-11-22,no,/blog/c29mdhdhcm,1,1,0,0,0,0
 2026-11-16,2026-11-22,no,/blog/ci-cd-business-benefits,1,0,0,0,0,1183
 2026-11-16,2026-11-22,no,/blog/ci-cd-pipelines-with-kubernetesbuild-migrate-and-integrate-security-seamlessly,1,0,0,0,0,448
 2026-11-16,2026-11-22,no,/blog/contact_us,1,1,0,0,0,0

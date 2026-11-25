@@ -116,8 +116,9 @@ def clean_path(path):
 
 
 def page_key(path):
-    """https://opsera.ai/x and https://opsera.ai/x/ (or /x and /x/) are one page."""
-    stripped = clean_path(path).rstrip("/")
+    """https://opsera.ai/x and https://opsera.ai/x/ (or /x and /x/) are one page, and so are /Forge and /forge:
+    the site's addresses don't depend on capital letters (agreed 25 Nov 2026)."""
+    stripped = clean_path(path).rstrip("/").lower()
     return stripped if stripped and not stripped.endswith(".ai") else stripped + "/"
 
 
@@ -375,6 +376,11 @@ def journey(s, end):
         add(r, "demo_page", r["sessions"])
     for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
         add(r, "demo_form", r["eventCount"])
+    # the AI tools channel leaves out visits landing on careers pages, the same as the AEO tab (25 Nov 2026)
+    careers = {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "PARTIAL_REGEXP", "value": CAREERS, "caseSensitive": False}}}
+    for r in ga_report(s, end, dims, ["sessions"], flt=careers):
+        if "ai" in journey_channels(r["sessionDefaultChannelGroup"], r["sessionSource"], r["sessionCampaignName"]) and (r["date"], "ai") in rows:
+            rows[(r["date"], "ai")]["visits"] -= r["sessions"]
     return sorted(rows.values(), key=lambda r: (r["date"], r["channel"]))
 
 
@@ -382,6 +388,13 @@ def journey(s, end):
 # Google files under "AI Assistant" counts as "Other AI tools".
 AI_TOOLS = [("chatgpt", r"chatgpt|openai"), ("gemini", r"gemini|bard"), ("perplexity", r"perplexity"),
             ("claude", r"claude|anthropic"), ("copilot", r"copilot")]
+
+
+# Careers pages aren't AI tool visits (Aarushi, 25 Nov 2026): people asking an AI about jobs at Opsera aren't buyers.
+# Visits that land on a careers or job application page are left out of every AI tool number.
+CAREERS = r"^/(careers|job-application)(/.*)?$"
+NOT_CAREERS = {"notExpression": {"filter": {"fieldName": "landingPage", "stringFilter": {"matchType": "PARTIAL_REGEXP", "value": CAREERS, "caseSensitive": False}}}}
+is_careers = lambda page: bool(re.match(CAREERS, page, re.I))
 
 
 def ai_tool(group, source):
@@ -397,15 +410,16 @@ def ai_visits(s, end):
     daily, landing = {}, {}
     def row(date, tool):
         return daily.setdefault((date, tool), {"date": date, "tool": tool, "visits": 0, "engaged": 0, "demo_page": 0, "demo_form": 0})
-    for r in ga_report(s, end, dims, ["sessions", "engagedSessions"]):
+    both = lambda x: {"andGroup": {"expressions": [x, NOT_CAREERS]}}
+    for r in ga_report(s, end, dims, ["sessions", "engagedSessions"], flt=NOT_CAREERS):
         t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
         if t:
             x = row(r["date"], t); x["visits"] += r["sessions"]; x["engaged"] += r["engagedSessions"]
-    for r in ga_report(s, end, dims, ["sessions"], flt=demo):
+    for r in ga_report(s, end, dims, ["sessions"], flt=both(demo)):
         t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
         if t:
             row(r["date"], t)["demo_page"] += r["sessions"]
-    for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=demo, start=LEADS_START):
+    for r in ga_report(s, end, dims, ["eventCount"], event_names=[FORM_EVENT], flt=both(demo), start=LEADS_START):
         t = ai_tool(r["sessionDefaultChannelGroup"], r["sessionSource"])
         if t:
             row(r["date"], t)["demo_form"] += r["eventCount"]
@@ -415,6 +429,8 @@ def ai_visits(s, end):
         if not t:
             continue
         page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        if is_careers(page):
+            continue
         x = landing.setdefault((page, t), {"page": page, "tool": t, "visits": 0, "engaged": 0})
         x["visits"] += r["sessions"]; x["engaged"] += r["engagedSessions"]
         sources.setdefault(f"{r['sessionSource']} ({r['sessionDefaultChannelGroup']})", t)
@@ -445,6 +461,8 @@ def ai_landing_weekly(s, end):
         if not t:
             continue
         page = r["landingPage"] if r["landingPage"] == "(not set)" else page_key(r["landingPage"])
+        if is_careers(page):
+            continue
         key = (week_ending(r["date"]), page, t)
         x = weekly.setdefault(key, {"week": key[0], "page": page, "tool": t, "visits": 0})
         x["visits"] += r["sessions"]
@@ -472,8 +490,11 @@ def ai_bots(s, end):
     try:
         for r in ga_report(s, end, ["date", "customEvent:bot_name"], ["eventCount"], **bot):
             out["daily"].append({"date": r["date"], "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
+        bot_pages = {}
         for r in ga_report(s, end, ["customEvent:page_path", "customEvent:bot_name"], ["eventCount"], **bot):
-            out["pages"].append({"page": page_key(r["customEvent:page_path"]), "bot": r["customEvent:bot_name"], "visits": r["eventCount"]})
+            k = (page_key(r["customEvent:page_path"]), r["customEvent:bot_name"])   # /Forge and /forge add up as one page
+            bot_pages[k] = bot_pages.get(k, 0) + r["eventCount"]
+        out["pages"] = [{"page": pg, "bot": b, "visits": v} for (pg, b), v in bot_pages.items()]
         # Each run: does the plain total still disagree with the count by bot, and has a new day gone missing?
         plain = {r["date"]: r["eventCount"] for r in ga_report(s, end, ["date"], ["eventCount"], **bot)}
         split = {}
@@ -680,18 +701,20 @@ def cta_clicks(s, end):
 def fetch_ga(s, end):
     tz = check_ga_property(s)
     base = ["sessions", "totalUsers", "engagedSessions"]
-    totals = ga_report(s, end, [], base)[0]
-    daily = sorted(ga_report(s, end, ["date"], base), key=lambda r: r["date"])
+    # userEngagementDuration: seconds the page was in front of people, for average engagement time (Yusra, 25 Nov 2026)
+    totals = ga_report(s, end, [], base + ["userEngagementDuration"])[0]
+    daily = sorted(ga_report(s, end, ["date"], base + ["userEngagementDuration"]), key=lambda r: r["date"])
     channels = sorted(ga_report(s, end, ["sessionDefaultChannelGroup"], base + ["averageSessionDuration"]),
                       key=lambda r: -r["sessions"])
     channel_daily = ga_report(s, end, ["date", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"])
     sources = sorted(merge_rows(ga_report(s, end, ["sessionDefaultChannelGroup", "sessionSource", "sessionMedium"],
                                           base + ["averageSessionDuration"])), key=lambda r: -r["sessions"])
-    views = {}
-    for r in ga_report(s, end, ["pagePath"], ["screenPageViews"]):
+    views, secs = {}, {}
+    for r in ga_report(s, end, ["pagePath"], ["screenPageViews", "userEngagementDuration"]):
         key = page_key(r["pagePath"])
         views[key] = views.get(key, 0) + r["screenPageViews"]
-    pages = [{"page": p, "views": v} for p, v in sorted(views.items(), key=lambda x: -x[1])]
+        secs[key] = secs.get(key, 0) + r["userEngagementDuration"]
+    pages = [{"page": p, "views": v, "engagement_seconds": secs.get(p, 0)} for p, v in sorted(views.items(), key=lambda x: -x[1])]
     form_rows = ga_report(s, end, ["date", "pagePath"], ["eventCount"], event_names=[FORM_EVENT], start=LEADS_START)
 
     return {
@@ -818,6 +841,12 @@ def rankings(s, end, gsc_site):
     return {"pages": out, "last_day_with_data": last, "searches_from": q_start, "new_site_live": NEW_SITE_LIVE}
 
 
+# The Content tab's types (the same list as build_summary.py's CONTENT): blogs, reports, white papers, ebooks, guides, comparisons
+CONTENT_PAGES = [re.compile(p) for p in (r"^/blog/[a-z0-9-]+$", r"^/resources/report/[a-z0-9-]+$", r"^/resources/white-papers/[a-z0-9-]+$",
+                                         r"^/resources/ebooks/[a-z0-9-]+$", r"^/knowledge-base/(?!category/)[a-z0-9-]+/[a-z0-9-]+$",
+                                         r"^/(resources/comparison-guides|comparison-guides|comparison)/[a-z0-9-]+$")]
+
+
 def lookup(s, end, gsc_site):
     """Daily numbers by page and by campaign, packed small (the tab loads them only when opened).
     Each row starts with the day number counted from START_DATE. Sources are never added together."""
@@ -841,6 +870,15 @@ def lookup(s, end, gsc_site):
     for r in ga_report(s, end, ["date", "landingPage", "sessionDefaultChannelGroup"], ["sessions", "engagedSessions"], flt=news):
         k = (day(r["date"]), index(pages, page_of(r["landingPage"])), index(channels, r["sessionDefaultChannelGroup"]))
         newsletter_robots[k] = newsletter_robots.get(k, 0) + r["sessions"] - r["engagedSessions"]
+    # Engagement time on each content page by day: seconds in front of people and times viewed, for the Content tab (25 Nov 2026)
+    page_time = {}
+    for r in ga_report(s, end, ["date", "pagePath"], ["screenPageViews", "userEngagementDuration"]):
+        pg = page_of(r["pagePath"])
+        if not any(rx.match(pg) for rx in CONTENT_PAGES):
+            continue
+        k = (day(r["date"]), index(pages, pg))
+        v = page_time.setdefault(k, [0, 0])
+        v[0] += r["userEngagementDuration"]; v[1] += r["screenPageViews"]
     camp_visits = {}
     for r in ga_report(s, end, ["date", "sessionCampaignName", "sessionSource", "sessionMedium"], ["sessions", "engagedSessions"]):
         name = r["sessionCampaignName"]
@@ -885,6 +923,7 @@ def lookup(s, end, gsc_site):
         "visits": [[*k, *v] for k, v in sorted(visits.items())],
         "campaign_visits": [[*k, *v] for k, v in sorted(camp_visits.items())],
         "newsletter_robots": [[*k, v] for k, v in sorted(newsletter_robots.items()) if v],
+        "page_time": [[*k, round(v[0]), v[1]] for k, v in sorted(page_time.items()) if v[1]],
         "page_campaign_visits": [[*k, *v] for k, v in sorted(both.items())],
         "forms": [[*k, v] for k, v in sorted(forms.items())],
         "gsc": [[*k, *v] for k, v in sorted(gsc.items())],

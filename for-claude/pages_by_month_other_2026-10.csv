@@ -189,8 +189,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/partners/algorims,3,0,0,0,0,6
 2026-10-01,2026-10-31,no,/partners/hashicorp,3,0,0,0,0,0
 2026-10-01,2026-10-31,no,/use-cases/cobol-to-python,3,0,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/679bc8a0435bb1ef75ebfa19_Sowmia-Lakshmi-Ranganathan-150x150.png,3,0,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2026/09/Headless-DevOps-Product-Demo.mp4,3,3,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/679bc8a0435bb1ef75ebfa19_sowmia-lakshmi-ranganathan-150x150.png,3,0,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2026/09/headless-devops-product-demo.mp4,3,3,0,0,0,0
 2026-10-01,2026-10-31,no,/author/vishnu-vasudevan,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/customer-stories/a-leading-network-provider-driving-productivity-with-github-copilot-and-opsera-insights,2,1,0,0,0,90
 2026-10-01,2026-10-31,no,/customer-stories/forge-fortune-1000-retailer-legacy-modernization,2,1,0,0,0,8
@@ -213,7 +213,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/forge/modernization/cobol-to-go,2,1,0,0,2,47
 2026-10-01,2026-10-31,no,/forge/modernization/framework-upgrades,2,0,0,0,0,75
 2026-10-01,2026-10-31,no,/forge/modernization/powerbuilder-to-dotnet,2,0,0,0,0,93
-2026-10-01,2026-10-31,no,/learn/ZGV2c2Vjb3,2,0,0,0,0,0
+2026-10-01,2026-10-31,no,/learn/zgv2c2vjb3,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/newsroom/opsera-announces-salesforce-devops-3-0-capabilities-to-speed-deployment-time-and-maximize-current-investments-in-salesforce-development,2,0,0,0,0,109
 2026-10-01,2026-10-31,no,/newsroom/opsera-continuous-orchestration-platform-for-next-gen-devops,2,0,0,0,0,144
 2026-10-01,2026-10-31,no,/newsroom/opsera-hires-patrick-boyle-and-chris-lansing-to-support-rapid-growth-of-enterprise-sales-for-no-code-devops-orchestration,2,0,0,0,0,49
@@ -225,7 +225,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/platform/salesforce-pipelines,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/webinars/how-workday-improved-their-security-posture-with-opsera-unified-devops-platform,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-admin/post.php,2,1,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/6250593797074e7e37c8db9e_OctopusDeploy-logo-RGB.png,2,0,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/6250593797074e7e37c8db9e_octopusdeploy-logo-rgb.png,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/illustration-get-to-work.webp,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-json/wp/v2/customer-story/6806,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-json/wp/v2/ecosystem/1747,2,0,0,0,0,0
@@ -276,13 +276,13 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/solutions/databricks,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/webinars/integrate-your-existing-tools-accelerate-your-salesforce-app-releases,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/webinars/leading-with-data-to-simplify-devops-and-elevate-devex,1,1,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_Aruna20Pattabiraman-150x150.jpg,1,1,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_aruna20pattabiraman-150x150.jpg,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/618ac04d623bfe50bb750450_34.jpg,1,0,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/61dae02bb2a40853951ad728_Jenkins-Blog-banner.jpg,1,0,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f2365efb4280914c34e0b16_Gitlab-png-1536x1392.png,1,0,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/02/61dae02bb2a40853951ad728_jenkins-blog-banner.jpg,1,0,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f2365efb4280914c34e0b16_gitlab-png-1536x1392.png,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f2ba11e378c8f49e8b28486_argo.png,1,0,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f2bae70f1ac8d2f6d2b3981_Zookeeper_logo.png,1,1,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f3a4cc9b3a3c780263afb1f_Instana_logo.png,1,1,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f2bae70f1ac8d2f6d2b3981_zookeeper_logo.png,1,1,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/5f3a4cc9b3a3c780263afb1f_instana_logo.png,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/6837416771b377f26f759584_opsera-delivery-with-databricks-tile.png,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/measure-dora-dashboards-1.webp,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/mindtree-logo.png,1,1,0,0,0,0
@@ -290,7 +290,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/07/screen-deployment-frequency.webp,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2025/08/68755331e299b265711d28c7_blog_secret-life-of-build-1024x536.png,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-content/uploads/2026/01/customer-stories-network-1024x538.png,1,1,0,0,0,0
-2026-10-01,2026-10-31,no,/wp-content/uploads/2026/03/Diagrams-02.png,1,1,0,0,0,0
+2026-10-01,2026-10-31,no,/wp-content/uploads/2026/03/diagrams-02.png,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-json/wp/v2/career/1525,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-json/wp/v2/career/1527,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/wp-json/wp/v2/customer-story/1464,1,0,0,0,0,0

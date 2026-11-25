@@ -1,18 +1,18 @@
 {
  "start_date": "2026-04-01",
- "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T20:31+05:30",
+ "end_date": "2026-11-24",
+ "pulled_at": "2026-11-25T11:13+05:30",
  "source": "Google Analytics 4, opsera.ai 2026 (property 256856286), form event hs_form_submission",
  "time_zone": "America/Los_Angeles",
  "event": "hs_form_submission",
  "lines": {
   "demo": {
    "label": "Demo requests",
-   "count": 81,
+   "count": 83,
    "pages": [
     {
      "page": "/demo",
-     "count": 81
+     "count": 83
     }
    ]
   },
@@ -1777,6 +1777,14 @@
    "gartner_offer": 0,
    "events": 0,
    "other": 20
+  },
+  {
+   "date": "2026-11-24",
+   "demo": 2,
+   "contact": 0,
+   "gartner_offer": 0,
+   "events": 0,
+   "other": 0
   }
  ],
  "removed_form_pages": [
@@ -2262,6 +2270,14 @@
    "insights": 0,
    "home": 0,
    "other": 1,
+   "none": 0
+  },
+  {
+   "date": "2026-11-24",
+   "forge": 0,
+   "insights": 2,
+   "home": 0,
+   "other": 0,
    "none": 0
   }
  ]

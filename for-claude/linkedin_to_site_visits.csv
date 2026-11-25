@@ -1,8 +1,4 @@
 date,account,tag,landing_page,visits,engaged_visits
-2026-07-26,LinkedIn ads,,/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms,3,0
-2026-07-26,"LinkedIn, account unknown",,/careers/devops-evangelist,1,0
-2026-07-26,"LinkedIn, account unknown",,/careers/pre-sales-solution-engineer,11,9
-2026-07-26,"LinkedIn, account unknown",,/job-application,1,1
 2026-07-27,LinkedIn ads,,/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms,3,1
 2026-07-27,LinkedIn ads,,/resources/white-papers/from-velocity-to-durable-value,1,1
 2026-07-27,"LinkedIn, account unknown",,(not set),3,1
@@ -546,5 +542,7 @@ date,account,tag,landing_page,visits,engaged_visits
 2026-11-23,"LinkedIn, account unknown",,/demo,1,1
 2026-11-23,"LinkedIn, account unknown",,/forge/new-apps/healthcare-application-modernization,1,1
 2026-11-23,"LinkedIn, account unknown",,/resources/white-papers/tokenomics-the-currency-of-enterprise-ai,1,1
-2026-11-23,Other Opsera people,forge-security-launch / vishnu,/,1,0
+2026-11-23,Other Opsera people,forge-security-launch / vishnu,(not set),1,0
 2026-11-23,Other Opsera people,forge-security-launch / vishnu,/agentic-devops,1,1
+2026-11-24,"LinkedIn, account unknown",,/blog/software-factory-pattern,1,0
+2026-11-24,"LinkedIn, account unknown",,/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success,1,0

@@ -26,7 +26,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-01,2026-04-30,no,/ecosystem/bamboo,11,3,0,0,10,5044
 2026-04-01,2026-04-30,no,/solutions/opsera-github,10,5,0,0,6,1693
 2026-04-01,2026-04-30,no,/solutions/saas-apps,10,7,0,0,2,789
-2026-04-01,2026-04-30,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,10,0,0,0,0,0
+2026-04-01,2026-04-30,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,10,0,0,0,0,0
 2026-04-01,2026-04-30,no,/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success,9,0,0,0,0,87
 2026-04-01,2026-04-30,no,/ecosystem/gitlab-scm,8,4,0,0,4,818
 2026-04-01,2026-04-30,no,/ecosystem/instana,8,4,0,0,1,164111
@@ -149,7 +149,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-01,2026-05-31,no,/ecosystem/versionone,19,15,0,0,18,1691
 2026-05-01,2026-05-31,no,/ecosystem/docker-hub,14,10,0,0,0,196
 2026-05-01,2026-05-31,no,/ecosystem/hashicorp-vault,13,4,0,0,3,4126
-2026-05-01,2026-05-31,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,12,4,1,0,0,46
+2026-05-01,2026-05-31,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,13,4,1,0,0,46
 2026-05-01,2026-05-31,no,/ecosystem/bamboo,10,6,0,0,9,5278
 2026-05-01,2026-05-31,no,/ecosystem/servicenow-itsm,10,2,0,0,4,601
 2026-05-01,2026-05-31,no,/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera,9,2,1,0,0,54
@@ -191,7 +191,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-01,2026-05-31,no,/events/the-agentic-future-preparing-your-delivery-pipeline-for-2026,3,1,0,0,1,47
 2026-05-01,2026-05-31,no,/solutions/saas-apps,3,3,0,0,0,544
 2026-05-01,2026-05-31,no,/solutions/scm-migration,3,3,0,0,3,1126
-2026-05-01,2026-05-31,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,3,0,0,0,0,0
+2026-05-01,2026-05-31,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,3,0,0,0,0,0
 2026-05-01,2026-05-31,no,/customer-stories/how-a-leading-insurer-unlocked-1-9m-in-monthly-savings-withgithub-copilot-opsera,2,0,0,0,0,15
 2026-05-01,2026-05-31,no,/customer-stories/infoblox-uses-opsera-unified-devops-platform-to-cut-tool-sprawl-by-two-thirds,2,0,0,0,0,1104
 2026-05-01,2026-05-31,no,/ecosystem/appdynamics,2,1,0,0,2,1964
@@ -235,7 +235,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-01,2026-05-31,no,/ecosystem/tableau,1,0,0,0,0,11
 2026-05-01,2026-05-31,no,/ecosystem/terrascan,1,0,0,0,0,251
 2026-05-01,2026-05-31,no,/ecosystem/the-anchore-engine,1,0,0,0,0,73
-2026-05-01,2026-05-31,no,/events/copilot-cursor-claude-code-what-250K-developers-revealed,1,0,0,0,0,0
 2026-05-01,2026-05-31,no,/events/meet-the-opsera-appsec-agents-for-ai-builders,1,1,0,0,3,49
 2026-05-01,2026-05-31,no,/newsroom/opsera-adds-native-aws-integrations-and-is-now-available-in-aws-marketplace,1,0,0,0,0,26
 2026-05-01,2026-05-31,no,/newsroom/opsera-and-cursor-partner-to-embed-autonomous-ai-agents-directly-into-ai-sdlc-workflows-for-next-gen-ai-driven-development,1,1,0,0,3,922
@@ -250,7 +249,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-01,2026-05-31,no,/huddle/devops-automation-for-iac,0,0,0,0,1,14
 2026-05-01,2026-05-31,no,/marketplace/marketplace/claude-code-plugin,0,0,0,0,2,19
 2026-05-01,2026-05-31,no,/terminal-setup/claude-desktop,0,0,0,0,1,17
-2026-05-01,2026-05-31,no,/wp-content/uploads/2025/07/61e7a76e74efb917a72fcc04_Reflektion-Case-Study.pdf,0,0,0,0,1,14
+2026-05-01,2026-05-31,no,/wp-content/uploads/2025/07/61e7a76e74efb917a72fcc04_reflektion-case-study.pdf,0,0,0,0,1,14
 2026-06-01,2026-06-30,no,/careers/customer-success-engineer-devops,527,433,0,0,3,3284
 2026-06-01,2026-06-30,no,/careers/pre-sales-solution-engineer,232,161,0,0,6,556
 2026-06-01,2026-06-30,no,/careers/devops-evangelist,187,141,0,0,1,45
@@ -340,6 +339,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-30,no,/ecosystem/tableau,3,0,0,0,0,1
 2026-06-01,2026-06-30,no,/ecosystem/terrascan,3,0,0,0,2,380
 2026-06-01,2026-06-30,no,/ecosystem/veracode,3,1,0,0,1,694
+2026-06-01,2026-06-30,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,3,0,0,0,0,27
 2026-06-01,2026-06-30,no,/events/github-universe,3,0,0,0,0,19
 2026-06-01,2026-06-30,no,/for/okta,3,0,0,0,0,0
 2026-06-01,2026-06-30,no,/newsroom/opsera-and-lineaje-partner-to-deliver-agentic-ai-powered-auto-remediation-gold-secure-images-and-open-source-security-at-scale,3,0,0,0,0,0
@@ -377,7 +377,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-30,no,/ecosystem/the-anchore-engine,2,0,0,0,0,135
 2026-06-01,2026-06-30,no,/ecosystem/xunit-net,2,0,0,0,0,0
 2026-06-01,2026-06-30,no,/ecosystem/zookeeper,2,0,0,0,0,8
-2026-06-01,2026-06-30,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,2,0,0,0,0,27
 2026-06-01,2026-06-30,no,/for/five9,2,2,0,0,0,0
 2026-06-01,2026-06-30,no,/for/grafana-labs,2,0,0,0,0,0
 2026-06-01,2026-06-30,no,/for/hubspot,2,1,0,0,0,0
@@ -418,7 +417,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-30,no,/platform/toolchain-automation,2,0,0,0,3,1949
 2026-06-01,2026-06-30,no,/solutions/leadership-dashboard,2,0,0,0,1,306
 2026-06-01,2026-06-30,no,/solutions/platform-engineering,2,0,0,0,0,93
-2026-06-01,2026-06-30,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,2,0,0,0,0,0
+2026-06-01,2026-06-30,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,2,0,0,0,0,0
 2026-06-01,2026-06-30,no,/careers/platform-engineer,1,0,0,0,0,0
 2026-06-01,2026-06-30,no,/comparison/opsera-vs-gearset,1,1,0,0,0,0
 2026-06-01,2026-06-30,no,/customer-stories/a-leading-industrial-enterprise-opsera-driving-real-value-with-copilot-insights,1,0,0,0,0,12
@@ -445,7 +444,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-30,no,/events/2025-dora-webinar,1,0,0,0,0,29
 2026-06-01,2026-06-30,no,/events/agentforce-world-tour-mumbai,1,1,0,0,0,0
 2026-06-01,2026-06-30,no,/events/aws-reinvent,1,0,0,0,0,19
-2026-06-01,2026-06-30,no,/events/copilot-cursor-claude-code-what-250K-developers-revealed,1,0,0,0,0,0
 2026-06-01,2026-06-30,no,/events/dreamforce,1,0,0,0,0,28
 2026-06-01,2026-06-30,no,/events/meet-the-opsera-appsec-agents-for-ai-builders,1,0,0,0,0,7
 2026-06-01,2026-06-30,no,/feature/et-api,1,0,0,0,0,0

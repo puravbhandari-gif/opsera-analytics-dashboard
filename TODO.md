@@ -33,6 +33,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 ## Dashboard
 
+- [x] Done 25 Nov: average engagement time on Website visits and Content (Yusra); careers pages out of AI tool visits (Aarushi); /forge and /Forge (and other pages split by capital letters) joined; publish tries 3 times; a failed YouTube check skips YouTube only, keeping its last numbers.
 - [x] Done 24 Nov: LinkedIn exports loaded (company page to 22 Nov, Kumar to 24 Nov). New LinkedIn to website tab. One LinkedIn tag rule on every panel (utm_content brand-post, kumar, vishnu). From 25 Nov every post gets its own tag; the tab flags new posts missing a tag or sharing one.
 - [x] Done 24 Nov: for-claude covers every tab and view, and rebuilds on every publish. The Monday Slack post links it for asking Claude.
 - [x] Done 24 Nov: the dashboard's HubSpot key can read companies again, so Who visits updates.

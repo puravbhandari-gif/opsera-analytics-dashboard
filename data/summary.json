@@ -1,5 +1,5 @@
 {
- "written_on": "2026-11-24",
+ "written_on": "2026-11-25",
  "views": {
   "week": {
    "period": "16 to 22 Nov 2026",
@@ -192,15 +192,15 @@
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "44",
-      "cur": 44,
-      "prev": 26,
-      "before": "26",
-      "change_pct": 69.2,
+      "value": "39",
+      "cur": 39,
+      "prev": 23,
+      "before": "23",
+      "change_pct": 69.6,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "Gemini sent the most: 20 of 44.",
+     "why": "Gemini sent the most: 20 of 39.",
      "do": null,
      "trend": [
       {
@@ -213,19 +213,19 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 37
+       "value": 33
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 37
+       "value": 32
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 26
+       "value": 23
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 44
+       "value": 39
       }
      ]
     },
@@ -269,11 +269,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "1,404",
-      "cur": 1404,
-      "prev": 1155,
-      "before": "1,155",
-      "change_pct": 21.6,
+      "value": "1,411",
+      "cur": 1411,
+      "prev": 1161,
+      "before": "1,161",
+      "change_pct": 21.5,
       "good": true,
       "min_change_pct": 15
      },
@@ -286,7 +286,7 @@
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 731
+       "value": 733
       },
       {
        "week": "26 Oct to 1 Nov 2026",
@@ -294,15 +294,15 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1075
+       "value": 1076
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1155
+       "value": 1161
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 1404
+       "value": 1411
       }
      ]
     },
@@ -634,8 +634,8 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "10,687",
-      "cur": 10687,
+      "value": "10,685",
+      "cur": 10685,
       "prev": 10366,
       "before": "10,366",
       "change_pct": 3.1,
@@ -677,8 +677,8 @@
      "tab": "search",
      "source": "Search Console",
      "note": null,
-     "period": "1 to 22 Nov 2026",
-     "period_before": "1 to 22 Oct 2026",
+     "period": "1 to 23 Nov 2026",
+     "period_before": "1 to 23 Oct 2026",
      "notable": false,
      "main": null,
      "why": null,
@@ -697,15 +697,15 @@
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "115",
-      "cur": 115,
+      "value": "102",
+      "cur": 102,
       "prev": 69,
       "before": "69",
-      "change_pct": 66.7,
+      "change_pct": 47.8,
       "good": true,
       "min_change_pct": 15
      },
-     "why": "ChatGPT sent the most: 59 of 115.",
+     "why": "ChatGPT sent the most: 46 of 102.",
      "do": null,
      "trend": [
       {
@@ -718,19 +718,19 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 37
+       "value": 33
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 37
+       "value": 32
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 26
+       "value": 23
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 44
+       "value": 39
       }
      ]
     },
@@ -809,11 +809,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "3,929",
-      "cur": 3929,
-      "prev": 2624,
-      "before": "2,624",
-      "change_pct": 49.7,
+      "value": "3,943",
+      "cur": 3943,
+      "prev": 2626,
+      "before": "2,626",
+      "change_pct": 50.2,
       "good": true,
       "min_change_pct": 15
      },
@@ -826,7 +826,7 @@
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 731
+       "value": 733
       },
       {
        "week": "26 Oct to 1 Nov 2026",
@@ -834,15 +834,15 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1075
+       "value": 1076
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1155
+       "value": 1161
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 1404
+       "value": 1411
       }
      ]
     },
@@ -964,7 +964,7 @@
     "well": [
      "Meetings booked with marketing contacts up 166.7%",
      "Long video views up 78.8%",
-     "Visits from AI tools up 66.7%"
+     "Content page visits up 50.2%"
     ],
     "attention": [
      "Marketing sourced deals (estimate) down 75%",
@@ -1321,8 +1321,8 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "8,288",
-      "cur": 8288,
+      "value": "8,290",
+      "cur": 8290,
       "prev": 6395,
       "before": "6,395",
       "change_pct": 29.6,
@@ -1338,7 +1338,7 @@
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 731
+       "value": 733
       },
       {
        "week": "26 Oct to 1 Nov 2026",
@@ -1346,15 +1346,15 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1075
+       "value": 1076
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1155
+       "value": 1161
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 1404
+       "value": 1411
       }
      ]
     },
@@ -1613,8 +1613,8 @@
      "main": {
       "key": "visits_without_email_robots",
       "label": "Visits without email robots",
-      "value": "34,299",
-      "cur": 34299,
+      "value": "34,297",
+      "cur": 34297,
       "prev": 24379,
       "before": "24,379",
       "change_pct": 40.7,
@@ -1656,17 +1656,17 @@
      "tab": "search",
      "source": "Search Console",
      "note": null,
-     "period": "23 Aug to 22 Nov 2026",
-     "period_before": "23 May to 22 Aug 2026",
+     "period": "24 Aug to 23 Nov 2026",
+     "period_before": "24 May to 23 Aug 2026",
      "notable": true,
      "main": {
       "key": "times_shown",
       "label": "Times Google showed our pages",
-      "value": "1,479,448",
-      "cur": 1479448,
-      "prev": 3404272,
-      "before": "3,404,272",
-      "change_pct": -56.5,
+      "value": "1,474,842",
+      "cur": 1474842,
+      "prev": 3411209,
+      "before": "3,411,209",
+      "change_pct": -56.8,
       "good": false,
       "min_change_pct": 15
      },
@@ -1711,11 +1711,11 @@
      "main": {
       "key": "ai_visits",
       "label": "Visits from AI tools",
-      "value": "309",
-      "cur": 309,
-      "prev": 210,
-      "before": "210",
-      "change_pct": 47.1,
+      "value": "289",
+      "cur": 289,
+      "prev": 201,
+      "before": "201",
+      "change_pct": 43.8,
       "good": true,
       "min_change_pct": 15
      },
@@ -1732,19 +1732,19 @@
       },
       {
        "week": "26 Oct to 1 Nov 2026",
-       "value": 37
+       "value": 33
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 37
+       "value": 32
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 26
+       "value": 23
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 44
+       "value": 39
       }
      ]
     },
@@ -1832,11 +1832,11 @@
      "main": {
       "key": "content_visits",
       "label": "Content page visits",
-      "value": "10,620",
-      "cur": 10620,
+      "value": "10,636",
+      "cur": 10636,
       "prev": 6102,
       "before": "6,102",
-      "change_pct": 74.0,
+      "change_pct": 74.3,
       "good": true,
       "min_change_pct": 15
      },
@@ -1849,7 +1849,7 @@
       },
       {
        "week": "19 to 25 Oct 2026",
-       "value": 731
+       "value": 733
       },
       {
        "week": "26 Oct to 1 Nov 2026",
@@ -1857,15 +1857,15 @@
       },
       {
        "week": "2 to 8 Nov 2026",
-       "value": 1075
+       "value": 1076
       },
       {
        "week": "9 to 15 Nov 2026",
-       "value": 1155
+       "value": 1161
       },
       {
        "week": "16 to 22 Nov 2026",
-       "value": 1404
+       "value": 1411
       }
      ]
     },
@@ -1951,11 +1951,11 @@
    "boxes": {
     "well": [
      "Meetings booked with marketing contacts up 300%",
-     "Content page visits up 74%",
+     "Content page visits up 74.3%",
      "Long video views up 49.1%"
     ],
     "attention": [
-     "Times Google showed our pages down 56.5%"
+     "Times Google showed our pages down 56.8%"
     ],
     "do": []
    }

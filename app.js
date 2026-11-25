@@ -68,6 +68,9 @@ function countUp(root) {
   });
 }
 
+// Seconds as "1m 05s" or "45s": Google Analytics' engagement time (25 Nov 2026)
+const dur = (v) => (v == null || !isFinite(v) ? "-" : v >= 60 ? `${Math.floor(v / 60)}m ${String(Math.round(v % 60)).padStart(2, "0")}s` : `${Math.round(v)}s`);
+
 function card(label, value, sub = "", extra = "") {
   return `<div class="card"><div class="label">${label}</div><div class="value">${value}</div>${extra}${sub ? `<div class="sub">${sub}</div>` : ""}</div>`;
 }
@@ -619,7 +622,8 @@ function renderVisits(d) {
     card("All visits", num(t.sessions), "Includes robots") +
     card("Engaged visits", num(t.engagedSessions), "Stayed 10+ seconds, saw 2+ pages, or filled a form") +
     card("Visits from email", num(email ? email.sessions : 0), email ? `${pct((email.engagedSessions / email.sessions) * 100, 0)} engaged` : "") +
-    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1));
+    card("Share who engaged", pct((t.engagedSessions / t.sessions) * 100, 1)) +
+    (t.userEngagementDuration != null ? card("Average engagement time per visit", dur(t.userEngagementDuration / t.sessions), "Time the page was in front of people, Google Analytics") : "");
   $("visits-more-cards").innerHTML = card("People visiting", num(t.totalUsers), "Includes robots");
   $("visits-more-source").textContent = `${src}, ${when}.`;
 
@@ -676,9 +680,10 @@ function renderVisits(d) {
     ] });
 
   $("visits-pages-source").textContent = `${src}, ${when}.`;
-  table($("visits-pages"), { rows: d.pages, search: "pages", sortKey: "views", columns: [
+  table($("visits-pages"), { rows: d.pages.map((r) => ({ ...r, avgTime: r.engagement_seconds != null && r.views ? r.engagement_seconds / r.views : null })), search: "pages", sortKey: "views", columns: [
     { key: "page", label: "Page", search: true, fmt: opseraLink },
     { key: "views", label: "Times viewed", num: true, fmt: num },
+    { key: "avgTime", label: "Average engagement time per view", num: true, fmt: dur },
   ] });
 
   const all = rangeSum(d.daily, "sessions"), engaged = rangeSum(d.daily, "engagedSessions");
@@ -690,6 +695,9 @@ function renderVisits(d) {
       { label: "Engaged visits", value: engaged, fmt: num, sub: "Stayed 10+ seconds, saw 2+ pages, or filled a form" },
       { label: "Visits from email", value: rangeSum(emailRows, "visits"), fmt: num },
       { label: "Share who engaged", value: (a, b) => (all(a, b) ? (engaged(a, b) / all(a, b)) * 100 : null), fmt: (v) => pct(v, 1), whole: false, yfmt: (v) => `${v}%` },
+      ...(d.daily.some((r) => r.userEngagementDuration != null) ? [{ label: "Average engagement time per visit",
+        value: (a, b) => (all(a, b) ? rangeSum(d.daily, "userEngagementDuration")(a, b) / all(a, b) : null), fmt: dur, whole: false, yfmt: (v) => dur(v),
+        sub: (a, b) => `Time the page was in front of people, over all visits, as Google Analytics counts it. Without email robots: ${dur(rangeSum(d.daily, "userEngagementDuration")(a, b) / Math.max(1, all(a, b) - robots(a, b)))}` }] : []),
     ] });
 }
 
@@ -3127,6 +3135,10 @@ function renderContent(d, hub) {
     (d.newsletter_robots || []).forEach((r) => { if (r[0] >= a && r[0] <= b) { const s2 = row(r[1]); s2.visits -= r[3];
       const ch = channelName(d.channels[r[2]]); s2.from[ch] = (s2.from[ch] || 0) - r[3]; } });
     d.forms.forEach((r) => { if (r[0] >= a && r[0] <= b) row(r[1]).forms += r[3]; });
+    // engagement time on the page itself: seconds in front of people, over times viewed (25 Nov 2026)
+    (d.page_time || []).forEach((r) => { if (r[0] >= a && r[0] <= b) { const s2 = row(r[1]); s2.secs = (s2.secs || 0) + r[2]; s2.views = (s2.views || 0) + r[3]; } });
+    // newsletter link checkers open each page once and spend no time on it, so their views come off too (like their visits)
+    (d.newsletter_robots || []).forEach((r) => { if (r[0] >= a && r[0] <= b && stats[r[1]] && stats[r[1]].views) stats[r[1]].views = Math.max(1, stats[r[1]].views - r[3]); });
     d.gsc.forEach((r) => { if (r[0] >= ga && r[0] <= gb) row(r[1]).clicks += r[2]; });
     // deals by the month they were created: every month the period touches
     const months = new Set();
@@ -3142,6 +3154,7 @@ function renderContent(d, hub) {
         .map(([name, n]) => `${name.replace(/ \(.*\)$/, "")} ${Math.round((n / s2.visits) * 100)}%`).join(", ");
       const title = d.titles[x.i] && !/^page not found/i.test(d.titles[x.i]) ? d.titles[x.i].replace(/\s*[-—|]\s*Opsera\s*$/i, "") : x.path;
       return { kind: x.type[1], title, path: x.path, find: `${title} ${x.path}`, visits: s2.visits, engaged: s2.engaged, clicks: s2.clicks, from: top || "-",
+        avgTime: s2.views ? s2.secs / s2.views : null,
         forms: s2.forms, formsLabel: asset(x.path) ? "downloads" : "form fills", deals: dl.length, dealsAll: dlAll.length,
         dealSort: dlAll.reduce((t2, z) => t2 + z.amount, 0) * 1000 + dl.length,   // sorts by deals since 1 Apr, then this period
         dealText: `This period: ${dealWords(dl)}. Since ${day(hub.start_date)}: ${dealWords(dlAll)}` };
@@ -3153,6 +3166,7 @@ function renderContent(d, hub) {
       { key: "find", label: "Piece", search: true, fmt: (v, r) => `<a href="https://opsera.ai${encodeURI(r.path)}" target="_blank" rel="noopener">${esc(r.title)}</a><br><small class="muted">${esc(r.kind)}: ${esc(r.path)}</small>` },
       { key: "visits", label: "Visits", num: true, fmt: num },
       { key: "engaged", label: "Engaged visits", num: true, fmt: num },
+      { key: "avgTime", label: "Average engagement time per view", num: true, fmt: dur },
       { key: "clicks", label: "Google clicks", num: true, fmt: num },
       { key: "from", label: "Where visits came from", sort: false },
       { key: "forms", label: "Downloads or form fills", num: true, fmt: num },

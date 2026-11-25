@@ -53,7 +53,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-12,2026-10-18,no,/partners/google-cloud,2,0,0,0,0,3
 2026-10-12,2026-10-18,no,/partners/lineaje,2,0,0,0,0,79
 2026-10-12,2026-10-18,no,/partners/mindtree,2,1,0,0,0,20
-2026-10-12,2026-10-18,no,/wp-content/uploads/2026/09/Headless-DevOps-Product-Demo.mp4,2,2,0,0,0,0
+2026-10-12,2026-10-18,no,/wp-content/uploads/2026/09/headless-devops-product-demo.mp4,2,2,0,0,0,0
 2026-10-12,2026-10-18,no,/wp-json/wp/v2/ecosystem/1747,2,0,0,0,0,0
 2026-10-12,2026-10-18,no,/wp-json/wp/v2/posts/9363,2,0,0,0,0,0
 2026-10-12,2026-10-18,no,/agents/vibeshift,1,0,0,0,1,24
@@ -94,8 +94,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-12,2026-10-18,no,/solutions/copilot-dashboard,1,0,0,0,0,71
 2026-10-12,2026-10-18,no,/solutions/gitcustodian,1,1,0,0,1,33
 2026-10-12,2026-10-18,no,/solutions/scm-migration,1,0,0,0,0,23
-2026-10-12,2026-10-18,no,/wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_Aruna20Pattabiraman-150x150.jpg,1,1,0,0,0,0
-2026-10-12,2026-10-18,no,/wp-content/uploads/2025/02/679bc8a0435bb1ef75ebfa19_Sowmia-Lakshmi-Ranganathan-150x150.png,1,0,0,0,0,0
+2026-10-12,2026-10-18,no,/wp-content/uploads/2025/02/60af4e74687b3b04d4105b37_aruna20pattabiraman-150x150.jpg,1,1,0,0,0,0
+2026-10-12,2026-10-18,no,/wp-content/uploads/2025/02/679bc8a0435bb1ef75ebfa19_sowmia-lakshmi-ranganathan-150x150.png,1,0,0,0,0,0
 2026-10-12,2026-10-18,no,/wp-json/wp/v2/career/1525,1,0,0,0,0,0
 2026-10-12,2026-10-18,no,/wp-json/wp/v2/customer-story/1464,1,0,0,0,0,0
 2026-10-12,2026-10-18,no,/wp-json/wp/v2/customer-story/5082,1,0,0,0,0,0

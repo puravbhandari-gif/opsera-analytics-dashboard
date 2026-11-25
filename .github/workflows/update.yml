@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.page_url || steps.deploy2.outputs.page_url || steps.deploy3.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -69,11 +69,18 @@ jobs:
           python -m pip install -q -r requirements.txt
           python scripts/fetch_data.py
 
-      - name: Pull numbers from YouTube
+      # Optional (agreed 25 Nov 2026): a YouTube check that doesn't add up (as on 23 Nov 2026) skips YouTube only. The script writes
+      # data/youtube.json only after every check passes, so YouTube keeps its last numbers and the rest of the update carries on.
+      - name: Pull numbers from YouTube (optional)
+        id: youtube
         if: github.event_name != 'push'
+        continue-on-error: true
         env:
           YOUTUBE_TOKEN: ${{ secrets.YOUTUBE_TOKEN }}
         run: python scripts/fetch_youtube.py
+      - name: Say so if YouTube was skipped
+        if: github.event_name != 'push' && steps.youtube.outcome == 'failure'
+        run: echo "::warning title=YouTube skipped::YouTube's check failed (see the step above), so YouTube keeps its last numbers. Everything else updated as usual."
 
       # Optional: if HUBSPOT_TOKEN is missing or HubSpot fails, only HubSpot is skipped.
       - name: Pull contacts, meetings and deals from HubSpot (optional)
@@ -217,8 +224,22 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      # GitHub sometimes can't find the upload for a moment ("No artifacts named github-pages"), and a re-run always fixed it.
+      # So the deploy tries up to 3 times, waiting in between, before the run fails (agreed 25 Nov 2026).
       - id: deploy
         if: steps.newest.outputs.publish == 'true'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - if: steps.newest.outputs.publish == 'true' && steps.deploy.outcome == 'failure'
+        run: sleep 45
+      - id: deploy2
+        if: steps.newest.outputs.publish == 'true' && steps.deploy.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - if: steps.newest.outputs.publish == 'true' && steps.deploy2.outcome == 'failure'
+        run: sleep 90
+      - id: deploy3
+        if: steps.newest.outputs.publish == 'true' && steps.deploy2.outcome == 'failure'
         uses: actions/deploy-pages@v4
 
       # Optional, Monday runs (or a run started with a slack_week): once the page is live, post the top numbers to #core-marketing-team.

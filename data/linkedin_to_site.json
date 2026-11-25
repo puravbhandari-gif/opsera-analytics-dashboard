@@ -1,8 +1,8 @@
 {
  "source": "Google Analytics for visits and pages, LinkedIn exports for times seen and clicks, LinkedIn posts read with Apify for links",
- "start_date": "2026-07-26",
- "end_date": "2026-11-23",
- "pulled_at": "2026-11-24T15:09Z",
+ "start_date": "2026-07-27",
+ "end_date": "2026-11-24",
+ "pulled_at": "2026-11-25T05:50Z",
  "tags_from": {
   "brand": "2026-10-27",
   "kumar": "2026-11-17"
@@ -21,38 +21,6 @@
   "kumar": "2026-11-24"
  },
  "landed": [
-  [
-   "2026-07-26",
-   "ads",
-   "",
-   "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-   3,
-   0
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/careers/devops-evangelist",
-   1,
-   0
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/careers/pre-sales-solution-engineer",
-   11,
-   9
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/job-application",
-   1,
-   1
-  ],
   [
    "2026-07-27",
    "ads",
@@ -4401,7 +4369,7 @@
    "2026-11-23",
    "vishnu",
    "forge-security-launch / vishnu",
-   "/",
+   "(not set)",
    1,
    0
   ],
@@ -4412,44 +4380,25 @@
    "/agentic-devops",
    1,
    1
+  ],
+  [
+   "2026-11-24",
+   "unknown",
+   "",
+   "/blog/software-factory-pattern",
+   1,
+   0
+  ],
+  [
+   "2026-11-24",
+   "unknown",
+   "",
+   "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+   1,
+   0
   ]
  ],
  "opened": [
-  [
-   "2026-07-26",
-   "ads",
-   "",
-   "/resources/report/opsera-named-a-leader-in-the-2026-gartner-magic-quadrant-for-developer-productivity-insight-platforms",
-   3
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/",
-   1
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/careers/devops-evangelist",
-   2
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/careers/pre-sales-solution-engineer",
-   11
-  ],
-  [
-   "2026-07-26",
-   "unknown",
-   "",
-   "/job-application",
-   7
-  ],
   [
    "2026-07-27",
    "ads",
@@ -11624,6 +11573,20 @@
    "forge-security-launch / vishnu",
    "/software-factory",
    2
+  ],
+  [
+   "2026-11-24",
+   "unknown",
+   "",
+   "/blog/software-factory-pattern",
+   1
+  ],
+  [
+   "2026-11-24",
+   "unknown",
+   "",
+   "/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success",
+   1
   ]
  ],
  "steps": [

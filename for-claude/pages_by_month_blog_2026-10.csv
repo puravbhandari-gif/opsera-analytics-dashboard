@@ -6,7 +6,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/blog/spec-driven-development,122,34,0,0,48,5639
 2026-10-01,2026-10-31,no,/blog/dora-2025-report-ai-software-development,100,6,0,0,12,12766
 2026-10-01,2026-10-31,no,/blog/what-is-agentic-devops,97,38,0,0,48,2993
-2026-10-01,2026-10-31,no,/blog/ai-sdlc,85,25,0,0,36,5272
+2026-10-01,2026-10-31,no,/blog/ai-sdlc,85,25,0,0,36,5273
 2026-10-01,2026-10-31,no,/blog/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,78,7,0,0,16,4799
 2026-10-01,2026-10-31,no,/blog/all-you-need-to-know-about-ci-cd-pipeline,64,23,0,0,19,30792
 2026-10-01,2026-10-31,no,/blog/cursor-ai-adoption-trends-real-data-from-the-fastest-growing-coding-tool,62,12,0,0,7,3437
@@ -163,7 +163,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/blog/2022-recap-opsera-year-3,2,0,0,0,1,97
 2026-10-01,2026-10-31,no,/blog/2022-trends-the-no-code-devops-orchestration-boom,2,1,0,0,0,3
 2026-10-01,2026-10-31,no,/blog/3-devops-predictions-for-2024,2,0,0,0,0,16
-2026-10-01,2026-10-31,no,/blog/Ny1iZXN0LX,2,1,0,0,0,0
 2026-10-01,2026-10-31,no,/blog/a-day-with-opseras-devops-ai-assistant-your-ai-powered-devsecops-ally,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/blog/a-devops-journey-wisdom-from-the-special-operations-community,2,0,0,0,0,14
 2026-10-01,2026-10-31,no,/blog/adopting-no-code-devops-a-more-effective-devops-team,2,0,0,0,0,27
@@ -179,6 +178,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/blog/how-opsera-appsec-agents-stop-npm-supply-chain-attacks-before-they-hit-your-build,2,0,0,0,0,2
 2026-10-01,2026-10-31,no,/blog/how-the-collaboration-between-ciso-and-engineering-is-disrupting-the-software-industry,2,0,0,0,0,13
 2026-10-01,2026-10-31,no,/blog/i-get-devops-but-what-is-devsecops,2,0,0,0,0,0
+2026-10-01,2026-10-31,no,/blog/ny1izxn0lx,2,1,0,0,0,0
 2026-10-01,2026-10-31,no,/blog/opsera-2021-recap,2,0,0,0,1,186
 2026-10-01,2026-10-31,no,/blog/opsera-announces-partnership-with-mindtree-to-accelerate-devops-initiatives,2,0,0,0,0,16
 2026-10-01,2026-10-31,no,/blog/opsera-integrates-with-octopus-to-bring-you-no-code-orchestration-for-faster-safer-deployments,2,0,0,0,0,30

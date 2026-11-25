@@ -163,8 +163,8 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-vs-cursor,3,1,0,0,2,336
 2026-08-24,2026-08-30,no,/knowledge-base/incident-analysis/repeat-incident-rate,3,1,0,0,1,204
 2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/amazon-q-developer,2,0,0,0,1,1178
-2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained/:B<b>Cursor,2,0,0,0,0,0
-2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained/:B<b>Cursor</b,2,0,0,0,0,0
+2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained/:b<b>cursor,2,0,0,0,0,0
+2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/cursor-ai-explained/:b<b>cursor</b,2,0,0,0,0,0
 2026-08-24,2026-08-30,no,/knowledge-base/incident-analysis/incident-frequency,2,0,0,0,0,26
 2026-08-24,2026-08-30,no,/knowledge-base/ai-code-assistant-analytics/github-copilot-vs-cursor,1,0,0,0,0,1417
 2026-08-24,2026-08-30,no,/knowledge-base/core-devex-metrics/dora-vs-space-metrics-key-differences-use-cases-and-when-to-use-each-framework,1,0,0,0,0,43

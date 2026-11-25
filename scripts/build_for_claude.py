@@ -161,11 +161,13 @@ def main():
         # Website visits
         email = [{"date": r["date"], "v": r["sessions"]} for r in ga["channel_daily"] if r["sessionDefaultChannelGroup"] == "Email"]
         robots = ga.get("email_robots_daily", [])
-        write(f"website_visits_by_{kind}", PERIOD_HEAD + ["visits", "visits_without_email_robots", "engaged_visits", "visits_from_email"],
+        per_visit = lambda p: (round(total(ga["daily"], "userEngagementDuration", p["start"], p["end"]) / total(ga["daily"], "sessions", p["start"], p["end"]), 1)
+                               if total(ga["daily"], "sessions", p["start"], p["end"]) and "userEngagementDuration" in ga["daily"][0] else "")
+        write(f"website_visits_by_{kind}", PERIOD_HEAD + ["visits", "visits_without_email_robots", "engaged_visits", "visits_from_email", "average_engagement_seconds_per_visit"],
               [period_cols(p) + [total(ga["daily"], "sessions", p["start"], p["end"]),
                                  total(ga["daily"], "sessions", p["start"], p["end"]) - total(robots, "robots", p["start"], p["end"]),
-                                 total(ga["daily"], "engagedSessions", p["start"], p["end"]), total(email, "v", p["start"], p["end"])] for p in ps],
-              f"Website visits tab, by {kind}. Source: Google Analytics")
+                                 total(ga["daily"], "engagedSessions", p["start"], p["end"]), total(email, "v", p["start"], p["end"]), per_visit(p)] for p in ps],
+              f"Website visits tab, by {kind}. Average engagement time is the seconds a page was in front of people, over all visits (robots included). Source: Google Analytics")
         groups = sorted({r["sessionDefaultChannelGroup"] for r in ga["channel_daily"]})
         write(f"visit_sources_by_{kind}", PERIOD_HEAD + ["came_from", "visits", "engaged_visits"],
               [period_cols(p) + [GA_GROUPS.get(g, g), total(ga["channel_daily"], "sessions", p["start"], p["end"], lambda r: r["sessionDefaultChannelGroup"] == g),

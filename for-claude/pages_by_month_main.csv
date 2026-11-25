@@ -1,7 +1,7 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
 2026-04-01,2026-04-30,no,/,1978,1333,0,0,898,15921
 2026-04-01,2026-04-30,no,(not set),865,35,0,0,0,0
-2026-04-01,2026-04-30,no,/agents,444,178,0,0,20,1250
+2026-04-01,2026-04-30,no,/agents,445,178,0,0,20,1250
 2026-04-01,2026-04-30,no,/careers,165,136,0,0,78,3060
 2026-04-01,2026-04-30,no,/about,85,55,0,0,44,4554
 2026-04-01,2026-04-30,no,/demo,56,30,8,0,0,53
@@ -33,13 +33,12 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-01,2026-04-30,no,/contact-us,2,2,0,0,0,0
 2026-04-01,2026-04-30,no,/help,2,0,0,0,0,0
 2026-04-01,2026-04-30,no,/mckesson,2,1,0,0,0,0
-2026-04-01,2026-04-30,no,/AGENTS,1,0,0,0,0,0
-2026-04-01,2026-04-30,no,/FhLaYkhnizXrtJQ,1,0,0,0,0,0
 2026-04-01,2026-04-30,no,/agents...documentation,1,1,0,0,0,0
 2026-04-01,2026-04-30,no,/ai-coding-impact-2026-benchmark-report,1,1,0,0,0,0
 2026-04-01,2026-04-30,no,/case-studies,1,0,0,0,0,0
 2026-04-01,2026-04-30,no,/compliance,1,0,0,0,0,0
 2026-04-01,2026-04-30,no,/devops-huddle,1,0,0,0,1,102
+2026-04-01,2026-04-30,no,/fhlaykhnizxrtjq,1,0,0,0,0,0
 2026-04-01,2026-04-30,no,/knowledge-base,1,1,0,0,0,5
 2026-04-01,2026-04-30,no,/lander,1,1,0,0,0,0
 2026-04-01,2026-04-30,no,/novartis,1,0,0,0,0,0
@@ -52,7 +51,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-01,2026-04-30,no,/partner-opportunity-reg,0,0,1,0,0,0
 2026-05-01,2026-05-31,no,/,2504,1470,0,0,862,15842
 2026-05-01,2026-05-31,no,(not set),843,20,0,0,0,0
-2026-05-01,2026-05-31,no,/agents,678,174,0,0,35,1805
+2026-05-01,2026-05-31,no,/agents,679,174,0,0,35,1805
 2026-05-01,2026-05-31,no,/careers,157,132,0,0,74,3882
 2026-05-01,2026-05-31,no,/about,122,82,0,0,63,4632
 2026-05-01,2026-05-31,no,/job-application,86,73,0,0,2,310
@@ -94,7 +93,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-01,2026-05-31,no,/security,2,0,0,0,0,0
 2026-05-01,2026-05-31,no,/terms-of-service,2,1,0,0,1,366
 2026-05-01,2026-05-31,no,/ty-event-registration,2,0,0,0,0,0
-2026-05-01,2026-05-31,no,/AGENTS,1,0,0,0,0,0
 2026-05-01,2026-05-31,no,/abbvie,1,1,0,0,0,0
 2026-05-01,2026-05-31,no,/agents-v2,1,1,0,0,0,0
 2026-05-01,2026-05-31,no,/agents...build,1,1,0,0,0,0
@@ -160,7 +158,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-30,no,/services,2,0,0,0,0,0
 2026-06-01,2026-06-30,no,/terms-of-service,2,2,0,0,1,580
 2026-06-01,2026-06-30,no,/ty-demo,2,0,0,0,0,10
-2026-06-01,2026-06-30,no,/ Agentic DevOps for AI-DLC and SDLC | Orchestrate at Scale | Opsera Accelerate AI Deployments: Agentic DevOps with Built-in Governance and Engineering Intelligence,1,1,0,0,0,0
+2026-06-01,2026-06-30,no,/ agentic devops for ai-dlc and sdlc | orchestrate at scale | opsera accelerate ai deployments: agentic devops with built-in governance and engineering intelligence,1,1,0,0,0,0
 2026-06-01,2026-06-30,no,/2,1,0,0,0,0,0
 2026-06-01,2026-06-30,no,/about-us,1,0,0,0,0,0
 2026-06-01,2026-06-30,no,/agentsopse,1,1,0,0,0,0
@@ -336,7 +334,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-09-01,2026-09-30,no,/demo-built-in-security-for-ai-code,1,0,0,0,0,11
 2026-09-01,2026-09-30,no,/devsecops,1,0,0,0,0,0
 2026-09-01,2026-09-30,no,/hummingbird-ai,1,0,0,0,0,0
-2026-09-01,2026-09-30,no,/jAjsyxdytpjstrnhx-ymj-hzwwjshD-tk-jsyjwuwnxj-fnd,1,1,0,0,0,0
+2026-09-01,2026-09-30,no,/jajsyxdytpjstrnhx-ymj-hzwwjshd-tk-jsyjwuwnxj-fnd,1,1,0,0,0,0
 2026-09-01,2026-09-30,no,/kontakt,1,0,0,0,0,0
 2026-09-01,2026-09-30,no,/news,1,0,0,0,0,0
 2026-09-01,2026-09-30,no,/o-nas,1,0,0,0,0,0
@@ -411,11 +409,11 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/zoominfo-demo,2,0,0,0,0,0
 2026-10-01,2026-10-31,no,/ pitchbook,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/6fe574f7-0746-4503-9189-787bb365ea24,1,0,0,0,0,0
-2026-10-01,2026-10-31,no,/Databricks,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/affiliates,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/awards,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/ci-cd-pipeline,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,"/contact,",1,0,0,0,0,0
+2026-10-01,2026-10-31,no,/databricks,1,1,0,0,0,0
 2026-10-01,2026-10-31,no,/doc-ops,1,0,0,0,0,0
 2026-10-01,2026-10-31,no,/docs,1,0,0,0,0,5
 2026-10-01,2026-10-31,no,/dzone-cicd-trend-report-2021,1,0,0,0,0,0
@@ -439,29 +437,28 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-10-01,2026-10-31,no,/flutter-2026-ai-sdlc-summit,0,0,0,0,38,158
 2026-10-01,2026-10-31,no,/github-universe-happy-hour,0,0,3,0,0,0
 2026-10-01,2026-10-31,no,/resource-hub,0,0,0,0,1,29
-2026-11-01,2026-11-23,yes,/,3276,940,0,0,382,7468
-2026-11-01,2026-11-23,yes,/php2shell,1383,161,5,0,3,53
-2026-11-01,2026-11-23,yes,/forge,806,159,0,0,65,2112
-2026-11-01,2026-11-23,yes,/demo,557,66,9,0,1,717
-2026-11-01,2026-11-23,yes,(not set),504,11,0,0,0,0
-2026-11-01,2026-11-23,yes,/Forge,345,160,0,0,0,0
-2026-11-01,2026-11-23,yes,/careers,337,177,0,0,38,1811
-2026-11-01,2026-11-23,yes,/about,109,45,0,0,28,2418
-2026-11-01,2026-11-23,yes,/unified-insights,100,24,0,0,8,1122
-2026-11-01,2026-11-23,yes,/agentic-devops,77,16,0,0,0,259
-2026-11-01,2026-11-23,yes,/agents,52,20,0,0,6,425
-2026-11-01,2026-11-23,yes,/blog,51,20,0,0,3,1341
-2026-11-01,2026-11-23,yes,/customer-stories,41,18,0,0,1,531
-2026-11-01,2026-11-23,yes,/salesforce-devops,35,11,0,0,5,313
-2026-11-01,2026-11-23,yes,/events,31,12,0,0,3,555
-2026-11-01,2026-11-23,yes,/partners,26,7,2,0,3,308
-2026-11-01,2026-11-23,yes,/software-factory,25,11,0,0,3,117
-2026-11-01,2026-11-23,yes,/pricing,22,4,0,0,6,1621
-2026-11-01,2026-11-23,yes,/newsroom,19,5,0,0,0,555
-2026-11-01,2026-11-23,yes,/brickforge,18,7,0,0,3,295
+2026-11-01,2026-11-23,yes,/,3245,942,0,0,406,7690
+2026-11-01,2026-11-23,yes,/php2shell,1383,161,5,0,3,57
+2026-11-01,2026-11-23,yes,/forge,1151,319,0,0,68,2223
+2026-11-01,2026-11-23,yes,/demo,557,66,9,0,1,739
+2026-11-01,2026-11-23,yes,(not set),535,11,0,0,0,0
+2026-11-01,2026-11-23,yes,/careers,337,177,0,0,40,1869
+2026-11-01,2026-11-23,yes,/about,109,45,0,0,29,2473
+2026-11-01,2026-11-23,yes,/unified-insights,100,24,0,0,9,1250
+2026-11-01,2026-11-23,yes,/agentic-devops,77,16,0,0,0,278
+2026-11-01,2026-11-23,yes,/agents,52,20,0,0,6,430
+2026-11-01,2026-11-23,yes,/blog,51,20,0,0,3,1383
+2026-11-01,2026-11-23,yes,/customer-stories,41,18,0,0,1,537
+2026-11-01,2026-11-23,yes,/salesforce-devops,35,11,0,0,5,321
+2026-11-01,2026-11-23,yes,/events,31,12,0,0,3,575
+2026-11-01,2026-11-23,yes,/partners,26,7,2,0,3,317
+2026-11-01,2026-11-23,yes,/software-factory,25,11,0,0,3,123
+2026-11-01,2026-11-23,yes,/pricing,22,4,0,0,6,1659
+2026-11-01,2026-11-23,yes,/newsroom,19,5,0,0,0,564
+2026-11-01,2026-11-23,yes,/brickforge,18,7,0,0,3,298
 2026-11-01,2026-11-23,yes,/internal-developer-portal,16,0,0,0,0,0
-2026-11-01,2026-11-23,yes,/resources,16,7,0,0,4,1996
-2026-11-01,2026-11-23,yes,/terms-of-service,14,6,0,0,0,152
+2026-11-01,2026-11-23,yes,/resources,16,7,0,0,4,2062
+2026-11-01,2026-11-23,yes,/terms-of-service,14,6,0,0,0,157
 2026-11-01,2026-11-23,yes,/ai-coding-impact-2026,10,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/developer-experience,9,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/privacy,9,2,0,0,0,97
@@ -473,12 +470,12 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/scm-migration,6,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/target,6,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/devops-huddle,5,0,0,0,0,35
-2026-11-01,2026-11-23,yes,/knowledge-base,4,0,0,0,2,405
+2026-11-01,2026-11-23,yes,/knowledge-base,4,0,0,0,2,414
 2026-11-01,2026-11-23,yes,/opsera-devsecops,4,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/roi-calculator,4,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/security,4,2,0,0,0,0
 2026-11-01,2026-11-23,yes,/gartner,3,1,0,0,0,0
-2026-11-01,2026-11-23,yes,/gartner-symposium,3,1,0,0,0,83
+2026-11-01,2026-11-23,yes,/gartner-symposium,3,1,0,0,1,84
 2026-11-01,2026-11-23,yes,/gitcustodiandownload-thankyou,3,0,0,0,0,0
 2026-11-01,2026-11-23,yes,/request-demo,3,1,0,0,0,0
 2026-11-01,2026-11-23,yes,/1,2,0,0,0,0,0
@@ -510,7 +507,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-11-01,2026-11-23,yes,/api-reference,0,0,0,0,1,28
 2026-11-01,2026-11-23,yes,/cursor-plugin,0,0,0,0,1,5
 2026-11-01,2026-11-23,yes,/governance,0,0,0,0,3,48
-2026-11-01,2026-11-23,yes,/how-it-works,0,0,0,0,1,34
+2026-11-01,2026-11-23,yes,/how-it-works,0,0,0,0,1,35
 2026-11-01,2026-11-23,yes,/marketplace,0,0,0,0,1,12
-2026-11-01,2026-11-23,yes,/opsera-agent-portal,0,0,0,0,1,62
+2026-11-01,2026-11-23,yes,/opsera-agent-portal,0,0,0,0,1,65
 2026-11-01,2026-11-23,yes,/ty-demo,0,0,0,0,1,5

@@ -13,7 +13,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-08-01,2026-08-31,no,/platform/hummingbird-ai,22,8,0,0,22,2824
 2026-08-01,2026-08-31,no,/ecosystem/gitlab-scm,20,5,0,0,1,512
 2026-08-01,2026-08-31,no,/ecosystem/git,19,6,0,0,1,679
-2026-08-01,2026-08-31,no,/wp-content/uploads/2025/12/A-Fortune-500-Manufacturer-Opsera-Turning-Deployment-Speed-Into-Reliable-Business-Outcomes.pdf,19,1,0,0,0,0
+2026-08-01,2026-08-31,no,/wp-content/uploads/2025/12/a-fortune-500-manufacturer-opsera-turning-deployment-speed-into-reliable-business-outcomes.pdf,19,1,0,0,0,0
 2026-08-01,2026-08-31,no,/ecosystem/sonatype-nexus,18,10,0,0,3,1852
 2026-08-01,2026-08-31,no,/solutions/salesforce-devops-platform,18,8,0,0,10,2212
 2026-08-01,2026-08-31,no,/solutions/sdlc,18,11,0,0,11,2579
@@ -105,6 +105,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-08-01,2026-08-31,no,/ecosystem/tekton,2,0,0,0,0,25
 2026-08-01,2026-08-31,no,/ecosystem/xunit-net,2,1,0,0,0,2
 2026-08-01,2026-08-31,no,/ecosystem/zookeeper,2,0,0,0,0,0
+2026-08-01,2026-08-31,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,2,0,0,0,0,15
 2026-08-01,2026-08-31,no,/for/crowdstrike,2,1,0,0,0,0
 2026-08-01,2026-08-31,no,/for/f5,2,0,0,0,0,0
 2026-08-01,2026-08-31,no,/for/fivetran,2,0,0,0,0,0
@@ -158,8 +159,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-08-01,2026-08-31,no,/ecosystem/teamcity,1,0,0,0,0,0
 2026-08-01,2026-08-31,no,/ecosystem/terrascan,1,0,0,0,1,196
 2026-08-01,2026-08-31,no,/events/2025-dora-webinar,1,1,0,0,0,20
-2026-08-01,2026-08-31,no,/events/copilot-cursor-claude-code-what-250K-developers-revealed,1,0,0,0,0,0
-2026-08-01,2026-08-31,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,1,0,0,0,0,15
 2026-08-01,2026-08-31,no,/events/dreamforce-2026,1,1,0,0,0,0
 2026-08-01,2026-08-31,no,/events/meet-the-opsera-appsec-agents-for-ai-builders,1,0,0,0,0,23
 2026-08-01,2026-08-31,no,/events/operationalized-productivity-scaling-and-governing-the-ai-dlc-with-amazon-q-and-opsera,1,0,0,0,0,26

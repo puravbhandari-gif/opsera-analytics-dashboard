@@ -43,7 +43,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-01,2026-06-07,no,/ecosystem/grafana,1,1,0,0,1,15
 2026-06-01,2026-06-07,no,/ecosystem/jmeter,1,0,0,0,0,448
 2026-06-01,2026-06-07,no,/ecosystem/snyk,1,1,0,0,0,290
-2026-06-01,2026-06-07,no,/events/copilot-cursor-claude-code-what-250K-developers-revealed,1,0,0,0,0,0
+2026-06-01,2026-06-07,no,/events/copilot-cursor-claude-code-what-250k-developers-revealed,1,0,0,0,0,3
 2026-06-01,2026-06-07,no,/events/from-ai-adoption-to-ai-driven-business-outcomes-what-to-measure-and-how-to-drive-success,1,0,0,0,0,9
 2026-06-01,2026-06-07,no,/events/the-agentic-future-preparing-your-delivery-pipeline-for-2026,1,1,0,0,0,16
 2026-06-01,2026-06-07,no,/newsroom/opsera-and-cursor-partner-to-embed-autonomous-ai-agents-directly-into-ai-sdlc-workflows-for-next-gen-ai-driven-development,1,1,0,0,0,169

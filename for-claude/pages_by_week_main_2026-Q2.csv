@@ -1,6 +1,6 @@
 period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_visits,form_fills,of_which_asset_downloads,google_clicks,google_times_shown
 2026-04-01,2026-04-05,no,/,202,130,0,0,97,1699
-2026-04-01,2026-04-05,no,/agents,157,32,0,0,3,94
+2026-04-01,2026-04-05,no,/agents,158,32,0,0,3,94
 2026-04-01,2026-04-05,no,(not set),98,2,0,0,0,0
 2026-04-01,2026-04-05,no,/careers,22,17,0,0,10,346
 2026-04-01,2026-04-05,no,/about,7,5,0,0,3,507
@@ -14,11 +14,10 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-04-01,2026-04-05,no,/contact,2,1,2,0,2,70
 2026-04-01,2026-04-05,no,/contact-us,2,2,0,0,0,0
 2026-04-01,2026-04-05,no,/developers,2,0,0,0,1,57
-2026-04-01,2026-04-05,no,/AGENTS,1,0,0,0,0,0
-2026-04-01,2026-04-05,no,/FhLaYkhnizXrtJQ,1,0,0,0,0,0
 2026-04-01,2026-04-05,no,/blog,1,0,0,0,0,17
 2026-04-01,2026-04-05,no,/case-studies,1,0,0,0,0,0
 2026-04-01,2026-04-05,no,/customer-stories,1,1,0,0,1,24
+2026-04-01,2026-04-05,no,/fhlaykhnizxrtjq,1,0,0,0,0,0
 2026-04-01,2026-04-05,no,/gartner,1,1,1,0,0,84
 2026-04-01,2026-04-05,no,/interactive-demo,1,1,0,0,1,24
 2026-04-01,2026-04-05,no,/internal-developer-portal,1,1,0,0,0,82
@@ -197,7 +196,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-04,2026-05-10,no,/terms-of-service,0,0,0,0,1,43
 2026-05-11,2026-05-17,no,/,455,303,0,0,179,3144
 2026-05-11,2026-05-17,no,(not set),179,6,0,0,0,0
-2026-05-11,2026-05-17,no,/agents,131,67,0,0,8,404
+2026-05-11,2026-05-17,no,/agents,132,67,0,0,8,404
 2026-05-11,2026-05-17,no,/careers,36,34,0,0,19,765
 2026-05-11,2026-05-17,no,/about,23,17,0,0,13,1115
 2026-05-11,2026-05-17,no,/job-application,19,18,0,0,1,129
@@ -211,7 +210,6 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-05-11,2026-05-17,no,/demo,2,1,1,0,0,11
 2026-05-11,2026-05-17,no,/developers,2,2,0,0,0,154
 2026-05-11,2026-05-17,no,/resources,2,1,0,0,0,1262
-2026-05-11,2026-05-17,no,/AGENTS,1,0,0,0,0,0
 2026-05-11,2026-05-17,no,/agents-v2,1,1,0,0,0,0
 2026-05-11,2026-05-17,no,/agents...build,1,1,0,0,0,0
 2026-05-11,2026-05-17,no,/contact-us,1,1,0,0,0,0
@@ -367,7 +365,7 @@ period_start,period_end,period_not_finished,page,visits_landed_on_page,engaged_v
 2026-06-15,2026-06-21,no,/internal-developer-portal,2,1,0,0,1,143
 2026-06-15,2026-06-21,no,/llm-info,2,0,0,0,0,0
 2026-06-15,2026-06-21,no,/solutions,2,2,0,0,0,10
-2026-06-15,2026-06-21,no,/ Agentic DevOps for AI-DLC and SDLC | Orchestrate at Scale | Opsera Accelerate AI Deployments: Agentic DevOps with Built-in Governance and Engineering Intelligence,1,1,0,0,0,0
+2026-06-15,2026-06-21,no,/ agentic devops for ai-dlc and sdlc | orchestrate at scale | opsera accelerate ai deployments: agentic devops with built-in governance and engineering intelligence,1,1,0,0,0,0
 2026-06-15,2026-06-21,no,/agentsopse,1,1,0,0,0,0
 2026-06-15,2026-06-21,no,/brickforge2,1,1,0,0,0,0
 2026-06-15,2026-06-21,no,/demo-ai-reasoning-insights,1,1,0,0,0,0
