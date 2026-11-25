@@ -446,7 +446,7 @@ def youtube(mode):
                  ("subscribers_gained", "Subscribers gained", subs(cur), subs(prev), 5)])
 
 
-AREAS = [("pipeline", "Pipeline", pipeline, "Salesforce exports, marketing deals"),
+AREAS = [("pipeline", "Pipeline", pipeline, "Salesforce deals as synced to HubSpot, marketing deals"),
          ("leads", "Leads", leads, "Google Analytics, form fills"),
          ("journey", "Customer journey", journey, "HubSpot, marketing contacts and meetings"),
          ("visits", "Website visits", visits, "Google Analytics"),

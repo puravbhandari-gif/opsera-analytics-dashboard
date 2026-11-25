@@ -2800,9 +2800,10 @@ function renderPrMedia(d, ga, ah, sov) {
     $("pr-list").innerHTML = byQuarter(rows, cols, d.checked, detail, d.start_date);
     logoWall($("pr-logos"), wall, f.outlet);
   };
-  // The logo wall: outlets with a placement in the same quarter as the cards. Clicking one filters the list to it.
-  const wall = prOutlets(all.filter((r) => r.date >= pp.cur.start && r.date <= pp.cur.end && prPlacement(r)));
-  $("pr-logos-title").textContent = `Where we were covered, ${quarterName(pp.cur.start)}: ${num(wall.length)} outlet${wall.length === 1 ? "" : "s"}`;
+  // The logo wall: outlets with a placement this quarter (the quarter view's period). Clicking one filters the list to it.
+  const qp = periodsFor("cq", d.start_date, d.checked);
+  const wall = prOutlets(all.filter((r) => r.date >= qp.cur.start && r.date <= qp.cur.end && prPlacement(r)));
+  $("pr-logos-title").textContent = `Where we were covered, ${quarterName(qp.cur.start)}: ${num(wall.length)} outlet${wall.length === 1 ? "" : "s"}`;
   prPickOutlet = (outlet) => {
     f.outlet = outlet;
     $("pr-filters").querySelector('[data-f="outlet"]').value = outlet;
