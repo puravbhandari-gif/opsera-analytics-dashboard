@@ -437,7 +437,7 @@ def main():
                   ([PARTNER_ON_DEAL] if partner_deal else [])
         if reasons:
             review.append({"date": created.isoformat(), "amount": amount, "stage": o["Stage"],
-                           "counted_as": {"sourced": "Marketing sourced (estimate)", "influenced": "Marketing influenced", "agency": "Booking agency",
+                           "counted_as": {"sourced": "Marketing sourced", "influenced": "Marketing influenced", "agency": "Booking agency",
                                           "nocontact": "No contact linked", None: "Sales"}[bucket],
                            "campaigns": sorted({public(c) for c in [primary, *others] if c}), "reasons": reasons})
         if not bucket:

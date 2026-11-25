@@ -1344,7 +1344,7 @@
    "date": "2026-04-30",
    "amount": 150000,
    "stage": "2 Demo",
-   "counted_as": "Marketing sourced (estimate)",
+   "counted_as": "Marketing sourced",
    "campaigns": [
     "DG-Contact Us",
     "DG-FY22-Q3-Dreamforce 2022",
@@ -2331,11 +2331,11 @@
     "people": 2
    },
    {
-    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
+    "campaign": "DG-FY27-Q1-Agentic-Launch",
     "people": 2
    },
    {
-    "campaign": "DG-FY27-Q1-Agentic-Launch",
+    "campaign": "DG-2024-Q2-DevOps-Huddle-Unite GitHub Copilot",
     "people": 2
    },
    {
@@ -2359,19 +2359,19 @@
     "people": 1
    },
    {
-    "campaign": "MQL Tracking",
-    "people": 1
-   },
-   {
     "campaign": "DG-FY23-Q2-GitHub Actions",
     "people": 1
    },
    {
-    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
+    "campaign": "MQL Tracking",
     "people": 1
    },
    {
     "campaign": "DG-FY22-Q3-Dreamforce 2022",
+    "people": 1
+   },
+   {
+    "campaign": "DG-FY22-Q3-Dreamforce 2022 Tradeshow Booth",
     "people": 1
    },
    {
@@ -2383,11 +2383,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Q4-Trends-Webinar",
+    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Warmly-Website-Visitor-Leads",
+    "campaign": "DG-FY26-Q4-Trends-Webinar",
     "people": 1
    },
    {
@@ -2407,11 +2407,11 @@
     "people": 1
    },
    {
-    "campaign": "DG-FY26-Arcade-Demo-Form",
+    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
     "people": 1
    },
    {
-    "campaign": "DG-FY27-Q1-DAIS-Healthcare",
+    "campaign": "DG-FY26-Arcade-Demo-Form",
     "people": 1
    },
    {
