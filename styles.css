@@ -461,3 +461,10 @@ body.exec-mode .top-controls, body.exec-mode .tabs-row, body.exec-mode footer { 
 .lis-funnels { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .lis-funnels .panel h3 { margin: 0 0 4px; }
 .lis-flag { margin: 4px 0; }
+
+/* SEO and AEO view: page titles instead of long addresses on phones (25 Nov 2026) */
+.seo-table .seo-title { display: none; }
+@media (max-width: 640px) {
+  .seo-table .seo-path { display: none; }
+  .seo-table .seo-title { display: inline; }
+}

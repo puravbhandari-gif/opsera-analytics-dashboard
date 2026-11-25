@@ -1092,7 +1092,10 @@ function renderClarity(c, ga) {
       { key: "rage", label: "Rage clicks", num: true, fmt: num },
       { key: "dead", label: "Dead clicks", num: true, fmt: num },
     ] });
-    $("visits-clarity-source").textContent = `Source: ${c.source}. ${num(days.length)} daily pull${days.length === 1 ? "" : "s"} in this period, each covering the 24 hours before it. Page addresses without their query, so no email in a link is kept.`;
+    const allDays = c.days || [];
+    $("visits-clarity-source").textContent = days.length
+      ? `Source: ${c.source}, ${range(days[0].date, days[days.length - 1].date)}. ${num(days.length)} daily pull${days.length === 1 ? "" : "s"} in this period, each covering the 24 hours before it. Page addresses without their query, so no email in a link is kept.`
+      : `Source: ${c.source}. No Clarity pulls in this period: Clarity numbers run from ${allDays.length ? dayYear(allDays[0].date) : "-"} to ${allDays.length ? dayYear(allDays[allDays.length - 1].date) : "-"}.`;
   };
   fill(); monthlyTabs.push(fill);
 }
@@ -1285,7 +1288,7 @@ function renderJourney(ga, leads, hub, gsc) {
     metrics: [
       { label: "Demo requests", value: rangeSum(leads.daily, "demo"), fmt: num, sub: "Website demo form" },
       { label: "Meetings booked", value: rangeSum(booked, "count"), fmt: num, sub: "With marketing contacts" },
-      { label: "Pipeline created", value: (a, b) => { const d = dealsIn(hub, periodMode, a, undefined, b); return d ? dealSum(d, "amount") : null; }, fmt: money, sub: "Open, won and lost. HubSpot only sees deals with a marketing contact linked. Salesforce total is on the exec view." },
+      { label: "Pipeline created", value: (a, b) => { const d = dealsIn(hub, periodMode, a, undefined, b); return d ? dealSum(d, "amount") : null; }, fmt: money, sub: "Open, won and lost. HubSpot only sees deals with a marketing contact linked, so see Pipeline tab for the full number." },
       { label: "Won", value: (a, b) => dealsIn(hub, periodMode, a, undefined, b)?.won_amount ?? null, fmt: money },
     ] });
 
@@ -2480,9 +2483,10 @@ function renderBlogTypes(p, bt, d) {
 function renderHubs(d, lk) {
   const idx = Object.fromEntries(lk.pages.map((p, i) => [p, i]));
   const dayNo = (x) => Math.round((toDate(x) - toDate(lk.start_date)) / 864e5);
-  const visits = (path, from, to) => { const i = idx[path]; if (i == null) return null;
+  // visits_path can be one address or a list, for a page that moved (the Flutter page, agreed 25 Nov 2026): the visits add up
+  const visits = (path, from, to) => { const ids = new Set([].concat(path).map((p) => idx[p]).filter((i) => i != null)); if (!ids.size) return null;
     const a = dayNo(from), b = to ? dayNo(to) : Infinity;
-    return lk.visits.reduce((t, r) => (r[1] === i && r[0] >= a && r[0] <= b ? t + r[3] : t), 0); };
+    return lk.visits.reduce((t, r) => (ids.has(r[1]) && r[0] >= a && r[0] <= b ? t + r[3] : t), 0); };
   const wrap = (text, n) => { const out = [], words = text.split(" "); let line = "";
     words.forEach((w) => { if ((line + " " + w).trim().length > n) { out.push(line.trim()); line = w; } else line += ` ${w}`; }); out.push(line.trim()); return out; };
   const card = (h) => {
@@ -2714,7 +2718,7 @@ function prRows(d, ga, ah) {
   const rows = [], releases = new Map();
   d.items.forEach((x) => {
     const site = prSite(x.link), dom = ah.by_domain[site] || {}, a = ah.by_link[x.link], g = ga.by_link[x.link];
-    const one = { ...x, sites: [{ outlet: x.outlet, link: x.link }], dr: dom.domain_rating ?? null, tier: dom.tier || "",
+    const one = { ...x, sites: [{ outlet: x.outlet, link: x.link }], dr: dom.domain_rating ?? null, dr_checked: dom.checked || null, tier: dom.tier || "",
       ga: g || null, ah: a || null, people: x.quoted ? x.quoted.split(", ") : [], readership: x.readership ?? null, status: x.status || "" };
     if (x.type !== "Press release" || x.status) { rows.push(one); return; }   // a copy still to review stays on its own, so it can't hide the release
     const key = prWords(x.title), have = releases.get(key);
@@ -2736,15 +2740,18 @@ function prRows(d, ga, ah) {
 function renderPrMedia(d, ga, ah, sov) {
   $("pr-status").textContent = "";
   const all = prRows(d, ga, ah);
-  // Top numbers: this quarter so far against the same days of the quarter before (agreed 4 Nov 2026)
-  const pp = periodsFor("cq", d.start_date, d.checked), qName = `${quarterName(pp.cur.start)}${pp.why ? "" : " so far"}`;
+  // Top numbers follow the period picker like every other tab (agreed 25 Nov 2026): week, month or quarter, against the one before
   const count = (w, type) => all.filter((r) => r.date >= w.start && r.date <= w.end && prPlacement(r) && (!type || r.type === type)).length;
-  $("pr-cards").innerHTML = [["Placements", null], ...PR_PLACED.map((t) => [t === "Mention" ? "Other mentions" : `${t}s`, t])].map(([label, type]) => {
-    const cur = count(pp.cur, type), prev = pp.prev ? count(pp.prev, type) : null;
-    return card(`${label}, ${qName}`, num(cur), pp.prev ? `${pp.prevName}: ${num(prev)}` : pp.none, cmpDelta(cur, prev));
-  }).join("");
-  $("pr-cards-source").textContent = `${pp.why ? `${pp.why} ` : ""}Source: ${d.source}, checked ${dayYear(d.checked)}. ${qName}, ${range(pp.cur.start, pp.cur.end)}` +
+  const fillCards = () => {
+    const pp = periodsFor(periodMode === "day" ? "week" : periodMode, d.start_date, d.checked), when = range(pp.cur.start, pp.cur.end);
+    $("pr-cards").innerHTML = [["Placements", null], ...PR_PLACED.map((t) => [t === "Mention" ? "Other mentions" : `${t}s`, t])].map(([label, type]) => {
+      const cur = count(pp.cur, type), prev = pp.prev ? count(pp.prev, type) : null;
+      return card(`${label}, ${when}`, num(cur), pp.prev ? `${pp.prevName}: ${num(prev)}` : pp.none, cmpDelta(cur, prev));
+    }).join("");
+    $("pr-cards-source").textContent = `${pp.why ? `${pp.why} ` : ""}${periodMode === "day" ? "PR has no Day view, so this shows Week. " : ""}Source: ${d.source}, checked ${dayYear(d.checked)}. ${when}` +
     `${pp.prev ? `, compared with ${range(pp.prev.start, pp.prev.end)}` : ""}. A press release counts once, however many sites ran it. Briefings, partnership pages, passing mentions, developer articles, drafts and pieces still to review don't count as placements.`;
+  };
+  fillCards(); monthlyTabs.push(fillCards);
 
   // Filters: outlet, type, year, quarter, person, topic and outlet tier
   const f = { outlet: "", type: "", year: "", quarter: "", person: "", topic: "", tier: "" };
@@ -2777,7 +2784,7 @@ function renderPrMedia(d, ga, ah, sov) {
     ["Visits to opsera.ai", n0(r.ga?.visits)], ["Engaged visits", n0(r.ga?.engaged)], ["Demo requests", n0(r.ga?.demos)],
     ["Google visits a month (Ahrefs estimate)", n0(r.ah?.org_traffic)],
     ["Top searches (Ahrefs estimate)", r.ah?.top_keywords?.length ? esc(r.ah.top_keywords.slice(0, 3).join(", ")) : "-"],
-    ["Domain Rating (Ahrefs estimate)", n0(r.dr)],
+    [`Domain Rating (Ahrefs estimate${r.dr_checked ? `, last read ${dayYear(r.dr_checked)}` : ""})`, n0(r.dr)],
     ["Links to opsera.ai (Ahrefs estimate)", r.ah ? (r.ah.links_to_opsera ? "Yes" : "No") : "-"],
   ];
   const detail = (r) => `<dl class="row-facts">${facts(r).map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>`;
@@ -2810,6 +2817,7 @@ function renderPrMedia(d, ga, ah, sov) {
   $("pr-filters").addEventListener("change", (e) => { const k = e.target.dataset.f; if (k) { f[k] = e.target.value; draw(); } });
   draw();
   $("pr-best-source").textContent = `Source: Google Analytics, visits by referring site, ${range(ga.ga_start || "2026-04-01", ga.ga_end || d.checked)}. Most sites only pass on their own name, so a visit counts for the newest piece on that site.`;
+  if ($("pr-ah-read")) $("pr-ah-read").textContent = ah.checked ? `Last read ${dayYear(ah.checked)}.` : "";
   $("pr-list-source").textContent = `Sources: ${d.source}, checked ${dayYear(d.checked)}. Google Analytics for visits. Ahrefs estimates checked ${ah.checked ? dayYear(ah.checked) : "-"}. Outlet tier from Domain Rating: top tier 85 and up, trade press 70 to 84, other below 70.`;
 
   // Share of voice: headlines naming each company, this quarter so far against the same days of the quarter before
@@ -2850,6 +2858,7 @@ function renderPrOps(ops) {
   $("pr-ops").innerHTML = `<div class="table-wrap"><table><thead><tr><th scope="col">Outlet</th><th scope="col">Ask</th><th scope="col">Status</th><th scope="col">Deadline</th></tr></thead><tbody>${
     ops.items.map((o) => `<tr><td>${esc(o.outlet)}</td><td class="wrap">${esc(o.ask)}</td><td>${esc(sentence(o.status))}${o.status === "Missed" && o.follow_up ? `<div class="muted small">${esc(sentence(o.follow_up))}</div>` : ""}</td><td>${esc(when(o.deadline))}</td></tr>`).join("")}</tbody></table></div>`;
   $("pr-ops-source").textContent = `Source: ${ops.source}, read ${dayYear(ops.read)}.`;
+  $("pr-ops-read").textContent = `Last read ${dayYear(ops.read)}.`;
 }
 
 // ---------- Events: one row per event. HubSpot lists and meetings, and Google Analytics form fills, side by side ----------
@@ -2995,7 +3004,7 @@ function renderPipeline(sf) {
   const dealsLast = addDays(sf.exports.opportunities, -1), deals = (n) => `${num(n)} deal${n === 1 ? "" : "s"}`;
   const bucketMetric = (label, k) => {
     const value = rangeSum(sf.days, `${k}_value`);
-    return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline`, none: `${label.replace(" (estimate)", "").toLowerCase()} deals` };
+    return { label, value: rangeSum(sf.days, `${k}_deals`), fmt: deals, extra: (a, b) => `${money(value(a, b))} pipeline`, none: `${label.toLowerCase()} deals` };
   };
   compare({ id: "pipe", start: sf.opportunities_cover_from, last: dealsLast, fullPeriods: true,
     source: (a, b) => { $("pipe-export-gap").textContent = b > sf.exports.campaign_touches   // deals after the last campaign export can't show their campaigns yet
@@ -3003,12 +3012,10 @@ function renderPipeline(sf) {
       return hsDeals
         ? `Source: ${dealSrc}, created ${range(a, b)}, open, won and lost. Data starts on ${dayYear(sf.opportunities_cover_from)}.`
         : `Source: Salesforce opportunities created ${range(a, b)}, open, won and lost, exported ${exports}. The export starts on ${dayYear(sf.opportunities_cover_from)}. Updated when new exports arrive, not on Mondays.`; },
-    metrics: [bucketMetric("Marketing sourced (estimate)", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
+    metrics: [bucketMetric("Marketing sourced", "sourced"), bucketMetric("Marketing influenced", "influenced"), bucketMetric("Booking agency", "agency"),
       { label: "No contact linked", value: rangeSum(sf.days, "nocontact_deals"), fmt: deals, lowerIsBetter: true, sub: "Count only" }] });   // more deals without a contact is a data gap
-  $("pipe-undercount").textContent = "Marketing sourced is an estimate: it rests on Salesforce's Primary Campaign Source, a starting point that isn't reliable on its own. " +
-    `Marketing numbers are undercounted: ${sf.share_without_contact_pct}% of opportunities have no contact attached in Salesforce, so their campaigns can't be seen. ` +
-    `A campaign counts only if the person joined it within ${sf.window_days} days before the deal was created; ${num(sf.deals_left_out_by_window)} deal${sf.deals_left_out_by_window === 1 ? " was" : "s were"} left out by this rule. ` +
-    `For ${num(sf.deals_join_date_unknown)} deals the exports don't show when the person joined, so those still count.`;
+  $("pipe-est-note").textContent = pipeEstimateNote(sf);
+  $("pipe-undercount").textContent = `A campaign counts only if the person joined it within ${sf.window_days} days before the deal was created; ${num(sf.deals_left_out_by_window)} deal${sf.deals_left_out_by_window === 1 ? " was" : "s were"} left out by this rule.`;
 
   let group = "month";
   const drawTime = () => {
@@ -3021,8 +3028,8 @@ function renderPipeline(sf) {
     }
     table($("pipe-time"), { rows: Object.values(by), sortKey: "key", columns: [
       { key: "key", label: group === "month" ? "Month" : "Quarter", fmt: (v, r) => esc(r.label), csv: (r) => r.label },
-      { key: "sourced_deals", label: "Sourced deals (estimate)", num: true, fmt: num },
-      { key: "sourced_value", label: "Sourced value (estimate)", num: true, fmt: money },
+      { key: "sourced_deals", label: "Sourced deals", num: true, fmt: num },
+      { key: "sourced_value", label: "Sourced value", num: true, fmt: money },
       { key: "influenced_deals", label: "Influenced deals", num: true, fmt: num },
       { key: "influenced_value", label: "Influenced value", num: true, fmt: money },
       { key: "agency_deals", label: "Booking agency deals", num: true, fmt: num },
@@ -3040,7 +3047,7 @@ function renderPipeline(sf) {
   $("pipe-time-source").textContent = (hsDeals ? `Source: ${dealSrc}, created ${when}.` : `Source: Salesforce opportunities created ${when}, exported ${exports}.`) + " Sourced and influenced are never added together." +
     (sf.opportunities_to > sf.exports.campaign_touches ? (hsDeals ? ` ${touchGap}` : ` The campaign export stops at ${dayYear(sf.exports.campaign_touches)}, so ${monthName(sf.opportunities_to)} may change when the next export arrives.`) : "");
 
-  table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: { sourced: "Marketing sourced (estimate)", influenced: "Marketing influenced", agency: "Booking agency" }[c.bucket] })),
+  table($("pipe-campaigns"), { rows: sf.campaigns.map((c) => ({ ...c, bucket: { sourced: "Marketing sourced", influenced: "Marketing influenced", agency: "Booking agency" }[c.bucket] })),
     search: "campaigns", sortKey: "value", columns: [
       { key: "bucket", label: "Counts as", search: true },
       { key: "campaign", label: "Campaign", search: true, fmt: (v, r) => esc(v) + (r.flag ? `<br><span class="muted">Counted as marketing for now, ${esc(r.flag)}</span>` : "") },
@@ -3372,6 +3379,9 @@ function openExec() {
     .catch((err) => { $("exec-period").textContent = `Couldn't load the numbers: ${err.message}`; });
 }
 const moneyShort = (v) => (v == null ? "-" : v >= 1e6 ? `$${(v / 1e6).toFixed(2)}M` : v >= 1e3 ? `$${Math.round(v / 1e3)}K` : `$${num(v)}`);
+// What's still estimated in sourced and influenced: one wording, under the pipeline cards on the exec view and the Pipeline tab (25 Nov 2026)
+const pipeEstimateNote = () => "Sourced and influenced come from Salesforce campaign data. Some deals are missing a contact or campaign date, so marketing's share is likely undercounted.";   // the full detail is in the for-claude files
+
 function renderExec(ga, leads, hub, sf, pub, pr) {
   const gaLast = lastFullDayPacific(ga.end_date, ga.pulled_at);
   const booked = hub.meetings_daily.filter((r) => r.kind === "booked");
@@ -3456,8 +3466,9 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
     // PR placements: the number and how many outlets ran them
     const pq = placed.filter((r) => r.date >= q && r.date <= qEnd), outlets = prOutlets(pq);
     cards.push(`<article class="exec-card"><h3>PR placements</h3><div class="exec-big value">${num(pq.length)}</div>
-      <p class="exec-line">Across ${num(outlets.length)} outlet${outlets.length === 1 ? "" : "s"}</p></article>`);
+      <p class="exec-line">${num(pq.length)} stor${pq.length === 1 ? "y" : "ies"}, run by ${num(outlets.length)} outlet${outlets.length === 1 ? "" : "s"}</p></article>`);
     $("exec-cards").innerHTML = cards.join("");
+    if ($("exec-pipe-note")) $("exec-pipe-note").textContent = pipeEstimateNote(sf);
     countUp($("exec-cards"));
     $("exec-period").textContent = `${quarterName(q)}, ${range(q, over ? qEnd : gaLast)}${over ? "" : ", so far"}`;
     $("exec-logos-title").textContent = `Where we were covered in ${quarterName(q)}`;
@@ -3478,12 +3489,18 @@ function renderExec(ga, leads, hub, sf, pub, pr) {
 
 let seoLoad = null;
 function openSeo() {
-  if (!seoLoad) seoLoad = Promise.all(["seo_aeo.json", "seo_aeo_lines.json"].map(load)).then(([d, t]) => renderSeo(d, t))
+  // page titles come from lookup.json, so phones can show a title instead of a long address (25 Nov 2026)
+  if (!seoLoad) seoLoad = Promise.all(["seo_aeo.json", "seo_aeo_lines.json"].map(load).concat(load("lookup.json").catch(() => null)))
+    .then(([d, t, lk]) => renderSeo(d, t, lk))
     .catch((err) => { $("seo-lines").innerHTML = `<p class="muted">Couldn't load the numbers: ${esc(err.message)}</p>`; });
 }
-function renderSeo(d, t) {
+function renderSeo(d, t, lk) {
   const NAMES = { overall: "Opsera overall", forge: "Forge", insights: "Insights" };
-  const pathLink = (p) => (p.startsWith("/") && !p.includes("(") ? `<a href="https://opsera.ai${encodeURI(p)}" target="_blank" rel="noopener">${esc(p)}</a>` : esc(p));
+  const titles = {};
+  if (lk) lk.pages.forEach((p, i) => { const ti = (lk.titles[i] || "").replace(/\s*[-—|]\s*Opsera\s*$/i, "").trim(); if (ti && !/^page not found/i.test(ti)) titles[p] = ti; });
+  // on phones the address is swapped for the page's title (styles.css .seo-title), so long addresses don't run to many lines
+  const label = (p) => `<span class="seo-path">${esc(p)}</span><span class="seo-title">${esc(p === "/" ? "Homepage" : titles[p] || p)}</span>`;
+  const pathLink = (p) => (p.startsWith("/") && !p.includes("(") ? `<a href="https://opsera.ai${encodeURI(p)}" target="_blank" rel="noopener">${label(p)}</a>` : esc(p));
   const by = (x) => `<span class="seo-tag ${x === "Infrasity" ? "inf" : x === "Insights knowledge base" ? "kb" : ""}">${x === "Opsera" ? "Us" : x}</span>`;
   const list = (rows) => (rows.length ? `<table class="seo-table"><tbody>${rows.join("")}</tbody></table>` : `<p class="muted">None</p>`);
   // One line per product: what's working and what isn't
@@ -3579,6 +3596,9 @@ function renderSummary(d) {
   }).join("") || `<p class="muted">Nothing notable this period.</p>`;
   const quiet = v.areas.filter((s) => !(s.notable && s.main)).map((s) => s.title);
   $("summary-quiet").textContent = quiet.length ? `No big changes: ${quiet.join(", ")}` : "";
+  // a visible source line, so every number has its source and dates without tapping the i (25 Nov 2026)
+  $("summary-source").textContent = `Sources: ${shown.map((s) => `${s.title}, ${s.source}, ${s.period}`).join("; ")}. ` +
+    (v.by_claude ? `Lines written by Claude Code on ${dayYear(d.written_on)} from these numbers.` : `Lines written from the numbers on ${dayYear(d.written_on)}.`);
 }
 $("summary-body").addEventListener("click", (e) => {
   const info = e.target.closest(".sum-info");   // tap the i to show or hide the source and dates

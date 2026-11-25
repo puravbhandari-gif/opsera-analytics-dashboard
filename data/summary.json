@@ -458,7 +458,7 @@
    "boxes": {
     "well": [
      "Meetings booked rose to 5, up from 1.",
-     "Visits without robots grew 53.0% to 4,136.",
+     "Visits without email robots grew 53.0% to 4,136.",
      "Engaged visits doubled to 1,428, up from 696."
     ],
     "attention": [
@@ -486,7 +486,7 @@
      "notable": true,
      "main": {
       "key": "sourced_deals",
-      "label": "Marketing sourced deals (estimate)",
+      "label": "Marketing sourced deals",
       "value": "2",
       "cur": 2,
       "prev": 8,
@@ -967,7 +967,7 @@
      "Content page visits up 50.2%"
     ],
     "attention": [
-     "Marketing sourced deals (estimate) down 75%",
+     "Marketing sourced deals down 75%",
      "Times the company page's posts were seen down 72.7%",
      "Demo requests down 52.6%"
     ],
@@ -989,7 +989,7 @@
      "notable": true,
      "main": {
       "key": "sourced_value",
-      "label": "Marketing sourced pipeline (estimate)",
+      "label": "Marketing sourced pipeline",
       "value": "$2,093,000",
       "cur": 2093000,
       "prev": 1298375,
@@ -1440,7 +1440,7 @@
    "boxes": {
     "well": [
      "Meetings booked with marketing contacts up 200%",
-     "Marketing sourced pipeline (estimate) up 61.2%",
+     "Marketing sourced pipeline up 61.2%",
      "Subscribers gained up 54.5%"
     ],
     "attention": [
@@ -1465,7 +1465,7 @@
      "notable": true,
      "main": {
       "key": "sourced_value",
-      "label": "Marketing sourced pipeline (estimate)",
+      "label": "Marketing sourced pipeline",
       "value": "$1,893,000",
       "cur": 1893000,
       "prev": 1400000,

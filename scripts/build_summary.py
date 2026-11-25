@@ -202,8 +202,8 @@ def pipeline(mode):
     t = lambda k, p: total(sf["days"], k, *p) if p else None
     nc = t("nocontact_deals", cur)
     return area(cur, prev, before, {"no_contact_deals": nc, "share_of_all_deals_without_contact_pct": sf.get("share_without_contact_pct")},
-                [("sourced_deals", "Marketing sourced deals (estimate)", t("sourced_deals", cur), t("sourced_deals", prev), 3),
-                 ("sourced_value", "Marketing sourced pipeline (estimate)", t("sourced_value", cur), t("sourced_value", prev), 100000, money),
+                [("sourced_deals", "Marketing sourced deals", t("sourced_deals", cur), t("sourced_deals", prev), 3),
+                 ("sourced_value", "Marketing sourced pipeline", t("sourced_value", cur), t("sourced_value", prev), 100000, money),
                  ("influenced_deals", "Marketing influenced deals", t("influenced_deals", cur), t("influenced_deals", prev), 3),
                  ("influenced_value", "Marketing influenced pipeline", t("influenced_value", cur), t("influenced_value", prev), 100000, money)],
                 [("after:no_contact", f"{n(nc)} more deals had no contact linked, so we can't see where they came from.")] if nc >= 5 else [])

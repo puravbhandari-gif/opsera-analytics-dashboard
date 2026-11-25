@@ -99,7 +99,7 @@
     "kind": "Event",
     "title": "Flutter 2026: The AI-SDLC Summit",
     "date": "2026-10-01",
-    "link": "https://opsera.ai/flutter-2026-ai-sdlc-summit",
+    "link": "https://opsera.ai/events/flutter-the-ai-sdlc-summit",
     "number": "119 checked in",
     "visits_from": "2026-08-01",
     "visits_to": "2026-10-31"
@@ -108,8 +108,8 @@
     {
      "group": "Format",
      "name": "Summit page",
-     "link": "https://opsera.ai/flutter-2026-ai-sdlc-summit",
-     "visits_path": "/flutter-2026-ai-sdlc-summit"
+     "link": "https://opsera.ai/events/flutter-the-ai-sdlc-summit",
+     "visits_path": ["/flutter-2026-ai-sdlc-summit", "/events/flutter-the-ai-sdlc-summit"]
     },
     {
      "group": "Format",

@@ -11,11 +11,11 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [ ] Copado page: add a switching section and a demo button.
 - [ ] Fix blogs showing up twice on Google, with and without "/" at the end.
 - [ ] Waiting on Yusra: HubSpot bot filtering, and connecting Luma.
-- [ ] Fix Notion permission so I can create the read-only connection.
+- [x] Closed: Purav said to skip the Notion connection. Fix Notion permission so I can create the read-only connection.
 - [ ] Every Monday: ask Claude Code to write the Summary takeaways.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Check with David why the GitHub Universe happy hour form shows 7 submits but only 2 in HubSpot.
 - [ ] Fix the broken Salesforce blog link (/blog/why-salesforce-orgs-need-a-headless-devops-platform), which both Opsera and Kumar posted. It needs a redirect on the website.
-- [ ] Tag Kumar's "Visit my website" button.
+- [x] Done: tagged since 27 Oct 2026 (utm_campaign=kumar, utm_content=profile-button). Tag Kumar's "Visit my website" button.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Add "How did you hear about us" to the demo form (David).
 - [ ] Add redirects for old links now showing Page not found. Each address, then the live page it should go to (checked 28 Oct 2026):
   - /resources/whitepapers to /resources
@@ -33,6 +33,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 
 ## Dashboard
 
+- [x] Done 25 Nov: PR cards follow the period picker; "(estimate)" taken off sourced, with one note on what's still estimated (exec view and Pipeline tab); robot note includes the newsletter rule; Flutter hub counts both addresses; SEO view shows page titles on phones; PR and domain rating dates; heat map and Takeaways source lines.
 - [x] Done 25 Nov: average engagement time on Website visits and Content (Yusra); careers pages out of AI tool visits (Aarushi); /forge and /Forge (and other pages split by capital letters) joined; publish tries 3 times; a failed YouTube check skips YouTube only, keeping its last numbers.
 - [x] Done 24 Nov: LinkedIn exports loaded (company page to 22 Nov, Kumar to 24 Nov). New LinkedIn to website tab. One LinkedIn tag rule on every panel (utm_content brand-post, kumar, vishnu). From 25 Nov every post gets its own tag; the tab flags new posts missing a tag or sharing one.
 - [x] Done 24 Nov: for-claude covers every tab and view, and rebuilds on every publish. The Monday Slack post links it for asking Claude.
@@ -45,7 +46,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Confirm with David: SDR outreach campaigns count as marketing or sales.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Ask David for event campaign members with meeting set dates, and campaign members with first associated dates.
 - [ ] Talk to Grover about fixing the Salesforce rule for Primary Campaign Source.
-- [ ] Update Kumar's LinkedIn export every 2 weeks. Purav is sending one on 23 Nov (the last one stops at 30 Sep).
+- [ ] Update Kumar's LinkedIn export every 2 weeks. His exports to 24 Nov are loaded (24 Nov still being counted); the next is due around 8 Dec.
 - [x] 17 Nov: the website visits goal counts all visits, not visits without robots (Purav). The Team metrics tile says so. The exec "Website visitors" card stays without email robots, so the 2 differ: 6,641 against 6,154 for 1 to 15 Nov.
 - [ ] Team members' metrics, as they come in.
 - [ ] Business questions check, after the team replies.
@@ -56,7 +57,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 17 Nov: Purav went through the 12 "To review" rows. IT Supply Chain (9 Nov) counts as a placement. The other 11 are "Not counted": Voltage Control, Consultancy.eu, Articsledge, TechDogs, BestBlogs, BeBee, CaseStudies.com, demoprise.com, Requstory, SD Times AppSec Archives and APIs.io. Q4 so far is 2 placements across 2 outlets; Q3 stays 11 across 14 and Q2 8 across 6.
 - [x] 16 Nov: Purav's PR decisions. Q3 is 11 placements across 14 outlets, Q2 8 across 6, Q4 so far 1 (the Forbes byline of 6 Nov). RamaOnHealthcare (a copy of the Forbes byline) and AI & ML Events (an event listing) are marked "Not counted".
 - [x] Slack post for the week ending 15 Nov: posted on 17 Nov (run 44017397007) with Google's early figure for Sunday 15 Nov, a one-off Purav asked for before the staff meeting. The post and the Google search numbers on the dashboard say the figure is early and may change.
-- [ ] Replace the early 15 Nov Search Console number once Google finalizes it. Checked 17 Nov: Google's final numbers still stop at 14 Nov, so the early 53 clicks and the week's 637 stay. Check again on Wed 18 Nov: ask Claude Code to rerun the update without a Slack post, compare 637 with the final figure and tell Purav if it changed. Then empty EARLY_DAYS in scripts/fetch_data.py. Early numbers are not the rule: from Monday 23 Nov the Slack post uses final numbers only.
+- [x] Done 17 Nov: Google's final number matched the early one, so nothing to replace. Replace the early 15 Nov Search Console number once Google finalizes it. Checked 17 Nov: Google's final numbers still stop at 14 Nov, so the early 53 clicks and the week's 637 stay. Check again on Wed 18 Nov: ask Claude Code to rerun the update without a Slack post, compare 637 with the final figure and tell Purav if it changed. Then empty EARLY_DAYS in scripts/fetch_data.py. Early numbers are not the rule: from Monday 23 Nov the Slack post uses final numbers only.
 - [x] Slack post for the week ending 8 Nov: posted on 10 Nov (run 42771216380), after the 9 Nov run stopped on purpose for missing Search Console data.
 - [x] Flutter registered: the page shows Luma's 507, with a note saying Valentina reported 509 (Purav, 23 Nov).
 - [x] 17 Nov: Gilbert Martin is not Opsera staff (Purav). He is off the staff list in scripts/fetch_pr_media.py and his name is off the 2 PR rows from 2022. The DevOps.com row stays without a name; the SD Times row names Kumar only.
@@ -87,7 +88,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Microsoft Clarity check (due 13 Nov, done 17 Nov): Clarity records about 3 in 4 of Google Analytics' visits on weekdays (345, 382, 341 and 255 sessions against 505, 535, 436 and 351 visits) and under half at the weekend (95 against 202, 197 against 444). The heat map section says Clarity sees only part of the site.
 - [ ] AI visibility (top of the AEO tab, from 16 Nov): we have no Ahrefs API key (Purav, 16 Nov), so the AI answer checks are filled by hand. On 23 Nov, then every Monday, ask Claude Code to "refresh the AI answer checks". It fills data/ai_answers.json from Ahrefs Brand Radar, and the "N of the last 28 checks" counts show once 4 weeks of checks are in.
 - [ ] AI visibility, only if we ever get an Ahrefs API key: save it as the GitHub secret AHREFS_API_KEY (repo Settings, Secrets and variables, Actions). The Monday run then fills the AI answer checks on its own (scripts/fetch_ai_answers.py). The script is untested against the real Ahrefs API, so check the first run.
-- [ ] AI bot log: wired in on 17 Nov, shown locally, NOT published yet (waiting on Purav). The block reads property 561605648 ("Opsera – AI bots", G-STSBVX9VX1) and uses the count by bot as its one source (Purav); the plain total is never shown. Until 4 weeks exist it shows a table by bot (31,066 bot visits, 2 to 16 Nov); the weekly trend starts after 29 Nov. Bot visits stay in their own block, never added to people visits. In the Monday run (fetch_data.py ai_bots).
+- [x] Done: live on the AEO tab. AI bot log: wired in on 17 Nov, shown locally, NOT published yet (waiting on Purav). The block reads property 561605648 ("Opsera – AI bots", G-STSBVX9VX1) and uses the count by bot as its one source (Purav); the plain total is never shown. Until 4 weeks exist it shows a table by bot (31,066 bot visits, 2 to 16 Nov); the weekly trend starts after 29 Nov. Bot visits stay in their own block, never added to people visits. In the Monday run (fetch_data.py ai_bots).
 - [ ] AI bot log, each Monday: read the "AI bot visits" lines in the run log. They say if the plain total and the count by bot still disagree. Tell Purav if a day other than 13 Nov is listed, or if a day has no bot visits. Known quirk: Google Analytics returns 13 Nov (2,409) only when the report starts before 30 Oct (the day the property was made) and is split by bot, so the script asks from 25 Oct. If 13 Nov drops out, the total falls by 2,409: tell Purav.
 - [ ] Demo requests by product: only 7 of 36 Q3 requests come from a Forge or Insights page. A "Which product?" field on the demo form would give a firmer split for goals.
 - [x] 17 Nov: Clarity "Platform" row replaced by Agentic DevOps (/agentic-devops), since /platform now redirects to the homepage. It was the most visited product or use case page after Forge and Unified Insights: 199 visits in Google Analytics, 19 Oct to 15 Nov. /php2shell had more (831) but is a campaign page.
@@ -103,7 +104,7 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] Team metrics is back in the sections row (Purav, 17 Nov, later); #team opens it again. Goals and numbers for the other 7 people are still to come.
 - [x] GEroundtable counts (Purav, 17 Nov 2026): trade press is 5 on the Brand relaunch hub.
 - [x] 17 Nov: Content by type has a total line (blogs in the period and in the last full month), and Month view cards show this quarter so far and the last full quarter. 3 November blogs tagged. Counts checked against Contentful: Nov 4, Oct 14, Sep 22, Aug 1.
-- [ ] "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.
+- [x] Done 25 Nov: the sitemap lists it, and NOT_IN_SITEMAP is empty. "Closing the Security Gap in AI Modernization" (17 Nov) isn't in the opsera.ai sitemap yet, so it sits in NOT_IN_SITEMAP in scripts/fetch_published.py. Take it out once the sitemap lists it.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (17 Nov): the $30K Q3 deal (Closed Lost, created 9 Sep) also started with a demo request after an SDR meeting. Sourced or influenced? Influenced for now.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. Waiting on David (17 Nov): the $0 Q3 deal sourced by "Invited to Discord Community". Is that a helper campaign like X2? Sourced for now.
 - [x] The $500,000 Q3 deal credited to Gartner Xpo: David confirmed on 18 Nov the contact was scanned at Gartner Xpo, so the Gartner credit stands (influenced, deal existed before the event).
@@ -124,6 +125,6 @@ The dashboard's To do link shows this list. Tick an item with [x] when it's done
 - [x] 23 Nov: 1,238 of 1,239 HubSpot deals carry the Salesforce opportunity ID (HubSpot's own field hs_salesforceopportunityid), all 219 created since 1 Apr. It was already there on 19 Nov; that day's check missed it. HubSpot also keeps the date each deal entered each stage. Pipeline stays on David's exports (Purav).
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. 23 Nov: David's 22 Nov "Mktg#05 Multi-Attrib Opportunities" only covers deals created from 3 Nov. Older touch exports now fill in the deals it leaves out (build_salesforce_pipeline.py); Q1 to Q4 unchanged. Ask David whether the report's date filter changed.
 - [x] Closed 23 Nov: no more asks to David (Purav); the current treatment stays. 23 Nov: no DG-Demo Requests member since 2 Nov, in Salesforce (22 Nov export) and HubSpot (56 each), while the website logged demo form fills. Ask David whether new demo requests still reach the campaign.
-- [ ] 23 Nov weekly update on hold: Search Console's final numbers stop at 21 Nov, and GitHub dropped both Monday runs. Rerun when Google reaches 22 Nov.
+- [x] Done 24 Nov: rerun with Search Console to 22 Nov, Slack post sent. 23 Nov weekly update on hold: Search Console's final numbers stop at 21 Nov, and GitHub dropped both Monday runs. Rerun when Google reaches 22 Nov.
 - [x] 18 Nov: the Content tab reads blogs from Contentful (published and live on opsera.ai), not the sitemap. November so far: 9 blogs.
 - [ ] Jeetu Patel response hub: add the link to Kumar's Unite.ai article ("When AI Agents Finish the Work, Who Owns What Comes Next") once Catapult gets it published, and drop "not published yet".
